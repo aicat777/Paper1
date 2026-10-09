@@ -26,4 +26,10 @@ CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=1 python mmyolo/tools/train.py
 
 续训使用官方 `--resume` 参数和对应工作目录；日志、指标和检查点使用框架原生输出。
 
-旧的自定义训练与监控进程已停止，封装代码已移除，未自动重启。已生成的训练日志和检查点保留在 `logs/` 和 `work_dirs/rtmdet_tiny_dior_scratch_300e_gpu1/`。
+旧训练的检查点、日志和结果文件已清理，DIOR 图像、标注和原始划分保留。本次使用官方入口后台从第 1 轮训练，不使用 `--resume`。
+
+当前日志：`logs/rtmdet_tiny_dior_300e_gpu1.log`。框架原生日志、指标与检查点位于 `work_dirs/rtmdet_tiny_dior_300e/`。
+
+```bash
+tail -f /home/pwt/Paper1/logs/rtmdet_tiny_dior_300e_gpu1.log
+```
