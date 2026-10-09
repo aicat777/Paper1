@@ -52,10 +52,22 @@ val_cfg = dict(type='ValLoop', fp16=False)
 train_cfg = dict(max_epochs=max_epochs, val_interval=1,
                  dynamic_intervals=[(3, 10), (281, 1)])
 
-# No test-set evaluation during model selection.
-test_dataloader = None
-test_cfg = None
-test_evaluator = None
+# The official entry checks all dataloader configs. Training runs val only;
+# tools/test.py can evaluate the original DIOR test split separately.
+test_dataloader = dict(
+    batch_size=16,
+    num_workers=4,
+    persistent_workers=True,
+    dataset=dict(data_root=data_root,
+                 ann_file='coco_annotations/instances_test.json',
+                 data_prefix=dict(img=''),
+                 metainfo=dict(classes=classes),
+                 batch_shapes_cfg=batch_shapes_cfg))
+test_cfg = dict(type='TestLoop')
+test_evaluator = dict(
+    ann_file=data_root + 'coco_annotations/instances_test.json',
+    proposal_nums=(1, 10, 100),
+    classwise=True)
 
 optim_wrapper = dict(type='AmpOptimWrapper', loss_scale='dynamic',
                      optimizer=dict(lr=base_lr))
