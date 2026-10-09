@@ -26,10 +26,10 @@ DIOR 图像和原始标注保存在本地 `datasets/DIOR/`，不上传 Git。固
 python scripts/download_dior.py
 python scripts/verify_dior.py
 python scripts/convert_dior_to_coco.py
-CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=1 python mmyolo/tools/train.py configs/rtmdet_tiny_dior_300e.py --work-dir work_dirs/rtmdet_tiny_dior_300e
+CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=0 python mmyolo/tools/train.py configs/rtmdet_tiny_dior_300e.py --work-dir work_dirs/rtmdet_tiny_dior_300e_gpu0
 ```
 
-当前训练配置：GPU 1，batch 16，640×640，300 轮，train 5,862 张 / val 5,863 张，随机种子 42。加载路径 `load_from=None`，骨干预训练初始化 `init_cfg=None`。
+当前训练配置：GPU 0，训练 batch 20、验证 batch 16，640×640，300 轮，train 5,862 张 / val 5,863 张，随机种子 42。加载路径 `load_from=None`，骨干预训练初始化 `init_cfg=None`。
 
 详细协议、官方训练命令、验证频率和检查点见 [TRAINING.md](TRAINING.md)。数据来源及转换规则见 [DOWNLOADS.md](DOWNLOADS.md)。
 

@@ -14,7 +14,8 @@ classes = ('airplane', 'airport', 'baseballfield', 'basketballcourt', 'bridge',
 data_root = root + '/datasets/DIOR/'
 num_classes = 20
 max_epochs = 300
-base_lr = 0.004 * 16 / 256
+train_batch_size_per_gpu = 20
+base_lr = 0.004 * train_batch_size_per_gpu / 256
 
 model = dict(
     backbone=dict(init_cfg=None),
@@ -22,7 +23,7 @@ model = dict(
     train_cfg=dict(assigner=dict(num_classes=num_classes)))
 
 train_dataloader = dict(
-    batch_size=16,
+    batch_size=train_batch_size_per_gpu,
     num_workers=8,
     persistent_workers=True,
     dataset=dict(data_root=data_root,
