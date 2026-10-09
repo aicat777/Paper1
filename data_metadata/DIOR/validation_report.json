@@ -1,0 +1,92 @@
+{
+  "status": "verified",
+  "mirror_revision": "f58d220a2b74b610badebaefa122d1b61628bf73",
+  "archives": [
+    {
+      "file": "Annotations.zip",
+      "bytes": 10781498,
+      "sha256": "4e9a007c768fd5aa1168894ae1654ddef54626041d8219f9403e389fda5d2afa",
+      "archive_present": false,
+      "extracted": true
+    },
+    {
+      "file": "JPEGImages-test.zip",
+      "bytes": 3528597945,
+      "sha256": "9a91b6eb8af70fd1c8052564f4bd504c26b8be14d587fa1fddd1e741a43cf4c7",
+      "archive_present": false,
+      "extracted": true
+    },
+    {
+      "file": "JPEGImages-trainval.zip",
+      "bytes": 3887687878,
+      "sha256": "f93f4b13ca0b0d235d96d23317a626bb4c03221c96f90b46953a6396dc2e28e0",
+      "archive_present": false,
+      "extracted": true
+    }
+  ],
+  "image_count": 23463,
+  "annotation_count": 23463,
+  "class_count": 20,
+  "object_count": 192472,
+  "splits": {
+    "train": {
+      "images": 5862,
+      "objects": 32592,
+      "image_directories": [
+        "JPEGImages-trainval"
+      ]
+    },
+    "val": {
+      "images": 5863,
+      "objects": 35437,
+      "image_directories": [
+        "JPEGImages-trainval"
+      ]
+    },
+    "test": {
+      "images": 11738,
+      "objects": 124443,
+      "image_directories": [
+        "JPEGImages-test"
+      ]
+    }
+  },
+  "class_object_counts": {
+    "Expressway-Service-area": 2165,
+    "Expressway-toll-station": 1298,
+    "airplane": 10104,
+    "airport": 1327,
+    "baseballfield": 5817,
+    "basketballcourt": 3225,
+    "bridge": 3967,
+    "chimney": 1681,
+    "dam": 1049,
+    "golffield": 1086,
+    "groundtrackfield": 3038,
+    "harbor": 5509,
+    "overpass": 3114,
+    "ship": 62400,
+    "stadium": 1268,
+    "storagetank": 26414,
+    "tenniscourt": 12266,
+    "trainstation": 1011,
+    "vehicle": 40370,
+    "windmill": 5363
+  },
+  "xml_declared_image_sizes": {
+    "800x782": 1,
+    "800x783": 2,
+    "800x784": 1,
+    "800x787": 6,
+    "800x788": 7,
+    "800x797": 1,
+    "800x799": 1,
+    "800x800": 23430,
+    "800x801": 7,
+    "800x802": 1,
+    "800x813": 3,
+    "800x815": 1,
+    "800x816": 2
+  },
+  "note": "Original XML contents and split files preserved. Author homepage currently states 192518 instances; this mirror's XML count is recorded above."
+}

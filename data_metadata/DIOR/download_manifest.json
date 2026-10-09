@@ -1,0 +1,72 @@
+{
+  "dataset": "DIOR horizontal-box detection, original-format mirror",
+  "original_homepage": "https://gcheng-nwpu.github.io/#Datasets",
+  "mirror": "https://huggingface.co/datasets/ObjEarth/ObjEarth-Data/tree/f58d220a2b74b610badebaefa122d1b61628bf73/DIOR",
+  "revision": "f58d220a2b74b610badebaefa122d1b61628bf73",
+  "image_transfer_endpoint": "https://hf-mirror.com/datasets/ObjEarth/ObjEarth-Data/resolve/f58d220a2b74b610badebaefa122d1b61628bf73",
+  "license": "CC BY-NC 4.0",
+  "archives": [
+    {
+      "type": "file",
+      "oid": "8970daf199bf923bedc92bb1be222d766160c854",
+      "size": 10781498,
+      "lfs": {
+        "oid": "4e9a007c768fd5aa1168894ae1654ddef54626041d8219f9403e389fda5d2afa",
+        "size": 10781498,
+        "pointerSize": 133
+      },
+      "xetHash": "924eac15848303e91d9a1cb1e9da4f04f375adace1137f019ffb6d8b2dcb62c8",
+      "path": "DIOR/Annotations.zip"
+    },
+    {
+      "type": "file",
+      "oid": "b1454635e805c5c53baf6728f142cf01b60cca34",
+      "size": 3528597945,
+      "lfs": {
+        "oid": "9a91b6eb8af70fd1c8052564f4bd504c26b8be14d587fa1fddd1e741a43cf4c7",
+        "size": 3528597945,
+        "pointerSize": 135
+      },
+      "xetHash": "424607c14d9ebc94fda2f4663bf999f765f716999a4c637eaa3a09315ed25b07",
+      "path": "DIOR/JPEGImages-test.zip"
+    },
+    {
+      "type": "file",
+      "oid": "5e4f05cc6bdd5bea732023e18377563361df8b94",
+      "size": 3887687878,
+      "lfs": {
+        "oid": "f93f4b13ca0b0d235d96d23317a626bb4c03221c96f90b46953a6396dc2e28e0",
+        "size": 3887687878,
+        "pointerSize": 135
+      },
+      "xetHash": "fdf5cbf11efe76f5eac35d2e0a823aece8424badb4245f354342ac10c523143d",
+      "path": "DIOR/JPEGImages-trainval.zip"
+    }
+  ],
+  "split_files": [
+    {
+      "type": "directory",
+      "oid": "b200bc3bed4d9c684269eb6602331d00b4cdd116",
+      "size": 0,
+      "path": "DIOR/ImageSets/Main"
+    },
+    {
+      "type": "file",
+      "oid": "b4cc3638ee29f4d224d01def45d5c0af3958ac1c",
+      "size": 82166,
+      "path": "DIOR/ImageSets/Main/test.txt"
+    },
+    {
+      "type": "file",
+      "oid": "4a208c19afcb06bf23dd08013fef705d6fbf19b1",
+      "size": 41034,
+      "path": "DIOR/ImageSets/Main/train.txt"
+    },
+    {
+      "type": "file",
+      "oid": "506b53ea4452fa0697937432630f60836d598ce8",
+      "size": 41041,
+      "path": "DIOR/ImageSets/Main/val.txt"
+    }
+  ]
+}

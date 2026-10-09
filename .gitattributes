@@ -1,0 +1,2 @@
+# Preserve the original DIOR split files, including their CRLF line endings.
+data_metadata/DIOR/splits/*.txt -text whitespace=cr-at-eol

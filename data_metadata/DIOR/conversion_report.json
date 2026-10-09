@@ -1,0 +1,46 @@
+{
+  "coordinate_convention": "MMDetection VOC converter: subtract 1 from all XYXY coordinates; COCO width=xmax-xmin, height=ymax-ymin",
+  "image_sizes": "Read from JPEG headers, original XML left unchanged",
+  "classes": [
+    "airplane",
+    "airport",
+    "baseballfield",
+    "basketballcourt",
+    "bridge",
+    "chimney",
+    "dam",
+    "expressway-service-area",
+    "expressway-toll-station",
+    "golffield",
+    "groundtrackfield",
+    "harbor",
+    "overpass",
+    "ship",
+    "stadium",
+    "storagetank",
+    "tenniscourt",
+    "trainstation",
+    "vehicle",
+    "windmill"
+  ],
+  "splits": {
+    "train": {
+      "images": 5862,
+      "annotations": 32591,
+      "difficult_objects": 0,
+      "degenerate_boxes_excluded": 1
+    },
+    "val": {
+      "images": 5863,
+      "annotations": 35434,
+      "difficult_objects": 0,
+      "degenerate_boxes_excluded": 3
+    },
+    "test": {
+      "images": 11738,
+      "annotations": 124440,
+      "difficult_objects": 0,
+      "degenerate_boxes_excluded": 3
+    }
+  }
+}
