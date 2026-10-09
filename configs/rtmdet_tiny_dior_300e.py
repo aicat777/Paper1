@@ -47,10 +47,9 @@ val_evaluator = dict(
     classwise=True)
 val_cfg = dict(type='ValLoop', fp16=False)
 
-# _decide_current_val_interval uses the next epoch's milestone. Thus epoch 1
-# validates once; epochs 10..270 validate every 10; epochs 280..300 every epoch.
-train_cfg = dict(max_epochs=max_epochs, val_interval=1,
-                 dynamic_intervals=[(3, 10), (281, 1)])
+# Keep the validation interval fixed through all 300 epochs, including stage 2.
+train_cfg = dict(max_epochs=max_epochs, val_interval=10,
+                 dynamic_intervals=[])
 
 # The official entry checks all dataloader configs. Training runs val only;
 # tools/test.py can evaluate the original DIOR test split separately.
