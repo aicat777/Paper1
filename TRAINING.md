@@ -30,7 +30,7 @@ CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=0 python mmyolo/tools/train.py
 
 旧训练的检查点、日志和结果文件已清理，DIOR 图像、标注和原始划分保留。本次使用官方入口后台从第 1 轮训练，不使用 `--resume`。
 
-GPU 1 的上一轮训练在动态标签分配阶段 OOM，进程已退出。其检查点、日志和结果均已清理。GPU 0 启动前空闲约 21.4 GiB，训练 batch 调整为 20，以保留显存余量；占用会随每批标注数量变化。
+GPU 1 的上一轮训练在动态标签分配阶段 OOM，进程已退出。其检查点、日志和结果均已清理。扣除驱动预留后，GPU 0 启动前可用约 20.7 GiB；训练 batch 调整为 20，以保留显存余量。占用会随每批标注数量变化。
 
 当前日志：`logs/rtmdet_tiny_dior_300e_gpu0.log`。框架原生日志、指标与检查点位于 `work_dirs/rtmdet_tiny_dior_300e_gpu0/`。
 
