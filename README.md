@@ -1,6 +1,6 @@
 # Paper1：RTMDet-tiny / DIOR
 
-使用 MMYOLO 官方 RTMDet-tiny，在 DIOR 水平框数据上从零训练。输入 800×800，使用官方 train 5862 张训练、val 5863 张评估；test 11738 张不参与当前实验。
+使用 MMYOLO 官方 RTMDet-tiny，在 DIOR 水平框数据上从零训练。输入 640×640，使用官方 train 5862 张训练、val 5863 张评估；test 11738 张不参与当前实验。
 
 主指标为 VOC2007 mAP@0.5（11 点插值），同时报告 COCO AP50:95、AP50、AP75。COCO JSON 仅是标注格式，不使用 COCO 数据或预训练权重。
 

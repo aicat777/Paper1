@@ -1,4 +1,4 @@
-"""RTMDet-tiny: DIOR train/val, 800 pixels, VOC and COCO, from scratch."""
+"""RTMDet-tiny: DIOR train/val, 640 pixels, VOC and COCO, from scratch."""
 import os.path as osp
 
 _base_ = '../mmyolo/configs/rtmdet/rtmdet_tiny_syncbn_fast_8xb32-300e_coco.py'
@@ -12,12 +12,12 @@ classes = ('airplane', 'airport', 'baseballfield', 'basketballcourt', 'bridge',
            'windmill')
 data_root = root + '/datasets/DIOR/'
 num_classes = 20
-img_scale = (800, 800)
+img_scale = (640, 640)
 max_epochs = 300
 train_batch_size_per_gpu = 12
 val_batch_size_per_gpu = 8
 base_lr = 0.004 * train_batch_size_per_gpu / 256
-work_dir = root + '/work_dirs/rtmdet_tiny_dior_800_300e_gpu0'
+work_dir = root + '/work_dirs/rtmdet_tiny_dior_640_300e_gpu0'
 
 model = dict(
     backbone=dict(init_cfg=None),
@@ -30,7 +30,7 @@ train_pipeline = [
     dict(type='LoadAnnotations', with_bbox=True),
     dict(type='Mosaic', img_scale=img_scale, use_cached=True,
          max_cached_images=20, random_pop=False, pad_val=114.0),
-    dict(type='mmdet.RandomResize', scale=(1600, 1600),
+    dict(type='mmdet.RandomResize', scale=(img_scale[0] * 2, img_scale[1] * 2),
          ratio_range=(0.5, 2.0), resize_type='mmdet.Resize', keep_ratio=True),
     dict(type='mmdet.RandomCrop', crop_size=img_scale),
     dict(type='mmdet.YOLOXHSVRandomAug'),
