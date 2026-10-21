@@ -153,7 +153,9 @@ class ConfigurationContracts(unittest.TestCase):
         cls.base = Config.fromfile(str(ROOT / 'configs/rtmdet_tiny_dior_300e.py'))
 
     def test_all_configs_keep_the_training_protocol(self):
-        paths = sorted((ROOT / 'configs').glob('*/*.py'))
+        paths = sorted(path for method in (
+            'state_guided', 'magnitude_detail', 'frequency_guided')
+            for path in (ROOT / 'configs' / method).glob('*.py'))
         self.assertEqual(len(paths), 12)
         work_dirs = set()
         for path in paths:

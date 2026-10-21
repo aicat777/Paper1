@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1200" viewBox="0 0 1600 1200">
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M1 1 L11 6 L1 11 Z" fill="#2b88bd"/>
+    </marker>
+    <style>
+      text { font-family: "Source Han Sans CN", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif; fill: #202b35; }
+      .header { fill: #fff; font-size: 55px; font-weight: 600; }
+      .brand { fill: #ffffff; }
+      .brand-en { fill: #f3dada; }
+      .section { font-size: 28px; font-weight: 600; }
+      .column { font-size: 27px; font-weight: 600; fill: #32485b; }
+      .body { font-size: 27px; }
+      .small { font-size: 23px; }
+      .mini { font-size: 21px; }
+      .chip { font-size: 23px; font-weight: 500; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="1200" fill="#ffffff"/>
+  <rect x="0" y="0" width="1600" height="166" fill="#990005"/>
+  <rect x="0" y="166" width="1600" height="5" fill="#d5d5d5"/>
+  <text x="78" y="101" class="header">研究内容与技术路线</text>
+  <text x="1490" y="82" class="brand" font-size="35" font-weight="600" text-anchor="end">贵州大学</text>
+  <text x="1490" y="118" class="brand-en" font-size="17" letter-spacing="3" text-anchor="end">GUIZHOU UNIVERSITY</text>
+
+  <!-- Narrative panel, following the reference slide's left-column composition. -->
+  <rect x="48" y="205" width="346" height="939" fill="#ffffff" stroke="#d8dee5" stroke-width="2"/>
+  <rect x="48" y="205" width="346" height="10" fill="#990005"/>
+  <text x="74" y="273" class="section">研究思路</text>
+  <line x1="74" y1="294" x2="365" y2="294" stroke="#d5dce3" stroke-width="2"/>
+  <text x="74" y="351" class="body">
+    <tspan x="74" dy="0">本课题围绕遥感影像</tspan>
+    <tspan x="74" dy="43">目标检测的两类需求</tspan>
+    <tspan x="74" dy="43">展开研究：</tspan>
+    <tspan x="74" dy="67">一是复杂场景下的</tspan>
+    <tspan x="74" dy="43">准确识别与定位；</tspan>
+    <tspan x="74" dy="67">二是有限计算资源</tspan>
+    <tspan x="74" dy="43">下的高效处理。</tspan>
+    <tspan x="74" dy="67">两项研究并行开展，</tspan>
+    <tspan x="74" dy="43">分别形成精度导向</tspan>
+    <tspan x="74" dy="43">与效率导向的目标</tspan>
+    <tspan x="74" dy="43">检测方法。</tspan>
+  </text>
+  <rect x="72" y="945" width="298" height="135" rx="7" fill="#f7f9fb" stroke="#cbd4dc" stroke-width="2"/>
+  <text x="221" y="990" text-anchor="middle" class="small" font-weight="600">共同研究对象</text>
+  <text x="221" y="1033" text-anchor="middle" class="small">光学遥感影像</text>
+  <text x="221" y="1067" text-anchor="middle" class="small">中的目标检测</text>
+
+  <!-- Overall challenge band. -->
+  <rect x="430" y="205" width="1122" height="178" fill="#f6f7f9" stroke="#8794a0" stroke-width="2"/>
+  <text x="991" y="252" text-anchor="middle" font-size="32" font-weight="600">遥感影像目标检测面临的关键问题</text>
+  <g fill="#ffffff" stroke="#606e7b" stroke-width="2">
+    <rect x="455" y="290" width="201" height="69"/>
+    <rect x="672" y="290" width="201" height="69"/>
+    <rect x="889" y="290" width="201" height="69"/>
+    <rect x="1106" y="290" width="201" height="69"/>
+    <rect x="1323" y="290" width="201" height="69"/>
+  </g>
+  <g class="chip" text-anchor="middle">
+    <text x="555" y="333">小目标特征弱</text>
+    <text x="772" y="333">尺度变化显著</text>
+    <text x="989" y="333">复杂背景干扰</text>
+    <text x="1206" y="333">定位信息不足</text>
+    <text x="1423" y="333">计算开销较高</text>
+  </g>
+  <text x="480" y="422" class="small" fill="#526576">现实问题驱动</text>
+  <line x1="688" y1="399" x2="688" y2="437" stroke="#2b88bd" stroke-width="5" marker-end="url(#arrow)"/>
+  <text x="1489" y="422" class="small" fill="#526576" text-anchor="end">研究目标牵引</text>
+
+  <!-- Overall route frame. -->
+  <rect x="430" y="451" width="1122" height="693" fill="#ffffff" stroke="#8794a0" stroke-width="2"/>
+  <rect x="430" y="451" width="1122" height="56" fill="#eaf0f5"/>
+  <line x1="671" y1="451" x2="671" y2="1144" stroke="#a2acb5" stroke-width="2"/>
+  <line x1="1304" y1="451" x2="1304" y2="1144" stroke="#a2acb5" stroke-width="2"/>
+  <text x="551" y="489" class="column" text-anchor="middle">需求</text>
+  <text x="988" y="489" class="column" text-anchor="middle">研究内容</text>
+  <text x="1428" y="489" class="column" text-anchor="middle">目标</text>
+
+  <!-- Accuracy route. -->
+  <rect x="444" y="520" width="1093" height="290" fill="#fcfdfe"/>
+  <rect x="451" y="568" width="205" height="191" fill="#f4f6f9" stroke="#8997a3" stroke-width="2"/>
+  <text x="553" y="612" text-anchor="middle" class="small" font-weight="600">复杂场景</text>
+  <text x="553" y="653" text-anchor="middle" class="small">目标信息弱</text>
+  <text x="553" y="694" text-anchor="middle" class="small">关键点关联不足</text>
+  <text x="553" y="735" text-anchor="middle" class="small">定位难度大</text>
+
+  <line x1="659" y1="661" x2="699" y2="661" stroke="#2b88bd" stroke-width="6" marker-end="url(#arrow)"/>
+  <rect x="713" y="529" width="576" height="266" fill="#ffffff" stroke="#607788" stroke-width="2"/>
+  <text x="733" y="570" font-size="29" font-weight="600" fill="#8f0b10">研究内容一：高准确性目标检测</text>
+  <text x="733" y="607" class="mini" fill="#526576">基础模型：CenterNet++　　方法：LCMCA-Net</text>
+  <rect x="733" y="630" width="248" height="103" fill="#fff8f8" stroke="#b1696a" stroke-width="2"/>
+  <rect x="1021" y="630" width="248" height="103" fill="#fff8f8" stroke="#b1696a" stroke-width="2"/>
+  <text x="857" y="672" class="small" text-anchor="middle" font-weight="600">大核轮廓注意力</text>
+  <text x="857" y="706" class="mini" text-anchor="middle">增强上下文与结构表征</text>
+  <text x="1001" y="693" text-anchor="middle" font-size="36" fill="#8f0b10">+</text>
+  <text x="1145" y="672" class="small" text-anchor="middle" font-weight="600">多尺度角点对齐</text>
+  <text x="1145" y="706" class="mini" text-anchor="middle">加强中心与角点关联</text>
+  <text x="1001" y="770" text-anchor="middle" class="mini" fill="#526576">特征表征与关键点定位协同优化</text>
+  <line x1="1292" y1="661" x2="1329" y2="661" stroke="#2b88bd" stroke-width="6" marker-end="url(#arrow)"/>
+  <rect x="1332" y="568" width="202" height="191" fill="#f4f6f9" stroke="#8997a3" stroke-width="2"/>
+  <text x="1433" y="614" text-anchor="middle" class="small" font-weight="600">准确识别</text>
+  <text x="1433" y="658" text-anchor="middle" class="small">改善目标定位</text>
+  <text x="1433" y="702" text-anchor="middle" class="small">减少漏检误检</text>
+  <line x1="444" y1="817" x2="1537" y2="817" stroke="#b4bec7" stroke-width="2"/>
+
+  <!-- Efficiency route, parallel to the accuracy route. -->
+  <rect x="444" y="824" width="1093" height="304" fill="#fcfdfe"/>
+  <rect x="451" y="891" width="205" height="191" fill="#f4f6f9" stroke="#8997a3" stroke-width="2"/>
+  <text x="553" y="936" text-anchor="middle" class="small" font-weight="600">资源受限</text>
+  <text x="553" y="979" text-anchor="middle" class="small">多尺度处理开销</text>
+  <text x="553" y="1022" text-anchor="middle" class="small">特征计算冗余</text>
+  <text x="553" y="1065" text-anchor="middle" class="small">小目标细节易损失</text>
+
+  <line x1="659" y1="983" x2="699" y2="983" stroke="#2b88bd" stroke-width="6" marker-end="url(#arrow)"/>
+  <rect x="713" y="839" width="576" height="270" fill="#ffffff" stroke="#607788" stroke-width="2"/>
+  <text x="733" y="881" font-size="29" font-weight="600" fill="#176289">研究内容二：高效率目标检测</text>
+  <text x="733" y="918" class="mini" fill="#526576">基础模型：RTMDet-tiny　　方向：计算与融合优化</text>
+  <rect x="733" y="942" width="248" height="103" fill="#f4fbff" stroke="#6da3bf" stroke-width="2"/>
+  <rect x="1021" y="942" width="248" height="103" fill="#f4fbff" stroke="#6da3bf" stroke-width="2"/>
+  <text x="857" y="983" class="small" text-anchor="middle" font-weight="600">卷积计算优化</text>
+  <text x="857" y="1018" class="mini" text-anchor="middle">分析并减少冗余计算</text>
+  <text x="1001" y="1004" text-anchor="middle" font-size="36" fill="#176289">+</text>
+  <text x="1145" y="983" class="small" text-anchor="middle" font-weight="600">多尺度融合优化</text>
+  <text x="1145" y="1018" class="mini" text-anchor="middle">保留有效目标信息</text>
+  <text x="1001" y="1082" text-anchor="middle" class="mini" fill="#526576">面向效率的检测结构设计</text>
+  <line x1="1292" y1="983" x2="1329" y2="983" stroke="#2b88bd" stroke-width="6" marker-end="url(#arrow)"/>
+  <rect x="1332" y="891" width="202" height="191" fill="#f4f6f9" stroke="#8997a3" stroke-width="2"/>
+  <text x="1433" y="936" text-anchor="middle" class="small" font-weight="600">高效处理</text>
+  <text x="1433" y="979" text-anchor="middle" class="small">降低计算开销</text>
+  <text x="1433" y="1022" text-anchor="middle" class="small">提高推理效率</text>
+  <text x="1433" y="1065" text-anchor="middle" class="small">保留检测能力</text>
+</svg>

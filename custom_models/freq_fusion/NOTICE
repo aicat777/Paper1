@@ -1,0 +1,10 @@
+FreqFusion is based on Frequency-aware Feature Fusion for Dense Image Prediction
+by Linwei Chen et al., IEEE TPAMI 2024, DOI 10.1109/TPAMI.2024.3449959.
+Official implementation: https://github.com/Linwei-Chen/FreqFusion
+Reference commit: 3fb0c70637a3c194fb74294d3ce4681958b26241
+Reference files: mmdetection/mmdet/models/necks/FreqFusion.py and fpn_carafe.py;
+mmdetection/configs/faster_rcnn/faster_rcnn_r50_fpn_1x_coco_freqfusion.py.
+The upstream mmdetection directory includes the Apache-2.0 license reproduced
+in LICENSE. This adaptation separates filtering, resampling and RTMDet neck
+integration, retains the complete detection operator, and adds FP32 AMP
+boundaries and an equivalent zero-padded CPU CARAFE reference.
