@@ -1,0 +1,409 @@
+{
+  "unit_tests": {
+    "status": "passed",
+    "total_count": 33,
+    "fdw_count": 9,
+    "cuda_checks_enabled": true
+  },
+  "official_operator_fidelity": {
+    "status": "passed",
+    "official_commit": "bf7a33d4f39ac7ea8172158f5628107fcaaba469",
+    "cases": [
+      {
+        "channels": 48,
+        "forward_max_error": 0.0,
+        "gradient_max_error": 1.9073486328125e-06,
+        "parameter_tensors": 8
+      },
+      {
+        "channels": 96,
+        "forward_max_error": 0.0,
+        "gradient_max_error": 2.384185791015625e-06,
+        "parameter_tensors": 8
+      },
+      {
+        "channels": 192,
+        "forward_max_error": 0.0,
+        "gradient_max_error": 7.62939453125e-06,
+        "parameter_tensors": 8
+      }
+    ]
+  },
+  "gpu_integration": {
+    "status": "passed",
+    "input_size": [
+      640,
+      640
+    ],
+    "microbatch": 2,
+    "accumulation": 1,
+    "optimizer_updates": 16,
+    "training_microsteps": 16,
+    "val_passes": 2,
+    "val_images_per_pass": 32,
+    "predictions_checked": 64,
+    "strong_and_weak_augmentation": true,
+    "finite_losses": true,
+    "finite_predictions": true,
+    "fdw_parameters_in_optimizer": true,
+    "watched_parameter_tensors": 24,
+    "gradient_max": {
+      "backbone.stage4.2.blocks.0.conv1.conv.dft_weight": 27.446521759033203,
+      "backbone.stage4.2.blocks.0.conv1.conv.router.kernel_fc.weight": 29.890625,
+      "backbone.stage4.2.blocks.0.conv1.conv.router.kernel_fc.bias": 28.40625,
+      "backbone.stage4.2.blocks.0.conv1.conv.router.relu.bias": 0.6362648010253906,
+      "backbone.stage4.2.blocks.0.conv1.conv.router.relu.scale": 0.46384650468826294,
+      "backbone.stage4.2.blocks.0.conv1.conv.router.bn.weight": 0.24205803871154785,
+      "backbone.stage4.2.blocks.0.conv1.conv.router.bn.bias": 0.2420654296875,
+      "backbone.stage4.2.blocks.0.conv1.conv.router.fc.weight": 0.67578125,
+      "backbone.stage3.1.blocks.0.conv1.conv.dft_weight": 83.83212280273438,
+      "backbone.stage3.1.blocks.0.conv1.conv.router.kernel_fc.weight": 68.4375,
+      "backbone.stage3.1.blocks.0.conv1.conv.router.kernel_fc.bias": 66.875,
+      "backbone.stage3.1.blocks.0.conv1.conv.router.relu.bias": 1.254364013671875,
+      "backbone.stage3.1.blocks.0.conv1.conv.router.relu.scale": 2.2172141075134277,
+      "backbone.stage3.1.blocks.0.conv1.conv.router.bn.weight": 0.5717359185218811,
+      "backbone.stage3.1.blocks.0.conv1.conv.router.bn.bias": 0.57177734375,
+      "backbone.stage3.1.blocks.0.conv1.conv.router.fc.weight": 0.037017822265625,
+      "backbone.stage2.1.blocks.0.conv1.conv.dft_weight": 108.3641357421875,
+      "backbone.stage2.1.blocks.0.conv1.conv.router.kernel_fc.weight": 105.0625,
+      "backbone.stage2.1.blocks.0.conv1.conv.router.kernel_fc.bias": 102.0,
+      "backbone.stage2.1.blocks.0.conv1.conv.router.relu.bias": 5.3554511070251465,
+      "backbone.stage2.1.blocks.0.conv1.conv.router.relu.scale": 5.7980241775512695,
+      "backbone.stage2.1.blocks.0.conv1.conv.router.bn.weight": 1.231553554534912,
+      "backbone.stage2.1.blocks.0.conv1.conv.router.bn.bias": 1.2646484375,
+      "backbone.stage2.1.blocks.0.conv1.conv.router.fc.weight": 1.435546875
+    },
+    "parameter_updates_max": {
+      "backbone.stage2.1.blocks.0.conv1.conv.dft_weight": 0.006567448377609253,
+      "backbone.stage2.1.blocks.0.conv1.conv.router.fc.weight": 0.004617929458618164,
+      "backbone.stage2.1.blocks.0.conv1.conv.router.bn.weight": 0.003878295421600342,
+      "backbone.stage2.1.blocks.0.conv1.conv.router.bn.bias": 0.0038664285093545914,
+      "backbone.stage2.1.blocks.0.conv1.conv.router.relu.scale": 0.001343369483947754,
+      "backbone.stage2.1.blocks.0.conv1.conv.router.relu.bias": 0.0010784161277115345,
+      "backbone.stage2.1.blocks.0.conv1.conv.router.kernel_fc.weight": 0.004642651416361332,
+      "backbone.stage2.1.blocks.0.conv1.conv.router.kernel_fc.bias": 0.00455531245097518,
+      "backbone.stage3.1.blocks.0.conv1.conv.dft_weight": 0.007057175040245056,
+      "backbone.stage3.1.blocks.0.conv1.conv.router.fc.weight": 0.005127966403961182,
+      "backbone.stage3.1.blocks.0.conv1.conv.router.bn.weight": 0.004996180534362793,
+      "backbone.stage3.1.blocks.0.conv1.conv.router.bn.bias": 0.004996445961296558,
+      "backbone.stage3.1.blocks.0.conv1.conv.router.relu.scale": 0.004141092300415039,
+      "backbone.stage3.1.blocks.0.conv1.conv.router.relu.bias": 0.00044484829413704574,
+      "backbone.stage3.1.blocks.0.conv1.conv.router.kernel_fc.weight": 0.005247860215604305,
+      "backbone.stage3.1.blocks.0.conv1.conv.router.kernel_fc.bias": 0.005110334139317274,
+      "backbone.stage4.2.blocks.0.conv1.conv.dft_weight": 0.006995990872383118,
+      "backbone.stage4.2.blocks.0.conv1.conv.router.fc.weight": 0.004321426153182983,
+      "backbone.stage4.2.blocks.0.conv1.conv.router.bn.weight": 0.003854036331176758,
+      "backbone.stage4.2.blocks.0.conv1.conv.router.bn.bias": 0.0038541799876838923,
+      "backbone.stage4.2.blocks.0.conv1.conv.router.relu.scale": 0.0007300376892089844,
+      "backbone.stage4.2.blocks.0.conv1.conv.router.relu.bias": 0.000941573060117662,
+      "backbone.stage4.2.blocks.0.conv1.conv.router.kernel_fc.weight": 0.005354764871299267,
+      "backbone.stage4.2.blocks.0.conv1.conv.router.kernel_fc.bias": 0.005352731328457594
+    },
+    "raw_predictions_checked": 16,
+    "ema_validation_roundtrips": 2,
+    "coco_evaluation_scoped_to_subset": true,
+    "loss_scale_init": 128,
+    "warmup_enabled": false,
+    "saved_checkpoints": false,
+    "peak_allocated_gib": 2.5791826248168945,
+    "peak_reserved_gib": 2.779296875,
+    "elapsed_seconds": 15.700836325064301,
+    "gpu": "GPU0",
+    "allocator_fraction": 0.06,
+    "epochs": 2,
+    "training_images": 16
+  },
+  "profile": {
+    "status": "passed",
+    "architecture": {
+      "baseline": {
+        "parameters": 4878708,
+        "conv_gmac": 7.98770304
+      },
+      "fdw": {
+        "parameters": 4887018,
+        "conv_gmac": 7.987709184
+      }
+    },
+    "training_step_profile": {
+      "baseline": {
+        "batch": 2,
+        "input": [
+          640,
+          640
+        ],
+        "warmup_steps": 5,
+        "measured_steps": 10,
+        "mean_step_seconds": 0.17737037455663085,
+        "shared_gpu": true,
+        "data_pipeline_included": false
+      },
+      "fdw": {
+        "batch": 2,
+        "input": [
+          640,
+          640
+        ],
+        "warmup_steps": 5,
+        "measured_steps": 10,
+        "mean_step_seconds": 0.20860945992171764,
+        "shared_gpu": true,
+        "data_pipeline_included": false
+      }
+    },
+    "gpu": "GPU0",
+    "allocator_fraction": 0.06
+  },
+  "protocol": {
+    "status": "passed",
+    "matches_completed_batch36_baseline": true,
+    "checked_fields": [
+      "train_dataloader",
+      "val_dataloader",
+      "train_cfg",
+      "val_cfg",
+      "val_evaluator",
+      "train_pipeline",
+      "train_pipeline_stage2",
+      "optim_wrapper",
+      "param_scheduler",
+      "custom_hooks",
+      "default_hooks",
+      "randomness",
+      "load_from",
+      "resume"
+    ],
+    "float_relative_tolerance": 1e-12
+  },
+  "queue_checks": {
+    "status": "passed",
+    "pid_identity": true,
+    "completion_checks": [
+      "missing",
+      "finite",
+      "empty_checkpoint",
+      "nonfinite_metric",
+      "fatal_error"
+    ],
+    "mock_cases": [
+      {
+        "case": "success",
+        "state": "complete",
+        "children_started": 2
+      },
+      {
+        "case": "lsconv_failed",
+        "state": "failed",
+        "children_started": 0
+      },
+      {
+        "case": "lsconv_incomplete",
+        "state": "failed",
+        "children_started": 0
+      },
+      {
+        "case": "existing_outputs",
+        "state": "failed",
+        "children_started": 0
+      },
+      {
+        "case": "capacity_exit_failure",
+        "state": "failed",
+        "children_started": 1
+      },
+      {
+        "case": "capacity_report_failure",
+        "state": "failed",
+        "children_started": 1
+      },
+      {
+        "case": "training_failure",
+        "state": "failed",
+        "children_started": 2
+      },
+      {
+        "case": "source_changed",
+        "state": "failed",
+        "children_started": 0
+      }
+    ]
+  },
+  "batch36_capacity": {
+    "status": "passed",
+    "config": "/home/pwt/Paper1/work_dirs/fdw_queue/fdw_640_bs36.py",
+    "batch": 36,
+    "input_size": [
+      640,
+      640
+    ],
+    "gt_per_image": 1200,
+    "repeated_annotations": true,
+    "optimizer_updates": 3,
+    "loss_scale_init": 128,
+    "allocator_fraction": 0.88,
+    "watched_parameter_tensors": 24,
+    "losses": [
+      {
+        "loss": 2.276641607284546,
+        "loss_cls": 0.2820810377597809,
+        "loss_bbox": 1.9945604801177979
+      },
+      {
+        "loss": 2.0780439376831055,
+        "loss_cls": 0.24266503751277924,
+        "loss_bbox": 1.835378885269165
+      },
+      {
+        "loss": 1.966455101966858,
+        "loss_cls": 0.32170212268829346,
+        "loss_bbox": 1.6447529792785645
+      }
+    ],
+    "distinct_images": 36,
+    "image_ids": [
+      844,
+      5601,
+      4604,
+      5475,
+      5757,
+      1129,
+      3150,
+      1497,
+      819,
+      1679,
+      7,
+      268,
+      4825,
+      4020,
+      2029,
+      3912,
+      448,
+      1805,
+      884,
+      5513,
+      4202,
+      1344,
+      2832,
+      594,
+      346,
+      1505,
+      3861,
+      1842,
+      3351,
+      2990,
+      5139,
+      5195,
+      4721,
+      5731,
+      2332,
+      4431
+    ],
+    "gradient_max": {
+      "backbone.stage4.2.blocks.0.conv1.conv.dft_weight": 4.944123268127441,
+      "backbone.stage4.2.blocks.0.conv1.conv.router.kernel_fc.weight": 99.625,
+      "backbone.stage4.2.blocks.0.conv1.conv.router.kernel_fc.bias": 5.8359375,
+      "backbone.stage4.2.blocks.0.conv1.conv.router.relu.bias": 0.027390122413635254,
+      "backbone.stage4.2.blocks.0.conv1.conv.router.relu.scale": 0.23080408573150635,
+      "backbone.stage4.2.blocks.0.conv1.conv.router.bn.weight": 0.13782943785190582,
+      "backbone.stage4.2.blocks.0.conv1.conv.router.bn.bias": 0.03357398509979248,
+      "backbone.stage4.2.blocks.0.conv1.conv.router.fc.weight": 0.0286407470703125,
+      "backbone.stage3.1.blocks.0.conv1.conv.dft_weight": 9.925183296203613,
+      "backbone.stage3.1.blocks.0.conv1.conv.router.kernel_fc.weight": 73.125,
+      "backbone.stage3.1.blocks.0.conv1.conv.router.kernel_fc.bias": 8.03125,
+      "backbone.stage3.1.blocks.0.conv1.conv.router.relu.bias": 0.053833186626434326,
+      "backbone.stage3.1.blocks.0.conv1.conv.router.relu.scale": 0.9857532978057861,
+      "backbone.stage3.1.blocks.0.conv1.conv.router.bn.weight": 0.3387458920478821,
+      "backbone.stage3.1.blocks.0.conv1.conv.router.bn.bias": 0.08218270540237427,
+      "backbone.stage3.1.blocks.0.conv1.conv.router.fc.weight": 0.471435546875,
+      "backbone.stage2.1.blocks.0.conv1.conv.dft_weight": 10.8858642578125,
+      "backbone.stage2.1.blocks.0.conv1.conv.router.kernel_fc.weight": 202.0,
+      "backbone.stage2.1.blocks.0.conv1.conv.router.kernel_fc.bias": 12.109375,
+      "backbone.stage2.1.blocks.0.conv1.conv.router.relu.bias": 0.09777605533599854,
+      "backbone.stage2.1.blocks.0.conv1.conv.router.relu.scale": 0.9351644515991211,
+      "backbone.stage2.1.blocks.0.conv1.conv.router.bn.weight": 0.3024294674396515,
+      "backbone.stage2.1.blocks.0.conv1.conv.router.bn.bias": 0.06980198621749878,
+      "backbone.stage2.1.blocks.0.conv1.conv.router.fc.weight": 0.08306884765625
+    },
+    "parameter_updates_max": {
+      "backbone.stage2.1.blocks.0.conv1.conv.dft_weight": 0.0017341971397399902,
+      "backbone.stage2.1.blocks.0.conv1.conv.router.fc.weight": 0.0014295745640993118,
+      "backbone.stage2.1.blocks.0.conv1.conv.router.bn.weight": 0.001331925392150879,
+      "backbone.stage2.1.blocks.0.conv1.conv.router.bn.bias": 0.001393690938130021,
+      "backbone.stage2.1.blocks.0.conv1.conv.router.relu.scale": 0.0007216334342956543,
+      "backbone.stage2.1.blocks.0.conv1.conv.router.relu.bias": 0.001062955940142274,
+      "backbone.stage2.1.blocks.0.conv1.conv.router.kernel_fc.weight": 0.0016808781074360013,
+      "backbone.stage2.1.blocks.0.conv1.conv.router.kernel_fc.bias": 0.0015901851002126932,
+      "backbone.stage3.1.blocks.0.conv1.conv.dft_weight": 0.0017402172088623047,
+      "backbone.stage3.1.blocks.0.conv1.conv.router.fc.weight": 0.001476287841796875,
+      "backbone.stage3.1.blocks.0.conv1.conv.router.bn.weight": 0.0014560222625732422,
+      "backbone.stage3.1.blocks.0.conv1.conv.router.bn.bias": 0.0014260862953960896,
+      "backbone.stage3.1.blocks.0.conv1.conv.router.relu.scale": 0.0013191699981689453,
+      "backbone.stage3.1.blocks.0.conv1.conv.router.relu.bias": 0.0013759237481281161,
+      "backbone.stage3.1.blocks.0.conv1.conv.router.kernel_fc.weight": 0.0016843185294419527,
+      "backbone.stage3.1.blocks.0.conv1.conv.router.kernel_fc.bias": 0.0016013688873499632,
+      "backbone.stage4.2.blocks.0.conv1.conv.dft_weight": 0.001727670431137085,
+      "backbone.stage4.2.blocks.0.conv1.conv.router.fc.weight": 0.0014810562133789062,
+      "backbone.stage4.2.blocks.0.conv1.conv.router.bn.weight": 0.0014571547508239746,
+      "backbone.stage4.2.blocks.0.conv1.conv.router.bn.bias": 0.0014078610111027956,
+      "backbone.stage4.2.blocks.0.conv1.conv.router.relu.scale": 0.00041091442108154297,
+      "backbone.stage4.2.blocks.0.conv1.conv.router.relu.bias": 0.001358050387352705,
+      "backbone.stage4.2.blocks.0.conv1.conv.router.kernel_fc.weight": 0.0016814691480249166,
+      "backbone.stage4.2.blocks.0.conv1.conv.router.kernel_fc.bias": 0.0016562920063734055
+    },
+    "optimizer_steps": {
+      "backbone.stage2.1.blocks.0.conv1.conv.dft_weight": 3,
+      "backbone.stage2.1.blocks.0.conv1.conv.router.fc.weight": 3,
+      "backbone.stage2.1.blocks.0.conv1.conv.router.bn.weight": 3,
+      "backbone.stage2.1.blocks.0.conv1.conv.router.bn.bias": 3,
+      "backbone.stage2.1.blocks.0.conv1.conv.router.relu.scale": 3,
+      "backbone.stage2.1.blocks.0.conv1.conv.router.relu.bias": 3,
+      "backbone.stage2.1.blocks.0.conv1.conv.router.kernel_fc.weight": 3,
+      "backbone.stage2.1.blocks.0.conv1.conv.router.kernel_fc.bias": 3,
+      "backbone.stage3.1.blocks.0.conv1.conv.dft_weight": 3,
+      "backbone.stage3.1.blocks.0.conv1.conv.router.fc.weight": 3,
+      "backbone.stage3.1.blocks.0.conv1.conv.router.bn.weight": 3,
+      "backbone.stage3.1.blocks.0.conv1.conv.router.bn.bias": 3,
+      "backbone.stage3.1.blocks.0.conv1.conv.router.relu.scale": 3,
+      "backbone.stage3.1.blocks.0.conv1.conv.router.relu.bias": 3,
+      "backbone.stage3.1.blocks.0.conv1.conv.router.kernel_fc.weight": 3,
+      "backbone.stage3.1.blocks.0.conv1.conv.router.kernel_fc.bias": 3,
+      "backbone.stage4.2.blocks.0.conv1.conv.dft_weight": 3,
+      "backbone.stage4.2.blocks.0.conv1.conv.router.fc.weight": 3,
+      "backbone.stage4.2.blocks.0.conv1.conv.router.bn.weight": 3,
+      "backbone.stage4.2.blocks.0.conv1.conv.router.bn.bias": 3,
+      "backbone.stage4.2.blocks.0.conv1.conv.router.relu.scale": 3,
+      "backbone.stage4.2.blocks.0.conv1.conv.router.relu.bias": 3,
+      "backbone.stage4.2.blocks.0.conv1.conv.router.kernel_fc.weight": 3,
+      "backbone.stage4.2.blocks.0.conv1.conv.router.kernel_fc.bias": 3
+    },
+    "inactive_parameters": [],
+    "peak_allocated_gib": 35.18134784698486,
+    "peak_reserved_gib": 39.705078125,
+    "elapsed_seconds": 28.132097674999386
+  },
+  "queue_import_check": {
+    "status": "passed",
+    "cases": [
+      {
+        "directory": "/home/pwt/Paper1/work_dirs/lsconv_queue",
+        "status": "passed",
+        "stdlib_queue": "/home/pwt/miniconda3/envs/rtmdet/lib/python3.10/queue.py"
+      },
+      {
+        "directory": "/home/pwt/Paper1/work_dirs/fdw_queue",
+        "status": "passed",
+        "stdlib_queue": "/home/pwt/miniconda3/envs/rtmdet/lib/python3.10/queue.py"
+      }
+    ]
+  },
+  "queue_identity": {
+    "pid": 2269614,
+    "start_ticks": "297234957",
+    "command": [
+      "/home/pwt/miniconda3/envs/rtmdet/bin/python",
+      "-u",
+      "/home/pwt/Paper1/work_dirs/fdw_queue/schedule_training.py"
+    ],
+    "started_at": "2026-10-15T01:12:29.295458+08:00"
+  }
+}

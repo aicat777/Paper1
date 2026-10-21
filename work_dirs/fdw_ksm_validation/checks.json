@@ -1,0 +1,67 @@
+{
+  "status": "passed",
+  "checked_at": "2026-10-15T17:22:00.132756+08:00",
+  "method": "FDW + original local KSM at three existing backbone sites",
+  "configuration": "configs/fdw_ksm/rtmdet_tiny_dior_640.py",
+  "unit_tests": {
+    "cpu_passed": 6,
+    "cuda_passed": 1,
+    "cuda_cases": 6
+  },
+  "reports": {
+    "preflight": "/home/pwt/Paper1/work_dirs/fdw_ksm_validation/preflight.json",
+    "fidelity": "/home/pwt/Paper1/work_dirs/fdw_ksm_validation/fidelity.json",
+    "smoke": "/home/pwt/Paper1/work_dirs/fdw_ksm_validation/smoke.json",
+    "capacity_bs12": "/home/pwt/Paper1/work_dirs/fdw_ksm_validation/capacity_bs12.json"
+  },
+  "parameters": 4901946,
+  "official_fidelity": {
+    "cases": 6,
+    "max_forward_error": 0.0,
+    "max_gradient_error": 1.341104507446289e-07
+  },
+  "gpu_smoke": {
+    "optimizer_updates": 16,
+    "watched_parameter_tensors": 33,
+    "validation_passes": 2,
+    "validation_images_per_pass": 32,
+    "ema_roundtrips": 2,
+    "amp_skipped_updates": 0,
+    "checkpoints_saved": false
+  },
+  "capacity": {
+    "tested_batch": 12,
+    "gt_per_image": 1200,
+    "optimizer_updates": 3,
+    "peak_allocated_gib": 11.81224536895752,
+    "peak_reserved_gib": 13.443359375,
+    "formal_batch": 36,
+    "formal_batch_capacity_verified": false
+  },
+  "full_training_queued": false,
+  "preserved_queues": {
+    "efs_adapt": {
+      "queue_pid": 32124,
+      "state": "training",
+      "sources_unchanged": true,
+      "queue_identity_live": true,
+      "training_pid": 33237
+    },
+    "lsconv_full": {
+      "queue_pid": 32125,
+      "state": "waiting_efs_adapt",
+      "sources_unchanged": true,
+      "queue_identity_live": true
+    }
+  },
+  "source_sha256": {
+    "custom_models/fdw_ksm/__init__.py": "5b0c6e33673d608bd4ca34cf9bcebb6557f9b689ad96ed0f1aa31c21b15a38e4",
+    "custom_models/fdw_ksm/backbone.py": "5eb15290fa9ee63dbaac88f921408ca178c4b7a097b69ec84ab315f8563c222d",
+    "custom_models/fdw_ksm/frequency.py": "41c0af79983d943b11a8e873c89ce6add73ff40256dcd1292643fe2c28adfca3",
+    "custom_models/fdw_ksm/local_modulation.py": "57b1d119df6ec2dc7ce1c2ca7c3c3d25e4179288336619c5551d72577927df6c",
+    "custom_models/fdw_ksm/operator.py": "302baff51767641ed2affa6f8e177c8c1b3667c5ebb5046758d444dcd20c356d",
+    "configs/fdw_ksm/rtmdet_tiny_dior_640.py": "20e7a7eb1ea529dc691e3c74ca39bf24d3f46efb13966b5abae3494595f694e6",
+    "tests/test_fdw_ksm.py": "df9b9f2eaf758fbbd42d2310a680f6ad1535df71ac1e78e41f87e8bb6718b05d",
+    "scripts/fdw_ksm_probe.py": "8c0a7104744c70407c4c83e4eee2765473669864847ddc7811d0da0b627aabd7"
+  }
+}

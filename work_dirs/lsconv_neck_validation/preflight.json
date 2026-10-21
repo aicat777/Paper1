@@ -1,0 +1,93 @@
+{
+  "status": "passed",
+  "method": "lsconv_neck",
+  "parameters": 4250532,
+  "conv_gmac": 7.38397824,
+  "aggregation_gmac": 0.0110592,
+  "counted_gmac": 7.39503744,
+  "excludes_norm_activation_residual_and_postprocessing": true,
+  "lsconv_sites": [
+    {
+      "path": "backbone.stage2.1.blocks.0.conv1.0",
+      "shape": [
+        1,
+        48,
+        80,
+        80
+      ]
+    },
+    {
+      "path": "backbone.stage3.1.blocks.0.conv1.0",
+      "shape": [
+        1,
+        96,
+        40,
+        40
+      ]
+    },
+    {
+      "path": "backbone.stage4.2.blocks.0.conv1.0",
+      "shape": [
+        1,
+        192,
+        20,
+        20
+      ]
+    },
+    {
+      "path": "neck.top_down_layers.0.0.blocks.0.mixer",
+      "shape": [
+        1,
+        96,
+        40,
+        40
+      ]
+    },
+    {
+      "path": "neck.top_down_layers.1.blocks.0.mixer",
+      "shape": [
+        1,
+        48,
+        80,
+        80
+      ]
+    },
+    {
+      "path": "neck.bottom_up_layers.0.blocks.0.mixer",
+      "shape": [
+        1,
+        96,
+        40,
+        40
+      ]
+    },
+    {
+      "path": "neck.bottom_up_layers.1.blocks.0.mixer",
+      "shape": [
+        1,
+        192,
+        20,
+        20
+      ]
+    }
+  ],
+  "runtime_lsconv_calls": 7,
+  "whole_lsblocks": 4,
+  "prediction_points": 8400,
+  "watched_parameter_tensors": 129,
+  "scratch": true,
+  "input_size": [
+    640,
+    640
+  ],
+  "formal_batch": 36,
+  "accumulation": 1,
+  "train_images": 5862,
+  "val_images": 5863,
+  "formal_batch_capacity_tested": false,
+  "common_backbone": "unchanged three-site LSConv",
+  "training_protocol_unchanged": true,
+  "ffn_terminal_bn_zero": true,
+  "config": "/home/pwt/Paper1/configs/lsconv_neck/rtmdet_tiny_dior_640.py",
+  "config_sha256": "0d0cad95976b4bd7f6c528042a692b9af5a4d2ab8d80e0cdbc53e951bf172eca"
+}

@@ -1,0 +1,509 @@
+{
+  "created_at": "2026-10-18T09:18:46.512020+08:00",
+  "baseline_conv_linear_gmac": 7.98770304,
+  "baseline_parameters": 4878708,
+  "results": {
+    "freq_fusion": {
+      "conv_linear_mac": 8197482240,
+      "carafe_mac": 40208000,
+      "bilinear_value_mac": 3686400,
+      "carafe_calls": [
+        {
+          "input": [
+            1,
+            48,
+            40,
+            40
+          ],
+          "output": [
+            1,
+            48,
+            40,
+            40
+          ],
+          "kernel": 3,
+          "scale": 1,
+          "mac": 691200
+        },
+        {
+          "input": [
+            1,
+            25,
+            20,
+            20
+          ],
+          "output": [
+            1,
+            25,
+            40,
+            40
+          ],
+          "kernel": 5,
+          "scale": 2,
+          "mac": 1000000
+        },
+        {
+          "input": [
+            1,
+            9,
+            20,
+            20
+          ],
+          "output": [
+            1,
+            9,
+            40,
+            40
+          ],
+          "kernel": 5,
+          "scale": 2,
+          "mac": 360000
+        },
+        {
+          "input": [
+            1,
+            192,
+            20,
+            20
+          ],
+          "output": [
+            1,
+            192,
+            40,
+            40
+          ],
+          "kernel": 5,
+          "scale": 2,
+          "mac": 7680000
+        },
+        {
+          "input": [
+            1,
+            192,
+            40,
+            40
+          ],
+          "output": [
+            1,
+            192,
+            40,
+            40
+          ],
+          "kernel": 3,
+          "scale": 1,
+          "mac": 2764800
+        },
+        {
+          "input": [
+            1,
+            24,
+            80,
+            80
+          ],
+          "output": [
+            1,
+            24,
+            80,
+            80
+          ],
+          "kernel": 3,
+          "scale": 1,
+          "mac": 1382400
+        },
+        {
+          "input": [
+            1,
+            25,
+            40,
+            40
+          ],
+          "output": [
+            1,
+            25,
+            80,
+            80
+          ],
+          "kernel": 5,
+          "scale": 2,
+          "mac": 4000000
+        },
+        {
+          "input": [
+            1,
+            9,
+            40,
+            40
+          ],
+          "output": [
+            1,
+            9,
+            80,
+            80
+          ],
+          "kernel": 5,
+          "scale": 2,
+          "mac": 1440000
+        },
+        {
+          "input": [
+            1,
+            96,
+            40,
+            40
+          ],
+          "output": [
+            1,
+            96,
+            80,
+            80
+          ],
+          "kernel": 5,
+          "scale": 2,
+          "mac": 15360000
+        },
+        {
+          "input": [
+            1,
+            96,
+            80,
+            80
+          ],
+          "output": [
+            1,
+            96,
+            80,
+            80
+          ],
+          "kernel": 3,
+          "scale": 1,
+          "mac": 5529600
+        }
+      ],
+      "bilinear_calls": [
+        {
+          "input": [
+            4,
+            48,
+            40,
+            40
+          ],
+          "output": [
+            4,
+            48,
+            40,
+            40
+          ],
+          "mac": 1228800
+        },
+        {
+          "input": [
+            4,
+            24,
+            80,
+            80
+          ],
+          "output": [
+            4,
+            24,
+            80,
+            80
+          ],
+          "mac": 2457600
+        }
+      ],
+      "training_model_parameters": 4987800,
+      "input": [
+        1,
+        3,
+        640,
+        640
+      ],
+      "model_forward_only": true,
+      "counted_gmac": 8.24137664,
+      "bilinear_convention": "4 weighted accumulations per output value; no coordinate generation",
+      "excludes": [
+        "normalization",
+        "activation",
+        "cosine_similarity",
+        "softmax",
+        "kernel normalization",
+        "offset_coordinate_generation",
+        "elementwise operations",
+        "losses",
+        "NMS"
+      ],
+      "increase_over_baseline_percent": 3.1758015881371504,
+      "config": "configs/freq_fusion/rtmdet_tiny_dior_640.py",
+      "config_sha256": "98bf4c1e8035b1099fdc04693bec65adc628c9c03bcc97d7dcc82e887b0e3a77"
+    },
+    "freq_fusion_residual": {
+      "conv_linear_mac": 8285955840,
+      "carafe_mac": 40208000,
+      "bilinear_value_mac": 3686400,
+      "carafe_calls": [
+        {
+          "input": [
+            1,
+            48,
+            40,
+            40
+          ],
+          "output": [
+            1,
+            48,
+            40,
+            40
+          ],
+          "kernel": 3,
+          "scale": 1,
+          "mac": 691200
+        },
+        {
+          "input": [
+            1,
+            25,
+            20,
+            20
+          ],
+          "output": [
+            1,
+            25,
+            40,
+            40
+          ],
+          "kernel": 5,
+          "scale": 2,
+          "mac": 1000000
+        },
+        {
+          "input": [
+            1,
+            9,
+            20,
+            20
+          ],
+          "output": [
+            1,
+            9,
+            40,
+            40
+          ],
+          "kernel": 5,
+          "scale": 2,
+          "mac": 360000
+        },
+        {
+          "input": [
+            1,
+            192,
+            20,
+            20
+          ],
+          "output": [
+            1,
+            192,
+            40,
+            40
+          ],
+          "kernel": 5,
+          "scale": 2,
+          "mac": 7680000
+        },
+        {
+          "input": [
+            1,
+            192,
+            40,
+            40
+          ],
+          "output": [
+            1,
+            192,
+            40,
+            40
+          ],
+          "kernel": 3,
+          "scale": 1,
+          "mac": 2764800
+        },
+        {
+          "input": [
+            1,
+            24,
+            80,
+            80
+          ],
+          "output": [
+            1,
+            24,
+            80,
+            80
+          ],
+          "kernel": 3,
+          "scale": 1,
+          "mac": 1382400
+        },
+        {
+          "input": [
+            1,
+            25,
+            40,
+            40
+          ],
+          "output": [
+            1,
+            25,
+            80,
+            80
+          ],
+          "kernel": 5,
+          "scale": 2,
+          "mac": 4000000
+        },
+        {
+          "input": [
+            1,
+            9,
+            40,
+            40
+          ],
+          "output": [
+            1,
+            9,
+            80,
+            80
+          ],
+          "kernel": 5,
+          "scale": 2,
+          "mac": 1440000
+        },
+        {
+          "input": [
+            1,
+            96,
+            40,
+            40
+          ],
+          "output": [
+            1,
+            96,
+            80,
+            80
+          ],
+          "kernel": 5,
+          "scale": 2,
+          "mac": 15360000
+        },
+        {
+          "input": [
+            1,
+            96,
+            80,
+            80
+          ],
+          "output": [
+            1,
+            96,
+            80,
+            80
+          ],
+          "kernel": 3,
+          "scale": 1,
+          "mac": 5529600
+        }
+      ],
+      "bilinear_calls": [
+        {
+          "input": [
+            4,
+            48,
+            40,
+            40
+          ],
+          "output": [
+            4,
+            48,
+            40,
+            40
+          ],
+          "mac": 1228800
+        },
+        {
+          "input": [
+            4,
+            24,
+            80,
+            80
+          ],
+          "output": [
+            4,
+            24,
+            80,
+            80
+          ],
+          "mac": 2457600
+        }
+      ],
+      "training_model_parameters": 5015448,
+      "input": [
+        1,
+        3,
+        640,
+        640
+      ],
+      "model_forward_only": true,
+      "counted_gmac": 8.32985024,
+      "bilinear_convention": "4 weighted accumulations per output value; no coordinate generation",
+      "excludes": [
+        "normalization",
+        "activation",
+        "cosine_similarity",
+        "softmax",
+        "kernel normalization",
+        "offset_coordinate_generation",
+        "elementwise operations",
+        "losses",
+        "NMS"
+      ],
+      "increase_over_baseline_percent": 4.28342413690932,
+      "config": "configs/freq_fusion_residual/rtmdet_tiny_dior_640.py",
+      "config_sha256": "35dc60a8e8703d0e958511724f6fc133871968602613ed1301c07b97f1bd62ab"
+    },
+    "instance_semantic": {
+      "conv_linear_mac": 7987703040,
+      "carafe_mac": 0,
+      "bilinear_value_mac": 0,
+      "carafe_calls": [],
+      "bilinear_calls": [],
+      "training_model_parameters": 4880648,
+      "input": [
+        1,
+        3,
+        640,
+        640
+      ],
+      "model_forward_only": true,
+      "counted_gmac": 7.98770304,
+      "bilinear_convention": "4 weighted accumulations per output value; no coordinate generation",
+      "excludes": [
+        "normalization",
+        "activation",
+        "cosine_similarity",
+        "softmax",
+        "kernel normalization",
+        "offset_coordinate_generation",
+        "elementwise operations",
+        "losses",
+        "NMS"
+      ],
+      "increase_over_baseline_percent": 0.0,
+      "config": "configs/instance_semantic/rtmdet_tiny_dior_640.py",
+      "config_sha256": "51e23561dd9a4d2cece9e25b93964c50982df354f7566ce900375c6949b33e59",
+      "auxiliary_parameters": 1940,
+      "deployed_detector_parameters": 4878708,
+      "training_linear_mac_per_valid_gt": 1920,
+      "training_roi_samples_per_channel_per_valid_gt": 36,
+      "training_gt_count_dependent": true
+    }
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "status": "passed",
+  "method": "freq_fusion_residual",
+  "reference": "/home/pwt/Paper1/work_dirs/research/freq_fusion_reference/mmdetection__mmdet__models__necks__FreqFusion.py",
+  "reference_sha256": "886e2d0068d2c1ce8f054ad12b4337e990a43a64220b29c978c4eec8057c12d7",
+  "upstream_commit": "3fb0c70637a3c194fb74294d3ce4681958b26241",
+  "reference_hr_residual": false,
+  "complete_generators_and_enhanced_initial_fusion": true,
+  "cases": [
+    {
+      "width": 192,
+      "guidance_width": 48,
+      "lr_size": [
+        20,
+        20
+      ],
+      "amp": false,
+      "forward_max_error": 0.0,
+      "gradient_max_error": 5.4836273193359375e-06
+    },
+    {
+      "width": 192,
+      "guidance_width": 48,
+      "lr_size": [
+        20,
+        20
+      ],
+      "amp": true,
+      "forward_max_error": 0.0,
+      "gradient_max_error": 4.76837158203125e-06
+    },
+    {
+      "width": 96,
+      "guidance_width": 24,
+      "lr_size": [
+        40,
+        40
+      ],
+      "amp": false,
+      "forward_max_error": 0.0,
+      "gradient_max_error": 5.4836273193359375e-06
+    },
+    {
+      "width": 96,
+      "guidance_width": 24,
+      "lr_size": [
+        40,
+        40
+      ],
+      "amp": true,
+      "forward_max_error": 0.0,
+      "gradient_max_error": 5.7220458984375e-06
+    },
+    {
+      "width": 96,
+      "guidance_width": 24,
+      "lr_size": [
+        7,
+        11
+      ],
+      "amp": false,
+      "forward_max_error": 0.0,
+      "gradient_max_error": 1.7881393432617188e-07
+    },
+    {
+      "width": 96,
+      "guidance_width": 24,
+      "lr_size": [
+        7,
+        11
+      ],
+      "amp": true,
+      "forward_max_error": 0.0,
+      "gradient_max_error": 7.62939453125e-06
+    }
+  ],
+  "detail_extracted_before_identity_addition_and_amp_rounding": true,
+  "cancellation_case": {
+    "samples_differing_from_rounded_subtraction": 4416,
+    "max_difference": 0.14013671875
+  }
+}

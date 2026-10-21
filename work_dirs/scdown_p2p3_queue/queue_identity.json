@@ -1,0 +1,11 @@
+{
+  "pid": 139834,
+  "start_ticks": "45311419",
+  "created_at": "2026-10-20T21:44:02.935522+08:00",
+  "command": [
+    "/home/pwt/miniconda3/envs/rtmdet/bin/python",
+    "-u",
+    "/home/pwt/Paper1/scripts/queue_experiment.py",
+    "/home/pwt/Paper1/work_dirs/scdown_p2p3_queue/manifest.json"
+  ]
+}

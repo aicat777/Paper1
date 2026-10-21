@@ -1,0 +1,11 @@
+{
+  "pid": 3376370,
+  "start_ticks": "50707007",
+  "created_at": "2026-10-21T12:43:18.810034+08:00",
+  "command": [
+    "/home/pwt/miniconda3/envs/rtmdet/bin/python",
+    "-u",
+    "/home/pwt/Paper1/scripts/queue_experiment.py",
+    "/home/pwt/Paper1/work_dirs/scdown_dsconv_queue/manifest.json"
+  ]
+}

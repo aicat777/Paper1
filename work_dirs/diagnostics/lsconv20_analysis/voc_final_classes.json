@@ -1,0 +1,246 @@
+{
+  "baseline": {
+    "airplane": {
+      "gt": 654,
+      "detections": 76794,
+      "recall": 0.917,
+      "ap": 0.909
+    },
+    "airport": {
+      "gt": 333,
+      "detections": 80905,
+      "recall": 0.958,
+      "ap": 0.8
+    },
+    "baseballfield": {
+      "gt": 1140,
+      "detections": 76105,
+      "recall": 0.939,
+      "ap": 0.908
+    },
+    "basketballcourt": {
+      "gt": 515,
+      "detections": 80867,
+      "recall": 0.922,
+      "ap": 0.812
+    },
+    "bridge": {
+      "gt": 855,
+      "detections": 120333,
+      "recall": 0.763,
+      "ap": 0.476
+    },
+    "chimney": {
+      "gt": 307,
+      "detections": 34643,
+      "recall": 0.925,
+      "ap": 0.826
+    },
+    "dam": {
+      "gt": 260,
+      "detections": 76448,
+      "recall": 0.985,
+      "ap": 0.602
+    },
+    "expressway-service-area": {
+      "gt": 543,
+      "detections": 31009,
+      "recall": 0.737,
+      "ap": 0.652
+    },
+    "expressway-toll-station": {
+      "gt": 318,
+      "detections": 20093,
+      "recall": 0.698,
+      "ap": 0.624
+    },
+    "golffield": {
+      "gt": 274,
+      "detections": 72040,
+      "recall": 0.964,
+      "ap": 0.743
+    },
+    "groundtrackfield": {
+      "gt": 593,
+      "detections": 78722,
+      "recall": 0.954,
+      "ap": 0.795
+    },
+    "harbor": {
+      "gt": 1225,
+      "detections": 150035,
+      "recall": 0.927,
+      "ap": 0.705
+    },
+    "overpass": {
+      "gt": 760,
+      "detections": 100628,
+      "recall": 0.845,
+      "ap": 0.653
+    },
+    "ship": {
+      "gt": 14297,
+      "detections": 129377,
+      "recall": 0.955,
+      "ap": 0.9
+    },
+    "stadium": {
+      "gt": 301,
+      "detections": 21958,
+      "recall": 0.983,
+      "ap": 0.902
+    },
+    "storagetank": {
+      "gt": 1709,
+      "detections": 75284,
+      "recall": 0.876,
+      "ap": 0.8
+    },
+    "tenniscourt": {
+      "gt": 2666,
+      "detections": 71542,
+      "recall": 0.96,
+      "ap": 0.905
+    },
+    "trainstation": {
+      "gt": 256,
+      "detections": 56401,
+      "recall": 0.969,
+      "ap": 0.593
+    },
+    "vehicle": {
+      "gt": 7024,
+      "detections": 353338,
+      "recall": 0.887,
+      "ap": 0.735
+    },
+    "windmill": {
+      "gt": 1404,
+      "detections": 52378,
+      "recall": 0.845,
+      "ap": 0.789
+    }
+  },
+  "lsconv20": {
+    "airplane": {
+      "gt": 654,
+      "detections": 105102,
+      "recall": 0.916,
+      "ap": 0.909
+    },
+    "airport": {
+      "gt": 333,
+      "detections": 106080,
+      "recall": 0.961,
+      "ap": 0.735
+    },
+    "baseballfield": {
+      "gt": 1140,
+      "detections": 67578,
+      "recall": 0.932,
+      "ap": 0.908
+    },
+    "basketballcourt": {
+      "gt": 515,
+      "detections": 79054,
+      "recall": 0.928,
+      "ap": 0.805
+    },
+    "bridge": {
+      "gt": 855,
+      "detections": 125901,
+      "recall": 0.683,
+      "ap": 0.434
+    },
+    "chimney": {
+      "gt": 307,
+      "detections": 24125,
+      "recall": 0.909,
+      "ap": 0.82
+    },
+    "dam": {
+      "gt": 260,
+      "detections": 73440,
+      "recall": 0.969,
+      "ap": 0.527
+    },
+    "expressway-service-area": {
+      "gt": 543,
+      "detections": 47810,
+      "recall": 0.715,
+      "ap": 0.638
+    },
+    "expressway-toll-station": {
+      "gt": 318,
+      "detections": 12285,
+      "recall": 0.686,
+      "ap": 0.605
+    },
+    "golffield": {
+      "gt": 274,
+      "detections": 100429,
+      "recall": 0.949,
+      "ap": 0.755
+    },
+    "groundtrackfield": {
+      "gt": 593,
+      "detections": 80637,
+      "recall": 0.956,
+      "ap": 0.769
+    },
+    "harbor": {
+      "gt": 1225,
+      "detections": 138846,
+      "recall": 0.922,
+      "ap": 0.681
+    },
+    "overpass": {
+      "gt": 760,
+      "detections": 137099,
+      "recall": 0.796,
+      "ap": 0.62
+    },
+    "ship": {
+      "gt": 14297,
+      "detections": 127972,
+      "recall": 0.952,
+      "ap": 0.893
+    },
+    "stadium": {
+      "gt": 301,
+      "detections": 22263,
+      "recall": 0.98,
+      "ap": 0.894
+    },
+    "storagetank": {
+      "gt": 1709,
+      "detections": 69519,
+      "recall": 0.865,
+      "ap": 0.787
+    },
+    "tenniscourt": {
+      "gt": 2666,
+      "detections": 53631,
+      "recall": 0.941,
+      "ap": 0.889
+    },
+    "trainstation": {
+      "gt": 256,
+      "detections": 60530,
+      "recall": 0.973,
+      "ap": 0.536
+    },
+    "vehicle": {
+      "gt": 7024,
+      "detections": 277136,
+      "recall": 0.87,
+      "ap": 0.715
+    },
+    "windmill": {
+      "gt": 1404,
+      "detections": 49463,
+      "recall": 0.878,
+      "ap": 0.779
+    }
+  }
+}

@@ -1,0 +1,146 @@
+{
+  "status": "passed",
+  "method": "instance_semantic",
+  "unit_tests": 5,
+  "source_sha256": {
+    "configs/instance_semantic/rtmdet_tiny_dior_640.py": "51e23561dd9a4d2cece9e25b93964c50982df354f7566ce900375c6949b33e59",
+    "configs/rtmdet_tiny_dior_300e.py": "69a8a91d777090fcdd6f27eafdb717cc93f1a272bc6a90c4db522ba035d215a6",
+    "scripts/candidate_probe.py": "20e07b7f2cdb9202eedf63660786b5e2ffa5f5e019ebdf8a6c1fdbb2eb018286",
+    "tests/test_instance_semantic.py": "300412001e57d614bdeb415db9cd54bd1446a066e9f1f835d6a078cc7ad2c383",
+    "custom_models/instance_semantic/__init__.py": "7aa8654f1bae5bad77124cfa94e8a226429540643063e982758cdeaf5329563c",
+    "custom_models/instance_semantic/head.py": "404fa084c027a546c185af4d63be051e20d71e017e6510574c94efd87b86fe64",
+    "custom_models/instance_semantic/roi.py": "3e1d9805737aa468eb96f093ba7955a82362e7b83e90dc47efe64f53554e54b4"
+  },
+  "reports": {
+    "preflight": "work_dirs/instance_semantic_validation/preflight.json",
+    "smoke": "/home/pwt/Paper1/work_dirs/instance_semantic_validation/roi_fix_smoke.json",
+    "capacity_gpu0_bs12": "/home/pwt/Paper1/work_dirs/instance_semantic_validation/capacity_gpu0_bs12.json",
+    "initial_smoke": "work_dirs/instance_semantic_validation/smoke.json"
+  },
+  "microbatch": 2,
+  "optimizer_updates": 16,
+  "formal_batch": 36,
+  "formal_batch_capacity_tested": true,
+  "queued_for_full_training": true,
+  "model_parameters": 4880648,
+  "inference_conv_linear_gmac": 7.98770304,
+  "peak_allocated_gib": 0.6435842514038086,
+  "peak_reserved_gib": 0.751953125,
+  "queue_priority": 2,
+  "queue_manifest": "/home/pwt/Paper1/work_dirs/instance_semantic_queue/manifest.json",
+  "capacity_policy": "Fixed real batch36; no automatic batch or accumulation change; capacity failure stops queue",
+  "formal_capacity_report": "/home/pwt/Paper1/work_dirs/instance_semantic_validation/capacity_gpu1_bs36.json",
+  "capacity_probe_sha256": "311c8cf810f6184f190642fab04acd55c15e9f61ea1c281276fa93800df6725c",
+  "queue_identity": {
+    "pid": 3552946,
+    "start_ticks": "18982751",
+    "command": [
+      "/home/pwt/miniconda3/envs/rtmdet/bin/python",
+      "-u",
+      "/home/pwt/Paper1/scripts/queue_experiment.py",
+      "/home/pwt/Paper1/work_dirs/instance_semantic_queue/manifest.json"
+    ],
+    "started_at": "2026-10-17T20:35:56.248585+08:00"
+  },
+  "predecessor": "lsconv_20",
+  "formal_capacity": {
+    "status": "passed",
+    "method": "instance_semantic",
+    "microbatch": 36,
+    "accumulation": 1,
+    "optimizer_updates": 3,
+    "training_microsteps": 3,
+    "input_size": [
+      640,
+      640
+    ],
+    "gt_per_image": 1200,
+    "different_image_ids": [
+      844,
+      5601,
+      4604,
+      5475,
+      5757,
+      1129,
+      3150,
+      1497,
+      819,
+      1679,
+      7,
+      268,
+      4825,
+      4020,
+      2029,
+      3912,
+      448,
+      1805,
+      884,
+      5513,
+      4202,
+      1344,
+      2832,
+      594,
+      346,
+      1505,
+      3861,
+      1842,
+      3351,
+      2990,
+      5139,
+      5195,
+      4721,
+      5731,
+      2332,
+      4431
+    ],
+    "repeated_annotations": true,
+    "synthetic_multiscale_boxes": true,
+    "allocator_fraction": 0.88,
+    "formal_batch_capacity_tested": true,
+    "loss_scale_init": 32,
+    "warmup_enabled": false,
+    "amp_skipped_updates": 0,
+    "saved_checkpoints": false,
+    "watched_parameter_tensors": 2,
+    "losses": [
+      {
+        "loss": 2.5578253269195557,
+        "loss_cls": 0.2788504362106323,
+        "loss_bbox": 1.9831329584121704,
+        "loss_instance_semantic": 0.2958420217037201
+      },
+      {
+        "loss": 2.3609135150909424,
+        "loss_cls": 0.2518981695175171,
+        "loss_bbox": 1.836318850517273,
+        "loss_instance_semantic": 0.2726964056491852
+      },
+      {
+        "loss": 2.2431063652038574,
+        "loss_cls": 0.33954596519470215,
+        "loss_bbox": 1.6409149169921875,
+        "loss_instance_semantic": 0.2626454830169678
+      }
+    ],
+    "gradient_max": {
+      "bbox_head.instance_semantic.classifier.bias": 2.688070058822632,
+      "bbox_head.instance_semantic.classifier.weight": 2.5118308067321777
+    },
+    "parameter_updates_max": {
+      "bbox_head.instance_semantic.classifier.weight": 0.0016912668943405151,
+      "bbox_head.instance_semantic.classifier.bias": 0.0016883353237062693
+    },
+    "cuda_device": "NVIDIA GeForce RTX 4090",
+    "cuda_total_gib": 47.37115478515625,
+    "initial_free_gib": 46.9852294921875,
+    "peak_allocated_gib": 35.15890121459961,
+    "peak_reserved_gib": 39.6640625,
+    "elapsed_seconds": 25.554116071987664,
+    "config": "/home/pwt/Paper1/work_dirs/instance_semantic_queue/instance_semantic_640_bs36.py",
+    "config_sha256": "01613ab30758e59195661320cec8e070d33cf9c5985337f522dfbec3fcc27f51"
+  },
+  "initial_unit_test_log": "work_dirs/research/instance_semantic_unit.log",
+  "unit_test_report": "/home/pwt/Paper1/work_dirs/instance_semantic_validation/roi_fix_unit_tests.json",
+  "resume_from": "/home/pwt/Paper1/work_dirs/instance_semantic_rtmdet_tiny_dior_640_gpu1_bs36/epoch_46.pth",
+  "roi_fix": "Filter only nonpositive-area augmented GT rows from auxiliary loss; normalize by valid instance count; detector GT/loss unchanged"
+}

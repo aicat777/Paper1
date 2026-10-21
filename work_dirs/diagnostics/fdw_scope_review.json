@@ -1,0 +1,196 @@
+{
+  "current_paths": [
+    "backbone.stage2.1.blocks.0.conv1.conv",
+    "backbone.stage3.1.blocks.0.conv1.conv",
+    "backbone.stage4.2.blocks.0.conv1.conv"
+  ],
+  "current_convolution_weights": 435456,
+  "total_parameters": 4878708,
+  "scopes": {
+    "backbone": {
+      "parameters": 2348700,
+      "csp_blocks": [
+        {
+          "path": "backbone.stage1.1.blocks.0.conv1",
+          "channels": 24,
+          "weights": 5184
+        },
+        {
+          "path": "backbone.stage2.1.blocks.0.conv1",
+          "channels": 48,
+          "weights": 20736
+        },
+        {
+          "path": "backbone.stage3.1.blocks.0.conv1",
+          "channels": 96,
+          "weights": 82944
+        },
+        {
+          "path": "backbone.stage4.2.blocks.0.conv1",
+          "channels": 192,
+          "weights": 331776
+        }
+      ]
+    },
+    "neck": {
+      "parameters": 2188944,
+      "csp_blocks": [
+        {
+          "path": "neck.top_down_layers.0.0.blocks.0.conv1",
+          "channels": 96,
+          "weights": 82944
+        },
+        {
+          "path": "neck.top_down_layers.1.blocks.0.conv1",
+          "channels": 48,
+          "weights": 20736
+        },
+        {
+          "path": "neck.bottom_up_layers.0.blocks.0.conv1",
+          "channels": 96,
+          "weights": 82944
+        },
+        {
+          "path": "neck.bottom_up_layers.1.blocks.0.conv1",
+          "channels": 192,
+          "weights": 331776
+        }
+      ]
+    }
+  },
+  "additional_backbone_dense_stride1_convolutions": [
+    {
+      "path": "stage1.1.main_conv.conv",
+      "kernel": 1,
+      "in_channels": 48,
+      "out_channels": 24,
+      "weights": 1152
+    },
+    {
+      "path": "stage1.1.short_conv.conv",
+      "kernel": 1,
+      "in_channels": 48,
+      "out_channels": 24,
+      "weights": 1152
+    },
+    {
+      "path": "stage1.1.final_conv.conv",
+      "kernel": 1,
+      "in_channels": 48,
+      "out_channels": 48,
+      "weights": 2304
+    },
+    {
+      "path": "stage1.1.blocks.0.conv1.conv",
+      "kernel": 3,
+      "in_channels": 24,
+      "out_channels": 24,
+      "weights": 5184
+    },
+    {
+      "path": "stage1.1.blocks.0.conv2.pointwise_conv.conv",
+      "kernel": 1,
+      "in_channels": 24,
+      "out_channels": 24,
+      "weights": 576
+    },
+    {
+      "path": "stage2.1.main_conv.conv",
+      "kernel": 1,
+      "in_channels": 96,
+      "out_channels": 48,
+      "weights": 4608
+    },
+    {
+      "path": "stage2.1.short_conv.conv",
+      "kernel": 1,
+      "in_channels": 96,
+      "out_channels": 48,
+      "weights": 4608
+    },
+    {
+      "path": "stage2.1.final_conv.conv",
+      "kernel": 1,
+      "in_channels": 96,
+      "out_channels": 96,
+      "weights": 9216
+    },
+    {
+      "path": "stage2.1.blocks.0.conv2.pointwise_conv.conv",
+      "kernel": 1,
+      "in_channels": 48,
+      "out_channels": 48,
+      "weights": 2304
+    },
+    {
+      "path": "stage3.1.main_conv.conv",
+      "kernel": 1,
+      "in_channels": 192,
+      "out_channels": 96,
+      "weights": 18432
+    },
+    {
+      "path": "stage3.1.short_conv.conv",
+      "kernel": 1,
+      "in_channels": 192,
+      "out_channels": 96,
+      "weights": 18432
+    },
+    {
+      "path": "stage3.1.final_conv.conv",
+      "kernel": 1,
+      "in_channels": 192,
+      "out_channels": 192,
+      "weights": 36864
+    },
+    {
+      "path": "stage3.1.blocks.0.conv2.pointwise_conv.conv",
+      "kernel": 1,
+      "in_channels": 96,
+      "out_channels": 96,
+      "weights": 9216
+    },
+    {
+      "path": "stage4.1.conv1.conv",
+      "kernel": 1,
+      "in_channels": 384,
+      "out_channels": 192,
+      "weights": 73728
+    },
+    {
+      "path": "stage4.1.conv2.conv",
+      "kernel": 1,
+      "in_channels": 768,
+      "out_channels": 384,
+      "weights": 294912
+    },
+    {
+      "path": "stage4.2.main_conv.conv",
+      "kernel": 1,
+      "in_channels": 384,
+      "out_channels": 192,
+      "weights": 73728
+    },
+    {
+      "path": "stage4.2.short_conv.conv",
+      "kernel": 1,
+      "in_channels": 384,
+      "out_channels": 192,
+      "weights": 73728
+    },
+    {
+      "path": "stage4.2.final_conv.conv",
+      "kernel": 1,
+      "in_channels": 384,
+      "out_channels": 384,
+      "weights": 147456
+    },
+    {
+      "path": "stage4.2.blocks.0.conv2.pointwise_conv.conv",
+      "kernel": 1,
+      "in_channels": 192,
+      "out_channels": 192,
+      "weights": 36864
+    }
+  ]
+}

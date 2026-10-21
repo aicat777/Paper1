@@ -1,0 +1,11 @@
+{
+  "pid": 1058624,
+  "start_ticks": "28034790",
+  "created_at": "2026-10-18T21:44:36.641605+08:00",
+  "command": [
+    "/home/pwt/miniconda3/envs/rtmdet/bin/python",
+    "-u",
+    "/home/pwt/Paper1/scripts/queue_experiment.py",
+    "/home/pwt/Paper1/work_dirs/instance_semantic_multiscale_queue/manifest.json"
+  ]
+}

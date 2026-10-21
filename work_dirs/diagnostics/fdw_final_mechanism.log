@@ -1,0 +1,12 @@
+loading annotations into memory...
+Done (t=0.33s)
+creating index...
+index created!
+batches 1
+batches 5
+batches 9
+batches 13
+backbone.stage2.1.blocks.0.conv1.conv {"channels": 48, "kernel_num": 16, "effective_gate_mean": 1.0166468620300293, "effective_gate_min": 0.5416802763938904, "effective_gate_max": 1.4673115015029907, "effective_gate_mean_across_image_std": 0.05739343911409378, "effective_gate_mean_within_image_std": 0.1230471208691597, "kernel_relative_change_vs_mean_mean": 0.052073441445827484, "kernel_relative_change_vs_mean_max": 0.17043901979923248, "mean_kernel_relative_change_vs_unit_gate": 0.11089103668928146, "router_kernel_fc_weight_rms": 0.05241444706916809}
+backbone.stage3.1.blocks.0.conv1.conv {"channels": 96, "kernel_num": 16, "effective_gate_mean": 0.9963536262512207, "effective_gate_min": 0.6243749856948853, "effective_gate_max": 1.3544158935546875, "effective_gate_mean_across_image_std": 0.03992145508527756, "effective_gate_mean_within_image_std": 0.15665386617183685, "kernel_relative_change_vs_mean_mean": 0.03676008805632591, "kernel_relative_change_vs_mean_max": 0.08210914582014084, "mean_kernel_relative_change_vs_unit_gate": 0.1490720957517624, "router_kernel_fc_weight_rms": 0.05340366065502167}
+backbone.stage4.2.blocks.0.conv1.conv {"channels": 192, "kernel_num": 16, "effective_gate_mean": 1.0983940362930298, "effective_gate_min": 0.08519968390464783, "effective_gate_max": 1.9811139106750488, "effective_gate_mean_across_image_std": 0.10368701815605164, "effective_gate_mean_within_image_std": 0.5054906606674194, "kernel_relative_change_vs_mean_mean": 0.07782498002052307, "kernel_relative_change_vs_mean_max": 0.22624599933624268, "mean_kernel_relative_change_vs_unit_gate": 0.4990253448486328, "router_kernel_fc_weight_rms": 0.09623255580663681}
+report /home/pwt/Paper1/work_dirs/diagnostics/fdw_final_mechanism.json

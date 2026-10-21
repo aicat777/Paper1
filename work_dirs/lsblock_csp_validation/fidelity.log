@@ -1,0 +1,35 @@
+FIDELITY_CASE lsconv_csp 24 amp False training False
+/home/pwt/miniconda3/envs/rtmdet/lib/python3.10/site-packages/torch/nn/modules/conv.py:459: UserWarning: Applied workaround for CuDNN issue, install nvrtc.so (Triggered internally at ../aten/src/ATen/native/cudnn/Conv_v8.cpp:80.)
+  return F.conv2d(input, weight, bias, self.stride,
+FIDELITY_CASE lsconv_csp 24 amp False training True
+FIDELITY_CASE lsconv_csp 24 amp True training False
+FIDELITY_CASE lsconv_csp 24 amp True training True
+FIDELITY_CASE lsconv_csp 48 amp False training False
+FIDELITY_CASE lsconv_csp 48 amp False training True
+FIDELITY_CASE lsconv_csp 48 amp True training False
+FIDELITY_CASE lsconv_csp 48 amp True training True
+FIDELITY_CASE lsconv_csp 96 amp False training False
+FIDELITY_CASE lsconv_csp 96 amp False training True
+FIDELITY_CASE lsconv_csp 96 amp True training False
+FIDELITY_CASE lsconv_csp 96 amp True training True
+FIDELITY_CASE lsconv_csp 192 amp False training False
+FIDELITY_CASE lsconv_csp 192 amp False training True
+FIDELITY_CASE lsconv_csp 192 amp True training False
+FIDELITY_CASE lsconv_csp 192 amp True training True
+FIDELITY_CASE lsblock_csp 24 amp False training False
+FIDELITY_CASE lsblock_csp 24 amp False training True
+FIDELITY_CASE lsblock_csp 24 amp True training False
+FIDELITY_CASE lsblock_csp 24 amp True training True
+FIDELITY_CASE lsblock_csp 48 amp False training False
+FIDELITY_CASE lsblock_csp 48 amp False training True
+FIDELITY_CASE lsblock_csp 48 amp True training False
+FIDELITY_CASE lsblock_csp 48 amp True training True
+FIDELITY_CASE lsblock_csp 96 amp False training False
+FIDELITY_CASE lsblock_csp 96 amp False training True
+FIDELITY_CASE lsblock_csp 96 amp True training False
+FIDELITY_CASE lsblock_csp 96 amp True training True
+FIDELITY_CASE lsblock_csp 192 amp False training False
+FIDELITY_CASE lsblock_csp 192 amp False training True
+FIDELITY_CASE lsblock_csp 192 amp True training False
+FIDELITY_CASE lsblock_csp 192 amp True training True
+FIDELITY_PASSED 32

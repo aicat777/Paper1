@@ -1,0 +1,74 @@
+{
+  "root": "/home/pwt/Paper1",
+  "python": "/home/pwt/miniconda3/envs/rtmdet/bin/python",
+  "gpu_uuid": "GPU-df11ee80-4992-6cab-1055-b211d226f165",
+  "min_free_mib": 45000,
+  "dependency": {
+    "name": "instance_semantic",
+    "pid": 2838555,
+    "start_ticks": "15178717",
+    "status": "/home/pwt/Paper1/work_dirs/instance_semantic_queue/status.json",
+    "work_dir": "/home/pwt/Paper1/work_dirs/instance_semantic_rtmdet_tiny_dior_640_gpu1_bs36",
+    "log": "/home/pwt/Paper1/logs/instance_semantic_rtmdet_tiny_dior_640_gpu1_bs36.log"
+  },
+  "experiment": {
+    "name": "tiny_assignment_640_bs36",
+    "source_config": "/home/pwt/Paper1/configs/tiny_assignment/rtmdet_tiny_dior_640.py",
+    "config": "/home/pwt/Paper1/work_dirs/tiny_assignment_queue/tiny_assignment_640_bs36.py",
+    "work_dir": "/home/pwt/Paper1/work_dirs/tiny_assignment_rtmdet_tiny_dior_640_gpu1_bs36",
+    "log": "/home/pwt/Paper1/logs/tiny_assignment_rtmdet_tiny_dior_640_gpu1_bs36.log",
+    "preflight_report": "/home/pwt/Paper1/work_dirs/tiny_assignment_validation/queue_preflight.json",
+    "capacity_report": "/home/pwt/Paper1/work_dirs/tiny_assignment_validation/capacity_gpu1_bs36.json",
+    "validation_summary": "/home/pwt/Paper1/work_dirs/tiny_assignment_validation/checks.json"
+  },
+  "source_sha256": {
+    "configs/rtmdet_tiny_dior_300e.py": "69a8a91d777090fcdd6f27eafdb717cc93f1a272bc6a90c4db522ba035d215a6",
+    "configs/tiny_assignment/rtmdet_tiny_dior_640.py": "ceb6b30bffd07c9a8f7100831d79358eec4ff31fe25aa8b23adad43fceb64445",
+    "custom_models/tiny_assignment/__init__.py": "64a4b0351aac33d214eea4334c28f05393c20db37906f8aa4a9db6106aa09d24",
+    "custom_models/tiny_assignment/assigner.py": "a24f8a4d208bb4629734d185a86d20015f3fd20287e70e65376e2be7fa977549",
+    "custom_models/tiny_assignment/head.py": "63f968ab608cfef2026c703a688542ae9033fd3ec9a6e48cff880a665cef4684",
+    "scripts/candidate_capacity.py": "311c8cf810f6184f190642fab04acd55c15e9f61ea1c281276fa93800df6725c",
+    "scripts/candidate_probe.py": "20e07b7f2cdb9202eedf63660786b5e2ffa5f5e019ebdf8a6c1fdbb2eb018286",
+    "scripts/queue_experiment.py": "53938385f211685b7de5ba4ce43d745611cc5ab21eb80eb0cf400388a533fdb1",
+    "tests/test_tiny_assignment.py": "116ccd9c76350534fb07a73052e519c1156646418076f702ecb179e072fc8268",
+    "work_dirs/tiny_assignment_queue/tiny_assignment_640_bs36.py": "f954fe9be230e38a67afa4613678f34b6669f810b9a2e7f541a7477a865b65af"
+  },
+  "preflight_command": [
+    "/home/pwt/miniconda3/envs/rtmdet/bin/python",
+    "-u",
+    "/home/pwt/Paper1/scripts/candidate_capacity.py",
+    "--method",
+    "tiny_assignment",
+    "--config",
+    "/home/pwt/Paper1/work_dirs/tiny_assignment_queue/tiny_assignment_640_bs36.py",
+    "--mode",
+    "preflight",
+    "--report",
+    "/home/pwt/Paper1/work_dirs/tiny_assignment_validation/queue_preflight.json"
+  ],
+  "capacity_command": [
+    "/home/pwt/miniconda3/envs/rtmdet/bin/python",
+    "-u",
+    "/home/pwt/Paper1/scripts/candidate_capacity.py",
+    "--method",
+    "tiny_assignment",
+    "--config",
+    "/home/pwt/Paper1/work_dirs/tiny_assignment_queue/tiny_assignment_640_bs36.py",
+    "--mode",
+    "capacity",
+    "--report",
+    "/home/pwt/Paper1/work_dirs/tiny_assignment_validation/capacity_gpu1_bs36.json",
+    "--allocator-fraction",
+    ".88"
+  ],
+  "capacity_expected": {
+    "method": "tiny_assignment",
+    "microbatch": 36,
+    "accumulation": 1,
+    "optimizer_updates": 3,
+    "gt_per_image": 1200,
+    "allocator_fraction": 0.88,
+    "formal_batch_capacity_tested": true,
+    "config_sha256": "f954fe9be230e38a67afa4613678f34b6669f810b9a2e7f541a7477a865b65af"
+  }
+}

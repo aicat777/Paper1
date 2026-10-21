@@ -1,0 +1,19 @@
+{
+  "state": "complete",
+  "queue_pid": 1358024,
+  "updated_at": "2026-10-14T23:07:18.577426+08:00",
+  "dependency": {
+    "pid": 3903874,
+    "start_ticks": "285959425",
+    "work_dir": "/home/pwt/Paper1/work_dirs/efs_rtmdet_tiny_dior_640_gpu1_bs9x4",
+    "log": "/home/pwt/Paper1/logs/efs_rtmdet_tiny_dior_640_gpu1_bs9x4.log"
+  },
+  "experiment": {
+    "name": "lsconv_640_bs36",
+    "source_config": "/home/pwt/Paper1/configs/lsconv/rtmdet_tiny_dior_640.py",
+    "config": "/home/pwt/Paper1/work_dirs/lsconv_queue/lsconv_640_bs36.py",
+    "work_dir": "/home/pwt/Paper1/work_dirs/lsconv_rtmdet_tiny_dior_640_gpu1_bs36",
+    "log": "/home/pwt/Paper1/logs/lsconv_rtmdet_tiny_dior_640_gpu1_bs36.log",
+    "capacity_report": "/home/pwt/Paper1/work_dirs/lsconv_validation/capacity.json"
+  }
+}

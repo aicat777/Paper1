@@ -1,0 +1,11 @@
+test_completion_requires_checkpoint_finite_metrics_and_no_fatal_error (test_experiment_queue.ExperimentQueue) ... ok
+test_duplicate_scheduler_does_not_replace_status (test_experiment_queue.ExperimentQueue) ... ok
+test_process_identity_includes_start_time (test_experiment_queue.ExperimentQueue) ... ok
+test_resume_preserves_log_and_passes_explicit_checkpoint (test_experiment_queue.ExperimentQueue) ... ok
+test_resume_rejects_foreign_or_incomplete_checkpoint (test_experiment_queue.ExperimentQueue) ... ok
+test_success_and_failure_transitions (test_experiment_queue.ExperimentQueue) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 2.074s
+
+OK

@@ -1,0 +1,24 @@
+{
+  "state": "waiting_instance_semantic_matched",
+  "queue_pid": 138632,
+  "queue_start_ticks": "45309610",
+  "updated_at": "2026-10-20T21:44:02.322541+08:00",
+  "dependency": {
+    "name": "instance_semantic_matched",
+    "pid": 137512,
+    "start_ticks": "45307800",
+    "status": "/home/pwt/Paper1/work_dirs/instance_semantic_matched_queue/status.json",
+    "work_dir": "/home/pwt/Paper1/work_dirs/instance_semantic_matched_rtmdet_tiny_dior_640_gpu1_bs36",
+    "log": "/home/pwt/Paper1/logs/instance_semantic_matched_rtmdet_tiny_dior_640_gpu1_bs36.log"
+  },
+  "experiment": {
+    "name": "instance_semantic_random_640_bs36",
+    "source_config": "/home/pwt/Paper1/configs/instance_semantic_random/rtmdet_tiny_dior_640.py",
+    "config": "/home/pwt/Paper1/work_dirs/instance_semantic_random_queue/instance_semantic_random_640_bs36.py",
+    "work_dir": "/home/pwt/Paper1/work_dirs/instance_semantic_random_rtmdet_tiny_dior_640_gpu1_bs36",
+    "log": "/home/pwt/Paper1/logs/instance_semantic_random_rtmdet_tiny_dior_640_gpu1_bs36.log",
+    "preflight_report": "/home/pwt/Paper1/work_dirs/instance_semantic_random_validation/queue_preflight.json",
+    "capacity_report": "/home/pwt/Paper1/work_dirs/instance_semantic_random_validation/capacity_gpu1_bs36.json",
+    "validation_summary": "/home/pwt/Paper1/work_dirs/instance_semantic_random_validation/checks.json"
+  }
+}

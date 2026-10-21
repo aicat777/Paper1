@@ -1,0 +1,12 @@
+test_detail_bypasses_complete_csp_block_and_reaches_next_fusion_and_pan (test_freq_fusion_residual.FreqFusionResidualTests) ... [W NNPACK.cpp:64] Could not initialize NNPACK! Reason: Unsupported hardware.
+ok
+test_nearest_upsampling_and_zero_detail_recover_exact_baseline (test_freq_fusion_residual.FreqFusionResidualTests) ... ok
+test_parent_initialization_failure_restores_both_module_lists (test_freq_fusion_residual.FreqFusionResidualTests) ... ok
+test_protocol_initial_state_and_projection_parameters (test_freq_fusion_residual.FreqFusionResidualTests) ... ok
+test_recombined_core_matches_previous_full_core_and_gradients (test_freq_fusion_residual.FreqFusionResidualTests) ... ok
+test_signed_detail_matches_independent_spatial_filter (test_freq_fusion_residual.FreqFusionResidualTests) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 2.014s
+
+OK

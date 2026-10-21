@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "method": "instance_semantic_random",
+  "parameters": 4880648,
+  "new_parameters": 0,
+  "inference_conv_linear_gmac": 7.98770304,
+  "inference_matches_original_exactly": true,
+  "train_images": 5862,
+  "val_images": 5863,
+  "prediction_points": 8400,
+  "input_size": [
+    640,
+    640
+  ],
+  "formal_batch": 36,
+  "accumulation": 1,
+  "scratch": true,
+  "unchanged_training_protocol": true,
+  "semantic_weight": 0.1,
+  "all_valid_gt_denominator": true,
+  "different_run_matched_counts_may_diverge": true,
+  "formal_batch_capacity_tested": false,
+  "config": "/home/pwt/Paper1/configs/instance_semantic_random/rtmdet_tiny_dior_640.py",
+  "config_sha256": "8c2842c0a7bc89bcd71d7996d1eda1be9fda8d9b20ba29a1575c2b39a94ba08b"
+}

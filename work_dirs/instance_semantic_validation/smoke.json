@@ -1,0 +1,153 @@
+{
+  "status": "passed",
+  "method": "instance_semantic",
+  "official_train_entrypoint": true,
+  "input_size": [
+    640,
+    640
+  ],
+  "microbatch": 2,
+  "optimizer_updates": 16,
+  "accumulation": 1,
+  "val_passes": 2,
+  "val_images_per_pass": 32,
+  "predictions_checked": 64,
+  "raw_predictions_checked": 8,
+  "full_state_ema_roundtrips": 2,
+  "model_optimizer_scaler_serialization": true,
+  "strong_and_weak_augmentation": true,
+  "coco_evaluation_scoped_to_subset": true,
+  "watched_parameter_tensors": 2,
+  "finite_losses": true,
+  "finite_predictions": true,
+  "amp_skipped_updates": 0,
+  "gradient_max": {
+    "bbox_head.instance_semantic.classifier.bias": 2.4248220920562744,
+    "bbox_head.instance_semantic.classifier.weight": 10.050485610961914
+  },
+  "parameter_updates_max": {
+    "bbox_head.instance_semantic.classifier.weight": 0.008697517216205597,
+    "bbox_head.instance_semantic.classifier.bias": 0.008810617960989475
+  },
+  "losses": [
+    {
+      "loss": 0.7206767201423645,
+      "loss_cls": 0.348351389169693,
+      "loss_bbox": 0.0760243758559227,
+      "loss_instance_semantic": 0.2963009476661682
+    },
+    {
+      "loss": 0.7924011945724487,
+      "loss_cls": 0.3386939764022827,
+      "loss_bbox": 0.1565927416086197,
+      "loss_instance_semantic": 0.2971145212650299
+    },
+    {
+      "loss": 1.2829320430755615,
+      "loss_cls": 0.35464248061180115,
+      "loss_bbox": 0.6562212705612183,
+      "loss_instance_semantic": 0.2720682621002197
+    },
+    {
+      "loss": 2.433839797973633,
+      "loss_cls": 0.498626172542572,
+      "loss_bbox": 1.7658380270004272,
+      "loss_instance_semantic": 0.16937562823295593
+    },
+    {
+      "loss": 2.35270619392395,
+      "loss_cls": 0.41707804799079895,
+      "loss_bbox": 1.7276084423065186,
+      "loss_instance_semantic": 0.2080196738243103
+    },
+    {
+      "loss": 2.3363277912139893,
+      "loss_cls": 0.3812635540962219,
+      "loss_bbox": 1.7504990100860596,
+      "loss_instance_semantic": 0.2045653760433197
+    },
+    {
+      "loss": 1.9812257289886475,
+      "loss_cls": 0.4162900447845459,
+      "loss_bbox": 1.2945789098739624,
+      "loss_instance_semantic": 0.27035683393478394
+    },
+    {
+      "loss": 2.4880757331848145,
+      "loss_cls": 0.7311426401138306,
+      "loss_bbox": 1.4608755111694336,
+      "loss_instance_semantic": 0.29605770111083984
+    },
+    {
+      "loss": 0.8362243175506592,
+      "loss_cls": 0.3122723400592804,
+      "loss_bbox": 0.2366483509540558,
+      "loss_instance_semantic": 0.2873035967350006
+    },
+    {
+      "loss": 1.7497401237487793,
+      "loss_cls": 0.6028357148170471,
+      "loss_bbox": 0.9531422853469849,
+      "loss_instance_semantic": 0.19376212358474731
+    },
+    {
+      "loss": 1.032834529876709,
+      "loss_cls": 0.3547220528125763,
+      "loss_bbox": 0.3679989278316498,
+      "loss_instance_semantic": 0.3101135790348053
+    },
+    {
+      "loss": 2.0893168449401855,
+      "loss_cls": 0.31387344002723694,
+      "loss_bbox": 1.665771245956421,
+      "loss_instance_semantic": 0.10967221856117249
+    },
+    {
+      "loss": 1.9098050594329834,
+      "loss_cls": 0.45737800002098083,
+      "loss_bbox": 1.1605409383773804,
+      "loss_instance_semantic": 0.2918861210346222
+    },
+    {
+      "loss": 2.5526950359344482,
+      "loss_cls": 1.0435738563537598,
+      "loss_bbox": 1.219815969467163,
+      "loss_instance_semantic": 0.289305180311203
+    },
+    {
+      "loss": 2.548506021499634,
+      "loss_cls": 0.6732547879219055,
+      "loss_bbox": 1.6054586172103882,
+      "loss_instance_semantic": 0.2697926163673401
+    },
+    {
+      "loss": 2.147860288619995,
+      "loss_cls": 0.5625649094581604,
+      "loss_bbox": 1.4194433689117432,
+      "loss_instance_semantic": 0.16585204005241394
+    }
+  ],
+  "metrics": [
+    {
+      "pascal_voc/mAP": 0.0,
+      "coco/bbox_mAP": 0.0,
+      "coco/bbox_mAP_50": 0.0
+    },
+    {
+      "pascal_voc/mAP": 0.0,
+      "coco/bbox_mAP": 0.0,
+      "coco/bbox_mAP_50": 0.0
+    }
+  ],
+  "assignment": {
+    "fallback_positives": 0,
+    "floored_regression_positives": 0,
+    "unmatched_tiny": 0
+  },
+  "loss_scale_init": 32,
+  "warmup_enabled": false,
+  "saved_checkpoints": false,
+  "peak_allocated_gib": 0.6435842514038086,
+  "peak_reserved_gib": 0.751953125,
+  "elapsed_seconds": 13.860253681999893
+}

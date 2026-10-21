@@ -1,0 +1,24 @@
+{
+  "state": "complete",
+  "queue_pid": 248818,
+  "queue_start_ticks": "37801457",
+  "updated_at": "2026-10-20T10:51:29.952846+08:00",
+  "dependency": {
+    "name": "instance_semantic_rank",
+    "pid": 2640393,
+    "start_ticks": "34200198",
+    "status": "/home/pwt/Paper1/work_dirs/instance_semantic_rank_queue/status.json",
+    "work_dir": "/home/pwt/Paper1/work_dirs/instance_semantic_rank_rtmdet_tiny_dior_640_gpu1_bs36",
+    "log": "/home/pwt/Paper1/logs/instance_semantic_rank_rtmdet_tiny_dior_640_gpu1_bs36.log"
+  },
+  "experiment": {
+    "name": "scdown_640_bs36",
+    "source_config": "/home/pwt/Paper1/configs/scdown/rtmdet_tiny_dior_640.py",
+    "config": "/home/pwt/Paper1/work_dirs/scdown_queue/scdown_640_bs36.py",
+    "work_dir": "/home/pwt/Paper1/work_dirs/scdown_rtmdet_tiny_dior_640_gpu1_bs36",
+    "log": "/home/pwt/Paper1/logs/scdown_rtmdet_tiny_dior_640_gpu1_bs36.log",
+    "preflight_report": "/home/pwt/Paper1/work_dirs/scdown_validation/queue_preflight.json",
+    "capacity_report": "/home/pwt/Paper1/work_dirs/scdown_validation/capacity_gpu1_bs36.json",
+    "validation_summary": "/home/pwt/Paper1/work_dirs/scdown_validation/checks.json"
+  }
+}

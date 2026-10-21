@@ -1,0 +1,3884 @@
+loading annotations into memory...
+Done (t=0.57s)
+creating index...
+index created!
+META [{'source_img_id': 7, 'source_gt_index': 125, 'source_box': array([604., 207., 620., 216.], dtype=float32), 'origin': [604, 203], 'source_shape': [800, 800]}, {'source_img_id': 16, 'source_gt_index': 17, 'source_box': array([178., 448., 219., 470.], dtype=float32), 'origin': [178, 438], 'source_shape': [800, 800]}] tensor([[ 0.,  4., 16., 13.],
+        [ 0., 10., 41., 32.]])
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stem.0.conv.weight - torch.Size([12, 3, 3, 3]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stem.0.bn.weight - torch.Size([12]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stem.0.bn.bias - torch.Size([12]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stem.1.conv.weight - torch.Size([12, 12, 3, 3]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stem.1.bn.weight - torch.Size([12]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stem.1.bn.bias - torch.Size([12]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stem.2.conv.weight - torch.Size([24, 12, 3, 3]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stem.2.bn.weight - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stem.2.bn.bias - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage1.0.conv.weight - torch.Size([48, 24, 3, 3]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage1.0.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage1.0.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage1.1.main_conv.conv.weight - torch.Size([24, 48, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage1.1.main_conv.bn.weight - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage1.1.main_conv.bn.bias - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage1.1.short_conv.conv.weight - torch.Size([24, 48, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage1.1.short_conv.bn.weight - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage1.1.short_conv.bn.bias - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage1.1.final_conv.conv.weight - torch.Size([48, 48, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage1.1.final_conv.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage1.1.final_conv.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage1.1.blocks.0.conv1.conv.weight - torch.Size([24, 24, 3, 3]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage1.1.blocks.0.conv1.bn.weight - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage1.1.blocks.0.conv1.bn.bias - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage1.1.blocks.0.conv2.depthwise_conv.conv.weight - torch.Size([24, 1, 5, 5]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage1.1.blocks.0.conv2.depthwise_conv.bn.weight - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage1.1.blocks.0.conv2.depthwise_conv.bn.bias - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage1.1.blocks.0.conv2.pointwise_conv.conv.weight - torch.Size([24, 24, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage1.1.blocks.0.conv2.pointwise_conv.bn.weight - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage1.1.blocks.0.conv2.pointwise_conv.bn.bias - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage1.1.attention.fc.weight - torch.Size([48, 48, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage1.1.attention.fc.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage2.0.conv.weight - torch.Size([96, 48, 3, 3]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage2.0.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage2.0.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage2.1.main_conv.conv.weight - torch.Size([48, 96, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage2.1.main_conv.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage2.1.main_conv.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage2.1.short_conv.conv.weight - torch.Size([48, 96, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage2.1.short_conv.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage2.1.short_conv.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage2.1.final_conv.conv.weight - torch.Size([96, 96, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage2.1.final_conv.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage2.1.final_conv.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage2.1.blocks.0.conv1.conv.weight - torch.Size([48, 48, 3, 3]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage2.1.blocks.0.conv1.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage2.1.blocks.0.conv1.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage2.1.blocks.0.conv2.depthwise_conv.conv.weight - torch.Size([48, 1, 5, 5]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage2.1.blocks.0.conv2.depthwise_conv.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage2.1.blocks.0.conv2.depthwise_conv.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage2.1.blocks.0.conv2.pointwise_conv.conv.weight - torch.Size([48, 48, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage2.1.blocks.0.conv2.pointwise_conv.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage2.1.blocks.0.conv2.pointwise_conv.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage2.1.attention.fc.weight - torch.Size([96, 96, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage2.1.attention.fc.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage3.0.conv.weight - torch.Size([192, 96, 3, 3]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage3.0.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage3.0.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage3.1.main_conv.conv.weight - torch.Size([96, 192, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage3.1.main_conv.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage3.1.main_conv.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage3.1.short_conv.conv.weight - torch.Size([96, 192, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage3.1.short_conv.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage3.1.short_conv.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage3.1.final_conv.conv.weight - torch.Size([192, 192, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage3.1.final_conv.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage3.1.final_conv.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage3.1.blocks.0.conv1.conv.weight - torch.Size([96, 96, 3, 3]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage3.1.blocks.0.conv1.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage3.1.blocks.0.conv1.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage3.1.blocks.0.conv2.depthwise_conv.conv.weight - torch.Size([96, 1, 5, 5]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage3.1.blocks.0.conv2.depthwise_conv.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage3.1.blocks.0.conv2.depthwise_conv.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage3.1.blocks.0.conv2.pointwise_conv.conv.weight - torch.Size([96, 96, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage3.1.blocks.0.conv2.pointwise_conv.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage3.1.blocks.0.conv2.pointwise_conv.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage3.1.attention.fc.weight - torch.Size([192, 192, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage3.1.attention.fc.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage4.0.conv.weight - torch.Size([384, 192, 3, 3]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage4.0.bn.weight - torch.Size([384]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage4.0.bn.bias - torch.Size([384]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage4.1.conv1.conv.weight - torch.Size([192, 384, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage4.1.conv1.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage4.1.conv1.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage4.1.conv2.conv.weight - torch.Size([384, 768, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage4.1.conv2.bn.weight - torch.Size([384]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage4.1.conv2.bn.bias - torch.Size([384]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage4.2.main_conv.conv.weight - torch.Size([192, 384, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage4.2.main_conv.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage4.2.main_conv.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage4.2.short_conv.conv.weight - torch.Size([192, 384, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage4.2.short_conv.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage4.2.short_conv.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage4.2.final_conv.conv.weight - torch.Size([384, 384, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage4.2.final_conv.bn.weight - torch.Size([384]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage4.2.final_conv.bn.bias - torch.Size([384]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage4.2.blocks.0.conv1.conv.weight - torch.Size([192, 192, 3, 3]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage4.2.blocks.0.conv1.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage4.2.blocks.0.conv1.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage4.2.blocks.0.conv2.depthwise_conv.conv.weight - torch.Size([192, 1, 5, 5]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage4.2.blocks.0.conv2.depthwise_conv.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage4.2.blocks.0.conv2.depthwise_conv.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage4.2.blocks.0.conv2.pointwise_conv.conv.weight - torch.Size([192, 192, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage4.2.blocks.0.conv2.pointwise_conv.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage4.2.blocks.0.conv2.pointwise_conv.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage4.2.attention.fc.weight - torch.Size([384, 384, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+backbone.stage4.2.attention.fc.bias - torch.Size([384]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.reduce_layers.2.conv.weight - torch.Size([192, 384, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.reduce_layers.2.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.reduce_layers.2.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.top_down_layers.0.0.main_conv.conv.weight - torch.Size([96, 384, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.top_down_layers.0.0.main_conv.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.top_down_layers.0.0.main_conv.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.top_down_layers.0.0.short_conv.conv.weight - torch.Size([96, 384, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.top_down_layers.0.0.short_conv.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.top_down_layers.0.0.short_conv.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.top_down_layers.0.0.final_conv.conv.weight - torch.Size([192, 192, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.top_down_layers.0.0.final_conv.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.top_down_layers.0.0.final_conv.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.top_down_layers.0.0.blocks.0.conv1.conv.weight - torch.Size([96, 96, 3, 3]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.top_down_layers.0.0.blocks.0.conv1.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.top_down_layers.0.0.blocks.0.conv1.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.top_down_layers.0.0.blocks.0.conv2.depthwise_conv.conv.weight - torch.Size([96, 1, 5, 5]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.top_down_layers.0.0.blocks.0.conv2.depthwise_conv.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.top_down_layers.0.0.blocks.0.conv2.depthwise_conv.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.top_down_layers.0.0.blocks.0.conv2.pointwise_conv.conv.weight - torch.Size([96, 96, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.top_down_layers.0.0.blocks.0.conv2.pointwise_conv.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.top_down_layers.0.0.blocks.0.conv2.pointwise_conv.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.top_down_layers.0.1.conv.weight - torch.Size([96, 192, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.top_down_layers.0.1.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.top_down_layers.0.1.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.top_down_layers.1.main_conv.conv.weight - torch.Size([48, 192, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.top_down_layers.1.main_conv.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.top_down_layers.1.main_conv.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.top_down_layers.1.short_conv.conv.weight - torch.Size([48, 192, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.top_down_layers.1.short_conv.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.top_down_layers.1.short_conv.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.top_down_layers.1.final_conv.conv.weight - torch.Size([96, 96, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.top_down_layers.1.final_conv.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.top_down_layers.1.final_conv.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.top_down_layers.1.blocks.0.conv1.conv.weight - torch.Size([48, 48, 3, 3]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.top_down_layers.1.blocks.0.conv1.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.top_down_layers.1.blocks.0.conv1.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.top_down_layers.1.blocks.0.conv2.depthwise_conv.conv.weight - torch.Size([48, 1, 5, 5]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.top_down_layers.1.blocks.0.conv2.depthwise_conv.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.top_down_layers.1.blocks.0.conv2.depthwise_conv.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.top_down_layers.1.blocks.0.conv2.pointwise_conv.conv.weight - torch.Size([48, 48, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.top_down_layers.1.blocks.0.conv2.pointwise_conv.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.top_down_layers.1.blocks.0.conv2.pointwise_conv.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.downsample_layers.0.conv.weight - torch.Size([96, 96, 3, 3]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.downsample_layers.0.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.downsample_layers.0.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.downsample_layers.1.conv.weight - torch.Size([192, 192, 3, 3]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.downsample_layers.1.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.downsample_layers.1.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.bottom_up_layers.0.main_conv.conv.weight - torch.Size([96, 192, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.bottom_up_layers.0.main_conv.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.bottom_up_layers.0.main_conv.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.bottom_up_layers.0.short_conv.conv.weight - torch.Size([96, 192, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.bottom_up_layers.0.short_conv.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.bottom_up_layers.0.short_conv.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.bottom_up_layers.0.final_conv.conv.weight - torch.Size([192, 192, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.bottom_up_layers.0.final_conv.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.bottom_up_layers.0.final_conv.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.bottom_up_layers.0.blocks.0.conv1.conv.weight - torch.Size([96, 96, 3, 3]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.bottom_up_layers.0.blocks.0.conv1.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.bottom_up_layers.0.blocks.0.conv1.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.bottom_up_layers.0.blocks.0.conv2.depthwise_conv.conv.weight - torch.Size([96, 1, 5, 5]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.bottom_up_layers.0.blocks.0.conv2.depthwise_conv.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.bottom_up_layers.0.blocks.0.conv2.depthwise_conv.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.bottom_up_layers.0.blocks.0.conv2.pointwise_conv.conv.weight - torch.Size([96, 96, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.bottom_up_layers.0.blocks.0.conv2.pointwise_conv.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.bottom_up_layers.0.blocks.0.conv2.pointwise_conv.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.bottom_up_layers.1.main_conv.conv.weight - torch.Size([192, 384, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.bottom_up_layers.1.main_conv.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.bottom_up_layers.1.main_conv.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.bottom_up_layers.1.short_conv.conv.weight - torch.Size([192, 384, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.bottom_up_layers.1.short_conv.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.bottom_up_layers.1.short_conv.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.bottom_up_layers.1.final_conv.conv.weight - torch.Size([384, 384, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.bottom_up_layers.1.final_conv.bn.weight - torch.Size([384]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.bottom_up_layers.1.final_conv.bn.bias - torch.Size([384]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.bottom_up_layers.1.blocks.0.conv1.conv.weight - torch.Size([192, 192, 3, 3]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.bottom_up_layers.1.blocks.0.conv1.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.bottom_up_layers.1.blocks.0.conv1.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.bottom_up_layers.1.blocks.0.conv2.depthwise_conv.conv.weight - torch.Size([192, 1, 5, 5]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.bottom_up_layers.1.blocks.0.conv2.depthwise_conv.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.bottom_up_layers.1.blocks.0.conv2.depthwise_conv.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.bottom_up_layers.1.blocks.0.conv2.pointwise_conv.conv.weight - torch.Size([192, 192, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.bottom_up_layers.1.blocks.0.conv2.pointwise_conv.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.bottom_up_layers.1.blocks.0.conv2.pointwise_conv.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.out_layers.0.conv.weight - torch.Size([96, 96, 3, 3]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.out_layers.0.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.out_layers.0.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.out_layers.1.conv.weight - torch.Size([96, 192, 3, 3]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.out_layers.1.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.out_layers.1.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.out_layers.2.conv.weight - torch.Size([96, 384, 3, 3]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.out_layers.2.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+neck.out_layers.2.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+bbox_head.head_module.cls_convs.0.0.conv.weight - torch.Size([96, 96, 3, 3]): 
+Initialized by user-defined `init_weights` in CropSemanticHeadModule  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+bbox_head.head_module.cls_convs.0.0.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+bbox_head.head_module.cls_convs.0.0.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+bbox_head.head_module.cls_convs.0.1.conv.weight - torch.Size([96, 96, 3, 3]): 
+Initialized by user-defined `init_weights` in CropSemanticHeadModule  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+bbox_head.head_module.cls_convs.0.1.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+bbox_head.head_module.cls_convs.0.1.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+bbox_head.head_module.cls_convs.1.0.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+bbox_head.head_module.cls_convs.1.0.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+bbox_head.head_module.cls_convs.1.1.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+bbox_head.head_module.cls_convs.1.1.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+bbox_head.head_module.cls_convs.2.0.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+bbox_head.head_module.cls_convs.2.0.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+bbox_head.head_module.cls_convs.2.1.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+bbox_head.head_module.cls_convs.2.1.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+bbox_head.head_module.reg_convs.0.0.conv.weight - torch.Size([96, 96, 3, 3]): 
+Initialized by user-defined `init_weights` in CropSemanticHeadModule  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+bbox_head.head_module.reg_convs.0.0.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+bbox_head.head_module.reg_convs.0.0.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+bbox_head.head_module.reg_convs.0.1.conv.weight - torch.Size([96, 96, 3, 3]): 
+Initialized by user-defined `init_weights` in CropSemanticHeadModule  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+bbox_head.head_module.reg_convs.0.1.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+bbox_head.head_module.reg_convs.0.1.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+bbox_head.head_module.reg_convs.1.0.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+bbox_head.head_module.reg_convs.1.0.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+bbox_head.head_module.reg_convs.1.1.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+bbox_head.head_module.reg_convs.1.1.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+bbox_head.head_module.reg_convs.2.0.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+bbox_head.head_module.reg_convs.2.0.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+bbox_head.head_module.reg_convs.2.1.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+bbox_head.head_module.reg_convs.2.1.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+bbox_head.head_module.rtm_cls.0.weight - torch.Size([20, 96, 1, 1]): 
+Initialized by user-defined `init_weights` in CropSemanticHeadModule  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+bbox_head.head_module.rtm_cls.0.bias - torch.Size([20]): 
+Initialized by user-defined `init_weights` in CropSemanticHeadModule  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+bbox_head.head_module.rtm_cls.1.weight - torch.Size([20, 96, 1, 1]): 
+Initialized by user-defined `init_weights` in CropSemanticHeadModule  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+bbox_head.head_module.rtm_cls.1.bias - torch.Size([20]): 
+Initialized by user-defined `init_weights` in CropSemanticHeadModule  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+bbox_head.head_module.rtm_cls.2.weight - torch.Size([20, 96, 1, 1]): 
+Initialized by user-defined `init_weights` in CropSemanticHeadModule  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+bbox_head.head_module.rtm_cls.2.bias - torch.Size([20]): 
+Initialized by user-defined `init_weights` in CropSemanticHeadModule  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+bbox_head.head_module.rtm_reg.0.weight - torch.Size([4, 96, 1, 1]): 
+Initialized by user-defined `init_weights` in CropSemanticHeadModule  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+bbox_head.head_module.rtm_reg.0.bias - torch.Size([4]): 
+Initialized by user-defined `init_weights` in CropSemanticHeadModule  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+bbox_head.head_module.rtm_reg.1.weight - torch.Size([4, 96, 1, 1]): 
+Initialized by user-defined `init_weights` in CropSemanticHeadModule  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+bbox_head.head_module.rtm_reg.1.bias - torch.Size([4]): 
+Initialized by user-defined `init_weights` in CropSemanticHeadModule  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+bbox_head.head_module.rtm_reg.2.weight - torch.Size([4, 96, 1, 1]): 
+Initialized by user-defined `init_weights` in CropSemanticHeadModule  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+bbox_head.head_module.rtm_reg.2.bias - torch.Size([4]): 
+Initialized by user-defined `init_weights` in CropSemanticHeadModule  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+bbox_head.instance_semantic.classifier.weight - torch.Size([20, 96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:53 - mmengine - INFO - 
+bbox_head.instance_semantic.classifier.bias - torch.Size([20]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+/home/pwt/miniconda3/envs/rtmdet/lib/python3.10/site-packages/torch/nn/modules/conv.py:459: UserWarning: Applied workaround for CuDNN issue, install nvrtc.so (Triggered internally at ../aten/src/ATen/native/cudnn/Conv_v8.cpp:80.)
+  return F.conv2d(input, weight, bias, self.stride,
+CASE False 1 LOSS 0.29612040519714355 BAD [] N_BAD 0 FINITE_MAX (373.4715576171875, 'backbone.stem.0.conv.weight')
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stem.0.conv.weight - torch.Size([12, 3, 3, 3]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stem.0.bn.weight - torch.Size([12]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stem.0.bn.bias - torch.Size([12]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stem.1.conv.weight - torch.Size([12, 12, 3, 3]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stem.1.bn.weight - torch.Size([12]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stem.1.bn.bias - torch.Size([12]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stem.2.conv.weight - torch.Size([24, 12, 3, 3]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stem.2.bn.weight - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stem.2.bn.bias - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage1.0.conv.weight - torch.Size([48, 24, 3, 3]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage1.0.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage1.0.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage1.1.main_conv.conv.weight - torch.Size([24, 48, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage1.1.main_conv.bn.weight - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage1.1.main_conv.bn.bias - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage1.1.short_conv.conv.weight - torch.Size([24, 48, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage1.1.short_conv.bn.weight - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage1.1.short_conv.bn.bias - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage1.1.final_conv.conv.weight - torch.Size([48, 48, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage1.1.final_conv.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage1.1.final_conv.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage1.1.blocks.0.conv1.conv.weight - torch.Size([24, 24, 3, 3]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage1.1.blocks.0.conv1.bn.weight - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage1.1.blocks.0.conv1.bn.bias - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage1.1.blocks.0.conv2.depthwise_conv.conv.weight - torch.Size([24, 1, 5, 5]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage1.1.blocks.0.conv2.depthwise_conv.bn.weight - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage1.1.blocks.0.conv2.depthwise_conv.bn.bias - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage1.1.blocks.0.conv2.pointwise_conv.conv.weight - torch.Size([24, 24, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage1.1.blocks.0.conv2.pointwise_conv.bn.weight - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage1.1.blocks.0.conv2.pointwise_conv.bn.bias - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage1.1.attention.fc.weight - torch.Size([48, 48, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage1.1.attention.fc.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage2.0.conv.weight - torch.Size([96, 48, 3, 3]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage2.0.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage2.0.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage2.1.main_conv.conv.weight - torch.Size([48, 96, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage2.1.main_conv.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage2.1.main_conv.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage2.1.short_conv.conv.weight - torch.Size([48, 96, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage2.1.short_conv.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage2.1.short_conv.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage2.1.final_conv.conv.weight - torch.Size([96, 96, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage2.1.final_conv.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage2.1.final_conv.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage2.1.blocks.0.conv1.conv.weight - torch.Size([48, 48, 3, 3]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage2.1.blocks.0.conv1.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage2.1.blocks.0.conv1.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage2.1.blocks.0.conv2.depthwise_conv.conv.weight - torch.Size([48, 1, 5, 5]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage2.1.blocks.0.conv2.depthwise_conv.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage2.1.blocks.0.conv2.depthwise_conv.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage2.1.blocks.0.conv2.pointwise_conv.conv.weight - torch.Size([48, 48, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage2.1.blocks.0.conv2.pointwise_conv.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage2.1.blocks.0.conv2.pointwise_conv.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage2.1.attention.fc.weight - torch.Size([96, 96, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage2.1.attention.fc.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage3.0.conv.weight - torch.Size([192, 96, 3, 3]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage3.0.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage3.0.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage3.1.main_conv.conv.weight - torch.Size([96, 192, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage3.1.main_conv.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage3.1.main_conv.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage3.1.short_conv.conv.weight - torch.Size([96, 192, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage3.1.short_conv.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage3.1.short_conv.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage3.1.final_conv.conv.weight - torch.Size([192, 192, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage3.1.final_conv.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage3.1.final_conv.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage3.1.blocks.0.conv1.conv.weight - torch.Size([96, 96, 3, 3]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage3.1.blocks.0.conv1.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage3.1.blocks.0.conv1.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage3.1.blocks.0.conv2.depthwise_conv.conv.weight - torch.Size([96, 1, 5, 5]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage3.1.blocks.0.conv2.depthwise_conv.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage3.1.blocks.0.conv2.depthwise_conv.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage3.1.blocks.0.conv2.pointwise_conv.conv.weight - torch.Size([96, 96, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage3.1.blocks.0.conv2.pointwise_conv.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage3.1.blocks.0.conv2.pointwise_conv.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage3.1.attention.fc.weight - torch.Size([192, 192, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage3.1.attention.fc.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage4.0.conv.weight - torch.Size([384, 192, 3, 3]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage4.0.bn.weight - torch.Size([384]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage4.0.bn.bias - torch.Size([384]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage4.1.conv1.conv.weight - torch.Size([192, 384, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage4.1.conv1.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage4.1.conv1.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage4.1.conv2.conv.weight - torch.Size([384, 768, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage4.1.conv2.bn.weight - torch.Size([384]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage4.1.conv2.bn.bias - torch.Size([384]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage4.2.main_conv.conv.weight - torch.Size([192, 384, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage4.2.main_conv.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage4.2.main_conv.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage4.2.short_conv.conv.weight - torch.Size([192, 384, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage4.2.short_conv.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage4.2.short_conv.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage4.2.final_conv.conv.weight - torch.Size([384, 384, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage4.2.final_conv.bn.weight - torch.Size([384]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage4.2.final_conv.bn.bias - torch.Size([384]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage4.2.blocks.0.conv1.conv.weight - torch.Size([192, 192, 3, 3]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage4.2.blocks.0.conv1.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage4.2.blocks.0.conv1.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage4.2.blocks.0.conv2.depthwise_conv.conv.weight - torch.Size([192, 1, 5, 5]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage4.2.blocks.0.conv2.depthwise_conv.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage4.2.blocks.0.conv2.depthwise_conv.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage4.2.blocks.0.conv2.pointwise_conv.conv.weight - torch.Size([192, 192, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage4.2.blocks.0.conv2.pointwise_conv.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage4.2.blocks.0.conv2.pointwise_conv.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage4.2.attention.fc.weight - torch.Size([384, 384, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage4.2.attention.fc.bias - torch.Size([384]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.reduce_layers.2.conv.weight - torch.Size([192, 384, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.reduce_layers.2.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.reduce_layers.2.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.0.0.main_conv.conv.weight - torch.Size([96, 384, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.0.0.main_conv.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.0.0.main_conv.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.0.0.short_conv.conv.weight - torch.Size([96, 384, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.0.0.short_conv.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.0.0.short_conv.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.0.0.final_conv.conv.weight - torch.Size([192, 192, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.0.0.final_conv.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.0.0.final_conv.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.0.0.blocks.0.conv1.conv.weight - torch.Size([96, 96, 3, 3]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.0.0.blocks.0.conv1.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.0.0.blocks.0.conv1.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.0.0.blocks.0.conv2.depthwise_conv.conv.weight - torch.Size([96, 1, 5, 5]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.0.0.blocks.0.conv2.depthwise_conv.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.0.0.blocks.0.conv2.depthwise_conv.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.0.0.blocks.0.conv2.pointwise_conv.conv.weight - torch.Size([96, 96, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.0.0.blocks.0.conv2.pointwise_conv.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.0.0.blocks.0.conv2.pointwise_conv.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.0.1.conv.weight - torch.Size([96, 192, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.0.1.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.0.1.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.1.main_conv.conv.weight - torch.Size([48, 192, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.1.main_conv.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.1.main_conv.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.1.short_conv.conv.weight - torch.Size([48, 192, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.1.short_conv.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.1.short_conv.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.1.final_conv.conv.weight - torch.Size([96, 96, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.1.final_conv.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.1.final_conv.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.1.blocks.0.conv1.conv.weight - torch.Size([48, 48, 3, 3]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.1.blocks.0.conv1.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.1.blocks.0.conv1.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.1.blocks.0.conv2.depthwise_conv.conv.weight - torch.Size([48, 1, 5, 5]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.1.blocks.0.conv2.depthwise_conv.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.1.blocks.0.conv2.depthwise_conv.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.1.blocks.0.conv2.pointwise_conv.conv.weight - torch.Size([48, 48, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.1.blocks.0.conv2.pointwise_conv.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.1.blocks.0.conv2.pointwise_conv.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.downsample_layers.0.conv.weight - torch.Size([96, 96, 3, 3]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.downsample_layers.0.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.downsample_layers.0.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.downsample_layers.1.conv.weight - torch.Size([192, 192, 3, 3]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.downsample_layers.1.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.downsample_layers.1.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.0.main_conv.conv.weight - torch.Size([96, 192, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.0.main_conv.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.0.main_conv.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.0.short_conv.conv.weight - torch.Size([96, 192, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.0.short_conv.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.0.short_conv.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.0.final_conv.conv.weight - torch.Size([192, 192, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.0.final_conv.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.0.final_conv.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.0.blocks.0.conv1.conv.weight - torch.Size([96, 96, 3, 3]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.0.blocks.0.conv1.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.0.blocks.0.conv1.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.0.blocks.0.conv2.depthwise_conv.conv.weight - torch.Size([96, 1, 5, 5]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.0.blocks.0.conv2.depthwise_conv.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.0.blocks.0.conv2.depthwise_conv.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.0.blocks.0.conv2.pointwise_conv.conv.weight - torch.Size([96, 96, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.0.blocks.0.conv2.pointwise_conv.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.0.blocks.0.conv2.pointwise_conv.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.1.main_conv.conv.weight - torch.Size([192, 384, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.1.main_conv.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.1.main_conv.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.1.short_conv.conv.weight - torch.Size([192, 384, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.1.short_conv.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.1.short_conv.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.1.final_conv.conv.weight - torch.Size([384, 384, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.1.final_conv.bn.weight - torch.Size([384]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.1.final_conv.bn.bias - torch.Size([384]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.1.blocks.0.conv1.conv.weight - torch.Size([192, 192, 3, 3]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.1.blocks.0.conv1.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.1.blocks.0.conv1.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.1.blocks.0.conv2.depthwise_conv.conv.weight - torch.Size([192, 1, 5, 5]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.1.blocks.0.conv2.depthwise_conv.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.1.blocks.0.conv2.depthwise_conv.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.1.blocks.0.conv2.pointwise_conv.conv.weight - torch.Size([192, 192, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.1.blocks.0.conv2.pointwise_conv.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.1.blocks.0.conv2.pointwise_conv.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.out_layers.0.conv.weight - torch.Size([96, 96, 3, 3]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.out_layers.0.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.out_layers.0.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.out_layers.1.conv.weight - torch.Size([96, 192, 3, 3]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.out_layers.1.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.out_layers.1.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.out_layers.2.conv.weight - torch.Size([96, 384, 3, 3]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.out_layers.2.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.out_layers.2.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.cls_convs.0.0.conv.weight - torch.Size([96, 96, 3, 3]): 
+Initialized by user-defined `init_weights` in CropSemanticHeadModule  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.cls_convs.0.0.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.cls_convs.0.0.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.cls_convs.0.1.conv.weight - torch.Size([96, 96, 3, 3]): 
+Initialized by user-defined `init_weights` in CropSemanticHeadModule  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.cls_convs.0.1.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.cls_convs.0.1.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.cls_convs.1.0.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.cls_convs.1.0.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.cls_convs.1.1.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.cls_convs.1.1.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.cls_convs.2.0.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.cls_convs.2.0.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.cls_convs.2.1.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.cls_convs.2.1.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.reg_convs.0.0.conv.weight - torch.Size([96, 96, 3, 3]): 
+Initialized by user-defined `init_weights` in CropSemanticHeadModule  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.reg_convs.0.0.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.reg_convs.0.0.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.reg_convs.0.1.conv.weight - torch.Size([96, 96, 3, 3]): 
+Initialized by user-defined `init_weights` in CropSemanticHeadModule  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.reg_convs.0.1.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.reg_convs.0.1.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.reg_convs.1.0.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.reg_convs.1.0.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.reg_convs.1.1.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.reg_convs.1.1.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.reg_convs.2.0.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.reg_convs.2.0.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.reg_convs.2.1.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.reg_convs.2.1.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.rtm_cls.0.weight - torch.Size([20, 96, 1, 1]): 
+Initialized by user-defined `init_weights` in CropSemanticHeadModule  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.rtm_cls.0.bias - torch.Size([20]): 
+Initialized by user-defined `init_weights` in CropSemanticHeadModule  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.rtm_cls.1.weight - torch.Size([20, 96, 1, 1]): 
+Initialized by user-defined `init_weights` in CropSemanticHeadModule  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.rtm_cls.1.bias - torch.Size([20]): 
+Initialized by user-defined `init_weights` in CropSemanticHeadModule  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.rtm_cls.2.weight - torch.Size([20, 96, 1, 1]): 
+Initialized by user-defined `init_weights` in CropSemanticHeadModule  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.rtm_cls.2.bias - torch.Size([20]): 
+Initialized by user-defined `init_weights` in CropSemanticHeadModule  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.rtm_reg.0.weight - torch.Size([4, 96, 1, 1]): 
+Initialized by user-defined `init_weights` in CropSemanticHeadModule  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.rtm_reg.0.bias - torch.Size([4]): 
+Initialized by user-defined `init_weights` in CropSemanticHeadModule  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.rtm_reg.1.weight - torch.Size([4, 96, 1, 1]): 
+Initialized by user-defined `init_weights` in CropSemanticHeadModule  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.rtm_reg.1.bias - torch.Size([4]): 
+Initialized by user-defined `init_weights` in CropSemanticHeadModule  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.rtm_reg.2.weight - torch.Size([4, 96, 1, 1]): 
+Initialized by user-defined `init_weights` in CropSemanticHeadModule  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.rtm_reg.2.bias - torch.Size([4]): 
+Initialized by user-defined `init_weights` in CropSemanticHeadModule  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.instance_semantic.classifier.weight - torch.Size([20, 96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.instance_semantic.classifier.bias - torch.Size([20]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+CASE False 32 LOSS 0.29612040519714355 BAD [] N_BAD 0 FINITE_MAX (11946.837890625, 'backbone.stem.0.conv.weight')
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stem.0.conv.weight - torch.Size([12, 3, 3, 3]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stem.0.bn.weight - torch.Size([12]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stem.0.bn.bias - torch.Size([12]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stem.1.conv.weight - torch.Size([12, 12, 3, 3]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stem.1.bn.weight - torch.Size([12]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stem.1.bn.bias - torch.Size([12]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stem.2.conv.weight - torch.Size([24, 12, 3, 3]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stem.2.bn.weight - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stem.2.bn.bias - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage1.0.conv.weight - torch.Size([48, 24, 3, 3]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage1.0.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage1.0.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage1.1.main_conv.conv.weight - torch.Size([24, 48, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage1.1.main_conv.bn.weight - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage1.1.main_conv.bn.bias - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage1.1.short_conv.conv.weight - torch.Size([24, 48, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage1.1.short_conv.bn.weight - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage1.1.short_conv.bn.bias - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage1.1.final_conv.conv.weight - torch.Size([48, 48, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage1.1.final_conv.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage1.1.final_conv.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage1.1.blocks.0.conv1.conv.weight - torch.Size([24, 24, 3, 3]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage1.1.blocks.0.conv1.bn.weight - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage1.1.blocks.0.conv1.bn.bias - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage1.1.blocks.0.conv2.depthwise_conv.conv.weight - torch.Size([24, 1, 5, 5]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage1.1.blocks.0.conv2.depthwise_conv.bn.weight - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage1.1.blocks.0.conv2.depthwise_conv.bn.bias - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage1.1.blocks.0.conv2.pointwise_conv.conv.weight - torch.Size([24, 24, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage1.1.blocks.0.conv2.pointwise_conv.bn.weight - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage1.1.blocks.0.conv2.pointwise_conv.bn.bias - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage1.1.attention.fc.weight - torch.Size([48, 48, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage1.1.attention.fc.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage2.0.conv.weight - torch.Size([96, 48, 3, 3]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage2.0.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage2.0.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage2.1.main_conv.conv.weight - torch.Size([48, 96, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage2.1.main_conv.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage2.1.main_conv.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage2.1.short_conv.conv.weight - torch.Size([48, 96, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage2.1.short_conv.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage2.1.short_conv.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage2.1.final_conv.conv.weight - torch.Size([96, 96, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage2.1.final_conv.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage2.1.final_conv.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage2.1.blocks.0.conv1.conv.weight - torch.Size([48, 48, 3, 3]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage2.1.blocks.0.conv1.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage2.1.blocks.0.conv1.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage2.1.blocks.0.conv2.depthwise_conv.conv.weight - torch.Size([48, 1, 5, 5]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage2.1.blocks.0.conv2.depthwise_conv.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage2.1.blocks.0.conv2.depthwise_conv.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage2.1.blocks.0.conv2.pointwise_conv.conv.weight - torch.Size([48, 48, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage2.1.blocks.0.conv2.pointwise_conv.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage2.1.blocks.0.conv2.pointwise_conv.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage2.1.attention.fc.weight - torch.Size([96, 96, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage2.1.attention.fc.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage3.0.conv.weight - torch.Size([192, 96, 3, 3]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage3.0.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage3.0.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage3.1.main_conv.conv.weight - torch.Size([96, 192, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage3.1.main_conv.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage3.1.main_conv.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage3.1.short_conv.conv.weight - torch.Size([96, 192, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage3.1.short_conv.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage3.1.short_conv.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage3.1.final_conv.conv.weight - torch.Size([192, 192, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage3.1.final_conv.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage3.1.final_conv.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage3.1.blocks.0.conv1.conv.weight - torch.Size([96, 96, 3, 3]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage3.1.blocks.0.conv1.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage3.1.blocks.0.conv1.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage3.1.blocks.0.conv2.depthwise_conv.conv.weight - torch.Size([96, 1, 5, 5]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage3.1.blocks.0.conv2.depthwise_conv.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage3.1.blocks.0.conv2.depthwise_conv.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage3.1.blocks.0.conv2.pointwise_conv.conv.weight - torch.Size([96, 96, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage3.1.blocks.0.conv2.pointwise_conv.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage3.1.blocks.0.conv2.pointwise_conv.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage3.1.attention.fc.weight - torch.Size([192, 192, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage3.1.attention.fc.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage4.0.conv.weight - torch.Size([384, 192, 3, 3]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage4.0.bn.weight - torch.Size([384]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage4.0.bn.bias - torch.Size([384]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage4.1.conv1.conv.weight - torch.Size([192, 384, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage4.1.conv1.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage4.1.conv1.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage4.1.conv2.conv.weight - torch.Size([384, 768, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage4.1.conv2.bn.weight - torch.Size([384]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage4.1.conv2.bn.bias - torch.Size([384]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage4.2.main_conv.conv.weight - torch.Size([192, 384, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage4.2.main_conv.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage4.2.main_conv.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage4.2.short_conv.conv.weight - torch.Size([192, 384, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage4.2.short_conv.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage4.2.short_conv.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage4.2.final_conv.conv.weight - torch.Size([384, 384, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage4.2.final_conv.bn.weight - torch.Size([384]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage4.2.final_conv.bn.bias - torch.Size([384]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage4.2.blocks.0.conv1.conv.weight - torch.Size([192, 192, 3, 3]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage4.2.blocks.0.conv1.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage4.2.blocks.0.conv1.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage4.2.blocks.0.conv2.depthwise_conv.conv.weight - torch.Size([192, 1, 5, 5]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage4.2.blocks.0.conv2.depthwise_conv.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage4.2.blocks.0.conv2.depthwise_conv.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage4.2.blocks.0.conv2.pointwise_conv.conv.weight - torch.Size([192, 192, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage4.2.blocks.0.conv2.pointwise_conv.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage4.2.blocks.0.conv2.pointwise_conv.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage4.2.attention.fc.weight - torch.Size([384, 384, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+backbone.stage4.2.attention.fc.bias - torch.Size([384]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.reduce_layers.2.conv.weight - torch.Size([192, 384, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.reduce_layers.2.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.reduce_layers.2.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.0.0.main_conv.conv.weight - torch.Size([96, 384, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.0.0.main_conv.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.0.0.main_conv.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.0.0.short_conv.conv.weight - torch.Size([96, 384, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.0.0.short_conv.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.0.0.short_conv.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.0.0.final_conv.conv.weight - torch.Size([192, 192, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.0.0.final_conv.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.0.0.final_conv.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.0.0.blocks.0.conv1.conv.weight - torch.Size([96, 96, 3, 3]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.0.0.blocks.0.conv1.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.0.0.blocks.0.conv1.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.0.0.blocks.0.conv2.depthwise_conv.conv.weight - torch.Size([96, 1, 5, 5]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.0.0.blocks.0.conv2.depthwise_conv.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.0.0.blocks.0.conv2.depthwise_conv.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.0.0.blocks.0.conv2.pointwise_conv.conv.weight - torch.Size([96, 96, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.0.0.blocks.0.conv2.pointwise_conv.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.0.0.blocks.0.conv2.pointwise_conv.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.0.1.conv.weight - torch.Size([96, 192, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.0.1.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.0.1.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.1.main_conv.conv.weight - torch.Size([48, 192, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.1.main_conv.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.1.main_conv.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.1.short_conv.conv.weight - torch.Size([48, 192, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.1.short_conv.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.1.short_conv.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.1.final_conv.conv.weight - torch.Size([96, 96, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.1.final_conv.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.1.final_conv.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.1.blocks.0.conv1.conv.weight - torch.Size([48, 48, 3, 3]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.1.blocks.0.conv1.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.1.blocks.0.conv1.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.1.blocks.0.conv2.depthwise_conv.conv.weight - torch.Size([48, 1, 5, 5]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.1.blocks.0.conv2.depthwise_conv.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.1.blocks.0.conv2.depthwise_conv.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.1.blocks.0.conv2.pointwise_conv.conv.weight - torch.Size([48, 48, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.1.blocks.0.conv2.pointwise_conv.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.top_down_layers.1.blocks.0.conv2.pointwise_conv.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.downsample_layers.0.conv.weight - torch.Size([96, 96, 3, 3]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.downsample_layers.0.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.downsample_layers.0.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.downsample_layers.1.conv.weight - torch.Size([192, 192, 3, 3]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.downsample_layers.1.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.downsample_layers.1.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.0.main_conv.conv.weight - torch.Size([96, 192, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.0.main_conv.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.0.main_conv.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.0.short_conv.conv.weight - torch.Size([96, 192, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.0.short_conv.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.0.short_conv.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.0.final_conv.conv.weight - torch.Size([192, 192, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.0.final_conv.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.0.final_conv.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.0.blocks.0.conv1.conv.weight - torch.Size([96, 96, 3, 3]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.0.blocks.0.conv1.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.0.blocks.0.conv1.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.0.blocks.0.conv2.depthwise_conv.conv.weight - torch.Size([96, 1, 5, 5]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.0.blocks.0.conv2.depthwise_conv.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.0.blocks.0.conv2.depthwise_conv.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.0.blocks.0.conv2.pointwise_conv.conv.weight - torch.Size([96, 96, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.0.blocks.0.conv2.pointwise_conv.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.0.blocks.0.conv2.pointwise_conv.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.1.main_conv.conv.weight - torch.Size([192, 384, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.1.main_conv.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.1.main_conv.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.1.short_conv.conv.weight - torch.Size([192, 384, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.1.short_conv.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.1.short_conv.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.1.final_conv.conv.weight - torch.Size([384, 384, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.1.final_conv.bn.weight - torch.Size([384]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.1.final_conv.bn.bias - torch.Size([384]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.1.blocks.0.conv1.conv.weight - torch.Size([192, 192, 3, 3]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.1.blocks.0.conv1.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.1.blocks.0.conv1.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.1.blocks.0.conv2.depthwise_conv.conv.weight - torch.Size([192, 1, 5, 5]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.1.blocks.0.conv2.depthwise_conv.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.1.blocks.0.conv2.depthwise_conv.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.1.blocks.0.conv2.pointwise_conv.conv.weight - torch.Size([192, 192, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.1.blocks.0.conv2.pointwise_conv.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.bottom_up_layers.1.blocks.0.conv2.pointwise_conv.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.out_layers.0.conv.weight - torch.Size([96, 96, 3, 3]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.out_layers.0.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.out_layers.0.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.out_layers.1.conv.weight - torch.Size([96, 192, 3, 3]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.out_layers.1.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.out_layers.1.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.out_layers.2.conv.weight - torch.Size([96, 384, 3, 3]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.out_layers.2.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+neck.out_layers.2.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.cls_convs.0.0.conv.weight - torch.Size([96, 96, 3, 3]): 
+Initialized by user-defined `init_weights` in CropSemanticHeadModule  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.cls_convs.0.0.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.cls_convs.0.0.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.cls_convs.0.1.conv.weight - torch.Size([96, 96, 3, 3]): 
+Initialized by user-defined `init_weights` in CropSemanticHeadModule  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.cls_convs.0.1.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.cls_convs.0.1.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.cls_convs.1.0.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.cls_convs.1.0.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.cls_convs.1.1.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.cls_convs.1.1.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.cls_convs.2.0.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.cls_convs.2.0.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.cls_convs.2.1.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.cls_convs.2.1.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.reg_convs.0.0.conv.weight - torch.Size([96, 96, 3, 3]): 
+Initialized by user-defined `init_weights` in CropSemanticHeadModule  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.reg_convs.0.0.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.reg_convs.0.0.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.reg_convs.0.1.conv.weight - torch.Size([96, 96, 3, 3]): 
+Initialized by user-defined `init_weights` in CropSemanticHeadModule  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.reg_convs.0.1.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.reg_convs.0.1.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.reg_convs.1.0.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.reg_convs.1.0.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.reg_convs.1.1.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.reg_convs.1.1.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.reg_convs.2.0.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.reg_convs.2.0.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.reg_convs.2.1.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.reg_convs.2.1.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.rtm_cls.0.weight - torch.Size([20, 96, 1, 1]): 
+Initialized by user-defined `init_weights` in CropSemanticHeadModule  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.rtm_cls.0.bias - torch.Size([20]): 
+Initialized by user-defined `init_weights` in CropSemanticHeadModule  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.rtm_cls.1.weight - torch.Size([20, 96, 1, 1]): 
+Initialized by user-defined `init_weights` in CropSemanticHeadModule  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.rtm_cls.1.bias - torch.Size([20]): 
+Initialized by user-defined `init_weights` in CropSemanticHeadModule  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.rtm_cls.2.weight - torch.Size([20, 96, 1, 1]): 
+Initialized by user-defined `init_weights` in CropSemanticHeadModule  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.rtm_cls.2.bias - torch.Size([20]): 
+Initialized by user-defined `init_weights` in CropSemanticHeadModule  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.rtm_reg.0.weight - torch.Size([4, 96, 1, 1]): 
+Initialized by user-defined `init_weights` in CropSemanticHeadModule  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.rtm_reg.0.bias - torch.Size([4]): 
+Initialized by user-defined `init_weights` in CropSemanticHeadModule  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.rtm_reg.1.weight - torch.Size([4, 96, 1, 1]): 
+Initialized by user-defined `init_weights` in CropSemanticHeadModule  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.rtm_reg.1.bias - torch.Size([4]): 
+Initialized by user-defined `init_weights` in CropSemanticHeadModule  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.rtm_reg.2.weight - torch.Size([4, 96, 1, 1]): 
+Initialized by user-defined `init_weights` in CropSemanticHeadModule  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.head_module.rtm_reg.2.bias - torch.Size([4]): 
+Initialized by user-defined `init_weights` in CropSemanticHeadModule  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.instance_semantic.classifier.weight - torch.Size([20, 96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:55 - mmengine - INFO - 
+bbox_head.instance_semantic.classifier.bias - torch.Size([20]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+CASE True 1 LOSS 0.2963607609272003 BAD [] N_BAD 0 FINITE_MAX (2764.0, 'backbone.stem.0.conv.weight')
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stem.0.conv.weight - torch.Size([12, 3, 3, 3]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stem.0.bn.weight - torch.Size([12]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stem.0.bn.bias - torch.Size([12]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stem.1.conv.weight - torch.Size([12, 12, 3, 3]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stem.1.bn.weight - torch.Size([12]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stem.1.bn.bias - torch.Size([12]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stem.2.conv.weight - torch.Size([24, 12, 3, 3]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stem.2.bn.weight - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stem.2.bn.bias - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage1.0.conv.weight - torch.Size([48, 24, 3, 3]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage1.0.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage1.0.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage1.1.main_conv.conv.weight - torch.Size([24, 48, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage1.1.main_conv.bn.weight - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage1.1.main_conv.bn.bias - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage1.1.short_conv.conv.weight - torch.Size([24, 48, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage1.1.short_conv.bn.weight - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage1.1.short_conv.bn.bias - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage1.1.final_conv.conv.weight - torch.Size([48, 48, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage1.1.final_conv.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage1.1.final_conv.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage1.1.blocks.0.conv1.conv.weight - torch.Size([24, 24, 3, 3]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage1.1.blocks.0.conv1.bn.weight - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage1.1.blocks.0.conv1.bn.bias - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage1.1.blocks.0.conv2.depthwise_conv.conv.weight - torch.Size([24, 1, 5, 5]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage1.1.blocks.0.conv2.depthwise_conv.bn.weight - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage1.1.blocks.0.conv2.depthwise_conv.bn.bias - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage1.1.blocks.0.conv2.pointwise_conv.conv.weight - torch.Size([24, 24, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage1.1.blocks.0.conv2.pointwise_conv.bn.weight - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage1.1.blocks.0.conv2.pointwise_conv.bn.bias - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage1.1.attention.fc.weight - torch.Size([48, 48, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage1.1.attention.fc.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage2.0.conv.weight - torch.Size([96, 48, 3, 3]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage2.0.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage2.0.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage2.1.main_conv.conv.weight - torch.Size([48, 96, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage2.1.main_conv.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage2.1.main_conv.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage2.1.short_conv.conv.weight - torch.Size([48, 96, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage2.1.short_conv.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage2.1.short_conv.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage2.1.final_conv.conv.weight - torch.Size([96, 96, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage2.1.final_conv.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage2.1.final_conv.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage2.1.blocks.0.conv1.conv.weight - torch.Size([48, 48, 3, 3]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage2.1.blocks.0.conv1.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage2.1.blocks.0.conv1.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage2.1.blocks.0.conv2.depthwise_conv.conv.weight - torch.Size([48, 1, 5, 5]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage2.1.blocks.0.conv2.depthwise_conv.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage2.1.blocks.0.conv2.depthwise_conv.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage2.1.blocks.0.conv2.pointwise_conv.conv.weight - torch.Size([48, 48, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage2.1.blocks.0.conv2.pointwise_conv.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage2.1.blocks.0.conv2.pointwise_conv.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage2.1.attention.fc.weight - torch.Size([96, 96, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage2.1.attention.fc.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage3.0.conv.weight - torch.Size([192, 96, 3, 3]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage3.0.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage3.0.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage3.1.main_conv.conv.weight - torch.Size([96, 192, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage3.1.main_conv.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage3.1.main_conv.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage3.1.short_conv.conv.weight - torch.Size([96, 192, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage3.1.short_conv.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage3.1.short_conv.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage3.1.final_conv.conv.weight - torch.Size([192, 192, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage3.1.final_conv.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage3.1.final_conv.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage3.1.blocks.0.conv1.conv.weight - torch.Size([96, 96, 3, 3]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage3.1.blocks.0.conv1.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage3.1.blocks.0.conv1.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage3.1.blocks.0.conv2.depthwise_conv.conv.weight - torch.Size([96, 1, 5, 5]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage3.1.blocks.0.conv2.depthwise_conv.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage3.1.blocks.0.conv2.depthwise_conv.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage3.1.blocks.0.conv2.pointwise_conv.conv.weight - torch.Size([96, 96, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage3.1.blocks.0.conv2.pointwise_conv.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage3.1.blocks.0.conv2.pointwise_conv.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage3.1.attention.fc.weight - torch.Size([192, 192, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage3.1.attention.fc.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage4.0.conv.weight - torch.Size([384, 192, 3, 3]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage4.0.bn.weight - torch.Size([384]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage4.0.bn.bias - torch.Size([384]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage4.1.conv1.conv.weight - torch.Size([192, 384, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage4.1.conv1.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage4.1.conv1.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage4.1.conv2.conv.weight - torch.Size([384, 768, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage4.1.conv2.bn.weight - torch.Size([384]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage4.1.conv2.bn.bias - torch.Size([384]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage4.2.main_conv.conv.weight - torch.Size([192, 384, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage4.2.main_conv.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage4.2.main_conv.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage4.2.short_conv.conv.weight - torch.Size([192, 384, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage4.2.short_conv.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage4.2.short_conv.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage4.2.final_conv.conv.weight - torch.Size([384, 384, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage4.2.final_conv.bn.weight - torch.Size([384]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage4.2.final_conv.bn.bias - torch.Size([384]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage4.2.blocks.0.conv1.conv.weight - torch.Size([192, 192, 3, 3]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage4.2.blocks.0.conv1.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage4.2.blocks.0.conv1.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage4.2.blocks.0.conv2.depthwise_conv.conv.weight - torch.Size([192, 1, 5, 5]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage4.2.blocks.0.conv2.depthwise_conv.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage4.2.blocks.0.conv2.depthwise_conv.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage4.2.blocks.0.conv2.pointwise_conv.conv.weight - torch.Size([192, 192, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage4.2.blocks.0.conv2.pointwise_conv.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage4.2.blocks.0.conv2.pointwise_conv.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage4.2.attention.fc.weight - torch.Size([384, 384, 1, 1]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+backbone.stage4.2.attention.fc.bias - torch.Size([384]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.reduce_layers.2.conv.weight - torch.Size([192, 384, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.reduce_layers.2.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.reduce_layers.2.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.top_down_layers.0.0.main_conv.conv.weight - torch.Size([96, 384, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.top_down_layers.0.0.main_conv.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.top_down_layers.0.0.main_conv.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.top_down_layers.0.0.short_conv.conv.weight - torch.Size([96, 384, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.top_down_layers.0.0.short_conv.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.top_down_layers.0.0.short_conv.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.top_down_layers.0.0.final_conv.conv.weight - torch.Size([192, 192, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.top_down_layers.0.0.final_conv.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.top_down_layers.0.0.final_conv.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.top_down_layers.0.0.blocks.0.conv1.conv.weight - torch.Size([96, 96, 3, 3]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.top_down_layers.0.0.blocks.0.conv1.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.top_down_layers.0.0.blocks.0.conv1.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.top_down_layers.0.0.blocks.0.conv2.depthwise_conv.conv.weight - torch.Size([96, 1, 5, 5]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.top_down_layers.0.0.blocks.0.conv2.depthwise_conv.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.top_down_layers.0.0.blocks.0.conv2.depthwise_conv.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.top_down_layers.0.0.blocks.0.conv2.pointwise_conv.conv.weight - torch.Size([96, 96, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.top_down_layers.0.0.blocks.0.conv2.pointwise_conv.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.top_down_layers.0.0.blocks.0.conv2.pointwise_conv.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.top_down_layers.0.1.conv.weight - torch.Size([96, 192, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.top_down_layers.0.1.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.top_down_layers.0.1.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.top_down_layers.1.main_conv.conv.weight - torch.Size([48, 192, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.top_down_layers.1.main_conv.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.top_down_layers.1.main_conv.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.top_down_layers.1.short_conv.conv.weight - torch.Size([48, 192, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.top_down_layers.1.short_conv.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.top_down_layers.1.short_conv.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.top_down_layers.1.final_conv.conv.weight - torch.Size([96, 96, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.top_down_layers.1.final_conv.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.top_down_layers.1.final_conv.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.top_down_layers.1.blocks.0.conv1.conv.weight - torch.Size([48, 48, 3, 3]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.top_down_layers.1.blocks.0.conv1.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.top_down_layers.1.blocks.0.conv1.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.top_down_layers.1.blocks.0.conv2.depthwise_conv.conv.weight - torch.Size([48, 1, 5, 5]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.top_down_layers.1.blocks.0.conv2.depthwise_conv.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.top_down_layers.1.blocks.0.conv2.depthwise_conv.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.top_down_layers.1.blocks.0.conv2.pointwise_conv.conv.weight - torch.Size([48, 48, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.top_down_layers.1.blocks.0.conv2.pointwise_conv.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.top_down_layers.1.blocks.0.conv2.pointwise_conv.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.downsample_layers.0.conv.weight - torch.Size([96, 96, 3, 3]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.downsample_layers.0.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.downsample_layers.0.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.downsample_layers.1.conv.weight - torch.Size([192, 192, 3, 3]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.downsample_layers.1.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.downsample_layers.1.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.bottom_up_layers.0.main_conv.conv.weight - torch.Size([96, 192, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.bottom_up_layers.0.main_conv.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.bottom_up_layers.0.main_conv.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.bottom_up_layers.0.short_conv.conv.weight - torch.Size([96, 192, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.bottom_up_layers.0.short_conv.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.bottom_up_layers.0.short_conv.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.bottom_up_layers.0.final_conv.conv.weight - torch.Size([192, 192, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.bottom_up_layers.0.final_conv.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.bottom_up_layers.0.final_conv.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.bottom_up_layers.0.blocks.0.conv1.conv.weight - torch.Size([96, 96, 3, 3]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.bottom_up_layers.0.blocks.0.conv1.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.bottom_up_layers.0.blocks.0.conv1.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.bottom_up_layers.0.blocks.0.conv2.depthwise_conv.conv.weight - torch.Size([96, 1, 5, 5]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.bottom_up_layers.0.blocks.0.conv2.depthwise_conv.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.bottom_up_layers.0.blocks.0.conv2.depthwise_conv.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.bottom_up_layers.0.blocks.0.conv2.pointwise_conv.conv.weight - torch.Size([96, 96, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.bottom_up_layers.0.blocks.0.conv2.pointwise_conv.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.bottom_up_layers.0.blocks.0.conv2.pointwise_conv.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.bottom_up_layers.1.main_conv.conv.weight - torch.Size([192, 384, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.bottom_up_layers.1.main_conv.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.bottom_up_layers.1.main_conv.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.bottom_up_layers.1.short_conv.conv.weight - torch.Size([192, 384, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.bottom_up_layers.1.short_conv.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.bottom_up_layers.1.short_conv.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.bottom_up_layers.1.final_conv.conv.weight - torch.Size([384, 384, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.bottom_up_layers.1.final_conv.bn.weight - torch.Size([384]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.bottom_up_layers.1.final_conv.bn.bias - torch.Size([384]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.bottom_up_layers.1.blocks.0.conv1.conv.weight - torch.Size([192, 192, 3, 3]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.bottom_up_layers.1.blocks.0.conv1.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.bottom_up_layers.1.blocks.0.conv1.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.bottom_up_layers.1.blocks.0.conv2.depthwise_conv.conv.weight - torch.Size([192, 1, 5, 5]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.bottom_up_layers.1.blocks.0.conv2.depthwise_conv.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.bottom_up_layers.1.blocks.0.conv2.depthwise_conv.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.bottom_up_layers.1.blocks.0.conv2.pointwise_conv.conv.weight - torch.Size([192, 192, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.bottom_up_layers.1.blocks.0.conv2.pointwise_conv.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.bottom_up_layers.1.blocks.0.conv2.pointwise_conv.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.out_layers.0.conv.weight - torch.Size([96, 96, 3, 3]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.out_layers.0.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.out_layers.0.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.out_layers.1.conv.weight - torch.Size([96, 192, 3, 3]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.out_layers.1.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.out_layers.1.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.out_layers.2.conv.weight - torch.Size([96, 384, 3, 3]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.out_layers.2.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+neck.out_layers.2.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+bbox_head.head_module.cls_convs.0.0.conv.weight - torch.Size([96, 96, 3, 3]): 
+Initialized by user-defined `init_weights` in CropSemanticHeadModule  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+bbox_head.head_module.cls_convs.0.0.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+bbox_head.head_module.cls_convs.0.0.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+bbox_head.head_module.cls_convs.0.1.conv.weight - torch.Size([96, 96, 3, 3]): 
+Initialized by user-defined `init_weights` in CropSemanticHeadModule  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+bbox_head.head_module.cls_convs.0.1.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+bbox_head.head_module.cls_convs.0.1.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+bbox_head.head_module.cls_convs.1.0.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+bbox_head.head_module.cls_convs.1.0.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+bbox_head.head_module.cls_convs.1.1.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+bbox_head.head_module.cls_convs.1.1.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+bbox_head.head_module.cls_convs.2.0.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+bbox_head.head_module.cls_convs.2.0.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+bbox_head.head_module.cls_convs.2.1.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+bbox_head.head_module.cls_convs.2.1.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+bbox_head.head_module.reg_convs.0.0.conv.weight - torch.Size([96, 96, 3, 3]): 
+Initialized by user-defined `init_weights` in CropSemanticHeadModule  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+bbox_head.head_module.reg_convs.0.0.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+bbox_head.head_module.reg_convs.0.0.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+bbox_head.head_module.reg_convs.0.1.conv.weight - torch.Size([96, 96, 3, 3]): 
+Initialized by user-defined `init_weights` in CropSemanticHeadModule  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+bbox_head.head_module.reg_convs.0.1.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+bbox_head.head_module.reg_convs.0.1.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+bbox_head.head_module.reg_convs.1.0.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+bbox_head.head_module.reg_convs.1.0.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+bbox_head.head_module.reg_convs.1.1.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+bbox_head.head_module.reg_convs.1.1.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+bbox_head.head_module.reg_convs.2.0.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+bbox_head.head_module.reg_convs.2.0.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+bbox_head.head_module.reg_convs.2.1.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+bbox_head.head_module.reg_convs.2.1.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+bbox_head.head_module.rtm_cls.0.weight - torch.Size([20, 96, 1, 1]): 
+Initialized by user-defined `init_weights` in CropSemanticHeadModule  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+bbox_head.head_module.rtm_cls.0.bias - torch.Size([20]): 
+Initialized by user-defined `init_weights` in CropSemanticHeadModule  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+bbox_head.head_module.rtm_cls.1.weight - torch.Size([20, 96, 1, 1]): 
+Initialized by user-defined `init_weights` in CropSemanticHeadModule  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+bbox_head.head_module.rtm_cls.1.bias - torch.Size([20]): 
+Initialized by user-defined `init_weights` in CropSemanticHeadModule  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+bbox_head.head_module.rtm_cls.2.weight - torch.Size([20, 96, 1, 1]): 
+Initialized by user-defined `init_weights` in CropSemanticHeadModule  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+bbox_head.head_module.rtm_cls.2.bias - torch.Size([20]): 
+Initialized by user-defined `init_weights` in CropSemanticHeadModule  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+bbox_head.head_module.rtm_reg.0.weight - torch.Size([4, 96, 1, 1]): 
+Initialized by user-defined `init_weights` in CropSemanticHeadModule  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+bbox_head.head_module.rtm_reg.0.bias - torch.Size([4]): 
+Initialized by user-defined `init_weights` in CropSemanticHeadModule  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+bbox_head.head_module.rtm_reg.1.weight - torch.Size([4, 96, 1, 1]): 
+Initialized by user-defined `init_weights` in CropSemanticHeadModule  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+bbox_head.head_module.rtm_reg.1.bias - torch.Size([4]): 
+Initialized by user-defined `init_weights` in CropSemanticHeadModule  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+bbox_head.head_module.rtm_reg.2.weight - torch.Size([4, 96, 1, 1]): 
+Initialized by user-defined `init_weights` in CropSemanticHeadModule  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+bbox_head.head_module.rtm_reg.2.bias - torch.Size([4]): 
+Initialized by user-defined `init_weights` in CropSemanticHeadModule  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+bbox_head.instance_semantic.classifier.weight - torch.Size([20, 96]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+10/18 20:23:57 - mmengine - INFO - 
+bbox_head.instance_semantic.classifier.bias - torch.Size([20]): 
+The value is the same before and after calling `init_weights` of ObjectCropSemanticDetector  
+ 
+CASE True 32 LOSS 0.2963607609272003 BAD ['backbone.stem.0.conv.weight'] N_BAD 1 FINITE_MAX (49056.0, 'backbone.stage1.1.blocks.0.conv2.depthwise_conv.conv.weight')

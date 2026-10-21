@@ -1,0 +1,287 @@
+{
+  "unit_tests": {
+    "count": 24,
+    "status": "passed",
+    "cuda_checks_enabled": true,
+    "cuda_cases": [
+      "fp32",
+      "fp16",
+      "fp16_features_fp32_weights"
+    ],
+    "final_backbone_integration_recheck": "4 tests passed"
+  },
+  "official_operator_fidelity": {
+    "official_commit": "cbe737c92b7c43ecf02d08545a07f03f1010177c",
+    "status": "passed",
+    "full_operator_comparison": [
+      {
+        "channels": 48,
+        "forward_max_error": 0.0,
+        "gradient_max_error": 0.0,
+        "parameter_tensors": 15
+      },
+      {
+        "channels": 96,
+        "forward_max_error": 0.0,
+        "gradient_max_error": 0.0,
+        "parameter_tensors": 15
+      },
+      {
+        "channels": 192,
+        "forward_max_error": 0.0,
+        "gradient_max_error": 0.0,
+        "parameter_tensors": 15
+      }
+    ],
+    "aggregation_cuda_reference": "independent shift-based reference in tests/test_lsconv.py"
+  },
+  "gpu_integration": {
+    "status": "passed",
+    "input_size": [
+      640,
+      640
+    ],
+    "microbatch": 2,
+    "accumulation": 1,
+    "optimizer_updates": 16,
+    "training_microsteps": 16,
+    "val_passes": 2,
+    "val_images_per_pass": 32,
+    "predictions_checked": 64,
+    "strong_and_weak_augmentation": true,
+    "finite_losses": true,
+    "finite_predictions": true,
+    "lsconv_parameters_in_optimizer": true,
+    "watched_parameter_tensors": 45,
+    "gradient_max": {
+      "backbone.stage4.2.blocks.0.conv1.0.bn.weight": 63.83625793457031,
+      "backbone.stage4.2.blocks.0.conv1.0.bn.bias": 28.556415557861328,
+      "backbone.stage4.2.blocks.0.conv1.0.lkp.norm.weight": 84.5778579711914,
+      "backbone.stage4.2.blocks.0.conv1.0.lkp.norm.bias": 52.20147705078125,
+      "backbone.stage4.2.blocks.0.conv1.0.lkp.cv4.weight": 339.25,
+      "backbone.stage4.2.blocks.0.conv1.0.lkp.cv4.bias": 58.96875,
+      "backbone.stage4.2.blocks.0.conv1.0.lkp.cv3.bn.weight": 110.47332763671875,
+      "backbone.stage4.2.blocks.0.conv1.0.lkp.cv3.bn.bias": 67.33137512207031,
+      "backbone.stage4.2.blocks.0.conv1.0.lkp.cv3.c.weight": 405.5,
+      "backbone.stage4.2.blocks.0.conv1.0.lkp.cv2.bn.weight": 144.41453552246094,
+      "backbone.stage4.2.blocks.0.conv1.0.lkp.cv2.bn.bias": 0.020601272583007812,
+      "backbone.stage4.2.blocks.0.conv1.0.lkp.cv2.c.weight": 534.0,
+      "backbone.stage4.2.blocks.0.conv1.0.lkp.cv1.bn.weight": 0.18393471837043762,
+      "backbone.stage4.2.blocks.0.conv1.0.lkp.cv1.bn.bias": 62.208473205566406,
+      "backbone.stage4.2.blocks.0.conv1.0.lkp.cv1.c.weight": 864.5,
+      "backbone.stage3.1.blocks.0.conv1.0.bn.weight": 161.96640014648438,
+      "backbone.stage3.1.blocks.0.conv1.0.bn.bias": 63.263031005859375,
+      "backbone.stage3.1.blocks.0.conv1.0.lkp.norm.weight": 391.4640808105469,
+      "backbone.stage3.1.blocks.0.conv1.0.lkp.norm.bias": 128.14590454101562,
+      "backbone.stage3.1.blocks.0.conv1.0.lkp.cv4.weight": 1174.0,
+      "backbone.stage3.1.blocks.0.conv1.0.lkp.cv4.bias": 278.5,
+      "backbone.stage3.1.blocks.0.conv1.0.lkp.cv3.bn.weight": 767.2476196289062,
+      "backbone.stage3.1.blocks.0.conv1.0.lkp.cv3.bn.bias": 151.12574768066406,
+      "backbone.stage3.1.blocks.0.conv1.0.lkp.cv3.c.weight": 1348.0,
+      "backbone.stage3.1.blocks.0.conv1.0.lkp.cv2.bn.weight": 514.5821533203125,
+      "backbone.stage3.1.blocks.0.conv1.0.lkp.cv2.bn.bias": 0.04240131378173828,
+      "backbone.stage3.1.blocks.0.conv1.0.lkp.cv2.c.weight": 1490.0,
+      "backbone.stage3.1.blocks.0.conv1.0.lkp.cv1.bn.weight": 0.7717221975326538,
+      "backbone.stage3.1.blocks.0.conv1.0.lkp.cv1.bn.bias": 391.5108642578125,
+      "backbone.stage3.1.blocks.0.conv1.0.lkp.cv1.c.weight": 2230.0,
+      "backbone.stage2.1.blocks.0.conv1.0.bn.weight": 412.139404296875,
+      "backbone.stage2.1.blocks.0.conv1.0.bn.bias": 220.43783569335938,
+      "backbone.stage2.1.blocks.0.conv1.0.lkp.norm.weight": 708.0025024414062,
+      "backbone.stage2.1.blocks.0.conv1.0.lkp.norm.bias": 320.55694580078125,
+      "backbone.stage2.1.blocks.0.conv1.0.lkp.cv4.weight": 2029.0,
+      "backbone.stage2.1.blocks.0.conv1.0.lkp.cv4.bias": 560.5,
+      "backbone.stage2.1.blocks.0.conv1.0.lkp.cv3.bn.weight": 1309.79296875,
+      "backbone.stage2.1.blocks.0.conv1.0.lkp.cv3.bn.bias": 332.98187255859375,
+      "backbone.stage2.1.blocks.0.conv1.0.lkp.cv3.c.weight": 4776.0,
+      "backbone.stage2.1.blocks.0.conv1.0.lkp.cv2.bn.weight": 1489.242431640625,
+      "backbone.stage2.1.blocks.0.conv1.0.lkp.cv2.bn.bias": 0.10742950439453125,
+      "backbone.stage2.1.blocks.0.conv1.0.lkp.cv2.c.weight": 4896.0,
+      "backbone.stage2.1.blocks.0.conv1.0.lkp.cv1.bn.weight": 0.6878979206085205,
+      "backbone.stage2.1.blocks.0.conv1.0.lkp.cv1.bn.bias": 557.587158203125,
+      "backbone.stage2.1.blocks.0.conv1.0.lkp.cv1.c.weight": 4760.0
+    },
+    "parameter_updates_max": {
+      "backbone.stage2.1.blocks.0.conv1.0.lkp.cv1.c.weight": 0.006834477186203003,
+      "backbone.stage2.1.blocks.0.conv1.0.lkp.cv1.bn.weight": 0.0053288936614990234,
+      "backbone.stage2.1.blocks.0.conv1.0.lkp.cv1.bn.bias": 0.004712789319455624,
+      "backbone.stage2.1.blocks.0.conv1.0.lkp.cv2.c.weight": 0.006395898759365082,
+      "backbone.stage2.1.blocks.0.conv1.0.lkp.cv2.bn.weight": 0.005574464797973633,
+      "backbone.stage2.1.blocks.0.conv1.0.lkp.cv2.bn.bias": 0.0039337193593382835,
+      "backbone.stage2.1.blocks.0.conv1.0.lkp.cv3.c.weight": 0.006247997283935547,
+      "backbone.stage2.1.blocks.0.conv1.0.lkp.cv3.bn.weight": 0.0033783912658691406,
+      "backbone.stage2.1.blocks.0.conv1.0.lkp.cv3.bn.bias": 0.0034870465751737356,
+      "backbone.stage2.1.blocks.0.conv1.0.lkp.cv4.weight": 0.006143659353256226,
+      "backbone.stage2.1.blocks.0.conv1.0.lkp.cv4.bias": 0.005960691720247269,
+      "backbone.stage2.1.blocks.0.conv1.0.lkp.norm.weight": 0.005993366241455078,
+      "backbone.stage2.1.blocks.0.conv1.0.lkp.norm.bias": 0.005453932099044323,
+      "backbone.stage2.1.blocks.0.conv1.0.bn.weight": 0.005292057991027832,
+      "backbone.stage2.1.blocks.0.conv1.0.bn.bias": 0.0057305884547531605,
+      "backbone.stage3.1.blocks.0.conv1.0.lkp.cv1.c.weight": 0.006649933755397797,
+      "backbone.stage3.1.blocks.0.conv1.0.lkp.cv1.bn.weight": 0.005600094795227051,
+      "backbone.stage3.1.blocks.0.conv1.0.lkp.cv1.bn.bias": 0.00619325740262866,
+      "backbone.stage3.1.blocks.0.conv1.0.lkp.cv2.c.weight": 0.006802566349506378,
+      "backbone.stage3.1.blocks.0.conv1.0.lkp.cv2.bn.weight": 0.0054666996002197266,
+      "backbone.stage3.1.blocks.0.conv1.0.lkp.cv2.bn.bias": 0.006007378455251455,
+      "backbone.stage3.1.blocks.0.conv1.0.lkp.cv3.c.weight": 0.006372921168804169,
+      "backbone.stage3.1.blocks.0.conv1.0.lkp.cv3.bn.weight": 0.004876971244812012,
+      "backbone.stage3.1.blocks.0.conv1.0.lkp.cv3.bn.bias": 0.005049164406955242,
+      "backbone.stage3.1.blocks.0.conv1.0.lkp.cv4.weight": 0.0065942853689193726,
+      "backbone.stage3.1.blocks.0.conv1.0.lkp.cv4.bias": 0.005672819912433624,
+      "backbone.stage3.1.blocks.0.conv1.0.lkp.norm.weight": 0.005993902683258057,
+      "backbone.stage3.1.blocks.0.conv1.0.lkp.norm.bias": 0.005063455551862717,
+      "backbone.stage3.1.blocks.0.conv1.0.bn.weight": 0.005077242851257324,
+      "backbone.stage3.1.blocks.0.conv1.0.bn.bias": 0.005554516799747944,
+      "backbone.stage4.2.blocks.0.conv1.0.lkp.cv1.c.weight": 0.006804156117141247,
+      "backbone.stage4.2.blocks.0.conv1.0.lkp.cv1.bn.weight": 0.005605638027191162,
+      "backbone.stage4.2.blocks.0.conv1.0.lkp.cv1.bn.bias": 0.005933265667408705,
+      "backbone.stage4.2.blocks.0.conv1.0.lkp.cv2.c.weight": 0.006423249840736389,
+      "backbone.stage4.2.blocks.0.conv1.0.lkp.cv2.bn.weight": 0.00621265172958374,
+      "backbone.stage4.2.blocks.0.conv1.0.lkp.cv2.bn.bias": 0.00528596481308341,
+      "backbone.stage4.2.blocks.0.conv1.0.lkp.cv3.c.weight": 0.006457206793129444,
+      "backbone.stage4.2.blocks.0.conv1.0.lkp.cv3.bn.weight": 0.005302548408508301,
+      "backbone.stage4.2.blocks.0.conv1.0.lkp.cv3.bn.bias": 0.006857269909232855,
+      "backbone.stage4.2.blocks.0.conv1.0.lkp.cv4.weight": 0.006797276437282562,
+      "backbone.stage4.2.blocks.0.conv1.0.lkp.cv4.bias": 0.005824588239192963,
+      "backbone.stage4.2.blocks.0.conv1.0.lkp.norm.weight": 0.005980968475341797,
+      "backbone.stage4.2.blocks.0.conv1.0.lkp.norm.bias": 0.005688556004315615,
+      "backbone.stage4.2.blocks.0.conv1.0.bn.weight": 0.005562484264373779,
+      "backbone.stage4.2.blocks.0.conv1.0.bn.bias": 0.006185293197631836
+    },
+    "peak_allocated_gib": 0.6350226402282715,
+    "peak_reserved_gib": 0.794921875,
+    "elapsed_seconds": 31.287512904033065,
+    "gpu": "GPU0",
+    "training_images": 16,
+    "epochs": 2,
+    "loss_scale_init": 512,
+    "warmup_enabled": false,
+    "saved_checkpoints": false,
+    "allocator_fraction": 0.06
+  },
+  "profile": {
+    "status": "passed",
+    "architecture": {
+      "baseline": {
+        "parameters": 4878708,
+        "conv_gmac": 7.98770304
+      },
+      "lsconv": {
+        "parameters": 4517130,
+        "conv_gmac": 7.66080384
+      }
+    },
+    "training_step_profile": {
+      "baseline": {
+        "batch": 2,
+        "input": [
+          640,
+          640
+        ],
+        "warmup_steps": 5,
+        "measured_steps": 10,
+        "mean_step_seconds": 0.1443908190354705,
+        "shared_gpu": true,
+        "data_pipeline_included": false
+      },
+      "lsconv": {
+        "batch": 2,
+        "input": [
+          640,
+          640
+        ],
+        "warmup_steps": 5,
+        "measured_steps": 10,
+        "mean_step_seconds": 0.19564564498141407,
+        "shared_gpu": true,
+        "data_pipeline_included": false
+      }
+    },
+    "lsconv_extra_aggregation_gmac": 0.0048384,
+    "gpu": "GPU0",
+    "allocator_fraction": 0.06
+  },
+  "queue_checks": {
+    "status": "passed",
+    "cases": [
+      "pid_identity",
+      "missing_checkpoint",
+      "empty_checkpoint",
+      "missing_final_validation",
+      "nonfinite_validation",
+      "complete_validation",
+      "fatal_error"
+    ],
+    "end_to_end_mock_cases": [
+      {
+        "case": "success",
+        "state": "complete",
+        "children_started": 2
+      },
+      {
+        "case": "efs_incomplete",
+        "state": "failed",
+        "children_started": 0
+      },
+      {
+        "case": "capacity_failure",
+        "state": "failed",
+        "children_started": 1
+      },
+      {
+        "case": "existing_outputs",
+        "state": "failed",
+        "children_started": 0
+      }
+    ]
+  },
+  "batch36_capacity": {
+    "status": "passed",
+    "config": "/home/pwt/Paper1/work_dirs/lsconv_queue/lsconv_640_bs36.py",
+    "batch": 36,
+    "input_size": [
+      640,
+      640
+    ],
+    "gt_per_image": 1200,
+    "repeated_annotations": true,
+    "optimizer_updates": 3,
+    "loss_scale_init": 128,
+    "allocator_fraction": 0.88,
+    "watched_parameter_tensors": 45,
+    "losses": [
+      {
+        "loss": 2.0988922119140625,
+        "loss_cls": 0.32108449935913086,
+        "loss_bbox": 1.777807593345642
+      },
+      {
+        "loss": 2.049008369445801,
+        "loss_cls": 0.43962711095809937,
+        "loss_bbox": 1.6093813180923462
+      },
+      {
+        "loss": 1.9381357431411743,
+        "loss_cls": 0.477254718542099,
+        "loss_bbox": 1.460880994796753
+      }
+    ],
+    "peak_allocated_gib": 35.4218225479126,
+    "peak_reserved_gib": 40.091796875,
+    "elapsed_seconds": 33.08206293685362
+  },
+  "queue_import_check": {
+    "status": "passed",
+    "cases": [
+      {
+        "directory": "/home/pwt/Paper1/work_dirs/lsconv_queue",
+        "status": "passed",
+        "stdlib_queue": "/home/pwt/miniconda3/envs/rtmdet/lib/python3.10/queue.py"
+      },
+      {
+        "directory": "/home/pwt/Paper1/work_dirs/fdw_queue",
+        "status": "passed",
+        "stdlib_queue": "/home/pwt/miniconda3/envs/rtmdet/lib/python3.10/queue.py"
+      }
+    ]
+  }
+}

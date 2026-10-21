@@ -1,0 +1,62 @@
+{
+  "status": "passed",
+  "method": "instance_semantic_multiscale",
+  "microbatch": 12,
+  "formal_batch": 36,
+  "accumulation": 1,
+  "crop_resolutions": [
+    800,
+    800,
+    800
+  ],
+  "optimizer_updates": 3,
+  "auxiliary_only": false,
+  "formal_batch_capacity_tested": false,
+  "gt_per_image": 1200,
+  "different_image_ids": [
+    844,
+    5601,
+    4604,
+    5475,
+    5757,
+    1129,
+    3150,
+    1497,
+    819,
+    1679,
+    7,
+    268
+  ],
+  "repeated_detection_annotations": true,
+  "auxiliary_crops_from_original_real_gt": true,
+  "allocator_fraction": 0.4,
+  "loss_scale_init": 32,
+  "amp_skipped_updates": 0,
+  "saved_checkpoints": false,
+  "losses": [
+    {
+      "loss": 2.468217372894287,
+      "loss_cls": 0.16488583385944366,
+      "loss_bbox": 2.0059657096862793,
+      "loss_instance_semantic": 0.2973659634590149
+    },
+    {
+      "loss": 2.3465356826782227,
+      "loss_cls": 0.22060590982437134,
+      "loss_bbox": 1.8337074518203735,
+      "loss_instance_semantic": 0.2922222316265106
+    },
+    {
+      "loss": 2.247297525405884,
+      "loss_cls": 0.35794904828071594,
+      "loss_bbox": 1.5991359949111938,
+      "loss_instance_semantic": 0.2902125418186188
+    }
+  ],
+  "cuda_device": "NVIDIA GeForce RTX 4090",
+  "cuda_total_gib": 47.37115478515625,
+  "initial_free_gib": 25.80426025390625,
+  "peak_allocated_gib": 11.808943271636963,
+  "peak_reserved_gib": 14.720703125,
+  "elapsed_seconds": 12.871311652997974
+}

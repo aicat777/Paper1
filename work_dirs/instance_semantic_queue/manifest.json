@@ -1,0 +1,75 @@
+{
+  "root": "/home/pwt/Paper1",
+  "python": "/home/pwt/miniconda3/envs/rtmdet/bin/python",
+  "gpu_uuid": "GPU-df11ee80-4992-6cab-1055-b211d226f165",
+  "min_free_mib": 45000,
+  "dependency": {
+    "name": "lsconv_20",
+    "pid": 2838554,
+    "start_ticks": "15178716",
+    "status": "/home/pwt/Paper1/work_dirs/lsconv_20_queue/status.json",
+    "work_dir": "/home/pwt/Paper1/work_dirs/lsconv_20_rtmdet_tiny_dior_640_gpu1_bs36",
+    "log": "/home/pwt/Paper1/logs/lsconv_20_rtmdet_tiny_dior_640_gpu1_bs36.log"
+  },
+  "experiment": {
+    "name": "instance_semantic_640_bs36",
+    "source_config": "/home/pwt/Paper1/configs/instance_semantic/rtmdet_tiny_dior_640.py",
+    "config": "/home/pwt/Paper1/work_dirs/instance_semantic_queue/instance_semantic_640_bs36.py",
+    "work_dir": "/home/pwt/Paper1/work_dirs/instance_semantic_rtmdet_tiny_dior_640_gpu1_bs36",
+    "log": "/home/pwt/Paper1/logs/instance_semantic_rtmdet_tiny_dior_640_gpu1_bs36_resume46.log",
+    "preflight_report": "/home/pwt/Paper1/work_dirs/instance_semantic_validation/queue_preflight.json",
+    "capacity_report": "/home/pwt/Paper1/work_dirs/instance_semantic_validation/capacity_gpu1_bs36.json",
+    "validation_summary": "/home/pwt/Paper1/work_dirs/instance_semantic_validation/checks.json",
+    "resume_from": "/home/pwt/Paper1/work_dirs/instance_semantic_rtmdet_tiny_dior_640_gpu1_bs36/epoch_46.pth"
+  },
+  "source_sha256": {
+    "configs/instance_semantic/rtmdet_tiny_dior_640.py": "51e23561dd9a4d2cece9e25b93964c50982df354f7566ce900375c6949b33e59",
+    "configs/rtmdet_tiny_dior_300e.py": "69a8a91d777090fcdd6f27eafdb717cc93f1a272bc6a90c4db522ba035d215a6",
+    "custom_models/instance_semantic/__init__.py": "7aa8654f1bae5bad77124cfa94e8a226429540643063e982758cdeaf5329563c",
+    "custom_models/instance_semantic/head.py": "404fa084c027a546c185af4d63be051e20d71e017e6510574c94efd87b86fe64",
+    "custom_models/instance_semantic/roi.py": "3e1d9805737aa468eb96f093ba7955a82362e7b83e90dc47efe64f53554e54b4",
+    "scripts/candidate_capacity.py": "311c8cf810f6184f190642fab04acd55c15e9f61ea1c281276fa93800df6725c",
+    "scripts/candidate_probe.py": "20e07b7f2cdb9202eedf63660786b5e2ffa5f5e019ebdf8a6c1fdbb2eb018286",
+    "scripts/queue_experiment.py": "53938385f211685b7de5ba4ce43d745611cc5ab21eb80eb0cf400388a533fdb1",
+    "tests/test_instance_semantic.py": "300412001e57d614bdeb415db9cd54bd1446a066e9f1f835d6a078cc7ad2c383",
+    "work_dirs/instance_semantic_queue/instance_semantic_640_bs36.py": "01613ab30758e59195661320cec8e070d33cf9c5985337f522dfbec3fcc27f51"
+  },
+  "preflight_command": [
+    "/home/pwt/miniconda3/envs/rtmdet/bin/python",
+    "-u",
+    "/home/pwt/Paper1/scripts/candidate_capacity.py",
+    "--method",
+    "instance_semantic",
+    "--config",
+    "/home/pwt/Paper1/work_dirs/instance_semantic_queue/instance_semantic_640_bs36.py",
+    "--mode",
+    "preflight",
+    "--report",
+    "/home/pwt/Paper1/work_dirs/instance_semantic_validation/queue_preflight.json"
+  ],
+  "capacity_command": [
+    "/home/pwt/miniconda3/envs/rtmdet/bin/python",
+    "-u",
+    "/home/pwt/Paper1/scripts/candidate_capacity.py",
+    "--method",
+    "instance_semantic",
+    "--config",
+    "/home/pwt/Paper1/work_dirs/instance_semantic_queue/instance_semantic_640_bs36.py",
+    "--mode",
+    "capacity",
+    "--report",
+    "/home/pwt/Paper1/work_dirs/instance_semantic_validation/capacity_gpu1_bs36.json",
+    "--allocator-fraction",
+    ".88"
+  ],
+  "capacity_expected": {
+    "method": "instance_semantic",
+    "microbatch": 36,
+    "accumulation": 1,
+    "optimizer_updates": 3,
+    "gt_per_image": 1200,
+    "allocator_fraction": 0.88,
+    "formal_batch_capacity_tested": true,
+    "config_sha256": "01613ab30758e59195661320cec8e070d33cf9c5985337f522dfbec3fcc27f51"
+  }
+}

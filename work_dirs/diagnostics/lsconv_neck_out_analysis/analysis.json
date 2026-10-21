@@ -1,0 +1,322 @@
+{
+  "metric_unit": "fraction; deltas are percentage points",
+  "weight_type": "EMA",
+  "epoch": 300,
+  "methods": {
+    "baseline": {
+      "parameters": 4878708,
+      "counted_gmac": 7.98770304,
+      "final": {
+        "pascal_voc/mAP": 0.7565006017684937,
+        "coco/bbox_mAP": 0.564,
+        "coco/bbox_mAP_50": 0.77,
+        "coco/bbox_mAP_75": 0.619,
+        "coco/bbox_mAP_s": 0.075,
+        "coco/bbox_mAP_m": 0.349,
+        "coco/bbox_mAP_l": 0.698
+      },
+      "best_voc_epoch": 300,
+      "scalar_sources": [
+        "/home/pwt/Paper1/work_dirs/rtmdet_tiny_dior_640_gpu1_bs36/20261011_193326/vis_data/scalars.json"
+      ],
+      "late_250_300_mean": {
+        "pascal_voc/mAP": 0.7532800038655599,
+        "coco/bbox_mAP": 0.5586666666666668
+      }
+    },
+    "backbone_3": {
+      "parameters": 4517130,
+      "counted_gmac": 7.6656,
+      "final": {
+        "pascal_voc/mAP": 0.7557245492935181,
+        "coco/bbox_mAP": 0.559,
+        "coco/bbox_mAP_50": 0.769,
+        "coco/bbox_mAP_75": 0.614,
+        "coco/bbox_mAP_s": 0.078,
+        "coco/bbox_mAP_m": 0.339,
+        "coco/bbox_mAP_l": 0.691
+      },
+      "best_voc_epoch": 300,
+      "scalar_sources": [
+        "/home/pwt/Paper1/work_dirs/lsconv_rtmdet_tiny_dior_640_gpu1_bs36/20261014_140618/vis_data/scalars.json"
+      ],
+      "late_250_300_mean": {
+        "pascal_voc/mAP": 0.750144491593043,
+        "coco/bbox_mAP": 0.554
+      }
+    },
+    "head": {
+      "parameters": 4460562,
+      "counted_gmac": 7.14873984,
+      "final": {
+        "pascal_voc/mAP": 0.7526973485946655,
+        "coco/bbox_mAP": 0.547,
+        "coco/bbox_mAP_50": 0.765,
+        "coco/bbox_mAP_75": 0.603,
+        "coco/bbox_mAP_s": 0.075,
+        "coco/bbox_mAP_m": 0.331,
+        "coco/bbox_mAP_l": 0.677
+      },
+      "best_voc_epoch": 300,
+      "scalar_sources": [
+        "/home/pwt/Paper1/work_dirs/lsconv_head_rtmdet_tiny_dior_640_gpu1_bs36/20261018_135606/vis_data/scalars.json"
+      ],
+      "late_250_300_mean": {
+        "pascal_voc/mAP": 0.7470015088717142,
+        "coco/bbox_mAP": 0.5378333333333334
+      }
+    },
+    "neck_output": {
+      "parameters": 4277142,
+      "counted_gmac": 7.10815104,
+      "final": {
+        "pascal_voc/mAP": 0.7511636018753052,
+        "coco/bbox_mAP": 0.556,
+        "coco/bbox_mAP_50": 0.764,
+        "coco/bbox_mAP_75": 0.613,
+        "coco/bbox_mAP_s": 0.08,
+        "coco/bbox_mAP_m": 0.336,
+        "coco/bbox_mAP_l": 0.687
+      },
+      "best_voc_epoch": 300,
+      "scalar_sources": [
+        "/home/pwt/Paper1/work_dirs/lsconv_neck_out_rtmdet_tiny_dior_640_gpu1_bs36/20261019_114113/vis_data/scalars.json"
+      ],
+      "late_250_300_mean": {
+        "pascal_voc/mAP": 0.7449671924114227,
+        "coco/bbox_mAP": 0.5505000000000001
+      }
+    },
+    "expanded_20": {
+      "parameters": 3855645,
+      "counted_gmac": 5.17981824,
+      "final": {
+        "pascal_voc/mAP": 0.7348952293395996,
+        "coco/bbox_mAP": 0.533,
+        "coco/bbox_mAP_50": 0.746,
+        "coco/bbox_mAP_75": 0.588,
+        "coco/bbox_mAP_s": 0.063,
+        "coco/bbox_mAP_m": 0.323,
+        "coco/bbox_mAP_l": 0.662
+      },
+      "best_voc_epoch": 300,
+      "scalar_sources": [
+        "/home/pwt/Paper1/work_dirs/lsconv_20_rtmdet_tiny_dior_640_gpu1_bs36/20261017_005249/vis_data/scalars.json",
+        "/home/pwt/Paper1/work_dirs/lsconv_20_rtmdet_tiny_dior_640_gpu1_bs36/20261017_100231/vis_data/scalars.json"
+      ],
+      "late_250_300_mean": {
+        "pascal_voc/mAP": 0.7245235244433085,
+        "coco/bbox_mAP": 0.5228333333333333
+      }
+    }
+  },
+  "neck_output_vs_baseline": {
+    "metric_deltas_points": {
+      "pascal_voc/mAP": -0.5336999893188477,
+      "coco/bbox_mAP": -0.7999999999999896,
+      "coco/bbox_mAP_50": -0.6000000000000005,
+      "coco/bbox_mAP_75": -0.6000000000000005,
+      "coco/bbox_mAP_s": 0.5000000000000004,
+      "coco/bbox_mAP_m": -1.2999999999999956,
+      "coco/bbox_mAP_l": -1.0999999999999899
+    },
+    "parameter_reduction_percent": 12.330436664789124,
+    "counted_mac_reduction_percent": 11.011325729004573
+  },
+  "neck_output_vs_backbone_3": {
+    "metric_deltas_points": {
+      "pascal_voc/mAP": -0.45609474182128906,
+      "coco/bbox_mAP": -0.30000000000000027,
+      "coco/bbox_mAP_50": -0.5000000000000004,
+      "coco/bbox_mAP_75": -0.10000000000000009,
+      "coco/bbox_mAP_s": 0.20000000000000018,
+      "coco/bbox_mAP_m": -0.30000000000000027,
+      "coco/bbox_mAP_l": -0.39999999999998925
+    },
+    "parameter_reduction_percent": 5.312842446420629,
+    "counted_mac_reduction_percent": 7.272085159674391
+  },
+  "same_epoch_voc_comparison": {
+    "validation_count": 30,
+    "neck_output_lower_count": 30,
+    "points": [
+      {
+        "epoch": 10,
+        "backbone_3": 0.17024438083171844,
+        "neck_output": 0.13756166398525238
+      },
+      {
+        "epoch": 20,
+        "backbone_3": 0.33802083134651184,
+        "neck_output": 0.31792110204696655
+      },
+      {
+        "epoch": 30,
+        "backbone_3": 0.4331000745296478,
+        "neck_output": 0.43091240525245667
+      },
+      {
+        "epoch": 40,
+        "backbone_3": 0.49317795038223267,
+        "neck_output": 0.487216055393219
+      },
+      {
+        "epoch": 50,
+        "backbone_3": 0.5389387011528015,
+        "neck_output": 0.532534122467041
+      },
+      {
+        "epoch": 60,
+        "backbone_3": 0.5754483938217163,
+        "neck_output": 0.5692579746246338
+      },
+      {
+        "epoch": 70,
+        "backbone_3": 0.6015456318855286,
+        "neck_output": 0.5950515866279602
+      },
+      {
+        "epoch": 80,
+        "backbone_3": 0.6214595437049866,
+        "neck_output": 0.618712306022644
+      },
+      {
+        "epoch": 90,
+        "backbone_3": 0.6431261301040649,
+        "neck_output": 0.6347058415412903
+      },
+      {
+        "epoch": 100,
+        "backbone_3": 0.652925431728363,
+        "neck_output": 0.6453551650047302
+      },
+      {
+        "epoch": 110,
+        "backbone_3": 0.6628528237342834,
+        "neck_output": 0.6555217504501343
+      },
+      {
+        "epoch": 120,
+        "backbone_3": 0.6746180057525635,
+        "neck_output": 0.6639153957366943
+      },
+      {
+        "epoch": 130,
+        "backbone_3": 0.6815526485443115,
+        "neck_output": 0.6726272702217102
+      },
+      {
+        "epoch": 140,
+        "backbone_3": 0.6880977749824524,
+        "neck_output": 0.6819817423820496
+      },
+      {
+        "epoch": 150,
+        "backbone_3": 0.6951192617416382,
+        "neck_output": 0.688875138759613
+      },
+      {
+        "epoch": 160,
+        "backbone_3": 0.7017555236816406,
+        "neck_output": 0.6962727308273315
+      },
+      {
+        "epoch": 170,
+        "backbone_3": 0.7087646126747131,
+        "neck_output": 0.7036329507827759
+      },
+      {
+        "epoch": 180,
+        "backbone_3": 0.7127150297164917,
+        "neck_output": 0.710399866104126
+      },
+      {
+        "epoch": 190,
+        "backbone_3": 0.7204048037528992,
+        "neck_output": 0.7168997526168823
+      },
+      {
+        "epoch": 200,
+        "backbone_3": 0.7254369854927063,
+        "neck_output": 0.7210783362388611
+      },
+      {
+        "epoch": 210,
+        "backbone_3": 0.732262372970581,
+        "neck_output": 0.725375771522522
+      },
+      {
+        "epoch": 220,
+        "backbone_3": 0.7367982864379883,
+        "neck_output": 0.7292868494987488
+      },
+      {
+        "epoch": 230,
+        "backbone_3": 0.7410634756088257,
+        "neck_output": 0.7339081764221191
+      },
+      {
+        "epoch": 240,
+        "backbone_3": 0.7433632612228394,
+        "neck_output": 0.7354139685630798
+      },
+      {
+        "epoch": 250,
+        "backbone_3": 0.7453951835632324,
+        "neck_output": 0.7381300330162048
+      },
+      {
+        "epoch": 260,
+        "backbone_3": 0.7473245859146118,
+        "neck_output": 0.7413484454154968
+      },
+      {
+        "epoch": 270,
+        "backbone_3": 0.7488324642181396,
+        "neck_output": 0.7436596155166626
+      },
+      {
+        "epoch": 280,
+        "backbone_3": 0.7504971027374268,
+        "neck_output": 0.7468608021736145
+      },
+      {
+        "epoch": 290,
+        "backbone_3": 0.7530930638313293,
+        "neck_output": 0.7486406564712524
+      },
+      {
+        "epoch": 300,
+        "backbone_3": 0.7557245492935181,
+        "neck_output": 0.7511636018753052
+      }
+    ]
+  },
+  "checkpoint_audit": {
+    "epoch": 300,
+    "iterations": 48900,
+    "optimizer_step_range": [
+      48878,
+      48878
+    ],
+    "skipped_amp_updates": 22,
+    "model_and_ema_finite": true,
+    "raw_neck_bn_batches": [
+      48900,
+      48900,
+      48900
+    ]
+  },
+  "interpretation": {
+    "confirmed": "Under unchanged 300-epoch protocol, added neck-output replacements reduce parameters/MAC but provide no accuracy gain over the three-site backbone control.",
+    "structural_change": "Dense spatial-channel 3x3 mixing replaced by group-shared, channelwise dynamic spatial aggregation followed by pointwise channel projection; original FPN/PAN internals and head retained.",
+    "not_isolated": [
+      "separability contribution to accuracy gap",
+      "FFN contribution",
+      "individual output-scale contribution",
+      "general LSConv validity",
+      "actual deployment latency"
+    ],
+    "original_block_reference": "https://github.com/THU-MIG/lsnet/blob/cbe737c92b7c43ecf02d08545a07f03f1010177c/detection/model/lsnet.py"
+  }
+}

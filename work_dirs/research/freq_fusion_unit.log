@@ -1,0 +1,10 @@
+test_bypass_is_exact_baseline_and_real_concat_widths (test_freq_fusion.FreqFusionTests) ... ok
+test_carafe_center_border_order_and_gradients (test_freq_fusion.FreqFusionTests) ... ok
+test_init_keeps_baseline_state_and_custom_initialization (test_freq_fusion.FreqFusionTests) ... ok
+test_sampler_identity_one_pixel_translation_and_group_order (test_freq_fusion.FreqFusionTests) ... ok
+test_similarity_dilation_and_normalized_kernels (test_freq_fusion.FreqFusionTests) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 1.237s
+
+OK

@@ -1,0 +1,96 @@
+{
+  "status": "passed",
+  "method": "instance_semantic",
+  "microbatch": 36,
+  "accumulation": 1,
+  "optimizer_updates": 3,
+  "training_microsteps": 3,
+  "input_size": [
+    640,
+    640
+  ],
+  "gt_per_image": 1200,
+  "different_image_ids": [
+    844,
+    5601,
+    4604,
+    5475,
+    5757,
+    1129,
+    3150,
+    1497,
+    819,
+    1679,
+    7,
+    268,
+    4825,
+    4020,
+    2029,
+    3912,
+    448,
+    1805,
+    884,
+    5513,
+    4202,
+    1344,
+    2832,
+    594,
+    346,
+    1505,
+    3861,
+    1842,
+    3351,
+    2990,
+    5139,
+    5195,
+    4721,
+    5731,
+    2332,
+    4431
+  ],
+  "repeated_annotations": true,
+  "synthetic_multiscale_boxes": true,
+  "allocator_fraction": 0.88,
+  "formal_batch_capacity_tested": true,
+  "loss_scale_init": 32,
+  "warmup_enabled": false,
+  "amp_skipped_updates": 0,
+  "saved_checkpoints": false,
+  "watched_parameter_tensors": 2,
+  "losses": [
+    {
+      "loss": 2.5578253269195557,
+      "loss_cls": 0.2788504362106323,
+      "loss_bbox": 1.9831329584121704,
+      "loss_instance_semantic": 0.2958420217037201
+    },
+    {
+      "loss": 2.3609135150909424,
+      "loss_cls": 0.2518981695175171,
+      "loss_bbox": 1.836318850517273,
+      "loss_instance_semantic": 0.2726964056491852
+    },
+    {
+      "loss": 2.2431063652038574,
+      "loss_cls": 0.33954596519470215,
+      "loss_bbox": 1.6409149169921875,
+      "loss_instance_semantic": 0.2626454830169678
+    }
+  ],
+  "gradient_max": {
+    "bbox_head.instance_semantic.classifier.bias": 2.688070058822632,
+    "bbox_head.instance_semantic.classifier.weight": 2.5118308067321777
+  },
+  "parameter_updates_max": {
+    "bbox_head.instance_semantic.classifier.weight": 0.0016912668943405151,
+    "bbox_head.instance_semantic.classifier.bias": 0.0016883353237062693
+  },
+  "cuda_device": "NVIDIA GeForce RTX 4090",
+  "cuda_total_gib": 47.37115478515625,
+  "initial_free_gib": 46.9852294921875,
+  "peak_allocated_gib": 35.15890121459961,
+  "peak_reserved_gib": 39.6640625,
+  "elapsed_seconds": 25.554116071987664,
+  "config": "/home/pwt/Paper1/work_dirs/instance_semantic_queue/instance_semantic_640_bs36.py",
+  "config_sha256": "01613ab30758e59195661320cec8e070d33cf9c5985337f522dfbec3fcc27f51"
+}

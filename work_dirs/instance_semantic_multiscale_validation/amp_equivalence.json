@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "method": "instance_semantic_multiscale",
+  "amp": true,
+  "actual_train_images": [
+    844,
+    5601
+  ],
+  "gradient_max_error": 0.0,
+  "separate_and_summed_losses_match": true,
+  "optimizer_steps": 1,
+  "scaler_updates": 1,
+  "mmengine_iterations": 1,
+  "main_only_bn_updates": true
+}

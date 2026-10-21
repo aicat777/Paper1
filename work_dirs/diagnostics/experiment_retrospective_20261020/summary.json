@@ -1,0 +1,422 @@
+{
+  "scope": "Retrospective of existing completed runs and existing diagnostics; no new training",
+  "completed_run_count": 21,
+  "runs": [
+    {
+      "directory": "efs_adapt_rtmdet_tiny_dior_640_gpu1_bs9x4",
+      "epoch": 300,
+      "best_voc_epoch": 300,
+      "metrics_percent": {
+        "pascal_voc/mAP": 75.62472224235535,
+        "coco/bbox_mAP": 56.39999999999999,
+        "coco/bbox_mAP_75": 61.9,
+        "coco/bbox_mAP_s": 9.700000000000001,
+        "coco/bbox_mAP_m": 34.599999999999994,
+        "coco/bbox_mAP_l": 68.89999999999999
+      },
+      "voc_gain_280_to_300_pp": 0.48536062240600586
+    },
+    {
+      "directory": "efs_rtmdet_tiny_dior_640_gpu1_bs9x4",
+      "epoch": 300,
+      "best_voc_epoch": 300,
+      "metrics_percent": {
+        "pascal_voc/mAP": 75.54566264152527,
+        "coco/bbox_mAP": 56.3,
+        "coco/bbox_mAP_75": 62.2,
+        "coco/bbox_mAP_s": 9.1,
+        "coco/bbox_mAP_m": 34.5,
+        "coco/bbox_mAP_l": 68.5
+      },
+      "voc_gain_280_to_300_pp": 0.401073694229126
+    },
+    {
+      "directory": "fdw_rtmdet_tiny_dior_640_gpu1_bs36",
+      "epoch": 300,
+      "best_voc_epoch": 300,
+      "metrics_percent": {
+        "pascal_voc/mAP": 75.43809413909912,
+        "coco/bbox_mAP": 56.2,
+        "coco/bbox_mAP_75": 61.5,
+        "coco/bbox_mAP_s": 7.6,
+        "coco/bbox_mAP_m": 34.2,
+        "coco/bbox_mAP_l": 69.5
+      },
+      "voc_gain_280_to_300_pp": 0.3518223762512207
+    },
+    {
+      "directory": "freq_fusion_residual_rtmdet_tiny_dior_640_gpu1_bs36",
+      "epoch": 300,
+      "best_voc_epoch": 300,
+      "metrics_percent": {
+        "pascal_voc/mAP": 76.29221081733704,
+        "coco/bbox_mAP": 56.89999999999999,
+        "coco/bbox_mAP_75": 62.1,
+        "coco/bbox_mAP_s": 7.1,
+        "coco/bbox_mAP_m": 34.599999999999994,
+        "coco/bbox_mAP_l": 70.19999999999999
+      },
+      "voc_gain_280_to_300_pp": 0.34005045890808105
+    },
+    {
+      "directory": "freq_fusion_rtmdet_tiny_dior_640_gpu1_bs36",
+      "epoch": 300,
+      "best_voc_epoch": 300,
+      "metrics_percent": {
+        "pascal_voc/mAP": 76.21890306472778,
+        "coco/bbox_mAP": 57.099999999999994,
+        "coco/bbox_mAP_75": 62.2,
+        "coco/bbox_mAP_s": 7.6,
+        "coco/bbox_mAP_m": 35.0,
+        "coco/bbox_mAP_l": 70.3
+      },
+      "voc_gain_280_to_300_pp": 0.35288333892822266
+    },
+    {
+      "directory": "instance_semantic_multiscale_rtmdet_tiny_dior_640_gpu1_bs36",
+      "epoch": 300,
+      "best_voc_epoch": 300,
+      "metrics_percent": {
+        "pascal_voc/mAP": 75.8583664894104,
+        "coco/bbox_mAP": 56.3,
+        "coco/bbox_mAP_75": 61.4,
+        "coco/bbox_mAP_s": 7.199999999999999,
+        "coco/bbox_mAP_m": 34.4,
+        "coco/bbox_mAP_l": 69.39999999999999
+      },
+      "voc_gain_280_to_300_pp": 0.3361940383911133
+    },
+    {
+      "directory": "instance_semantic_rank_rtmdet_tiny_dior_640_gpu1_bs36",
+      "epoch": 300,
+      "best_voc_epoch": 300,
+      "metrics_percent": {
+        "pascal_voc/mAP": 75.56490898132324,
+        "coco/bbox_mAP": 55.7,
+        "coco/bbox_mAP_75": 60.4,
+        "coco/bbox_mAP_s": 8.9,
+        "coco/bbox_mAP_m": 35.0,
+        "coco/bbox_mAP_l": 68.7
+      },
+      "voc_gain_280_to_300_pp": 0.436478853225708
+    },
+    {
+      "directory": "instance_semantic_rtmdet_tiny_dior_640_gpu1_bs36",
+      "epoch": 300,
+      "best_voc_epoch": 300,
+      "metrics_percent": {
+        "pascal_voc/mAP": 76.30515694618225,
+        "coco/bbox_mAP": 56.89999999999999,
+        "coco/bbox_mAP_75": 62.1,
+        "coco/bbox_mAP_s": 7.5,
+        "coco/bbox_mAP_m": 34.5,
+        "coco/bbox_mAP_l": 70.3
+      },
+      "voc_gain_280_to_300_pp": 0.3708064556121826
+    },
+    {
+      "directory": "lsconv_20_rtmdet_tiny_dior_640_gpu1_bs36",
+      "epoch": 300,
+      "best_voc_epoch": 300,
+      "metrics_percent": {
+        "pascal_voc/mAP": 73.48952293395996,
+        "coco/bbox_mAP": 53.300000000000004,
+        "coco/bbox_mAP_75": 58.8,
+        "coco/bbox_mAP_s": 6.3,
+        "coco/bbox_mAP_m": 32.300000000000004,
+        "coco/bbox_mAP_l": 66.2
+      },
+      "voc_gain_280_to_300_pp": 0.8604764938354492
+    },
+    {
+      "directory": "lsconv_full_rtmdet_tiny_dior_640_gpu1_bs12x3",
+      "epoch": 300,
+      "best_voc_epoch": 300,
+      "metrics_percent": {
+        "pascal_voc/mAP": 71.22114300727844,
+        "coco/bbox_mAP": 51.300000000000004,
+        "coco/bbox_mAP_75": 56.699999999999996,
+        "coco/bbox_mAP_s": 6.2,
+        "coco/bbox_mAP_m": 31.4,
+        "coco/bbox_mAP_l": 62.3
+      },
+      "voc_gain_280_to_300_pp": 1.9323527812957764
+    },
+    {
+      "directory": "lsconv_head_rtmdet_tiny_dior_640_gpu1_bs36",
+      "epoch": 300,
+      "best_voc_epoch": 300,
+      "metrics_percent": {
+        "pascal_voc/mAP": 75.26973485946655,
+        "coco/bbox_mAP": 54.7,
+        "coco/bbox_mAP_75": 60.3,
+        "coco/bbox_mAP_s": 7.5,
+        "coco/bbox_mAP_m": 33.1,
+        "coco/bbox_mAP_l": 67.7
+      },
+      "voc_gain_280_to_300_pp": 0.45725107192993164
+    },
+    {
+      "directory": "lsconv_neck_out_rtmdet_tiny_dior_640_gpu1_bs36",
+      "epoch": 300,
+      "best_voc_epoch": 300,
+      "metrics_percent": {
+        "pascal_voc/mAP": 75.11636018753052,
+        "coco/bbox_mAP": 55.60000000000001,
+        "coco/bbox_mAP_75": 61.3,
+        "coco/bbox_mAP_s": 8.0,
+        "coco/bbox_mAP_m": 33.6,
+        "coco/bbox_mAP_l": 68.7
+      },
+      "voc_gain_280_to_300_pp": 0.4302799701690674
+    },
+    {
+      "directory": "lsconv_rtmdet_tiny_dior_640_gpu1_bs36",
+      "epoch": 300,
+      "best_voc_epoch": 300,
+      "metrics_percent": {
+        "pascal_voc/mAP": 75.5724549293518,
+        "coco/bbox_mAP": 55.900000000000006,
+        "coco/bbox_mAP_75": 61.4,
+        "coco/bbox_mAP_s": 7.8,
+        "coco/bbox_mAP_m": 33.900000000000006,
+        "coco/bbox_mAP_l": 69.1
+      },
+      "voc_gain_280_to_300_pp": 0.5227446556091309
+    },
+    {
+      "directory": "magnitude_detail_context_only_640_gpu1_bs36",
+      "epoch": 300,
+      "best_voc_epoch": 300,
+      "metrics_percent": {
+        "pascal_voc/mAP": 75.73539614677429,
+        "coco/bbox_mAP": 56.39999999999999,
+        "coco/bbox_mAP_75": 61.7,
+        "coco/bbox_mAP_s": 7.199999999999999,
+        "coco/bbox_mAP_m": 34.5,
+        "coco/bbox_mAP_l": 69.69999999999999
+      },
+      "voc_gain_280_to_300_pp": 0.3211796283721924
+    },
+    {
+      "directory": "magnitude_detail_detail_only_640_gpu1_bs36",
+      "epoch": 300,
+      "best_voc_epoch": 300,
+      "metrics_percent": {
+        "pascal_voc/mAP": 76.03407502174377,
+        "coco/bbox_mAP": 56.2,
+        "coco/bbox_mAP_75": 61.5,
+        "coco/bbox_mAP_s": 7.199999999999999,
+        "coco/bbox_mAP_m": 33.300000000000004,
+        "coco/bbox_mAP_l": 69.5
+      },
+      "voc_gain_280_to_300_pp": 0.4970431327819824
+    },
+    {
+      "directory": "magnitude_detail_full_640_gpu1_bs36",
+      "epoch": 300,
+      "best_voc_epoch": 300,
+      "metrics_percent": {
+        "pascal_voc/mAP": 75.94684958457947,
+        "coco/bbox_mAP": 56.699999999999996,
+        "coco/bbox_mAP_75": 61.8,
+        "coco/bbox_mAP_s": 7.6,
+        "coco/bbox_mAP_m": 35.199999999999996,
+        "coco/bbox_mAP_l": 69.89999999999999
+      },
+      "voc_gain_280_to_300_pp": 0.43438076972961426
+    },
+    {
+      "directory": "rtmdet_tiny_dior_640_gpu1_bs36",
+      "epoch": 300,
+      "best_voc_epoch": 300,
+      "metrics_percent": {
+        "pascal_voc/mAP": 75.65006017684937,
+        "coco/bbox_mAP": 56.39999999999999,
+        "coco/bbox_mAP_75": 61.9,
+        "coco/bbox_mAP_s": 7.5,
+        "coco/bbox_mAP_m": 34.9,
+        "coco/bbox_mAP_l": 69.8
+      },
+      "voc_gain_280_to_300_pp": 0.2802908420562744
+    },
+    {
+      "directory": "rtmdet_tiny_dior_800_300e_gpu0",
+      "epoch": 300,
+      "best_voc_epoch": 300,
+      "metrics_percent": {
+        "pascal_voc/mAP": 76.81920528411865,
+        "coco/bbox_mAP": 57.199999999999996,
+        "coco/bbox_mAP_75": 62.5,
+        "coco/bbox_mAP_s": 8.6,
+        "coco/bbox_mAP_m": 35.8,
+        "coco/bbox_mAP_l": 69.69999999999999
+      },
+      "voc_gain_280_to_300_pp": 0.9225904941558838
+    },
+    {
+      "directory": "scdown_rtmdet_tiny_dior_640_gpu1_bs36",
+      "epoch": 300,
+      "best_voc_epoch": 300,
+      "metrics_percent": {
+        "pascal_voc/mAP": 75.86682438850403,
+        "coco/bbox_mAP": 56.49999999999999,
+        "coco/bbox_mAP_75": 61.9,
+        "coco/bbox_mAP_s": 7.6,
+        "coco/bbox_mAP_m": 35.6,
+        "coco/bbox_mAP_l": 69.69999999999999
+      },
+      "voc_gain_280_to_300_pp": 0.39901137351989746
+    },
+    {
+      "directory": "state_guided_context_only_640_gpu1_bs36",
+      "epoch": 300,
+      "best_voc_epoch": 300,
+      "metrics_percent": {
+        "pascal_voc/mAP": 76.07819437980652,
+        "coco/bbox_mAP": 56.99999999999999,
+        "coco/bbox_mAP_75": 62.4,
+        "coco/bbox_mAP_s": 7.8,
+        "coco/bbox_mAP_m": 34.300000000000004,
+        "coco/bbox_mAP_l": 70.39999999999999
+      },
+      "voc_gain_280_to_300_pp": 0.5386173725128174
+    },
+    {
+      "directory": "state_guided_upsample_only_640_gpu1_bs36",
+      "epoch": 300,
+      "best_voc_epoch": 300,
+      "metrics_percent": {
+        "pascal_voc/mAP": 76.06843709945679,
+        "coco/bbox_mAP": 56.699999999999996,
+        "coco/bbox_mAP_75": 61.9,
+        "coco/bbox_mAP_s": 7.1,
+        "coco/bbox_mAP_m": 36.3,
+        "coco/bbox_mAP_l": 70.0
+      },
+      "voc_gain_280_to_300_pp": 0.3627479076385498
+    }
+  ],
+  "data": {
+    "train": {
+      "images": 5862,
+      "objects": 32591,
+      "class_counts": {
+        "golffield": 237,
+        "expressway-toll-station": 292,
+        "vehicle": 6689,
+        "trainstation": 246,
+        "chimney": 342,
+        "storagetank": 1344,
+        "ship": 12993,
+        "harbor": 1144,
+        "airplane": 1238,
+        "groundtrackfield": 565,
+        "tenniscourt": 2240,
+        "dam": 252,
+        "basketballcourt": 561,
+        "expressway-service-area": 537,
+        "stadium": 294,
+        "airport": 328,
+        "baseballfield": 1244,
+        "bridge": 508,
+        "windmill": 961,
+        "overpass": 576
+      },
+      "ship_vehicle_fraction": 0.6039090546469884,
+      "small_objects": 13752,
+      "small_class_counts": {
+        "vehicle": 4387,
+        "ship": 8445,
+        "harbor": 56,
+        "storagetank": 407,
+        "expressway-toll-station": 16,
+        "bridge": 97,
+        "airplane": 69,
+        "windmill": 168,
+        "groundtrackfield": 26,
+        "tenniscourt": 24,
+        "overpass": 30,
+        "baseballfield": 21,
+        "dam": 4,
+        "basketballcourt": 2
+      },
+      "small_ship_vehicle_fraction": 0.9331006399069226,
+      "annotation_sha256": "f03508f4a97913ca9391ab59d7b1e2674a78db27e7e32738d8a5b6d17ed35271"
+    },
+    "val": {
+      "images": 5863,
+      "objects": 35434,
+      "class_counts": {
+        "windmill": 1404,
+        "bridge": 855,
+        "basketballcourt": 515,
+        "vehicle": 7024,
+        "overpass": 760,
+        "stadium": 301,
+        "tenniscourt": 2666,
+        "groundtrackfield": 593,
+        "trainstation": 256,
+        "expressway-toll-station": 318,
+        "airport": 333,
+        "harbor": 1225,
+        "ship": 14297,
+        "storagetank": 1709,
+        "expressway-service-area": 543,
+        "golffield": 274,
+        "baseballfield": 1140,
+        "dam": 260,
+        "airplane": 654,
+        "chimney": 307
+      },
+      "ship_vehicle_fraction": 0.60171022182085,
+      "small_objects": 15339,
+      "small_class_counts": {
+        "vehicle": 4465,
+        "tenniscourt": 123,
+        "bridge": 272,
+        "ship": 9011,
+        "groundtrackfield": 53,
+        "windmill": 588,
+        "storagetank": 374,
+        "overpass": 124,
+        "expressway-toll-station": 104,
+        "baseballfield": 78,
+        "harbor": 62,
+        "trainstation": 1,
+        "chimney": 3,
+        "basketballcourt": 19,
+        "airplane": 47,
+        "dam": 3,
+        "expressway-service-area": 7,
+        "stadium": 5
+      },
+      "small_ship_vehicle_fraction": 0.8785448855857618,
+      "annotation_sha256": "9f79ea882e5bd99bcce95e142bc95217c8f6bd5257dd751744ba25fa4318c793"
+    }
+  },
+  "all_completed_runs_have_best_voc_at_final_epoch": true,
+  "protocol_limits": [
+    "800 baseline uses B12/lr0.0001875; 640 reference uses B36/lr0.0005625.",
+    "EFS uses B9 with accumulation4; LSConv23 uses B12 with accumulation3. These differ from B36 BN and loss normalization.",
+    "Most methods have only one completed seed42 run; no run-to-run variance estimate.",
+    "Best epoch at300 is not proof that extending training would recover architecture differences."
+  ],
+  "decision_review": [
+    "Engineering fidelity and nonzero gradients establish implementation, not AP benefit.",
+    "A confirmed local design defect does not establish the dominant source of whole-run AP loss.",
+    "Restoring paper structure does not establish usefulness in this scratch-trained tiny detector.",
+    "Instance-balanced positive losses retain per-instance class frequencies and do not cover unmatched GTs.",
+    "Repeated variant repair has consumed attention which could have gone to existing positive candidates.",
+    "Parameter reduction, MAC reduction, training throughput and deployment latency are different objectives."
+  ],
+  "evidence": {
+    "fdw_fixed_routing_fullval": "/home/pwt/Paper1/work_dirs/diagnostics/fdw_routing_eval.json",
+    "efs_geometry_and_distribution": "/home/pwt/Paper1/work_dirs/diagnostics/efs_final_analysis.json",
+    "rank_final_local_gradients_and_512_image_probe": "/home/pwt/Paper1/work_dirs/diagnostics/instance_semantic_rank_analysis/final/analysis.json",
+    "crop_semantics_transfer": "/home/pwt/Paper1/work_dirs/diagnostics/instance_semantic_multiscale_analysis/analysis.json",
+    "scdown_rejected_compensation_hypothesis": "/home/pwt/Paper1/work_dirs/diagnostics/scdown_structure_research/analysis.json"
+  },
+  "principal_missing_measurement": "Paired, class-aware detection-error decomposition of existing baseline and promising models, including background/duplicates and score ordering; existing GT coverage and auxiliary classification probes do not identify these contributions.",
+  "next_decision": "Choose the next accuracy change based on a reproducible error category reduced by existing positive candidates; retain SCDown as a separate parameter-efficiency result. Instance-balanced QFL remains a hypothesis rather than an automatic next run."
+}

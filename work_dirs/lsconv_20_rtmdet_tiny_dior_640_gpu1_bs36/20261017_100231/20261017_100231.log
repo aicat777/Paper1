@@ -1,0 +1,2850 @@
+2026/10/17 10:02:32 - mmengine - INFO - 
+------------------------------------------------------------
+System environment:
+    sys.platform: linux
+    Python: 3.10.22 | packaged by conda-forge | (main, Oct  6 2026, 23:02:24) [GCC 14.4.0]
+    CUDA available: True
+    MUSA available: False
+    numpy_random_seed: 42
+    GPU 0: NVIDIA GeForce RTX 4090
+    CUDA_HOME: /usr/local/cuda
+    NVCC: Cuda compilation tools, release 13.0, V13.0.88
+    GCC: gcc (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0
+    PyTorch: 2.0.1+cu118
+    PyTorch compiling details: PyTorch built with:
+  - GCC 9.3
+  - C++ Version: 201703
+  - Intel(R) oneAPI Math Kernel Library Version 2022.2-Product Build 20220804 for Intel(R) 64 architecture applications
+  - Intel(R) MKL-DNN v2.7.3 (Git Hash 6dbeffbae1f23cbbeae17adb7b5b13f1f37c080e)
+  - OpenMP 201511 (a.k.a. OpenMP 4.5)
+  - LAPACK is enabled (usually provided by MKL)
+  - NNPACK is enabled
+  - CPU capability usage: AVX2
+  - CUDA Runtime 11.8
+  - NVCC architecture flags: -gencode;arch=compute_37,code=sm_37;-gencode;arch=compute_50,code=sm_50;-gencode;arch=compute_60,code=sm_60;-gencode;arch=compute_70,code=sm_70;-gencode;arch=compute_75,code=sm_75;-gencode;arch=compute_80,code=sm_80;-gencode;arch=compute_86,code=sm_86;-gencode;arch=compute_90,code=sm_90
+  - CuDNN 8.7
+  - Magma 2.6.1
+  - Build settings: BLAS_INFO=mkl, BUILD_TYPE=Release, CUDA_VERSION=11.8, CUDNN_VERSION=8.7.0, CXX_COMPILER=/opt/rh/devtoolset-9/root/usr/bin/c++, CXX_FLAGS= -D_GLIBCXX_USE_CXX11_ABI=0 -fabi-version=11 -Wno-deprecated -fvisibility-inlines-hidden -DUSE_PTHREADPOOL -DNDEBUG -DUSE_KINETO -DLIBKINETO_NOROCTRACER -DUSE_FBGEMM -DUSE_QNNPACK -DUSE_PYTORCH_QNNPACK -DUSE_XNNPACK -DSYMBOLICATE_MOBILE_DEBUG_HANDLE -O2 -fPIC -Wall -Wextra -Werror=return-type -Werror=non-virtual-dtor -Werror=bool-operation -Wnarrowing -Wno-missing-field-initializers -Wno-type-limits -Wno-array-bounds -Wno-unknown-pragmas -Wunused-local-typedefs -Wno-unused-parameter -Wno-unused-function -Wno-unused-result -Wno-strict-overflow -Wno-strict-aliasing -Wno-error=deprecated-declarations -Wno-stringop-overflow -Wno-psabi -Wno-error=pedantic -Wno-error=redundant-decls -Wno-error=old-style-cast -fdiagnostics-color=always -faligned-new -Wno-unused-but-set-variable -Wno-maybe-uninitialized -fno-math-errno -fno-trapping-math -Werror=format -Werror=cast-function-type -Wno-stringop-overflow, LAPACK_INFO=mkl, PERF_WITH_AVX=1, PERF_WITH_AVX2=1, PERF_WITH_AVX512=1, TORCH_DISABLE_GPU_ASSERTS=ON, TORCH_VERSION=2.0.1, USE_CUDA=ON, USE_CUDNN=ON, USE_EXCEPTION_PTR=1, USE_GFLAGS=OFF, USE_GLOG=OFF, USE_MKL=ON, USE_MKLDNN=ON, USE_MPI=OFF, USE_NCCL=1, USE_NNPACK=ON, USE_OPENMP=ON, USE_ROCM=OFF, 
+
+    TorchVision: 0.15.2+cu118
+    OpenCV: 4.10.0
+    MMEngine: 0.10.7
+
+Runtime environment:
+    cudnn_benchmark: True
+    dist_cfg: {'backend': 'nccl'}
+    mp_cfg: {'mp_start_method': 'fork', 'opencv_num_threads': 0}
+    deterministic: False
+    seed: 42
+    Distributed launcher: none
+    Distributed training: False
+    GPU number: 1
+------------------------------------------------------------
+
+2026/10/17 10:02:32 - mmengine - INFO - Config:
+_backend_args = None
+_multiscale_resize_transforms = [
+    dict(
+        transforms=[
+            dict(scale=(
+                640,
+                640,
+            ), type='YOLOv5KeepRatioResize'),
+            dict(
+                allow_scale_up=False,
+                pad_val=dict(img=114),
+                scale=(
+                    640,
+                    640,
+                ),
+                type='LetterResize'),
+        ],
+        type='Compose'),
+    dict(
+        transforms=[
+            dict(scale=(
+                320,
+                320,
+            ), type='YOLOv5KeepRatioResize'),
+            dict(
+                allow_scale_up=False,
+                pad_val=dict(img=114),
+                scale=(
+                    320,
+                    320,
+                ),
+                type='LetterResize'),
+        ],
+        type='Compose'),
+    dict(
+        transforms=[
+            dict(scale=(
+                960,
+                960,
+            ), type='YOLOv5KeepRatioResize'),
+            dict(
+                allow_scale_up=False,
+                pad_val=dict(img=114),
+                scale=(
+                    960,
+                    960,
+                ),
+                type='LetterResize'),
+        ],
+        type='Compose'),
+]
+backend_args = None
+base_lr = 0.0005625000000000001
+batch_shapes_cfg = None
+checkpoint = None
+classes = (
+    'airplane',
+    'airport',
+    'baseballfield',
+    'basketballcourt',
+    'bridge',
+    'chimney',
+    'dam',
+    'expressway-service-area',
+    'expressway-toll-station',
+    'golffield',
+    'groundtrackfield',
+    'harbor',
+    'overpass',
+    'ship',
+    'stadium',
+    'storagetank',
+    'tenniscourt',
+    'trainstation',
+    'vehicle',
+    'windmill',
+)
+custom_hooks = [
+    dict(
+        ema_type='ExpMomentumEMA',
+        momentum=0.0002,
+        priority=49,
+        strict_load=False,
+        type='EMAHook',
+        update_buffers=True),
+    dict(
+        switch_epoch=280,
+        switch_pipeline=[
+            dict(backend_args=None, type='LoadImageFromFile'),
+            dict(type='LoadAnnotations', with_bbox=True),
+            dict(
+                keep_ratio=True,
+                ratio_range=(
+                    0.5,
+                    2.0,
+                ),
+                resize_type='mmdet.Resize',
+                scale=(
+                    640,
+                    640,
+                ),
+                type='mmdet.RandomResize'),
+            dict(crop_size=(
+                640,
+                640,
+            ), type='mmdet.RandomCrop'),
+            dict(type='mmdet.YOLOXHSVRandomAug'),
+            dict(prob=0.5, type='mmdet.RandomFlip'),
+            dict(
+                pad_val=dict(img=(
+                    114,
+                    114,
+                    114,
+                )),
+                size=(
+                    640,
+                    640,
+                ),
+                type='mmdet.Pad'),
+            dict(type='mmdet.PackDetInputs'),
+        ],
+        type='mmdet.PipelineSwitchHook'),
+]
+custom_imports = dict(
+    allow_failed_imports=False, imports=[
+        'custom_models.lsconv_20',
+    ])
+data_root = '/home/pwt/Paper1/datasets/DIOR/'
+dataset_type = 'YOLOv5CocoDataset'
+deepen_factor = 0.167
+default_hooks = dict(
+    checkpoint=dict(
+        interval=1,
+        max_keep_ckpts=2,
+        rule='greater',
+        save_best=[
+            'pascal_voc/mAP',
+            'coco/bbox_mAP',
+        ],
+        save_last=True,
+        type='CheckpointHook'),
+    logger=dict(interval=50, type='LoggerHook'),
+    param_scheduler=dict(type='ParamSchedulerHook'),
+    sampler_seed=dict(type='DistSamplerSeedHook'),
+    timer=dict(type='IterTimerHook'),
+    visualization=dict(type='mmdet.DetVisualizationHook'))
+default_scope = 'mmyolo'
+dsl_topk = 13
+env_cfg = dict(
+    cudnn_benchmark=True,
+    dist_cfg=dict(backend='nccl'),
+    mp_cfg=dict(mp_start_method='fork', opencv_num_threads=0))
+img_scale = (
+    640,
+    640,
+)
+img_scales = [
+    (
+        640,
+        640,
+    ),
+    (
+        320,
+        320,
+    ),
+    (
+        960,
+        960,
+    ),
+]
+launcher = 'none'
+load_from = '/home/pwt/Paper1/work_dirs/lsconv_20_rtmdet_tiny_dior_640_gpu1_bs36/epoch_296.pth'
+log_level = 'INFO'
+log_processor = dict(by_epoch=True, type='LogProcessor', window_size=50)
+loss_bbox_weight = 2.0
+loss_cls_weight = 1.0
+lr_start_factor = 1e-05
+max_epochs = 300
+max_keep_ckpts = 3
+mixup_max_cached_images = 10
+model = dict(
+    backbone=dict(
+        act_cfg=dict(inplace=True, type='SiLU'),
+        arch='P5',
+        channel_attention=True,
+        deepen_factor=0.167,
+        expand_ratio=0.5,
+        init_cfg=None,
+        norm_cfg=dict(type='BN'),
+        type='LSConv20CSPNeXt',
+        widen_factor=0.375),
+    bbox_head=dict(
+        bbox_coder=dict(type='DistancePointBBoxCoder'),
+        head_module=dict(
+            act_cfg=dict(inplace=True, type='SiLU'),
+            feat_channels=256,
+            featmap_strides=[
+                8,
+                16,
+                32,
+            ],
+            in_channels=256,
+            norm_cfg=dict(type='BN'),
+            num_classes=20,
+            pred_kernel_size=1,
+            share_conv=True,
+            stacked_convs=2,
+            type='LSConv20SepBNHeadModule',
+            widen_factor=0.375),
+        loss_bbox=dict(loss_weight=2.0, type='mmdet.GIoULoss'),
+        loss_cls=dict(
+            beta=2.0,
+            loss_weight=1.0,
+            type='mmdet.QualityFocalLoss',
+            use_sigmoid=True),
+        prior_generator=dict(
+            offset=0, strides=[
+                8,
+                16,
+                32,
+            ], type='mmdet.MlvlPointGenerator'),
+        type='RTMDetHead'),
+    data_preprocessor=dict(
+        bgr_to_rgb=False,
+        mean=[
+            103.53,
+            116.28,
+            123.675,
+        ],
+        std=[
+            57.375,
+            57.12,
+            58.395,
+        ],
+        type='YOLOv5DetDataPreprocessor'),
+    neck=dict(
+        act_cfg=dict(inplace=True, type='SiLU'),
+        deepen_factor=0.167,
+        expand_ratio=0.5,
+        in_channels=[
+            256,
+            512,
+            1024,
+        ],
+        norm_cfg=dict(type='BN'),
+        num_csp_blocks=3,
+        out_channels=256,
+        type='LSConv20PAFPN',
+        widen_factor=0.375),
+    test_cfg=dict(
+        max_per_img=300,
+        multi_label=True,
+        nms=dict(iou_threshold=0.65, type='nms'),
+        nms_pre=30000,
+        score_thr=0.001),
+    train_cfg=dict(
+        allowed_border=-1,
+        assigner=dict(
+            iou_calculator=dict(type='mmdet.BboxOverlaps2D'),
+            num_classes=20,
+            topk=13,
+            type='BatchDynamicSoftLabelAssigner'),
+        debug=False,
+        pos_weight=-1),
+    type='YOLODetector')
+model_test_cfg = dict(
+    max_per_img=300,
+    multi_label=True,
+    nms=dict(iou_threshold=0.65, type='nms'),
+    nms_pre=30000,
+    score_thr=0.001)
+mosaic_max_cached_images = 20
+norm_cfg = dict(type='BN')
+num_classes = 20
+num_epochs_stage2 = 20
+optim_wrapper = dict(
+    loss_scale='dynamic',
+    optimizer=dict(lr=0.0005625000000000001, type='AdamW', weight_decay=0.05),
+    paramwise_cfg=dict(
+        bias_decay_mult=0, bypass_duplicate=True, norm_decay_mult=0),
+    type='AmpOptimWrapper')
+param_scheduler = [
+    dict(
+        begin=0, by_epoch=False, end=1000, start_factor=1e-05,
+        type='LinearLR'),
+    dict(
+        T_max=150,
+        begin=150,
+        by_epoch=True,
+        convert_to_iter_based=True,
+        end=300,
+        eta_min=2.8125000000000006e-05,
+        type='CosineAnnealingLR'),
+]
+persistent_workers = True
+qfl_beta = 2.0
+random_resize_ratio_range = (
+    0.5,
+    2.0,
+)
+randomness = dict(deterministic=False, seed=42)
+resume = True
+root = '/home/pwt/Paper1'
+save_checkpoint_intervals = 10
+strides = [
+    8,
+    16,
+    32,
+]
+test_cfg = dict(type='TestLoop')
+test_dataloader = dict(
+    batch_size=8,
+    dataset=dict(
+        ann_file='coco_annotations/instances_test.json',
+        batch_shapes_cfg=None,
+        data_prefix=dict(img=''),
+        data_root='/home/pwt/Paper1/datasets/DIOR/',
+        metainfo=dict(
+            classes=(
+                'airplane',
+                'airport',
+                'baseballfield',
+                'basketballcourt',
+                'bridge',
+                'chimney',
+                'dam',
+                'expressway-service-area',
+                'expressway-toll-station',
+                'golffield',
+                'groundtrackfield',
+                'harbor',
+                'overpass',
+                'ship',
+                'stadium',
+                'storagetank',
+                'tenniscourt',
+                'trainstation',
+                'vehicle',
+                'windmill',
+            )),
+        pipeline=[
+            dict(backend_args=None, type='LoadImageFromFile'),
+            dict(scale=(
+                640,
+                640,
+            ), type='YOLOv5KeepRatioResize'),
+            dict(
+                allow_scale_up=False,
+                pad_val=dict(img=114),
+                scale=(
+                    640,
+                    640,
+                ),
+                type='LetterResize'),
+            dict(type='mmdet.LoadAnnotations', with_bbox=True),
+            dict(
+                meta_keys=(
+                    'img_id',
+                    'img_path',
+                    'ori_shape',
+                    'img_shape',
+                    'scale_factor',
+                    'pad_param',
+                ),
+                type='mmdet.PackDetInputs'),
+        ],
+        test_mode=True,
+        type='YOLOv5CocoDataset'),
+    drop_last=False,
+    num_workers=4,
+    persistent_workers=True,
+    pin_memory=True,
+    sampler=dict(shuffle=False, type='DefaultSampler'))
+test_evaluator = [
+    dict(
+        eval_mode='11points',
+        iou_thrs=0.5,
+        metric='mAP',
+        prefix='pascal_voc',
+        type='mmdet.VOCMetric'),
+    dict(
+        ann_file=
+        '/home/pwt/Paper1/datasets/DIOR/coco_annotations/instances_test.json',
+        classwise=True,
+        metric='bbox',
+        proposal_nums=(
+            1,
+            10,
+            100,
+        ),
+        type='mmdet.CocoMetric'),
+]
+test_pipeline = [
+    dict(backend_args=None, type='LoadImageFromFile'),
+    dict(scale=(
+        640,
+        640,
+    ), type='YOLOv5KeepRatioResize'),
+    dict(
+        allow_scale_up=False,
+        pad_val=dict(img=114),
+        scale=(
+            640,
+            640,
+        ),
+        type='LetterResize'),
+    dict(type='mmdet.LoadAnnotations', with_bbox=True),
+    dict(
+        meta_keys=(
+            'img_id',
+            'img_path',
+            'ori_shape',
+            'img_shape',
+            'scale_factor',
+            'pad_param',
+        ),
+        type='mmdet.PackDetInputs'),
+]
+train_ann_file = 'annotations/instances_train2017.json'
+train_batch_size_per_gpu = 36
+train_cfg = dict(
+    dynamic_intervals=[],
+    max_epochs=300,
+    type='EpochBasedTrainLoop',
+    val_interval=10)
+train_data_prefix = 'train2017/'
+train_dataloader = dict(
+    batch_size=36,
+    collate_fn=dict(type='yolov5_collate'),
+    dataset=dict(
+        ann_file='coco_annotations/instances_train.json',
+        data_prefix=dict(img=''),
+        data_root='/home/pwt/Paper1/datasets/DIOR/',
+        filter_cfg=dict(filter_empty_gt=True, min_size=32),
+        metainfo=dict(
+            classes=(
+                'airplane',
+                'airport',
+                'baseballfield',
+                'basketballcourt',
+                'bridge',
+                'chimney',
+                'dam',
+                'expressway-service-area',
+                'expressway-toll-station',
+                'golffield',
+                'groundtrackfield',
+                'harbor',
+                'overpass',
+                'ship',
+                'stadium',
+                'storagetank',
+                'tenniscourt',
+                'trainstation',
+                'vehicle',
+                'windmill',
+            )),
+        pipeline=[
+            dict(backend_args=None, type='LoadImageFromFile'),
+            dict(type='LoadAnnotations', with_bbox=True),
+            dict(
+                img_scale=(
+                    640,
+                    640,
+                ),
+                max_cached_images=20,
+                pad_val=114.0,
+                random_pop=False,
+                type='Mosaic',
+                use_cached=True),
+            dict(
+                keep_ratio=True,
+                ratio_range=(
+                    0.5,
+                    2.0,
+                ),
+                resize_type='mmdet.Resize',
+                scale=(
+                    1280,
+                    1280,
+                ),
+                type='mmdet.RandomResize'),
+            dict(crop_size=(
+                640,
+                640,
+            ), type='mmdet.RandomCrop'),
+            dict(type='mmdet.YOLOXHSVRandomAug'),
+            dict(prob=0.5, type='mmdet.RandomFlip'),
+            dict(
+                pad_val=dict(img=(
+                    114,
+                    114,
+                    114,
+                )),
+                size=(
+                    640,
+                    640,
+                ),
+                type='mmdet.Pad'),
+            dict(
+                max_cached_images=10,
+                prob=0.5,
+                random_pop=False,
+                type='YOLOv5MixUp',
+                use_cached=True),
+            dict(type='mmdet.PackDetInputs'),
+        ],
+        type='YOLOv5CocoDataset'),
+    num_workers=8,
+    persistent_workers=True,
+    pin_memory=True,
+    sampler=dict(shuffle=True, type='DefaultSampler'))
+train_num_workers = 10
+train_pipeline = [
+    dict(backend_args=None, type='LoadImageFromFile'),
+    dict(type='LoadAnnotations', with_bbox=True),
+    dict(
+        img_scale=(
+            640,
+            640,
+        ),
+        max_cached_images=20,
+        pad_val=114.0,
+        random_pop=False,
+        type='Mosaic',
+        use_cached=True),
+    dict(
+        keep_ratio=True,
+        ratio_range=(
+            0.5,
+            2.0,
+        ),
+        resize_type='mmdet.Resize',
+        scale=(
+            1280,
+            1280,
+        ),
+        type='mmdet.RandomResize'),
+    dict(crop_size=(
+        640,
+        640,
+    ), type='mmdet.RandomCrop'),
+    dict(type='mmdet.YOLOXHSVRandomAug'),
+    dict(prob=0.5, type='mmdet.RandomFlip'),
+    dict(
+        pad_val=dict(img=(
+            114,
+            114,
+            114,
+        )),
+        size=(
+            640,
+            640,
+        ),
+        type='mmdet.Pad'),
+    dict(
+        max_cached_images=10,
+        prob=0.5,
+        random_pop=False,
+        type='YOLOv5MixUp',
+        use_cached=True),
+    dict(type='mmdet.PackDetInputs'),
+]
+train_pipeline_stage2 = [
+    dict(backend_args=None, type='LoadImageFromFile'),
+    dict(type='LoadAnnotations', with_bbox=True),
+    dict(
+        keep_ratio=True,
+        ratio_range=(
+            0.5,
+            2.0,
+        ),
+        resize_type='mmdet.Resize',
+        scale=(
+            640,
+            640,
+        ),
+        type='mmdet.RandomResize'),
+    dict(crop_size=(
+        640,
+        640,
+    ), type='mmdet.RandomCrop'),
+    dict(type='mmdet.YOLOXHSVRandomAug'),
+    dict(prob=0.5, type='mmdet.RandomFlip'),
+    dict(
+        pad_val=dict(img=(
+            114,
+            114,
+            114,
+        )),
+        size=(
+            640,
+            640,
+        ),
+        type='mmdet.Pad'),
+    dict(type='mmdet.PackDetInputs'),
+]
+tta_model = dict(
+    tta_cfg=dict(max_per_img=300, nms=dict(iou_threshold=0.65, type='nms')),
+    type='mmdet.DetTTAModel')
+tta_pipeline = [
+    dict(backend_args=None, type='LoadImageFromFile'),
+    dict(
+        transforms=[
+            [
+                dict(
+                    transforms=[
+                        dict(scale=(
+                            640,
+                            640,
+                        ), type='YOLOv5KeepRatioResize'),
+                        dict(
+                            allow_scale_up=False,
+                            pad_val=dict(img=114),
+                            scale=(
+                                640,
+                                640,
+                            ),
+                            type='LetterResize'),
+                    ],
+                    type='Compose'),
+                dict(
+                    transforms=[
+                        dict(scale=(
+                            320,
+                            320,
+                        ), type='YOLOv5KeepRatioResize'),
+                        dict(
+                            allow_scale_up=False,
+                            pad_val=dict(img=114),
+                            scale=(
+                                320,
+                                320,
+                            ),
+                            type='LetterResize'),
+                    ],
+                    type='Compose'),
+                dict(
+                    transforms=[
+                        dict(scale=(
+                            960,
+                            960,
+                        ), type='YOLOv5KeepRatioResize'),
+                        dict(
+                            allow_scale_up=False,
+                            pad_val=dict(img=114),
+                            scale=(
+                                960,
+                                960,
+                            ),
+                            type='LetterResize'),
+                    ],
+                    type='Compose'),
+            ],
+            [
+                dict(prob=1.0, type='mmdet.RandomFlip'),
+                dict(prob=0.0, type='mmdet.RandomFlip'),
+            ],
+            [
+                dict(type='mmdet.LoadAnnotations', with_bbox=True),
+            ],
+            [
+                dict(
+                    meta_keys=(
+                        'img_id',
+                        'img_path',
+                        'ori_shape',
+                        'img_shape',
+                        'scale_factor',
+                        'pad_param',
+                        'flip',
+                        'flip_direction',
+                    ),
+                    type='mmdet.PackDetInputs'),
+            ],
+        ],
+        type='TestTimeAug'),
+]
+val_ann_file = 'annotations/instances_val2017.json'
+val_batch_size_per_gpu = 8
+val_cfg = dict(fp16=False, type='ValLoop')
+val_data_prefix = 'val2017/'
+val_dataloader = dict(
+    batch_size=8,
+    dataset=dict(
+        ann_file='coco_annotations/instances_val.json',
+        batch_shapes_cfg=None,
+        data_prefix=dict(img=''),
+        data_root='/home/pwt/Paper1/datasets/DIOR/',
+        metainfo=dict(
+            classes=(
+                'airplane',
+                'airport',
+                'baseballfield',
+                'basketballcourt',
+                'bridge',
+                'chimney',
+                'dam',
+                'expressway-service-area',
+                'expressway-toll-station',
+                'golffield',
+                'groundtrackfield',
+                'harbor',
+                'overpass',
+                'ship',
+                'stadium',
+                'storagetank',
+                'tenniscourt',
+                'trainstation',
+                'vehicle',
+                'windmill',
+            )),
+        pipeline=[
+            dict(backend_args=None, type='LoadImageFromFile'),
+            dict(scale=(
+                640,
+                640,
+            ), type='YOLOv5KeepRatioResize'),
+            dict(
+                allow_scale_up=False,
+                pad_val=dict(img=114),
+                scale=(
+                    640,
+                    640,
+                ),
+                type='LetterResize'),
+            dict(type='mmdet.LoadAnnotations', with_bbox=True),
+            dict(
+                meta_keys=(
+                    'img_id',
+                    'img_path',
+                    'ori_shape',
+                    'img_shape',
+                    'scale_factor',
+                    'pad_param',
+                ),
+                type='mmdet.PackDetInputs'),
+        ],
+        test_mode=True,
+        type='YOLOv5CocoDataset'),
+    drop_last=False,
+    num_workers=4,
+    persistent_workers=True,
+    pin_memory=True,
+    sampler=dict(shuffle=False, type='DefaultSampler'))
+val_evaluator = [
+    dict(
+        eval_mode='11points',
+        iou_thrs=0.5,
+        metric='mAP',
+        prefix='pascal_voc',
+        type='mmdet.VOCMetric'),
+    dict(
+        ann_file=
+        '/home/pwt/Paper1/datasets/DIOR/coco_annotations/instances_val.json',
+        classwise=True,
+        metric='bbox',
+        proposal_nums=(
+            1,
+            10,
+            100,
+        ),
+        type='mmdet.CocoMetric'),
+]
+val_interval_stage2 = 1
+val_num_workers = 10
+vis_backends = [
+    dict(type='LocalVisBackend'),
+]
+visualizer = dict(
+    name='visualizer',
+    type='mmdet.DetLocalVisualizer',
+    vis_backends=[
+        dict(type='LocalVisBackend'),
+    ])
+weight_decay = 0.05
+widen_factor = 0.375
+work_dir = '/home/pwt/Paper1/work_dirs/lsconv_20_rtmdet_tiny_dior_640_gpu1_bs36'
+
+2026/10/17 10:02:34 - mmengine - INFO - Distributed training is not used, all SyncBatchNorm (SyncBN) layers in the model will be automatically reverted to BatchNormXd layers if they are used.
+2026/10/17 10:02:34 - mmengine - INFO - Hooks will be executed in the following order:
+before_run:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(49          ) EMAHook                            
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_load_checkpoint:
+(49          ) EMAHook                            
+ -------------------- 
+before_train:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(49          ) EMAHook                            
+(NORMAL      ) IterTimerHook                      
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+before_train_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(NORMAL      ) DistSamplerSeedHook                
+(NORMAL      ) PipelineSwitchHook                 
+ -------------------- 
+before_train_iter:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_train_iter:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(49          ) EMAHook                            
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+(LOW         ) ParamSchedulerHook                 
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+after_train_epoch:
+(NORMAL      ) IterTimerHook                      
+(LOW         ) ParamSchedulerHook                 
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+before_val:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+before_val_epoch:
+(49          ) EMAHook                            
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+before_val_iter:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_val_iter:
+(NORMAL      ) IterTimerHook                      
+(NORMAL      ) DetVisualizationHook               
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_val_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(49          ) EMAHook                            
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+(LOW         ) ParamSchedulerHook                 
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+after_val:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+before_save_checkpoint:
+(49          ) EMAHook                            
+ -------------------- 
+after_train:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+before_test:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+before_test_epoch:
+(49          ) EMAHook                            
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+before_test_iter:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_test_iter:
+(NORMAL      ) IterTimerHook                      
+(NORMAL      ) DetVisualizationHook               
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_test_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(49          ) EMAHook                            
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_test:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+after_run:
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stem.0.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stem.0.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stem.1.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stem.1.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stem.2.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stem.2.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage1.0.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage1.0.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage1.1.main_conv.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage1.1.main_conv.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage1.1.short_conv.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage1.1.short_conv.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage1.1.final_conv.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage1.1.final_conv.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage1.1.blocks.0.conv1.0.lkp.cv1.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage1.1.blocks.0.conv1.0.lkp.cv1.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage1.1.blocks.0.conv1.0.lkp.cv2.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage1.1.blocks.0.conv1.0.lkp.cv2.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage1.1.blocks.0.conv1.0.lkp.cv3.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage1.1.blocks.0.conv1.0.lkp.cv3.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage1.1.blocks.0.conv1.0.lkp.cv4.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage1.1.blocks.0.conv1.0.lkp.norm.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage1.1.blocks.0.conv1.0.lkp.norm.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage1.1.blocks.0.conv1.0.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage1.1.blocks.0.conv1.0.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage1.1.blocks.0.conv2.depthwise_conv.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage1.1.blocks.0.conv2.depthwise_conv.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage1.1.blocks.0.conv2.pointwise_conv.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage1.1.blocks.0.conv2.pointwise_conv.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage1.1.attention.fc.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage2.0.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage2.0.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage2.1.main_conv.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage2.1.main_conv.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage2.1.short_conv.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage2.1.short_conv.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage2.1.final_conv.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage2.1.final_conv.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage2.1.blocks.0.conv1.0.lkp.cv1.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage2.1.blocks.0.conv1.0.lkp.cv1.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage2.1.blocks.0.conv1.0.lkp.cv2.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage2.1.blocks.0.conv1.0.lkp.cv2.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage2.1.blocks.0.conv1.0.lkp.cv3.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage2.1.blocks.0.conv1.0.lkp.cv3.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage2.1.blocks.0.conv1.0.lkp.cv4.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage2.1.blocks.0.conv1.0.lkp.norm.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage2.1.blocks.0.conv1.0.lkp.norm.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage2.1.blocks.0.conv1.0.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage2.1.blocks.0.conv1.0.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage2.1.blocks.0.conv2.depthwise_conv.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage2.1.blocks.0.conv2.depthwise_conv.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage2.1.blocks.0.conv2.pointwise_conv.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage2.1.blocks.0.conv2.pointwise_conv.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage2.1.attention.fc.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage3.0.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage3.0.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage3.1.main_conv.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage3.1.main_conv.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage3.1.short_conv.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage3.1.short_conv.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage3.1.final_conv.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage3.1.final_conv.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage3.1.blocks.0.conv1.0.lkp.cv1.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage3.1.blocks.0.conv1.0.lkp.cv1.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage3.1.blocks.0.conv1.0.lkp.cv2.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage3.1.blocks.0.conv1.0.lkp.cv2.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage3.1.blocks.0.conv1.0.lkp.cv3.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage3.1.blocks.0.conv1.0.lkp.cv3.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage3.1.blocks.0.conv1.0.lkp.cv4.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage3.1.blocks.0.conv1.0.lkp.norm.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage3.1.blocks.0.conv1.0.lkp.norm.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage3.1.blocks.0.conv1.0.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage3.1.blocks.0.conv1.0.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage3.1.blocks.0.conv2.depthwise_conv.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage3.1.blocks.0.conv2.depthwise_conv.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage3.1.blocks.0.conv2.pointwise_conv.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage3.1.blocks.0.conv2.pointwise_conv.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage3.1.attention.fc.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage4.0.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage4.0.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage4.1.conv1.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage4.1.conv1.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage4.1.conv2.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage4.1.conv2.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage4.2.main_conv.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage4.2.main_conv.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage4.2.short_conv.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage4.2.short_conv.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage4.2.final_conv.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage4.2.final_conv.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage4.2.blocks.0.conv1.0.lkp.cv1.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage4.2.blocks.0.conv1.0.lkp.cv1.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage4.2.blocks.0.conv1.0.lkp.cv2.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage4.2.blocks.0.conv1.0.lkp.cv2.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage4.2.blocks.0.conv1.0.lkp.cv3.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage4.2.blocks.0.conv1.0.lkp.cv3.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage4.2.blocks.0.conv1.0.lkp.cv4.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage4.2.blocks.0.conv1.0.lkp.norm.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage4.2.blocks.0.conv1.0.lkp.norm.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage4.2.blocks.0.conv1.0.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage4.2.blocks.0.conv1.0.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage4.2.blocks.0.conv2.depthwise_conv.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage4.2.blocks.0.conv2.depthwise_conv.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage4.2.blocks.0.conv2.pointwise_conv.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage4.2.blocks.0.conv2.pointwise_conv.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- backbone.stage4.2.attention.fc.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.reduce_layers.2.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.reduce_layers.2.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.top_down_layers.0.0.main_conv.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.top_down_layers.0.0.main_conv.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.top_down_layers.0.0.short_conv.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.top_down_layers.0.0.short_conv.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.top_down_layers.0.0.final_conv.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.top_down_layers.0.0.final_conv.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.top_down_layers.0.0.blocks.0.conv1.0.lkp.cv1.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.top_down_layers.0.0.blocks.0.conv1.0.lkp.cv1.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.top_down_layers.0.0.blocks.0.conv1.0.lkp.cv2.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.top_down_layers.0.0.blocks.0.conv1.0.lkp.cv2.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.top_down_layers.0.0.blocks.0.conv1.0.lkp.cv3.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.top_down_layers.0.0.blocks.0.conv1.0.lkp.cv3.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.top_down_layers.0.0.blocks.0.conv1.0.lkp.cv4.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.top_down_layers.0.0.blocks.0.conv1.0.lkp.norm.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.top_down_layers.0.0.blocks.0.conv1.0.lkp.norm.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.top_down_layers.0.0.blocks.0.conv1.0.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.top_down_layers.0.0.blocks.0.conv1.0.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.top_down_layers.0.0.blocks.0.conv2.depthwise_conv.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.top_down_layers.0.0.blocks.0.conv2.depthwise_conv.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.top_down_layers.0.0.blocks.0.conv2.pointwise_conv.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.top_down_layers.0.0.blocks.0.conv2.pointwise_conv.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.top_down_layers.0.1.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.top_down_layers.0.1.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.top_down_layers.1.main_conv.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.top_down_layers.1.main_conv.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.top_down_layers.1.short_conv.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.top_down_layers.1.short_conv.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.top_down_layers.1.final_conv.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.top_down_layers.1.final_conv.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.top_down_layers.1.blocks.0.conv1.0.lkp.cv1.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.top_down_layers.1.blocks.0.conv1.0.lkp.cv1.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.top_down_layers.1.blocks.0.conv1.0.lkp.cv2.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.top_down_layers.1.blocks.0.conv1.0.lkp.cv2.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.top_down_layers.1.blocks.0.conv1.0.lkp.cv3.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.top_down_layers.1.blocks.0.conv1.0.lkp.cv3.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.top_down_layers.1.blocks.0.conv1.0.lkp.cv4.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.top_down_layers.1.blocks.0.conv1.0.lkp.norm.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.top_down_layers.1.blocks.0.conv1.0.lkp.norm.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.top_down_layers.1.blocks.0.conv1.0.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.top_down_layers.1.blocks.0.conv1.0.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.top_down_layers.1.blocks.0.conv2.depthwise_conv.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.top_down_layers.1.blocks.0.conv2.depthwise_conv.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.top_down_layers.1.blocks.0.conv2.pointwise_conv.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.top_down_layers.1.blocks.0.conv2.pointwise_conv.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.downsample_layers.0.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.downsample_layers.0.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.downsample_layers.1.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.downsample_layers.1.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.bottom_up_layers.0.main_conv.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.bottom_up_layers.0.main_conv.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.bottom_up_layers.0.short_conv.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.bottom_up_layers.0.short_conv.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.bottom_up_layers.0.final_conv.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.bottom_up_layers.0.final_conv.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.bottom_up_layers.0.blocks.0.conv1.0.lkp.cv1.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.bottom_up_layers.0.blocks.0.conv1.0.lkp.cv1.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.bottom_up_layers.0.blocks.0.conv1.0.lkp.cv2.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.bottom_up_layers.0.blocks.0.conv1.0.lkp.cv2.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.bottom_up_layers.0.blocks.0.conv1.0.lkp.cv3.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.bottom_up_layers.0.blocks.0.conv1.0.lkp.cv3.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.bottom_up_layers.0.blocks.0.conv1.0.lkp.cv4.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.bottom_up_layers.0.blocks.0.conv1.0.lkp.norm.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.bottom_up_layers.0.blocks.0.conv1.0.lkp.norm.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.bottom_up_layers.0.blocks.0.conv1.0.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.bottom_up_layers.0.blocks.0.conv1.0.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.bottom_up_layers.0.blocks.0.conv2.depthwise_conv.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.bottom_up_layers.0.blocks.0.conv2.depthwise_conv.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.bottom_up_layers.0.blocks.0.conv2.pointwise_conv.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.bottom_up_layers.0.blocks.0.conv2.pointwise_conv.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.bottom_up_layers.1.main_conv.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.bottom_up_layers.1.main_conv.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.bottom_up_layers.1.short_conv.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.bottom_up_layers.1.short_conv.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.bottom_up_layers.1.final_conv.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.bottom_up_layers.1.final_conv.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.bottom_up_layers.1.blocks.0.conv1.0.lkp.cv1.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.bottom_up_layers.1.blocks.0.conv1.0.lkp.cv1.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.bottom_up_layers.1.blocks.0.conv1.0.lkp.cv2.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.bottom_up_layers.1.blocks.0.conv1.0.lkp.cv2.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.bottom_up_layers.1.blocks.0.conv1.0.lkp.cv3.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.bottom_up_layers.1.blocks.0.conv1.0.lkp.cv3.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.bottom_up_layers.1.blocks.0.conv1.0.lkp.cv4.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.bottom_up_layers.1.blocks.0.conv1.0.lkp.norm.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.bottom_up_layers.1.blocks.0.conv1.0.lkp.norm.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.bottom_up_layers.1.blocks.0.conv1.0.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.bottom_up_layers.1.blocks.0.conv1.0.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.bottom_up_layers.1.blocks.0.conv2.depthwise_conv.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.bottom_up_layers.1.blocks.0.conv2.depthwise_conv.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.bottom_up_layers.1.blocks.0.conv2.pointwise_conv.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.bottom_up_layers.1.blocks.0.conv2.pointwise_conv.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.out_layers.0.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.out_layers.0.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.out_layers.1.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.out_layers.1.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.out_layers.2.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- neck.out_layers.2.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.0.0.0.lkp.cv1.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.0.0.0.lkp.cv1.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.0.0.0.lkp.cv2.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.0.0.0.lkp.cv2.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.0.0.0.lkp.cv3.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.0.0.0.lkp.cv3.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.0.0.0.lkp.cv4.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.0.0.0.lkp.norm.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.0.0.0.lkp.norm.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.0.0.0.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.0.0.0.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.0.0.1.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.0.0.1.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.0.1.0.lkp.cv1.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.0.1.0.lkp.cv1.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.0.1.0.lkp.cv2.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.0.1.0.lkp.cv2.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.0.1.0.lkp.cv3.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.0.1.0.lkp.cv3.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.0.1.0.lkp.cv4.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.0.1.0.lkp.norm.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.0.1.0.lkp.norm.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.0.1.0.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.0.1.0.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.0.1.1.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.0.1.1.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - WARNING - bbox_head.head_module.cls_convs.1.0.0.lkp.cv1.c is duplicate. It is skipped since bypass_duplicate=True
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.1.0.0.lkp.cv1.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.1.0.0.lkp.cv1.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - WARNING - bbox_head.head_module.cls_convs.1.0.0.lkp.cv2.c is duplicate. It is skipped since bypass_duplicate=True
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.1.0.0.lkp.cv2.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.1.0.0.lkp.cv2.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - WARNING - bbox_head.head_module.cls_convs.1.0.0.lkp.cv3.c is duplicate. It is skipped since bypass_duplicate=True
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.1.0.0.lkp.cv3.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.1.0.0.lkp.cv3.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - WARNING - bbox_head.head_module.cls_convs.1.0.0.lkp.cv4 is duplicate. It is skipped since bypass_duplicate=True
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.1.0.0.lkp.norm.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.1.0.0.lkp.norm.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.1.0.0.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.1.0.0.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - WARNING - bbox_head.head_module.cls_convs.1.0.1.c is duplicate. It is skipped since bypass_duplicate=True
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.1.0.1.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.1.0.1.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - WARNING - bbox_head.head_module.cls_convs.1.1.0.lkp.cv1.c is duplicate. It is skipped since bypass_duplicate=True
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.1.1.0.lkp.cv1.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.1.1.0.lkp.cv1.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - WARNING - bbox_head.head_module.cls_convs.1.1.0.lkp.cv2.c is duplicate. It is skipped since bypass_duplicate=True
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.1.1.0.lkp.cv2.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.1.1.0.lkp.cv2.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - WARNING - bbox_head.head_module.cls_convs.1.1.0.lkp.cv3.c is duplicate. It is skipped since bypass_duplicate=True
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.1.1.0.lkp.cv3.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.1.1.0.lkp.cv3.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - WARNING - bbox_head.head_module.cls_convs.1.1.0.lkp.cv4 is duplicate. It is skipped since bypass_duplicate=True
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.1.1.0.lkp.norm.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.1.1.0.lkp.norm.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.1.1.0.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.1.1.0.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - WARNING - bbox_head.head_module.cls_convs.1.1.1.c is duplicate. It is skipped since bypass_duplicate=True
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.1.1.1.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.1.1.1.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - WARNING - bbox_head.head_module.cls_convs.2.0.0.lkp.cv1.c is duplicate. It is skipped since bypass_duplicate=True
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.2.0.0.lkp.cv1.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.2.0.0.lkp.cv1.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - WARNING - bbox_head.head_module.cls_convs.2.0.0.lkp.cv2.c is duplicate. It is skipped since bypass_duplicate=True
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.2.0.0.lkp.cv2.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.2.0.0.lkp.cv2.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - WARNING - bbox_head.head_module.cls_convs.2.0.0.lkp.cv3.c is duplicate. It is skipped since bypass_duplicate=True
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.2.0.0.lkp.cv3.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.2.0.0.lkp.cv3.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - WARNING - bbox_head.head_module.cls_convs.2.0.0.lkp.cv4 is duplicate. It is skipped since bypass_duplicate=True
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.2.0.0.lkp.norm.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.2.0.0.lkp.norm.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.2.0.0.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.2.0.0.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - WARNING - bbox_head.head_module.cls_convs.2.0.1.c is duplicate. It is skipped since bypass_duplicate=True
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.2.0.1.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.2.0.1.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - WARNING - bbox_head.head_module.cls_convs.2.1.0.lkp.cv1.c is duplicate. It is skipped since bypass_duplicate=True
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.2.1.0.lkp.cv1.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.2.1.0.lkp.cv1.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - WARNING - bbox_head.head_module.cls_convs.2.1.0.lkp.cv2.c is duplicate. It is skipped since bypass_duplicate=True
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.2.1.0.lkp.cv2.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.2.1.0.lkp.cv2.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - WARNING - bbox_head.head_module.cls_convs.2.1.0.lkp.cv3.c is duplicate. It is skipped since bypass_duplicate=True
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.2.1.0.lkp.cv3.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.2.1.0.lkp.cv3.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - WARNING - bbox_head.head_module.cls_convs.2.1.0.lkp.cv4 is duplicate. It is skipped since bypass_duplicate=True
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.2.1.0.lkp.norm.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.2.1.0.lkp.norm.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.2.1.0.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.2.1.0.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - WARNING - bbox_head.head_module.cls_convs.2.1.1.c is duplicate. It is skipped since bypass_duplicate=True
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.2.1.1.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.2.1.1.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.0.0.0.lkp.cv1.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.0.0.0.lkp.cv1.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.0.0.0.lkp.cv2.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.0.0.0.lkp.cv2.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.0.0.0.lkp.cv3.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.0.0.0.lkp.cv3.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.0.0.0.lkp.cv4.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.0.0.0.lkp.norm.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.0.0.0.lkp.norm.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.0.0.0.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.0.0.0.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.0.0.1.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.0.0.1.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.0.1.0.lkp.cv1.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.0.1.0.lkp.cv1.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.0.1.0.lkp.cv2.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.0.1.0.lkp.cv2.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.0.1.0.lkp.cv3.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.0.1.0.lkp.cv3.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.0.1.0.lkp.cv4.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.0.1.0.lkp.norm.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.0.1.0.lkp.norm.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.0.1.0.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.0.1.0.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.0.1.1.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.0.1.1.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - WARNING - bbox_head.head_module.reg_convs.1.0.0.lkp.cv1.c is duplicate. It is skipped since bypass_duplicate=True
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.1.0.0.lkp.cv1.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.1.0.0.lkp.cv1.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - WARNING - bbox_head.head_module.reg_convs.1.0.0.lkp.cv2.c is duplicate. It is skipped since bypass_duplicate=True
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.1.0.0.lkp.cv2.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.1.0.0.lkp.cv2.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - WARNING - bbox_head.head_module.reg_convs.1.0.0.lkp.cv3.c is duplicate. It is skipped since bypass_duplicate=True
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.1.0.0.lkp.cv3.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.1.0.0.lkp.cv3.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - WARNING - bbox_head.head_module.reg_convs.1.0.0.lkp.cv4 is duplicate. It is skipped since bypass_duplicate=True
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.1.0.0.lkp.norm.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.1.0.0.lkp.norm.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.1.0.0.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.1.0.0.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - WARNING - bbox_head.head_module.reg_convs.1.0.1.c is duplicate. It is skipped since bypass_duplicate=True
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.1.0.1.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.1.0.1.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - WARNING - bbox_head.head_module.reg_convs.1.1.0.lkp.cv1.c is duplicate. It is skipped since bypass_duplicate=True
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.1.1.0.lkp.cv1.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.1.1.0.lkp.cv1.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - WARNING - bbox_head.head_module.reg_convs.1.1.0.lkp.cv2.c is duplicate. It is skipped since bypass_duplicate=True
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.1.1.0.lkp.cv2.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.1.1.0.lkp.cv2.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - WARNING - bbox_head.head_module.reg_convs.1.1.0.lkp.cv3.c is duplicate. It is skipped since bypass_duplicate=True
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.1.1.0.lkp.cv3.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.1.1.0.lkp.cv3.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - WARNING - bbox_head.head_module.reg_convs.1.1.0.lkp.cv4 is duplicate. It is skipped since bypass_duplicate=True
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.1.1.0.lkp.norm.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.1.1.0.lkp.norm.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.1.1.0.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.1.1.0.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - WARNING - bbox_head.head_module.reg_convs.1.1.1.c is duplicate. It is skipped since bypass_duplicate=True
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.1.1.1.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.1.1.1.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - WARNING - bbox_head.head_module.reg_convs.2.0.0.lkp.cv1.c is duplicate. It is skipped since bypass_duplicate=True
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.2.0.0.lkp.cv1.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.2.0.0.lkp.cv1.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - WARNING - bbox_head.head_module.reg_convs.2.0.0.lkp.cv2.c is duplicate. It is skipped since bypass_duplicate=True
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.2.0.0.lkp.cv2.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.2.0.0.lkp.cv2.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - WARNING - bbox_head.head_module.reg_convs.2.0.0.lkp.cv3.c is duplicate. It is skipped since bypass_duplicate=True
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.2.0.0.lkp.cv3.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.2.0.0.lkp.cv3.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - WARNING - bbox_head.head_module.reg_convs.2.0.0.lkp.cv4 is duplicate. It is skipped since bypass_duplicate=True
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.2.0.0.lkp.norm.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.2.0.0.lkp.norm.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.2.0.0.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.2.0.0.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - WARNING - bbox_head.head_module.reg_convs.2.0.1.c is duplicate. It is skipped since bypass_duplicate=True
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.2.0.1.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.2.0.1.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - WARNING - bbox_head.head_module.reg_convs.2.1.0.lkp.cv1.c is duplicate. It is skipped since bypass_duplicate=True
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.2.1.0.lkp.cv1.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.2.1.0.lkp.cv1.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - WARNING - bbox_head.head_module.reg_convs.2.1.0.lkp.cv2.c is duplicate. It is skipped since bypass_duplicate=True
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.2.1.0.lkp.cv2.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.2.1.0.lkp.cv2.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - WARNING - bbox_head.head_module.reg_convs.2.1.0.lkp.cv3.c is duplicate. It is skipped since bypass_duplicate=True
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.2.1.0.lkp.cv3.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.2.1.0.lkp.cv3.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - WARNING - bbox_head.head_module.reg_convs.2.1.0.lkp.cv4 is duplicate. It is skipped since bypass_duplicate=True
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.2.1.0.lkp.norm.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.2.1.0.lkp.norm.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.2.1.0.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.2.1.0.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - WARNING - bbox_head.head_module.reg_convs.2.1.1.c is duplicate. It is skipped since bypass_duplicate=True
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.2.1.1.bn.weight:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.2.1.1.bn.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.rtm_cls.0.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.rtm_cls.1.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.rtm_cls.2.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.rtm_reg.0.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.rtm_reg.1.bias:weight_decay=0.0
+2026/10/17 10:02:35 - mmengine - INFO - paramwise_options -- bbox_head.head_module.rtm_reg.2.bias:weight_decay=0.0
+Name of parameter - Initialization information
+
+backbone.stem.0.conv.weight - torch.Size([12, 3, 3, 3]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stem.0.bn.weight - torch.Size([12]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stem.0.bn.bias - torch.Size([12]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stem.1.conv.weight - torch.Size([12, 12, 3, 3]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stem.1.bn.weight - torch.Size([12]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stem.1.bn.bias - torch.Size([12]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stem.2.conv.weight - torch.Size([24, 12, 3, 3]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stem.2.bn.weight - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stem.2.bn.bias - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage1.0.conv.weight - torch.Size([48, 24, 3, 3]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage1.0.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage1.0.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage1.1.main_conv.conv.weight - torch.Size([24, 48, 1, 1]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage1.1.main_conv.bn.weight - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage1.1.main_conv.bn.bias - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage1.1.short_conv.conv.weight - torch.Size([24, 48, 1, 1]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage1.1.short_conv.bn.weight - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage1.1.short_conv.bn.bias - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage1.1.final_conv.conv.weight - torch.Size([48, 48, 1, 1]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage1.1.final_conv.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage1.1.final_conv.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage1.1.blocks.0.conv1.0.lkp.cv1.c.weight - torch.Size([12, 24, 1, 1]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage1.1.blocks.0.conv1.0.lkp.cv1.bn.weight - torch.Size([12]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage1.1.blocks.0.conv1.0.lkp.cv1.bn.bias - torch.Size([12]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage1.1.blocks.0.conv1.0.lkp.cv2.c.weight - torch.Size([12, 1, 7, 7]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage1.1.blocks.0.conv1.0.lkp.cv2.bn.weight - torch.Size([12]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage1.1.blocks.0.conv1.0.lkp.cv2.bn.bias - torch.Size([12]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage1.1.blocks.0.conv1.0.lkp.cv3.c.weight - torch.Size([12, 12, 1, 1]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage1.1.blocks.0.conv1.0.lkp.cv3.bn.weight - torch.Size([12]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage1.1.blocks.0.conv1.0.lkp.cv3.bn.bias - torch.Size([12]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage1.1.blocks.0.conv1.0.lkp.cv4.weight - torch.Size([27, 12, 1, 1]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage1.1.blocks.0.conv1.0.lkp.cv4.bias - torch.Size([27]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage1.1.blocks.0.conv1.0.lkp.norm.weight - torch.Size([27]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage1.1.blocks.0.conv1.0.lkp.norm.bias - torch.Size([27]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage1.1.blocks.0.conv1.0.bn.weight - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage1.1.blocks.0.conv1.0.bn.bias - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage1.1.blocks.0.conv2.depthwise_conv.conv.weight - torch.Size([24, 1, 5, 5]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage1.1.blocks.0.conv2.depthwise_conv.bn.weight - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage1.1.blocks.0.conv2.depthwise_conv.bn.bias - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage1.1.blocks.0.conv2.pointwise_conv.conv.weight - torch.Size([24, 24, 1, 1]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage1.1.blocks.0.conv2.pointwise_conv.bn.weight - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage1.1.blocks.0.conv2.pointwise_conv.bn.bias - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage1.1.attention.fc.weight - torch.Size([48, 48, 1, 1]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage1.1.attention.fc.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage2.0.conv.weight - torch.Size([96, 48, 3, 3]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage2.0.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage2.0.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage2.1.main_conv.conv.weight - torch.Size([48, 96, 1, 1]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage2.1.main_conv.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage2.1.main_conv.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage2.1.short_conv.conv.weight - torch.Size([48, 96, 1, 1]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage2.1.short_conv.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage2.1.short_conv.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage2.1.final_conv.conv.weight - torch.Size([96, 96, 1, 1]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage2.1.final_conv.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage2.1.final_conv.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage2.1.blocks.0.conv1.0.lkp.cv1.c.weight - torch.Size([24, 48, 1, 1]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage2.1.blocks.0.conv1.0.lkp.cv1.bn.weight - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage2.1.blocks.0.conv1.0.lkp.cv1.bn.bias - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage2.1.blocks.0.conv1.0.lkp.cv2.c.weight - torch.Size([24, 1, 7, 7]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage2.1.blocks.0.conv1.0.lkp.cv2.bn.weight - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage2.1.blocks.0.conv1.0.lkp.cv2.bn.bias - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage2.1.blocks.0.conv1.0.lkp.cv3.c.weight - torch.Size([24, 24, 1, 1]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage2.1.blocks.0.conv1.0.lkp.cv3.bn.weight - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage2.1.blocks.0.conv1.0.lkp.cv3.bn.bias - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage2.1.blocks.0.conv1.0.lkp.cv4.weight - torch.Size([54, 24, 1, 1]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage2.1.blocks.0.conv1.0.lkp.cv4.bias - torch.Size([54]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage2.1.blocks.0.conv1.0.lkp.norm.weight - torch.Size([54]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage2.1.blocks.0.conv1.0.lkp.norm.bias - torch.Size([54]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage2.1.blocks.0.conv1.0.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage2.1.blocks.0.conv1.0.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage2.1.blocks.0.conv2.depthwise_conv.conv.weight - torch.Size([48, 1, 5, 5]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage2.1.blocks.0.conv2.depthwise_conv.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage2.1.blocks.0.conv2.depthwise_conv.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage2.1.blocks.0.conv2.pointwise_conv.conv.weight - torch.Size([48, 48, 1, 1]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage2.1.blocks.0.conv2.pointwise_conv.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage2.1.blocks.0.conv2.pointwise_conv.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage2.1.attention.fc.weight - torch.Size([96, 96, 1, 1]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage2.1.attention.fc.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage3.0.conv.weight - torch.Size([192, 96, 3, 3]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage3.0.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage3.0.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage3.1.main_conv.conv.weight - torch.Size([96, 192, 1, 1]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage3.1.main_conv.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage3.1.main_conv.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage3.1.short_conv.conv.weight - torch.Size([96, 192, 1, 1]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage3.1.short_conv.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage3.1.short_conv.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage3.1.final_conv.conv.weight - torch.Size([192, 192, 1, 1]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage3.1.final_conv.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage3.1.final_conv.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage3.1.blocks.0.conv1.0.lkp.cv1.c.weight - torch.Size([48, 96, 1, 1]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage3.1.blocks.0.conv1.0.lkp.cv1.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage3.1.blocks.0.conv1.0.lkp.cv1.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage3.1.blocks.0.conv1.0.lkp.cv2.c.weight - torch.Size([48, 1, 7, 7]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage3.1.blocks.0.conv1.0.lkp.cv2.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage3.1.blocks.0.conv1.0.lkp.cv2.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage3.1.blocks.0.conv1.0.lkp.cv3.c.weight - torch.Size([48, 48, 1, 1]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage3.1.blocks.0.conv1.0.lkp.cv3.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage3.1.blocks.0.conv1.0.lkp.cv3.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage3.1.blocks.0.conv1.0.lkp.cv4.weight - torch.Size([108, 48, 1, 1]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage3.1.blocks.0.conv1.0.lkp.cv4.bias - torch.Size([108]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage3.1.blocks.0.conv1.0.lkp.norm.weight - torch.Size([108]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage3.1.blocks.0.conv1.0.lkp.norm.bias - torch.Size([108]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage3.1.blocks.0.conv1.0.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage3.1.blocks.0.conv1.0.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage3.1.blocks.0.conv2.depthwise_conv.conv.weight - torch.Size([96, 1, 5, 5]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage3.1.blocks.0.conv2.depthwise_conv.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage3.1.blocks.0.conv2.depthwise_conv.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage3.1.blocks.0.conv2.pointwise_conv.conv.weight - torch.Size([96, 96, 1, 1]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage3.1.blocks.0.conv2.pointwise_conv.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage3.1.blocks.0.conv2.pointwise_conv.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage3.1.attention.fc.weight - torch.Size([192, 192, 1, 1]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage3.1.attention.fc.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage4.0.conv.weight - torch.Size([384, 192, 3, 3]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage4.0.bn.weight - torch.Size([384]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage4.0.bn.bias - torch.Size([384]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage4.1.conv1.conv.weight - torch.Size([192, 384, 1, 1]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage4.1.conv1.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage4.1.conv1.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage4.1.conv2.conv.weight - torch.Size([384, 768, 1, 1]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage4.1.conv2.bn.weight - torch.Size([384]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage4.1.conv2.bn.bias - torch.Size([384]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage4.2.main_conv.conv.weight - torch.Size([192, 384, 1, 1]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage4.2.main_conv.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage4.2.main_conv.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage4.2.short_conv.conv.weight - torch.Size([192, 384, 1, 1]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage4.2.short_conv.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage4.2.short_conv.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage4.2.final_conv.conv.weight - torch.Size([384, 384, 1, 1]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage4.2.final_conv.bn.weight - torch.Size([384]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage4.2.final_conv.bn.bias - torch.Size([384]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage4.2.blocks.0.conv1.0.lkp.cv1.c.weight - torch.Size([96, 192, 1, 1]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage4.2.blocks.0.conv1.0.lkp.cv1.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage4.2.blocks.0.conv1.0.lkp.cv1.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage4.2.blocks.0.conv1.0.lkp.cv2.c.weight - torch.Size([96, 1, 7, 7]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage4.2.blocks.0.conv1.0.lkp.cv2.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage4.2.blocks.0.conv1.0.lkp.cv2.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage4.2.blocks.0.conv1.0.lkp.cv3.c.weight - torch.Size([96, 96, 1, 1]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage4.2.blocks.0.conv1.0.lkp.cv3.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage4.2.blocks.0.conv1.0.lkp.cv3.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage4.2.blocks.0.conv1.0.lkp.cv4.weight - torch.Size([216, 96, 1, 1]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage4.2.blocks.0.conv1.0.lkp.cv4.bias - torch.Size([216]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage4.2.blocks.0.conv1.0.lkp.norm.weight - torch.Size([216]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage4.2.blocks.0.conv1.0.lkp.norm.bias - torch.Size([216]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage4.2.blocks.0.conv1.0.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage4.2.blocks.0.conv1.0.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage4.2.blocks.0.conv2.depthwise_conv.conv.weight - torch.Size([192, 1, 5, 5]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage4.2.blocks.0.conv2.depthwise_conv.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage4.2.blocks.0.conv2.depthwise_conv.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage4.2.blocks.0.conv2.pointwise_conv.conv.weight - torch.Size([192, 192, 1, 1]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage4.2.blocks.0.conv2.pointwise_conv.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage4.2.blocks.0.conv2.pointwise_conv.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage4.2.attention.fc.weight - torch.Size([384, 384, 1, 1]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+backbone.stage4.2.attention.fc.bias - torch.Size([384]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.reduce_layers.2.conv.weight - torch.Size([192, 384, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+
+neck.reduce_layers.2.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.reduce_layers.2.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.top_down_layers.0.0.main_conv.conv.weight - torch.Size([96, 384, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+
+neck.top_down_layers.0.0.main_conv.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.top_down_layers.0.0.main_conv.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.top_down_layers.0.0.short_conv.conv.weight - torch.Size([96, 384, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+
+neck.top_down_layers.0.0.short_conv.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.top_down_layers.0.0.short_conv.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.top_down_layers.0.0.final_conv.conv.weight - torch.Size([192, 192, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+
+neck.top_down_layers.0.0.final_conv.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.top_down_layers.0.0.final_conv.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.top_down_layers.0.0.blocks.0.conv1.0.lkp.cv1.c.weight - torch.Size([48, 96, 1, 1]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.top_down_layers.0.0.blocks.0.conv1.0.lkp.cv1.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.top_down_layers.0.0.blocks.0.conv1.0.lkp.cv1.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.top_down_layers.0.0.blocks.0.conv1.0.lkp.cv2.c.weight - torch.Size([48, 1, 7, 7]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.top_down_layers.0.0.blocks.0.conv1.0.lkp.cv2.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.top_down_layers.0.0.blocks.0.conv1.0.lkp.cv2.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.top_down_layers.0.0.blocks.0.conv1.0.lkp.cv3.c.weight - torch.Size([48, 48, 1, 1]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.top_down_layers.0.0.blocks.0.conv1.0.lkp.cv3.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.top_down_layers.0.0.blocks.0.conv1.0.lkp.cv3.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.top_down_layers.0.0.blocks.0.conv1.0.lkp.cv4.weight - torch.Size([108, 48, 1, 1]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.top_down_layers.0.0.blocks.0.conv1.0.lkp.cv4.bias - torch.Size([108]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.top_down_layers.0.0.blocks.0.conv1.0.lkp.norm.weight - torch.Size([108]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.top_down_layers.0.0.blocks.0.conv1.0.lkp.norm.bias - torch.Size([108]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.top_down_layers.0.0.blocks.0.conv1.0.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.top_down_layers.0.0.blocks.0.conv1.0.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.top_down_layers.0.0.blocks.0.conv2.depthwise_conv.conv.weight - torch.Size([96, 1, 5, 5]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+
+neck.top_down_layers.0.0.blocks.0.conv2.depthwise_conv.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.top_down_layers.0.0.blocks.0.conv2.depthwise_conv.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.top_down_layers.0.0.blocks.0.conv2.pointwise_conv.conv.weight - torch.Size([96, 96, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+
+neck.top_down_layers.0.0.blocks.0.conv2.pointwise_conv.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.top_down_layers.0.0.blocks.0.conv2.pointwise_conv.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.top_down_layers.0.1.conv.weight - torch.Size([96, 192, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+
+neck.top_down_layers.0.1.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.top_down_layers.0.1.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.top_down_layers.1.main_conv.conv.weight - torch.Size([48, 192, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+
+neck.top_down_layers.1.main_conv.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.top_down_layers.1.main_conv.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.top_down_layers.1.short_conv.conv.weight - torch.Size([48, 192, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+
+neck.top_down_layers.1.short_conv.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.top_down_layers.1.short_conv.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.top_down_layers.1.final_conv.conv.weight - torch.Size([96, 96, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+
+neck.top_down_layers.1.final_conv.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.top_down_layers.1.final_conv.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.top_down_layers.1.blocks.0.conv1.0.lkp.cv1.c.weight - torch.Size([24, 48, 1, 1]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.top_down_layers.1.blocks.0.conv1.0.lkp.cv1.bn.weight - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.top_down_layers.1.blocks.0.conv1.0.lkp.cv1.bn.bias - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.top_down_layers.1.blocks.0.conv1.0.lkp.cv2.c.weight - torch.Size([24, 1, 7, 7]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.top_down_layers.1.blocks.0.conv1.0.lkp.cv2.bn.weight - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.top_down_layers.1.blocks.0.conv1.0.lkp.cv2.bn.bias - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.top_down_layers.1.blocks.0.conv1.0.lkp.cv3.c.weight - torch.Size([24, 24, 1, 1]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.top_down_layers.1.blocks.0.conv1.0.lkp.cv3.bn.weight - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.top_down_layers.1.blocks.0.conv1.0.lkp.cv3.bn.bias - torch.Size([24]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.top_down_layers.1.blocks.0.conv1.0.lkp.cv4.weight - torch.Size([54, 24, 1, 1]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.top_down_layers.1.blocks.0.conv1.0.lkp.cv4.bias - torch.Size([54]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.top_down_layers.1.blocks.0.conv1.0.lkp.norm.weight - torch.Size([54]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.top_down_layers.1.blocks.0.conv1.0.lkp.norm.bias - torch.Size([54]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.top_down_layers.1.blocks.0.conv1.0.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.top_down_layers.1.blocks.0.conv1.0.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.top_down_layers.1.blocks.0.conv2.depthwise_conv.conv.weight - torch.Size([48, 1, 5, 5]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+
+neck.top_down_layers.1.blocks.0.conv2.depthwise_conv.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.top_down_layers.1.blocks.0.conv2.depthwise_conv.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.top_down_layers.1.blocks.0.conv2.pointwise_conv.conv.weight - torch.Size([48, 48, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+
+neck.top_down_layers.1.blocks.0.conv2.pointwise_conv.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.top_down_layers.1.blocks.0.conv2.pointwise_conv.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.downsample_layers.0.conv.weight - torch.Size([96, 96, 3, 3]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+
+neck.downsample_layers.0.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.downsample_layers.0.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.downsample_layers.1.conv.weight - torch.Size([192, 192, 3, 3]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+
+neck.downsample_layers.1.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.downsample_layers.1.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.bottom_up_layers.0.main_conv.conv.weight - torch.Size([96, 192, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+
+neck.bottom_up_layers.0.main_conv.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.bottom_up_layers.0.main_conv.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.bottom_up_layers.0.short_conv.conv.weight - torch.Size([96, 192, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+
+neck.bottom_up_layers.0.short_conv.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.bottom_up_layers.0.short_conv.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.bottom_up_layers.0.final_conv.conv.weight - torch.Size([192, 192, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+
+neck.bottom_up_layers.0.final_conv.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.bottom_up_layers.0.final_conv.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.bottom_up_layers.0.blocks.0.conv1.0.lkp.cv1.c.weight - torch.Size([48, 96, 1, 1]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.bottom_up_layers.0.blocks.0.conv1.0.lkp.cv1.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.bottom_up_layers.0.blocks.0.conv1.0.lkp.cv1.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.bottom_up_layers.0.blocks.0.conv1.0.lkp.cv2.c.weight - torch.Size([48, 1, 7, 7]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.bottom_up_layers.0.blocks.0.conv1.0.lkp.cv2.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.bottom_up_layers.0.blocks.0.conv1.0.lkp.cv2.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.bottom_up_layers.0.blocks.0.conv1.0.lkp.cv3.c.weight - torch.Size([48, 48, 1, 1]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.bottom_up_layers.0.blocks.0.conv1.0.lkp.cv3.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.bottom_up_layers.0.blocks.0.conv1.0.lkp.cv3.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.bottom_up_layers.0.blocks.0.conv1.0.lkp.cv4.weight - torch.Size([108, 48, 1, 1]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.bottom_up_layers.0.blocks.0.conv1.0.lkp.cv4.bias - torch.Size([108]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.bottom_up_layers.0.blocks.0.conv1.0.lkp.norm.weight - torch.Size([108]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.bottom_up_layers.0.blocks.0.conv1.0.lkp.norm.bias - torch.Size([108]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.bottom_up_layers.0.blocks.0.conv1.0.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.bottom_up_layers.0.blocks.0.conv1.0.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.bottom_up_layers.0.blocks.0.conv2.depthwise_conv.conv.weight - torch.Size([96, 1, 5, 5]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+
+neck.bottom_up_layers.0.blocks.0.conv2.depthwise_conv.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.bottom_up_layers.0.blocks.0.conv2.depthwise_conv.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.bottom_up_layers.0.blocks.0.conv2.pointwise_conv.conv.weight - torch.Size([96, 96, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+
+neck.bottom_up_layers.0.blocks.0.conv2.pointwise_conv.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.bottom_up_layers.0.blocks.0.conv2.pointwise_conv.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.bottom_up_layers.1.main_conv.conv.weight - torch.Size([192, 384, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+
+neck.bottom_up_layers.1.main_conv.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.bottom_up_layers.1.main_conv.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.bottom_up_layers.1.short_conv.conv.weight - torch.Size([192, 384, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+
+neck.bottom_up_layers.1.short_conv.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.bottom_up_layers.1.short_conv.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.bottom_up_layers.1.final_conv.conv.weight - torch.Size([384, 384, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+
+neck.bottom_up_layers.1.final_conv.bn.weight - torch.Size([384]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.bottom_up_layers.1.final_conv.bn.bias - torch.Size([384]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.bottom_up_layers.1.blocks.0.conv1.0.lkp.cv1.c.weight - torch.Size([96, 192, 1, 1]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.bottom_up_layers.1.blocks.0.conv1.0.lkp.cv1.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.bottom_up_layers.1.blocks.0.conv1.0.lkp.cv1.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.bottom_up_layers.1.blocks.0.conv1.0.lkp.cv2.c.weight - torch.Size([96, 1, 7, 7]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.bottom_up_layers.1.blocks.0.conv1.0.lkp.cv2.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.bottom_up_layers.1.blocks.0.conv1.0.lkp.cv2.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.bottom_up_layers.1.blocks.0.conv1.0.lkp.cv3.c.weight - torch.Size([96, 96, 1, 1]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.bottom_up_layers.1.blocks.0.conv1.0.lkp.cv3.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.bottom_up_layers.1.blocks.0.conv1.0.lkp.cv3.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.bottom_up_layers.1.blocks.0.conv1.0.lkp.cv4.weight - torch.Size([216, 96, 1, 1]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.bottom_up_layers.1.blocks.0.conv1.0.lkp.cv4.bias - torch.Size([216]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.bottom_up_layers.1.blocks.0.conv1.0.lkp.norm.weight - torch.Size([216]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.bottom_up_layers.1.blocks.0.conv1.0.lkp.norm.bias - torch.Size([216]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.bottom_up_layers.1.blocks.0.conv1.0.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.bottom_up_layers.1.blocks.0.conv1.0.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.bottom_up_layers.1.blocks.0.conv2.depthwise_conv.conv.weight - torch.Size([192, 1, 5, 5]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+
+neck.bottom_up_layers.1.blocks.0.conv2.depthwise_conv.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.bottom_up_layers.1.blocks.0.conv2.depthwise_conv.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.bottom_up_layers.1.blocks.0.conv2.pointwise_conv.conv.weight - torch.Size([192, 192, 1, 1]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+
+neck.bottom_up_layers.1.blocks.0.conv2.pointwise_conv.bn.weight - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.bottom_up_layers.1.blocks.0.conv2.pointwise_conv.bn.bias - torch.Size([192]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.out_layers.0.conv.weight - torch.Size([96, 96, 3, 3]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+
+neck.out_layers.0.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.out_layers.0.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.out_layers.1.conv.weight - torch.Size([96, 192, 3, 3]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+
+neck.out_layers.1.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.out_layers.1.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.out_layers.2.conv.weight - torch.Size([96, 384, 3, 3]): 
+KaimingInit: a=2.23606797749979, mode=fan_in, nonlinearity=leaky_relu, distribution =uniform, bias=0 
+
+neck.out_layers.2.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+neck.out_layers.2.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.0.0.0.lkp.cv1.c.weight - torch.Size([48, 96, 1, 1]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.0.0.0.lkp.cv1.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.0.0.0.lkp.cv1.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.0.0.0.lkp.cv2.c.weight - torch.Size([48, 1, 7, 7]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.0.0.0.lkp.cv2.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.0.0.0.lkp.cv2.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.0.0.0.lkp.cv3.c.weight - torch.Size([48, 48, 1, 1]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.0.0.0.lkp.cv3.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.0.0.0.lkp.cv3.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.0.0.0.lkp.cv4.weight - torch.Size([108, 48, 1, 1]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.0.0.0.lkp.cv4.bias - torch.Size([108]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.0.0.0.lkp.norm.weight - torch.Size([108]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.0.0.0.lkp.norm.bias - torch.Size([108]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.0.0.0.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.0.0.0.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.0.0.1.c.weight - torch.Size([96, 96, 1, 1]): 
+Initialized by user-defined `init_weights` in LSConv20SepBNHeadModule  
+
+bbox_head.head_module.cls_convs.0.0.1.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.0.0.1.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.0.1.0.lkp.cv1.c.weight - torch.Size([48, 96, 1, 1]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.0.1.0.lkp.cv1.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.0.1.0.lkp.cv1.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.0.1.0.lkp.cv2.c.weight - torch.Size([48, 1, 7, 7]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.0.1.0.lkp.cv2.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.0.1.0.lkp.cv2.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.0.1.0.lkp.cv3.c.weight - torch.Size([48, 48, 1, 1]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.0.1.0.lkp.cv3.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.0.1.0.lkp.cv3.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.0.1.0.lkp.cv4.weight - torch.Size([108, 48, 1, 1]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.0.1.0.lkp.cv4.bias - torch.Size([108]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.0.1.0.lkp.norm.weight - torch.Size([108]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.0.1.0.lkp.norm.bias - torch.Size([108]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.0.1.0.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.0.1.0.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.0.1.1.c.weight - torch.Size([96, 96, 1, 1]): 
+Initialized by user-defined `init_weights` in LSConv20SepBNHeadModule  
+
+bbox_head.head_module.cls_convs.0.1.1.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.0.1.1.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.1.0.0.lkp.cv1.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.1.0.0.lkp.cv1.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.1.0.0.lkp.cv2.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.1.0.0.lkp.cv2.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.1.0.0.lkp.cv3.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.1.0.0.lkp.cv3.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.1.0.0.lkp.norm.weight - torch.Size([108]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.1.0.0.lkp.norm.bias - torch.Size([108]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.1.0.0.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.1.0.0.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.1.0.1.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.1.0.1.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.1.1.0.lkp.cv1.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.1.1.0.lkp.cv1.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.1.1.0.lkp.cv2.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.1.1.0.lkp.cv2.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.1.1.0.lkp.cv3.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.1.1.0.lkp.cv3.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.1.1.0.lkp.norm.weight - torch.Size([108]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.1.1.0.lkp.norm.bias - torch.Size([108]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.1.1.0.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.1.1.0.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.1.1.1.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.1.1.1.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.2.0.0.lkp.cv1.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.2.0.0.lkp.cv1.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.2.0.0.lkp.cv2.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.2.0.0.lkp.cv2.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.2.0.0.lkp.cv3.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.2.0.0.lkp.cv3.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.2.0.0.lkp.norm.weight - torch.Size([108]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.2.0.0.lkp.norm.bias - torch.Size([108]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.2.0.0.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.2.0.0.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.2.0.1.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.2.0.1.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.2.1.0.lkp.cv1.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.2.1.0.lkp.cv1.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.2.1.0.lkp.cv2.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.2.1.0.lkp.cv2.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.2.1.0.lkp.cv3.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.2.1.0.lkp.cv3.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.2.1.0.lkp.norm.weight - torch.Size([108]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.2.1.0.lkp.norm.bias - torch.Size([108]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.2.1.0.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.2.1.0.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.2.1.1.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.cls_convs.2.1.1.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.0.0.0.lkp.cv1.c.weight - torch.Size([48, 96, 1, 1]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.0.0.0.lkp.cv1.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.0.0.0.lkp.cv1.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.0.0.0.lkp.cv2.c.weight - torch.Size([48, 1, 7, 7]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.0.0.0.lkp.cv2.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.0.0.0.lkp.cv2.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.0.0.0.lkp.cv3.c.weight - torch.Size([48, 48, 1, 1]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.0.0.0.lkp.cv3.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.0.0.0.lkp.cv3.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.0.0.0.lkp.cv4.weight - torch.Size([108, 48, 1, 1]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.0.0.0.lkp.cv4.bias - torch.Size([108]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.0.0.0.lkp.norm.weight - torch.Size([108]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.0.0.0.lkp.norm.bias - torch.Size([108]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.0.0.0.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.0.0.0.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.0.0.1.c.weight - torch.Size([96, 96, 1, 1]): 
+Initialized by user-defined `init_weights` in LSConv20SepBNHeadModule  
+
+bbox_head.head_module.reg_convs.0.0.1.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.0.0.1.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.0.1.0.lkp.cv1.c.weight - torch.Size([48, 96, 1, 1]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.0.1.0.lkp.cv1.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.0.1.0.lkp.cv1.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.0.1.0.lkp.cv2.c.weight - torch.Size([48, 1, 7, 7]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.0.1.0.lkp.cv2.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.0.1.0.lkp.cv2.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.0.1.0.lkp.cv3.c.weight - torch.Size([48, 48, 1, 1]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.0.1.0.lkp.cv3.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.0.1.0.lkp.cv3.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.0.1.0.lkp.cv4.weight - torch.Size([108, 48, 1, 1]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.0.1.0.lkp.cv4.bias - torch.Size([108]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.0.1.0.lkp.norm.weight - torch.Size([108]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.0.1.0.lkp.norm.bias - torch.Size([108]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.0.1.0.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.0.1.0.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.0.1.1.c.weight - torch.Size([96, 96, 1, 1]): 
+Initialized by user-defined `init_weights` in LSConv20SepBNHeadModule  
+
+bbox_head.head_module.reg_convs.0.1.1.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.0.1.1.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.1.0.0.lkp.cv1.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.1.0.0.lkp.cv1.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.1.0.0.lkp.cv2.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.1.0.0.lkp.cv2.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.1.0.0.lkp.cv3.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.1.0.0.lkp.cv3.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.1.0.0.lkp.norm.weight - torch.Size([108]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.1.0.0.lkp.norm.bias - torch.Size([108]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.1.0.0.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.1.0.0.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.1.0.1.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.1.0.1.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.1.1.0.lkp.cv1.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.1.1.0.lkp.cv1.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.1.1.0.lkp.cv2.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.1.1.0.lkp.cv2.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.1.1.0.lkp.cv3.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.1.1.0.lkp.cv3.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.1.1.0.lkp.norm.weight - torch.Size([108]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.1.1.0.lkp.norm.bias - torch.Size([108]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.1.1.0.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.1.1.0.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.1.1.1.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.1.1.1.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.2.0.0.lkp.cv1.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.2.0.0.lkp.cv1.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.2.0.0.lkp.cv2.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.2.0.0.lkp.cv2.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.2.0.0.lkp.cv3.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.2.0.0.lkp.cv3.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.2.0.0.lkp.norm.weight - torch.Size([108]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.2.0.0.lkp.norm.bias - torch.Size([108]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.2.0.0.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.2.0.0.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.2.0.1.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.2.0.1.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.2.1.0.lkp.cv1.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.2.1.0.lkp.cv1.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.2.1.0.lkp.cv2.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.2.1.0.lkp.cv2.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.2.1.0.lkp.cv3.bn.weight - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.2.1.0.lkp.cv3.bn.bias - torch.Size([48]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.2.1.0.lkp.norm.weight - torch.Size([108]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.2.1.0.lkp.norm.bias - torch.Size([108]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.2.1.0.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.2.1.0.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.2.1.1.bn.weight - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.reg_convs.2.1.1.bn.bias - torch.Size([96]): 
+The value is the same before and after calling `init_weights` of YOLODetector  
+
+bbox_head.head_module.rtm_cls.0.weight - torch.Size([20, 96, 1, 1]): 
+Initialized by user-defined `init_weights` in LSConv20SepBNHeadModule  
+
+bbox_head.head_module.rtm_cls.0.bias - torch.Size([20]): 
+Initialized by user-defined `init_weights` in LSConv20SepBNHeadModule  
+
+bbox_head.head_module.rtm_cls.1.weight - torch.Size([20, 96, 1, 1]): 
+Initialized by user-defined `init_weights` in LSConv20SepBNHeadModule  
+
+bbox_head.head_module.rtm_cls.1.bias - torch.Size([20]): 
+Initialized by user-defined `init_weights` in LSConv20SepBNHeadModule  
+
+bbox_head.head_module.rtm_cls.2.weight - torch.Size([20, 96, 1, 1]): 
+Initialized by user-defined `init_weights` in LSConv20SepBNHeadModule  
+
+bbox_head.head_module.rtm_cls.2.bias - torch.Size([20]): 
+Initialized by user-defined `init_weights` in LSConv20SepBNHeadModule  
+
+bbox_head.head_module.rtm_reg.0.weight - torch.Size([4, 96, 1, 1]): 
+Initialized by user-defined `init_weights` in LSConv20SepBNHeadModule  
+
+bbox_head.head_module.rtm_reg.0.bias - torch.Size([4]): 
+Initialized by user-defined `init_weights` in LSConv20SepBNHeadModule  
+
+bbox_head.head_module.rtm_reg.1.weight - torch.Size([4, 96, 1, 1]): 
+Initialized by user-defined `init_weights` in LSConv20SepBNHeadModule  
+
+bbox_head.head_module.rtm_reg.1.bias - torch.Size([4]): 
+Initialized by user-defined `init_weights` in LSConv20SepBNHeadModule  
+
+bbox_head.head_module.rtm_reg.2.weight - torch.Size([4, 96, 1, 1]): 
+Initialized by user-defined `init_weights` in LSConv20SepBNHeadModule  
+
+bbox_head.head_module.rtm_reg.2.bias - torch.Size([4]): 
+Initialized by user-defined `init_weights` in LSConv20SepBNHeadModule  
+2026/10/17 10:02:39 - mmengine - INFO - Load checkpoint from /home/pwt/Paper1/work_dirs/lsconv_20_rtmdet_tiny_dior_640_gpu1_bs36/epoch_296.pth
+2026/10/17 10:02:39 - mmengine - INFO - resumed epoch: 296, iter: 48248
+2026/10/17 10:02:39 - mmengine - WARNING - "FileClient" will be deprecated in future. Please use io functions in https://mmengine.readthedocs.io/en/latest/api/fileio.html#file-io
+2026/10/17 10:02:39 - mmengine - WARNING - "HardDiskBackend" is the alias of "LocalBackend" and the former will be deprecated in future.
+2026/10/17 10:02:39 - mmengine - INFO - Checkpoints will be saved to /home/pwt/Paper1/work_dirs/lsconv_20_rtmdet_tiny_dior_640_gpu1_bs36.
+2026/10/17 10:02:39 - mmengine - INFO - Switch pipeline now!
+2026/10/17 10:03:04 - mmengine - INFO - Epoch(train) [297][ 50/163]  base_lr: 2.8927e-05 lr: 2.8927e-05  eta: 0:05:06  time: 0.5083  data_time: 0.0462  memory: 14567  loss: 0.4297  loss_cls: 0.1589  loss_bbox: 0.2708
+2026/10/17 10:03:24 - mmengine - INFO - Epoch(train) [297][100/163]  base_lr: 2.8799e-05 lr: 2.8799e-05  eta: 0:04:08  time: 0.3913  data_time: 0.0035  memory: 13662  loss: 0.4436  loss_cls: 0.1649  loss_bbox: 0.2787
+2026/10/17 10:03:43 - mmengine - INFO - Epoch(train) [297][150/163]  base_lr: 2.8683e-05 lr: 2.8683e-05  eta: 0:03:36  time: 0.3915  data_time: 0.0038  memory: 20691  loss: 0.4408  loss_cls: 0.1538  loss_bbox: 0.2870
+2026/10/17 10:03:51 - mmengine - INFO - Exp name: lsconv_20_640_bs36_20261017_100231
+2026/10/17 10:03:51 - mmengine - INFO - Saving checkpoint at 297 epochs
+2026/10/17 10:04:14 - mmengine - INFO - Epoch(train) [298][ 50/163]  base_lr: 2.8552e-05 lr: 2.8552e-05  eta: 0:03:11  time: 0.4121  data_time: 0.0279  memory: 16549  loss: 0.4344  loss_cls: 0.1579  loss_bbox: 0.2765
+2026/10/17 10:04:34 - mmengine - INFO - Epoch(train) [298][100/163]  base_lr: 2.8460e-05 lr: 2.8460e-05  eta: 0:02:47  time: 0.3998  data_time: 0.0059  memory: 19033  loss: 0.4338  loss_cls: 0.1576  loss_bbox: 0.2763
+2026/10/17 10:04:53 - mmengine - INFO - Epoch(train) [298][150/163]  base_lr: 2.8380e-05 lr: 2.8380e-05  eta: 0:02:23  time: 0.3828  data_time: 0.0039  memory: 14640  loss: 0.4247  loss_cls: 0.1510  loss_bbox: 0.2737
+2026/10/17 10:04:57 - mmengine - INFO - Exp name: lsconv_20_640_bs36_20261017_100231
+2026/10/17 10:04:57 - mmengine - INFO - Saving checkpoint at 298 epochs
+2026/10/17 10:05:19 - mmengine - INFO - Epoch(train) [299][ 50/163]  base_lr: 2.8294e-05 lr: 2.8294e-05  eta: 0:01:54  time: 0.3891  data_time: 0.0312  memory: 19784  loss: 0.4281  loss_cls: 0.1527  loss_bbox: 0.2754
+2026/10/17 10:05:36 - mmengine - INFO - Epoch(train) [299][100/163]  base_lr: 2.8239e-05 lr: 2.8239e-05  eta: 0:01:32  time: 0.3539  data_time: 0.0032  memory: 16045  loss: 0.4387  loss_cls: 0.1604  loss_bbox: 0.2784
+2026/10/17 10:05:54 - mmengine - INFO - Epoch(train) [299][150/163]  base_lr: 2.8194e-05 lr: 2.8194e-05  eta: 0:01:11  time: 0.3646  data_time: 0.0031  memory: 14640  loss: 0.4330  loss_cls: 0.1540  loss_bbox: 0.2790
+2026/10/17 10:05:59 - mmengine - INFO - Exp name: lsconv_20_640_bs36_20261017_100231
+2026/10/17 10:05:59 - mmengine - INFO - Saving checkpoint at 299 epochs
+2026/10/17 10:06:21 - mmengine - INFO - Epoch(train) [300][ 50/163]  base_lr: 2.8154e-05 lr: 2.8154e-05  eta: 0:00:45  time: 0.4044  data_time: 0.0281  memory: 12808  loss: 0.4315  loss_cls: 0.1563  loss_bbox: 0.2752
+2026/10/17 10:06:40 - mmengine - INFO - Epoch(train) [300][100/163]  base_lr: 2.8134e-05 lr: 2.8134e-05  eta: 0:00:25  time: 0.3811  data_time: 0.0036  memory: 20688  loss: 0.4465  loss_cls: 0.1588  loss_bbox: 0.2877
+2026/10/17 10:06:58 - mmengine - INFO - Epoch(train) [300][150/163]  base_lr: 2.8125e-05 lr: 2.8125e-05  eta: 0:00:05  time: 0.3593  data_time: 0.0033  memory: 15342  loss: 0.4286  loss_cls: 0.1568  loss_bbox: 0.2718
+2026/10/17 10:07:02 - mmengine - INFO - Exp name: lsconv_20_640_bs36_20261017_100231
+2026/10/17 10:07:02 - mmengine - INFO - Saving checkpoint at 300 epochs
+2026/10/17 10:07:18 - mmengine - INFO - Epoch(val) [300][ 50/733]    eta: 0:03:17  time: 0.2891  data_time: 0.0150  memory: 11578  
+2026/10/17 10:07:31 - mmengine - INFO - Epoch(val) [300][100/733]    eta: 0:02:50  time: 0.2504  data_time: 0.0021  memory: 395  
+2026/10/17 10:07:43 - mmengine - INFO - Epoch(val) [300][150/733]    eta: 0:02:30  time: 0.2327  data_time: 0.0019  memory: 395  
+2026/10/17 10:07:54 - mmengine - INFO - Epoch(val) [300][200/733]    eta: 0:02:13  time: 0.2310  data_time: 0.0028  memory: 395  
+2026/10/17 10:08:06 - mmengine - INFO - Epoch(val) [300][250/733]    eta: 0:01:59  time: 0.2334  data_time: 0.0019  memory: 395  
+2026/10/17 10:08:18 - mmengine - INFO - Epoch(val) [300][300/733]    eta: 0:01:46  time: 0.2409  data_time: 0.0020  memory: 395  
+2026/10/17 10:08:30 - mmengine - INFO - Epoch(val) [300][350/733]    eta: 0:01:33  time: 0.2320  data_time: 0.0020  memory: 395  
+2026/10/17 10:08:41 - mmengine - INFO - Epoch(val) [300][400/733]    eta: 0:01:20  time: 0.2281  data_time: 0.0018  memory: 395  
+2026/10/17 10:08:53 - mmengine - INFO - Epoch(val) [300][450/733]    eta: 0:01:08  time: 0.2456  data_time: 0.0022  memory: 395  
+2026/10/17 10:09:05 - mmengine - INFO - Epoch(val) [300][500/733]    eta: 0:00:56  time: 0.2341  data_time: 0.0019  memory: 395  
+2026/10/17 10:09:17 - mmengine - INFO - Epoch(val) [300][550/733]    eta: 0:00:44  time: 0.2451  data_time: 0.0022  memory: 395  
+2026/10/17 10:09:29 - mmengine - INFO - Epoch(val) [300][600/733]    eta: 0:00:32  time: 0.2434  data_time: 0.0019  memory: 395  
+2026/10/17 10:09:41 - mmengine - INFO - Epoch(val) [300][650/733]    eta: 0:00:20  time: 0.2384  data_time: 0.0019  memory: 395  
+2026/10/17 10:09:53 - mmengine - INFO - Epoch(val) [300][700/733]    eta: 0:00:07  time: 0.2380  data_time: 0.0020  memory: 395  
+2026/10/17 10:10:01 - mmengine - INFO - 
+---------------iou_thr: 0.5---------------
+2026/10/17 10:10:09 - mmengine - INFO - 
++-------------------------+-------+--------+--------+-------+
+| class                   | gts   | dets   | recall | ap    |
++-------------------------+-------+--------+--------+-------+
+| airplane                | 654   | 105102 | 0.916  | 0.909 |
+| airport                 | 333   | 106080 | 0.961  | 0.735 |
+| baseballfield           | 1140  | 67578  | 0.932  | 0.908 |
+| basketballcourt         | 515   | 79054  | 0.928  | 0.805 |
+| bridge                  | 855   | 125901 | 0.683  | 0.434 |
+| chimney                 | 307   | 24125  | 0.909  | 0.820 |
+| dam                     | 260   | 73440  | 0.969  | 0.527 |
+| expressway-service-area | 543   | 47810  | 0.715  | 0.638 |
+| expressway-toll-station | 318   | 12285  | 0.686  | 0.605 |
+| golffield               | 274   | 100429 | 0.949  | 0.755 |
+| groundtrackfield        | 593   | 80637  | 0.956  | 0.769 |
+| harbor                  | 1225  | 138846 | 0.922  | 0.681 |
+| overpass                | 760   | 137099 | 0.796  | 0.620 |
+| ship                    | 14297 | 127972 | 0.952  | 0.893 |
+| stadium                 | 301   | 22263  | 0.980  | 0.894 |
+| storagetank             | 1709  | 69519  | 0.865  | 0.787 |
+| tenniscourt             | 2666  | 53631  | 0.941  | 0.889 |
+| trainstation            | 256   | 60530  | 0.973  | 0.536 |
+| vehicle                 | 7024  | 277136 | 0.870  | 0.715 |
+| windmill                | 1404  | 49463  | 0.878  | 0.779 |
++-------------------------+-------+--------+--------+-------+
+| mAP                     |       |        |        | 0.735 |
++-------------------------+-------+--------+--------+-------+
+2026/10/17 10:10:44 - mmengine - INFO - Evaluating bbox...
+2026/10/17 10:12:51 - mmengine - INFO - 
++-------------------------+-------+--------+--------+-------+-------+-------+
+| category                | mAP   | mAP_50 | mAP_75 | mAP_s | mAP_m | mAP_l |
++-------------------------+-------+--------+--------+-------+-------+-------+
+| airplane                | 0.765 | 0.902  | 0.888  | 0.0   | 0.494 | 0.851 |
+| airport                 | 0.429 | 0.756  | 0.466  | nan   | 0.097 | 0.442 |
+| baseballfield           | 0.802 | 0.92   | 0.914  | 0.0   | 0.731 | 0.87  |
+| basketballcourt         | 0.693 | 0.82   | 0.77   | 0.0   | 0.445 | 0.822 |
+| bridge                  | 0.248 | 0.426  | 0.267  | 0.016 | 0.091 | 0.489 |
+| chimney                 | 0.745 | 0.88   | 0.865  | 0.0   | 0.0   | 0.805 |
+| dam                     | 0.255 | 0.519  | 0.203  | 0.001 | 0.141 | 0.285 |
+| expressway-service-area | 0.506 | 0.683  | 0.617  | 0.0   | 0.0   | 0.669 |
+| expressway-toll-station | 0.487 | 0.611  | 0.575  | 0.01  | 0.473 | 0.808 |
+| golffield               | 0.521 | 0.778  | 0.612  | nan   | 0.002 | 0.541 |
+| groundtrackfield        | 0.627 | 0.797  | 0.692  | 0.138 | 0.415 | 0.828 |
+| harbor                  | 0.452 | 0.694  | 0.51   | 0.021 | 0.162 | 0.542 |
+| overpass                | 0.403 | 0.633  | 0.45   | 0.007 | 0.083 | 0.607 |
+| ship                    | 0.482 | 0.806  | 0.531  | 0.384 | 0.63  | 0.687 |
+| stadium                 | 0.747 | 0.926  | 0.878  | 0.008 | 0.153 | 0.764 |
+| storagetank             | 0.663 | 0.806  | 0.754  | 0.07  | 0.735 | 0.867 |
+| tenniscourt             | 0.812 | 0.91   | 0.868  | 0.036 | 0.62  | 0.934 |
+| trainstation            | 0.208 | 0.537  | 0.095  | 0.0   | 0.01  | 0.219 |
+| vehicle                 | 0.435 | 0.728  | 0.473  | 0.284 | 0.673 | 0.555 |
+| windmill                | 0.38  | 0.792  | 0.327  | 0.157 | 0.513 | 0.65  |
++-------------------------+-------+--------+--------+-------+-------+-------+
+2026/10/17 10:12:51 - mmengine - INFO - bbox_mAP_copypaste: 0.533 0.746 0.588 0.063 0.323 0.662
+2026/10/17 10:12:55 - mmengine - INFO - Epoch(val) [300][733/733]    pascal_voc/mAP: 0.7349  pascal_voc/AP50: 0.7350  coco/airplane_precision: 0.7650  coco/airport_precision: 0.4290  coco/baseballfield_precision: 0.8020  coco/basketballcourt_precision: 0.6930  coco/bridge_precision: 0.2480  coco/chimney_precision: 0.7450  coco/dam_precision: 0.2550  coco/expressway-service-area_precision: 0.5060  coco/expressway-toll-station_precision: 0.4870  coco/golffield_precision: 0.5210  coco/groundtrackfield_precision: 0.6270  coco/harbor_precision: 0.4520  coco/overpass_precision: 0.4030  coco/ship_precision: 0.4820  coco/stadium_precision: 0.7470  coco/storagetank_precision: 0.6630  coco/tenniscourt_precision: 0.8120  coco/trainstation_precision: 0.2080  coco/vehicle_precision: 0.4350  coco/windmill_precision: 0.3800  coco/bbox_mAP: 0.5330  coco/bbox_mAP_50: 0.7460  coco/bbox_mAP_75: 0.5880  coco/bbox_mAP_s: 0.0630  coco/bbox_mAP_m: 0.3230  coco/bbox_mAP_l: 0.6620  data_time: 0.0029  time: 0.2413
+2026/10/17 10:12:55 - mmengine - INFO - The previous best checkpoint /home/pwt/Paper1/work_dirs/lsconv_20_rtmdet_tiny_dior_640_gpu1_bs36/best_pascal_voc_mAP_epoch_290.pth is removed
+2026/10/17 10:12:56 - mmengine - INFO - The best checkpoint with 0.7349 pascal_voc/mAP at 300 epoch is saved to best_pascal_voc_mAP_epoch_300.pth.
+2026/10/17 10:12:57 - mmengine - INFO - The previous best checkpoint /home/pwt/Paper1/work_dirs/lsconv_20_rtmdet_tiny_dior_640_gpu1_bs36/best_coco_bbox_mAP_epoch_290.pth is removed
+2026/10/17 10:12:57 - mmengine - INFO - The best checkpoint with 0.5330 coco/bbox_mAP at 300 epoch is saved to best_coco_bbox_mAP_epoch_300.pth.

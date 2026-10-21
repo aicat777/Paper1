@@ -1,0 +1,253 @@
+{
+  "status": "passed",
+  "method": "scdown_dsconv",
+  "official_train_entrypoint": true,
+  "input_size": [
+    640,
+    640
+  ],
+  "microbatch": 2,
+  "optimizer_updates": 16,
+  "accumulation": 1,
+  "val_passes": 2,
+  "val_images_per_pass": 32,
+  "predictions_checked": 64,
+  "raw_predictions_checked": 8,
+  "full_state_ema_roundtrips": 2,
+  "model_optimizer_scaler_serialization": true,
+  "strong_and_weak_augmentation": true,
+  "coco_evaluation_scoped_to_subset": true,
+  "watched_parameter_tensors": 60,
+  "finite_losses": true,
+  "finite_predictions": true,
+  "amp_skipped_updates": 0,
+  "gradient_max": {
+    "neck.bottom_up_layers.1.blocks.0.conv1.pointwise_conv.bn.weight": 0.20369777083396912,
+    "neck.bottom_up_layers.1.blocks.0.conv1.pointwise_conv.bn.bias": 0.4040072560310364,
+    "neck.bottom_up_layers.1.blocks.0.conv1.pointwise_conv.conv.weight": 6.1953125,
+    "neck.bottom_up_layers.1.blocks.0.conv1.depthwise_conv.bn.weight": 1.2131061553955078,
+    "neck.bottom_up_layers.1.blocks.0.conv1.depthwise_conv.bn.bias": 0.34635424613952637,
+    "neck.bottom_up_layers.1.blocks.0.conv1.depthwise_conv.conv.weight": 4.03125,
+    "neck.downsample_layers.1.cv2.bn.weight": 1.5893718004226685,
+    "neck.downsample_layers.1.cv2.bn.bias": 0.00026530027389526367,
+    "neck.downsample_layers.1.cv2.conv.weight": 5.4453125,
+    "neck.downsample_layers.1.cv1.bn.weight": 0.27967938780784607,
+    "neck.downsample_layers.1.cv1.bn.bias": 0.4586505889892578,
+    "neck.downsample_layers.1.cv1.conv.weight": 5.94921875,
+    "neck.bottom_up_layers.0.blocks.0.conv1.pointwise_conv.bn.weight": 0.3915363848209381,
+    "neck.bottom_up_layers.0.blocks.0.conv1.pointwise_conv.bn.bias": 0.4867742657661438,
+    "neck.bottom_up_layers.0.blocks.0.conv1.pointwise_conv.conv.weight": 10.515625,
+    "neck.bottom_up_layers.0.blocks.0.conv1.depthwise_conv.bn.weight": 1.9981516599655151,
+    "neck.bottom_up_layers.0.blocks.0.conv1.depthwise_conv.bn.bias": 0.5674203634262085,
+    "neck.bottom_up_layers.0.blocks.0.conv1.depthwise_conv.conv.weight": 9.96875,
+    "neck.top_down_layers.1.blocks.0.conv1.pointwise_conv.bn.weight": 1.0930359363555908,
+    "neck.top_down_layers.1.blocks.0.conv1.pointwise_conv.bn.bias": 1.1579852104187012,
+    "neck.top_down_layers.1.blocks.0.conv1.pointwise_conv.conv.weight": 21.703125,
+    "neck.top_down_layers.1.blocks.0.conv1.depthwise_conv.bn.weight": 3.6512913703918457,
+    "neck.top_down_layers.1.blocks.0.conv1.depthwise_conv.bn.bias": 1.2366405725479126,
+    "neck.top_down_layers.1.blocks.0.conv1.depthwise_conv.conv.weight": 12.9140625,
+    "neck.top_down_layers.0.0.blocks.0.conv1.pointwise_conv.bn.weight": 1.4312806129455566,
+    "neck.top_down_layers.0.0.blocks.0.conv1.pointwise_conv.bn.bias": 1.5898683071136475,
+    "neck.top_down_layers.0.0.blocks.0.conv1.pointwise_conv.conv.weight": 22.625,
+    "neck.top_down_layers.0.0.blocks.0.conv1.depthwise_conv.bn.weight": 6.9663872718811035,
+    "neck.top_down_layers.0.0.blocks.0.conv1.depthwise_conv.bn.bias": 1.8499171733856201,
+    "neck.top_down_layers.0.0.blocks.0.conv1.depthwise_conv.conv.weight": 22.1875,
+    "backbone.stage4.2.blocks.0.conv1.pointwise_conv.bn.weight": 1.484662413597107,
+    "backbone.stage4.2.blocks.0.conv1.pointwise_conv.bn.bias": 1.7569937705993652,
+    "backbone.stage4.2.blocks.0.conv1.pointwise_conv.conv.weight": 14.6953125,
+    "backbone.stage4.2.blocks.0.conv1.depthwise_conv.bn.weight": 8.204923629760742,
+    "backbone.stage4.2.blocks.0.conv1.depthwise_conv.bn.bias": 2.1658055782318115,
+    "backbone.stage4.2.blocks.0.conv1.depthwise_conv.conv.weight": 180.375,
+    "backbone.stage4.0.cv2.bn.weight": 13.607247352600098,
+    "backbone.stage4.0.cv2.bn.bias": 0.0012534260749816895,
+    "backbone.stage4.0.cv2.conv.weight": 289.25,
+    "backbone.stage4.0.cv1.bn.weight": 2.107527732849121,
+    "backbone.stage4.0.cv1.bn.bias": 4.001738548278809,
+    "backbone.stage4.0.cv1.conv.weight": 41.8125,
+    "backbone.stage3.1.blocks.0.conv1.pointwise_conv.bn.weight": 4.914608955383301,
+    "backbone.stage3.1.blocks.0.conv1.pointwise_conv.bn.bias": 6.348814964294434,
+    "backbone.stage3.1.blocks.0.conv1.pointwise_conv.conv.weight": 34.0,
+    "backbone.stage3.1.blocks.0.conv1.depthwise_conv.bn.weight": 29.30597496032715,
+    "backbone.stage3.1.blocks.0.conv1.depthwise_conv.bn.bias": 5.893926620483398,
+    "backbone.stage3.1.blocks.0.conv1.depthwise_conv.conv.weight": 268.0,
+    "backbone.stage3.0.cv2.bn.weight": 30.688350677490234,
+    "backbone.stage3.0.cv2.bn.bias": 0.004813551902770996,
+    "backbone.stage3.0.cv2.conv.weight": 814.0,
+    "backbone.stage3.0.cv1.bn.weight": 5.6302595138549805,
+    "backbone.stage3.0.cv1.bn.bias": 12.433632850646973,
+    "backbone.stage3.0.cv1.conv.weight": 64.125,
+    "backbone.stage2.1.blocks.0.conv1.pointwise_conv.bn.weight": 6.790135860443115,
+    "backbone.stage2.1.blocks.0.conv1.pointwise_conv.bn.bias": 12.804052352905273,
+    "backbone.stage2.1.blocks.0.conv1.pointwise_conv.conv.weight": 60.59375,
+    "backbone.stage2.1.blocks.0.conv1.depthwise_conv.bn.weight": 56.55390548706055,
+    "backbone.stage2.1.blocks.0.conv1.depthwise_conv.bn.bias": 16.751928329467773,
+    "backbone.stage2.1.blocks.0.conv1.depthwise_conv.conv.weight": 504.75
+  },
+  "parameter_updates_max": {
+    "backbone.stage2.1.blocks.0.conv1.depthwise_conv.conv.weight": 0.005835011601448059,
+    "backbone.stage2.1.blocks.0.conv1.depthwise_conv.bn.weight": 0.005643486976623535,
+    "backbone.stage2.1.blocks.0.conv1.depthwise_conv.bn.bias": 0.004524305462837219,
+    "backbone.stage2.1.blocks.0.conv1.pointwise_conv.conv.weight": 0.006383266765624285,
+    "backbone.stage2.1.blocks.0.conv1.pointwise_conv.bn.weight": 0.00497889518737793,
+    "backbone.stage2.1.blocks.0.conv1.pointwise_conv.bn.bias": 0.004132546484470367,
+    "backbone.stage3.0.cv1.conv.weight": 0.006999684497714043,
+    "backbone.stage3.0.cv1.bn.weight": 0.0058057308197021484,
+    "backbone.stage3.0.cv1.bn.bias": 0.005740117281675339,
+    "backbone.stage3.0.cv2.conv.weight": 0.0064797308295965195,
+    "backbone.stage3.0.cv2.bn.weight": 0.006219983100891113,
+    "backbone.stage3.0.cv2.bn.bias": 0.0053030094131827354,
+    "backbone.stage3.1.blocks.0.conv1.depthwise_conv.conv.weight": 0.005793802440166473,
+    "backbone.stage3.1.blocks.0.conv1.depthwise_conv.bn.weight": 0.0057166218757629395,
+    "backbone.stage3.1.blocks.0.conv1.depthwise_conv.bn.bias": 0.005942326504737139,
+    "backbone.stage3.1.blocks.0.conv1.pointwise_conv.conv.weight": 0.00675085186958313,
+    "backbone.stage3.1.blocks.0.conv1.pointwise_conv.bn.weight": 0.0058983564376831055,
+    "backbone.stage3.1.blocks.0.conv1.pointwise_conv.bn.bias": 0.006155341397970915,
+    "backbone.stage4.0.cv1.conv.weight": 0.007176220417022705,
+    "backbone.stage4.0.cv1.bn.weight": 0.0060749053955078125,
+    "backbone.stage4.0.cv1.bn.bias": 0.005601077806204557,
+    "backbone.stage4.0.cv2.conv.weight": 0.006750769913196564,
+    "backbone.stage4.0.cv2.bn.weight": 0.005583763122558594,
+    "backbone.stage4.0.cv2.bn.bias": 0.005876914598047733,
+    "backbone.stage4.2.blocks.0.conv1.depthwise_conv.conv.weight": 0.006607115268707275,
+    "backbone.stage4.2.blocks.0.conv1.depthwise_conv.bn.weight": 0.0064171552658081055,
+    "backbone.stage4.2.blocks.0.conv1.depthwise_conv.bn.bias": 0.006070955190807581,
+    "backbone.stage4.2.blocks.0.conv1.pointwise_conv.conv.weight": 0.007269307971000671,
+    "backbone.stage4.2.blocks.0.conv1.pointwise_conv.bn.weight": 0.005686163902282715,
+    "backbone.stage4.2.blocks.0.conv1.pointwise_conv.bn.bias": 0.005132852587848902,
+    "neck.top_down_layers.0.0.blocks.0.conv1.depthwise_conv.conv.weight": 0.006132245063781738,
+    "neck.top_down_layers.0.0.blocks.0.conv1.depthwise_conv.bn.weight": 0.006248295307159424,
+    "neck.top_down_layers.0.0.blocks.0.conv1.depthwise_conv.bn.bias": 0.004776872228831053,
+    "neck.top_down_layers.0.0.blocks.0.conv1.pointwise_conv.conv.weight": 0.0069119930267333984,
+    "neck.top_down_layers.0.0.blocks.0.conv1.pointwise_conv.bn.weight": 0.004894733428955078,
+    "neck.top_down_layers.0.0.blocks.0.conv1.pointwise_conv.bn.bias": 0.005381102208048105,
+    "neck.top_down_layers.1.blocks.0.conv1.depthwise_conv.conv.weight": 0.006159946322441101,
+    "neck.top_down_layers.1.blocks.0.conv1.depthwise_conv.bn.weight": 0.004396200180053711,
+    "neck.top_down_layers.1.blocks.0.conv1.depthwise_conv.bn.bias": 0.005261264741420746,
+    "neck.top_down_layers.1.blocks.0.conv1.pointwise_conv.conv.weight": 0.006409727036952972,
+    "neck.top_down_layers.1.blocks.0.conv1.pointwise_conv.bn.weight": 0.005930125713348389,
+    "neck.top_down_layers.1.blocks.0.conv1.pointwise_conv.bn.bias": 0.005195606499910355,
+    "neck.downsample_layers.1.cv1.conv.weight": 0.006937693804502487,
+    "neck.downsample_layers.1.cv1.bn.weight": 0.005226254463195801,
+    "neck.downsample_layers.1.cv1.bn.bias": 0.0056524681858718395,
+    "neck.downsample_layers.1.cv2.conv.weight": 0.00634552538394928,
+    "neck.downsample_layers.1.cv2.bn.weight": 0.005667686462402344,
+    "neck.downsample_layers.1.cv2.bn.bias": 0.005409192759543657,
+    "neck.bottom_up_layers.0.blocks.0.conv1.depthwise_conv.conv.weight": 0.006372347474098206,
+    "neck.bottom_up_layers.0.blocks.0.conv1.depthwise_conv.bn.weight": 0.006227374076843262,
+    "neck.bottom_up_layers.0.blocks.0.conv1.depthwise_conv.bn.bias": 0.005463751032948494,
+    "neck.bottom_up_layers.0.blocks.0.conv1.pointwise_conv.conv.weight": 0.006356924772262573,
+    "neck.bottom_up_layers.0.blocks.0.conv1.pointwise_conv.bn.weight": 0.005478918552398682,
+    "neck.bottom_up_layers.0.blocks.0.conv1.pointwise_conv.bn.bias": 0.0054120151326060295,
+    "neck.bottom_up_layers.1.blocks.0.conv1.depthwise_conv.conv.weight": 0.006146766245365143,
+    "neck.bottom_up_layers.1.blocks.0.conv1.depthwise_conv.bn.weight": 0.005713343620300293,
+    "neck.bottom_up_layers.1.blocks.0.conv1.depthwise_conv.bn.bias": 0.005447447765618563,
+    "neck.bottom_up_layers.1.blocks.0.conv1.pointwise_conv.conv.weight": 0.006882175803184509,
+    "neck.bottom_up_layers.1.blocks.0.conv1.pointwise_conv.bn.weight": 0.005523264408111572,
+    "neck.bottom_up_layers.1.blocks.0.conv1.pointwise_conv.bn.bias": 0.005719822831451893
+  },
+  "losses": [
+    {
+      "loss": 0.38744133710861206,
+      "loss_cls": 0.34325143694877625,
+      "loss_bbox": 0.044189903885126114
+    },
+    {
+      "loss": 0.4570659399032593,
+      "loss_cls": 0.33401361107826233,
+      "loss_bbox": 0.12305232882499695
+    },
+    {
+      "loss": 0.8391140699386597,
+      "loss_cls": 0.3249662518501282,
+      "loss_bbox": 0.5141478180885315
+    },
+    {
+      "loss": 2.1781725883483887,
+      "loss_cls": 0.6005117893218994,
+      "loss_bbox": 1.5776609182357788
+    },
+    {
+      "loss": 2.0053462982177734,
+      "loss_cls": 0.4503003656864166,
+      "loss_bbox": 1.5550459623336792
+    },
+    {
+      "loss": 2.1250877380371094,
+      "loss_cls": 0.7333973050117493,
+      "loss_bbox": 1.3916904926300049
+    },
+    {
+      "loss": 2.122771978378296,
+      "loss_cls": 0.409932404756546,
+      "loss_bbox": 1.7128394842147827
+    },
+    {
+      "loss": 2.122817277908325,
+      "loss_cls": 0.45524680614471436,
+      "loss_bbox": 1.6675704717636108
+    },
+    {
+      "loss": 1.6457746028900146,
+      "loss_cls": 0.6366561055183411,
+      "loss_bbox": 1.0091184377670288
+    },
+    {
+      "loss": 0.7753602266311646,
+      "loss_cls": 0.2956140339374542,
+      "loss_bbox": 0.4797462224960327
+    },
+    {
+      "loss": 0.5735797882080078,
+      "loss_cls": 0.27681007981300354,
+      "loss_bbox": 0.2967697083950043
+    },
+    {
+      "loss": 1.966989517211914,
+      "loss_cls": 0.5069599747657776,
+      "loss_bbox": 1.4600294828414917
+    },
+    {
+      "loss": 1.2889399528503418,
+      "loss_cls": 0.5238949656486511,
+      "loss_bbox": 0.7650450468063354
+    },
+    {
+      "loss": 2.2518653869628906,
+      "loss_cls": 1.0824084281921387,
+      "loss_bbox": 1.1694570779800415
+    },
+    {
+      "loss": 1.684456706047058,
+      "loss_cls": 0.5079573392868042,
+      "loss_bbox": 1.176499366760254
+    },
+    {
+      "loss": 1.9501361846923828,
+      "loss_cls": 0.6052871942520142,
+      "loss_bbox": 1.3448489904403687
+    }
+  ],
+  "metrics": [
+    {
+      "pascal_voc/mAP": 0.0,
+      "coco/bbox_mAP": 0.0,
+      "coco/bbox_mAP_50": 0.0
+    },
+    {
+      "pascal_voc/mAP": 0.0,
+      "coco/bbox_mAP": 0.0,
+      "coco/bbox_mAP_50": 0.0
+    }
+  ],
+  "assignment": {
+    "fallback_positives": 0,
+    "floored_regression_positives": 0,
+    "unmatched_tiny": 0
+  },
+  "loss_scale_init": 32,
+  "warmup_enabled": false,
+  "saved_checkpoints": false,
+  "peak_allocated_gib": 0.6301889419555664,
+  "peak_reserved_gib": 0.7890625,
+  "elapsed_seconds": 21.785574618028477
+}

@@ -1,0 +1,16 @@
+test_active_rank_preserves_main_losses_and_reaches_real_predictors_once (tests.test_instance_semantic_rank.InstanceRankTests) ... /home/pwt/miniconda3/envs/rtmdet/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3483.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+ok
+test_all_gt_roi_is_retained_when_assignment_has_no_positive (tests.test_instance_semantic_rank.InstanceRankTests) ... ok
+test_assigner_empty_outside_and_zero_iou_preserves_official_matching (tests.test_instance_semantic_rank.InstanceRankTests) ... ok
+test_assigner_exact_official_outputs_and_gt_identity (tests.test_instance_semantic_rank.InstanceRankTests) ... ok
+test_empty_and_ddp_normalization_including_empty_rank (tests.test_instance_semantic_rank.InstanceRankTests) ... ok
+test_grouping_matches_loop_values_gradients_and_instance_balance (tests.test_instance_semantic_rank.InstanceRankTests) ... ok
+test_list_gt_interface_empty_gt_and_predict_only_construction (tests.test_instance_semantic_rank.InstanceRankTests) ... ok
+test_relative_logit_ranking_no_absolute_score_target (tests.test_instance_semantic_rank.InstanceRankTests) ... ok
+test_zero_weight_model_predictions_losses_gradients_and_update_equal (tests.test_instance_semantic_rank.InstanceRankTests) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 6.451s
+
+OK

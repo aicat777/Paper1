@@ -1,0 +1,17 @@
+[
+  {
+    "method": "instance_semantic_center",
+    "pid": 3107492,
+    "status": "/home/pwt/Paper1/work_dirs/instance_semantic_center_queue/status.json"
+  },
+  {
+    "method": "instance_semantic_matched",
+    "pid": 3107495,
+    "status": "/home/pwt/Paper1/work_dirs/instance_semantic_matched_queue/status.json"
+  },
+  {
+    "method": "instance_semantic_random",
+    "pid": 3107496,
+    "status": "/home/pwt/Paper1/work_dirs/instance_semantic_random_queue/status.json"
+  }
+]

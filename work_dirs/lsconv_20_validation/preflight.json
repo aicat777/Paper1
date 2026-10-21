@@ -1,0 +1,150 @@
+{
+  "status": "passed",
+  "method": "lsconv_20",
+  "parameters": 3855645,
+  "conv_gmac": 5.13419904,
+  "aggregation_gmac": 0.0456192,
+  "counted_gmac": 5.17981824,
+  "gflops_two_ops_per_mac": 10.35963648,
+  "runtime_lsconv_calls": 20,
+  "lsconv_shapes": [
+    [
+      1,
+      24,
+      160,
+      160
+    ],
+    [
+      1,
+      48,
+      80,
+      80
+    ],
+    [
+      1,
+      96,
+      40,
+      40
+    ],
+    [
+      1,
+      192,
+      20,
+      20
+    ],
+    [
+      1,
+      96,
+      40,
+      40
+    ],
+    [
+      1,
+      48,
+      80,
+      80
+    ],
+    [
+      1,
+      96,
+      40,
+      40
+    ],
+    [
+      1,
+      192,
+      20,
+      20
+    ],
+    [
+      1,
+      96,
+      80,
+      80
+    ],
+    [
+      1,
+      96,
+      80,
+      80
+    ],
+    [
+      1,
+      96,
+      80,
+      80
+    ],
+    [
+      1,
+      96,
+      80,
+      80
+    ],
+    [
+      1,
+      96,
+      40,
+      40
+    ],
+    [
+      1,
+      96,
+      40,
+      40
+    ],
+    [
+      1,
+      96,
+      40,
+      40
+    ],
+    [
+      1,
+      96,
+      40,
+      40
+    ],
+    [
+      1,
+      96,
+      20,
+      20
+    ],
+    [
+      1,
+      96,
+      20,
+      20
+    ],
+    [
+      1,
+      96,
+      20,
+      20
+    ],
+    [
+      1,
+      96,
+      20,
+      20
+    ]
+  ],
+  "prediction_points": 8400,
+  "original_neck_outputs": true,
+  "head_convolutions_shared": true,
+  "scale_norms_independent": true,
+  "head_bn": 60,
+  "head_gn": 12,
+  "author_constructor_states_preserved": true,
+  "scratch": true,
+  "microbatch": 36,
+  "accumulation": 1,
+  "input_size": [
+    640,
+    640
+  ],
+  "train_images": 5862,
+  "val_images": 5863,
+  "watched_parameter_tensors": 288,
+  "formal_batch_capacity_tested": false
+}

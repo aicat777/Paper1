@@ -1,0 +1,9 @@
+test_cuda_fp32_amp_forward_and_all_gradients (test_fdw_ksm.FDWKSMNumerics) ... [W NNPACK.cpp:64] Could not initialize NNPACK! Reason: Unsupported hardware.
+/home/pwt/miniconda3/envs/rtmdet/lib/python3.10/site-packages/torch/autograd/__init__.py:303: UserWarning: Applied workaround for CuDNN issue, install nvrtc.so (Triggered internally at ../aten/src/ATen/native/cudnn/Conv_v8.cpp:80.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+ok
+
+----------------------------------------------------------------------
+Ran 1 test in 13.212s
+
+OK

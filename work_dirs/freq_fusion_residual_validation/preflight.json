@@ -1,0 +1,116 @@
+{
+  "status": "passed",
+  "method": "freq_fusion_residual",
+  "parameters": 5015448,
+  "inference_conv_linear_gmac": 8.28595584,
+  "prediction_points": 8400,
+  "excludes_dynamic_filtering_resampling_norm_and_postprocessing": true,
+  "projection_parameters": 27648,
+  "extra_projection_gmac": 0.0884736,
+  "fusion_sites": [
+    {
+      "high": [
+        1,
+        192,
+        40,
+        40
+      ],
+      "low": [
+        1,
+        192,
+        20,
+        20
+      ],
+      "detail": [
+        1,
+        192,
+        40,
+        40
+      ],
+      "upsampled": [
+        1,
+        192,
+        40,
+        40
+      ]
+    },
+    {
+      "high": [
+        1,
+        96,
+        80,
+        80
+      ],
+      "low": [
+        1,
+        96,
+        40,
+        40
+      ],
+      "detail": [
+        1,
+        96,
+        80,
+        80
+      ],
+      "upsampled": [
+        1,
+        96,
+        80,
+        80
+      ]
+    }
+  ],
+  "projections": [
+    {
+      "input": [
+        1,
+        192,
+        40,
+        40
+      ],
+      "output": [
+        1,
+        96,
+        40,
+        40
+      ],
+      "bias": false,
+      "kernel": [
+        1,
+        1
+      ]
+    },
+    {
+      "input": [
+        1,
+        96,
+        80,
+        80
+      ],
+      "output": [
+        1,
+        96,
+        80,
+        80
+      ],
+      "bias": false,
+      "kernel": [
+        1,
+        1
+      ]
+    }
+  ],
+  "watched_parameter_tensors": 42,
+  "scratch": true,
+  "input_size": [
+    640,
+    640
+  ],
+  "formal_batch": 36,
+  "accumulation": 1,
+  "formal_batch_capacity_tested": false,
+  "train_images": 5862,
+  "val_images": 5863,
+  "unchanged_backbone_pan_outputs_head_and_training_protocol": true
+}

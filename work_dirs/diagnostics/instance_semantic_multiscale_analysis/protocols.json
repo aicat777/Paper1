@@ -1,0 +1,82 @@
+{
+  "baseline": {
+    "config": "/home/pwt/Paper1/work_dirs/rtmdet_tiny_dior_640_gpu1_bs36/baseline_640_bs36.py",
+    "batch": 36,
+    "accumulation": 1,
+    "input": [
+      640,
+      640
+    ],
+    "lr": 0.0005625,
+    "wd": 0.05,
+    "epochs": 300,
+    "warmup": 1000,
+    "ema": {
+      "ema_type": "ExpMomentumEMA",
+      "momentum": 0.0002,
+      "priority": 49,
+      "strict_load": false,
+      "type": "EMAHook",
+      "update_buffers": true
+    },
+    "scratch": true,
+    "seed": {
+      "deterministic": false,
+      "seed": 42
+    }
+  },
+  "old": {
+    "config": "/home/pwt/Paper1/work_dirs/instance_semantic_rtmdet_tiny_dior_640_gpu1_bs36/instance_semantic_640_bs36.py",
+    "batch": 36,
+    "accumulation": 1,
+    "input": [
+      640,
+      640
+    ],
+    "lr": 0.0005625000000000001,
+    "wd": 0.05,
+    "epochs": 300,
+    "warmup": 1000,
+    "ema": {
+      "ema_type": "ExpMomentumEMA",
+      "momentum": 0.0002,
+      "priority": 49,
+      "strict_load": false,
+      "type": "EMAHook",
+      "update_buffers": true
+    },
+    "scratch": true,
+    "seed": {
+      "deterministic": false,
+      "seed": 42
+    },
+    "same_experiment_resume": true,
+    "resume_checkpoint": "/home/pwt/Paper1/work_dirs/instance_semantic_rtmdet_tiny_dior_640_gpu1_bs36/epoch_46.pth"
+  },
+  "new": {
+    "config": "/home/pwt/Paper1/work_dirs/instance_semantic_multiscale_rtmdet_tiny_dior_640_gpu1_bs36/instance_semantic_multiscale_640_bs36.py",
+    "batch": 36,
+    "accumulation": 1,
+    "input": [
+      640,
+      640
+    ],
+    "lr": 0.0005625000000000001,
+    "wd": 0.05,
+    "epochs": 300,
+    "warmup": 1000,
+    "ema": {
+      "ema_type": "ExpMomentumEMA",
+      "momentum": 0.0002,
+      "priority": 49,
+      "strict_load": false,
+      "type": "EMAHook",
+      "update_buffers": true
+    },
+    "scratch": true,
+    "seed": {
+      "deterministic": false,
+      "seed": 42
+    }
+  }
+}

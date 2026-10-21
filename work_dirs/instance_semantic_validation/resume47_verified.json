@@ -1,0 +1,23 @@
+{
+  "verified_at": "2026-10-17T20:38:44.394864+08:00",
+  "state": "training",
+  "queue_pid": 3552946,
+  "trainer_pid": 3553957,
+  "checkpoint": "/home/pwt/Paper1/work_dirs/instance_semantic_rtmdet_tiny_dior_640_gpu1_bs36/epoch_47.pth",
+  "epoch": 47,
+  "iteration": 7661,
+  "complete_training_state": [
+    "meta",
+    "state_dict",
+    "optimizer",
+    "param_schedulers",
+    "ema_state_dict"
+  ],
+  "model_and_ema_finite": true,
+  "resume_confirmed_epoch": 46,
+  "resume_confirmed_iteration": 7498,
+  "current_log": "/home/pwt/Paper1/logs/instance_semantic_rtmdet_tiny_dior_640_gpu1_bs36_resume46.log",
+  "finite_logged_losses": true,
+  "real_batch": 36,
+  "only_instance_semantic_restarted": true
+}

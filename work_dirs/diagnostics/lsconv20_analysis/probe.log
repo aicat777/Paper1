@@ -1,0 +1,87 @@
+/home/pwt/miniconda3/envs/rtmdet/lib/python3.10/site-packages/torch/nn/modules/conv.py:459: UserWarning: Applied workaround for CuDNN issue, install nvrtc.so (Triggered internally at ../aten/src/ATen/native/cudnn/Conv_v8.cpp:80.)
+  return F.conv2d(input, weight, bias, self.stride,
+/home/pwt/miniconda3/envs/rtmdet/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3483.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+loading annotations into memory...
+Done (t=0.27s)
+creating index...
+index created!
+loading annotations into memory...
+Done (t=0.32s)
+creating index...
+index created!
+Loading and preparing results...
+DONE (t=0.36s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=3.22s).
+Accumulating evaluation results...
+DONE (t=0.77s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.533
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.739
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.593
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.106
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.511
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.683
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.350
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.590
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.635
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.163
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.598
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.771
+PAIRED ema {'metrics': {'pascal_voc/mAP': 0.7265076041221619, 'pascal_voc/AP50': 0.727, 'coco/bbox_mAP': 0.533, 'coco/bbox_mAP_50': 0.739, 'coco/bbox_mAP_75': 0.593, 'coco/bbox_mAP_s': 0.106, 'coco/bbox_mAP_m': 0.511, 'coco/bbox_mAP_l': 0.683}, 'seconds': 17.051507844997104}
+loading annotations into memory...
+Done (t=0.35s)
+creating index...
+index created!
+Loading and preparing results...
+DONE (t=0.43s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=3.63s).
+Accumulating evaluation results...
+DONE (t=0.78s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.535
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.744
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.587
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.104
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.498
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.683
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.349
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.596
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.632
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.170
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.597
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.774
+PAIRED raw {'metrics': {'pascal_voc/mAP': 0.7320317029953003, 'pascal_voc/AP50': 0.732, 'coco/bbox_mAP': 0.535, 'coco/bbox_mAP_50': 0.744, 'coco/bbox_mAP_75': 0.587, 'coco/bbox_mAP_s': 0.104, 'coco/bbox_mAP_m': 0.498, 'coco/bbox_mAP_l': 0.683}, 'seconds': 17.577583248988958}
+loading annotations into memory...
+Done (t=0.36s)
+creating index...
+index created!
+Loading and preparing results...
+DONE (t=0.39s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=3.27s).
+Accumulating evaluation results...
+DONE (t=0.81s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.511
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.711
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.573
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.085
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.486
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.651
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.346
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.582
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.622
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.147
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.593
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.754
+PAIRED ema_weights_raw_bn_buffers {'metrics': {'pascal_voc/mAP': 0.6958831548690796, 'pascal_voc/AP50': 0.696, 'coco/bbox_mAP': 0.511, 'coco/bbox_mAP_50': 0.711, 'coco/bbox_mAP_75': 0.573, 'coco/bbox_mAP_s': 0.085, 'coco/bbox_mAP_m': 0.486, 'coco/bbox_mAP_l': 0.651}, 'seconds': 17.197763351985486}
+REPORT /home/pwt/Paper1/work_dirs/diagnostics/lsconv20_analysis/report.json

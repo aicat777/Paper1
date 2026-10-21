@@ -1,0 +1,16 @@
+test_both_configs_match_legacy_batch36_training_protocol (test_ls_csp_variants.LSCSPVariants) ... ok
+test_exact_scope_channels_call_count_and_unchanged_detection_head (test_ls_csp_variants.LSCSPVariants) ... [W NNPACK.cpp:64] Could not initialize NNPACK! Reason: Unsupported hardware.
+/home/pwt/miniconda3/envs/rtmdet/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3483.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+ok
+test_full_detection_gradients_and_state_roundtrip (test_ls_csp_variants.LSCSPVariants) ... ok
+test_legacy_three_stage_special_case_is_bitwise_identical (test_ls_csp_variants.LSCSPVariants) ... ok
+test_neck_restores_modules_if_parent_initialization_raises (test_ls_csp_variants.LSCSPVariants) ... ok
+test_operator_sources_are_exact_copies_of_verified_legacy_core (test_ls_csp_variants.LSCSPVariants) ... ok
+test_parent_initialization_preserves_new_states_and_zero_ffn_scale (test_ls_csp_variants.LSCSPVariants) ... ok
+test_zero_initialized_ffn_is_identity_then_learns_all_parameters (test_ls_csp_variants.LSCSPVariants) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 8.694s
+
+OK

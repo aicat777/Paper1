@@ -1,0 +1,15 @@
+test_augmenting_path_and_infeasible_candidates (test_tiny_assignment.TinyAssignmentTests) ... ok
+test_disabled_head_loss_matches_baseline (test_tiny_assignment.TinyAssignmentTests) ... /home/pwt/miniconda3/envs/rtmdet/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3483.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+ok
+test_disabled_is_official_dsl_including_background_and_padding (test_tiny_assignment.TinyAssignmentTests) ... ok
+test_duplicate_boxes_have_distinct_gt_identity_and_only_local_matches (test_tiny_assignment.TinyAssignmentTests) ... ok
+test_local_capacity_exhaustion_does_not_create_far_or_duplicate_matches (test_tiny_assignment.TinyAssignmentTests) ... ok
+test_regression_floor_provides_gradient_without_changing_qfl (test_tiny_assignment.TinyAssignmentTests) ... ok
+test_rescue_preserves_existing_valid_baseline_positives (test_tiny_assignment.TinyAssignmentTests) ... ok
+test_reversed_predictions_get_ordered_edge_gradients_not_invalid_giou (test_tiny_assignment.TinyAssignmentTests) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 2.129s
+
+OK

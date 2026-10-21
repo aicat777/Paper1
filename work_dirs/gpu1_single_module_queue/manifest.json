@@ -1,0 +1,31 @@
+{
+  "root": "/home/pwt/Paper1",
+  "python": "/home/pwt/miniconda3/envs/rtmdet/bin/python",
+  "gpu_index": 1,
+  "gpu_uuid": "GPU-df11ee80-4992-6cab-1055-b211d226f165",
+  "min_free_mib": 45000,
+  "poll_seconds": 20,
+  "current": {
+    "name": "scheme2_full_640_bs36",
+    "pid": 2097625,
+    "start_ticks": "265878695",
+    "work_dir": "/home/pwt/Paper1/work_dirs/magnitude_detail_full_640_gpu1_bs36",
+    "log": "/home/pwt/Paper1/logs/magnitude_detail_full_640_gpu1_bs36.log"
+  },
+  "pending": [
+    {
+      "name": "baseline_640_bs36",
+      "source_config": "/home/pwt/Paper1/configs/rtmdet_tiny_dior_300e.py",
+      "config": "/home/pwt/Paper1/work_dirs/gpu1_single_module_queue/baseline_640_bs36.py",
+      "work_dir": "/home/pwt/Paper1/work_dirs/rtmdet_tiny_dior_640_gpu1_bs36",
+      "log": "/home/pwt/Paper1/logs/rtmdet_tiny_dior_640_gpu1_bs36.log"
+    },
+    {
+      "name": "scheme2_module_a_640_bs36",
+      "source_config": "/home/pwt/Paper1/configs/magnitude_detail/context_only.py",
+      "config": "/home/pwt/Paper1/work_dirs/gpu1_single_module_queue/scheme2_module_a_640_bs36.py",
+      "work_dir": "/home/pwt/Paper1/work_dirs/magnitude_detail_context_only_640_gpu1_bs36",
+      "log": "/home/pwt/Paper1/logs/magnitude_detail_context_only_640_gpu1_bs36.log"
+    }
+  ]
+}

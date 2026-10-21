@@ -1,0 +1,61 @@
+{
+  "max_augmented_gt": 900,
+  "samples_examined": 304,
+  "probes": [
+    {
+      "batch": 32,
+      "status": "ok",
+      "gt_per_image": 900,
+      "peak_allocated_gib": 25.2005033493042,
+      "peak_reserved_gib": 28.2421875,
+      "seconds_per_step": 7.6066014296375215,
+      "loss": 2.0320935249328613
+    },
+    {
+      "batch": 48,
+      "status": "exceeds_88_percent_safety_cap",
+      "gt_per_image": 900,
+      "peak_allocated_gib": 37.74564075469971,
+      "peak_reserved_gib": 38.388671875
+    },
+    {
+      "batch": 40,
+      "gt_per_image": 900,
+      "status": "ok",
+      "synthetic_gt_stress": false,
+      "peak_allocated_gib": 31.49309539794922,
+      "peak_reserved_gib": 35.390625,
+      "elapsed_s": 25.199068624991924
+    },
+    {
+      "batch": 40,
+      "gt_per_image": 1200,
+      "status": "exceeds_88_percent_safety_cap",
+      "synthetic_gt_stress": true,
+      "peak_allocated_gib": 39.66049242019653,
+      "peak_reserved_gib": 40.265625,
+      "elapsed_s": 9.536628278903663
+    },
+    {
+      "batch": 32,
+      "gt_per_image": 1200,
+      "status": "ok",
+      "synthetic_gt_stress": true,
+      "peak_allocated_gib": 31.741490364074707,
+      "peak_reserved_gib": 35.73046875,
+      "elapsed_s": 25.68003167770803
+    },
+    {
+      "batch": 36,
+      "gt_per_image": 1200,
+      "status": "ok",
+      "synthetic_gt_stress": true,
+      "peak_allocated_gib": 35.69061231613159,
+      "peak_reserved_gib": 40.28515625,
+      "elapsed_s": 46.44357404159382
+    }
+  ],
+  "selected_batch_size": 36,
+  "probe_only_memory_cap_fraction": 0.88,
+  "formal_training_uses_memory_cap": false
+}

@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "parameters": 4901946,
+  "added_parameters_vs_fdw": 14928,
+  "conv2d_gmac": 7.987709184,
+  "local_conv1d_gmac": 0.002135808,
+  "counted_gmac": 7.989844992,
+  "excludes_fft_kernel_synthesis_and_elementwise_ops": true,
+  "prediction_points": 8400,
+  "watched_parameter_tensors": 33,
+  "scratch": true,
+  "microbatch": 36,
+  "accumulation": 1,
+  "effective_batch": 36,
+  "ema_gamma": 2000,
+  "replacements": [
+    "stage2.1.blocks.0.conv1.conv",
+    "stage3.1.blocks.0.conv1.conv",
+    "stage4.2.blocks.0.conv1.conv"
+  ]
+}

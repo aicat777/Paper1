@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "method": "instance_semantic_matched",
+  "parameters": 4880648,
+  "new_parameters": 0,
+  "inference_conv_linear_gmac": 7.98770304,
+  "inference_matches_original_exactly": true,
+  "train_images": 5862,
+  "val_images": 5863,
+  "prediction_points": 8400,
+  "input_size": [
+    640,
+    640
+  ],
+  "formal_batch": 36,
+  "accumulation": 1,
+  "scratch": true,
+  "unchanged_training_protocol": true,
+  "semantic_weight": 0.1,
+  "all_valid_gt_denominator": true,
+  "different_run_matched_counts_may_diverge": true,
+  "formal_batch_capacity_tested": false,
+  "config": "/home/pwt/Paper1/work_dirs/instance_semantic_matched_queue/instance_semantic_matched_640_bs36.py",
+  "config_sha256": "5465185bc6d6d2b556fa512b5037b2d98125a4d50106df68261b85f410f8bcbc"
+}

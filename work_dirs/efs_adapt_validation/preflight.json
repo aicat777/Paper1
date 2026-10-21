@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "parameters": 5342340,
+  "f3": [
+    1,
+    96,
+    80,
+    80
+  ],
+  "pan_input": [
+    1,
+    144,
+    80,
+    80
+  ],
+  "p2_independent": true,
+  "p3_p5_shared": true,
+  "stdlib_queue": "/home/pwt/miniconda3/envs/rtmdet/lib/python3.10/queue.py",
+  "conv_linear_gmac": 18.40639104,
+  "prediction_points": 34000,
+  "scratch": true,
+  "microbatch": 9,
+  "accumulation": 4,
+  "ema_gamma": 8000
+}

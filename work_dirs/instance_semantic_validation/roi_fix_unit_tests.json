@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "tests_run": 5,
+  "command": [
+    "/home/pwt/miniconda3/envs/rtmdet/bin/python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test_instance_semantic.py",
+    "-v"
+  ],
+  "verification": "Executed successfully in this task before the GPU smoke test",
+  "regression_cases": [
+    "degenerate augmented ROIs excluded only from auxiliary loss",
+    "valid-instance loss unchanged including subpixel positive-area boxes",
+    "all-degenerate batch yields connected finite zero",
+    "ROI coordinates and level selection",
+    "baseline predictions, detection losses, initialization and auxiliary gradient scope"
+  ],
+  "test_source_sha256": "300412001e57d614bdeb415db9cd54bd1446a066e9f1f835d6a078cc7ad2c383"
+}

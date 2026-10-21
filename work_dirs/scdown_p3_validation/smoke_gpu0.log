@@ -1,0 +1,1387 @@
+10/20 21:39:36 - mmengine - WARNING - Failed to search registry with scope "mmyolo" in the "log_processor" registry tree. As a workaround, the current "log_processor" registry in "mmengine" is used to build instance. This may cause unexpected failure when running the built modules. Please check whether "mmyolo" is a correct scope, or whether the registry is initialized.
+/home/pwt/miniconda3/envs/rtmdet/lib/python3.10/site-packages/torch/utils/cpp_extension.py:25: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import packaging  # type: ignore[attr-defined]
+10/20 21:39:37 - mmengine - INFO - 
+------------------------------------------------------------
+System environment:
+    sys.platform: linux
+    Python: 3.10.22 | packaged by conda-forge | (main, Oct  6 2026, 23:02:24) [GCC 14.4.0]
+    CUDA available: True
+    MUSA available: False
+    numpy_random_seed: 42
+    GPU 0: NVIDIA GeForce RTX 4090
+    CUDA_HOME: /usr/local/cuda
+    NVCC: Cuda compilation tools, release 13.0, V13.0.88
+    GCC: gcc (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0
+    PyTorch: 2.0.1+cu118
+    PyTorch compiling details: PyTorch built with:
+  - GCC 9.3
+  - C++ Version: 201703
+  - Intel(R) oneAPI Math Kernel Library Version 2022.2-Product Build 20220804 for Intel(R) 64 architecture applications
+  - Intel(R) MKL-DNN v2.7.3 (Git Hash 6dbeffbae1f23cbbeae17adb7b5b13f1f37c080e)
+  - OpenMP 201511 (a.k.a. OpenMP 4.5)
+  - LAPACK is enabled (usually provided by MKL)
+  - NNPACK is enabled
+  - CPU capability usage: AVX2
+  - CUDA Runtime 11.8
+  - NVCC architecture flags: -gencode;arch=compute_37,code=sm_37;-gencode;arch=compute_50,code=sm_50;-gencode;arch=compute_60,code=sm_60;-gencode;arch=compute_70,code=sm_70;-gencode;arch=compute_75,code=sm_75;-gencode;arch=compute_80,code=sm_80;-gencode;arch=compute_86,code=sm_86;-gencode;arch=compute_90,code=sm_90
+  - CuDNN 8.7
+  - Magma 2.6.1
+  - Build settings: BLAS_INFO=mkl, BUILD_TYPE=Release, CUDA_VERSION=11.8, CUDNN_VERSION=8.7.0, CXX_COMPILER=/opt/rh/devtoolset-9/root/usr/bin/c++, CXX_FLAGS= -D_GLIBCXX_USE_CXX11_ABI=0 -fabi-version=11 -Wno-deprecated -fvisibility-inlines-hidden -DUSE_PTHREADPOOL -DNDEBUG -DUSE_KINETO -DLIBKINETO_NOROCTRACER -DUSE_FBGEMM -DUSE_QNNPACK -DUSE_PYTORCH_QNNPACK -DUSE_XNNPACK -DSYMBOLICATE_MOBILE_DEBUG_HANDLE -O2 -fPIC -Wall -Wextra -Werror=return-type -Werror=non-virtual-dtor -Werror=bool-operation -Wnarrowing -Wno-missing-field-initializers -Wno-type-limits -Wno-array-bounds -Wno-unknown-pragmas -Wunused-local-typedefs -Wno-unused-parameter -Wno-unused-function -Wno-unused-result -Wno-strict-overflow -Wno-strict-aliasing -Wno-error=deprecated-declarations -Wno-stringop-overflow -Wno-psabi -Wno-error=pedantic -Wno-error=redundant-decls -Wno-error=old-style-cast -fdiagnostics-color=always -faligned-new -Wno-unused-but-set-variable -Wno-maybe-uninitialized -fno-math-errno -fno-trapping-math -Werror=format -Werror=cast-function-type -Wno-stringop-overflow, LAPACK_INFO=mkl, PERF_WITH_AVX=1, PERF_WITH_AVX2=1, PERF_WITH_AVX512=1, TORCH_DISABLE_GPU_ASSERTS=ON, TORCH_VERSION=2.0.1, USE_CUDA=ON, USE_CUDNN=ON, USE_EXCEPTION_PTR=1, USE_GFLAGS=OFF, USE_GLOG=OFF, USE_MKL=ON, USE_MKLDNN=ON, USE_MPI=OFF, USE_NCCL=1, USE_NNPACK=ON, USE_OPENMP=ON, USE_ROCM=OFF, 
+
+    TorchVision: 0.15.2+cu118
+    OpenCV: 4.10.0
+    MMEngine: 0.10.7
+
+Runtime environment:
+    cudnn_benchmark: True
+    dist_cfg: {'backend': 'nccl'}
+    mp_cfg: {'mp_start_method': 'fork', 'opencv_num_threads': 0}
+    deterministic: False
+    seed: 42
+    Distributed launcher: none
+    Distributed training: False
+    GPU number: 1
+------------------------------------------------------------
+
+10/20 21:39:38 - mmengine - INFO - Config:
+_backend_args = None
+_multiscale_resize_transforms = [
+    dict(
+        transforms=[
+            dict(scale=(
+                640,
+                640,
+            ), type='YOLOv5KeepRatioResize'),
+            dict(
+                allow_scale_up=False,
+                pad_val=dict(img=114),
+                scale=(
+                    640,
+                    640,
+                ),
+                type='LetterResize'),
+        ],
+        type='Compose'),
+    dict(
+        transforms=[
+            dict(scale=(
+                320,
+                320,
+            ), type='YOLOv5KeepRatioResize'),
+            dict(
+                allow_scale_up=False,
+                pad_val=dict(img=114),
+                scale=(
+                    320,
+                    320,
+                ),
+                type='LetterResize'),
+        ],
+        type='Compose'),
+    dict(
+        transforms=[
+            dict(scale=(
+                960,
+                960,
+            ), type='YOLOv5KeepRatioResize'),
+            dict(
+                allow_scale_up=False,
+                pad_val=dict(img=114),
+                scale=(
+                    960,
+                    960,
+                ),
+                type='LetterResize'),
+        ],
+        type='Compose'),
+]
+backend_args = None
+base_lr = 0.0005625000000000001
+batch_shapes_cfg = None
+checkpoint = None
+classes = (
+    'airplane',
+    'airport',
+    'baseballfield',
+    'basketballcourt',
+    'bridge',
+    'chimney',
+    'dam',
+    'expressway-service-area',
+    'expressway-toll-station',
+    'golffield',
+    'groundtrackfield',
+    'harbor',
+    'overpass',
+    'ship',
+    'stadium',
+    'storagetank',
+    'tenniscourt',
+    'trainstation',
+    'vehicle',
+    'windmill',
+)
+custom_hooks = [
+    dict(
+        ema_type='ExpMomentumEMA',
+        momentum=0.0002,
+        priority=49,
+        strict_load=False,
+        type='EMAHook',
+        update_buffers=True),
+    dict(
+        switch_epoch=1,
+        switch_pipeline=[
+            dict(backend_args=None, type='LoadImageFromFile'),
+            dict(type='LoadAnnotations', with_bbox=True),
+            dict(
+                keep_ratio=True,
+                ratio_range=(
+                    0.5,
+                    2.0,
+                ),
+                resize_type='mmdet.Resize',
+                scale=(
+                    640,
+                    640,
+                ),
+                type='mmdet.RandomResize'),
+            dict(crop_size=(
+                640,
+                640,
+            ), type='mmdet.RandomCrop'),
+            dict(type='mmdet.YOLOXHSVRandomAug'),
+            dict(prob=0.5, type='mmdet.RandomFlip'),
+            dict(
+                pad_val=dict(img=(
+                    114,
+                    114,
+                    114,
+                )),
+                size=(
+                    640,
+                    640,
+                ),
+                type='mmdet.Pad'),
+            dict(type='mmdet.PackDetInputs'),
+        ],
+        type='mmdet.PipelineSwitchHook'),
+    dict(
+        allocator_fraction=0.22,
+        image_ids=[
+            6426,
+            6209,
+            6296,
+            7687,
+            5863,
+            5896,
+            5919,
+            5864,
+            5865,
+            5866,
+            5867,
+            5868,
+            5869,
+            5870,
+            5871,
+            5872,
+            5873,
+            5874,
+            5875,
+            5876,
+            5877,
+            5878,
+            5879,
+            5880,
+            5881,
+            5882,
+            5883,
+            5884,
+            5885,
+            5886,
+            5887,
+            5888,
+        ],
+        method='scdown_p3',
+        report_path=
+        '/home/pwt/Paper1/work_dirs/scdown_p3_validation/smoke_gpu0.json',
+        type='SCDownVariantAuditHook'),
+]
+custom_imports = dict(
+    allow_failed_imports=False,
+    imports=[
+        'custom_models.scdown_p3',
+        'scripts.scdown_variants_probe',
+    ])
+data_root = '/home/pwt/Paper1/datasets/DIOR/'
+dataset_type = 'YOLOv5CocoDataset'
+deepen_factor = 0.167
+default_hooks = dict(
+    checkpoint=None,
+    logger=dict(interval=1, type='LoggerHook'),
+    param_scheduler=dict(type='ParamSchedulerHook'),
+    sampler_seed=dict(type='DistSamplerSeedHook'),
+    timer=dict(type='IterTimerHook'),
+    visualization=dict(type='mmdet.DetVisualizationHook'))
+default_scope = 'mmyolo'
+dsl_topk = 13
+env_cfg = dict(
+    cudnn_benchmark=True,
+    dist_cfg=dict(backend='nccl'),
+    mp_cfg=dict(mp_start_method='fork', opencv_num_threads=0))
+img_scale = (
+    640,
+    640,
+)
+img_scales = [
+    (
+        640,
+        640,
+    ),
+    (
+        320,
+        320,
+    ),
+    (
+        960,
+        960,
+    ),
+]
+launcher = 'none'
+load_from = None
+log_level = 'INFO'
+log_processor = dict(by_epoch=True, type='LogProcessor', window_size=50)
+loss_bbox_weight = 2.0
+loss_cls_weight = 1.0
+lr_start_factor = 1e-05
+max_epochs = 300
+max_keep_ckpts = 3
+mixup_max_cached_images = 10
+model = dict(
+    backbone=dict(
+        act_cfg=dict(inplace=True, type='SiLU'),
+        arch='P5',
+        channel_attention=True,
+        deepen_factor=0.167,
+        expand_ratio=0.5,
+        init_cfg=None,
+        norm_cfg=dict(type='BN'),
+        type='SCDownP3CSPNeXt',
+        widen_factor=0.375),
+    bbox_head=dict(
+        bbox_coder=dict(type='DistancePointBBoxCoder'),
+        head_module=dict(
+            act_cfg=dict(inplace=True, type='SiLU'),
+            feat_channels=256,
+            featmap_strides=[
+                8,
+                16,
+                32,
+            ],
+            in_channels=256,
+            norm_cfg=dict(type='BN'),
+            num_classes=20,
+            pred_kernel_size=1,
+            share_conv=True,
+            stacked_convs=2,
+            type='RTMDetSepBNHeadModule',
+            widen_factor=0.375),
+        loss_bbox=dict(loss_weight=2.0, type='mmdet.GIoULoss'),
+        loss_cls=dict(
+            beta=2.0,
+            loss_weight=1.0,
+            type='mmdet.QualityFocalLoss',
+            use_sigmoid=True),
+        prior_generator=dict(
+            offset=0, strides=[
+                8,
+                16,
+                32,
+            ], type='mmdet.MlvlPointGenerator'),
+        type='RTMDetHead'),
+    data_preprocessor=dict(
+        bgr_to_rgb=False,
+        mean=[
+            103.53,
+            116.28,
+            123.675,
+        ],
+        std=[
+            57.375,
+            57.12,
+            58.395,
+        ],
+        type='YOLOv5DetDataPreprocessor'),
+    neck=dict(
+        act_cfg=dict(inplace=True, type='SiLU'),
+        deepen_factor=0.167,
+        expand_ratio=0.5,
+        in_channels=[
+            256,
+            512,
+            1024,
+        ],
+        norm_cfg=dict(type='BN'),
+        num_csp_blocks=3,
+        out_channels=256,
+        type='SCDownPAFPN',
+        widen_factor=0.375),
+    test_cfg=dict(
+        max_per_img=300,
+        multi_label=True,
+        nms=dict(iou_threshold=0.65, type='nms'),
+        nms_pre=30000,
+        score_thr=0.001),
+    train_cfg=dict(
+        allowed_border=-1,
+        assigner=dict(
+            iou_calculator=dict(type='mmdet.BboxOverlaps2D'),
+            num_classes=20,
+            topk=13,
+            type='BatchDynamicSoftLabelAssigner'),
+        debug=False,
+        pos_weight=-1),
+    type='YOLODetector')
+model_test_cfg = dict(
+    max_per_img=300,
+    multi_label=True,
+    nms=dict(iou_threshold=0.65, type='nms'),
+    nms_pre=30000,
+    score_thr=0.001)
+mosaic_max_cached_images = 20
+norm_cfg = dict(type='BN')
+num_classes = 20
+num_epochs_stage2 = 20
+optim_wrapper = dict(
+    loss_scale=dict(init_scale=32),
+    optimizer=dict(lr=0.0005625000000000001, type='AdamW', weight_decay=0.05),
+    paramwise_cfg=dict(
+        bias_decay_mult=0, bypass_duplicate=True, norm_decay_mult=0),
+    type='AmpOptimWrapper')
+param_scheduler = []
+persistent_workers = True
+qfl_beta = 2.0
+random_resize_ratio_range = (
+    0.5,
+    2.0,
+)
+randomness = dict(deterministic=False, seed=42)
+resume = False
+root = '/home/pwt/Paper1'
+save_checkpoint_intervals = 10
+strides = [
+    8,
+    16,
+    32,
+]
+test_cfg = dict(type='TestLoop')
+test_dataloader = dict(
+    batch_size=8,
+    dataset=dict(
+        ann_file='coco_annotations/instances_test.json',
+        batch_shapes_cfg=None,
+        data_prefix=dict(img=''),
+        data_root='/home/pwt/Paper1/datasets/DIOR/',
+        metainfo=dict(
+            classes=(
+                'airplane',
+                'airport',
+                'baseballfield',
+                'basketballcourt',
+                'bridge',
+                'chimney',
+                'dam',
+                'expressway-service-area',
+                'expressway-toll-station',
+                'golffield',
+                'groundtrackfield',
+                'harbor',
+                'overpass',
+                'ship',
+                'stadium',
+                'storagetank',
+                'tenniscourt',
+                'trainstation',
+                'vehicle',
+                'windmill',
+            )),
+        pipeline=[
+            dict(backend_args=None, type='LoadImageFromFile'),
+            dict(scale=(
+                640,
+                640,
+            ), type='YOLOv5KeepRatioResize'),
+            dict(
+                allow_scale_up=False,
+                pad_val=dict(img=114),
+                scale=(
+                    640,
+                    640,
+                ),
+                type='LetterResize'),
+            dict(type='mmdet.LoadAnnotations', with_bbox=True),
+            dict(
+                meta_keys=(
+                    'img_id',
+                    'img_path',
+                    'ori_shape',
+                    'img_shape',
+                    'scale_factor',
+                    'pad_param',
+                ),
+                type='mmdet.PackDetInputs'),
+        ],
+        test_mode=True,
+        type='YOLOv5CocoDataset'),
+    drop_last=False,
+    num_workers=4,
+    persistent_workers=True,
+    pin_memory=True,
+    sampler=dict(shuffle=False, type='DefaultSampler'))
+test_evaluator = [
+    dict(
+        eval_mode='11points',
+        iou_thrs=0.5,
+        metric='mAP',
+        prefix='pascal_voc',
+        type='mmdet.VOCMetric'),
+    dict(
+        ann_file=
+        '/home/pwt/Paper1/datasets/DIOR/coco_annotations/instances_test.json',
+        classwise=True,
+        metric='bbox',
+        proposal_nums=(
+            1,
+            10,
+            100,
+        ),
+        type='mmdet.CocoMetric'),
+]
+test_pipeline = [
+    dict(backend_args=None, type='LoadImageFromFile'),
+    dict(scale=(
+        640,
+        640,
+    ), type='YOLOv5KeepRatioResize'),
+    dict(
+        allow_scale_up=False,
+        pad_val=dict(img=114),
+        scale=(
+            640,
+            640,
+        ),
+        type='LetterResize'),
+    dict(type='mmdet.LoadAnnotations', with_bbox=True),
+    dict(
+        meta_keys=(
+            'img_id',
+            'img_path',
+            'ori_shape',
+            'img_shape',
+            'scale_factor',
+            'pad_param',
+        ),
+        type='mmdet.PackDetInputs'),
+]
+train_ann_file = 'annotations/instances_train2017.json'
+train_batch_size_per_gpu = 36
+train_cfg = dict(
+    dynamic_intervals=[],
+    max_epochs=2,
+    type='EpochBasedTrainLoop',
+    val_interval=1)
+train_data_prefix = 'train2017/'
+train_dataloader = dict(
+    batch_size=2,
+    collate_fn=dict(type='yolov5_collate'),
+    dataset=dict(
+        ann_file='coco_annotations/instances_train.json',
+        data_prefix=dict(img=''),
+        data_root='/home/pwt/Paper1/datasets/DIOR/',
+        filter_cfg=dict(filter_empty_gt=True, min_size=32),
+        indices=[
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+        ],
+        metainfo=dict(
+            classes=(
+                'airplane',
+                'airport',
+                'baseballfield',
+                'basketballcourt',
+                'bridge',
+                'chimney',
+                'dam',
+                'expressway-service-area',
+                'expressway-toll-station',
+                'golffield',
+                'groundtrackfield',
+                'harbor',
+                'overpass',
+                'ship',
+                'stadium',
+                'storagetank',
+                'tenniscourt',
+                'trainstation',
+                'vehicle',
+                'windmill',
+            )),
+        pipeline=[
+            dict(backend_args=None, type='LoadImageFromFile'),
+            dict(type='LoadAnnotations', with_bbox=True),
+            dict(
+                img_scale=(
+                    640,
+                    640,
+                ),
+                max_cached_images=20,
+                pad_val=114.0,
+                random_pop=False,
+                type='Mosaic',
+                use_cached=True),
+            dict(
+                keep_ratio=True,
+                ratio_range=(
+                    0.5,
+                    2.0,
+                ),
+                resize_type='mmdet.Resize',
+                scale=(
+                    1280,
+                    1280,
+                ),
+                type='mmdet.RandomResize'),
+            dict(crop_size=(
+                640,
+                640,
+            ), type='mmdet.RandomCrop'),
+            dict(type='mmdet.YOLOXHSVRandomAug'),
+            dict(prob=0.5, type='mmdet.RandomFlip'),
+            dict(
+                pad_val=dict(img=(
+                    114,
+                    114,
+                    114,
+                )),
+                size=(
+                    640,
+                    640,
+                ),
+                type='mmdet.Pad'),
+            dict(
+                max_cached_images=10,
+                prob=0.5,
+                random_pop=False,
+                type='YOLOv5MixUp',
+                use_cached=True),
+            dict(type='mmdet.PackDetInputs'),
+        ],
+        type='YOLOv5CocoDataset'),
+    num_workers=0,
+    persistent_workers=False,
+    pin_memory=True,
+    sampler=dict(shuffle=True, type='DefaultSampler'))
+train_num_workers = 10
+train_pipeline = [
+    dict(backend_args=None, type='LoadImageFromFile'),
+    dict(type='LoadAnnotations', with_bbox=True),
+    dict(
+        img_scale=(
+            640,
+            640,
+        ),
+        max_cached_images=20,
+        pad_val=114.0,
+        random_pop=False,
+        type='Mosaic',
+        use_cached=True),
+    dict(
+        keep_ratio=True,
+        ratio_range=(
+            0.5,
+            2.0,
+        ),
+        resize_type='mmdet.Resize',
+        scale=(
+            1280,
+            1280,
+        ),
+        type='mmdet.RandomResize'),
+    dict(crop_size=(
+        640,
+        640,
+    ), type='mmdet.RandomCrop'),
+    dict(type='mmdet.YOLOXHSVRandomAug'),
+    dict(prob=0.5, type='mmdet.RandomFlip'),
+    dict(
+        pad_val=dict(img=(
+            114,
+            114,
+            114,
+        )),
+        size=(
+            640,
+            640,
+        ),
+        type='mmdet.Pad'),
+    dict(
+        max_cached_images=10,
+        prob=0.5,
+        random_pop=False,
+        type='YOLOv5MixUp',
+        use_cached=True),
+    dict(type='mmdet.PackDetInputs'),
+]
+train_pipeline_stage2 = [
+    dict(backend_args=None, type='LoadImageFromFile'),
+    dict(type='LoadAnnotations', with_bbox=True),
+    dict(
+        keep_ratio=True,
+        ratio_range=(
+            0.5,
+            2.0,
+        ),
+        resize_type='mmdet.Resize',
+        scale=(
+            640,
+            640,
+        ),
+        type='mmdet.RandomResize'),
+    dict(crop_size=(
+        640,
+        640,
+    ), type='mmdet.RandomCrop'),
+    dict(type='mmdet.YOLOXHSVRandomAug'),
+    dict(prob=0.5, type='mmdet.RandomFlip'),
+    dict(
+        pad_val=dict(img=(
+            114,
+            114,
+            114,
+        )),
+        size=(
+            640,
+            640,
+        ),
+        type='mmdet.Pad'),
+    dict(type='mmdet.PackDetInputs'),
+]
+tta_model = dict(
+    tta_cfg=dict(max_per_img=300, nms=dict(iou_threshold=0.65, type='nms')),
+    type='mmdet.DetTTAModel')
+tta_pipeline = [
+    dict(backend_args=None, type='LoadImageFromFile'),
+    dict(
+        transforms=[
+            [
+                dict(
+                    transforms=[
+                        dict(scale=(
+                            640,
+                            640,
+                        ), type='YOLOv5KeepRatioResize'),
+                        dict(
+                            allow_scale_up=False,
+                            pad_val=dict(img=114),
+                            scale=(
+                                640,
+                                640,
+                            ),
+                            type='LetterResize'),
+                    ],
+                    type='Compose'),
+                dict(
+                    transforms=[
+                        dict(scale=(
+                            320,
+                            320,
+                        ), type='YOLOv5KeepRatioResize'),
+                        dict(
+                            allow_scale_up=False,
+                            pad_val=dict(img=114),
+                            scale=(
+                                320,
+                                320,
+                            ),
+                            type='LetterResize'),
+                    ],
+                    type='Compose'),
+                dict(
+                    transforms=[
+                        dict(scale=(
+                            960,
+                            960,
+                        ), type='YOLOv5KeepRatioResize'),
+                        dict(
+                            allow_scale_up=False,
+                            pad_val=dict(img=114),
+                            scale=(
+                                960,
+                                960,
+                            ),
+                            type='LetterResize'),
+                    ],
+                    type='Compose'),
+            ],
+            [
+                dict(prob=1.0, type='mmdet.RandomFlip'),
+                dict(prob=0.0, type='mmdet.RandomFlip'),
+            ],
+            [
+                dict(type='mmdet.LoadAnnotations', with_bbox=True),
+            ],
+            [
+                dict(
+                    meta_keys=(
+                        'img_id',
+                        'img_path',
+                        'ori_shape',
+                        'img_shape',
+                        'scale_factor',
+                        'pad_param',
+                        'flip',
+                        'flip_direction',
+                    ),
+                    type='mmdet.PackDetInputs'),
+            ],
+        ],
+        type='TestTimeAug'),
+]
+val_ann_file = 'annotations/instances_val2017.json'
+val_batch_size_per_gpu = 8
+val_cfg = dict(fp16=False, type='ValLoop')
+val_data_prefix = 'val2017/'
+val_dataloader = dict(
+    batch_size=4,
+    dataset=dict(
+        ann_file='coco_annotations/instances_val.json',
+        batch_shapes_cfg=None,
+        data_prefix=dict(img=''),
+        data_root='/home/pwt/Paper1/datasets/DIOR/',
+        indices=[
+            563,
+            346,
+            433,
+            1824,
+            0,
+            33,
+            56,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+        ],
+        metainfo=dict(
+            classes=(
+                'airplane',
+                'airport',
+                'baseballfield',
+                'basketballcourt',
+                'bridge',
+                'chimney',
+                'dam',
+                'expressway-service-area',
+                'expressway-toll-station',
+                'golffield',
+                'groundtrackfield',
+                'harbor',
+                'overpass',
+                'ship',
+                'stadium',
+                'storagetank',
+                'tenniscourt',
+                'trainstation',
+                'vehicle',
+                'windmill',
+            )),
+        pipeline=[
+            dict(backend_args=None, type='LoadImageFromFile'),
+            dict(scale=(
+                640,
+                640,
+            ), type='YOLOv5KeepRatioResize'),
+            dict(
+                allow_scale_up=False,
+                pad_val=dict(img=114),
+                scale=(
+                    640,
+                    640,
+                ),
+                type='LetterResize'),
+            dict(type='mmdet.LoadAnnotations', with_bbox=True),
+            dict(
+                meta_keys=(
+                    'img_id',
+                    'img_path',
+                    'ori_shape',
+                    'img_shape',
+                    'scale_factor',
+                    'pad_param',
+                ),
+                type='mmdet.PackDetInputs'),
+        ],
+        test_mode=True,
+        type='YOLOv5CocoDataset'),
+    drop_last=False,
+    num_workers=0,
+    persistent_workers=False,
+    pin_memory=True,
+    sampler=dict(shuffle=False, type='DefaultSampler'))
+val_evaluator = [
+    dict(
+        eval_mode='11points',
+        iou_thrs=0.5,
+        metric='mAP',
+        prefix='pascal_voc',
+        type='mmdet.VOCMetric'),
+    dict(
+        ann_file=
+        '/home/pwt/Paper1/datasets/DIOR/coco_annotations/instances_val.json',
+        classwise=True,
+        metric='bbox',
+        proposal_nums=(
+            1,
+            10,
+            100,
+        ),
+        type='mmdet.CocoMetric'),
+]
+val_interval_stage2 = 1
+val_num_workers = 10
+vis_backends = [
+    dict(type='LocalVisBackend'),
+]
+visualizer = dict(
+    name='visualizer',
+    type='mmdet.DetLocalVisualizer',
+    vis_backends=[
+        dict(type='LocalVisBackend'),
+    ])
+weight_decay = 0.05
+widen_factor = 0.375
+work_dir = '/home/pwt/Paper1/work_dirs/scdown_p3_validation/smoke'
+
+10/20 21:39:39 - mmengine - INFO - Distributed training is not used, all SyncBatchNorm (SyncBN) layers in the model will be automatically reverted to BatchNormXd layers if they are used.
+10/20 21:39:39 - mmengine - INFO - Hooks will be executed in the following order:
+before_run:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(48          ) SCDownVariantAuditHook             
+(49          ) EMAHook                            
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_load_checkpoint:
+(49          ) EMAHook                            
+ -------------------- 
+before_train:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(48          ) SCDownVariantAuditHook             
+(49          ) EMAHook                            
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+before_train_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(48          ) SCDownVariantAuditHook             
+(NORMAL      ) IterTimerHook                      
+(NORMAL      ) DistSamplerSeedHook                
+(NORMAL      ) PipelineSwitchHook                 
+ -------------------- 
+before_train_iter:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_train_iter:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(48          ) SCDownVariantAuditHook             
+(49          ) EMAHook                            
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+(LOW         ) ParamSchedulerHook                 
+ -------------------- 
+after_train_epoch:
+(NORMAL      ) IterTimerHook                      
+(LOW         ) ParamSchedulerHook                 
+ -------------------- 
+before_val:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+before_val_epoch:
+(48          ) SCDownVariantAuditHook             
+(49          ) EMAHook                            
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+before_val_iter:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_val_iter:
+(48          ) SCDownVariantAuditHook             
+(NORMAL      ) IterTimerHook                      
+(NORMAL      ) DetVisualizationHook               
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_val_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(48          ) SCDownVariantAuditHook             
+(49          ) EMAHook                            
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+(LOW         ) ParamSchedulerHook                 
+ -------------------- 
+after_val:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+before_save_checkpoint:
+(49          ) EMAHook                            
+ -------------------- 
+after_train:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(48          ) SCDownVariantAuditHook             
+ -------------------- 
+before_test:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+before_test_epoch:
+(49          ) EMAHook                            
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+before_test_iter:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_test_iter:
+(NORMAL      ) IterTimerHook                      
+(NORMAL      ) DetVisualizationHook               
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_test_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(49          ) EMAHook                            
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_test:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+after_run:
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+loading annotations into memory...
+Done (t=0.33s)
+creating index...
+index created!
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stem.0.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stem.0.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stem.1.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stem.1.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stem.2.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stem.2.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stage1.0.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stage1.0.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stage1.1.main_conv.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stage1.1.main_conv.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stage1.1.short_conv.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stage1.1.short_conv.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stage1.1.final_conv.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stage1.1.final_conv.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stage1.1.blocks.0.conv1.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stage1.1.blocks.0.conv1.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stage1.1.blocks.0.conv2.depthwise_conv.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stage1.1.blocks.0.conv2.depthwise_conv.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stage1.1.blocks.0.conv2.pointwise_conv.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stage1.1.blocks.0.conv2.pointwise_conv.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stage1.1.attention.fc.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stage2.0.cv1.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stage2.0.cv1.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stage2.0.cv2.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stage2.0.cv2.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stage2.1.main_conv.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stage2.1.main_conv.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stage2.1.short_conv.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stage2.1.short_conv.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stage2.1.final_conv.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stage2.1.final_conv.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stage2.1.blocks.0.conv1.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stage2.1.blocks.0.conv1.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stage2.1.blocks.0.conv2.depthwise_conv.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stage2.1.blocks.0.conv2.depthwise_conv.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stage2.1.blocks.0.conv2.pointwise_conv.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stage2.1.blocks.0.conv2.pointwise_conv.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stage2.1.attention.fc.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stage3.0.cv1.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stage3.0.cv1.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stage3.0.cv2.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stage3.0.cv2.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stage3.1.main_conv.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stage3.1.main_conv.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stage3.1.short_conv.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stage3.1.short_conv.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stage3.1.final_conv.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stage3.1.final_conv.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stage3.1.blocks.0.conv1.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stage3.1.blocks.0.conv1.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stage3.1.blocks.0.conv2.depthwise_conv.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stage3.1.blocks.0.conv2.depthwise_conv.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stage3.1.blocks.0.conv2.pointwise_conv.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stage3.1.blocks.0.conv2.pointwise_conv.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stage3.1.attention.fc.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stage4.0.cv1.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stage4.0.cv1.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stage4.0.cv2.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stage4.0.cv2.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stage4.1.conv1.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stage4.1.conv1.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stage4.1.conv2.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stage4.1.conv2.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stage4.2.main_conv.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stage4.2.main_conv.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stage4.2.short_conv.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stage4.2.short_conv.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stage4.2.final_conv.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stage4.2.final_conv.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stage4.2.blocks.0.conv1.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stage4.2.blocks.0.conv1.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stage4.2.blocks.0.conv2.depthwise_conv.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stage4.2.blocks.0.conv2.depthwise_conv.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stage4.2.blocks.0.conv2.pointwise_conv.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stage4.2.blocks.0.conv2.pointwise_conv.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- backbone.stage4.2.attention.fc.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- neck.reduce_layers.2.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- neck.reduce_layers.2.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- neck.top_down_layers.0.0.main_conv.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- neck.top_down_layers.0.0.main_conv.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- neck.top_down_layers.0.0.short_conv.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- neck.top_down_layers.0.0.short_conv.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- neck.top_down_layers.0.0.final_conv.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- neck.top_down_layers.0.0.final_conv.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- neck.top_down_layers.0.0.blocks.0.conv1.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- neck.top_down_layers.0.0.blocks.0.conv1.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- neck.top_down_layers.0.0.blocks.0.conv2.depthwise_conv.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- neck.top_down_layers.0.0.blocks.0.conv2.depthwise_conv.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- neck.top_down_layers.0.0.blocks.0.conv2.pointwise_conv.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- neck.top_down_layers.0.0.blocks.0.conv2.pointwise_conv.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- neck.top_down_layers.0.1.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- neck.top_down_layers.0.1.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- neck.top_down_layers.1.main_conv.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- neck.top_down_layers.1.main_conv.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- neck.top_down_layers.1.short_conv.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- neck.top_down_layers.1.short_conv.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- neck.top_down_layers.1.final_conv.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- neck.top_down_layers.1.final_conv.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- neck.top_down_layers.1.blocks.0.conv1.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- neck.top_down_layers.1.blocks.0.conv1.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- neck.top_down_layers.1.blocks.0.conv2.depthwise_conv.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- neck.top_down_layers.1.blocks.0.conv2.depthwise_conv.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- neck.top_down_layers.1.blocks.0.conv2.pointwise_conv.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- neck.top_down_layers.1.blocks.0.conv2.pointwise_conv.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- neck.downsample_layers.0.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- neck.downsample_layers.0.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- neck.downsample_layers.1.cv1.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- neck.downsample_layers.1.cv1.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- neck.downsample_layers.1.cv2.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- neck.downsample_layers.1.cv2.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- neck.bottom_up_layers.0.main_conv.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- neck.bottom_up_layers.0.main_conv.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- neck.bottom_up_layers.0.short_conv.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- neck.bottom_up_layers.0.short_conv.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- neck.bottom_up_layers.0.final_conv.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- neck.bottom_up_layers.0.final_conv.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- neck.bottom_up_layers.0.blocks.0.conv1.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- neck.bottom_up_layers.0.blocks.0.conv1.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- neck.bottom_up_layers.0.blocks.0.conv2.depthwise_conv.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- neck.bottom_up_layers.0.blocks.0.conv2.depthwise_conv.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- neck.bottom_up_layers.0.blocks.0.conv2.pointwise_conv.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- neck.bottom_up_layers.0.blocks.0.conv2.pointwise_conv.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- neck.bottom_up_layers.1.main_conv.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- neck.bottom_up_layers.1.main_conv.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- neck.bottom_up_layers.1.short_conv.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- neck.bottom_up_layers.1.short_conv.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- neck.bottom_up_layers.1.final_conv.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- neck.bottom_up_layers.1.final_conv.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- neck.bottom_up_layers.1.blocks.0.conv1.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- neck.bottom_up_layers.1.blocks.0.conv1.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- neck.bottom_up_layers.1.blocks.0.conv2.depthwise_conv.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- neck.bottom_up_layers.1.blocks.0.conv2.depthwise_conv.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- neck.bottom_up_layers.1.blocks.0.conv2.pointwise_conv.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- neck.bottom_up_layers.1.blocks.0.conv2.pointwise_conv.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- neck.out_layers.0.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- neck.out_layers.0.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- neck.out_layers.1.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- neck.out_layers.1.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- neck.out_layers.2.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- neck.out_layers.2.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.0.0.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.0.0.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.0.1.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.0.1.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - WARNING - bbox_head.head_module.cls_convs.1.0.conv is duplicate. It is skipped since bypass_duplicate=True
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.1.0.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.1.0.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - WARNING - bbox_head.head_module.cls_convs.1.1.conv is duplicate. It is skipped since bypass_duplicate=True
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.1.1.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.1.1.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - WARNING - bbox_head.head_module.cls_convs.2.0.conv is duplicate. It is skipped since bypass_duplicate=True
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.2.0.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.2.0.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - WARNING - bbox_head.head_module.cls_convs.2.1.conv is duplicate. It is skipped since bypass_duplicate=True
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.2.1.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- bbox_head.head_module.cls_convs.2.1.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.0.0.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.0.0.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.0.1.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.0.1.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - WARNING - bbox_head.head_module.reg_convs.1.0.conv is duplicate. It is skipped since bypass_duplicate=True
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.1.0.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.1.0.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - WARNING - bbox_head.head_module.reg_convs.1.1.conv is duplicate. It is skipped since bypass_duplicate=True
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.1.1.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.1.1.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - WARNING - bbox_head.head_module.reg_convs.2.0.conv is duplicate. It is skipped since bypass_duplicate=True
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.2.0.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.2.0.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - WARNING - bbox_head.head_module.reg_convs.2.1.conv is duplicate. It is skipped since bypass_duplicate=True
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.2.1.bn.weight:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- bbox_head.head_module.reg_convs.2.1.bn.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- bbox_head.head_module.rtm_cls.0.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- bbox_head.head_module.rtm_cls.1.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- bbox_head.head_module.rtm_cls.2.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- bbox_head.head_module.rtm_reg.0.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- bbox_head.head_module.rtm_reg.1.bias:weight_decay=0.0
+10/20 21:39:41 - mmengine - INFO - paramwise_options -- bbox_head.head_module.rtm_reg.2.bias:weight_decay=0.0
+loading annotations into memory...
+Done (t=0.28s)
+creating index...
+index created!
+loading annotations into memory...
+Done (t=0.26s)
+creating index...
+index created!
+/home/pwt/miniconda3/envs/rtmdet/lib/python3.10/site-packages/torch/nn/modules/conv.py:459: UserWarning: Applied workaround for CuDNN issue, install nvrtc.so (Triggered internally at ../aten/src/ATen/native/cudnn/Conv_v8.cpp:80.)
+  return F.conv2d(input, weight, bias, self.stride,
+/home/pwt/miniconda3/envs/rtmdet/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3483.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+10/20 21:39:46 - mmengine - INFO - Epoch(train) [1][1/8]  base_lr: 5.6250e-04 lr: 5.6250e-04  eta: 0:00:49  time: 3.3016  data_time: 0.1271  memory: 536  loss: 0.4647  loss_cls: 0.3491  loss_bbox: 0.1157
+10/20 21:39:46 - mmengine - INFO - Epoch(train) [1][2/8]  base_lr: 5.6250e-04 lr: 5.6250e-04  eta: 0:00:24  time: 1.7613  data_time: 0.0981  memory: 563  loss: 0.4745  loss_cls: 0.3436  loss_bbox: 0.1309
+10/20 21:39:47 - mmengine - INFO - Epoch(train) [1][3/8]  base_lr: 5.6250e-04 lr: 5.6250e-04  eta: 0:00:16  time: 1.2808  data_time: 0.1024  memory: 563  loss: 0.6262  loss_cls: 0.3386  loss_bbox: 0.2876
+10/20 21:39:47 - mmengine - INFO - Epoch(train) [1][4/8]  base_lr: 5.6250e-04 lr: 5.6250e-04  eta: 0:00:12  time: 1.0215  data_time: 0.1005  memory: 563  loss: 1.0963  loss_cls: 0.5357  loss_bbox: 0.5606
+10/20 21:39:47 - mmengine - INFO - Epoch(train) [1][5/8]  base_lr: 5.6250e-04 lr: 5.6250e-04  eta: 0:00:09  time: 0.8662  data_time: 0.0965  memory: 563  loss: 1.2953  loss_cls: 0.5241  loss_bbox: 0.7713
+10/20 21:39:48 - mmengine - INFO - Epoch(train) [1][6/8]  base_lr: 5.6250e-04 lr: 5.6250e-04  eta: 0:00:07  time: 0.7949  data_time: 0.1162  memory: 672  loss: 1.4328  loss_cls: 0.5249  loss_bbox: 0.9079
+10/20 21:39:48 - mmengine - INFO - Epoch(train) [1][7/8]  base_lr: 5.6250e-04 lr: 5.6250e-04  eta: 0:00:06  time: 0.7206  data_time: 0.1154  memory: 563  loss: 1.5515  loss_cls: 0.5725  loss_bbox: 0.9790
+10/20 21:39:48 - mmengine - INFO - Exp name: scdown_p3_smoke_20261020_213936
+10/20 21:39:48 - mmengine - INFO - Epoch(train) [1][8/8]  base_lr: 5.6250e-04 lr: 5.6250e-04  eta: 0:00:05  time: 0.6570  data_time: 0.1089  memory: 563  loss: 1.6227  loss_cls: 0.6030  loss_bbox: 1.0198
+10/20 21:39:49 - mmengine - INFO - Epoch(val) [1][1/8]    eta: 0:00:01  time: 0.1555  data_time: 0.0800  memory: 319  
+10/20 21:39:49 - mmengine - INFO - Epoch(val) [1][2/8]    eta: 0:00:00  time: 0.1556  data_time: 0.0809  memory: 279  
+10/20 21:39:49 - mmengine - INFO - Epoch(val) [1][3/8]    eta: 0:00:00  time: 0.1634  data_time: 0.0771  memory: 279  
+10/20 21:39:50 - mmengine - INFO - Epoch(val) [1][4/8]    eta: 0:00:00  time: 0.1621  data_time: 0.0787  memory: 279  
+10/20 21:39:50 - mmengine - INFO - Epoch(val) [1][5/8]    eta: 0:00:00  time: 0.1581  data_time: 0.0767  memory: 279  
+10/20 21:39:50 - mmengine - INFO - Epoch(val) [1][6/8]    eta: 0:00:00  time: 0.1752  data_time: 0.0759  memory: 279  
+10/20 21:39:50 - mmengine - INFO - Epoch(val) [1][7/8]    eta: 0:00:00  time: 0.1721  data_time: 0.0767  memory: 279  
+10/20 21:39:50 - mmengine - INFO - Epoch(val) [1][8/8]    eta: 0:00:00  time: 0.1683  data_time: 0.0752  memory: 279  
+10/20 21:39:50 - mmengine - INFO - 
+---------------iou_thr: 0.5---------------
+10/20 21:39:51 - mmengine - INFO - 
++-------------------------+-----+------+--------+-------+
+| class                   | gts | dets | recall | ap    |
++-------------------------+-----+------+--------+-------+
+| airplane                | 4   | 0    | 0.000  | 0.000 |
+| airport                 | 4   | 0    | 0.000  | 0.000 |
+| baseballfield           | 4   | 0    | 0.000  | 0.000 |
+| basketballcourt         | 8   | 0    | 0.000  | 0.000 |
+| bridge                  | 6   | 0    | 0.000  | 0.000 |
+| chimney                 | 1   | 0    | 0.000  | 0.000 |
+| dam                     | 1   | 0    | 0.000  | 0.000 |
+| expressway-service-area | 4   | 0    | 0.000  | 0.000 |
+| expressway-toll-station | 2   | 32   | 0.000  | 0.000 |
+| golffield               | 1   | 9568 | 0.000  | 0.000 |
+| groundtrackfield        | 4   | 0    | 0.000  | 0.000 |
+| harbor                  | 5   | 0    | 0.000  | 0.000 |
+| overpass                | 6   | 0    | 0.000  | 0.000 |
+| ship                    | 27  | 0    | 0.000  | 0.000 |
+| stadium                 | 2   | 0    | 0.000  | 0.000 |
+| storagetank             | 3   | 0    | 0.000  | 0.000 |
+| tenniscourt             | 17  | 0    | 0.000  | 0.000 |
+| trainstation            | 5   | 0    | 0.000  | 0.000 |
+| vehicle                 | 47  | 0    | 0.000  | 0.000 |
+| windmill                | 11  | 0    | 0.000  | 0.000 |
++-------------------------+-----+------+--------+-------+
+| mAP                     |     |      |        | 0.000 |
++-------------------------+-----+------+--------+-------+
+10/20 21:39:51 - mmengine - INFO - Evaluating bbox...
+Loading and preparing results...
+DONE (t=0.01s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.05s).
+Accumulating evaluation results...
+DONE (t=0.06s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.000
+10/20 21:39:51 - mmengine - INFO - 
++-------------------------+-----+--------+--------+-------+-------+-------+
+| category                | mAP | mAP_50 | mAP_75 | mAP_s | mAP_m | mAP_l |
++-------------------------+-----+--------+--------+-------+-------+-------+
+| airplane                | 0.0 | 0.0    | 0.0    | nan   | nan   | 0.0   |
+| airport                 | 0.0 | 0.0    | 0.0    | nan   | nan   | 0.0   |
+| baseballfield           | 0.0 | 0.0    | 0.0    | 0.0   | nan   | nan   |
+| basketballcourt         | 0.0 | 0.0    | 0.0    | nan   | 0.0   | 0.0   |
+| bridge                  | 0.0 | 0.0    | 0.0    | 0.0   | nan   | 0.0   |
+| chimney                 | 0.0 | 0.0    | 0.0    | nan   | nan   | 0.0   |
+| dam                     | 0.0 | 0.0    | 0.0    | nan   | 0.0   | nan   |
+| expressway-service-area | 0.0 | 0.0    | 0.0    | 0.0   | nan   | 0.0   |
+| expressway-toll-station | 0.0 | 0.0    | 0.0    | 0.0   | nan   | 0.0   |
+| golffield               | 0.0 | 0.0    | 0.0    | nan   | nan   | 0.0   |
+| groundtrackfield        | 0.0 | 0.0    | 0.0    | nan   | 0.0   | 0.0   |
+| harbor                  | 0.0 | 0.0    | 0.0    | 0.0   | nan   | 0.0   |
+| overpass                | 0.0 | 0.0    | 0.0    | nan   | 0.0   | 0.0   |
+| ship                    | 0.0 | 0.0    | 0.0    | 0.0   | 0.0   | nan   |
+| stadium                 | 0.0 | 0.0    | 0.0    | nan   | 0.0   | 0.0   |
+| storagetank             | 0.0 | 0.0    | 0.0    | 0.0   | nan   | 0.0   |
+| tenniscourt             | 0.0 | 0.0    | 0.0    | 0.0   | 0.0   | 0.0   |
+| trainstation            | 0.0 | 0.0    | 0.0    | nan   | 0.0   | 0.0   |
+| vehicle                 | 0.0 | 0.0    | 0.0    | 0.0   | 0.0   | nan   |
+| windmill                | 0.0 | 0.0    | 0.0    | nan   | 0.0   | nan   |
++-------------------------+-----+--------+--------+-------+-------+-------+
+10/20 21:39:51 - mmengine - INFO - bbox_mAP_copypaste: 0.000 0.000 0.000 0.000 0.000 0.000
+10/20 21:39:51 - mmengine - INFO - Epoch(val) [1][8/8]    pascal_voc/mAP: 0.0000  pascal_voc/AP50: 0.0000  coco/airplane_precision: 0.0000  coco/airport_precision: 0.0000  coco/baseballfield_precision: 0.0000  coco/basketballcourt_precision: 0.0000  coco/bridge_precision: 0.0000  coco/chimney_precision: 0.0000  coco/dam_precision: 0.0000  coco/expressway-service-area_precision: 0.0000  coco/expressway-toll-station_precision: 0.0000  coco/golffield_precision: 0.0000  coco/groundtrackfield_precision: 0.0000  coco/harbor_precision: 0.0000  coco/overpass_precision: 0.0000  coco/ship_precision: 0.0000  coco/stadium_precision: 0.0000  coco/storagetank_precision: 0.0000  coco/tenniscourt_precision: 0.0000  coco/trainstation_precision: 0.0000  coco/vehicle_precision: 0.0000  coco/windmill_precision: 0.0000  coco/bbox_mAP: 0.0000  coco/bbox_mAP_50: 0.0000  coco/bbox_mAP_75: 0.0000  coco/bbox_mAP_s: 0.0000  coco/bbox_mAP_m: 0.0000  coco/bbox_mAP_l: 0.0000  data_time: 0.0752  time: 0.1683
+10/20 21:39:51 - mmengine - INFO - Switch pipeline now!
+10/20 21:39:51 - mmengine - INFO - Epoch(train) [2][1/8]  base_lr: 5.6250e-04 lr: 5.6250e-04  eta: 0:00:04  time: 0.6058  data_time: 0.1036  memory: 563  loss: 1.4999  loss_cls: 0.5690  loss_bbox: 0.9309
+10/20 21:39:52 - mmengine - INFO - Epoch(train) [2][2/8]  base_lr: 5.6250e-04 lr: 5.6250e-04  eta: 0:00:03  time: 0.5764  data_time: 0.0987  memory: 563  loss: 1.4394  loss_cls: 0.5494  loss_bbox: 0.8900
+10/20 21:39:52 - mmengine - INFO - Epoch(train) [2][3/8]  base_lr: 5.6250e-04 lr: 5.6250e-04  eta: 0:00:02  time: 0.5473  data_time: 0.0938  memory: 563  loss: 1.3662  loss_cls: 0.5282  loss_bbox: 0.8381
+10/20 21:39:53 - mmengine - INFO - Epoch(train) [2][4/8]  base_lr: 5.6250e-04 lr: 5.6250e-04  eta: 0:00:02  time: 0.5428  data_time: 0.0910  memory: 644  loss: 1.4246  loss_cls: 0.5390  loss_bbox: 0.8856
+10/20 21:39:53 - mmengine - INFO - Epoch(train) [2][5/8]  base_lr: 5.6250e-04 lr: 5.6250e-04  eta: 0:00:01  time: 0.5172  data_time: 0.0884  memory: 563  loss: 1.4821  loss_cls: 0.5526  loss_bbox: 0.9296
+10/20 21:39:53 - mmengine - INFO - Epoch(train) [2][6/8]  base_lr: 5.6250e-04 lr: 5.6250e-04  eta: 0:00:00  time: 0.4971  data_time: 0.0850  memory: 563  loss: 1.5393  loss_cls: 0.5936  loss_bbox: 0.9456
+10/20 21:39:53 - mmengine - INFO - Epoch(train) [2][7/8]  base_lr: 5.6250e-04 lr: 5.6250e-04  eta: 0:00:00  time: 0.4826  data_time: 0.0826  memory: 563  loss: 1.5742  loss_cls: 0.6041  loss_bbox: 0.9700
+10/20 21:39:54 - mmengine - INFO - Exp name: scdown_p3_smoke_20261020_213936
+10/20 21:39:54 - mmengine - INFO - Epoch(train) [2][8/8]  base_lr: 5.6250e-04 lr: 5.6250e-04  eta: 0:00:00  time: 0.4713  data_time: 0.0859  memory: 563  loss: 1.6038  loss_cls: 0.6074  loss_bbox: 0.9964
+10/20 21:39:54 - mmengine - INFO - Epoch(val) [2][1/8]    eta: 0:00:01  time: 0.1699  data_time: 0.0749  memory: 279  
+10/20 21:39:54 - mmengine - INFO - Epoch(val) [2][2/8]    eta: 0:00:01  time: 0.1704  data_time: 0.0742  memory: 279  
+10/20 21:39:55 - mmengine - INFO - Epoch(val) [2][3/8]    eta: 0:00:01  time: 0.1800  data_time: 0.0737  memory: 279  
+10/20 21:39:55 - mmengine - INFO - Epoch(val) [2][4/8]    eta: 0:00:00  time: 0.1820  data_time: 0.0744  memory: 279  
+10/20 21:39:55 - mmengine - INFO - Epoch(val) [2][5/8]    eta: 0:00:00  time: 0.1816  data_time: 0.0741  memory: 279  
+10/20 21:39:55 - mmengine - INFO - Epoch(val) [2][6/8]    eta: 0:00:00  time: 0.1817  data_time: 0.0741  memory: 279  
+10/20 21:39:55 - mmengine - INFO - Epoch(val) [2][7/8]    eta: 0:00:00  time: 0.1846  data_time: 0.0743  memory: 279  
+10/20 21:39:56 - mmengine - INFO - Epoch(val) [2][8/8]    eta: 0:00:00  time: 0.1848  data_time: 0.0736  memory: 279  
+10/20 21:39:56 - mmengine - INFO - 
+---------------iou_thr: 0.5---------------
+10/20 21:39:56 - mmengine - INFO - 
++-------------------------+-----+------+--------+-------+
+| class                   | gts | dets | recall | ap    |
++-------------------------+-----+------+--------+-------+
+| airplane                | 4   | 0    | 0.000  | 0.000 |
+| airport                 | 4   | 0    | 0.000  | 0.000 |
+| baseballfield           | 4   | 0    | 0.000  | 0.000 |
+| basketballcourt         | 8   | 64   | 0.000  | 0.000 |
+| bridge                  | 6   | 2432 | 0.000  | 0.000 |
+| chimney                 | 1   | 64   | 0.000  | 0.000 |
+| dam                     | 1   | 0    | 0.000  | 0.000 |
+| expressway-service-area | 4   | 0    | 0.000  | 0.000 |
+| expressway-toll-station | 2   | 160  | 0.000  | 0.000 |
+| golffield               | 1   | 6560 | 0.000  | 0.000 |
+| groundtrackfield        | 4   | 0    | 0.000  | 0.000 |
+| harbor                  | 5   | 32   | 0.000  | 0.000 |
+| overpass                | 6   | 0    | 0.000  | 0.000 |
+| ship                    | 27  | 0    | 0.000  | 0.000 |
+| stadium                 | 2   | 32   | 0.000  | 0.000 |
+| storagetank             | 3   | 0    | 0.000  | 0.000 |
+| tenniscourt             | 17  | 128  | 0.000  | 0.000 |
+| trainstation            | 5   | 0    | 0.000  | 0.000 |
+| vehicle                 | 47  | 128  | 0.000  | 0.000 |
+| windmill                | 11  | 0    | 0.000  | 0.000 |
++-------------------------+-----+------+--------+-------+
+| mAP                     |     |      |        | 0.000 |
++-------------------------+-----+------+--------+-------+
+10/20 21:39:56 - mmengine - INFO - Evaluating bbox...
+Loading and preparing results...
+DONE (t=0.01s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.10s).
+Accumulating evaluation results...
+DONE (t=0.09s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.000
+10/20 21:39:57 - mmengine - INFO - 
++-------------------------+-----+--------+--------+-------+-------+-------+
+| category                | mAP | mAP_50 | mAP_75 | mAP_s | mAP_m | mAP_l |
++-------------------------+-----+--------+--------+-------+-------+-------+
+| airplane                | 0.0 | 0.0    | 0.0    | nan   | nan   | 0.0   |
+| airport                 | 0.0 | 0.0    | 0.0    | nan   | nan   | 0.0   |
+| baseballfield           | 0.0 | 0.0    | 0.0    | 0.0   | nan   | nan   |
+| basketballcourt         | 0.0 | 0.0    | 0.0    | nan   | 0.0   | 0.0   |
+| bridge                  | 0.0 | 0.0    | 0.0    | 0.0   | nan   | 0.0   |
+| chimney                 | 0.0 | 0.0    | 0.0    | nan   | nan   | 0.0   |
+| dam                     | 0.0 | 0.0    | 0.0    | nan   | 0.0   | nan   |
+| expressway-service-area | 0.0 | 0.0    | 0.0    | 0.0   | nan   | 0.0   |
+| expressway-toll-station | 0.0 | 0.0    | 0.0    | 0.0   | nan   | 0.0   |
+| golffield               | 0.0 | 0.0    | 0.0    | nan   | nan   | 0.0   |
+| groundtrackfield        | 0.0 | 0.0    | 0.0    | nan   | 0.0   | 0.0   |
+| harbor                  | 0.0 | 0.0    | 0.0    | 0.0   | nan   | 0.0   |
+| overpass                | 0.0 | 0.0    | 0.0    | nan   | 0.0   | 0.0   |
+| ship                    | 0.0 | 0.0    | 0.0    | 0.0   | 0.0   | nan   |
+| stadium                 | 0.0 | 0.0    | 0.0    | nan   | 0.0   | 0.0   |
+| storagetank             | 0.0 | 0.0    | 0.0    | 0.0   | nan   | 0.0   |
+| tenniscourt             | 0.0 | 0.0    | 0.0    | 0.0   | 0.0   | 0.0   |
+| trainstation            | 0.0 | 0.0    | 0.0    | nan   | 0.0   | 0.0   |
+| vehicle                 | 0.0 | 0.0    | 0.0    | 0.0   | 0.0   | nan   |
+| windmill                | 0.0 | 0.0    | 0.0    | nan   | 0.0   | nan   |
++-------------------------+-----+--------+--------+-------+-------+-------+
+10/20 21:39:57 - mmengine - INFO - bbox_mAP_copypaste: 0.000 0.000 0.000 0.000 0.000 0.000
+10/20 21:39:57 - mmengine - INFO - Epoch(val) [2][8/8]    pascal_voc/mAP: 0.0000  pascal_voc/AP50: 0.0000  coco/airplane_precision: 0.0000  coco/airport_precision: 0.0000  coco/baseballfield_precision: 0.0000  coco/basketballcourt_precision: 0.0000  coco/bridge_precision: 0.0000  coco/chimney_precision: 0.0000  coco/dam_precision: 0.0000  coco/expressway-service-area_precision: 0.0000  coco/expressway-toll-station_precision: 0.0000  coco/golffield_precision: 0.0000  coco/groundtrackfield_precision: 0.0000  coco/harbor_precision: 0.0000  coco/overpass_precision: 0.0000  coco/ship_precision: 0.0000  coco/stadium_precision: 0.0000  coco/storagetank_precision: 0.0000  coco/tenniscourt_precision: 0.0000  coco/trainstation_precision: 0.0000  coco/vehicle_precision: 0.0000  coco/windmill_precision: 0.0000  coco/bbox_mAP: 0.0000  coco/bbox_mAP_50: 0.0000  coco/bbox_mAP_75: 0.0000  coco/bbox_mAP_s: 0.0000  coco/bbox_mAP_m: 0.0000  coco/bbox_mAP_l: 0.0000  data_time: 0.0712  time: 0.1947
+SMOKE_PASSED scdown_p3

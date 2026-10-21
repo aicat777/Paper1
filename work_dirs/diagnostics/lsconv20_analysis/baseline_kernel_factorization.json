@@ -1,0 +1,51 @@
+{
+  "checkpoint": "/home/pwt/Paper1/work_dirs/rtmdet_tiny_dior_640_gpu1_bs36/epoch_300.pth",
+  "ema_weights": true,
+  "offcenter_only": true,
+  "layers": [
+    {
+      "layer": "bbox_head.head_module.cls_convs.0.0.conv.weight",
+      "shape": [
+        96,
+        96,
+        9
+      ],
+      "offcenter_static_rank1_per_channel_retained_energy": 0.47870588302612305,
+      "offcenter_static_rank1_shared8_retained_energy": 0.43834373354911804,
+      "interpretation": "Static frozen-kernel approximation only; LSConv input conditioning and retraining can change the effective operator. Not a causal AP estimate."
+    },
+    {
+      "layer": "bbox_head.head_module.cls_convs.0.1.conv.weight",
+      "shape": [
+        96,
+        96,
+        9
+      ],
+      "offcenter_static_rank1_per_channel_retained_energy": 0.663986086845398,
+      "offcenter_static_rank1_shared8_retained_energy": 0.577652633190155,
+      "interpretation": "Static frozen-kernel approximation only; LSConv input conditioning and retraining can change the effective operator. Not a causal AP estimate."
+    },
+    {
+      "layer": "bbox_head.head_module.reg_convs.0.0.conv.weight",
+      "shape": [
+        96,
+        96,
+        9
+      ],
+      "offcenter_static_rank1_per_channel_retained_energy": 0.3721068203449249,
+      "offcenter_static_rank1_shared8_retained_energy": 0.31041857600212097,
+      "interpretation": "Static frozen-kernel approximation only; LSConv input conditioning and retraining can change the effective operator. Not a causal AP estimate."
+    },
+    {
+      "layer": "bbox_head.head_module.reg_convs.0.1.conv.weight",
+      "shape": [
+        96,
+        96,
+        9
+      ],
+      "offcenter_static_rank1_per_channel_retained_energy": 0.5114187002182007,
+      "offcenter_static_rank1_shared8_retained_energy": 0.40740087628364563,
+      "interpretation": "Static frozen-kernel approximation only; LSConv input conditioning and retraining can change the effective operator. Not a causal AP estimate."
+    }
+  ]
+}

@@ -1,0 +1,380 @@
+{
+  "metrics": [
+    {
+      "method": "baseline",
+      "epoch": 300,
+      "voc": 75.65006017684937,
+      "coco": 56.39999999999999,
+      "ap75": 61.9,
+      "small": 7.5,
+      "medium": 34.9,
+      "large": 69.8
+    },
+    {
+      "method": "old",
+      "epoch": 300,
+      "voc": 76.30515694618225,
+      "coco": 56.89999999999999,
+      "ap75": 62.1,
+      "small": 7.5,
+      "medium": 34.5,
+      "large": 70.3
+    },
+    {
+      "method": "new",
+      "epoch": 300,
+      "voc": 75.8583664894104,
+      "coco": 56.3,
+      "ap75": 61.4,
+      "small": 7.199999999999999,
+      "medium": 34.4,
+      "large": 69.39999999999999
+    }
+  ],
+  "checkpoints": {
+    "old": {
+      "epoch": 300,
+      "iterations": 48900,
+      "optimizer_steps": [
+        48879
+      ],
+      "raw_bn_counts": [
+        48900
+      ],
+      "nonfinite_weights": []
+    },
+    "new": {
+      "epoch": 300,
+      "iterations": 48900,
+      "optimizer_steps": [
+        48878
+      ],
+      "raw_bn_counts": [
+        48900
+      ],
+      "nonfinite_weights": []
+    }
+  },
+  "diagnostics": {
+    "sample": "100 held-out val images, 5 selected targets/class, one target/image",
+    "classification_is_not_detection_ap": true,
+    "views": {
+      "old": {
+        "epoch": 300,
+        "iterations": 48900,
+        "optimizer_steps": [
+          48879
+        ],
+        "amp": {
+          "scale": 65536.0,
+          "growth_factor": 2.0,
+          "backoff_factor": 0.5,
+          "growth_interval": 2000,
+          "_growth_tracker": 1535
+        },
+        "nonfinite_weights": [],
+        "raw_bn_counts": [
+          48900
+        ],
+        "views": {
+          "whole_image_running_bn": {
+            "n": 100,
+            "accuracy": 0.91,
+            "ce": 0.24711472630500794,
+            "mean_true_probability": 0.8957132625579834
+          },
+          "crop_32_running_bn": {
+            "n": 100,
+            "accuracy": 0.19,
+            "ce": 3.550410294532776,
+            "mean_true_probability": 0.16107606902718544
+          },
+          "crop_32_own_bn": {
+            "n": 100,
+            "accuracy": 0.26,
+            "ce": 3.2057492256164553,
+            "mean_true_probability": 0.21149083971977234
+          },
+          "crop_64_running_bn": {
+            "n": 100,
+            "accuracy": 0.5,
+            "ce": 2.0452179074287415,
+            "mean_true_probability": 0.3988960540294647
+          },
+          "crop_64_own_bn": {
+            "n": 100,
+            "accuracy": 0.45,
+            "ce": 2.008803753852844,
+            "mean_true_probability": 0.3597249156236649
+          },
+          "crop_128_running_bn": {
+            "n": 100,
+            "accuracy": 0.75,
+            "ce": 1.1751407408714294,
+            "mean_true_probability": 0.6449980115890503
+          },
+          "crop_128_own_bn": {
+            "n": 100,
+            "accuracy": 0.6,
+            "ce": 1.4170510387420654,
+            "mean_true_probability": 0.5006373453140259
+          },
+          "crop_256_running_bn": {
+            "n": 100,
+            "accuracy": 0.75,
+            "ce": 1.1579194849729537,
+            "mean_true_probability": 0.7133716201782226
+          },
+          "crop_256_own_bn": {
+            "n": 100,
+            "accuracy": 0.71,
+            "ce": 1.221669476032257,
+            "mean_true_probability": 0.5862312340736389
+          },
+          "crop_512_running_bn": {
+            "n": 100,
+            "accuracy": 0.64,
+            "ce": 2.403925557881594,
+            "mean_true_probability": 0.6010447961091995
+          },
+          "crop_512_own_bn": {
+            "n": 100,
+            "accuracy": 0.54,
+            "ce": 2.102256853580475,
+            "mean_true_probability": 0.46570760786533355
+          },
+          "crop_800_running_bn": {
+            "n": 100,
+            "accuracy": 0.5,
+            "ce": 3.1261900436878203,
+            "mean_true_probability": 0.47774106442928316
+          },
+          "crop_800_own_bn": {
+            "n": 100,
+            "accuracy": 0.44,
+            "ce": 2.7351292037963866,
+            "mean_true_probability": 0.38935163743793966
+          }
+        }
+      },
+      "new": {
+        "epoch": 300,
+        "iterations": 48900,
+        "optimizer_steps": [
+          48878
+        ],
+        "amp": {
+          "scale": 32768.0,
+          "growth_factor": 2.0,
+          "backoff_factor": 0.5,
+          "growth_interval": 2000,
+          "_growth_tracker": 286
+        },
+        "nonfinite_weights": [],
+        "raw_bn_counts": [
+          48900
+        ],
+        "views": {
+          "whole_image_running_bn": {
+            "n": 100,
+            "accuracy": 0.86,
+            "ce": 0.5141678526625038,
+            "mean_true_probability": 0.8547461676597595
+          },
+          "crop_32_running_bn": {
+            "n": 100,
+            "accuracy": 0.2,
+            "ce": 5.192175750732422,
+            "mean_true_probability": 0.18108179464936255
+          },
+          "crop_32_own_bn": {
+            "n": 100,
+            "accuracy": 0.74,
+            "ce": 1.0982994502782821,
+            "mean_true_probability": 0.6984289932250977
+          },
+          "crop_64_running_bn": {
+            "n": 100,
+            "accuracy": 0.63,
+            "ce": 1.6604050183296204,
+            "mean_true_probability": 0.5706812858581543
+          },
+          "crop_64_own_bn": {
+            "n": 100,
+            "accuracy": 0.77,
+            "ce": 0.8127698814868927,
+            "mean_true_probability": 0.7464942312240601
+          },
+          "crop_128_running_bn": {
+            "n": 100,
+            "accuracy": 0.81,
+            "ce": 0.5055611209571361,
+            "mean_true_probability": 0.7870216703414917
+          },
+          "crop_128_own_bn": {
+            "n": 100,
+            "accuracy": 0.8,
+            "ce": 0.6874761100113392,
+            "mean_true_probability": 0.7577334642410278
+          },
+          "crop_256_running_bn": {
+            "n": 100,
+            "accuracy": 0.89,
+            "ce": 0.3491486474126577,
+            "mean_true_probability": 0.8433857107162476
+          },
+          "crop_256_own_bn": {
+            "n": 100,
+            "accuracy": 0.86,
+            "ce": 0.6011709433794021,
+            "mean_true_probability": 0.8179311633110047
+          },
+          "crop_512_running_bn": {
+            "n": 100,
+            "accuracy": 0.85,
+            "ce": 0.57986862719059,
+            "mean_true_probability": 0.80316565990448
+          },
+          "crop_512_own_bn": {
+            "n": 100,
+            "accuracy": 0.86,
+            "ce": 0.44971582531929016,
+            "mean_true_probability": 0.8321614742279053
+          },
+          "crop_800_running_bn": {
+            "n": 100,
+            "accuracy": 0.76,
+            "ce": 1.0398775327205658,
+            "mean_true_probability": 0.7247250723838806
+          },
+          "crop_800_own_bn": {
+            "n": 100,
+            "accuracy": 0.85,
+            "ce": 0.4701883101463318,
+            "mean_true_probability": 0.8045773983001709
+          }
+        }
+      }
+    },
+    "batch_size": 8,
+    "targets_per_class": 5,
+    "normalization_probe": "same crops and weights, only BN statistics source changes"
+  },
+  "inferred_crop_level_distribution": [
+    0.4419210603820962,
+    0.1668402869395497,
+    0.3912386526783541
+  ],
+  "evidence": [
+    "Both runs completed 48900 iterations; optimizer updates differ by one.",
+    "New model has better cropped-view auxiliary classification but weaker whole-image auxiliary classification on the same 100 held-out balanced GTs.",
+    "New crop32 auxiliary accuracy depends strongly on crop batch statistics (74%) versus main running statistics (20%).",
+    "Original MPSR shares its final detector classifier across ordinary and object-pyramid views; this adapter uses a separate Linear auxiliary classifier.",
+    "New objective replaces the original whole-image all-GT auxiliary objective.",
+    "Crop sampling and FPN levels differ markedly from original whole-image auxiliary supervision; category AP changes do not support sampling count as the sole cause."
+  ],
+  "limits": [
+    "The classification probe measures the auxiliary head on 100 balanced GTs, not detection AP.",
+    "FrozenBN/batch-statistics and classifier sharing are confirmed implementation differences; their individual AP contributions require a controlled intervention.",
+    "Single-seed old/new runs cannot isolate every causal contribution."
+  ],
+  "protocols": {
+    "baseline": {
+      "config": "/home/pwt/Paper1/work_dirs/rtmdet_tiny_dior_640_gpu1_bs36/baseline_640_bs36.py",
+      "batch": 36,
+      "accumulation": 1,
+      "input": [
+        640,
+        640
+      ],
+      "lr": 0.0005625,
+      "wd": 0.05,
+      "epochs": 300,
+      "warmup": 1000,
+      "ema": {
+        "ema_type": "ExpMomentumEMA",
+        "momentum": 0.0002,
+        "priority": 49,
+        "strict_load": false,
+        "type": "EMAHook",
+        "update_buffers": true
+      },
+      "scratch": true,
+      "seed": {
+        "deterministic": false,
+        "seed": 42
+      }
+    },
+    "old": {
+      "config": "/home/pwt/Paper1/work_dirs/instance_semantic_rtmdet_tiny_dior_640_gpu1_bs36/instance_semantic_640_bs36.py",
+      "batch": 36,
+      "accumulation": 1,
+      "input": [
+        640,
+        640
+      ],
+      "lr": 0.0005625000000000001,
+      "wd": 0.05,
+      "epochs": 300,
+      "warmup": 1000,
+      "ema": {
+        "ema_type": "ExpMomentumEMA",
+        "momentum": 0.0002,
+        "priority": 49,
+        "strict_load": false,
+        "type": "EMAHook",
+        "update_buffers": true
+      },
+      "scratch": true,
+      "seed": {
+        "deterministic": false,
+        "seed": 42
+      },
+      "same_experiment_resume": true,
+      "resume_checkpoint": "/home/pwt/Paper1/work_dirs/instance_semantic_rtmdet_tiny_dior_640_gpu1_bs36/epoch_46.pth"
+    },
+    "new": {
+      "config": "/home/pwt/Paper1/work_dirs/instance_semantic_multiscale_rtmdet_tiny_dior_640_gpu1_bs36/instance_semantic_multiscale_640_bs36.py",
+      "batch": 36,
+      "accumulation": 1,
+      "input": [
+        640,
+        640
+      ],
+      "lr": 0.0005625000000000001,
+      "wd": 0.05,
+      "epochs": 300,
+      "warmup": 1000,
+      "ema": {
+        "ema_type": "ExpMomentumEMA",
+        "momentum": 0.0002,
+        "priority": 49,
+        "strict_load": false,
+        "type": "EMAHook",
+        "update_buffers": true
+      },
+      "scratch": true,
+      "seed": {
+        "deterministic": false,
+        "seed": 42
+      }
+    }
+  },
+  "scale_rng_audit": {
+    "iterations": 48900,
+    "counts_by_scale": {
+      "32": 8238,
+      "64": 8160,
+      "128": 8149,
+      "256": 8040,
+      "512": 8118,
+      "800": 8195
+    },
+    "matches_final_raw_rng": true
+  },
+  "references": {
+    "mpsr_paper": "https://arxiv.org/pdf/2007.09384",
+    "mpsr_shared_predictor": "https://github.com/jiaxi-wu/MPSR/blob/master/maskrcnn_benchmark/modeling/roi_heads/box_head/box_head.py",
+    "mpsr_fixed_bn_defaults": "https://github.com/jiaxi-wu/MPSR/blob/master/maskrcnn_benchmark/config/defaults.py"
+  }
+}

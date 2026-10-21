@@ -1,0 +1,136 @@
+{
+  "status": "passed",
+  "method": "scdown_g4",
+  "parameters": 3139572,
+  "inference_conv_linear_gmac": 6.92717184,
+  "parameter_reduction_vs_original_percent": 35.647470600823006,
+  "mac_reduction_vs_original_percent": 13.277048416662218,
+  "actual_sites": [
+    {
+      "path": "backbone.stage2.1.blocks.0.conv1",
+      "input": [
+        1,
+        48,
+        80,
+        80
+      ],
+      "output": [
+        1,
+        48,
+        80,
+        80
+      ]
+    },
+    {
+      "path": "backbone.stage3.1.blocks.0.conv1",
+      "input": [
+        1,
+        96,
+        40,
+        40
+      ],
+      "output": [
+        1,
+        96,
+        40,
+        40
+      ]
+    },
+    {
+      "path": "backbone.stage4.2.blocks.0.conv1",
+      "input": [
+        1,
+        192,
+        20,
+        20
+      ],
+      "output": [
+        1,
+        192,
+        20,
+        20
+      ]
+    },
+    {
+      "path": "neck.top_down_layers.0.0.blocks.0.conv1",
+      "input": [
+        1,
+        96,
+        40,
+        40
+      ],
+      "output": [
+        1,
+        96,
+        40,
+        40
+      ]
+    },
+    {
+      "path": "neck.top_down_layers.1.blocks.0.conv1",
+      "input": [
+        1,
+        48,
+        80,
+        80
+      ],
+      "output": [
+        1,
+        48,
+        80,
+        80
+      ]
+    },
+    {
+      "path": "neck.bottom_up_layers.0.blocks.0.conv1",
+      "input": [
+        1,
+        96,
+        40,
+        40
+      ],
+      "output": [
+        1,
+        96,
+        40,
+        40
+      ]
+    },
+    {
+      "path": "neck.bottom_up_layers.1.blocks.0.conv1",
+      "input": [
+        1,
+        192,
+        20,
+        20
+      ],
+      "output": [
+        1,
+        192,
+        20,
+        20
+      ]
+    }
+  ],
+  "scdown_sites": [
+    "backbone.stage3.0",
+    "backbone.stage4.0",
+    "neck.downsample_layers.1"
+  ],
+  "unchanged_initialization_including_control_scdowns": true,
+  "protocol_equal_to_scdown_control": true,
+  "prediction_points": 8400,
+  "scratch": true,
+  "input_size": [
+    640,
+    640
+  ],
+  "formal_batch": 36,
+  "accumulation": 1,
+  "watched_parameter_tensors": 39,
+  "train_images": 5862,
+  "val_images": 5863,
+  "formal_batch_capacity_tested": false,
+  "config": "/home/pwt/Paper1/configs/scdown_g4/rtmdet_tiny_dior_640.py",
+  "config_sha256": "71b22faadb1b18e0af83e407573e604df9389e70a1d82e3229bb96988a0794de"
+}

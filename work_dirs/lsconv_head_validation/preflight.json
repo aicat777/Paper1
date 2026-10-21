@@ -1,0 +1,111 @@
+{
+  "status": "passed",
+  "method": "lsconv_head",
+  "parameters": 4460562,
+  "conv_gmac": 7.12938624,
+  "aggregation_gmac": 0.0193536,
+  "counted_gmac": 7.14873984,
+  "excludes_norm_activation_residual_and_postprocessing": true,
+  "lsconv_sites": [
+    {
+      "path": "backbone.stage2.1.blocks.0.conv1.0",
+      "shape": [
+        1,
+        48,
+        80,
+        80
+      ]
+    },
+    {
+      "path": "backbone.stage3.1.blocks.0.conv1.0",
+      "shape": [
+        1,
+        96,
+        40,
+        40
+      ]
+    },
+    {
+      "path": "backbone.stage4.2.blocks.0.conv1.0",
+      "shape": [
+        1,
+        192,
+        20,
+        20
+      ]
+    },
+    {
+      "path": "bbox_head.head_module.cls_convs.0.1.mixer",
+      "shape": [
+        1,
+        96,
+        80,
+        80
+      ]
+    },
+    {
+      "path": "bbox_head.head_module.reg_convs.0.1.mixer",
+      "shape": [
+        1,
+        96,
+        80,
+        80
+      ]
+    },
+    {
+      "path": "bbox_head.head_module.cls_convs.1.1.mixer",
+      "shape": [
+        1,
+        96,
+        40,
+        40
+      ]
+    },
+    {
+      "path": "bbox_head.head_module.reg_convs.1.1.mixer",
+      "shape": [
+        1,
+        96,
+        40,
+        40
+      ]
+    },
+    {
+      "path": "bbox_head.head_module.cls_convs.2.1.mixer",
+      "shape": [
+        1,
+        96,
+        20,
+        20
+      ]
+    },
+    {
+      "path": "bbox_head.head_module.reg_convs.2.1.mixer",
+      "shape": [
+        1,
+        96,
+        20,
+        20
+      ]
+    }
+  ],
+  "runtime_lsconv_calls": 9,
+  "whole_lsblocks": 6,
+  "prediction_points": 8400,
+  "watched_parameter_tensors": 143,
+  "scratch": true,
+  "input_size": [
+    640,
+    640
+  ],
+  "formal_batch": 36,
+  "accumulation": 1,
+  "train_images": 5862,
+  "val_images": 5863,
+  "formal_batch_capacity_tested": false,
+  "common_backbone": "unchanged three-site LSConv",
+  "training_protocol_unchanged": true,
+  "ffn_terminal_bn_zero": true,
+  "config": "/home/pwt/Paper1/configs/lsconv_head/rtmdet_tiny_dior_640.py",
+  "config_sha256": "24a938aec13576e658c899cf17d2aad1f827bd50a92c6dc7e97f69094a15d414"
+}

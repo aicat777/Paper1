@@ -1,0 +1,227 @@
+{
+  "status": "architecture_estimate_only",
+  "implemented_in_project": false,
+  "queued": false,
+  "input_shape": [
+    1,
+    3,
+    640,
+    640
+  ],
+  "cases": [
+    {
+      "scope": "baseline",
+      "parameters": 4878708,
+      "reduction_percent": 0.0,
+      "conv_linear_gmac": 7.98770304,
+      "aggregation_gmac": 0.0,
+      "total_counted_gmac": 7.98770304,
+      "output_shapes": [
+        [
+          [
+            1,
+            20,
+            80,
+            80
+          ],
+          [
+            1,
+            20,
+            40,
+            40
+          ],
+          [
+            1,
+            20,
+            20,
+            20
+          ]
+        ],
+        [
+          [
+            1,
+            4,
+            80,
+            80
+          ],
+          [
+            1,
+            4,
+            40,
+            40
+          ],
+          [
+            1,
+            4,
+            20,
+            20
+          ]
+        ]
+      ]
+    },
+    {
+      "scope": "eight_csp_blocks",
+      "parameters": 4083981,
+      "reduction_percent": 16.2897021096569,
+      "conv_linear_gmac": 7.12600704,
+      "aggregation_gmac": 0.0165888,
+      "total_counted_gmac": 7.14259584,
+      "output_shapes": [
+        [
+          [
+            1,
+            20,
+            80,
+            80
+          ],
+          [
+            1,
+            20,
+            40,
+            40
+          ],
+          [
+            1,
+            20,
+            20,
+            20
+          ]
+        ],
+        [
+          [
+            1,
+            4,
+            80,
+            80
+          ],
+          [
+            1,
+            4,
+            40,
+            40
+          ],
+          [
+            1,
+            4,
+            20,
+            20
+          ]
+        ]
+      ]
+    },
+    {
+      "scope": "thirteen_equal_width_weight_groups_including_head",
+      "parameters": 3748593,
+      "reduction_percent": 23.164227086351552,
+      "conv_linear_gmac": 4.38616704,
+      "aggregation_gmac": 0.0511488,
+      "total_counted_gmac": 4.43731584,
+      "output_shapes": [
+        [
+          [
+            1,
+            20,
+            80,
+            80
+          ],
+          [
+            1,
+            20,
+            40,
+            40
+          ],
+          [
+            1,
+            20,
+            20,
+            20
+          ]
+        ],
+        [
+          [
+            1,
+            4,
+            80,
+            80
+          ],
+          [
+            1,
+            4,
+            40,
+            40
+          ],
+          [
+            1,
+            4,
+            20,
+            20
+          ]
+        ]
+      ]
+    },
+    {
+      "scope": "fifteen_weight_groups_with_neck_channel_projections",
+      "parameters": 3336729,
+      "reduction_percent": 31.60629822485789,
+      "conv_linear_gmac": 4.06116864,
+      "aggregation_gmac": 0.0528768,
+      "total_counted_gmac": 4.11404544,
+      "output_shapes": [
+        [
+          [
+            1,
+            20,
+            80,
+            80
+          ],
+          [
+            1,
+            20,
+            40,
+            40
+          ],
+          [
+            1,
+            20,
+            20,
+            20
+          ]
+        ],
+        [
+          [
+            1,
+            4,
+            80,
+            80
+          ],
+          [
+            1,
+            4,
+            40,
+            40
+          ],
+          [
+            1,
+            4,
+            20,
+            20
+          ]
+        ]
+      ]
+    }
+  ],
+  "csp_locations": [
+    "backbone.stage1.1.blocks.0",
+    "backbone.stage2.1.blocks.0",
+    "backbone.stage3.1.blocks.0",
+    "backbone.stage4.2.blocks.0",
+    "neck.top_down_layers.0.0.blocks.0",
+    "neck.top_down_layers.1.blocks.0",
+    "neck.bottom_up_layers.0.blocks.0",
+    "neck.bottom_up_layers.1.blocks.0"
+  ],
+  "head_sharing": "four convolution-weight groups shared across three scales; all added BN/GN instances independent by scale",
+  "neck_channel_adapter": "1x1 ConvBN -> LSConv at 96 channels -> original SiLU",
+  "preserved": "all stride-two layers, all CSP 5x5 depthwise separable layers, all final class/regression predictors",
+  "caveat": "Counts exclude normalization, activations, dynamic-kernel memory overhead, assignment and NMS; no latency, accuracy or training verification"
+}

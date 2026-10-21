@@ -1,0 +1,184 @@
+{
+  "config": "/home/pwt/Paper1/configs/efs/rtmdet_tiny_dior_640.py",
+  "config_sha256": "c1a59ec12031908e6cc8ec2748769143931bd391755834a08194d2ae73ef1935",
+  "unit_tests": {
+    "count": 16,
+    "status": "passed"
+  },
+  "architecture": {
+    "baseline": {
+      "parameters": 4878708,
+      "conv_linear_gmac": 7.98770304
+    },
+    "efs": {
+      "parameters": 5005956,
+      "conv_linear_gmac": 18.37689984
+    }
+  },
+  "capacity": {
+    "status": "passed",
+    "loss_scale_init": 128,
+    "actual_optimizer_updates": 3,
+    "batch": 9,
+    "microsteps": 12,
+    "optimizer_updates": 3,
+    "gt_per_image": 1200,
+    "synthetic_repeated_annotations": true,
+    "allocator_limit_fraction": 0.88,
+    "peak_allocated_gib": 32.311466693878174,
+    "peak_reserved_gib": 36.849609375,
+    "elapsed_seconds": 31.826895429752767,
+    "losses": [
+      {
+        "loss": 2.613978862762451,
+        "loss_cls": 0.6779677271842957,
+        "loss_bbox": 1.9360110759735107
+      },
+      {
+        "loss": 2.613978862762451,
+        "loss_cls": 0.6779677271842957,
+        "loss_bbox": 1.9360110759735107
+      },
+      {
+        "loss": 2.613978862762451,
+        "loss_cls": 0.6779677271842957,
+        "loss_bbox": 1.9360110759735107
+      },
+      {
+        "loss": 2.613978862762451,
+        "loss_cls": 0.6779677271842957,
+        "loss_bbox": 1.9360110759735107
+      },
+      {
+        "loss": 2.2895498275756836,
+        "loss_cls": 0.36198753118515015,
+        "loss_bbox": 1.9275623559951782
+      },
+      {
+        "loss": 2.2895498275756836,
+        "loss_cls": 0.36198753118515015,
+        "loss_bbox": 1.9275623559951782
+      },
+      {
+        "loss": 2.2895498275756836,
+        "loss_cls": 0.36198753118515015,
+        "loss_bbox": 1.9275623559951782
+      },
+      {
+        "loss": 2.2895498275756836,
+        "loss_cls": 0.36198753118515015,
+        "loss_bbox": 1.9275623559951782
+      },
+      {
+        "loss": 2.111128330230713,
+        "loss_cls": 0.5300269722938538,
+        "loss_bbox": 1.5811012983322144
+      },
+      {
+        "loss": 2.111128330230713,
+        "loss_cls": 0.5300269722938538,
+        "loss_bbox": 1.5811012983322144
+      },
+      {
+        "loss": 2.111128330230713,
+        "loss_cls": 0.5300269722938538,
+        "loss_bbox": 1.5811012983322144
+      },
+      {
+        "loss": 2.111128330230713,
+        "loss_cls": 0.5300269722938538,
+        "loss_bbox": 1.5811012983322144
+      }
+    ]
+  },
+  "gpu_integration": {
+    "status": "passed",
+    "input_size": [
+      640,
+      640
+    ],
+    "microbatch": 9,
+    "accumulation": 4,
+    "optimizer_updates": 2,
+    "training_microsteps": 8,
+    "val_passes": 2,
+    "val_images_per_pass": 32,
+    "predictions_checked": 64,
+    "strong_and_weak_augmentation": true,
+    "finite_losses": true,
+    "finite_predictions": true,
+    "p2_parameters_in_optimizer": true,
+    "watched_parameter_tensors": 25,
+    "gradient_max": {
+      "bbox_head.head_module.rtm_reg.0.weight": 291.25,
+      "bbox_head.head_module.rtm_reg.0.bias": 27.484375,
+      "bbox_head.head_module.rtm_cls.0.weight": 68.125,
+      "bbox_head.head_module.rtm_cls.0.bias": 101.5625,
+      "neck.out_layers.0.bn.weight": 3.719301462173462,
+      "neck.out_layers.0.bn.bias": 0.2998255491256714,
+      "neck.out_layers.0.conv.weight": 14.2890625,
+      "neck.top_down_layers.2.final_conv.bn.weight": 78.37992858886719,
+      "neck.top_down_layers.2.final_conv.bn.bias": 15.773202896118164,
+      "neck.top_down_layers.2.final_conv.conv.weight": 323.75,
+      "neck.top_down_layers.2.blocks.0.conv2.pointwise_conv.bn.weight": 98.89556121826172,
+      "neck.top_down_layers.2.blocks.0.conv2.pointwise_conv.bn.bias": 14.4534912109375,
+      "neck.top_down_layers.2.blocks.0.conv2.pointwise_conv.conv.weight": 380.5,
+      "neck.top_down_layers.2.blocks.0.conv2.depthwise_conv.bn.weight": 100.42198944091797,
+      "neck.top_down_layers.2.blocks.0.conv2.depthwise_conv.bn.bias": 19.46619415283203,
+      "neck.top_down_layers.2.blocks.0.conv2.depthwise_conv.conv.weight": 468.75,
+      "neck.top_down_layers.2.blocks.0.conv1.bn.weight": 14.490095138549805,
+      "neck.top_down_layers.2.blocks.0.conv1.bn.bias": 19.82088851928711,
+      "neck.top_down_layers.2.blocks.0.conv1.conv.weight": 668.0,
+      "neck.top_down_layers.2.main_conv.bn.weight": 137.05955505371094,
+      "neck.top_down_layers.2.main_conv.bn.bias": 20.591041564941406,
+      "neck.top_down_layers.2.main_conv.conv.weight": 695.0,
+      "neck.top_down_layers.2.short_conv.bn.weight": 89.3138427734375,
+      "neck.top_down_layers.2.short_conv.bn.bias": 16.108234405517578,
+      "neck.top_down_layers.2.short_conv.conv.weight": 480.75
+    },
+    "parameter_updates_max": {
+      "neck.top_down_layers.2.main_conv.conv.weight": 0.0011310875415802002,
+      "neck.top_down_layers.2.main_conv.bn.weight": 0.0011240243911743164,
+      "neck.top_down_layers.2.main_conv.bn.bias": 0.0011214863043278456,
+      "neck.top_down_layers.2.short_conv.conv.weight": 0.001130804419517517,
+      "neck.top_down_layers.2.short_conv.bn.weight": 0.0011258125305175781,
+      "neck.top_down_layers.2.short_conv.bn.bias": 0.0011198199354112148,
+      "neck.top_down_layers.2.final_conv.conv.weight": 0.0011329948902130127,
+      "neck.top_down_layers.2.final_conv.bn.weight": 0.001125335693359375,
+      "neck.top_down_layers.2.final_conv.bn.bias": 0.001125626964494586,
+      "neck.top_down_layers.2.blocks.0.conv1.conv.weight": 0.0011293664574623108,
+      "neck.top_down_layers.2.blocks.0.conv1.bn.weight": 0.0011254549026489258,
+      "neck.top_down_layers.2.blocks.0.conv1.bn.bias": 0.0011252070544287562,
+      "neck.top_down_layers.2.blocks.0.conv2.depthwise_conv.conv.weight": 0.0011360347270965576,
+      "neck.top_down_layers.2.blocks.0.conv2.depthwise_conv.bn.weight": 0.0011256933212280273,
+      "neck.top_down_layers.2.blocks.0.conv2.depthwise_conv.bn.bias": 0.001122632878832519,
+      "neck.top_down_layers.2.blocks.0.conv2.pointwise_conv.conv.weight": 0.0011360347270965576,
+      "neck.top_down_layers.2.blocks.0.conv2.pointwise_conv.bn.weight": 0.00108414888381958,
+      "neck.top_down_layers.2.blocks.0.conv2.pointwise_conv.bn.bias": 0.0011244370834901929,
+      "neck.out_layers.0.conv.weight": 0.001128360629081726,
+      "neck.out_layers.0.bn.weight": 0.0011224746704101562,
+      "neck.out_layers.0.bn.bias": 0.0011257028672844172,
+      "bbox_head.head_module.rtm_cls.0.weight": 0.0011272504925727844,
+      "bbox_head.head_module.rtm_cls.0.bias": 0.001125335693359375,
+      "bbox_head.head_module.rtm_reg.0.weight": 0.0010879957117140293,
+      "bbox_head.head_module.rtm_reg.0.bias": 0.0009448860655538738
+    },
+    "peak_allocated_gib": 6.6268510818481445,
+    "peak_reserved_gib": 6.990234375,
+    "elapsed_seconds": 24.24556777626276,
+    "epochs": 2,
+    "train_images": 36,
+    "warmup_enabled": false,
+    "loss_scale_init": 512,
+    "saved_checkpoints": false
+  },
+  "formal_first_epoch": {
+    "epoch": 1,
+    "microiterations": 652,
+    "optimizer_steps": [
+      156
+    ],
+    "finite_model_weights": true,
+    "checkpoint": "/home/pwt/Paper1/work_dirs/efs_rtmdet_tiny_dior_640_gpu1_bs9x4/epoch_1.pth"
+  }
+}

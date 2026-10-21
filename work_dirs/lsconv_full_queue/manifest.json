@@ -1,0 +1,69 @@
+{
+  "root": "/home/pwt/Paper1",
+  "python": "/home/pwt/miniconda3/envs/rtmdet/bin/python",
+  "gpu_uuid": "GPU-df11ee80-4992-6cab-1055-b211d226f165",
+  "min_free_mib": 45000,
+  "dependency": {
+    "name": "efs_adapt",
+    "pid": 32124,
+    "start_ticks": "139961",
+    "status": "/home/pwt/Paper1/work_dirs/efs_adapt_queue/status.json",
+    "work_dir": "/home/pwt/Paper1/work_dirs/efs_adapt_rtmdet_tiny_dior_640_gpu1_bs9x4",
+    "log": "/home/pwt/Paper1/logs/efs_adapt_rtmdet_tiny_dior_640_gpu1_bs9x4.log"
+  },
+  "experiment": {
+    "name": "lsconv_full_640_bs12x3",
+    "source_config": "/home/pwt/Paper1/configs/lsconv_full/rtmdet_tiny_dior_640.py",
+    "config": "/home/pwt/Paper1/work_dirs/lsconv_full_queue/lsconv_full_640_bs12x3.py",
+    "work_dir": "/home/pwt/Paper1/work_dirs/lsconv_full_rtmdet_tiny_dior_640_gpu1_bs12x3",
+    "log": "/home/pwt/Paper1/logs/lsconv_full_rtmdet_tiny_dior_640_gpu1_bs12x3.log",
+    "preflight_report": "/home/pwt/Paper1/work_dirs/lsconv_full_validation/preflight.json",
+    "capacity_report": "/home/pwt/Paper1/work_dirs/lsconv_full_validation/capacity.json",
+    "validation_summary": "/home/pwt/Paper1/work_dirs/lsconv_full_validation/checks.json"
+  },
+  "source_sha256": {
+    "custom_models/lsconv_full/__init__.py": "88a8ce89c64922ea3841aff5b3b9ee65377742611ce5fcd77074f64084e3382e",
+    "custom_models/lsconv_full/aggregation.py": "a1e588d89602b1ad6a509fab1259b7cdc277307c445e573c9d174b0b63024df7",
+    "custom_models/lsconv_full/backbone.py": "f0f42720b9e70a46a0ff28b35014ee19ab923e6ed0e3a6fb58bdb12e6bf737c8",
+    "custom_models/lsconv_full/head.py": "29ce921cc43e7cc237d9709ad2fd414a49e721f0213e045d241764b354390f06",
+    "custom_models/lsconv_full/layers.py": "bedf57333b4f2d636ff1ccecdbcab7b257b416fc347def3352a513c1cd6d2bf6",
+    "custom_models/lsconv_full/neck.py": "0098abe8a3499fb777316372c49e0e7c3bc561c5c93181a2cc1a718b1a5755ba",
+    "custom_models/lsconv_full/operator.py": "6d2708a7ce9dd425c15517f77d1eacb32b3c4a6fd1216dc1727c6ac45e4be2a8",
+    "configs/lsconv_full/rtmdet_tiny_dior_640.py": "6114b16028616f2dc649cfba72f74594324bed9dad6dff75baf015d251ee9d80",
+    "configs/rtmdet_tiny_dior_300e.py": "69a8a91d777090fcdd6f27eafdb717cc93f1a272bc6a90c4db522ba035d215a6",
+    "scripts/lsconv_full_probe.py": "a75d1c860b9c09ca5b363d99e3d8e39106cfae814b7d0d1315cc35e02cda2c4d",
+    "scripts/queue_experiment.py": "53938385f211685b7de5ba4ce43d745611cc5ab21eb80eb0cf400388a533fdb1",
+    "work_dirs/lsconv_full_queue/lsconv_full_640_bs12x3.py": "c64e13b9b93f3e6db1875caa4415f3ae41e4ac74aca2b795be7dc725ac841e1b"
+  },
+  "preflight_command": [
+    "/home/pwt/miniconda3/envs/rtmdet/bin/python",
+    "-u",
+    "/home/pwt/Paper1/scripts/lsconv_full_probe.py",
+    "--mode",
+    "preflight",
+    "--config",
+    "/home/pwt/Paper1/work_dirs/lsconv_full_queue/lsconv_full_640_bs12x3.py",
+    "--report",
+    "/home/pwt/Paper1/work_dirs/lsconv_full_validation/preflight.json"
+  ],
+  "capacity_command": [
+    "/home/pwt/miniconda3/envs/rtmdet/bin/python",
+    "-u",
+    "/home/pwt/Paper1/scripts/lsconv_full_probe.py",
+    "--mode",
+    "capacity",
+    "--config",
+    "/home/pwt/Paper1/work_dirs/lsconv_full_queue/lsconv_full_640_bs12x3.py",
+    "--report",
+    "/home/pwt/Paper1/work_dirs/lsconv_full_validation/capacity.json",
+    "--allocator-fraction",
+    ".88"
+  ],
+  "capacity_expected": {
+    "microbatch": 12,
+    "accumulation": 3,
+    "optimizer_updates": 3,
+    "gt_per_image": 1200,
+    "allocator_fraction": 0.88
+  }
+}

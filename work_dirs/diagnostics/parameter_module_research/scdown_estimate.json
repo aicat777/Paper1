@@ -1,0 +1,138 @@
+{
+  "status": "arithmetic_only_not_implemented_or_trained",
+  "scope": "author YOLOv10-S: late backbone P4/P5 and last PAN transition; first PAN transition stays dense",
+  "base_parameters": 4878708,
+  "base_conv_gmac": 7.98770304,
+  "target_layers": [
+    {
+      "path": "backbone.stage3.0.conv",
+      "old": {
+        "in_channels": 96,
+        "out_channels": 192,
+        "kernel": [
+          3,
+          3
+        ],
+        "stride": [
+          2,
+          2
+        ],
+        "groups": 1,
+        "input_shape": [
+          1,
+          96,
+          80,
+          80
+        ],
+        "output_shape": [
+          1,
+          192,
+          40,
+          40
+        ],
+        "weight_parameters": 165888,
+        "conv_mac": 265420800
+      },
+      "old_parameters_including_bn": 166272,
+      "proposed_parameters_including_two_bn": 20928,
+      "proposed_conv_mac": 120729600,
+      "saved_parameters": 145344,
+      "saved_conv_mac": 144691200
+    },
+    {
+      "path": "backbone.stage4.0.conv",
+      "old": {
+        "in_channels": 192,
+        "out_channels": 384,
+        "kernel": [
+          3,
+          3
+        ],
+        "stride": [
+          2,
+          2
+        ],
+        "groups": 1,
+        "input_shape": [
+          1,
+          192,
+          40,
+          40
+        ],
+        "output_shape": [
+          1,
+          384,
+          20,
+          20
+        ],
+        "weight_parameters": 663552,
+        "conv_mac": 265420800
+      },
+      "old_parameters_including_bn": 664320,
+      "proposed_parameters_including_two_bn": 78720,
+      "proposed_conv_mac": 119347200,
+      "saved_parameters": 585600,
+      "saved_conv_mac": 146073600
+    },
+    {
+      "path": "neck.downsample_layers.1.conv",
+      "old": {
+        "in_channels": 192,
+        "out_channels": 192,
+        "kernel": [
+          3,
+          3
+        ],
+        "stride": [
+          2,
+          2
+        ],
+        "groups": 1,
+        "input_shape": [
+          1,
+          192,
+          40,
+          40
+        ],
+        "output_shape": [
+          1,
+          192,
+          20,
+          20
+        ],
+        "weight_parameters": 331776,
+        "conv_mac": 132710400
+      },
+      "old_parameters_including_bn": 332160,
+      "proposed_parameters_including_two_bn": 39360,
+      "proposed_conv_mac": 59673600,
+      "saved_parameters": 292800,
+      "saved_conv_mac": 73036800
+    }
+  ],
+  "estimated_parameters": 3854964,
+  "estimated_conv_gmac": 7.62390144,
+  "counting_includes_every_execution_of_shared_head_convs": true,
+  "excludes_norm_activation_and_postprocessing": true,
+  "estimated_parameter_reduction_percent": 20.983916233560194,
+  "estimated_mac_reduction_percent": 4.5545208450814005,
+  "independent_block_shape_and_parameter_arithmetic_checked": true,
+  "author_commit": "453c6e38a51e9d1d5a2aa5fb7f1014a711913397",
+  "author_references": {
+    "ultralytics/nn/modules/block.py": {
+      "url": "https://raw.githubusercontent.com/THU-MIG/yolov10/453c6e38a51e9d1d5a2aa5fb7f1014a711913397/ultralytics/nn/modules/block.py",
+      "sha256": "797a1fc75d9839147cbd3c432ad5d2fe16bc37a419a9f4d55c8449227cedb9fe",
+      "local_path": "/home/pwt/Paper1/work_dirs/diagnostics/parameter_module_research/author_reference/block.py"
+    },
+    "ultralytics/nn/modules/conv.py": {
+      "url": "https://raw.githubusercontent.com/THU-MIG/yolov10/453c6e38a51e9d1d5a2aa5fb7f1014a711913397/ultralytics/nn/modules/conv.py",
+      "sha256": "9dd51834bd9ff432b8d72d6f55bb44bac301c97cbe2cc32c04a95c5a3450f59f",
+      "local_path": "/home/pwt/Paper1/work_dirs/diagnostics/parameter_module_research/author_reference/conv.py"
+    },
+    "ultralytics/cfg/models/v10/yolov10s.yaml": {
+      "url": "https://raw.githubusercontent.com/THU-MIG/yolov10/453c6e38a51e9d1d5a2aa5fb7f1014a711913397/ultralytics/cfg/models/v10/yolov10s.yaml",
+      "sha256": "b620d7bd46e55da8c3234bea3b7e7e73d9be93c0a7152e0e82b1ad89d824fe0b",
+      "local_path": "/home/pwt/Paper1/work_dirs/diagnostics/parameter_module_research/author_reference/yolov10s.yaml"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+test_cross_scale_gradient_sum_and_checkpoint_ema_sharing (test_factorized_head.FactorizedHeadTests) ... /home/pwt/miniconda3/envs/rtmdet/lib/python3.10/site-packages/torch/_utils.py:776: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+ok
+test_scope_parameters_macs_and_outputs (test_factorized_head.FactorizedHeadTests) ... [W NNPACK.cpp:64] Could not initialize NNPACK! Reason: Unsupported hardware.
+ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 1.499s
+
+OK

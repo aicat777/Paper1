@@ -1,0 +1,6 @@
+test_inference_bn_fusion_handles_distinct_stats_on_shared_head_convs (tests.test_scdown.SCDownTests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.448s
+
+OK

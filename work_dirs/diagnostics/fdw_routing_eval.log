@@ -1,0 +1,189 @@
+loading annotations into memory...
+Done (t=0.34s)
+creating index...
+index created!
+loading annotations into memory...
+Done (t=0.38s)
+creating index...
+index created!
+loading annotations into memory...
+Done (t=0.50s)
+creating index...
+index created!
+/home/pwt/miniconda3/envs/rtmdet/lib/python3.10/site-packages/torch/nn/modules/conv.py:459: UserWarning: Applied workaround for CuDNN issue, install nvrtc.so (Triggered internally at ../aten/src/ATen/native/cudnn/Conv_v8.cpp:80.)
+  return F.conv2d(input, weight, bias, self.stride,
+/home/pwt/miniconda3/envs/rtmdet/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3483.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+progress 4 elapsed 2.1
+progress 404 elapsed 26.4
+progress 804 elapsed 49.5
+progress 1204 elapsed 74.0
+progress 1604 elapsed 98.4
+progress 2004 elapsed 120.2
+progress 2404 elapsed 145.0
+progress 2804 elapsed 168.8
+progress 3204 elapsed 191.2
+progress 3604 elapsed 212.8
+progress 4004 elapsed 234.5
+progress 4404 elapsed 256.2
+progress 4804 elapsed 277.9
+progress 5204 elapsed 299.8
+progress 5604 elapsed 321.7
+progress 5863 elapsed 335.6
+evaluating adaptive
+10/15 16:25:23 - mmengine - INFO - 
+---------------iou_thr: 0.5---------------
+10/15 16:25:31 - mmengine - INFO - 
++-------------------------+-------+--------+--------+-------+
+| class                   | gts   | dets   | recall | ap    |
++-------------------------+-------+--------+--------+-------+
+| airplane                | 654   | 84322  | 0.920  | 0.909 |
+| airport                 | 333   | 81936  | 0.964  | 0.800 |
+| baseballfield           | 1140  | 67721  | 0.933  | 0.908 |
+| basketballcourt         | 515   | 78366  | 0.915  | 0.811 |
+| bridge                  | 855   | 125351 | 0.749  | 0.458 |
+| chimney                 | 307   | 34229  | 0.932  | 0.826 |
+| dam                     | 260   | 81520  | 0.988  | 0.588 |
+| expressway-service-area | 543   | 35598  | 0.744  | 0.644 |
+| expressway-toll-station | 318   | 15628  | 0.704  | 0.634 |
+| golffield               | 274   | 82627  | 0.956  | 0.744 |
+| groundtrackfield        | 593   | 77345  | 0.960  | 0.803 |
+| harbor                  | 1225  | 137102 | 0.922  | 0.706 |
+| overpass                | 760   | 115805 | 0.851  | 0.655 |
+| ship                    | 14297 | 136546 | 0.955  | 0.899 |
+| stadium                 | 301   | 25820  | 0.980  | 0.903 |
+| storagetank             | 1709  | 68477  | 0.881  | 0.800 |
+| tenniscourt             | 2666  | 53536  | 0.958  | 0.903 |
+| trainstation            | 256   | 59499  | 0.965  | 0.573 |
+| vehicle                 | 7024  | 342055 | 0.887  | 0.735 |
+| windmill                | 1404  | 55417  | 0.862  | 0.789 |
++-------------------------+-------+--------+--------+-------+
+| mAP                     |       |        |        | 0.754 |
++-------------------------+-------+--------+--------+-------+
+10/15 16:26:11 - mmengine - INFO - Evaluating bbox...
+Loading and preparing results...
+DONE (t=7.67s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=94.36s).
+Accumulating evaluation results...
+DONE (t=26.69s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.562
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.768
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.615
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.076
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.342
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.695
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.376
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.623
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.666
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.167
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.501
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.787
+10/15 16:28:32 - mmengine - INFO - 
++-------------------------+-------+--------+--------+-------+-------+-------+
+| category                | mAP   | mAP_50 | mAP_75 | mAP_s | mAP_m | mAP_l |
++-------------------------+-------+--------+--------+-------+-------+-------+
+| airplane                | 0.791 | 0.903  | 0.901  | 0.0   | 0.556 | 0.875 |
+| airport                 | 0.508 | 0.823  | 0.55   | nan   | 0.097 | 0.522 |
+| baseballfield           | 0.822 | 0.922  | 0.914  | 0.0   | 0.77  | 0.89  |
+| basketballcourt         | 0.722 | 0.84   | 0.791  | 0.0   | 0.473 | 0.853 |
+| bridge                  | 0.278 | 0.452  | 0.305  | 0.024 | 0.132 | 0.528 |
+| chimney                 | 0.772 | 0.887  | 0.882  | 0.0   | 0.0   | 0.832 |
+| dam                     | 0.307 | 0.6    | 0.281  | 0.003 | 0.225 | 0.331 |
+| expressway-service-area | 0.519 | 0.685  | 0.623  | 0.0   | 0.0   | 0.686 |
+| expressway-toll-station | 0.521 | 0.638  | 0.596  | 0.017 | 0.537 | 0.843 |
+| golffield               | 0.534 | 0.766  | 0.641  | nan   | 0.006 | 0.554 |
+| groundtrackfield        | 0.653 | 0.831  | 0.707  | 0.205 | 0.44  | 0.843 |
+| harbor                  | 0.489 | 0.721  | 0.54   | 0.029 | 0.181 | 0.583 |
+| overpass                | 0.443 | 0.67   | 0.484  | 0.021 | 0.116 | 0.652 |
+| ship                    | 0.493 | 0.812  | 0.545  | 0.393 | 0.639 | 0.746 |
+| stadium                 | 0.763 | 0.937  | 0.882  | 0.02  | 0.007 | 0.782 |
+| storagetank             | 0.695 | 0.824  | 0.774  | 0.093 | 0.772 | 0.895 |
+| tenniscourt             | 0.835 | 0.928  | 0.88   | 0.096 | 0.648 | 0.949 |
+| trainstation            | 0.247 | 0.577  | 0.16   | 0.0   | 0.027 | 0.26  |
+| vehicle                 | 0.452 | 0.752  | 0.489  | 0.301 | 0.686 | 0.582 |
+| windmill                | 0.4   | 0.791  | 0.364  | 0.162 | 0.534 | 0.694 |
++-------------------------+-------+--------+--------+-------+-------+-------+
+10/15 16:28:32 - mmengine - INFO - bbox_mAP_copypaste: 0.562 0.768 0.615 0.076 0.342 0.695
+evaluating fixed_mean
+10/15 16:28:39 - mmengine - INFO - 
+---------------iou_thr: 0.5---------------
+10/15 16:28:50 - mmengine - INFO - 
++-------------------------+-------+--------+--------+-------+
+| class                   | gts   | dets   | recall | ap    |
++-------------------------+-------+--------+--------+-------+
+| airplane                | 654   | 83939  | 0.922  | 0.909 |
+| airport                 | 333   | 81696  | 0.967  | 0.796 |
+| baseballfield           | 1140  | 67894  | 0.934  | 0.908 |
+| basketballcourt         | 515   | 78762  | 0.915  | 0.812 |
+| bridge                  | 855   | 126488 | 0.743  | 0.459 |
+| chimney                 | 307   | 34859  | 0.932  | 0.826 |
+| dam                     | 260   | 81619  | 0.988  | 0.587 |
+| expressway-service-area | 543   | 36145  | 0.744  | 0.643 |
+| expressway-toll-station | 318   | 15783  | 0.711  | 0.635 |
+| golffield               | 274   | 82604  | 0.960  | 0.729 |
+| groundtrackfield        | 593   | 77067  | 0.956  | 0.801 |
+| harbor                  | 1225  | 136789 | 0.922  | 0.704 |
+| overpass                | 760   | 116512 | 0.854  | 0.656 |
+| ship                    | 14297 | 136541 | 0.954  | 0.899 |
+| stadium                 | 301   | 25923  | 0.980  | 0.903 |
+| storagetank             | 1709  | 68647  | 0.879  | 0.801 |
+| tenniscourt             | 2666  | 53632  | 0.958  | 0.903 |
+| trainstation            | 256   | 58536  | 0.969  | 0.573 |
+| vehicle                 | 7024  | 339548 | 0.887  | 0.735 |
+| windmill                | 1404  | 55916  | 0.864  | 0.790 |
++-------------------------+-------+--------+--------+-------+
+| mAP                     |       |        |        | 0.753 |
++-------------------------+-------+--------+--------+-------+
+10/15 16:29:27 - mmengine - INFO - Evaluating bbox...
+Loading and preparing results...
+DONE (t=9.42s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=101.05s).
+Accumulating evaluation results...
+DONE (t=26.09s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.562
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.767
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.615
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.076
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.344
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.695
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.376
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.623
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.667
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.170
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.504
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.787
+10/15 16:32:00 - mmengine - INFO - 
++-------------------------+-------+--------+--------+-------+-------+-------+
+| category                | mAP   | mAP_50 | mAP_75 | mAP_s | mAP_m | mAP_l |
++-------------------------+-------+--------+--------+-------+-------+-------+
+| airplane                | 0.789 | 0.903  | 0.901  | 0.0   | 0.553 | 0.874 |
+| airport                 | 0.51  | 0.823  | 0.554  | nan   | 0.117 | 0.525 |
+| baseballfield           | 0.822 | 0.922  | 0.914  | 0.0   | 0.769 | 0.89  |
+| basketballcourt         | 0.723 | 0.84   | 0.792  | 0.0   | 0.471 | 0.853 |
+| bridge                  | 0.28  | 0.452  | 0.308  | 0.023 | 0.133 | 0.531 |
+| chimney                 | 0.771 | 0.888  | 0.882  | 0.0   | 0.0   | 0.832 |
+| dam                     | 0.307 | 0.598  | 0.279  | 0.005 | 0.229 | 0.331 |
+| expressway-service-area | 0.518 | 0.684  | 0.622  | 0.0   | 0.0   | 0.685 |
+| expressway-toll-station | 0.525 | 0.64   | 0.598  | 0.014 | 0.54  | 0.847 |
+| golffield               | 0.523 | 0.752  | 0.614  | nan   | 0.005 | 0.543 |
+| groundtrackfield        | 0.656 | 0.83   | 0.712  | 0.206 | 0.446 | 0.844 |
+| harbor                  | 0.488 | 0.719  | 0.537  | 0.031 | 0.178 | 0.582 |
+| overpass                | 0.444 | 0.67   | 0.488  | 0.021 | 0.116 | 0.655 |
+| ship                    | 0.494 | 0.812  | 0.548  | 0.393 | 0.639 | 0.746 |
+| stadium                 | 0.764 | 0.938  | 0.889  | 0.02  | 0.01  | 0.782 |
+| storagetank             | 0.696 | 0.824  | 0.776  | 0.092 | 0.773 | 0.897 |
+| tenniscourt             | 0.835 | 0.928  | 0.88   | 0.096 | 0.648 | 0.949 |
+| trainstation            | 0.245 | 0.569  | 0.159  | 0.0   | 0.027 | 0.258 |
+| vehicle                 | 0.452 | 0.752  | 0.488  | 0.301 | 0.686 | 0.578 |
+| windmill                | 0.401 | 0.791  | 0.368  | 0.161 | 0.536 | 0.693 |
++-------------------------+-------+--------+--------+-------+-------+-------+
+10/15 16:32:00 - mmengine - INFO - bbox_mAP_copypaste: 0.562 0.767 0.615 0.076 0.344 0.695
+result {"adaptive": {"pascal_voc/mAP": 0.7543804049491882, "coco/bbox_mAP": 0.562, "coco/bbox_mAP_s": 0.076, "coco/bbox_mAP_m": 0.342, "coco/bbox_mAP_l": 0.695}, "fixed_mean": {"pascal_voc/mAP": 0.7533966898918152, "coco/bbox_mAP": 0.562, "coco/bbox_mAP_s": 0.076, "coco/bbox_mAP_m": 0.344, "coco/bbox_mAP_l": 0.695}}

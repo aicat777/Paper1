@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "cwd": "/home/pwt/Paper1/work_dirs/fdw_queue",
+  "stdlib_queue": "/home/pwt/miniconda3/envs/rtmdet/lib/python3.10/queue.py",
+  "source_hashes_unchanged": true,
+  "queued_parameters": 4887018,
+  "config": "/home/pwt/Paper1/work_dirs/fdw_queue/fdw_640_bs36.py"
+}

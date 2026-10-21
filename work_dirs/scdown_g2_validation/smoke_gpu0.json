@@ -1,0 +1,211 @@
+{
+  "status": "passed",
+  "method": "scdown_g2",
+  "official_train_entrypoint": true,
+  "input_size": [
+    640,
+    640
+  ],
+  "microbatch": 2,
+  "optimizer_updates": 16,
+  "accumulation": 1,
+  "val_passes": 2,
+  "val_images_per_pass": 32,
+  "predictions_checked": 64,
+  "raw_predictions_checked": 8,
+  "full_state_ema_roundtrips": 2,
+  "model_optimizer_scaler_serialization": true,
+  "strong_and_weak_augmentation": true,
+  "coco_evaluation_scoped_to_subset": true,
+  "watched_parameter_tensors": 39,
+  "finite_losses": true,
+  "finite_predictions": true,
+  "amp_skipped_updates": 0,
+  "gradient_max": {
+    "neck.bottom_up_layers.1.blocks.0.conv1.bn.weight": 0.3540000915527344,
+    "neck.bottom_up_layers.1.blocks.0.conv1.bn.bias": 0.2693329453468323,
+    "neck.bottom_up_layers.1.blocks.0.conv1.conv.weight": 4.6171875,
+    "neck.downsample_layers.1.cv2.bn.weight": 1.1873395442962646,
+    "neck.downsample_layers.1.cv2.bn.bias": 0.0001412034034729004,
+    "neck.downsample_layers.1.cv2.conv.weight": 2.75390625,
+    "neck.downsample_layers.1.cv1.bn.weight": 0.24356363713741302,
+    "neck.downsample_layers.1.cv1.bn.bias": 0.4862412214279175,
+    "neck.downsample_layers.1.cv1.conv.weight": 5.76171875,
+    "neck.bottom_up_layers.0.blocks.0.conv1.bn.weight": 0.4474600851535797,
+    "neck.bottom_up_layers.0.blocks.0.conv1.bn.bias": 0.9034102559089661,
+    "neck.bottom_up_layers.0.blocks.0.conv1.conv.weight": 11.1015625,
+    "neck.top_down_layers.1.blocks.0.conv1.bn.weight": 0.9254341721534729,
+    "neck.top_down_layers.1.blocks.0.conv1.bn.bias": 1.8751552104949951,
+    "neck.top_down_layers.1.blocks.0.conv1.conv.weight": 18.6875,
+    "neck.top_down_layers.0.0.blocks.0.conv1.bn.weight": 1.3288238048553467,
+    "neck.top_down_layers.0.0.blocks.0.conv1.bn.bias": 1.471297264099121,
+    "neck.top_down_layers.0.0.blocks.0.conv1.conv.weight": 28.125,
+    "backbone.stage4.2.blocks.0.conv1.bn.weight": 1.5129345655441284,
+    "backbone.stage4.2.blocks.0.conv1.bn.bias": 1.693029761314392,
+    "backbone.stage4.2.blocks.0.conv1.conv.weight": 25.484375,
+    "backbone.stage4.0.cv2.bn.weight": 9.196771621704102,
+    "backbone.stage4.0.cv2.bn.bias": 0.0010555386543273926,
+    "backbone.stage4.0.cv2.conv.weight": 244.875,
+    "backbone.stage4.0.cv1.bn.weight": 1.819685697555542,
+    "backbone.stage4.0.cv1.bn.bias": 3.881122350692749,
+    "backbone.stage4.0.cv1.conv.weight": 25.3125,
+    "backbone.stage3.1.blocks.0.conv1.bn.weight": 4.278657913208008,
+    "backbone.stage3.1.blocks.0.conv1.bn.bias": 7.1059160232543945,
+    "backbone.stage3.1.blocks.0.conv1.conv.weight": 48.65625,
+    "backbone.stage3.0.cv2.bn.weight": 20.22941780090332,
+    "backbone.stage3.0.cv2.bn.bias": 0.002805948257446289,
+    "backbone.stage3.0.cv2.conv.weight": 475.5,
+    "backbone.stage3.0.cv1.bn.weight": 5.968914985656738,
+    "backbone.stage3.0.cv1.bn.bias": 11.943023681640625,
+    "backbone.stage3.0.cv1.conv.weight": 74.1875,
+    "backbone.stage2.1.blocks.0.conv1.bn.weight": 7.714733600616455,
+    "backbone.stage2.1.blocks.0.conv1.bn.bias": 13.392021179199219,
+    "backbone.stage2.1.blocks.0.conv1.conv.weight": 111.6875
+  },
+  "parameter_updates_max": {
+    "backbone.stage2.1.blocks.0.conv1.conv.weight": 0.007040787488222122,
+    "backbone.stage2.1.blocks.0.conv1.bn.weight": 0.006188333034515381,
+    "backbone.stage2.1.blocks.0.conv1.bn.bias": 0.005616018548607826,
+    "backbone.stage3.0.cv1.conv.weight": 0.006796583533287048,
+    "backbone.stage3.0.cv1.bn.weight": 0.0063512325286865234,
+    "backbone.stage3.0.cv1.bn.bias": 0.005761459469795227,
+    "backbone.stage3.0.cv2.conv.weight": 0.00655585341155529,
+    "backbone.stage3.0.cv2.bn.weight": 0.006113886833190918,
+    "backbone.stage3.0.cv2.bn.bias": 0.005695193540304899,
+    "backbone.stage3.1.blocks.0.conv1.conv.weight": 0.007238566875457764,
+    "backbone.stage3.1.blocks.0.conv1.bn.weight": 0.005884230136871338,
+    "backbone.stage3.1.blocks.0.conv1.bn.bias": 0.005624051671475172,
+    "backbone.stage4.0.cv1.conv.weight": 0.007436677813529968,
+    "backbone.stage4.0.cv1.bn.weight": 0.0068359375,
+    "backbone.stage4.0.cv1.bn.bias": 0.005666967481374741,
+    "backbone.stage4.0.cv2.conv.weight": 0.006656832993030548,
+    "backbone.stage4.0.cv2.bn.weight": 0.005807936191558838,
+    "backbone.stage4.0.cv2.bn.bias": 0.00636282516643405,
+    "backbone.stage4.2.blocks.0.conv1.conv.weight": 0.007403317838907242,
+    "backbone.stage4.2.blocks.0.conv1.bn.weight": 0.0065833330154418945,
+    "backbone.stage4.2.blocks.0.conv1.bn.bias": 0.005832129158079624,
+    "neck.top_down_layers.0.0.blocks.0.conv1.conv.weight": 0.006950991693884134,
+    "neck.top_down_layers.0.0.blocks.0.conv1.bn.weight": 0.0052193403244018555,
+    "neck.top_down_layers.0.0.blocks.0.conv1.bn.bias": 0.00598155427724123,
+    "neck.top_down_layers.1.blocks.0.conv1.conv.weight": 0.00702819786965847,
+    "neck.top_down_layers.1.blocks.0.conv1.bn.weight": 0.004564940929412842,
+    "neck.top_down_layers.1.blocks.0.conv1.bn.bias": 0.005719427950680256,
+    "neck.downsample_layers.1.cv1.conv.weight": 0.005960911512374878,
+    "neck.downsample_layers.1.cv1.bn.weight": 0.00503993034362793,
+    "neck.downsample_layers.1.cv1.bn.bias": 0.005250556860119104,
+    "neck.downsample_layers.1.cv2.conv.weight": 0.005617421120405197,
+    "neck.downsample_layers.1.cv2.bn.weight": 0.004797518253326416,
+    "neck.downsample_layers.1.cv2.bn.bias": 0.004638316109776497,
+    "neck.bottom_up_layers.0.blocks.0.conv1.conv.weight": 0.007143266499042511,
+    "neck.bottom_up_layers.0.blocks.0.conv1.bn.weight": 0.004966020584106445,
+    "neck.bottom_up_layers.0.blocks.0.conv1.bn.bias": 0.005853978917002678,
+    "neck.bottom_up_layers.1.blocks.0.conv1.conv.weight": 0.005914985667914152,
+    "neck.bottom_up_layers.1.blocks.0.conv1.bn.weight": 0.0050890445709228516,
+    "neck.bottom_up_layers.1.blocks.0.conv1.bn.bias": 0.005676667205989361
+  },
+  "losses": [
+    {
+      "loss": 0.5177655816078186,
+      "loss_cls": 0.3483791649341583,
+      "loss_bbox": 0.16938643157482147
+    },
+    {
+      "loss": 0.5051705241203308,
+      "loss_cls": 0.3393537104129791,
+      "loss_bbox": 0.16581682860851288
+    },
+    {
+      "loss": 0.7473432421684265,
+      "loss_cls": 0.32671406865119934,
+      "loss_bbox": 0.4206291735172272
+    },
+    {
+      "loss": 2.134674310684204,
+      "loss_cls": 0.43625369668006897,
+      "loss_bbox": 1.698420524597168
+    },
+    {
+      "loss": 2.1251490116119385,
+      "loss_cls": 0.7733420729637146,
+      "loss_bbox": 1.351806879043579
+    },
+    {
+      "loss": 2.0573971271514893,
+      "loss_cls": 0.36166879534721375,
+      "loss_bbox": 1.6957283020019531
+    },
+    {
+      "loss": 1.5457093715667725,
+      "loss_cls": 0.5457291007041931,
+      "loss_bbox": 0.9999802708625793
+    },
+    {
+      "loss": 2.0279147624969482,
+      "loss_cls": 0.49834010004997253,
+      "loss_bbox": 1.5295747518539429
+    },
+    {
+      "loss": 0.6674950122833252,
+      "loss_cls": 0.311771959066391,
+      "loss_bbox": 0.3557230234146118
+    },
+    {
+      "loss": 0.7819758653640747,
+      "loss_cls": 0.2989128530025482,
+      "loss_bbox": 0.4830629825592041
+    },
+    {
+      "loss": 0.3378285765647888,
+      "loss_cls": 0.2754833698272705,
+      "loss_bbox": 0.06234520673751831
+    },
+    {
+      "loss": 2.042085886001587,
+      "loss_cls": 0.48309609293937683,
+      "loss_bbox": 1.5589898824691772
+    },
+    {
+      "loss": 1.4831531047821045,
+      "loss_cls": 0.6144793033599854,
+      "loss_bbox": 0.8686738014221191
+    },
+    {
+      "loss": 2.4014601707458496,
+      "loss_cls": 1.0896528959274292,
+      "loss_bbox": 1.3118071556091309
+    },
+    {
+      "loss": 1.789798617362976,
+      "loss_cls": 0.5798070430755615,
+      "loss_bbox": 1.2099915742874146
+    },
+    {
+      "loss": 2.053428888320923,
+      "loss_cls": 0.6843525767326355,
+      "loss_bbox": 1.3690762519836426
+    }
+  ],
+  "metrics": [
+    {
+      "pascal_voc/mAP": 0.0,
+      "coco/bbox_mAP": 0.0,
+      "coco/bbox_mAP_50": 0.0
+    },
+    {
+      "pascal_voc/mAP": 0.0,
+      "coco/bbox_mAP": 0.0,
+      "coco/bbox_mAP_50": 0.0
+    }
+  ],
+  "assignment": {
+    "fallback_positives": 0,
+    "floored_regression_positives": 0,
+    "unmatched_tiny": 0
+  },
+  "loss_scale_init": 32,
+  "warmup_enabled": false,
+  "saved_checkpoints": false,
+  "peak_allocated_gib": 0.6235752105712891,
+  "peak_reserved_gib": 0.79296875,
+  "elapsed_seconds": 28.23294492799323
+}

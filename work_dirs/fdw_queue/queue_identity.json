@@ -1,0 +1,10 @@
+{
+  "pid": 2269614,
+  "start_ticks": "297234957",
+  "command": [
+    "/home/pwt/miniconda3/envs/rtmdet/bin/python",
+    "-u",
+    "/home/pwt/Paper1/work_dirs/fdw_queue/schedule_training.py"
+  ],
+  "started_at": "2026-10-15T01:12:29.295458+08:00"
+}

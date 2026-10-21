@@ -1,0 +1,38 @@
+{
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "physical_gpu": 0,
+  "shared_gpu": true,
+  "batch": 1,
+  "input": [
+    640,
+    640
+  ],
+  "amp": true,
+  "mode": "unfused_eager_model_forward_no_preprocess_no_NMS",
+  "warmup": 20,
+  "repeats": 3,
+  "iterations_per_repeat": 80,
+  "milliseconds": {
+    "baseline": [
+      11.867501712458761,
+      12.646951462511424,
+      12.162476399998923
+    ],
+    "freq_fusion": [
+      20.44523773747642,
+      18.53708293751879,
+      17.641588399965258
+    ],
+    "factorized_head": [
+      14.360556375004307,
+      15.448540487523132,
+      13.918265462507406
+    ]
+  },
+  "median_ms": {
+    "baseline": 12.162476399998923,
+    "freq_fusion": 18.53708293751879,
+    "factorized_head": 14.360556375004307
+  },
+  "training_speed_measured": false
+}

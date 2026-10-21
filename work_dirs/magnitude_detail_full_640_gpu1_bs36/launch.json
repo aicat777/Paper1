@@ -1,0 +1,24 @@
+{
+  "pid": 2097625,
+  "command": [
+    "/home/pwt/miniconda3/envs/rtmdet/bin/python",
+    "-u",
+    "/home/pwt/Paper1/mmyolo/tools/train.py",
+    "/home/pwt/Paper1/configs/magnitude_detail/full.py",
+    "--work-dir",
+    "/home/pwt/Paper1/work_dirs/magnitude_detail_full_640_gpu1_bs36",
+    "--cfg-options",
+    "train_batch_size_per_gpu=36",
+    "train_dataloader.batch_size=36",
+    "base_lr=0.0005625",
+    "optim_wrapper.optimizer.lr=0.0005625",
+    "param_scheduler.1.eta_min=2.8125e-05"
+  ],
+  "environment": {
+    "CUDA_DEVICE_ORDER": "PCI_BUS_ID",
+    "CUDA_VISIBLE_DEVICES": "1",
+    "PYTHONPATH": "/home/pwt/Paper1",
+    "OMP_NUM_THREADS": "4",
+    "MKL_NUM_THREADS": "4"
+  }
+}

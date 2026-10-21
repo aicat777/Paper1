@@ -1,0 +1,47 @@
+{
+  "status": "passed",
+  "method": "tiny_assignment",
+  "unit_tests": 8,
+  "unit_test_log": "work_dirs/research/tiny_assignment_unit.log",
+  "source_sha256": {
+    "configs/tiny_assignment/rtmdet_tiny_dior_640.py": "ceb6b30bffd07c9a8f7100831d79358eec4ff31fe25aa8b23adad43fceb64445",
+    "configs/rtmdet_tiny_dior_300e.py": "69a8a91d777090fcdd6f27eafdb717cc93f1a272bc6a90c4db522ba035d215a6",
+    "scripts/candidate_probe.py": "20e07b7f2cdb9202eedf63660786b5e2ffa5f5e019ebdf8a6c1fdbb2eb018286",
+    "tests/test_tiny_assignment.py": "116ccd9c76350534fb07a73052e519c1156646418076f702ecb179e072fc8268",
+    "custom_models/tiny_assignment/__init__.py": "64a4b0351aac33d214eea4334c28f05393c20db37906f8aa4a9db6106aa09d24",
+    "custom_models/tiny_assignment/assigner.py": "a24f8a4d208bb4629734d185a86d20015f3fd20287e70e65376e2be7fa977549",
+    "custom_models/tiny_assignment/head.py": "63f968ab608cfef2026c703a688542ae9033fd3ec9a6e48cff880a665cef4684"
+  },
+  "reports": {
+    "preflight": "work_dirs/tiny_assignment_validation/preflight.json",
+    "smoke": "work_dirs/tiny_assignment_validation/smoke.json",
+    "capacity_gpu0_bs12": "/home/pwt/Paper1/work_dirs/tiny_assignment_validation/capacity_gpu0_bs12.json"
+  },
+  "microbatch": 2,
+  "optimizer_updates": 16,
+  "formal_batch": 36,
+  "formal_batch_capacity_tested": false,
+  "queued_for_full_training": true,
+  "model_parameters": 4878708,
+  "inference_conv_linear_gmac": 7.98770304,
+  "peak_allocated_gib": 0.5981998443603516,
+  "peak_reserved_gib": 0.6796875,
+  "regression": "IoU-weighted GIoU plus deficit-weighted signed-edge SmoothL1 in stride units",
+  "queue_priority": 3,
+  "queue_manifest": "/home/pwt/Paper1/work_dirs/tiny_assignment_queue/manifest.json",
+  "capacity_policy": "Fixed real batch36; no automatic batch or accumulation change; capacity failure stops queue",
+  "formal_capacity_report": "/home/pwt/Paper1/work_dirs/tiny_assignment_validation/capacity_gpu1_bs36.json",
+  "capacity_probe_sha256": "311c8cf810f6184f190642fab04acd55c15e9f61ea1c281276fa93800df6725c",
+  "queue_identity": {
+    "pid": 2838556,
+    "start_ticks": "15178717",
+    "command": [
+      "/home/pwt/miniconda3/envs/rtmdet/bin/python",
+      "-u",
+      "/home/pwt/Paper1/scripts/queue_experiment.py",
+      "/home/pwt/Paper1/work_dirs/tiny_assignment_queue/manifest.json"
+    ],
+    "started_at": "2026-10-17T10:01:55.910706+08:00"
+  },
+  "predecessor": "instance_semantic"
+}

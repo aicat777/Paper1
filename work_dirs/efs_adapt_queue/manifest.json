@@ -1,0 +1,67 @@
+{
+  "root": "/home/pwt/Paper1",
+  "python": "/home/pwt/miniconda3/envs/rtmdet/bin/python",
+  "gpu_uuid": "GPU-df11ee80-4992-6cab-1055-b211d226f165",
+  "min_free_mib": 45000,
+  "dependency": {
+    "name": "fdw",
+    "pid": 2269614,
+    "start_ticks": "297234957",
+    "status": "/home/pwt/Paper1/work_dirs/fdw_queue/status.json",
+    "work_dir": "/home/pwt/Paper1/work_dirs/fdw_rtmdet_tiny_dior_640_gpu1_bs36",
+    "log": "/home/pwt/Paper1/logs/fdw_rtmdet_tiny_dior_640_gpu1_bs36.log"
+  },
+  "experiment": {
+    "name": "efs_adapt_640_bs9x4",
+    "source_config": "/home/pwt/Paper1/configs/efs_adapt/rtmdet_tiny_dior_640.py",
+    "config": "/home/pwt/Paper1/work_dirs/efs_adapt_queue/efs_adapt_640_bs9x4.py",
+    "work_dir": "/home/pwt/Paper1/work_dirs/efs_adapt_rtmdet_tiny_dior_640_gpu1_bs9x4",
+    "log": "/home/pwt/Paper1/logs/efs_adapt_rtmdet_tiny_dior_640_gpu1_bs9x4.log",
+    "preflight_report": "/home/pwt/Paper1/work_dirs/efs_adapt_validation/preflight.json",
+    "capacity_report": "/home/pwt/Paper1/work_dirs/efs_adapt_validation/capacity.json",
+    "validation_summary": "/home/pwt/Paper1/work_dirs/efs_adapt_validation/checks.json",
+    "resume_from": "/home/pwt/Paper1/work_dirs/efs_adapt_rtmdet_tiny_dior_640_gpu1_bs9x4/epoch_98.pth"
+  },
+  "source_sha256": {
+    "custom_models/efs_adapt/__init__.py": "ccd3ec1da954e68aa0aed912c65ef0f8489f85fc451e30951bb1500550aebb9a",
+    "custom_models/efs_adapt/neck.py": "987d55be413df10b9908b806bed8f0498f4d745480e97bd92f10a1988df90844",
+    "custom_models/efs_adapt/head.py": "e377398bcc6a10a1719e7909d7e54699fd0d533b0e8bec37c67c20b6c5966888",
+    "configs/efs_adapt/rtmdet_tiny_dior_640.py": "ae92a017ce83a5189e4b5553cfa059fdad95ad3da2951fb47e55bc55392a8da9",
+    "configs/efs/rtmdet_tiny_dior_640.py": "0454620f6f343fcb21f2f964521ed3bc0b73c61099f8ffc488d5a9460a65b2d3",
+    "configs/rtmdet_tiny_dior_300e.py": "69a8a91d777090fcdd6f27eafdb717cc93f1a272bc6a90c4db522ba035d215a6",
+    "scripts/efs_adapt_probe.py": "e352bf5191fc09a22ee8cc3b3cb51e21c8fe2a41a574b361e62ff004186d244b",
+    "scripts/queue_experiment.py": "53938385f211685b7de5ba4ce43d745611cc5ab21eb80eb0cf400388a533fdb1",
+    "work_dirs/efs_adapt_queue/efs_adapt_640_bs9x4.py": "acb935f7ab78dde82febd2335839b95a4b2d60aa6e894f31e01ac9f453e445fc"
+  },
+  "preflight_command": [
+    "/home/pwt/miniconda3/envs/rtmdet/bin/python",
+    "-u",
+    "/home/pwt/Paper1/scripts/efs_adapt_probe.py",
+    "--mode",
+    "preflight",
+    "--config",
+    "/home/pwt/Paper1/work_dirs/efs_adapt_queue/efs_adapt_640_bs9x4.py",
+    "--report",
+    "/home/pwt/Paper1/work_dirs/efs_adapt_validation/preflight.json"
+  ],
+  "capacity_command": [
+    "/home/pwt/miniconda3/envs/rtmdet/bin/python",
+    "-u",
+    "/home/pwt/Paper1/scripts/efs_adapt_probe.py",
+    "--mode",
+    "capacity",
+    "--config",
+    "/home/pwt/Paper1/work_dirs/efs_adapt_queue/efs_adapt_640_bs9x4.py",
+    "--report",
+    "/home/pwt/Paper1/work_dirs/efs_adapt_validation/capacity.json",
+    "--allocator-fraction",
+    ".88"
+  ],
+  "capacity_expected": {
+    "microbatch": 9,
+    "accumulation": 4,
+    "optimizer_updates": 3,
+    "gt_per_image": 1200,
+    "allocator_fraction": 0.88
+  }
+}

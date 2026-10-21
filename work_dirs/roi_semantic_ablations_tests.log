@@ -1,0 +1,27 @@
+test_all_matched_subset_models_equal_original_roi_loss_and_gradients (tests.test_roi_semantic_ablations.ROISemanticAblationTests) ... /home/pwt/miniconda3/envs/rtmdet/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3483.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+ok
+test_center_against_independent_roi_align_one_sample_forward_and_gradient (tests.test_roi_semantic_ablations.ROISemanticAblationTests) ... ok
+test_center_changes_only_sampling_on_spatially_nonuniform_features (tests.test_roi_semantic_ablations.ROISemanticAblationTests) ... ok
+test_center_ramps_fractional_substride_batch_and_levels (tests.test_roi_semantic_ablations.ROISemanticAblationTests) ... ok
+test_empty_gt_all_models_and_list_interface (tests.test_roi_semantic_ablations.ROISemanticAblationTests) ... ok
+test_empty_selection_and_empty_gt_remain_finite_and_connected (tests.test_roi_semantic_ablations.ROISemanticAblationTests) ... ok
+test_index_assigner_preserves_official_outputs_and_actual_indices (tests.test_roi_semantic_ablations.ROISemanticAblationTests) ... ok
+test_main_losses_exact_and_aux_gradient_scope_single_head_pass (tests.test_roi_semantic_ablations.ROISemanticAblationTests) ... ok
+test_mapping_interleaved_rows_same_boxes_and_degenerate_slots (tests.test_roi_semantic_ablations.ROISemanticAblationTests) ... ok
+test_model_serialization_random_continuation_and_inference_no_rng_changes (tests.test_roi_semantic_ablations.ROISemanticAblationTests) ... ok
+test_models_initialization_inference_and_training_protocol_unchanged (tests.test_roi_semantic_ablations.ROISemanticAblationTests) ... ok
+test_random_count_uniform_coverage_and_no_global_rng_consumption (tests.test_roi_semantic_ablations.ROISemanticAblationTests) ... ok
+test_random_save_restore_empty_full_and_ema_buffer (tests.test_roi_semantic_ablations.ROISemanticAblationTests) ... ok
+test_subset_denominator_is_all_gt_and_all_selected_equals_original (tests.test_roi_semantic_ablations.ROISemanticAblationTests) ... ok
+test_zero_weight_gradients_match_original_and_sgd_step (tests.test_roi_semantic_ablations.ROISemanticAblationTests) ... ok
+test_all_degenerate_instances_have_zero_connected_loss (tests.test_instance_semantic.InstanceSemanticTests) ... ok
+test_baseline_predictions_losses_and_aux_gradient_scope (tests.test_instance_semantic.InstanceSemanticTests) ... ok
+test_empty_and_instance_balanced_loss (tests.test_instance_semantic.InstanceSemanticTests) ... ok
+test_empty_augmented_boxes_do_not_change_valid_instance_loss (tests.test_instance_semantic.InstanceSemanticTests) ... ok
+test_roi_coordinate_ramps_substride_boxes_batch_and_levels (tests.test_instance_semantic.InstanceSemanticTests) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 14.232s
+
+OK

@@ -1,0 +1,91 @@
+{
+  "root": "/home/pwt/Paper1",
+  "python": "/home/pwt/miniconda3/envs/rtmdet/bin/python",
+  "gpu_uuid": "GPU-df11ee80-4992-6cab-1055-b211d226f165",
+  "min_free_mib": 45000,
+  "dependency": {
+    "name": "lsconv_head",
+    "pid": 530168,
+    "start_ticks": "25218264",
+    "status": "/home/pwt/Paper1/work_dirs/lsconv_head_queue/status.json",
+    "work_dir": "/home/pwt/Paper1/work_dirs/lsconv_head_rtmdet_tiny_dior_640_gpu1_bs36",
+    "log": "/home/pwt/Paper1/logs/lsconv_head_rtmdet_tiny_dior_640_gpu1_bs36.log"
+  },
+  "experiment": {
+    "name": "instance_semantic_multiscale_640_bs36",
+    "source_config": "/home/pwt/Paper1/configs/instance_semantic_multiscale/rtmdet_tiny_dior_640.py",
+    "config": "/home/pwt/Paper1/work_dirs/instance_semantic_multiscale_queue/instance_semantic_multiscale_640_bs36.py",
+    "work_dir": "/home/pwt/Paper1/work_dirs/instance_semantic_multiscale_rtmdet_tiny_dior_640_gpu1_bs36",
+    "log": "/home/pwt/Paper1/logs/instance_semantic_multiscale_rtmdet_tiny_dior_640_gpu1_bs36.log",
+    "preflight_report": "/home/pwt/Paper1/work_dirs/instance_semantic_multiscale_validation/queue_preflight.json",
+    "capacity_report": "/home/pwt/Paper1/work_dirs/instance_semantic_multiscale_validation/capacity_gpu1_bs36.json",
+    "validation_summary": "/home/pwt/Paper1/work_dirs/instance_semantic_multiscale_validation/checks.json"
+  },
+  "source_sha256": {
+    "configs/instance_semantic/rtmdet_tiny_dior_640.py": "51e23561dd9a4d2cece9e25b93964c50982df354f7566ce900375c6949b33e59",
+    "configs/instance_semantic_multiscale/rtmdet_tiny_dior_640.py": "2c808e93c5cc3b7d7f4951a8e7f2cad53c059881118ee12fe6a86aade78c1315",
+    "configs/rtmdet_tiny_dior_300e.py": "69a8a91d777090fcdd6f27eafdb717cc93f1a272bc6a90c4db522ba035d215a6",
+    "custom_models/instance_semantic/__init__.py": "7aa8654f1bae5bad77124cfa94e8a226429540643063e982758cdeaf5329563c",
+    "custom_models/instance_semantic/head.py": "404fa084c027a546c185af4d63be051e20d71e017e6510574c94efd87b86fe64",
+    "custom_models/instance_semantic/roi.py": "3e1d9805737aa468eb96f093ba7955a82362e7b83e90dc47efe64f53554e54b4",
+    "custom_models/instance_semantic_multiscale/__init__.py": "343fef85a626c7e3b0ddaf72c50b37ad1472168ad68c21e8df3487a72c25efc4",
+    "custom_models/instance_semantic_multiscale/data.py": "b735fb169efa6ddb79c8f7656aca9657d59e2259c7d68a2cc9f74bbb7417a7f6",
+    "custom_models/instance_semantic_multiscale/detector.py": "fafffaba7465a8f80cee513f858049e711dd894279b725b8f9d221258ddd1a0f",
+    "custom_models/instance_semantic_multiscale/head.py": "5d3171baad18ea89ae88d1c5cd503da95eaeeae653ecfbd920f695b2a06b856f",
+    "custom_models/instance_semantic_multiscale/normalization.py": "88879114c0bd6090787d2027226d3d5a6bab5859780af34af1ddb83d8cc3388b",
+    "custom_models/instance_semantic_multiscale/optimizer.py": "caa8b3c894f41b92a40a6f2f3b574c9af34d946604dd63150bcbbd12b34bfefb",
+    "custom_models/instance_semantic_multiscale/preprocessor.py": "c15859bc6ea5f64d1a162b167abf5a7af81fe24d045455d6e6fe7b3ae3db60cb",
+    "custom_models/instance_semantic_multiscale/roi.py": "7655faa291199bc5ac00f3699d9052e9029baed98c45fd7855c29af704a9ff45",
+    "mmyolo/tools/train.py": "52018e680dd636474b50d8c8bff1532f215adabc4caaa5fee73bc569fc44df84",
+    "scripts/candidate_capacity.py": "311c8cf810f6184f190642fab04acd55c15e9f61ea1c281276fa93800df6725c",
+    "scripts/candidate_probe.py": "20e07b7f2cdb9202eedf63660786b5e2ffa5f5e019ebdf8a6c1fdbb2eb018286",
+    "scripts/instance_semantic_multiscale_probe.py": "e779f24c281463661f5c178cfb47ffdb9773be2d7adfd97d8791bf08050dfccd",
+    "scripts/queue_experiment.py": "53938385f211685b7de5ba4ce43d745611cc5ab21eb80eb0cf400388a533fdb1",
+    "tests/test_instance_semantic_multiscale.py": "4541606863849bf0d19e3236dd5dc836803c4b9a890eb4c7ca782f0bb41f2e60",
+    "work_dirs/instance_semantic_multiscale_queue/instance_semantic_multiscale_640_bs36.py": "b5a19231356acb21150cf60b6deb5d6da715c06408e31165f4bd33ea8ac1ad1f"
+  },
+  "preflight_command": [
+    "/home/pwt/miniconda3/envs/rtmdet/bin/python",
+    "-u",
+    "/home/pwt/Paper1/scripts/instance_semantic_multiscale_probe.py",
+    "--config",
+    "/home/pwt/Paper1/work_dirs/instance_semantic_multiscale_queue/instance_semantic_multiscale_640_bs36.py",
+    "--mode",
+    "preflight",
+    "--report",
+    "/home/pwt/Paper1/work_dirs/instance_semantic_multiscale_validation/queue_preflight.json"
+  ],
+  "capacity_command": [
+    "/home/pwt/miniconda3/envs/rtmdet/bin/python",
+    "-u",
+    "/home/pwt/Paper1/scripts/instance_semantic_multiscale_probe.py",
+    "--config",
+    "/home/pwt/Paper1/work_dirs/instance_semantic_multiscale_queue/instance_semantic_multiscale_640_bs36.py",
+    "--mode",
+    "capacity",
+    "--batch",
+    "36",
+    "--allocator-fraction",
+    ".88",
+    "--report",
+    "/home/pwt/Paper1/work_dirs/instance_semantic_multiscale_validation/capacity_gpu1_bs36.json"
+  ],
+  "capacity_expected": {
+    "method": "instance_semantic_multiscale",
+    "microbatch": 36,
+    "formal_batch": 36,
+    "accumulation": 1,
+    "crop_resolutions": [
+      800,
+      800,
+      800
+    ],
+    "optimizer_updates": 3,
+    "auxiliary_only": false,
+    "formal_batch_capacity_tested": true,
+    "gt_per_image": 1200,
+    "allocator_fraction": 0.88,
+    "amp_skipped_updates": 0,
+    "saved_checkpoints": false
+  }
+}

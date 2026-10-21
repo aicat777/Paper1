@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "method": "tiny_assignment",
+  "parameters": 4878708,
+  "inference_conv_linear_gmac": 7.98770304,
+  "prediction_points": 8400,
+  "excludes_dynamic_filtering_resampling_norm_and_postprocessing": true,
+  "watched_parameter_tensors": 40,
+  "scratch": true,
+  "input_size": [
+    640,
+    640
+  ],
+  "batch": 36,
+  "accumulation": 1,
+  "formal_batch_capacity_tested": false,
+  "ema_gamma": 2000,
+  "class_count": 20,
+  "train_images": 5862,
+  "val_images": 5863
+}

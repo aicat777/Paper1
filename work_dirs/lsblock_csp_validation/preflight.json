@@ -1,0 +1,83 @@
+{
+  "status": "passed",
+  "method": "lsblock_csp",
+  "parameters": 4385445,
+  "conv_gmac": 7.43382144,
+  "aggregation_gmac": 0.0165888,
+  "counted_gmac": 7.45041024,
+  "runtime_lsconv_calls": 8,
+  "lsconv_shapes": [
+    [
+      1,
+      24,
+      160,
+      160
+    ],
+    [
+      1,
+      48,
+      80,
+      80
+    ],
+    [
+      1,
+      96,
+      40,
+      40
+    ],
+    [
+      1,
+      192,
+      20,
+      20
+    ],
+    [
+      1,
+      96,
+      40,
+      40
+    ],
+    [
+      1,
+      48,
+      80,
+      80
+    ],
+    [
+      1,
+      96,
+      40,
+      40
+    ],
+    [
+      1,
+      192,
+      20,
+      20
+    ]
+  ],
+  "replacement_paths": [
+    "backbone.stage1.1.blocks.0.mixer",
+    "backbone.stage2.1.blocks.0.mixer",
+    "backbone.stage3.1.blocks.0.mixer",
+    "backbone.stage4.2.blocks.0.mixer",
+    "neck.top_down_layers.0.0.blocks.0.mixer",
+    "neck.top_down_layers.1.blocks.0.mixer",
+    "neck.bottom_up_layers.0.blocks.0.mixer",
+    "neck.bottom_up_layers.1.blocks.0.mixer"
+  ],
+  "watched_parameter_tensors": 168,
+  "prediction_points": 8400,
+  "scratch": true,
+  "microbatch": 36,
+  "accumulation": 1,
+  "input_size": [
+    640,
+    640
+  ],
+  "train_images": 5862,
+  "val_images": 5863,
+  "baseline_head_and_neck_outputs": true,
+  "ffn_terminal_bn_zero": true,
+  "formal_batch_capacity_tested": false
+}

@@ -1,0 +1,173 @@
+{
+  "scope": "geometric candidate-coverage proxy on 800x800 DIOR val images resized to640; strict box-interior prior points with offset0; not final assignment/recall",
+  "counts": {
+    "all": {
+      "total": 35329,
+      "min_side_lt8": 2745,
+      "min_side_lt4": 110,
+      "stride4_has_inside_point": 35237,
+      "stride8_has_inside_point": 34166,
+      "recovered_by_stride4": 1071
+    },
+    "windmill": {
+      "total": 1404,
+      "min_side_lt8": 58,
+      "min_side_lt4": 1,
+      "stride4_has_inside_point": 1403,
+      "stride8_has_inside_point": 1386,
+      "recovered_by_stride4": 17
+    },
+    "bridge": {
+      "total": 854,
+      "min_side_lt8": 52,
+      "min_side_lt4": 7,
+      "stride4_has_inside_point": 850,
+      "stride8_has_inside_point": 835,
+      "recovered_by_stride4": 15
+    },
+    "basketballcourt": {
+      "total": 515,
+      "min_side_lt8": 1,
+      "min_side_lt4": 0,
+      "stride4_has_inside_point": 515,
+      "stride8_has_inside_point": 513,
+      "recovered_by_stride4": 2
+    },
+    "vehicle": {
+      "total": 7014,
+      "min_side_lt8": 1297,
+      "min_side_lt4": 80,
+      "stride4_has_inside_point": 6946,
+      "stride8_has_inside_point": 6414,
+      "recovered_by_stride4": 532
+    },
+    "overpass": {
+      "total": 760,
+      "min_side_lt8": 15,
+      "min_side_lt4": 2,
+      "stride4_has_inside_point": 759,
+      "stride8_has_inside_point": 753,
+      "recovered_by_stride4": 6
+    },
+    "stadium": {
+      "total": 299,
+      "min_side_lt8": 0,
+      "min_side_lt4": 0,
+      "stride4_has_inside_point": 299,
+      "stride8_has_inside_point": 299,
+      "recovered_by_stride4": 0
+    },
+    "tenniscourt": {
+      "total": 2666,
+      "min_side_lt8": 5,
+      "min_side_lt4": 0,
+      "stride4_has_inside_point": 2666,
+      "stride8_has_inside_point": 2664,
+      "recovered_by_stride4": 2
+    },
+    "groundtrackfield": {
+      "total": 593,
+      "min_side_lt8": 0,
+      "min_side_lt4": 0,
+      "stride4_has_inside_point": 593,
+      "stride8_has_inside_point": 593,
+      "recovered_by_stride4": 0
+    },
+    "trainstation": {
+      "total": 254,
+      "min_side_lt8": 0,
+      "min_side_lt4": 0,
+      "stride4_has_inside_point": 254,
+      "stride8_has_inside_point": 254,
+      "recovered_by_stride4": 0
+    },
+    "expressway-toll-station": {
+      "total": 318,
+      "min_side_lt8": 14,
+      "min_side_lt4": 0,
+      "stride4_has_inside_point": 318,
+      "stride8_has_inside_point": 313,
+      "recovered_by_stride4": 5
+    },
+    "airport": {
+      "total": 333,
+      "min_side_lt8": 0,
+      "min_side_lt4": 0,
+      "stride4_has_inside_point": 333,
+      "stride8_has_inside_point": 333,
+      "recovered_by_stride4": 0
+    },
+    "harbor": {
+      "total": 1217,
+      "min_side_lt8": 22,
+      "min_side_lt4": 3,
+      "stride4_has_inside_point": 1216,
+      "stride8_has_inside_point": 1206,
+      "recovered_by_stride4": 10
+    },
+    "ship": {
+      "total": 14215,
+      "min_side_lt8": 1115,
+      "min_side_lt4": 2,
+      "stride4_has_inside_point": 14212,
+      "stride8_has_inside_point": 13822,
+      "recovered_by_stride4": 390
+    },
+    "storagetank": {
+      "total": 1709,
+      "min_side_lt8": 130,
+      "min_side_lt4": 15,
+      "stride4_has_inside_point": 1695,
+      "stride8_has_inside_point": 1626,
+      "recovered_by_stride4": 69
+    },
+    "expressway-service-area": {
+      "total": 543,
+      "min_side_lt8": 0,
+      "min_side_lt4": 0,
+      "stride4_has_inside_point": 543,
+      "stride8_has_inside_point": 543,
+      "recovered_by_stride4": 0
+    },
+    "golffield": {
+      "total": 274,
+      "min_side_lt8": 0,
+      "min_side_lt4": 0,
+      "stride4_has_inside_point": 274,
+      "stride8_has_inside_point": 274,
+      "recovered_by_stride4": 0
+    },
+    "baseballfield": {
+      "total": 1140,
+      "min_side_lt8": 24,
+      "min_side_lt4": 0,
+      "stride4_has_inside_point": 1140,
+      "stride8_has_inside_point": 1124,
+      "recovered_by_stride4": 16
+    },
+    "dam": {
+      "total": 260,
+      "min_side_lt8": 0,
+      "min_side_lt4": 0,
+      "stride4_has_inside_point": 260,
+      "stride8_has_inside_point": 260,
+      "recovered_by_stride4": 0
+    },
+    "airplane": {
+      "total": 654,
+      "min_side_lt8": 12,
+      "min_side_lt4": 0,
+      "stride4_has_inside_point": 654,
+      "stride8_has_inside_point": 648,
+      "recovered_by_stride4": 6
+    },
+    "chimney": {
+      "total": 307,
+      "min_side_lt8": 0,
+      "min_side_lt4": 0,
+      "stride4_has_inside_point": 307,
+      "stride8_has_inside_point": 306,
+      "recovered_by_stride4": 1
+    }
+  }
+}

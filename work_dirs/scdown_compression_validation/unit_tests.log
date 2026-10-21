@@ -1,0 +1,18 @@
+test_checkpoint_roundtrip_preserves_predictions_and_shared_head (test_scdown_compression.SCDownCompressionTests) ... ok
+test_detection_gradients_actual_updates_and_each_bn_once (test_scdown_compression.SCDownCompressionTests) ... /home/pwt/miniconda3/envs/rtmdet/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3483.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+ok
+test_dsconv_forward_and_gradients_match_plain_torch_ordered_reference (test_scdown_compression.SCDownCompressionTests) ... ok
+test_exact_scope_operator_order_dimensions_and_sharing (test_scdown_compression.SCDownCompressionTests) ... [W NNPACK.cpp:64] Could not initialize NNPACK! Reason: Unsupported hardware.
+ok
+test_g4_forward_and_gradients_match_dense_block_diagonal_reference (test_scdown_compression.SCDownCompressionTests) ... ok
+test_invalid_replacement_is_rejected_instead_of_adapting_dimensions (test_scdown_compression.SCDownCompressionTests) ... /home/pwt/miniconda3/envs/rtmdet/lib/python3.10/site-packages/mmcv/cnn/bricks/conv_module.py:207: UserWarning: Unnecessary conv bias before batch/instance norm
+  warnings.warn(
+ok
+test_restoring_seven_sites_recovers_predictions_losses_and_gradients_exactly (test_scdown_compression.SCDownCompressionTests) ... ok
+test_unmodified_initialization_rng_and_control_scdowns_are_exact (test_scdown_compression.SCDownCompressionTests) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 20.916s
+
+OK

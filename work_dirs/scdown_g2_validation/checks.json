@@ -1,0 +1,719 @@
+{
+  "status": "passed",
+  "method": "scdown_g2",
+  "unit_tests": {
+    "status": "passed",
+    "command": [
+      "/home/pwt/miniconda3/envs/rtmdet/bin/python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_scdown*.py",
+      "-v"
+    ],
+    "test_cases": 14,
+    "log": "/home/pwt/Paper1/work_dirs/scdown_variants_validation/unit_tests.log"
+  },
+  "structure": {
+    "status": "passed",
+    "method": "scdown_g2",
+    "parameters": 3378036,
+    "inference_conv_linear_gmac": 7.15941504,
+    "parameter_reduction_vs_original_percent": 30.75961914506874,
+    "mac_reduction_vs_original_percent": 10.369539226135283,
+    "actual_sites": [
+      {
+        "path": "backbone.stage2.1.blocks.0.conv1",
+        "input": [
+          1,
+          48,
+          80,
+          80
+        ],
+        "output": [
+          1,
+          48,
+          80,
+          80
+        ]
+      },
+      {
+        "path": "backbone.stage3.0",
+        "input": [
+          1,
+          96,
+          80,
+          80
+        ],
+        "output": [
+          1,
+          192,
+          40,
+          40
+        ]
+      },
+      {
+        "path": "backbone.stage3.1.blocks.0.conv1",
+        "input": [
+          1,
+          96,
+          40,
+          40
+        ],
+        "output": [
+          1,
+          96,
+          40,
+          40
+        ]
+      },
+      {
+        "path": "backbone.stage4.0",
+        "input": [
+          1,
+          192,
+          40,
+          40
+        ],
+        "output": [
+          1,
+          384,
+          20,
+          20
+        ]
+      },
+      {
+        "path": "backbone.stage4.2.blocks.0.conv1",
+        "input": [
+          1,
+          192,
+          20,
+          20
+        ],
+        "output": [
+          1,
+          192,
+          20,
+          20
+        ]
+      },
+      {
+        "path": "neck.top_down_layers.0.0.blocks.0.conv1",
+        "input": [
+          1,
+          96,
+          40,
+          40
+        ],
+        "output": [
+          1,
+          96,
+          40,
+          40
+        ]
+      },
+      {
+        "path": "neck.top_down_layers.1.blocks.0.conv1",
+        "input": [
+          1,
+          48,
+          80,
+          80
+        ],
+        "output": [
+          1,
+          48,
+          80,
+          80
+        ]
+      },
+      {
+        "path": "neck.bottom_up_layers.0.blocks.0.conv1",
+        "input": [
+          1,
+          96,
+          40,
+          40
+        ],
+        "output": [
+          1,
+          96,
+          40,
+          40
+        ]
+      },
+      {
+        "path": "neck.downsample_layers.1",
+        "input": [
+          1,
+          192,
+          40,
+          40
+        ],
+        "output": [
+          1,
+          192,
+          20,
+          20
+        ]
+      },
+      {
+        "path": "neck.bottom_up_layers.1.blocks.0.conv1",
+        "input": [
+          1,
+          192,
+          20,
+          20
+        ],
+        "output": [
+          1,
+          192,
+          20,
+          20
+        ]
+      }
+    ],
+    "scdown_sites": [
+      "backbone.stage3.0",
+      "backbone.stage4.0",
+      "neck.downsample_layers.1"
+    ],
+    "grouped_sites": [
+      "backbone.stage2.1.blocks.0.conv1",
+      "backbone.stage3.1.blocks.0.conv1",
+      "backbone.stage4.2.blocks.0.conv1",
+      "neck.top_down_layers.0.0.blocks.0.conv1",
+      "neck.top_down_layers.1.blocks.0.conv1",
+      "neck.bottom_up_layers.0.blocks.0.conv1",
+      "neck.bottom_up_layers.1.blocks.0.conv1"
+    ],
+    "unchanged_initialization_including_control_scdowns": true,
+    "protocol_equal_to_scdown_control": true,
+    "prediction_points": 8400,
+    "scratch": true,
+    "input_size": [
+      640,
+      640
+    ],
+    "formal_batch": 36,
+    "accumulation": 1,
+    "watched_parameter_tensors": 39,
+    "train_images": 5862,
+    "val_images": 5863,
+    "formal_batch_capacity_tested": false,
+    "config": "/home/pwt/Paper1/configs/scdown_g2/rtmdet_tiny_dior_640.py",
+    "config_sha256": "5f8b3a8f0909abe7302a63286cf5a90d4b41f7aff575a860b410d5b05dc19e1f"
+  },
+  "official_gpu_smoke": {
+    "status": "passed",
+    "method": "scdown_g2",
+    "official_train_entrypoint": true,
+    "input_size": [
+      640,
+      640
+    ],
+    "microbatch": 2,
+    "optimizer_updates": 16,
+    "accumulation": 1,
+    "val_passes": 2,
+    "val_images_per_pass": 32,
+    "predictions_checked": 64,
+    "raw_predictions_checked": 8,
+    "full_state_ema_roundtrips": 2,
+    "model_optimizer_scaler_serialization": true,
+    "strong_and_weak_augmentation": true,
+    "coco_evaluation_scoped_to_subset": true,
+    "watched_parameter_tensors": 39,
+    "finite_losses": true,
+    "finite_predictions": true,
+    "amp_skipped_updates": 0,
+    "gradient_max": {
+      "neck.bottom_up_layers.1.blocks.0.conv1.bn.weight": 0.3540000915527344,
+      "neck.bottom_up_layers.1.blocks.0.conv1.bn.bias": 0.2693329453468323,
+      "neck.bottom_up_layers.1.blocks.0.conv1.conv.weight": 4.6171875,
+      "neck.downsample_layers.1.cv2.bn.weight": 1.1873395442962646,
+      "neck.downsample_layers.1.cv2.bn.bias": 0.0001412034034729004,
+      "neck.downsample_layers.1.cv2.conv.weight": 2.75390625,
+      "neck.downsample_layers.1.cv1.bn.weight": 0.24356363713741302,
+      "neck.downsample_layers.1.cv1.bn.bias": 0.4862412214279175,
+      "neck.downsample_layers.1.cv1.conv.weight": 5.76171875,
+      "neck.bottom_up_layers.0.blocks.0.conv1.bn.weight": 0.4474600851535797,
+      "neck.bottom_up_layers.0.blocks.0.conv1.bn.bias": 0.9034102559089661,
+      "neck.bottom_up_layers.0.blocks.0.conv1.conv.weight": 11.1015625,
+      "neck.top_down_layers.1.blocks.0.conv1.bn.weight": 0.9254341721534729,
+      "neck.top_down_layers.1.blocks.0.conv1.bn.bias": 1.8751552104949951,
+      "neck.top_down_layers.1.blocks.0.conv1.conv.weight": 18.6875,
+      "neck.top_down_layers.0.0.blocks.0.conv1.bn.weight": 1.3288238048553467,
+      "neck.top_down_layers.0.0.blocks.0.conv1.bn.bias": 1.471297264099121,
+      "neck.top_down_layers.0.0.blocks.0.conv1.conv.weight": 28.125,
+      "backbone.stage4.2.blocks.0.conv1.bn.weight": 1.5129345655441284,
+      "backbone.stage4.2.blocks.0.conv1.bn.bias": 1.693029761314392,
+      "backbone.stage4.2.blocks.0.conv1.conv.weight": 25.484375,
+      "backbone.stage4.0.cv2.bn.weight": 9.196771621704102,
+      "backbone.stage4.0.cv2.bn.bias": 0.0010555386543273926,
+      "backbone.stage4.0.cv2.conv.weight": 244.875,
+      "backbone.stage4.0.cv1.bn.weight": 1.819685697555542,
+      "backbone.stage4.0.cv1.bn.bias": 3.881122350692749,
+      "backbone.stage4.0.cv1.conv.weight": 25.3125,
+      "backbone.stage3.1.blocks.0.conv1.bn.weight": 4.278657913208008,
+      "backbone.stage3.1.blocks.0.conv1.bn.bias": 7.1059160232543945,
+      "backbone.stage3.1.blocks.0.conv1.conv.weight": 48.65625,
+      "backbone.stage3.0.cv2.bn.weight": 20.22941780090332,
+      "backbone.stage3.0.cv2.bn.bias": 0.002805948257446289,
+      "backbone.stage3.0.cv2.conv.weight": 475.5,
+      "backbone.stage3.0.cv1.bn.weight": 5.968914985656738,
+      "backbone.stage3.0.cv1.bn.bias": 11.943023681640625,
+      "backbone.stage3.0.cv1.conv.weight": 74.1875,
+      "backbone.stage2.1.blocks.0.conv1.bn.weight": 7.714733600616455,
+      "backbone.stage2.1.blocks.0.conv1.bn.bias": 13.392021179199219,
+      "backbone.stage2.1.blocks.0.conv1.conv.weight": 111.6875
+    },
+    "parameter_updates_max": {
+      "backbone.stage2.1.blocks.0.conv1.conv.weight": 0.007040787488222122,
+      "backbone.stage2.1.blocks.0.conv1.bn.weight": 0.006188333034515381,
+      "backbone.stage2.1.blocks.0.conv1.bn.bias": 0.005616018548607826,
+      "backbone.stage3.0.cv1.conv.weight": 0.006796583533287048,
+      "backbone.stage3.0.cv1.bn.weight": 0.0063512325286865234,
+      "backbone.stage3.0.cv1.bn.bias": 0.005761459469795227,
+      "backbone.stage3.0.cv2.conv.weight": 0.00655585341155529,
+      "backbone.stage3.0.cv2.bn.weight": 0.006113886833190918,
+      "backbone.stage3.0.cv2.bn.bias": 0.005695193540304899,
+      "backbone.stage3.1.blocks.0.conv1.conv.weight": 0.007238566875457764,
+      "backbone.stage3.1.blocks.0.conv1.bn.weight": 0.005884230136871338,
+      "backbone.stage3.1.blocks.0.conv1.bn.bias": 0.005624051671475172,
+      "backbone.stage4.0.cv1.conv.weight": 0.007436677813529968,
+      "backbone.stage4.0.cv1.bn.weight": 0.0068359375,
+      "backbone.stage4.0.cv1.bn.bias": 0.005666967481374741,
+      "backbone.stage4.0.cv2.conv.weight": 0.006656832993030548,
+      "backbone.stage4.0.cv2.bn.weight": 0.005807936191558838,
+      "backbone.stage4.0.cv2.bn.bias": 0.00636282516643405,
+      "backbone.stage4.2.blocks.0.conv1.conv.weight": 0.007403317838907242,
+      "backbone.stage4.2.blocks.0.conv1.bn.weight": 0.0065833330154418945,
+      "backbone.stage4.2.blocks.0.conv1.bn.bias": 0.005832129158079624,
+      "neck.top_down_layers.0.0.blocks.0.conv1.conv.weight": 0.006950991693884134,
+      "neck.top_down_layers.0.0.blocks.0.conv1.bn.weight": 0.0052193403244018555,
+      "neck.top_down_layers.0.0.blocks.0.conv1.bn.bias": 0.00598155427724123,
+      "neck.top_down_layers.1.blocks.0.conv1.conv.weight": 0.00702819786965847,
+      "neck.top_down_layers.1.blocks.0.conv1.bn.weight": 0.004564940929412842,
+      "neck.top_down_layers.1.blocks.0.conv1.bn.bias": 0.005719427950680256,
+      "neck.downsample_layers.1.cv1.conv.weight": 0.005960911512374878,
+      "neck.downsample_layers.1.cv1.bn.weight": 0.00503993034362793,
+      "neck.downsample_layers.1.cv1.bn.bias": 0.005250556860119104,
+      "neck.downsample_layers.1.cv2.conv.weight": 0.005617421120405197,
+      "neck.downsample_layers.1.cv2.bn.weight": 0.004797518253326416,
+      "neck.downsample_layers.1.cv2.bn.bias": 0.004638316109776497,
+      "neck.bottom_up_layers.0.blocks.0.conv1.conv.weight": 0.007143266499042511,
+      "neck.bottom_up_layers.0.blocks.0.conv1.bn.weight": 0.004966020584106445,
+      "neck.bottom_up_layers.0.blocks.0.conv1.bn.bias": 0.005853978917002678,
+      "neck.bottom_up_layers.1.blocks.0.conv1.conv.weight": 0.005914985667914152,
+      "neck.bottom_up_layers.1.blocks.0.conv1.bn.weight": 0.0050890445709228516,
+      "neck.bottom_up_layers.1.blocks.0.conv1.bn.bias": 0.005676667205989361
+    },
+    "losses": [
+      {
+        "loss": 0.5177655816078186,
+        "loss_cls": 0.3483791649341583,
+        "loss_bbox": 0.16938643157482147
+      },
+      {
+        "loss": 0.5051705241203308,
+        "loss_cls": 0.3393537104129791,
+        "loss_bbox": 0.16581682860851288
+      },
+      {
+        "loss": 0.7473432421684265,
+        "loss_cls": 0.32671406865119934,
+        "loss_bbox": 0.4206291735172272
+      },
+      {
+        "loss": 2.134674310684204,
+        "loss_cls": 0.43625369668006897,
+        "loss_bbox": 1.698420524597168
+      },
+      {
+        "loss": 2.1251490116119385,
+        "loss_cls": 0.7733420729637146,
+        "loss_bbox": 1.351806879043579
+      },
+      {
+        "loss": 2.0573971271514893,
+        "loss_cls": 0.36166879534721375,
+        "loss_bbox": 1.6957283020019531
+      },
+      {
+        "loss": 1.5457093715667725,
+        "loss_cls": 0.5457291007041931,
+        "loss_bbox": 0.9999802708625793
+      },
+      {
+        "loss": 2.0279147624969482,
+        "loss_cls": 0.49834010004997253,
+        "loss_bbox": 1.5295747518539429
+      },
+      {
+        "loss": 0.6674950122833252,
+        "loss_cls": 0.311771959066391,
+        "loss_bbox": 0.3557230234146118
+      },
+      {
+        "loss": 0.7819758653640747,
+        "loss_cls": 0.2989128530025482,
+        "loss_bbox": 0.4830629825592041
+      },
+      {
+        "loss": 0.3378285765647888,
+        "loss_cls": 0.2754833698272705,
+        "loss_bbox": 0.06234520673751831
+      },
+      {
+        "loss": 2.042085886001587,
+        "loss_cls": 0.48309609293937683,
+        "loss_bbox": 1.5589898824691772
+      },
+      {
+        "loss": 1.4831531047821045,
+        "loss_cls": 0.6144793033599854,
+        "loss_bbox": 0.8686738014221191
+      },
+      {
+        "loss": 2.4014601707458496,
+        "loss_cls": 1.0896528959274292,
+        "loss_bbox": 1.3118071556091309
+      },
+      {
+        "loss": 1.789798617362976,
+        "loss_cls": 0.5798070430755615,
+        "loss_bbox": 1.2099915742874146
+      },
+      {
+        "loss": 2.053428888320923,
+        "loss_cls": 0.6843525767326355,
+        "loss_bbox": 1.3690762519836426
+      }
+    ],
+    "metrics": [
+      {
+        "pascal_voc/mAP": 0.0,
+        "coco/bbox_mAP": 0.0,
+        "coco/bbox_mAP_50": 0.0
+      },
+      {
+        "pascal_voc/mAP": 0.0,
+        "coco/bbox_mAP": 0.0,
+        "coco/bbox_mAP_50": 0.0
+      }
+    ],
+    "assignment": {
+      "fallback_positives": 0,
+      "floored_regression_positives": 0,
+      "unmatched_tiny": 0
+    },
+    "loss_scale_init": 32,
+    "warmup_enabled": false,
+    "saved_checkpoints": false,
+    "peak_allocated_gib": 0.6235752105712891,
+    "peak_reserved_gib": 0.79296875,
+    "elapsed_seconds": 28.23294492799323
+  },
+  "shared_gpu_capacity": {
+    "status": "passed",
+    "method": "scdown_g2",
+    "microbatch": 8,
+    "accumulation": 1,
+    "optimizer_updates": 3,
+    "gt_per_image": 1200,
+    "different_image_ids": [
+      844,
+      5601,
+      4604,
+      5475,
+      5757,
+      1129,
+      3150,
+      1497
+    ],
+    "repeated_annotations": true,
+    "synthetic_multiscale_boxes": true,
+    "formal_batch": 36,
+    "formal_batch_capacity_tested": false,
+    "allocator_fraction": 0.22,
+    "loss_scale_init": 32,
+    "warmup_enabled": false,
+    "amp_skipped_updates": 0,
+    "saved_checkpoints": false,
+    "losses": [
+      {
+        "loss": 2.144078493118286,
+        "loss_cls": 0.11846914887428284,
+        "loss_bbox": 2.025609254837036
+      },
+      {
+        "loss": 2.0945522785186768,
+        "loss_cls": 0.14750230312347412,
+        "loss_bbox": 1.9470499753952026
+      },
+      {
+        "loss": 1.9438605308532715,
+        "loss_cls": 0.38167256116867065,
+        "loss_bbox": 1.562187910079956
+      }
+    ],
+    "watched_parameter_tensors": 39,
+    "gradient_max": {
+      "neck.bottom_up_layers.1.blocks.0.conv1.bn.weight": 0.04673216491937637,
+      "neck.bottom_up_layers.1.blocks.0.conv1.bn.bias": 0.07962745428085327,
+      "neck.bottom_up_layers.1.blocks.0.conv1.conv.weight": 0.88037109375,
+      "neck.downsample_layers.1.cv2.bn.weight": 0.2764189541339874,
+      "neck.downsample_layers.1.cv2.bn.bias": 6.783008575439453e-05,
+      "neck.downsample_layers.1.cv2.conv.weight": 0.71484375,
+      "neck.downsample_layers.1.cv1.bn.weight": 0.08978677541017532,
+      "neck.downsample_layers.1.cv1.bn.bias": 0.12324583530426025,
+      "neck.downsample_layers.1.cv1.conv.weight": 1.1806640625,
+      "neck.bottom_up_layers.0.blocks.0.conv1.bn.weight": 0.09728848934173584,
+      "neck.bottom_up_layers.0.blocks.0.conv1.bn.bias": 0.1784118413925171,
+      "neck.bottom_up_layers.0.blocks.0.conv1.conv.weight": 2.494140625,
+      "neck.top_down_layers.1.blocks.0.conv1.bn.weight": 0.15346282720565796,
+      "neck.top_down_layers.1.blocks.0.conv1.bn.bias": 0.2833765745162964,
+      "neck.top_down_layers.1.blocks.0.conv1.conv.weight": 4.12890625,
+      "neck.top_down_layers.0.0.blocks.0.conv1.bn.weight": 0.18061871826648712,
+      "neck.top_down_layers.0.0.blocks.0.conv1.bn.bias": 0.4707660675048828,
+      "neck.top_down_layers.0.0.blocks.0.conv1.conv.weight": 5.3671875,
+      "backbone.stage4.2.blocks.0.conv1.bn.weight": 0.32938501238822937,
+      "backbone.stage4.2.blocks.0.conv1.bn.bias": 0.5283841490745544,
+      "backbone.stage4.2.blocks.0.conv1.conv.weight": 5.71875,
+      "backbone.stage4.0.cv2.bn.weight": 2.4631428718566895,
+      "backbone.stage4.0.cv2.bn.bias": 0.00033146142959594727,
+      "backbone.stage4.0.cv2.conv.weight": 52.59375,
+      "backbone.stage4.0.cv1.bn.weight": 0.568472146987915,
+      "backbone.stage4.0.cv1.bn.bias": 0.7213078141212463,
+      "backbone.stage4.0.cv1.conv.weight": 4.41796875,
+      "backbone.stage3.1.blocks.0.conv1.bn.weight": 0.825485110282898,
+      "backbone.stage3.1.blocks.0.conv1.bn.bias": 1.1564764976501465,
+      "backbone.stage3.1.blocks.0.conv1.conv.weight": 8.921875,
+      "backbone.stage3.0.cv2.bn.weight": 5.2838616371154785,
+      "backbone.stage3.0.cv2.bn.bias": 0.0009786486625671387,
+      "backbone.stage3.0.cv2.conv.weight": 109.5,
+      "backbone.stage3.0.cv1.bn.weight": 1.1882473230361938,
+      "backbone.stage3.0.cv1.bn.bias": 1.6422820091247559,
+      "backbone.stage3.0.cv1.conv.weight": 13.0546875,
+      "backbone.stage2.1.blocks.0.conv1.bn.weight": 1.416251301765442,
+      "backbone.stage2.1.blocks.0.conv1.bn.bias": 2.430365800857544,
+      "backbone.stage2.1.blocks.0.conv1.conv.weight": 23.203125
+    },
+    "parameter_updates_max": {
+      "backbone.stage2.1.blocks.0.conv1.conv.weight": 0.0016993880271911621,
+      "backbone.stage2.1.blocks.0.conv1.bn.weight": 0.0016758441925048828,
+      "backbone.stage2.1.blocks.0.conv1.bn.bias": 0.0016585283447057009,
+      "backbone.stage3.0.cv1.conv.weight": 0.0017077326774597168,
+      "backbone.stage3.0.cv1.bn.weight": 0.0016700029373168945,
+      "backbone.stage3.0.cv1.bn.bias": 0.0016847592778503895,
+      "backbone.stage3.0.cv2.conv.weight": 0.0016947202384471893,
+      "backbone.stage3.0.cv2.bn.weight": 0.0016880035400390625,
+      "backbone.stage3.0.cv2.bn.bias": 0.0016736331162974238,
+      "backbone.stage3.1.blocks.0.conv1.conv.weight": 0.0016986504197120667,
+      "backbone.stage3.1.blocks.0.conv1.bn.weight": 0.0016672611236572266,
+      "backbone.stage3.1.blocks.0.conv1.bn.bias": 0.0016728882910683751,
+      "backbone.stage4.0.cv1.conv.weight": 0.0017066597938537598,
+      "backbone.stage4.0.cv1.bn.weight": 0.0016866326332092285,
+      "backbone.stage4.0.cv1.bn.bias": 0.0016852712724357843,
+      "backbone.stage4.0.cv2.conv.weight": 0.0016883944626897573,
+      "backbone.stage4.0.cv2.bn.weight": 0.001683950424194336,
+      "backbone.stage4.0.cv2.bn.bias": 0.0016693433281034231,
+      "backbone.stage4.2.blocks.0.conv1.conv.weight": 0.0016985833644866943,
+      "backbone.stage4.2.blocks.0.conv1.bn.weight": 0.0016893744468688965,
+      "backbone.stage4.2.blocks.0.conv1.bn.bias": 0.0016833189874887466,
+      "neck.top_down_layers.0.0.blocks.0.conv1.conv.weight": 0.0016935057938098907,
+      "neck.top_down_layers.0.0.blocks.0.conv1.bn.weight": 0.0016876459121704102,
+      "neck.top_down_layers.0.0.blocks.0.conv1.bn.bias": 0.0016833641566336155,
+      "neck.top_down_layers.1.blocks.0.conv1.conv.weight": 0.001695249229669571,
+      "neck.top_down_layers.1.blocks.0.conv1.bn.weight": 0.0016768574714660645,
+      "neck.top_down_layers.1.blocks.0.conv1.bn.bias": 0.0015582424821332097,
+      "neck.downsample_layers.1.cv1.conv.weight": 0.0016947872936725616,
+      "neck.downsample_layers.1.cv1.bn.weight": 0.0016865134239196777,
+      "neck.downsample_layers.1.cv1.bn.bias": 0.0016782747115939856,
+      "neck.downsample_layers.1.cv2.conv.weight": 0.0017124712467193604,
+      "neck.downsample_layers.1.cv2.bn.weight": 0.0016883611679077148,
+      "neck.downsample_layers.1.cv2.bn.bias": 0.0016373643884435296,
+      "neck.bottom_up_layers.0.blocks.0.conv1.conv.weight": 0.0016935542225837708,
+      "neck.bottom_up_layers.0.blocks.0.conv1.bn.weight": 0.001674652099609375,
+      "neck.bottom_up_layers.0.blocks.0.conv1.bn.bias": 0.0016883823554962873,
+      "neck.bottom_up_layers.1.blocks.0.conv1.conv.weight": 0.0016926713287830353,
+      "neck.bottom_up_layers.1.blocks.0.conv1.bn.weight": 0.0016862154006958008,
+      "neck.bottom_up_layers.1.blocks.0.conv1.bn.bias": 0.0016621326794847846
+    },
+    "cuda_device": "NVIDIA GeForce RTX 4090",
+    "cuda_total_gib": 47.37115478515625,
+    "initial_free_gib": 15.859619140625,
+    "peak_allocated_gib": 7.933839797973633,
+    "peak_reserved_gib": 9.1640625,
+    "elapsed_seconds": 7.490165943978354,
+    "config": "/home/pwt/Paper1/configs/scdown_g2/rtmdet_tiny_dior_640.py",
+    "config_sha256": "5f8b3a8f0909abe7302a63286cf5a90d4b41f7aff575a860b410d5b05dc19e1f"
+  },
+  "formal_capacity": {
+    "status": "passed",
+    "method": "scdown_g2",
+    "microbatch": 36,
+    "accumulation": 1,
+    "optimizer_updates": 3,
+    "gt_per_image": 1200,
+    "different_image_ids": [
+      844,
+      5601,
+      4604,
+      5475,
+      5757,
+      1129,
+      3150,
+      1497,
+      819,
+      1679,
+      7,
+      268,
+      4825,
+      4020,
+      2029,
+      3912,
+      448,
+      1805,
+      884,
+      5513,
+      4202,
+      1344,
+      2832,
+      594,
+      346,
+      1505,
+      3861,
+      1842,
+      3351,
+      2990,
+      5139,
+      5195,
+      4721,
+      5731,
+      2332,
+      4431
+    ],
+    "repeated_annotations": true,
+    "synthetic_multiscale_boxes": true,
+    "formal_batch": 36,
+    "formal_batch_capacity_tested": true,
+    "allocator_fraction": 0.88,
+    "loss_scale_init": 32,
+    "warmup_enabled": false,
+    "amp_skipped_updates": 0,
+    "saved_checkpoints": false,
+    "losses": [
+      {
+        "loss": 2.2235524654388428,
+        "loss_cls": 0.25662556290626526,
+        "loss_bbox": 1.9669269323349
+      },
+      {
+        "loss": 2.047166109085083,
+        "loss_cls": 0.2322341948747635,
+        "loss_bbox": 1.8149319887161255
+      },
+      {
+        "loss": 1.9020230770111084,
+        "loss_cls": 0.30013507604599,
+        "loss_bbox": 1.6018880605697632
+      }
+    ],
+    "watched_parameter_tensors": 39,
+    "gradient_max": {
+      "neck.bottom_up_layers.1.blocks.0.conv1.bn.weight": 0.0799894854426384,
+      "neck.bottom_up_layers.1.blocks.0.conv1.bn.bias": 0.09806424379348755,
+      "neck.bottom_up_layers.1.blocks.0.conv1.conv.weight": 1.59375,
+      "neck.downsample_layers.1.cv2.bn.weight": 0.4711698889732361,
+      "neck.downsample_layers.1.cv2.bn.bias": 5.239248275756836e-05,
+      "neck.downsample_layers.1.cv2.conv.weight": 1.166015625,
+      "neck.downsample_layers.1.cv1.bn.weight": 0.0791720449924469,
+      "neck.downsample_layers.1.cv1.bn.bias": 0.09953850507736206,
+      "neck.downsample_layers.1.cv1.conv.weight": 1.80078125,
+      "neck.bottom_up_layers.0.blocks.0.conv1.bn.weight": 0.09641124308109283,
+      "neck.bottom_up_layers.0.blocks.0.conv1.bn.bias": 0.17486608028411865,
+      "neck.bottom_up_layers.0.blocks.0.conv1.conv.weight": 3.716796875,
+      "neck.top_down_layers.1.blocks.0.conv1.bn.weight": 0.14557331800460815,
+      "neck.top_down_layers.1.blocks.0.conv1.bn.bias": 0.22866296768188477,
+      "neck.top_down_layers.1.blocks.0.conv1.conv.weight": 5.7421875,
+      "neck.top_down_layers.0.0.blocks.0.conv1.bn.weight": 0.16547077894210815,
+      "neck.top_down_layers.0.0.blocks.0.conv1.bn.bias": 0.463201642036438,
+      "neck.top_down_layers.0.0.blocks.0.conv1.conv.weight": 11.7265625,
+      "backbone.stage4.2.blocks.0.conv1.bn.weight": 0.4885668456554413,
+      "backbone.stage4.2.blocks.0.conv1.bn.bias": 0.7615392804145813,
+      "backbone.stage4.2.blocks.0.conv1.conv.weight": 6.7578125,
+      "backbone.stage4.0.cv2.bn.weight": 2.6667110919952393,
+      "backbone.stage4.0.cv2.bn.bias": 0.0003669857978820801,
+      "backbone.stage4.0.cv2.conv.weight": 89.125,
+      "backbone.stage4.0.cv1.bn.weight": 0.7687464952468872,
+      "backbone.stage4.0.cv1.bn.bias": 1.40672767162323,
+      "backbone.stage4.0.cv1.conv.weight": 6.4453125,
+      "backbone.stage3.1.blocks.0.conv1.bn.weight": 1.0330891609191895,
+      "backbone.stage3.1.blocks.0.conv1.bn.bias": 2.567363739013672,
+      "backbone.stage3.1.blocks.0.conv1.conv.weight": 14.6484375,
+      "backbone.stage3.0.cv2.bn.weight": 6.33915376663208,
+      "backbone.stage3.0.cv2.bn.bias": 0.0011976957321166992,
+      "backbone.stage3.0.cv2.conv.weight": 122.875,
+      "backbone.stage3.0.cv1.bn.weight": 1.6494725942611694,
+      "backbone.stage3.0.cv1.bn.bias": 2.817838668823242,
+      "backbone.stage3.0.cv1.conv.weight": 21.609375,
+      "backbone.stage2.1.blocks.0.conv1.bn.weight": 1.461698055267334,
+      "backbone.stage2.1.blocks.0.conv1.bn.bias": 3.6217894554138184,
+      "backbone.stage2.1.blocks.0.conv1.conv.weight": 32.09375
+    },
+    "parameter_updates_max": {
+      "backbone.stage2.1.blocks.0.conv1.conv.weight": 0.0017004013061523438,
+      "backbone.stage2.1.blocks.0.conv1.bn.weight": 0.0016627311706542969,
+      "backbone.stage2.1.blocks.0.conv1.bn.bias": 0.0016272050561383367,
+      "backbone.stage3.0.cv1.conv.weight": 0.0017122924327850342,
+      "backbone.stage3.0.cv1.bn.weight": 0.0016461610794067383,
+      "backbone.stage3.0.cv1.bn.bias": 0.001676214043982327,
+      "backbone.stage3.0.cv2.conv.weight": 0.0016921740025281906,
+      "backbone.stage3.0.cv2.bn.weight": 0.001654982566833496,
+      "backbone.stage3.0.cv2.bn.bias": 0.0016747874906286597,
+      "backbone.stage3.1.blocks.0.conv1.conv.weight": 0.0017015635967254639,
+      "backbone.stage3.1.blocks.0.conv1.bn.weight": 0.0016493797302246094,
+      "backbone.stage3.1.blocks.0.conv1.bn.bias": 0.0015742514515295625,
+      "backbone.stage4.0.cv1.conv.weight": 0.0017047673463821411,
+      "backbone.stage4.0.cv1.bn.weight": 0.0016828179359436035,
+      "backbone.stage4.0.cv1.bn.bias": 0.0016788027714937925,
+      "backbone.stage4.0.cv2.conv.weight": 0.001689806580543518,
+      "backbone.stage4.0.cv2.bn.weight": 0.0016863346099853516,
+      "backbone.stage4.0.cv2.bn.bias": 0.0016740181017667055,
+      "backbone.stage4.2.blocks.0.conv1.conv.weight": 0.0016969740390777588,
+      "backbone.stage4.2.blocks.0.conv1.bn.weight": 0.0016595721244812012,
+      "backbone.stage4.2.blocks.0.conv1.bn.bias": 0.0016826872015371919,
+      "neck.top_down_layers.0.0.blocks.0.conv1.conv.weight": 0.0016941279172897339,
+      "neck.top_down_layers.0.0.blocks.0.conv1.bn.weight": 0.0016876459121704102,
+      "neck.top_down_layers.0.0.blocks.0.conv1.bn.bias": 0.0016889945836737752,
+      "neck.top_down_layers.1.blocks.0.conv1.conv.weight": 0.001693684607744217,
+      "neck.top_down_layers.1.blocks.0.conv1.bn.weight": 0.0015930533409118652,
+      "neck.top_down_layers.1.blocks.0.conv1.bn.bias": 0.001604545395821333,
+      "neck.downsample_layers.1.cv1.conv.weight": 0.0016956180334091187,
+      "neck.downsample_layers.1.cv1.bn.weight": 0.0016894340515136719,
+      "neck.downsample_layers.1.cv1.bn.bias": 0.0015705295372754335,
+      "neck.downsample_layers.1.cv2.conv.weight": 0.0017006248235702515,
+      "neck.downsample_layers.1.cv2.bn.weight": 0.0016541481018066406,
+      "neck.downsample_layers.1.cv2.bn.bias": 0.0015718612121418118,
+      "neck.bottom_up_layers.0.blocks.0.conv1.conv.weight": 0.0016933716833591461,
+      "neck.bottom_up_layers.0.blocks.0.conv1.bn.weight": 0.0016785860061645508,
+      "neck.bottom_up_layers.0.blocks.0.conv1.bn.bias": 0.001660080044530332,
+      "neck.bottom_up_layers.1.blocks.0.conv1.conv.weight": 0.0016922764480113983,
+      "neck.bottom_up_layers.1.blocks.0.conv1.bn.weight": 0.0016404390335083008,
+      "neck.bottom_up_layers.1.blocks.0.conv1.bn.bias": 0.0016549768624827266
+    },
+    "cuda_device": "NVIDIA GeForce RTX 4090",
+    "cuda_total_gib": 47.37115478515625,
+    "initial_free_gib": 46.9852294921875,
+    "peak_allocated_gib": 35.53913736343384,
+    "peak_reserved_gib": 40.2421875,
+    "elapsed_seconds": 25.6204793509678,
+    "config": "/home/pwt/Paper1/work_dirs/scdown_g2_queue/scdown_g2_640_bs36.py",
+    "config_sha256": "28ae5fd5ee59d60584476fcc9b1f3116f1516438c7ffd32ecba84b19f618e78f"
+  }
+}

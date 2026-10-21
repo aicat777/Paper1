@@ -1,0 +1,11 @@
+test_author_mixer_init_and_official_projection_init_survive_framework (tests.test_lsconv_neck_out.LSConvNeckOutputs) ... ok
+test_exact_untouched_state_and_random_draw_order (tests.test_lsconv_neck_out.LSConvNeckOutputs) ... ok
+test_init_failures_restore_modules_and_can_retry (tests.test_lsconv_neck_out.LSConvNeckOutputs) ... ok
+test_only_outputs_replaced_and_aggregation_precedes_projection (tests.test_lsconv_neck_out.LSConvNeckOutputs) ... [W NNPACK.cpp:64] Could not initialize NNPACK! Reason: Unsupported hardware.
+ok
+test_operator_is_verified_core_and_protocol_matches_foundation (tests.test_lsconv_neck_out.LSConvNeckOutputs) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 2.139s
+
+OK

@@ -1,0 +1,97 @@
+{
+  "status": "passed",
+  "reference": "work_dirs/research/freq_fusion_reference/mmdetection__mmdet__models__necks__FreqFusion.py",
+  "source_sha256": "886e2d0068d2c1ce8f054ad12b4337e990a43a64220b29c978c4eec8057c12d7",
+  "upstream_commit": "3fb0c70637a3c194fb74294d3ce4681958b26241",
+  "complete_generators_and_enhanced_initial_fusion": true,
+  "cases": [
+    {
+      "width": 192,
+      "guidance_width": 48,
+      "lr_size": [
+        20,
+        20
+      ],
+      "amp": false,
+      "forward_max_error": 0.0,
+      "gradient_max_error": 2.3990869522094727e-05
+    },
+    {
+      "width": 192,
+      "guidance_width": 48,
+      "lr_size": [
+        20,
+        20
+      ],
+      "amp": true,
+      "forward_max_error": 0.0,
+      "gradient_max_error": 1.3589859008789062e-05
+    },
+    {
+      "width": 96,
+      "guidance_width": 24,
+      "lr_size": [
+        40,
+        40
+      ],
+      "amp": false,
+      "forward_max_error": 0.0,
+      "gradient_max_error": 8.672475814819336e-06
+    },
+    {
+      "width": 96,
+      "guidance_width": 24,
+      "lr_size": [
+        40,
+        40
+      ],
+      "amp": true,
+      "forward_max_error": 0.0,
+      "gradient_max_error": 1.249462366104126e-05
+    },
+    {
+      "width": 96,
+      "guidance_width": 24,
+      "lr_size": [
+        7,
+        11
+      ],
+      "amp": false,
+      "forward_max_error": 0.0,
+      "gradient_max_error": 8.484348654747009e-07
+    },
+    {
+      "width": 96,
+      "guidance_width": 24,
+      "lr_size": [
+        7,
+        11
+      ],
+      "amp": true,
+      "forward_max_error": 0.0,
+      "gradient_max_error": 1.52587890625e-05
+    }
+  ],
+  "cpu_cuda_carafe": [
+    {
+      "kernel": 3,
+      "scale": 1,
+      "passed": true
+    },
+    {
+      "kernel": 3,
+      "scale": 2,
+      "passed": true
+    },
+    {
+      "kernel": 5,
+      "scale": 1,
+      "passed": true
+    },
+    {
+      "kernel": 5,
+      "scale": 2,
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "root": "/home/pwt/Paper1",
+  "python": "/home/pwt/miniconda3/envs/rtmdet/bin/python",
+  "gpu_uuid": "GPU-df11ee80-4992-6cab-1055-b211d226f165",
+  "min_free_mib": 45000,
+  "dependency": {
+    "name": "instance_semantic",
+    "pid": 3552946,
+    "start_ticks": "18982751",
+    "status": "/home/pwt/Paper1/work_dirs/instance_semantic_queue/status.json",
+    "work_dir": "/home/pwt/Paper1/work_dirs/instance_semantic_rtmdet_tiny_dior_640_gpu1_bs36",
+    "log": "/home/pwt/Paper1/logs/instance_semantic_rtmdet_tiny_dior_640_gpu1_bs36_resume46.log"
+  },
+  "experiment": {
+    "name": "freq_fusion_residual_640_bs36",
+    "source_config": "/home/pwt/Paper1/configs/freq_fusion_residual/rtmdet_tiny_dior_640.py",
+    "config": "/home/pwt/Paper1/work_dirs/freq_fusion_residual_queue/freq_fusion_residual_640_bs36.py",
+    "work_dir": "/home/pwt/Paper1/work_dirs/freq_fusion_residual_rtmdet_tiny_dior_640_gpu1_bs36",
+    "log": "/home/pwt/Paper1/logs/freq_fusion_residual_rtmdet_tiny_dior_640_gpu1_bs36.log",
+    "preflight_report": "/home/pwt/Paper1/work_dirs/freq_fusion_residual_validation/queue_preflight.json",
+    "capacity_report": "/home/pwt/Paper1/work_dirs/freq_fusion_residual_validation/capacity_gpu1_bs36.json",
+    "validation_summary": "/home/pwt/Paper1/work_dirs/freq_fusion_residual_validation/checks.json"
+  },
+  "source_sha256": {
+    "custom_models/freq_fusion_residual/__init__.py": "7f8344d4a8717b10a0db2d46b85876386fbf7a491196eb35003a9aa8622cfbf2",
+    "custom_models/freq_fusion_residual/neck.py": "0e8f32c24472f90c4afd112e750b1c4a8d6447ebf8d95c6317f88934e4ef2ef8",
+    "custom_models/freq_fusion_residual/operator.py": "fb3c372ee947e488bf9292b83f6477b5a148e4eca18d9b90994081cc5b754bed",
+    "custom_models/freq_fusion_residual/resample.py": "bf7f40ad914c7ee68e32ed83b41ac2d400a51de3c7b96bc7f175a38eb2006536",
+    "configs/freq_fusion_residual/rtmdet_tiny_dior_640.py": "35dc60a8e8703d0e958511724f6fc133871968602613ed1301c07b97f1bd62ab",
+    "configs/rtmdet_tiny_dior_300e.py": "69a8a91d777090fcdd6f27eafdb717cc93f1a272bc6a90c4db522ba035d215a6",
+    "tests/test_freq_fusion_residual.py": "32239b6905368f7c68b283ce3b3b692bbd7003cb36c226615146914063fcb093",
+    "scripts/freq_fusion_residual_probe.py": "f517ec90ad109bee81dcd0e2b18dd3494d9e0eeff1662ed332338c67d1b90f4b",
+    "scripts/candidate_probe.py": "20e07b7f2cdb9202eedf63660786b5e2ffa5f5e019ebdf8a6c1fdbb2eb018286",
+    "scripts/candidate_capacity.py": "311c8cf810f6184f190642fab04acd55c15e9f61ea1c281276fa93800df6725c",
+    "scripts/queue_experiment.py": "53938385f211685b7de5ba4ce43d745611cc5ab21eb80eb0cf400388a533fdb1",
+    "work_dirs/freq_fusion_residual_queue/freq_fusion_residual_640_bs36.py": "9358c84b6a11aa6ad65b6a904bc383ef408e8d9f8515d7b09861b54af225e0b5"
+  },
+  "preflight_command": [
+    "/home/pwt/miniconda3/envs/rtmdet/bin/python",
+    "-u",
+    "/home/pwt/Paper1/scripts/freq_fusion_residual_probe.py",
+    "--config",
+    "/home/pwt/Paper1/work_dirs/freq_fusion_residual_queue/freq_fusion_residual_640_bs36.py",
+    "--mode",
+    "preflight",
+    "--report",
+    "/home/pwt/Paper1/work_dirs/freq_fusion_residual_validation/queue_preflight.json"
+  ],
+  "capacity_command": [
+    "/home/pwt/miniconda3/envs/rtmdet/bin/python",
+    "-u",
+    "/home/pwt/Paper1/scripts/freq_fusion_residual_probe.py",
+    "--config",
+    "/home/pwt/Paper1/work_dirs/freq_fusion_residual_queue/freq_fusion_residual_640_bs36.py",
+    "--mode",
+    "capacity",
+    "--report",
+    "/home/pwt/Paper1/work_dirs/freq_fusion_residual_validation/capacity_gpu1_bs36.json",
+    "--allocator-fraction",
+    ".88"
+  ],
+  "capacity_expected": {
+    "method": "freq_fusion_residual",
+    "microbatch": 36,
+    "formal_batch": 36,
+    "accumulation": 1,
+    "optimizer_updates": 3,
+    "gt_per_image": 1200,
+    "allocator_fraction": 0.88,
+    "formal_batch_capacity_tested": true,
+    "amp_skipped_updates": 0,
+    "saved_checkpoints": false,
+    "watched_parameter_tensors": 42,
+    "config_sha256": "9358c84b6a11aa6ad65b6a904bc383ef408e8d9f8515d7b09861b54af225e0b5"
+  }
+}

@@ -1,0 +1,303 @@
+{
+  "status": "passed",
+  "method": "scdown",
+  "device": "cuda",
+  "author_commit": "453c6e38a51e9d1d5a2aa5fb7f1014a711913397",
+  "reference": "/home/pwt/Paper1/work_dirs/diagnostics/parameter_module_research/author_reference",
+  "source_sha256": {
+    "block": "797a1fc75d9839147cbd3c432ad5d2fe16bc37a419a9f4d55c8449227cedb9fe",
+    "conv": "9dd51834bd9ff432b8d72d6f55bb44bac301c97cbe2cc32c04a95c5a3450f59f"
+  },
+  "cases": [
+    {
+      "in_channels": 96,
+      "out_channels": 192,
+      "input_hw": [
+        80,
+        80
+      ],
+      "training": false,
+      "amp": false,
+      "forward_max_error": 0.0,
+      "gradient_max_error": 0.0
+    },
+    {
+      "in_channels": 96,
+      "out_channels": 192,
+      "input_hw": [
+        80,
+        80
+      ],
+      "training": false,
+      "amp": true,
+      "forward_max_error": 0.0,
+      "gradient_max_error": 0.0
+    },
+    {
+      "in_channels": 96,
+      "out_channels": 192,
+      "input_hw": [
+        80,
+        80
+      ],
+      "training": true,
+      "amp": false,
+      "forward_max_error": 0.0,
+      "gradient_max_error": 0.0
+    },
+    {
+      "in_channels": 96,
+      "out_channels": 192,
+      "input_hw": [
+        80,
+        80
+      ],
+      "training": true,
+      "amp": true,
+      "forward_max_error": 0.0,
+      "gradient_max_error": 0.0
+    },
+    {
+      "in_channels": 192,
+      "out_channels": 384,
+      "input_hw": [
+        40,
+        40
+      ],
+      "training": false,
+      "amp": false,
+      "forward_max_error": 0.0,
+      "gradient_max_error": 0.0
+    },
+    {
+      "in_channels": 192,
+      "out_channels": 384,
+      "input_hw": [
+        40,
+        40
+      ],
+      "training": false,
+      "amp": true,
+      "forward_max_error": 0.0,
+      "gradient_max_error": 0.0
+    },
+    {
+      "in_channels": 192,
+      "out_channels": 384,
+      "input_hw": [
+        40,
+        40
+      ],
+      "training": true,
+      "amp": false,
+      "forward_max_error": 0.0,
+      "gradient_max_error": 0.0
+    },
+    {
+      "in_channels": 192,
+      "out_channels": 384,
+      "input_hw": [
+        40,
+        40
+      ],
+      "training": true,
+      "amp": true,
+      "forward_max_error": 0.0,
+      "gradient_max_error": 0.0
+    },
+    {
+      "in_channels": 192,
+      "out_channels": 192,
+      "input_hw": [
+        40,
+        40
+      ],
+      "training": false,
+      "amp": false,
+      "forward_max_error": 0.0,
+      "gradient_max_error": 0.0
+    },
+    {
+      "in_channels": 192,
+      "out_channels": 192,
+      "input_hw": [
+        40,
+        40
+      ],
+      "training": false,
+      "amp": true,
+      "forward_max_error": 0.0,
+      "gradient_max_error": 0.0
+    },
+    {
+      "in_channels": 192,
+      "out_channels": 192,
+      "input_hw": [
+        40,
+        40
+      ],
+      "training": true,
+      "amp": false,
+      "forward_max_error": 0.0,
+      "gradient_max_error": 0.0
+    },
+    {
+      "in_channels": 192,
+      "out_channels": 192,
+      "input_hw": [
+        40,
+        40
+      ],
+      "training": true,
+      "amp": true,
+      "forward_max_error": 0.0,
+      "gradient_max_error": 0.0
+    },
+    {
+      "in_channels": 96,
+      "out_channels": 192,
+      "input_hw": [
+        13,
+        19
+      ],
+      "training": false,
+      "amp": false,
+      "forward_max_error": 0.0,
+      "gradient_max_error": 0.0
+    },
+    {
+      "in_channels": 96,
+      "out_channels": 192,
+      "input_hw": [
+        13,
+        19
+      ],
+      "training": false,
+      "amp": true,
+      "forward_max_error": 0.0,
+      "gradient_max_error": 0.0
+    },
+    {
+      "in_channels": 96,
+      "out_channels": 192,
+      "input_hw": [
+        13,
+        19
+      ],
+      "training": true,
+      "amp": false,
+      "forward_max_error": 0.0,
+      "gradient_max_error": 0.0
+    },
+    {
+      "in_channels": 96,
+      "out_channels": 192,
+      "input_hw": [
+        13,
+        19
+      ],
+      "training": true,
+      "amp": true,
+      "forward_max_error": 0.0,
+      "gradient_max_error": 0.0
+    },
+    {
+      "in_channels": 192,
+      "out_channels": 384,
+      "input_hw": [
+        9,
+        15
+      ],
+      "training": false,
+      "amp": false,
+      "forward_max_error": 0.0,
+      "gradient_max_error": 0.0
+    },
+    {
+      "in_channels": 192,
+      "out_channels": 384,
+      "input_hw": [
+        9,
+        15
+      ],
+      "training": false,
+      "amp": true,
+      "forward_max_error": 0.0,
+      "gradient_max_error": 0.0
+    },
+    {
+      "in_channels": 192,
+      "out_channels": 384,
+      "input_hw": [
+        9,
+        15
+      ],
+      "training": true,
+      "amp": false,
+      "forward_max_error": 0.0,
+      "gradient_max_error": 0.0
+    },
+    {
+      "in_channels": 192,
+      "out_channels": 384,
+      "input_hw": [
+        9,
+        15
+      ],
+      "training": true,
+      "amp": true,
+      "forward_max_error": 0.0,
+      "gradient_max_error": 0.0
+    },
+    {
+      "in_channels": 192,
+      "out_channels": 192,
+      "input_hw": [
+        11,
+        17
+      ],
+      "training": false,
+      "amp": false,
+      "forward_max_error": 0.0,
+      "gradient_max_error": 0.0
+    },
+    {
+      "in_channels": 192,
+      "out_channels": 192,
+      "input_hw": [
+        11,
+        17
+      ],
+      "training": false,
+      "amp": true,
+      "forward_max_error": 0.0,
+      "gradient_max_error": 0.0
+    },
+    {
+      "in_channels": 192,
+      "out_channels": 192,
+      "input_hw": [
+        11,
+        17
+      ],
+      "training": true,
+      "amp": false,
+      "forward_max_error": 0.0,
+      "gradient_max_error": 0.0
+    },
+    {
+      "in_channels": 192,
+      "out_channels": 192,
+      "input_hw": [
+        11,
+        17
+      ],
+      "training": true,
+      "amp": true,
+      "forward_max_error": 0.0,
+      "gradient_max_error": 0.0
+    }
+  ],
+  "preserves_project_bn_configuration": true,
+  "no_activation_after_dw": true
+}

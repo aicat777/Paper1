@@ -1,0 +1,1161 @@
+{
+  "baseline": {
+    "final": {
+      "pascal_voc/mAP": 0.7565006017684937,
+      "pascal_voc/AP50": 0.757,
+      "coco/airplane_precision": 0.795,
+      "coco/airport_precision": 0.518,
+      "coco/baseballfield_precision": 0.823,
+      "coco/basketballcourt_precision": 0.727,
+      "coco/bridge_precision": 0.285,
+      "coco/chimney_precision": 0.775,
+      "coco/dam_precision": 0.316,
+      "coco/expressway-service-area_precision": 0.515,
+      "coco/expressway-toll-station_precision": 0.511,
+      "coco/golffield_precision": 0.546,
+      "coco/groundtrackfield_precision": 0.648,
+      "coco/harbor_precision": 0.478,
+      "coco/overpass_precision": 0.442,
+      "coco/ship_precision": 0.492,
+      "coco/stadium_precision": 0.768,
+      "coco/storagetank_precision": 0.693,
+      "coco/tenniscourt_precision": 0.837,
+      "coco/trainstation_precision": 0.259,
+      "coco/vehicle_precision": 0.454,
+      "coco/windmill_precision": 0.406,
+      "coco/bbox_mAP": 0.564,
+      "coco/bbox_mAP_50": 0.77,
+      "coco/bbox_mAP_75": 0.619,
+      "coco/bbox_mAP_s": 0.075,
+      "coco/bbox_mAP_m": 0.349,
+      "coco/bbox_mAP_l": 0.698,
+      "data_time": 0.0033420775826685433,
+      "time": 0.2894517881668881,
+      "step": 300
+    },
+    "validation_curve": [
+      {
+        "step": 10,
+        "pascal_voc/mAP": 0.17480143904685974,
+        "coco/bbox_mAP": 0.08,
+        "coco/bbox_mAP_s": 0.002,
+        "coco/bbox_mAP_l": 0.096
+      },
+      {
+        "step": 20,
+        "pascal_voc/mAP": 0.3477913439273834,
+        "coco/bbox_mAP": 0.186,
+        "coco/bbox_mAP_s": 0.01,
+        "coco/bbox_mAP_l": 0.226
+      },
+      {
+        "step": 30,
+        "pascal_voc/mAP": 0.44870835542678833,
+        "coco/bbox_mAP": 0.261,
+        "coco/bbox_mAP_s": 0.017,
+        "coco/bbox_mAP_l": 0.316
+      },
+      {
+        "step": 40,
+        "pascal_voc/mAP": 0.5143302083015442,
+        "coco/bbox_mAP": 0.314,
+        "coco/bbox_mAP_s": 0.021,
+        "coco/bbox_mAP_l": 0.386
+      },
+      {
+        "step": 50,
+        "pascal_voc/mAP": 0.555738091468811,
+        "coco/bbox_mAP": 0.355,
+        "coco/bbox_mAP_s": 0.028,
+        "coco/bbox_mAP_l": 0.446
+      },
+      {
+        "step": 60,
+        "pascal_voc/mAP": 0.5942567586898804,
+        "coco/bbox_mAP": 0.391,
+        "coco/bbox_mAP_s": 0.034,
+        "coco/bbox_mAP_l": 0.491
+      },
+      {
+        "step": 70,
+        "pascal_voc/mAP": 0.6176897883415222,
+        "coco/bbox_mAP": 0.414,
+        "coco/bbox_mAP_s": 0.038,
+        "coco/bbox_mAP_l": 0.528
+      },
+      {
+        "step": 80,
+        "pascal_voc/mAP": 0.6423341035842896,
+        "coco/bbox_mAP": 0.436,
+        "coco/bbox_mAP_s": 0.041,
+        "coco/bbox_mAP_l": 0.554
+      },
+      {
+        "step": 90,
+        "pascal_voc/mAP": 0.6588243842124939,
+        "coco/bbox_mAP": 0.452,
+        "coco/bbox_mAP_s": 0.044,
+        "coco/bbox_mAP_l": 0.575
+      },
+      {
+        "step": 100,
+        "pascal_voc/mAP": 0.670170247554779,
+        "coco/bbox_mAP": 0.463,
+        "coco/bbox_mAP_s": 0.046,
+        "coco/bbox_mAP_l": 0.587
+      },
+      {
+        "step": 110,
+        "pascal_voc/mAP": 0.6810572743415833,
+        "coco/bbox_mAP": 0.472,
+        "coco/bbox_mAP_s": 0.048,
+        "coco/bbox_mAP_l": 0.598
+      },
+      {
+        "step": 120,
+        "pascal_voc/mAP": 0.6887162923812866,
+        "coco/bbox_mAP": 0.476,
+        "coco/bbox_mAP_s": 0.049,
+        "coco/bbox_mAP_l": 0.604
+      },
+      {
+        "step": 130,
+        "pascal_voc/mAP": 0.6964424252510071,
+        "coco/bbox_mAP": 0.482,
+        "coco/bbox_mAP_s": 0.051,
+        "coco/bbox_mAP_l": 0.61
+      },
+      {
+        "step": 140,
+        "pascal_voc/mAP": 0.7024526000022888,
+        "coco/bbox_mAP": 0.488,
+        "coco/bbox_mAP_s": 0.052,
+        "coco/bbox_mAP_l": 0.615
+      },
+      {
+        "step": 150,
+        "pascal_voc/mAP": 0.7101916074752808,
+        "coco/bbox_mAP": 0.494,
+        "coco/bbox_mAP_s": 0.054,
+        "coco/bbox_mAP_l": 0.622
+      },
+      {
+        "step": 160,
+        "pascal_voc/mAP": 0.7148512601852417,
+        "coco/bbox_mAP": 0.5,
+        "coco/bbox_mAP_s": 0.054,
+        "coco/bbox_mAP_l": 0.63
+      },
+      {
+        "step": 170,
+        "pascal_voc/mAP": 0.7202152013778687,
+        "coco/bbox_mAP": 0.506,
+        "coco/bbox_mAP_s": 0.056,
+        "coco/bbox_mAP_l": 0.636
+      },
+      {
+        "step": 180,
+        "pascal_voc/mAP": 0.7246862649917603,
+        "coco/bbox_mAP": 0.513,
+        "coco/bbox_mAP_s": 0.058,
+        "coco/bbox_mAP_l": 0.642
+      },
+      {
+        "step": 190,
+        "pascal_voc/mAP": 0.7288880944252014,
+        "coco/bbox_mAP": 0.52,
+        "coco/bbox_mAP_s": 0.06,
+        "coco/bbox_mAP_l": 0.649
+      },
+      {
+        "step": 200,
+        "pascal_voc/mAP": 0.7341483235359192,
+        "coco/bbox_mAP": 0.526,
+        "coco/bbox_mAP_s": 0.061,
+        "coco/bbox_mAP_l": 0.655
+      },
+      {
+        "step": 210,
+        "pascal_voc/mAP": 0.737211287021637,
+        "coco/bbox_mAP": 0.532,
+        "coco/bbox_mAP_s": 0.064,
+        "coco/bbox_mAP_l": 0.662
+      },
+      {
+        "step": 220,
+        "pascal_voc/mAP": 0.7415376901626587,
+        "coco/bbox_mAP": 0.539,
+        "coco/bbox_mAP_s": 0.065,
+        "coco/bbox_mAP_l": 0.67
+      },
+      {
+        "step": 230,
+        "pascal_voc/mAP": 0.7446953058242798,
+        "coco/bbox_mAP": 0.544,
+        "coco/bbox_mAP_s": 0.067,
+        "coco/bbox_mAP_l": 0.675
+      },
+      {
+        "step": 240,
+        "pascal_voc/mAP": 0.7467615008354187,
+        "coco/bbox_mAP": 0.548,
+        "coco/bbox_mAP_s": 0.068,
+        "coco/bbox_mAP_l": 0.68
+      },
+      {
+        "step": 250,
+        "pascal_voc/mAP": 0.7491060495376587,
+        "coco/bbox_mAP": 0.553,
+        "coco/bbox_mAP_s": 0.07,
+        "coco/bbox_mAP_l": 0.685
+      },
+      {
+        "step": 260,
+        "pascal_voc/mAP": 0.7513437271118164,
+        "coco/bbox_mAP": 0.556,
+        "coco/bbox_mAP_s": 0.074,
+        "coco/bbox_mAP_l": 0.688
+      },
+      {
+        "step": 270,
+        "pascal_voc/mAP": 0.7532504796981812,
+        "coco/bbox_mAP": 0.558,
+        "coco/bbox_mAP_s": 0.076,
+        "coco/bbox_mAP_l": 0.691
+      },
+      {
+        "step": 280,
+        "pascal_voc/mAP": 0.7536976933479309,
+        "coco/bbox_mAP": 0.559,
+        "coco/bbox_mAP_s": 0.076,
+        "coco/bbox_mAP_l": 0.693
+      },
+      {
+        "step": 290,
+        "pascal_voc/mAP": 0.7557814717292786,
+        "coco/bbox_mAP": 0.562,
+        "coco/bbox_mAP_s": 0.076,
+        "coco/bbox_mAP_l": 0.695
+      },
+      {
+        "step": 300,
+        "pascal_voc/mAP": 0.7565006017684937,
+        "coco/bbox_mAP": 0.564,
+        "coco/bbox_mAP_s": 0.075,
+        "coco/bbox_mAP_l": 0.698
+      }
+    ],
+    "voc_categories": {
+      "airplane": {
+        "gts": 654,
+        "detections": 76794,
+        "recall": 0.917,
+        "ap50": 0.909
+      },
+      "airport": {
+        "gts": 333,
+        "detections": 80905,
+        "recall": 0.958,
+        "ap50": 0.8
+      },
+      "baseballfield": {
+        "gts": 1140,
+        "detections": 76105,
+        "recall": 0.939,
+        "ap50": 0.908
+      },
+      "basketballcourt": {
+        "gts": 515,
+        "detections": 80867,
+        "recall": 0.922,
+        "ap50": 0.812
+      },
+      "bridge": {
+        "gts": 855,
+        "detections": 120333,
+        "recall": 0.763,
+        "ap50": 0.476
+      },
+      "chimney": {
+        "gts": 307,
+        "detections": 34643,
+        "recall": 0.925,
+        "ap50": 0.826
+      },
+      "dam": {
+        "gts": 260,
+        "detections": 76448,
+        "recall": 0.985,
+        "ap50": 0.602
+      },
+      "expressway-service-area": {
+        "gts": 543,
+        "detections": 31009,
+        "recall": 0.737,
+        "ap50": 0.652
+      },
+      "expressway-toll-station": {
+        "gts": 318,
+        "detections": 20093,
+        "recall": 0.698,
+        "ap50": 0.624
+      },
+      "golffield": {
+        "gts": 274,
+        "detections": 72040,
+        "recall": 0.964,
+        "ap50": 0.743
+      },
+      "groundtrackfield": {
+        "gts": 593,
+        "detections": 78722,
+        "recall": 0.954,
+        "ap50": 0.795
+      },
+      "harbor": {
+        "gts": 1225,
+        "detections": 150035,
+        "recall": 0.927,
+        "ap50": 0.705
+      },
+      "overpass": {
+        "gts": 760,
+        "detections": 100628,
+        "recall": 0.845,
+        "ap50": 0.653
+      },
+      "ship": {
+        "gts": 14297,
+        "detections": 129377,
+        "recall": 0.955,
+        "ap50": 0.9
+      },
+      "stadium": {
+        "gts": 301,
+        "detections": 21958,
+        "recall": 0.983,
+        "ap50": 0.902
+      },
+      "storagetank": {
+        "gts": 1709,
+        "detections": 75284,
+        "recall": 0.876,
+        "ap50": 0.8
+      },
+      "tenniscourt": {
+        "gts": 2666,
+        "detections": 71542,
+        "recall": 0.96,
+        "ap50": 0.905
+      },
+      "trainstation": {
+        "gts": 256,
+        "detections": 56401,
+        "recall": 0.969,
+        "ap50": 0.593
+      },
+      "vehicle": {
+        "gts": 7024,
+        "detections": 353338,
+        "recall": 0.887,
+        "ap50": 0.735
+      },
+      "windmill": {
+        "gts": 1404,
+        "detections": 52378,
+        "recall": 0.845,
+        "ap50": 0.789
+      }
+    },
+    "runtime": {
+      "first_log_time": "2026-10-11T19:33:26",
+      "last_log_time": "2026-10-12T05:21:34",
+      "elapsed_hours": 9.802222222222222,
+      "average_training_iteration_seconds": 0.4278313283169548
+    }
+  },
+  "efs": {
+    "final": {
+      "pascal_voc/mAP": 0.7554566264152527,
+      "pascal_voc/AP50": 0.755,
+      "coco/airplane_precision": 0.79,
+      "coco/airport_precision": 0.486,
+      "coco/baseballfield_precision": 0.814,
+      "coco/basketballcourt_precision": 0.74,
+      "coco/bridge_precision": 0.287,
+      "coco/chimney_precision": 0.771,
+      "coco/dam_precision": 0.296,
+      "coco/expressway-service-area_precision": 0.511,
+      "coco/expressway-toll-station_precision": 0.512,
+      "coco/golffield_precision": 0.537,
+      "coco/groundtrackfield_precision": 0.664,
+      "coco/harbor_precision": 0.465,
+      "coco/overpass_precision": 0.437,
+      "coco/ship_precision": 0.508,
+      "coco/stadium_precision": 0.754,
+      "coco/storagetank_precision": 0.702,
+      "coco/tenniscourt_precision": 0.832,
+      "coco/trainstation_precision": 0.233,
+      "coco/vehicle_precision": 0.485,
+      "coco/windmill_precision": 0.424,
+      "coco/bbox_mAP": 0.563,
+      "coco/bbox_mAP_50": 0.773,
+      "coco/bbox_mAP_75": 0.622,
+      "coco/bbox_mAP_s": 0.091,
+      "coco/bbox_mAP_m": 0.345,
+      "coco/bbox_mAP_l": 0.685,
+      "data_time": 0.0033962788308998545,
+      "time": 0.2733113567575772,
+      "step": 300
+    },
+    "validation_curve": [
+      {
+        "step": 10,
+        "pascal_voc/mAP": 0.002341457409784198,
+        "coco/bbox_mAP": 0.0,
+        "coco/bbox_mAP_s": 0.0,
+        "coco/bbox_mAP_l": 0.0
+      },
+      {
+        "step": 20,
+        "pascal_voc/mAP": 0.0018553690752014518,
+        "coco/bbox_mAP": 0.0,
+        "coco/bbox_mAP_s": 0.0,
+        "coco/bbox_mAP_l": 0.0
+      },
+      {
+        "step": 30,
+        "pascal_voc/mAP": 0.008129141293466091,
+        "coco/bbox_mAP": 0.0,
+        "coco/bbox_mAP_s": 0.0,
+        "coco/bbox_mAP_l": 0.0
+      },
+      {
+        "step": 40,
+        "pascal_voc/mAP": 0.04047056660056114,
+        "coco/bbox_mAP": 0.007,
+        "coco/bbox_mAP_s": 0.002,
+        "coco/bbox_mAP_l": 0.014
+      },
+      {
+        "step": 50,
+        "pascal_voc/mAP": 0.14772137999534607,
+        "coco/bbox_mAP": 0.059,
+        "coco/bbox_mAP_s": 0.006,
+        "coco/bbox_mAP_l": 0.083
+      },
+      {
+        "step": 60,
+        "pascal_voc/mAP": 0.2509976029396057,
+        "coco/bbox_mAP": 0.13,
+        "coco/bbox_mAP_s": 0.014,
+        "coco/bbox_mAP_l": 0.163
+      },
+      {
+        "step": 70,
+        "pascal_voc/mAP": 0.366218239068985,
+        "coco/bbox_mAP": 0.201,
+        "coco/bbox_mAP_s": 0.022,
+        "coco/bbox_mAP_l": 0.243
+      },
+      {
+        "step": 80,
+        "pascal_voc/mAP": 0.4724555015563965,
+        "coco/bbox_mAP": 0.269,
+        "coco/bbox_mAP_s": 0.03,
+        "coco/bbox_mAP_l": 0.33
+      },
+      {
+        "step": 90,
+        "pascal_voc/mAP": 0.5471765398979187,
+        "coco/bbox_mAP": 0.328,
+        "coco/bbox_mAP_s": 0.036,
+        "coco/bbox_mAP_l": 0.402
+      },
+      {
+        "step": 100,
+        "pascal_voc/mAP": 0.5947490334510803,
+        "coco/bbox_mAP": 0.372,
+        "coco/bbox_mAP_s": 0.04,
+        "coco/bbox_mAP_l": 0.458
+      },
+      {
+        "step": 110,
+        "pascal_voc/mAP": 0.6224985718727112,
+        "coco/bbox_mAP": 0.4,
+        "coco/bbox_mAP_s": 0.045,
+        "coco/bbox_mAP_l": 0.495
+      },
+      {
+        "step": 120,
+        "pascal_voc/mAP": 0.6436266303062439,
+        "coco/bbox_mAP": 0.422,
+        "coco/bbox_mAP_s": 0.048,
+        "coco/bbox_mAP_l": 0.521
+      },
+      {
+        "step": 130,
+        "pascal_voc/mAP": 0.6590610146522522,
+        "coco/bbox_mAP": 0.438,
+        "coco/bbox_mAP_s": 0.052,
+        "coco/bbox_mAP_l": 0.541
+      },
+      {
+        "step": 140,
+        "pascal_voc/mAP": 0.6736026406288147,
+        "coco/bbox_mAP": 0.455,
+        "coco/bbox_mAP_s": 0.055,
+        "coco/bbox_mAP_l": 0.561
+      },
+      {
+        "step": 150,
+        "pascal_voc/mAP": 0.6855589151382446,
+        "coco/bbox_mAP": 0.469,
+        "coco/bbox_mAP_s": 0.058,
+        "coco/bbox_mAP_l": 0.577
+      },
+      {
+        "step": 160,
+        "pascal_voc/mAP": 0.697185754776001,
+        "coco/bbox_mAP": 0.48,
+        "coco/bbox_mAP_s": 0.062,
+        "coco/bbox_mAP_l": 0.592
+      },
+      {
+        "step": 170,
+        "pascal_voc/mAP": 0.7061070799827576,
+        "coco/bbox_mAP": 0.493,
+        "coco/bbox_mAP_s": 0.065,
+        "coco/bbox_mAP_l": 0.605
+      },
+      {
+        "step": 180,
+        "pascal_voc/mAP": 0.7146702408790588,
+        "coco/bbox_mAP": 0.502,
+        "coco/bbox_mAP_s": 0.067,
+        "coco/bbox_mAP_l": 0.616
+      },
+      {
+        "step": 190,
+        "pascal_voc/mAP": 0.720680832862854,
+        "coco/bbox_mAP": 0.51,
+        "coco/bbox_mAP_s": 0.077,
+        "coco/bbox_mAP_l": 0.626
+      },
+      {
+        "step": 200,
+        "pascal_voc/mAP": 0.72666335105896,
+        "coco/bbox_mAP": 0.519,
+        "coco/bbox_mAP_s": 0.08,
+        "coco/bbox_mAP_l": 0.635
+      },
+      {
+        "step": 210,
+        "pascal_voc/mAP": 0.731214165687561,
+        "coco/bbox_mAP": 0.525,
+        "coco/bbox_mAP_s": 0.082,
+        "coco/bbox_mAP_l": 0.643
+      },
+      {
+        "step": 220,
+        "pascal_voc/mAP": 0.7348366379737854,
+        "coco/bbox_mAP": 0.532,
+        "coco/bbox_mAP_s": 0.082,
+        "coco/bbox_mAP_l": 0.65
+      },
+      {
+        "step": 230,
+        "pascal_voc/mAP": 0.7377516031265259,
+        "coco/bbox_mAP": 0.536,
+        "coco/bbox_mAP_s": 0.082,
+        "coco/bbox_mAP_l": 0.656
+      },
+      {
+        "step": 240,
+        "pascal_voc/mAP": 0.7422118186950684,
+        "coco/bbox_mAP": 0.542,
+        "coco/bbox_mAP_s": 0.083,
+        "coco/bbox_mAP_l": 0.662
+      },
+      {
+        "step": 250,
+        "pascal_voc/mAP": 0.7454711198806763,
+        "coco/bbox_mAP": 0.548,
+        "coco/bbox_mAP_s": 0.084,
+        "coco/bbox_mAP_l": 0.669
+      },
+      {
+        "step": 260,
+        "pascal_voc/mAP": 0.748345136642456,
+        "coco/bbox_mAP": 0.552,
+        "coco/bbox_mAP_s": 0.086,
+        "coco/bbox_mAP_l": 0.674
+      },
+      {
+        "step": 270,
+        "pascal_voc/mAP": 0.7497854232788086,
+        "coco/bbox_mAP": 0.555,
+        "coco/bbox_mAP_s": 0.086,
+        "coco/bbox_mAP_l": 0.678
+      },
+      {
+        "step": 280,
+        "pascal_voc/mAP": 0.7514458894729614,
+        "coco/bbox_mAP": 0.557,
+        "coco/bbox_mAP_s": 0.086,
+        "coco/bbox_mAP_l": 0.68
+      },
+      {
+        "step": 290,
+        "pascal_voc/mAP": 0.7543259263038635,
+        "coco/bbox_mAP": 0.56,
+        "coco/bbox_mAP_s": 0.089,
+        "coco/bbox_mAP_l": 0.684
+      },
+      {
+        "step": 300,
+        "pascal_voc/mAP": 0.7554566264152527,
+        "coco/bbox_mAP": 0.563,
+        "coco/bbox_mAP_s": 0.091,
+        "coco/bbox_mAP_l": 0.685
+      }
+    ],
+    "voc_categories": {
+      "airplane": {
+        "gts": 654,
+        "detections": 101604,
+        "recall": 0.951,
+        "ap50": 0.909
+      },
+      "airport": {
+        "gts": 333,
+        "detections": 66930,
+        "recall": 0.952,
+        "ap50": 0.758
+      },
+      "baseballfield": {
+        "gts": 1140,
+        "detections": 74691,
+        "recall": 0.972,
+        "ap50": 0.909
+      },
+      "basketballcourt": {
+        "gts": 515,
+        "detections": 81077,
+        "recall": 0.946,
+        "ap50": 0.822
+      },
+      "bridge": {
+        "gts": 855,
+        "detections": 143655,
+        "recall": 0.82,
+        "ap50": 0.493
+      },
+      "chimney": {
+        "gts": 307,
+        "detections": 24291,
+        "recall": 0.912,
+        "ap50": 0.823
+      },
+      "dam": {
+        "gts": 260,
+        "detections": 70570,
+        "recall": 0.988,
+        "ap50": 0.59
+      },
+      "expressway-service-area": {
+        "gts": 543,
+        "detections": 29302,
+        "recall": 0.707,
+        "ap50": 0.64
+      },
+      "expressway-toll-station": {
+        "gts": 318,
+        "detections": 19315,
+        "recall": 0.726,
+        "ap50": 0.62
+      },
+      "golffield": {
+        "gts": 274,
+        "detections": 62125,
+        "recall": 0.942,
+        "ap50": 0.745
+      },
+      "groundtrackfield": {
+        "gts": 593,
+        "detections": 49899,
+        "recall": 0.973,
+        "ap50": 0.822
+      },
+      "harbor": {
+        "gts": 1225,
+        "detections": 111191,
+        "recall": 0.928,
+        "ap50": 0.695
+      },
+      "overpass": {
+        "gts": 760,
+        "detections": 121545,
+        "recall": 0.882,
+        "ap50": 0.653
+      },
+      "ship": {
+        "gts": 14297,
+        "detections": 129025,
+        "recall": 0.969,
+        "ap50": 0.901
+      },
+      "stadium": {
+        "gts": 301,
+        "detections": 17890,
+        "recall": 0.97,
+        "ap50": 0.9
+      },
+      "storagetank": {
+        "gts": 1709,
+        "detections": 69662,
+        "recall": 0.902,
+        "ap50": 0.805
+      },
+      "tenniscourt": {
+        "gts": 2666,
+        "detections": 61339,
+        "recall": 0.962,
+        "ap50": 0.904
+      },
+      "trainstation": {
+        "gts": 256,
+        "detections": 45738,
+        "recall": 0.961,
+        "ap50": 0.541
+      },
+      "vehicle": {
+        "gts": 7024,
+        "detections": 412822,
+        "recall": 0.939,
+        "ap50": 0.774
+      },
+      "windmill": {
+        "gts": 1404,
+        "detections": 66229,
+        "recall": 0.901,
+        "ap50": 0.806
+      }
+    },
+    "runtime": {
+      "first_log_time": "2026-10-13T17:53:18",
+      "last_log_time": "2026-10-14T08:51:40",
+      "elapsed_hours": 14.972777777777777,
+      "average_training_iteration_seconds": 0.21066723976492577
+    }
+  },
+  "voc_category_deltas": {
+    "airplane": {
+      "ap50_points": 0.0,
+      "recall_points": 3.4
+    },
+    "airport": {
+      "ap50_points": -4.2,
+      "recall_points": -0.6
+    },
+    "baseballfield": {
+      "ap50_points": 0.1,
+      "recall_points": 3.3
+    },
+    "basketballcourt": {
+      "ap50_points": 1.0,
+      "recall_points": 2.4
+    },
+    "bridge": {
+      "ap50_points": 1.7,
+      "recall_points": 5.7
+    },
+    "chimney": {
+      "ap50_points": -0.3,
+      "recall_points": -1.3
+    },
+    "dam": {
+      "ap50_points": -1.2,
+      "recall_points": 0.3
+    },
+    "expressway-service-area": {
+      "ap50_points": -1.2,
+      "recall_points": -3.0
+    },
+    "expressway-toll-station": {
+      "ap50_points": -0.4,
+      "recall_points": 2.8
+    },
+    "golffield": {
+      "ap50_points": 0.2,
+      "recall_points": -2.2
+    },
+    "groundtrackfield": {
+      "ap50_points": 2.7,
+      "recall_points": 1.9
+    },
+    "harbor": {
+      "ap50_points": -1.0,
+      "recall_points": 0.1
+    },
+    "overpass": {
+      "ap50_points": 0.0,
+      "recall_points": 3.7
+    },
+    "ship": {
+      "ap50_points": 0.1,
+      "recall_points": 1.4
+    },
+    "stadium": {
+      "ap50_points": -0.2,
+      "recall_points": -1.3
+    },
+    "storagetank": {
+      "ap50_points": 0.5,
+      "recall_points": 2.6
+    },
+    "tenniscourt": {
+      "ap50_points": -0.1,
+      "recall_points": 0.2
+    },
+    "trainstation": {
+      "ap50_points": -5.2,
+      "recall_points": -0.8
+    },
+    "vehicle": {
+      "ap50_points": 3.9,
+      "recall_points": 5.2
+    },
+    "windmill": {
+      "ap50_points": 1.7,
+      "recall_points": 5.6
+    }
+  },
+  "optimizer_audit": {
+    "rtmdet_tiny_dior_640_gpu1_bs36": {
+      "optimizer_state_steps": {
+        "48879": 240
+      },
+      "ema_microsteps": 48900
+    },
+    "efs_rtmdet_tiny_dior_640_gpu1_bs9x4": {
+      "optimizer_state_steps": {
+        "48879": 297
+      },
+      "ema_microsteps": 195600
+    }
+  },
+  "prior_coverage": {
+    "scope": "geometric candidate-coverage proxy on 800x800 DIOR val images resized to640; strict box-interior prior points with offset0; not final assignment/recall",
+    "counts": {
+      "all": {
+        "total": 35329,
+        "min_side_lt8": 2745,
+        "min_side_lt4": 110,
+        "stride4_has_inside_point": 35237,
+        "stride8_has_inside_point": 34166,
+        "recovered_by_stride4": 1071
+      },
+      "windmill": {
+        "total": 1404,
+        "min_side_lt8": 58,
+        "min_side_lt4": 1,
+        "stride4_has_inside_point": 1403,
+        "stride8_has_inside_point": 1386,
+        "recovered_by_stride4": 17
+      },
+      "bridge": {
+        "total": 854,
+        "min_side_lt8": 52,
+        "min_side_lt4": 7,
+        "stride4_has_inside_point": 850,
+        "stride8_has_inside_point": 835,
+        "recovered_by_stride4": 15
+      },
+      "basketballcourt": {
+        "total": 515,
+        "min_side_lt8": 1,
+        "min_side_lt4": 0,
+        "stride4_has_inside_point": 515,
+        "stride8_has_inside_point": 513,
+        "recovered_by_stride4": 2
+      },
+      "vehicle": {
+        "total": 7014,
+        "min_side_lt8": 1297,
+        "min_side_lt4": 80,
+        "stride4_has_inside_point": 6946,
+        "stride8_has_inside_point": 6414,
+        "recovered_by_stride4": 532
+      },
+      "overpass": {
+        "total": 760,
+        "min_side_lt8": 15,
+        "min_side_lt4": 2,
+        "stride4_has_inside_point": 759,
+        "stride8_has_inside_point": 753,
+        "recovered_by_stride4": 6
+      },
+      "stadium": {
+        "total": 299,
+        "min_side_lt8": 0,
+        "min_side_lt4": 0,
+        "stride4_has_inside_point": 299,
+        "stride8_has_inside_point": 299,
+        "recovered_by_stride4": 0
+      },
+      "tenniscourt": {
+        "total": 2666,
+        "min_side_lt8": 5,
+        "min_side_lt4": 0,
+        "stride4_has_inside_point": 2666,
+        "stride8_has_inside_point": 2664,
+        "recovered_by_stride4": 2
+      },
+      "groundtrackfield": {
+        "total": 593,
+        "min_side_lt8": 0,
+        "min_side_lt4": 0,
+        "stride4_has_inside_point": 593,
+        "stride8_has_inside_point": 593,
+        "recovered_by_stride4": 0
+      },
+      "trainstation": {
+        "total": 254,
+        "min_side_lt8": 0,
+        "min_side_lt4": 0,
+        "stride4_has_inside_point": 254,
+        "stride8_has_inside_point": 254,
+        "recovered_by_stride4": 0
+      },
+      "expressway-toll-station": {
+        "total": 318,
+        "min_side_lt8": 14,
+        "min_side_lt4": 0,
+        "stride4_has_inside_point": 318,
+        "stride8_has_inside_point": 313,
+        "recovered_by_stride4": 5
+      },
+      "airport": {
+        "total": 333,
+        "min_side_lt8": 0,
+        "min_side_lt4": 0,
+        "stride4_has_inside_point": 333,
+        "stride8_has_inside_point": 333,
+        "recovered_by_stride4": 0
+      },
+      "harbor": {
+        "total": 1217,
+        "min_side_lt8": 22,
+        "min_side_lt4": 3,
+        "stride4_has_inside_point": 1216,
+        "stride8_has_inside_point": 1206,
+        "recovered_by_stride4": 10
+      },
+      "ship": {
+        "total": 14215,
+        "min_side_lt8": 1115,
+        "min_side_lt4": 2,
+        "stride4_has_inside_point": 14212,
+        "stride8_has_inside_point": 13822,
+        "recovered_by_stride4": 390
+      },
+      "storagetank": {
+        "total": 1709,
+        "min_side_lt8": 130,
+        "min_side_lt4": 15,
+        "stride4_has_inside_point": 1695,
+        "stride8_has_inside_point": 1626,
+        "recovered_by_stride4": 69
+      },
+      "expressway-service-area": {
+        "total": 543,
+        "min_side_lt8": 0,
+        "min_side_lt4": 0,
+        "stride4_has_inside_point": 543,
+        "stride8_has_inside_point": 543,
+        "recovered_by_stride4": 0
+      },
+      "golffield": {
+        "total": 274,
+        "min_side_lt8": 0,
+        "min_side_lt4": 0,
+        "stride4_has_inside_point": 274,
+        "stride8_has_inside_point": 274,
+        "recovered_by_stride4": 0
+      },
+      "baseballfield": {
+        "total": 1140,
+        "min_side_lt8": 24,
+        "min_side_lt4": 0,
+        "stride4_has_inside_point": 1140,
+        "stride8_has_inside_point": 1124,
+        "recovered_by_stride4": 16
+      },
+      "dam": {
+        "total": 260,
+        "min_side_lt8": 0,
+        "min_side_lt4": 0,
+        "stride4_has_inside_point": 260,
+        "stride8_has_inside_point": 260,
+        "recovered_by_stride4": 0
+      },
+      "airplane": {
+        "total": 654,
+        "min_side_lt8": 12,
+        "min_side_lt4": 0,
+        "stride4_has_inside_point": 654,
+        "stride8_has_inside_point": 648,
+        "recovered_by_stride4": 6
+      },
+      "chimney": {
+        "total": 307,
+        "min_side_lt8": 0,
+        "min_side_lt4": 0,
+        "stride4_has_inside_point": 307,
+        "stride8_has_inside_point": 306,
+        "recovered_by_stride4": 1
+      }
+    }
+  },
+  "ema_schedule": {
+    "actual_baseline_gamma": 2000,
+    "completed_efs_gamma": 400,
+    "efs_microbatch": 9,
+    "efs_accumulation": 4,
+    "corrected_source_gamma": 8000,
+    "corrected_source_tests": {
+      "status": "passed",
+      "count": 3
+    },
+    "completed_snapshot_modified": false,
+    "new_training_launched": false,
+    "corrected_source_sha256": "0454620f6f343fcb21f2f964521ed3bc0b73c61099f8ffc488d5a9460a65b2d3"
+  },
+  "efs_raw_epoch300": {
+    "status": "passed",
+    "scope": "full official DIOR val, 5863 images, raw student weights from epoch300; no optimizer or training changes",
+    "epoch": 300,
+    "images": 5863,
+    "batch": 4,
+    "gpu": "GPU0",
+    "allocator_fraction": 0.08,
+    "metrics": {
+      "pascal_voc/mAP": 0.7599399089813232,
+      "pascal_voc/AP50": 0.76,
+      "coco/airplane_precision": 0.793,
+      "coco/airport_precision": 0.505,
+      "coco/baseballfield_precision": 0.823,
+      "coco/basketballcourt_precision": 0.737,
+      "coco/bridge_precision": 0.289,
+      "coco/chimney_precision": 0.772,
+      "coco/dam_precision": 0.303,
+      "coco/expressway-service-area_precision": 0.509,
+      "coco/expressway-toll-station_precision": 0.514,
+      "coco/golffield_precision": 0.542,
+      "coco/groundtrackfield_precision": 0.666,
+      "coco/harbor_precision": 0.47,
+      "coco/overpass_precision": 0.434,
+      "coco/ship_precision": 0.511,
+      "coco/stadium_precision": 0.764,
+      "coco/storagetank_precision": 0.705,
+      "coco/tenniscourt_precision": 0.839,
+      "coco/trainstation_precision": 0.25,
+      "coco/vehicle_precision": 0.487,
+      "coco/windmill_precision": 0.423,
+      "coco/bbox_mAP": 0.567,
+      "coco/bbox_mAP_50": 0.777,
+      "coco/bbox_mAP_75": 0.624,
+      "coco/bbox_mAP_s": 0.093,
+      "coco/bbox_mAP_m": 0.346,
+      "coco/bbox_mAP_l": 0.69
+    },
+    "elapsed_seconds": 435.5560398171656,
+    "peak_allocated_gib": 0.30916261672973633,
+    "peak_reserved_gib": 0.46484375
+  },
+  "baseline_raw_epoch300": {
+    "status": "passed",
+    "scope": "full official DIOR val, 5863 images, raw student weights from epoch300; no optimizer or training changes",
+    "epoch": 300,
+    "images": 5863,
+    "batch": 4,
+    "gpu": "GPU0",
+    "allocator_fraction": 0.08,
+    "metrics": {
+      "pascal_voc/mAP": 0.7595106363296509,
+      "pascal_voc/AP50": 0.76,
+      "coco/airplane_precision": 0.792,
+      "coco/airport_precision": 0.522,
+      "coco/baseballfield_precision": 0.823,
+      "coco/basketballcourt_precision": 0.721,
+      "coco/bridge_precision": 0.291,
+      "coco/chimney_precision": 0.781,
+      "coco/dam_precision": 0.323,
+      "coco/expressway-service-area_precision": 0.521,
+      "coco/expressway-toll-station_precision": 0.521,
+      "coco/golffield_precision": 0.545,
+      "coco/groundtrackfield_precision": 0.649,
+      "coco/harbor_precision": 0.477,
+      "coco/overpass_precision": 0.439,
+      "coco/ship_precision": 0.502,
+      "coco/stadium_precision": 0.774,
+      "coco/storagetank_precision": 0.695,
+      "coco/tenniscourt_precision": 0.837,
+      "coco/trainstation_precision": 0.271,
+      "coco/vehicle_precision": 0.458,
+      "coco/windmill_precision": 0.402,
+      "coco/bbox_mAP": 0.567,
+      "coco/bbox_mAP_50": 0.772,
+      "coco/bbox_mAP_75": 0.622,
+      "coco/bbox_mAP_s": 0.083,
+      "coco/bbox_mAP_m": 0.357,
+      "coco/bbox_mAP_l": 0.7
+    },
+    "elapsed_seconds": 415.58263797778636,
+    "peak_allocated_gib": 0.2660713195800781,
+    "peak_reserved_gib": 0.341796875
+  },
+  "raw_epoch300_deltas": {
+    "pascal_voc/mAP": 0.0004292726516723633,
+    "coco/bbox_mAP": 0.0,
+    "coco/bbox_mAP_50": 0.0050000000000000044,
+    "coco/bbox_mAP_75": 0.0020000000000000018,
+    "coco/bbox_mAP_s": 0.009999999999999995,
+    "coco/bbox_mAP_m": -0.01100000000000001,
+    "coco/bbox_mAP_l": -0.010000000000000009
+  },
+  "architecture": {
+    "baseline": {
+      "parameters": 4878708,
+      "conv_linear_gmac": 7.98770304
+    },
+    "efs": {
+      "parameters": 5005956,
+      "conv_linear_gmac": 18.37689984
+    }
+  },
+  "p2_head_compute": {
+    "four_3x3_tower_gmac": 8.4934656,
+    "prediction_gmac": 0.0589824,
+    "total_gmac": 8.552448,
+    "total_added_model_gmac": 10.3891968,
+    "share_of_added_compute": 0.8232058901800763,
+    "excludes_bn_activation_assignment_nms": true
+  },
+  "data_distribution": {
+    "val_objects": 35434,
+    "small_objects": 15339,
+    "small_share": 0.432889315346842,
+    "ship_vehicle_small_objects": 13476,
+    "ship_vehicle_small_share": 0.8785448855857618,
+    "macro_averaged_classes": 20
+  },
+  "assessment": {
+    "overall_accuracy": "approximately unchanged in both EMA and raw weight comparisons",
+    "small_object_gain": "positive in both comparisons",
+    "early_ema_curve": "confounded by incorrect gamma400 instead of matching gamma8000",
+    "large_object_feature_or_head_interference": "hypothesis consistent with category and size metrics, not causally isolated",
+    "microbatch_optimization": "batch9 with accumulation4 has different BN statistics and per-microbatch loss normalization than batch36"
+  }
+}

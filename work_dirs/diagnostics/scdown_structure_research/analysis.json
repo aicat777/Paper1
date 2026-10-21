@@ -1,0 +1,134 @@
+{
+  "status": "research_only_no_model_or_training_changes",
+  "checkpoint": "/home/pwt/Paper1/work_dirs/rtmdet_tiny_dior_640_gpu1_bs36/epoch_300.pth",
+  "checkpoint_sha256": "ad49713adb861c23748f09f504effa15b12933b957b053ecae2be8824d458cac",
+  "weight_type": "EMA",
+  "diagnostic": {
+    "layers": [
+      {
+        "layer": "backbone.stage3.0.conv.weight",
+        "weight_shape": [
+          192,
+          96,
+          3,
+          3
+        ],
+        "matrix": "one Cin x 9 matrix per output channel",
+        "mean_retained_squared_frobenius_energy": {
+          "1": 0.5474364757537842,
+          "2": 0.721825361251831,
+          "3": 0.8182967305183411,
+          "4": 0.8796259760856628
+        }
+      },
+      {
+        "layer": "backbone.stage4.0.conv.weight",
+        "weight_shape": [
+          384,
+          192,
+          3,
+          3
+        ],
+        "matrix": "one Cin x 9 matrix per output channel",
+        "mean_retained_squared_frobenius_energy": {
+          "1": 0.5536125898361206,
+          "2": 0.6933407783508301,
+          "3": 0.7800407409667969,
+          "4": 0.8430525660514832
+        }
+      },
+      {
+        "layer": "neck.downsample_layers.1.conv.weight",
+        "weight_shape": [
+          192,
+          192,
+          3,
+          3
+        ],
+        "matrix": "one Cin x 9 matrix per output channel",
+        "mean_retained_squared_frobenius_energy": {
+          "1": 0.4786982834339142,
+          "2": 0.6758682131767273,
+          "3": 0.8015990853309631,
+          "4": 0.8710238337516785
+        }
+      }
+    ],
+    "interpretation": "A linear frozen-kernel approximation diagnostic; not task-weighted information loss or a causal AP estimate. SCDown contains SiLU and retraining changes the representation.",
+    "comparison_to_bsconv_paper": "BSConv section 3.1 reports approximately 50 percent mean variance explained by centered PCA as motivation for compression. This report uses uncentered SVD squared-Frobenius energy; the quantities differ and neither establishes causal detection-information loss."
+  },
+  "proposed_structure": {
+    "main": "original SCDown unchanged",
+    "branch": "PW Cin->r / BN / SiLU / DW 3x3 stride2 padding1 / BN / linear PW r->Cout; scalar residual coefficient per site",
+    "sites": [
+      {
+        "site": "backbone.stage3.0",
+        "rank_width": 12,
+        "additional_parameters": 3613,
+        "additional_conv_mac": 11232000
+      },
+      {
+        "site": "backbone.stage4.0",
+        "rank_width": 24,
+        "additional_parameters": 14137,
+        "additional_conv_mac": 11145600
+      },
+      {
+        "site": "neck.downsample_layers.1",
+        "rank_width": 24,
+        "additional_parameters": 9529,
+        "additional_conv_mac": 9302400
+      }
+    ],
+    "parameter_count_arithmetic": 3882243,
+    "conv_linear_gmac_arithmetic": 7.65558144,
+    "parameter_reduction_percent": 20.424772296271886,
+    "mac_reduction_percent": 4.157911208476783,
+    "limitations": [
+      "Not implemented or trained; these are analytical resource estimates.",
+      "Low-rank factorization and residual branching have prior art; novelty is not established.",
+      "Additional operators can increase latency despite small MAC overhead."
+    ],
+    "status": "withdrawn_at_user_request",
+    "withdrawal_reason": "User rejected compensation. Existing SCDown maintains or slightly improves baseline AP; frozen dense-kernel SVD energy is not evidence of a task-relevant defect requiring a residual branch."
+  },
+  "prior_art": [
+    {
+      "title": "YOLOv10",
+      "url": "https://arxiv.org/html/2405.14458v1",
+      "sections": [
+        "3.2",
+        "Table5",
+        "Table7"
+      ]
+    },
+    {
+      "title": "BSConv",
+      "url": "https://arxiv.org/html/2003.13549v3",
+      "sections": [
+        "3.2",
+        "3.3.1",
+        "3.3.2",
+        "4.1",
+        "4.2"
+      ]
+    },
+    {
+      "title": "Network Decoupling",
+      "url": "https://bmvc2018.org/contents/papers/0849.pdf",
+      "sections": [
+        "Theorem1",
+        "4.1"
+      ]
+    },
+    {
+      "title": "SPD-Conv",
+      "url": "https://arxiv.org/html/2208.03641v1",
+      "sections": [
+        "3.1",
+        "3.2"
+      ]
+    }
+  ],
+  "current_research_focus": "Compare BSConv-U and BSConv-S with SCDown: activation/BN placement, pointwise subspace factorization, orthonormal regularization, scope and experimental controls. No implementation or training requested."
+}

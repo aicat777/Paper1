@@ -1,0 +1,20 @@
+{
+  "state": "complete",
+  "queue_pid": 2269614,
+  "updated_at": "2026-10-15T10:01:21.056612+08:00",
+  "dependency": {
+    "pid": 1358024,
+    "start_ticks": "293233236",
+    "status": "/home/pwt/Paper1/work_dirs/lsconv_queue/status.json",
+    "work_dir": "/home/pwt/Paper1/work_dirs/lsconv_rtmdet_tiny_dior_640_gpu1_bs36",
+    "log": "/home/pwt/Paper1/logs/lsconv_rtmdet_tiny_dior_640_gpu1_bs36.log"
+  },
+  "experiment": {
+    "name": "fdw_640_bs36",
+    "source_config": "/home/pwt/Paper1/configs/fdw/rtmdet_tiny_dior_640.py",
+    "config": "/home/pwt/Paper1/work_dirs/fdw_queue/fdw_640_bs36.py",
+    "work_dir": "/home/pwt/Paper1/work_dirs/fdw_rtmdet_tiny_dior_640_gpu1_bs36",
+    "log": "/home/pwt/Paper1/logs/fdw_rtmdet_tiny_dior_640_gpu1_bs36.log",
+    "capacity_report": "/home/pwt/Paper1/work_dirs/fdw_validation/capacity.json"
+  }
+}

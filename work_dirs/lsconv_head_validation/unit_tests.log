@@ -1,0 +1,13 @@
+test_exception_restores_active_modules (tests.test_lsconv_neck_head.NeckHeadAdapters) ... ok
+test_head_scope_shared_conv_independent_norm_and_branches (tests.test_lsconv_neck_head.NeckHeadAdapters) ... ok
+test_head_shared_gradient_is_sum_and_survives_serialization (tests.test_lsconv_neck_head.NeckHeadAdapters) ... ok
+test_lsblock_constructor_initialization_survives_root_and_repeated_init (tests.test_lsconv_neck_head.NeckHeadAdapters) ... ok
+test_neck_scope_and_original_outputs (tests.test_lsconv_neck_head.NeckHeadAdapters) ... ok
+test_untouched_parameters_and_rng_match_three_site_foundation_exactly (tests.test_lsconv_neck_head.NeckHeadAdapters) ... ok
+test_verified_operator_copies_and_identical_protocol (tests.test_lsconv_neck_head.NeckHeadAdapters) ... ok
+test_zero_ffn_receives_grad_then_activates (tests.test_lsconv_neck_head.NeckHeadAdapters) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 9.896s
+
+OK

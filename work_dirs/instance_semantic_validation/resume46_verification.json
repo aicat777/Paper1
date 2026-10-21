@@ -1,0 +1,64 @@
+{
+  "prepared_at": "2026-10-17T20:35:56.246794+08:00",
+  "checkpoint": "/home/pwt/Paper1/work_dirs/instance_semantic_rtmdet_tiny_dior_640_gpu1_bs36/epoch_46.pth",
+  "checkpoint_epoch": 46,
+  "checkpoint_iteration": 7498,
+  "full_state_verified": [
+    "state_dict",
+    "optimizer",
+    "param_schedulers",
+    "ema_state_dict"
+  ],
+  "weights_finite": true,
+  "changed_sources": {
+    "custom_models/instance_semantic/roi.py": {
+      "before": "c6c9f9c5aaffcf7bf7fcc124340d77a77d14f0fa36ed7a74d1d09de0170560e3",
+      "after": "3e1d9805737aa468eb96f093ba7955a82362e7b83e90dc47efe64f53554e54b4"
+    },
+    "tests/test_instance_semantic.py": {
+      "before": "084b00185e0a484f9c877349c0ff93ccbdc29f27e39f2f5a24480c756c652a4e",
+      "after": "300412001e57d614bdeb415db9cd54bd1446a066e9f1f835d6a078cc7ad2c383"
+    }
+  },
+  "previous_queue_status": {
+    "state": "failed",
+    "queue_pid": 2838555,
+    "queue_start_ticks": "15178717",
+    "updated_at": "2026-10-17T11:17:52.426987+08:00",
+    "dependency": {
+      "name": "lsconv_20",
+      "pid": 2838554,
+      "start_ticks": "15178716",
+      "status": "/home/pwt/Paper1/work_dirs/lsconv_20_queue/status.json",
+      "work_dir": "/home/pwt/Paper1/work_dirs/lsconv_20_rtmdet_tiny_dior_640_gpu1_bs36",
+      "log": "/home/pwt/Paper1/logs/lsconv_20_rtmdet_tiny_dior_640_gpu1_bs36.log"
+    },
+    "experiment": {
+      "name": "instance_semantic_640_bs36",
+      "source_config": "/home/pwt/Paper1/configs/instance_semantic/rtmdet_tiny_dior_640.py",
+      "config": "/home/pwt/Paper1/work_dirs/instance_semantic_queue/instance_semantic_640_bs36.py",
+      "work_dir": "/home/pwt/Paper1/work_dirs/instance_semantic_rtmdet_tiny_dior_640_gpu1_bs36",
+      "log": "/home/pwt/Paper1/logs/instance_semantic_rtmdet_tiny_dior_640_gpu1_bs36.log",
+      "preflight_report": "/home/pwt/Paper1/work_dirs/instance_semantic_validation/queue_preflight.json",
+      "capacity_report": "/home/pwt/Paper1/work_dirs/instance_semantic_validation/capacity_gpu1_bs36.json",
+      "validation_summary": "/home/pwt/Paper1/work_dirs/instance_semantic_validation/checks.json"
+    },
+    "error": "training failed with exit 1; see /home/pwt/Paper1/logs/instance_semantic_rtmdet_tiny_dior_640_gpu1_bs36.log"
+  },
+  "previous_queue_identity": {
+    "pid": 2838555,
+    "start_ticks": "15178717",
+    "command": [
+      "/home/pwt/miniconda3/envs/rtmdet/bin/python",
+      "-u",
+      "/home/pwt/Paper1/scripts/queue_experiment.py",
+      "/home/pwt/Paper1/work_dirs/instance_semantic_queue/manifest.json"
+    ],
+    "started_at": "2026-10-17T10:01:55.907533+08:00"
+  },
+  "previous_log": "/home/pwt/Paper1/logs/instance_semantic_rtmdet_tiny_dior_640_gpu1_bs36.log",
+  "current_log": "/home/pwt/Paper1/logs/instance_semantic_rtmdet_tiny_dior_640_gpu1_bs36_resume46.log",
+  "smoke_report": "/home/pwt/Paper1/work_dirs/instance_semantic_validation/roi_fix_smoke.json",
+  "unit_report": "/home/pwt/Paper1/work_dirs/instance_semantic_validation/roi_fix_unit_tests.json",
+  "other_experiments_restarted": false
+}

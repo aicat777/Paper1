@@ -1,0 +1,11 @@
+{
+  "pid": 32125,
+  "start_ticks": "139962",
+  "command": [
+    "/home/pwt/miniconda3/envs/rtmdet/bin/python",
+    "-u",
+    "/home/pwt/Paper1/scripts/queue_experiment.py",
+    "/home/pwt/Paper1/work_dirs/lsconv_full_queue/manifest.json"
+  ],
+  "started_at": "2026-10-15T16:15:28.359622+08:00"
+}

@@ -1,0 +1,17 @@
+{
+  "custom_models/freq_fusion/operator.py": "9c307c339f9ff1a83f04413bb1a49a6d0aa67daa63560d0cfb66a0c185eb56f9",
+  "custom_models/freq_fusion/resample.py": "bf7f40ad914c7ee68e32ed83b41ac2d400a51de3c7b96bc7f175a38eb2006536",
+  "custom_models/freq_fusion/neck.py": "1715dddc0da484cd232fb43b6032adda462f8b0fa5900deb3bba2a5556eb9c02",
+  "custom_models/freq_fusion/__init__.py": "f49e2e82f3c0e704aa6aa2fc44ae652f45b862cfd01fcf1ad46e27064493e84c",
+  "configs/freq_fusion/rtmdet_tiny_dior_640.py": "98bf4c1e8035b1099fdc04693bec65adc628c9c03bcc97d7dcc82e887b0e3a77",
+  "scripts/candidate_probe.py": "20e07b7f2cdb9202eedf63660786b5e2ffa5f5e019ebdf8a6c1fdbb2eb018286",
+  "scripts/candidate_capacity.py": "311c8cf810f6184f190642fab04acd55c15e9f61ea1c281276fa93800df6725c",
+  "scripts/queue_experiment.py": "53938385f211685b7de5ba4ce43d745611cc5ab21eb80eb0cf400388a533fdb1",
+  "configs/instance_semantic/rtmdet_tiny_dior_640.py": "51e23561dd9a4d2cece9e25b93964c50982df354f7566ce900375c6949b33e59",
+  "configs/rtmdet_tiny_dior_300e.py": "69a8a91d777090fcdd6f27eafdb717cc93f1a272bc6a90c4db522ba035d215a6",
+  "custom_models/instance_semantic/__init__.py": "7aa8654f1bae5bad77124cfa94e8a226429540643063e982758cdeaf5329563c",
+  "custom_models/instance_semantic/head.py": "404fa084c027a546c185af4d63be051e20d71e017e6510574c94efd87b86fe64",
+  "custom_models/instance_semantic/roi.py": "3e1d9805737aa468eb96f093ba7955a82362e7b83e90dc47efe64f53554e54b4",
+  "tests/test_instance_semantic.py": "300412001e57d614bdeb415db9cd54bd1446a066e9f1f835d6a078cc7ad2c383",
+  "work_dirs/instance_semantic_queue/instance_semantic_640_bs36.py": "01613ab30758e59195661320cec8e070d33cf9c5985337f522dfbec3fcc27f51"
+}

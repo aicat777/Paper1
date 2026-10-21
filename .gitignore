@@ -1,8 +1,10 @@
 /datasets/
 /papers/
 /checkpoints/
-/logs/
-/work_dirs/
+# Keep complete experiment records in Git; exclude model checkpoint binaries.
+# Research downloads and PDF tooling stay local; retain experiment audit logs.
+/work_dirs/research/*
+!/work_dirs/research/*.log
 /.download-cache/
 /.venv*/
 __pycache__/

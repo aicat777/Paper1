@@ -1,0 +1,45 @@
+{
+  "status": "passed",
+  "method": "factorized_head",
+  "unit_tests": 2,
+  "unit_test_log": "work_dirs/research/factorized_head_unit.log",
+  "source_sha256": {
+    "configs/factorized_head/rtmdet_tiny_dior_640.py": "598aa6bad20d148f4bf295f5fef01c7eaa27db0d112b75dc00cf0544273aaaa4",
+    "configs/rtmdet_tiny_dior_300e.py": "69a8a91d777090fcdd6f27eafdb717cc93f1a272bc6a90c4db522ba035d215a6",
+    "scripts/candidate_probe.py": "20e07b7f2cdb9202eedf63660786b5e2ffa5f5e019ebdf8a6c1fdbb2eb018286",
+    "tests/test_factorized_head.py": "5e16adfedb597f3bce727aff7da1bc557829fc8119df8f716717c5f494de8150",
+    "custom_models/factorized_head/__init__.py": "764fc12bb0141ec237b83ba2a93016bfa454751493c118f7f21b7361ae6c06b9",
+    "custom_models/factorized_head/head.py": "33af7ff2eee4b6bc667966bfffdcb1d99550924f1ddcdcd1e9677271cdbee02b"
+  },
+  "reports": {
+    "preflight": "work_dirs/factorized_head_validation/preflight.json",
+    "smoke": "work_dirs/factorized_head_validation/smoke.json",
+    "capacity_gpu0_bs12": "/home/pwt/Paper1/work_dirs/factorized_head_validation/capacity_gpu0_bs12.json"
+  },
+  "microbatch": 2,
+  "optimizer_updates": 16,
+  "formal_batch": 36,
+  "formal_batch_capacity_tested": false,
+  "queued_for_full_training": true,
+  "model_parameters": 4710516,
+  "inference_conv_linear_gmac": 6.49747584,
+  "peak_allocated_gib": 0.7685346603393555,
+  "peak_reserved_gib": 0.845703125,
+  "queue_priority": 4,
+  "queue_manifest": "/home/pwt/Paper1/work_dirs/factorized_head_queue/manifest.json",
+  "capacity_policy": "Fixed real batch36; no automatic batch or accumulation change; capacity failure stops queue",
+  "formal_capacity_report": "/home/pwt/Paper1/work_dirs/factorized_head_validation/capacity_gpu1_bs36.json",
+  "capacity_probe_sha256": "311c8cf810f6184f190642fab04acd55c15e9f61ea1c281276fa93800df6725c",
+  "queue_identity": {
+    "pid": 2838557,
+    "start_ticks": "15178717",
+    "command": [
+      "/home/pwt/miniconda3/envs/rtmdet/bin/python",
+      "-u",
+      "/home/pwt/Paper1/scripts/queue_experiment.py",
+      "/home/pwt/Paper1/work_dirs/factorized_head_queue/manifest.json"
+    ],
+    "started_at": "2026-10-17T10:01:55.913575+08:00"
+  },
+  "predecessor": "tiny_assignment"
+}

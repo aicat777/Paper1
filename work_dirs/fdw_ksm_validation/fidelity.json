@@ -1,0 +1,138 @@
+{
+  "status": "passed",
+  "source": "work_dirs/research/fdconv/official_operator.py",
+  "source_sha256": "6bdb6733de869ed8a334528d2b037b87c121542f84d43c741dec6d8f813d04d0",
+  "upstream_commit": "bf7a33d4f39ac7ea8172158f5628107fcaaba469",
+  "local_ksm_enabled": true,
+  "global_ksm_axes_enabled": false,
+  "fbm_enabled": false,
+  "nonuniform_routing_and_local_gates": true,
+  "cases": [
+    {
+      "channels": 48,
+      "spatial_size": 80,
+      "training": false,
+      "forward_max_error": 0.0,
+      "gradient_max_error": 8.195638656616211e-08,
+      "gradient_errors": {
+        "input": 2.3283064365386963e-10,
+        "dft_weight": 0.0,
+        "router.fc.weight": 2.000888343900442e-11,
+        "router.bn.weight": 2.9103830456733704e-11,
+        "router.bn.bias": 6.984919309616089e-10,
+        "router.relu.scale": 2.9103830456733704e-11,
+        "router.relu.bias": 8.195638656616211e-08,
+        "router.kernel_fc.weight": 8.731149137020111e-11,
+        "router.kernel_fc.bias": 2.9802322387695312e-08,
+        "local.norm.weight": 0.0,
+        "local.norm.bias": 0.0,
+        "local.conv.weight": 0.0
+      }
+    },
+    {
+      "channels": 48,
+      "spatial_size": 80,
+      "training": true,
+      "forward_max_error": 0.0,
+      "gradient_max_error": 9.313225746154785e-08,
+      "gradient_errors": {
+        "input": 2.3283064365386963e-10,
+        "dft_weight": 0.0,
+        "router.fc.weight": 8.940696716308594e-08,
+        "router.bn.weight": 2.2351741790771484e-08,
+        "router.bn.bias": 2.2351741790771484e-08,
+        "router.relu.scale": 3.725290298461914e-08,
+        "router.relu.bias": 9.313225746154785e-08,
+        "router.kernel_fc.weight": 2.2351741790771484e-08,
+        "router.kernel_fc.bias": 3.725290298461914e-08,
+        "local.norm.weight": 0.0,
+        "local.norm.bias": 0.0,
+        "local.conv.weight": 0.0
+      }
+    },
+    {
+      "channels": 96,
+      "spatial_size": 40,
+      "training": false,
+      "forward_max_error": 0.0,
+      "gradient_max_error": 1.862645149230957e-08,
+      "gradient_errors": {
+        "input": 4.656612873077393e-10,
+        "dft_weight": 0.0,
+        "router.fc.weight": 1.1641532182693481e-10,
+        "router.bn.weight": 2.3283064365386963e-10,
+        "router.bn.bias": 9.313225746154785e-10,
+        "router.relu.scale": 0.0,
+        "router.relu.bias": 1.4901161193847656e-08,
+        "router.kernel_fc.weight": 1.3969838619232178e-09,
+        "router.kernel_fc.bias": 1.862645149230957e-08,
+        "local.norm.weight": 0.0,
+        "local.norm.bias": 0.0,
+        "local.conv.weight": 0.0
+      }
+    },
+    {
+      "channels": 96,
+      "spatial_size": 40,
+      "training": true,
+      "forward_max_error": 0.0,
+      "gradient_max_error": 8.195638656616211e-08,
+      "gradient_errors": {
+        "input": 6.984919309616089e-10,
+        "dft_weight": 0.0,
+        "router.fc.weight": 8.195638656616211e-08,
+        "router.bn.weight": 1.862645149230957e-08,
+        "router.bn.bias": 1.4901161193847656e-08,
+        "router.relu.scale": 2.421438694000244e-08,
+        "router.relu.bias": 2.2351741790771484e-08,
+        "router.kernel_fc.weight": 2.2351741790771484e-08,
+        "router.kernel_fc.bias": 2.9802322387695312e-08,
+        "local.norm.weight": 0.0,
+        "local.norm.bias": 0.0,
+        "local.conv.weight": 0.0
+      }
+    },
+    {
+      "channels": 192,
+      "spatial_size": 20,
+      "training": false,
+      "forward_max_error": 0.0,
+      "gradient_max_error": 2.60770320892334e-08,
+      "gradient_errors": {
+        "input": 4.656612873077393e-10,
+        "dft_weight": 0.0,
+        "router.fc.weight": 9.313225746154785e-10,
+        "router.bn.weight": 3.725290298461914e-09,
+        "router.bn.bias": 7.450580596923828e-09,
+        "router.relu.scale": 3.725290298461914e-09,
+        "router.relu.bias": 7.450580596923828e-09,
+        "router.kernel_fc.weight": 7.450580596923828e-09,
+        "router.kernel_fc.bias": 2.60770320892334e-08,
+        "local.norm.weight": 0.0,
+        "local.norm.bias": 0.0,
+        "local.conv.weight": 0.0
+      }
+    },
+    {
+      "channels": 192,
+      "spatial_size": 20,
+      "training": true,
+      "forward_max_error": 0.0,
+      "gradient_max_error": 1.341104507446289e-07,
+      "gradient_errors": {
+        "input": 2.0954757928848267e-09,
+        "dft_weight": 0.0,
+        "router.fc.weight": 1.341104507446289e-07,
+        "router.bn.weight": 2.3283064365386963e-08,
+        "router.bn.bias": 2.421438694000244e-08,
+        "router.relu.scale": 0.0,
+        "router.relu.bias": 7.450580596923828e-09,
+        "router.kernel_fc.weight": 2.2351741790771484e-08,
+        "router.kernel_fc.bias": 2.60770320892334e-08,
+        "local.norm.weight": 0.0,
+        "local.norm.bias": 0.0,
+        "local.conv.weight": 0.0
+      }
+    }
+  ]
+}

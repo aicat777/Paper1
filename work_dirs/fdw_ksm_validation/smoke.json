@@ -1,0 +1,194 @@
+{
+  "status": "passed",
+  "official_train_entrypoint": true,
+  "input_size": [
+    640,
+    640
+  ],
+  "microbatch": 2,
+  "accumulation": 1,
+  "optimizer_updates": 16,
+  "training_microsteps": 16,
+  "val_passes": 2,
+  "val_images_per_pass": 32,
+  "predictions_checked": 64,
+  "raw_predictions_checked": 8,
+  "ema_validation_roundtrips": 2,
+  "ema_gamma": 2000,
+  "coco_evaluation_scoped_to_subset": true,
+  "strong_and_weak_augmentation": true,
+  "finite_losses": true,
+  "finite_predictions": true,
+  "amp_skipped_updates": 0,
+  "watched_parameter_tensors": 33,
+  "gradient_max": {
+    "backbone.stage4.2.blocks.0.conv1.conv.local.conv.weight": 5.578125,
+    "backbone.stage4.2.blocks.0.conv1.conv.local.norm.weight": 0.012766275554895401,
+    "backbone.stage4.2.blocks.0.conv1.conv.local.norm.bias": 0.011503636837005615,
+    "backbone.stage4.2.blocks.0.conv1.conv.dft_weight": 10.326175689697266,
+    "backbone.stage4.2.blocks.0.conv1.conv.router.kernel_fc.weight": 9.0859375,
+    "backbone.stage4.2.blocks.0.conv1.conv.router.kernel_fc.bias": 8.9375,
+    "backbone.stage4.2.blocks.0.conv1.conv.router.relu.bias": 0.18193411827087402,
+    "backbone.stage4.2.blocks.0.conv1.conv.router.relu.scale": 0.18814243376255035,
+    "backbone.stage4.2.blocks.0.conv1.conv.router.bn.weight": 0.08878600597381592,
+    "backbone.stage4.2.blocks.0.conv1.conv.router.bn.bias": 0.08880615234375,
+    "backbone.stage4.2.blocks.0.conv1.conv.router.fc.weight": 0.27978515625,
+    "backbone.stage3.1.blocks.0.conv1.conv.local.conv.weight": 12.125,
+    "backbone.stage3.1.blocks.0.conv1.conv.local.norm.weight": 0.03324010595679283,
+    "backbone.stage3.1.blocks.0.conv1.conv.local.norm.bias": 0.0258481502532959,
+    "backbone.stage3.1.blocks.0.conv1.conv.dft_weight": 19.305801391601562,
+    "backbone.stage3.1.blocks.0.conv1.conv.router.kernel_fc.weight": 13.3515625,
+    "backbone.stage3.1.blocks.0.conv1.conv.router.kernel_fc.bias": 12.8125,
+    "backbone.stage3.1.blocks.0.conv1.conv.router.relu.bias": 0.5432977676391602,
+    "backbone.stage3.1.blocks.0.conv1.conv.router.relu.scale": 0.42944860458374023,
+    "backbone.stage3.1.blocks.0.conv1.conv.router.bn.weight": 0.13534195721149445,
+    "backbone.stage3.1.blocks.0.conv1.conv.router.bn.bias": 0.135498046875,
+    "backbone.stage3.1.blocks.0.conv1.conv.router.fc.weight": 0.1640625,
+    "backbone.stage2.1.blocks.0.conv1.conv.local.conv.weight": 26.59375,
+    "backbone.stage2.1.blocks.0.conv1.conv.local.norm.weight": 0.07274045795202255,
+    "backbone.stage2.1.blocks.0.conv1.conv.local.norm.bias": 0.03188514709472656,
+    "backbone.stage2.1.blocks.0.conv1.conv.dft_weight": 32.40892791748047,
+    "backbone.stage2.1.blocks.0.conv1.conv.router.kernel_fc.weight": 22.84375,
+    "backbone.stage2.1.blocks.0.conv1.conv.router.kernel_fc.bias": 21.71875,
+    "backbone.stage2.1.blocks.0.conv1.conv.router.relu.bias": 0.7577652931213379,
+    "backbone.stage2.1.blocks.0.conv1.conv.router.relu.scale": 0.5413867235183716,
+    "backbone.stage2.1.blocks.0.conv1.conv.router.bn.weight": 0.12925642728805542,
+    "backbone.stage2.1.blocks.0.conv1.conv.router.bn.bias": 0.1292724609375,
+    "backbone.stage2.1.blocks.0.conv1.conv.router.fc.weight": 0.083740234375
+  },
+  "parameter_updates_max": {
+    "backbone.stage2.1.blocks.0.conv1.conv.dft_weight": 0.006907761096954346,
+    "backbone.stage2.1.blocks.0.conv1.conv.router.fc.weight": 0.004370793700218201,
+    "backbone.stage2.1.blocks.0.conv1.conv.router.bn.weight": 0.003911256790161133,
+    "backbone.stage2.1.blocks.0.conv1.conv.router.bn.bias": 0.003911331761628389,
+    "backbone.stage2.1.blocks.0.conv1.conv.router.relu.scale": 0.004218876361846924,
+    "backbone.stage2.1.blocks.0.conv1.conv.router.relu.bias": 0.003683993360027671,
+    "backbone.stage2.1.blocks.0.conv1.conv.router.kernel_fc.weight": 0.005218892358243465,
+    "backbone.stage2.1.blocks.0.conv1.conv.router.kernel_fc.bias": 0.002602888736873865,
+    "backbone.stage2.1.blocks.0.conv1.conv.local.norm.weight": 0.004896759986877441,
+    "backbone.stage2.1.blocks.0.conv1.conv.local.norm.bias": 0.004390985704958439,
+    "backbone.stage2.1.blocks.0.conv1.conv.local.conv.weight": 0.005860716104507446,
+    "backbone.stage3.1.blocks.0.conv1.conv.dft_weight": 0.007232896983623505,
+    "backbone.stage3.1.blocks.0.conv1.conv.router.fc.weight": 0.00398668646812439,
+    "backbone.stage3.1.blocks.0.conv1.conv.router.bn.weight": 0.003951072692871094,
+    "backbone.stage3.1.blocks.0.conv1.conv.router.bn.bias": 0.003950932528823614,
+    "backbone.stage3.1.blocks.0.conv1.conv.router.relu.scale": 0.0020325779914855957,
+    "backbone.stage3.1.blocks.0.conv1.conv.router.relu.bias": 0.002540676388889551,
+    "backbone.stage3.1.blocks.0.conv1.conv.router.kernel_fc.weight": 0.005126976873725653,
+    "backbone.stage3.1.blocks.0.conv1.conv.router.kernel_fc.bias": 0.005206415429711342,
+    "backbone.stage3.1.blocks.0.conv1.conv.local.norm.weight": 0.005429267883300781,
+    "backbone.stage3.1.blocks.0.conv1.conv.local.norm.bias": 0.005709750112146139,
+    "backbone.stage3.1.blocks.0.conv1.conv.local.conv.weight": 0.006522051524370909,
+    "backbone.stage4.2.blocks.0.conv1.conv.dft_weight": 0.007099702954292297,
+    "backbone.stage4.2.blocks.0.conv1.conv.router.fc.weight": 0.0035895109176635742,
+    "backbone.stage4.2.blocks.0.conv1.conv.router.bn.weight": 0.0059545040130615234,
+    "backbone.stage4.2.blocks.0.conv1.conv.router.bn.bias": 0.006000689696520567,
+    "backbone.stage4.2.blocks.0.conv1.conv.router.relu.scale": 0.0026154518127441406,
+    "backbone.stage4.2.blocks.0.conv1.conv.router.relu.bias": 0.002925538457930088,
+    "backbone.stage4.2.blocks.0.conv1.conv.router.kernel_fc.weight": 0.0057212598621845245,
+    "backbone.stage4.2.blocks.0.conv1.conv.router.kernel_fc.bias": 0.004220340866595507,
+    "backbone.stage4.2.blocks.0.conv1.conv.local.norm.weight": 0.005103588104248047,
+    "backbone.stage4.2.blocks.0.conv1.conv.local.norm.bias": 0.004880702588707209,
+    "backbone.stage4.2.blocks.0.conv1.conv.local.conv.weight": 0.006955919787287712
+  },
+  "loss_scale_init": 32,
+  "warmup_enabled": false,
+  "saved_checkpoints": false,
+  "losses": [
+    {
+      "loss": 0.42563894391059875,
+      "loss_cls": 0.3483488857746124,
+      "loss_bbox": 0.07729005068540573
+    },
+    {
+      "loss": 0.5308706760406494,
+      "loss_cls": 0.3387916386127472,
+      "loss_bbox": 0.19207903742790222
+    },
+    {
+      "loss": 0.7164218425750732,
+      "loss_cls": 0.3259722590446472,
+      "loss_bbox": 0.39044955372810364
+    },
+    {
+      "loss": 2.2367475032806396,
+      "loss_cls": 0.4081936776638031,
+      "loss_bbox": 1.8285539150238037
+    },
+    {
+      "loss": 2.1627612113952637,
+      "loss_cls": 0.6038247346878052,
+      "loss_bbox": 1.558936595916748
+    },
+    {
+      "loss": 2.074185371398926,
+      "loss_cls": 0.316415399312973,
+      "loss_bbox": 1.7577699422836304
+    },
+    {
+      "loss": 2.2793803215026855,
+      "loss_cls": 0.9179467558860779,
+      "loss_bbox": 1.3614336252212524
+    },
+    {
+      "loss": 2.097325563430786,
+      "loss_cls": 0.6586880683898926,
+      "loss_bbox": 1.4386374950408936
+    },
+    {
+      "loss": 0.6232055425643921,
+      "loss_cls": 0.3114975094795227,
+      "loss_bbox": 0.311708003282547
+    },
+    {
+      "loss": 0.9555007219314575,
+      "loss_cls": 0.3456198275089264,
+      "loss_bbox": 0.6098808646202087
+    },
+    {
+      "loss": 0.5522856116294861,
+      "loss_cls": 0.2765589654445648,
+      "loss_bbox": 0.27572664618492126
+    },
+    {
+      "loss": 1.9539226293563843,
+      "loss_cls": 0.20657972991466522,
+      "loss_bbox": 1.7473429441452026
+    },
+    {
+      "loss": 1.3642609119415283,
+      "loss_cls": 0.3251419961452484,
+      "loss_bbox": 1.0391188859939575
+    },
+    {
+      "loss": 2.3550710678100586,
+      "loss_cls": 1.2699211835861206,
+      "loss_bbox": 1.085149884223938
+    },
+    {
+      "loss": 1.828883409500122,
+      "loss_cls": 0.5676624178886414,
+      "loss_bbox": 1.261220932006836
+    },
+    {
+      "loss": 2.0855021476745605,
+      "loss_cls": 0.7072176337242126,
+      "loss_bbox": 1.3782844543457031
+    }
+  ],
+  "validation_metrics": [
+    {
+      "pascal_voc/mAP": 0.0,
+      "coco/bbox_mAP": 0.0,
+      "coco/bbox_mAP_50": 0.0
+    },
+    {
+      "pascal_voc/mAP": 0.0,
+      "coco/bbox_mAP": 0.0,
+      "coco/bbox_mAP_50": 0.0
+    }
+  ],
+  "peak_allocated_gib": 1.9520773887634277,
+  "peak_reserved_gib": 2.041015625,
+  "elapsed_seconds": 13.20425453200005
+}

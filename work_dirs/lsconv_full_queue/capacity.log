@@ -1,0 +1,5 @@
+/home/pwt/miniconda3/envs/rtmdet/lib/python3.10/site-packages/torch/nn/modules/conv.py:459: UserWarning: Applied workaround for CuDNN issue, install nvrtc.so (Triggered internally at ../aten/src/ATen/native/cudnn/Conv_v8.cpp:80.)
+  return F.conv2d(input, weight, bias, self.stride,
+/home/pwt/miniconda3/envs/rtmdet/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3483.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+CAPACITY_PASSED {"status": "passed", "microbatch": 12, "accumulation": 3, "optimizer_updates": 3, "training_microsteps": 9, "input_size": [640, 640], "gt_per_image": 1200, "different_image_ids": [844, 5601, 4604, 5475, 5757, 1129, 3150, 1497, 819, 1679, 7, 268], "repeated_annotations": true, "synthetic_multiscale_boxes": true, "allocator_fraction": 0.88, "loss_scale_init": 32, "amp_skipped_updates": 0, "watched_parameter_tensors": 342, "peak_allocated_gib": 12.928362369537354, "peak_reserved_gib": 14.544921875, "elapsed_seconds": 27.277598733999184}

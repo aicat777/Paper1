@@ -1,0 +1,304 @@
+{
+  "sample": "100 held-out val images, 5 selected targets/class, one target/image",
+  "inference_ap": false,
+  "images": [
+    6042,
+    10239,
+    11076,
+    9525,
+    6188,
+    11037,
+    9706,
+    9062,
+    6476,
+    11509,
+    7176,
+    6306,
+    6914,
+    10762,
+    7456,
+    8489,
+    11301,
+    6620,
+    7214,
+    10515,
+    6287,
+    8121,
+    6805,
+    8751,
+    9339,
+    7958,
+    11359,
+    9500,
+    9397,
+    9486,
+    10753,
+    6684,
+    9077,
+    11538,
+    9158,
+    8687,
+    8529,
+    11002,
+    8066,
+    10174,
+    9408,
+    11130,
+    7856,
+    7901,
+    11035,
+    8938,
+    8182,
+    8032,
+    10765,
+    6118,
+    6516,
+    11678,
+    11067,
+    10484,
+    5911,
+    7529,
+    10214,
+    9546,
+    6238,
+    9041,
+    10413,
+    8879,
+    8572,
+    10565,
+    10994,
+    9185,
+    5877,
+    11643,
+    7554,
+    6651,
+    10695,
+    7050,
+    6333,
+    9871,
+    8233,
+    11059,
+    7867,
+    6144,
+    9593,
+    10290,
+    5866,
+    9530,
+    8742,
+    7397,
+    10771,
+    6668,
+    9174,
+    10264,
+    6673,
+    6317,
+    6092,
+    6545,
+    9713,
+    7439,
+    6445,
+    6369,
+    6316,
+    7852,
+    6919,
+    5943
+  ],
+  "models": {
+    "old": {
+      "epoch": 300,
+      "iterations": 48900,
+      "optimizer_steps": [
+        48879
+      ],
+      "amp": {
+        "scale": 65536.0,
+        "growth_factor": 2.0,
+        "backoff_factor": 0.5,
+        "growth_interval": 2000,
+        "_growth_tracker": 1535
+      },
+      "nonfinite_weights": [],
+      "raw_bn_counts": [
+        48900
+      ],
+      "views": {
+        "whole_image_running_bn": {
+          "n": 100,
+          "accuracy": 0.91,
+          "ce": 0.24711472630500794,
+          "mean_true_probability": 0.8957132625579834
+        },
+        "crop_32_running_bn": {
+          "n": 100,
+          "accuracy": 0.19,
+          "ce": 3.550410294532776,
+          "mean_true_probability": 0.16107606902718544
+        },
+        "crop_32_own_bn": {
+          "n": 100,
+          "accuracy": 0.26,
+          "ce": 3.2057492256164553,
+          "mean_true_probability": 0.21149083971977234
+        },
+        "crop_64_running_bn": {
+          "n": 100,
+          "accuracy": 0.5,
+          "ce": 2.0452179074287415,
+          "mean_true_probability": 0.3988960540294647
+        },
+        "crop_64_own_bn": {
+          "n": 100,
+          "accuracy": 0.45,
+          "ce": 2.008803753852844,
+          "mean_true_probability": 0.3597249156236649
+        },
+        "crop_128_running_bn": {
+          "n": 100,
+          "accuracy": 0.75,
+          "ce": 1.1751407408714294,
+          "mean_true_probability": 0.6449980115890503
+        },
+        "crop_128_own_bn": {
+          "n": 100,
+          "accuracy": 0.6,
+          "ce": 1.4170510387420654,
+          "mean_true_probability": 0.5006373453140259
+        },
+        "crop_256_running_bn": {
+          "n": 100,
+          "accuracy": 0.75,
+          "ce": 1.1579194849729537,
+          "mean_true_probability": 0.7133716201782226
+        },
+        "crop_256_own_bn": {
+          "n": 100,
+          "accuracy": 0.71,
+          "ce": 1.221669476032257,
+          "mean_true_probability": 0.5862312340736389
+        },
+        "crop_512_running_bn": {
+          "n": 100,
+          "accuracy": 0.64,
+          "ce": 2.403925557881594,
+          "mean_true_probability": 0.6010447961091995
+        },
+        "crop_512_own_bn": {
+          "n": 100,
+          "accuracy": 0.54,
+          "ce": 2.102256853580475,
+          "mean_true_probability": 0.46570760786533355
+        },
+        "crop_800_running_bn": {
+          "n": 100,
+          "accuracy": 0.5,
+          "ce": 3.1261900436878203,
+          "mean_true_probability": 0.47774106442928316
+        },
+        "crop_800_own_bn": {
+          "n": 100,
+          "accuracy": 0.44,
+          "ce": 2.7351292037963866,
+          "mean_true_probability": 0.38935163743793966
+        }
+      }
+    },
+    "new": {
+      "epoch": 300,
+      "iterations": 48900,
+      "optimizer_steps": [
+        48878
+      ],
+      "amp": {
+        "scale": 32768.0,
+        "growth_factor": 2.0,
+        "backoff_factor": 0.5,
+        "growth_interval": 2000,
+        "_growth_tracker": 286
+      },
+      "nonfinite_weights": [],
+      "raw_bn_counts": [
+        48900
+      ],
+      "views": {
+        "whole_image_running_bn": {
+          "n": 100,
+          "accuracy": 0.86,
+          "ce": 0.5141678526625038,
+          "mean_true_probability": 0.8547461676597595
+        },
+        "crop_32_running_bn": {
+          "n": 100,
+          "accuracy": 0.2,
+          "ce": 5.192175750732422,
+          "mean_true_probability": 0.18108179464936255
+        },
+        "crop_32_own_bn": {
+          "n": 100,
+          "accuracy": 0.74,
+          "ce": 1.0982994502782821,
+          "mean_true_probability": 0.6984289932250977
+        },
+        "crop_64_running_bn": {
+          "n": 100,
+          "accuracy": 0.63,
+          "ce": 1.6604050183296204,
+          "mean_true_probability": 0.5706812858581543
+        },
+        "crop_64_own_bn": {
+          "n": 100,
+          "accuracy": 0.77,
+          "ce": 0.8127698814868927,
+          "mean_true_probability": 0.7464942312240601
+        },
+        "crop_128_running_bn": {
+          "n": 100,
+          "accuracy": 0.81,
+          "ce": 0.5055611209571361,
+          "mean_true_probability": 0.7870216703414917
+        },
+        "crop_128_own_bn": {
+          "n": 100,
+          "accuracy": 0.8,
+          "ce": 0.6874761100113392,
+          "mean_true_probability": 0.7577334642410278
+        },
+        "crop_256_running_bn": {
+          "n": 100,
+          "accuracy": 0.89,
+          "ce": 0.3491486474126577,
+          "mean_true_probability": 0.8433857107162476
+        },
+        "crop_256_own_bn": {
+          "n": 100,
+          "accuracy": 0.86,
+          "ce": 0.6011709433794021,
+          "mean_true_probability": 0.8179311633110047
+        },
+        "crop_512_running_bn": {
+          "n": 100,
+          "accuracy": 0.85,
+          "ce": 0.57986862719059,
+          "mean_true_probability": 0.80316565990448
+        },
+        "crop_512_own_bn": {
+          "n": 100,
+          "accuracy": 0.86,
+          "ce": 0.44971582531929016,
+          "mean_true_probability": 0.8321614742279053
+        },
+        "crop_800_running_bn": {
+          "n": 100,
+          "accuracy": 0.76,
+          "ce": 1.0398775327205658,
+          "mean_true_probability": 0.7247250723838806
+        },
+        "crop_800_own_bn": {
+          "n": 100,
+          "accuracy": 0.85,
+          "ce": 0.4701883101463318,
+          "mean_true_probability": 0.8045773983001709
+        }
+      }
+    }
+  }
+}

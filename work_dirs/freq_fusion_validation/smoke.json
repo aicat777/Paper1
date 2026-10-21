@@ -1,0 +1,213 @@
+{
+  "status": "passed",
+  "method": "freq_fusion",
+  "official_train_entrypoint": true,
+  "input_size": [
+    640,
+    640
+  ],
+  "microbatch": 2,
+  "optimizer_updates": 16,
+  "accumulation": 1,
+  "val_passes": 2,
+  "val_images_per_pass": 32,
+  "predictions_checked": 64,
+  "raw_predictions_checked": 8,
+  "full_state_ema_roundtrips": 2,
+  "model_optimizer_scaler_serialization": true,
+  "strong_and_weak_augmentation": true,
+  "coco_evaluation_scoped_to_subset": true,
+  "watched_parameter_tensors": 40,
+  "finite_losses": true,
+  "finite_predictions": true,
+  "amp_skipped_updates": 0,
+  "gradient_max": {
+    "neck.freq_fusions.1.dysampler.hr_direct_scale.weight": 20.142127990722656,
+    "neck.freq_fusions.1.dysampler.hr_direct_scale.bias": 2.3062920570373535,
+    "neck.freq_fusions.1.dysampler.direct_scale.weight": 11.4302339553833,
+    "neck.freq_fusions.1.dysampler.direct_scale.bias": 1.4047197103500366,
+    "neck.freq_fusions.1.dysampler.hr_offset.weight": 22.44668960571289,
+    "neck.freq_fusions.1.dysampler.hr_offset.bias": 1.8748650550842285,
+    "neck.freq_fusions.1.dysampler.offset.weight": 12.328817367553711,
+    "neck.freq_fusions.1.dysampler.offset.bias": 1.2348906993865967,
+    "neck.freq_fusions.1.dysampler.norm_lr.weight": 5.402846336364746,
+    "neck.freq_fusions.1.dysampler.norm_lr.bias": 1.64306640625,
+    "neck.freq_fusions.1.dysampler.norm_hr.weight": 5.870713710784912,
+    "neck.freq_fusions.1.dysampler.norm_hr.bias": 2.5518364906311035,
+    "neck.freq_fusions.1.content_encoder.weight": 19.47348403930664,
+    "neck.freq_fusions.1.content_encoder.bias": 4.488372802734375,
+    "neck.freq_fusions.1.content_encoder2.weight": 25.801671981811523,
+    "neck.freq_fusions.1.content_encoder2.bias": 3.1691830158233643,
+    "neck.freq_fusions.1.lr_channel_compressor.weight": 9.983894348144531,
+    "neck.freq_fusions.1.lr_channel_compressor.bias": 1.1815863847732544,
+    "neck.freq_fusions.1.hr_channel_compressor.weight": 14.07098388671875,
+    "neck.freq_fusions.1.hr_channel_compressor.bias": 1.7124369144439697,
+    "neck.freq_fusions.0.dysampler.hr_direct_scale.weight": 50.689151763916016,
+    "neck.freq_fusions.0.dysampler.hr_direct_scale.bias": 4.020958423614502,
+    "neck.freq_fusions.0.dysampler.direct_scale.weight": 24.451745986938477,
+    "neck.freq_fusions.0.dysampler.direct_scale.bias": 3.2576212882995605,
+    "neck.freq_fusions.0.dysampler.hr_offset.weight": 31.76589012145996,
+    "neck.freq_fusions.0.dysampler.hr_offset.bias": 3.7625110149383545,
+    "neck.freq_fusions.0.dysampler.offset.weight": 13.398893356323242,
+    "neck.freq_fusions.0.dysampler.offset.bias": 1.6786991357803345,
+    "neck.freq_fusions.0.dysampler.norm_lr.weight": 5.231698036193848,
+    "neck.freq_fusions.0.dysampler.norm_lr.bias": 2.3718156814575195,
+    "neck.freq_fusions.0.dysampler.norm_hr.weight": 7.835202693939209,
+    "neck.freq_fusions.0.dysampler.norm_hr.bias": 2.365319013595581,
+    "neck.freq_fusions.0.content_encoder.weight": 35.96475601196289,
+    "neck.freq_fusions.0.content_encoder.bias": 3.48854660987854,
+    "neck.freq_fusions.0.content_encoder2.weight": 61.53601837158203,
+    "neck.freq_fusions.0.content_encoder2.bias": 5.806179046630859,
+    "neck.freq_fusions.0.lr_channel_compressor.weight": 11.640612602233887,
+    "neck.freq_fusions.0.lr_channel_compressor.bias": 2.0709915161132812,
+    "neck.freq_fusions.0.hr_channel_compressor.weight": 15.134576797485352,
+    "neck.freq_fusions.0.hr_channel_compressor.bias": 1.68483304977417
+  },
+  "parameter_updates_max": {
+    "neck.freq_fusions.0.hr_channel_compressor.weight": 0.00681614875793457,
+    "neck.freq_fusions.0.hr_channel_compressor.bias": 0.005653710570186377,
+    "neck.freq_fusions.0.lr_channel_compressor.weight": 0.007160462439060211,
+    "neck.freq_fusions.0.lr_channel_compressor.bias": 0.006099706515669823,
+    "neck.freq_fusions.0.content_encoder.weight": 0.006336789578199387,
+    "neck.freq_fusions.0.content_encoder.bias": 0.004176856018602848,
+    "neck.freq_fusions.0.content_encoder2.weight": 0.006420546676963568,
+    "neck.freq_fusions.0.content_encoder2.bias": 0.0033385255374014378,
+    "neck.freq_fusions.0.dysampler.offset.weight": 0.007255923002958298,
+    "neck.freq_fusions.0.dysampler.offset.bias": 0.006375378463417292,
+    "neck.freq_fusions.0.dysampler.hr_offset.weight": 0.006503686308860779,
+    "neck.freq_fusions.0.dysampler.hr_offset.bias": 0.006140559911727905,
+    "neck.freq_fusions.0.dysampler.direct_scale.weight": 0.006674729287624359,
+    "neck.freq_fusions.0.dysampler.direct_scale.bias": 0.005483062006533146,
+    "neck.freq_fusions.0.dysampler.hr_direct_scale.weight": 0.00622221827507019,
+    "neck.freq_fusions.0.dysampler.hr_direct_scale.bias": 0.0024422912392765284,
+    "neck.freq_fusions.0.dysampler.norm_hr.weight": 0.005221724510192871,
+    "neck.freq_fusions.0.dysampler.norm_hr.bias": 0.006066665519028902,
+    "neck.freq_fusions.0.dysampler.norm_lr.weight": 0.005042731761932373,
+    "neck.freq_fusions.0.dysampler.norm_lr.bias": 0.005787235219031572,
+    "neck.freq_fusions.1.hr_channel_compressor.weight": 0.006191730499267578,
+    "neck.freq_fusions.1.hr_channel_compressor.bias": 0.004325452726334333,
+    "neck.freq_fusions.1.lr_channel_compressor.weight": 0.00646495446562767,
+    "neck.freq_fusions.1.lr_channel_compressor.bias": 0.005149537697434425,
+    "neck.freq_fusions.1.content_encoder.weight": 0.006892692297697067,
+    "neck.freq_fusions.1.content_encoder.bias": 0.004687927197664976,
+    "neck.freq_fusions.1.content_encoder2.weight": 0.006511075422167778,
+    "neck.freq_fusions.1.content_encoder2.bias": 0.004967115353792906,
+    "neck.freq_fusions.1.dysampler.offset.weight": 0.006577402353286743,
+    "neck.freq_fusions.1.dysampler.offset.bias": 0.004647138994187117,
+    "neck.freq_fusions.1.dysampler.hr_offset.weight": 0.0059913285076618195,
+    "neck.freq_fusions.1.dysampler.hr_offset.bias": 0.002764161443337798,
+    "neck.freq_fusions.1.dysampler.direct_scale.weight": 0.007018133997917175,
+    "neck.freq_fusions.1.dysampler.direct_scale.bias": 0.003868977539241314,
+    "neck.freq_fusions.1.dysampler.hr_direct_scale.weight": 0.006349809467792511,
+    "neck.freq_fusions.1.dysampler.hr_direct_scale.bias": 0.0036174540873616934,
+    "neck.freq_fusions.1.dysampler.norm_hr.weight": 0.004195988178253174,
+    "neck.freq_fusions.1.dysampler.norm_hr.bias": 0.004812939092516899,
+    "neck.freq_fusions.1.dysampler.norm_lr.weight": 0.0043792724609375,
+    "neck.freq_fusions.1.dysampler.norm_lr.bias": 0.005084100179374218
+  },
+  "losses": [
+    {
+      "loss": 0.42597469687461853,
+      "loss_cls": 0.344115287065506,
+      "loss_bbox": 0.08185941725969315
+    },
+    {
+      "loss": 0.5376994609832764,
+      "loss_cls": 0.3354699909687042,
+      "loss_bbox": 0.20222947001457214
+    },
+    {
+      "loss": 1.8656620979309082,
+      "loss_cls": 0.40699851512908936,
+      "loss_bbox": 1.4586635828018188
+    },
+    {
+      "loss": 2.1185102462768555,
+      "loss_cls": 0.5345852971076965,
+      "loss_bbox": 1.5839248895645142
+    },
+    {
+      "loss": 2.1199610233306885,
+      "loss_cls": 0.33027583360671997,
+      "loss_bbox": 1.7896851301193237
+    },
+    {
+      "loss": 2.0717759132385254,
+      "loss_cls": 0.28208744525909424,
+      "loss_bbox": 1.7896885871887207
+    },
+    {
+      "loss": 2.2863235473632812,
+      "loss_cls": 0.5290525555610657,
+      "loss_bbox": 1.7572709321975708
+    },
+    {
+      "loss": 2.3318123817443848,
+      "loss_cls": 1.10956609249115,
+      "loss_bbox": 1.2222462892532349
+    },
+    {
+      "loss": 0.5847564339637756,
+      "loss_cls": 0.2905298173427582,
+      "loss_bbox": 0.29422661662101746
+    },
+    {
+      "loss": 0.7776533365249634,
+      "loss_cls": 0.30303582549095154,
+      "loss_bbox": 0.47461754083633423
+    },
+    {
+      "loss": 0.44269996881484985,
+      "loss_cls": 0.26962384581565857,
+      "loss_bbox": 0.1730761080980301
+    },
+    {
+      "loss": 2.0118064880371094,
+      "loss_cls": 0.4385543465614319,
+      "loss_bbox": 1.5732520818710327
+    },
+    {
+      "loss": 1.2753371000289917,
+      "loss_cls": 0.4681727886199951,
+      "loss_bbox": 0.8071643114089966
+    },
+    {
+      "loss": 2.08493709564209,
+      "loss_cls": 0.5593482851982117,
+      "loss_bbox": 1.525588870048523
+    },
+    {
+      "loss": 1.123704195022583,
+      "loss_cls": 0.3607180714607239,
+      "loss_bbox": 0.7629860639572144
+    },
+    {
+      "loss": 2.0182418823242188,
+      "loss_cls": 0.5063717365264893,
+      "loss_bbox": 1.5118701457977295
+    }
+  ],
+  "metrics": [
+    {
+      "pascal_voc/mAP": 0.0,
+      "coco/bbox_mAP": 0.0,
+      "coco/bbox_mAP_50": 0.0
+    },
+    {
+      "pascal_voc/mAP": 0.0,
+      "coco/bbox_mAP": 0.0,
+      "coco/bbox_mAP_50": 0.0
+    }
+  ],
+  "assignment": {
+    "fallback_positives": 0,
+    "floored_regression_positives": 0,
+    "unmatched_tiny": 0
+  },
+  "loss_scale_init": 32,
+  "warmup_enabled": false,
+  "saved_checkpoints": false,
+  "peak_allocated_gib": 0.7376060485839844,
+  "peak_reserved_gib": 0.900390625,
+  "elapsed_seconds": 17.11422865500208
+}

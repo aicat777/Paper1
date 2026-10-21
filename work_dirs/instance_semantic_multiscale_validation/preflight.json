@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "method": "instance_semantic_multiscale",
+  "config": "/home/pwt/Paper1/configs/instance_semantic_multiscale/rtmdet_tiny_dior_640.py",
+  "config_sha256": "2c808e93c5cc3b7d7f4951a8e7f2cad53c059881118ee12fe6a86aade78c1315",
+  "previous_initial_state_exact": true,
+  "parameters": 4880648,
+  "auxiliary_parameters": 1940,
+  "inference_conv_linear_gmac": 7.98770304,
+  "prediction_points": 8400,
+  "formal_batch": 36,
+  "accumulation": 1,
+  "input_size": [
+    640,
+    640
+  ],
+  "scratch": true,
+  "train_images": 5862,
+  "val_images": 5863,
+  "crop_scales": [
+    32,
+    64,
+    128,
+    256,
+    512,
+    800
+  ],
+  "previous_auxiliary_replaced": true,
+  "training_protocol_unchanged": true,
+  "formal_batch_capacity_tested": false
+}

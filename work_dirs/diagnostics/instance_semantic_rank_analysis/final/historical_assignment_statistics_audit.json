@@ -1,0 +1,259 @@
+{
+  "status": "passed",
+  "scope": "8 historical rows whose reported n exceeded configured topk13; same EMA checkpoint and val images",
+  "official_assignment_outputs_exact": true,
+  "optimizer_updates": 0,
+  "rows": [
+    {
+      "historical": {
+        "image_id": 6705,
+        "label": 4,
+        "n": 15,
+        "q_mass": 12.50888442993164,
+        "min_side_input": 202.39999389648438,
+        "area_original": 69322.0,
+        "raw_best_iou": 0.9574076533317566,
+        "best_correct_class_score_iou50": 0.8839930891990662,
+        "post_best_iou": 0.9063579440116882,
+        "post_more_best_iou": 0.9063579440116882,
+        "inside_p3_grid_count": 675
+      },
+      "matching_gt_indices": [
+        5
+      ],
+      "official_topk": 13,
+      "exact_index_count": 15,
+      "all_gt_counts_this_image": [
+        2,
+        2,
+        5,
+        10,
+        7,
+        15,
+        8
+      ]
+    },
+    {
+      "historical": {
+        "image_id": 7325,
+        "label": 14,
+        "n": 14,
+        "q_mass": 12.445867538452148,
+        "min_side_input": 272.0,
+        "area_original": 116620.0,
+        "raw_best_iou": 0.9661061763763428,
+        "best_correct_class_score_iou50": 0.9086645245552063,
+        "post_best_iou": 0.9245396256446838,
+        "post_more_best_iou": 0.9245396256446838,
+        "inside_p3_grid_count": 1155
+      },
+      "matching_gt_indices": [
+        0
+      ],
+      "official_topk": 13,
+      "exact_index_count": 14,
+      "all_gt_counts_this_image": [
+        14,
+        9,
+        7,
+        9,
+        11,
+        9,
+        11,
+        6,
+        7,
+        3,
+        0
+      ]
+    },
+    {
+      "historical": {
+        "image_id": 7843,
+        "label": 16,
+        "n": 14,
+        "q_mass": 13.289776802062988,
+        "min_side_input": 84.0,
+        "area_original": 17325.0,
+        "raw_best_iou": 0.9770430326461792,
+        "best_correct_class_score_iou50": 0.9493280053138733,
+        "post_best_iou": 0.9505186676979065,
+        "post_more_best_iou": 0.9505186676979065,
+        "inside_p3_grid_count": 160
+      },
+      "matching_gt_indices": [
+        0
+      ],
+      "official_topk": 13,
+      "exact_index_count": 14,
+      "all_gt_counts_this_image": [
+        14,
+        10,
+        6,
+        5,
+        7,
+        8,
+        10,
+        4,
+        2,
+        3,
+        2
+      ]
+    },
+    {
+      "historical": {
+        "image_id": 7922,
+        "label": 13,
+        "n": 16,
+        "q_mass": 15.052821159362793,
+        "min_side_input": 50.399993896484375,
+        "area_original": 4473.0,
+        "raw_best_iou": 0.9787959456443787,
+        "best_correct_class_score_iou50": 0.7412235736846924,
+        "post_best_iou": 0.9691590070724487,
+        "post_more_best_iou": 0.9691590070724487,
+        "inside_p3_grid_count": 42
+      },
+      "matching_gt_indices": [
+        4
+      ],
+      "official_topk": 13,
+      "exact_index_count": 16,
+      "all_gt_counts_this_image": [
+        7,
+        2,
+        6,
+        6,
+        16,
+        5,
+        4,
+        2,
+        9,
+        10,
+        8,
+        9,
+        4,
+        2,
+        2,
+        7,
+        3,
+        10,
+        1,
+        0,
+        0,
+        3,
+        1,
+        4,
+        3
+      ]
+    },
+    {
+      "historical": {
+        "image_id": 8048,
+        "label": 8,
+        "n": 16,
+        "q_mass": 14.072797775268555,
+        "min_side_input": 77.60002136230469,
+        "area_original": 14841.0,
+        "raw_best_iou": 0.9447872042655945,
+        "best_correct_class_score_iou50": 0.9173893332481384,
+        "post_best_iou": 0.930181086063385,
+        "post_more_best_iou": 0.930181086063385,
+        "inside_p3_grid_count": 160
+      },
+      "matching_gt_indices": [
+        0
+      ],
+      "official_topk": 13,
+      "exact_index_count": 16,
+      "all_gt_counts_this_image": [
+        16,
+        4,
+        5,
+        3,
+        3,
+        4
+      ]
+    },
+    {
+      "historical": {
+        "image_id": 8705,
+        "label": 14,
+        "n": 17,
+        "q_mass": 12.649957656860352,
+        "min_side_input": 235.99998474121094,
+        "area_original": 87910.0,
+        "raw_best_iou": 0.9328293800354004,
+        "best_correct_class_score_iou50": 0.9452508687973022,
+        "post_best_iou": 0.8977937698364258,
+        "post_more_best_iou": 0.8977937698364258,
+        "inside_p3_grid_count": 900
+      },
+      "matching_gt_indices": [
+        0
+      ],
+      "official_topk": 13,
+      "exact_index_count": 17,
+      "all_gt_counts_this_image": [
+        17,
+        9,
+        3,
+        1,
+        1,
+        5
+      ]
+    },
+    {
+      "historical": {
+        "image_id": 10666,
+        "label": 10,
+        "n": 16,
+        "q_mass": 14.236482620239258,
+        "min_side_input": 187.20001220703125,
+        "area_original": 121914.0,
+        "raw_best_iou": 0.9683264493942261,
+        "best_correct_class_score_iou50": 0.9713728427886963,
+        "post_best_iou": 0.9623042941093445,
+        "post_more_best_iou": 0.9623042941093445,
+        "inside_p3_grid_count": 1196
+      },
+      "matching_gt_indices": [
+        0
+      ],
+      "official_topk": 13,
+      "exact_index_count": 16,
+      "all_gt_counts_this_image": [
+        16,
+        12,
+        4,
+        1,
+        1
+      ]
+    },
+    {
+      "historical": {
+        "image_id": 11392,
+        "label": 16,
+        "n": 14,
+        "q_mass": 13.131382942199707,
+        "min_side_input": 33.59999084472656,
+        "area_original": 3864.0,
+        "raw_best_iou": 0.9711581468582153,
+        "best_correct_class_score_iou50": 0.857489824295044,
+        "post_best_iou": 0.9481343030929565,
+        "post_more_best_iou": 0.9481343030929565,
+        "inside_p3_grid_count": 36
+      },
+      "matching_gt_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "official_topk": 13
+    }
+  ],
+  "historical_matches_reproduced": 7,
+  "limitation": "Historical generator source is absent from the diagnostic directory; discrepancy alone does not identify its implementation error."
+}

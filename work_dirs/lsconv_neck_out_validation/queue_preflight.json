@@ -1,0 +1,138 @@
+{
+  "status": "passed",
+  "method": "lsconv_neck_out",
+  "parameters": 4277142,
+  "conv_gmac": 7.09363584,
+  "aggregation_gmac": 0.0145152,
+  "counted_gmac": 7.10815104,
+  "excludes_norm_activation_residual_and_postprocessing": true,
+  "lsconv_sites": [
+    {
+      "path": "backbone.stage2.1.blocks.0.conv1.0",
+      "shape": [
+        1,
+        48,
+        80,
+        80
+      ]
+    },
+    {
+      "path": "backbone.stage3.1.blocks.0.conv1.0",
+      "shape": [
+        1,
+        96,
+        40,
+        40
+      ]
+    },
+    {
+      "path": "backbone.stage4.2.blocks.0.conv1.0",
+      "shape": [
+        1,
+        192,
+        20,
+        20
+      ]
+    },
+    {
+      "path": "neck.out_layers.0.mixer",
+      "shape": [
+        1,
+        96,
+        80,
+        80
+      ]
+    },
+    {
+      "path": "neck.out_layers.1.mixer",
+      "shape": [
+        1,
+        192,
+        40,
+        40
+      ]
+    },
+    {
+      "path": "neck.out_layers.2.mixer",
+      "shape": [
+        1,
+        384,
+        20,
+        20
+      ]
+    }
+  ],
+  "projections": [
+    {
+      "input": [
+        1,
+        96,
+        80,
+        80
+      ],
+      "output": [
+        1,
+        96,
+        80,
+        80
+      ],
+      "kernel": [
+        1,
+        1
+      ]
+    },
+    {
+      "input": [
+        1,
+        192,
+        40,
+        40
+      ],
+      "output": [
+        1,
+        96,
+        40,
+        40
+      ],
+      "kernel": [
+        1,
+        1
+      ]
+    },
+    {
+      "input": [
+        1,
+        384,
+        20,
+        20
+      ],
+      "output": [
+        1,
+        96,
+        20,
+        20
+      ],
+      "kernel": [
+        1,
+        1
+      ]
+    }
+  ],
+  "runtime_lsconv_calls": 6,
+  "prediction_points": 8400,
+  "watched_parameter_tensors": 99,
+  "scratch": true,
+  "input_size": [
+    640,
+    640
+  ],
+  "formal_batch": 36,
+  "accumulation": 1,
+  "train_images": 5862,
+  "val_images": 5863,
+  "formal_batch_capacity_tested": false,
+  "aggregation_before_value_projection": true,
+  "unchanged_fpn_pan_and_head": true,
+  "config": "/home/pwt/Paper1/work_dirs/lsconv_neck_out_queue/lsconv_neck_out_640_bs36.py",
+  "config_sha256": "6eafa381417931473b1c64799e46562f40a1b8721f3eece1a45f65c7667b1f2d"
+}

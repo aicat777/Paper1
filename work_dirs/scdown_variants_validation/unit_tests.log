@@ -1,0 +1,22 @@
+test_channel_mix_before_decimation_odd_grid_and_signed_output (test_scdown.SCDownTests) ... ok
+test_exact_scope_actual_widths_outputs_priors_and_head_sharing (test_scdown.SCDownTests) ... [W NNPACK.cpp:64] Could not initialize NNPACK! Reason: Unsupported hardware.
+/home/pwt/miniconda3/envs/rtmdet/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3483.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+ok
+test_inference_bn_fusion_handles_distinct_stats_on_shared_head_convs (test_scdown.SCDownTests) ... ok
+test_initialization_exception_restores_modules_and_allows_retry (test_scdown.SCDownTests) ... ok
+test_protocol_and_invalid_replacement_contract (test_scdown.SCDownTests) ... ok
+test_real_detection_gradients_and_one_bn_update_per_main_forward (test_scdown.SCDownTests) ... ok
+test_restoring_three_originals_recovers_predictions_losses_gradients (test_scdown.SCDownTests) ... ok
+test_state_reload_keeps_prediction_and_scale_sharing (test_scdown.SCDownTests) ... ok
+test_untouched_initialization_constructor_and_init_rng_exact (test_scdown.SCDownTests) ... ok
+test_grouped_forward_and_gradient_match_block_diagonal_dense_reference (test_scdown_variants.SCDownVariantTests) ... ok
+test_new_scdown_entries_keep_odd_grid_centers_and_no_final_activation (test_scdown_variants.SCDownVariantTests) ... ok
+test_restoring_only_extras_exactly_recovers_predictions_losses_and_gradients (test_scdown_variants.SCDownVariantTests) ... ok
+test_scope_shapes_channels_sharing_and_counts (test_scdown_variants.SCDownVariantTests) ... ok
+test_untouched_and_control_scdowns_initialization_rng_exact (test_scdown_variants.SCDownVariantTests) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 21.783s
+
+OK

@@ -1,0 +1,147 @@
+{
+  "status": "passed",
+  "method": "instance_semantic_multiscale",
+  "unit_tests": 16,
+  "new_unit_tests": 11,
+  "reports": {
+    "preflight": "preflight.json",
+    "amp_equivalence": "amp_equivalence.json",
+    "gpu_smoke": "gpu_smoke.json",
+    "capacity_gpu0_bs12": "capacity_gpu0_bs12.json",
+    "crop_capacity_gpu0_bs36": "crop_capacity_gpu0_bs36.json"
+  },
+  "formal_batch": 36,
+  "accumulation": 1,
+  "formal_joint_capacity_tested": false,
+  "main_batch12_with_crop800_tested": true,
+  "all_six_crop_scales_at_batch36_tested": true,
+  "full_training_started": false,
+  "added_to_queue": true,
+  "existing_queue_sources": {
+    "instance_semantic": {
+      "files": 10,
+      "unchanged": true
+    },
+    "freq_fusion_residual": {
+      "files": 12,
+      "unchanged": true
+    },
+    "lsconv_neck": {
+      "files": 39,
+      "unchanged": true
+    },
+    "lsconv_head": {
+      "files": 39,
+      "unchanged": true
+    }
+  },
+  "limitations": [
+    "AMP batch2 at crop32 produced nonfinite gradients; official short run used batch4.",
+    "Formal joint batch36 with 1200 boxes/image requires an idle GPU capacity check before launch.",
+    "This training interface supports a single GPU; short checks do not establish AP gains."
+  ],
+  "source_sha256": {
+    "custom_models/instance_semantic_multiscale/__init__.py": "343fef85a626c7e3b0ddaf72c50b37ad1472168ad68c21e8df3487a72c25efc4",
+    "custom_models/instance_semantic_multiscale/data.py": "b735fb169efa6ddb79c8f7656aca9657d59e2259c7d68a2cc9f74bbb7417a7f6",
+    "custom_models/instance_semantic_multiscale/detector.py": "fafffaba7465a8f80cee513f858049e711dd894279b725b8f9d221258ddd1a0f",
+    "custom_models/instance_semantic_multiscale/head.py": "5d3171baad18ea89ae88d1c5cd503da95eaeeae653ecfbd920f695b2a06b856f",
+    "custom_models/instance_semantic_multiscale/normalization.py": "88879114c0bd6090787d2027226d3d5a6bab5859780af34af1ddb83d8cc3388b",
+    "custom_models/instance_semantic_multiscale/optimizer.py": "caa8b3c894f41b92a40a6f2f3b574c9af34d946604dd63150bcbbd12b34bfefb",
+    "custom_models/instance_semantic_multiscale/preprocessor.py": "c15859bc6ea5f64d1a162b167abf5a7af81fe24d045455d6e6fe7b3ae3db60cb",
+    "custom_models/instance_semantic_multiscale/roi.py": "7655faa291199bc5ac00f3699d9052e9029baed98c45fd7855c29af704a9ff45",
+    "configs/instance_semantic_multiscale/rtmdet_tiny_dior_640.py": "2c808e93c5cc3b7d7f4951a8e7f2cad53c059881118ee12fe6a86aade78c1315",
+    "scripts/instance_semantic_multiscale_probe.py": "e779f24c281463661f5c178cfb47ffdb9773be2d7adfd97d8791bf08050dfccd",
+    "tests/test_instance_semantic_multiscale.py": "4541606863849bf0d19e3236dd5dc836803c4b9a890eb4c7ca782f0bb41f2e60"
+  },
+  "queue_manifest": "/home/pwt/Paper1/work_dirs/instance_semantic_multiscale_queue/manifest.json",
+  "queue_status": "/home/pwt/Paper1/work_dirs/instance_semantic_multiscale_queue/status.json",
+  "queued_config": "/home/pwt/Paper1/work_dirs/instance_semantic_multiscale_queue/instance_semantic_multiscale_640_bs36.py",
+  "queued_after": "lsconv_head",
+  "formal_capacity_report": "/home/pwt/Paper1/work_dirs/instance_semantic_multiscale_validation/capacity_gpu1_bs36.json",
+  "formal_capacity": {
+    "status": "passed",
+    "method": "instance_semantic_multiscale",
+    "microbatch": 36,
+    "formal_batch": 36,
+    "accumulation": 1,
+    "crop_resolutions": [
+      800,
+      800,
+      800
+    ],
+    "optimizer_updates": 3,
+    "auxiliary_only": false,
+    "formal_batch_capacity_tested": true,
+    "gt_per_image": 1200,
+    "different_image_ids": [
+      844,
+      5601,
+      4604,
+      5475,
+      5757,
+      1129,
+      3150,
+      1497,
+      819,
+      1679,
+      7,
+      268,
+      4825,
+      4020,
+      2029,
+      3912,
+      448,
+      1805,
+      884,
+      5513,
+      4202,
+      1344,
+      2832,
+      594,
+      346,
+      1505,
+      3861,
+      1842,
+      3351,
+      2990,
+      5139,
+      5195,
+      4721,
+      5731,
+      2332,
+      4431
+    ],
+    "repeated_detection_annotations": true,
+    "auxiliary_crops_from_original_real_gt": true,
+    "allocator_fraction": 0.88,
+    "loss_scale_init": 32,
+    "amp_skipped_updates": 0,
+    "saved_checkpoints": false,
+    "losses": [
+      {
+        "loss": 2.5596108436584473,
+        "loss_cls": 0.2788504362106323,
+        "loss_bbox": 1.9831329584121704,
+        "loss_instance_semantic": 0.2976275682449341
+      },
+      {
+        "loss": 2.3792972564697266,
+        "loss_cls": 0.2499089241027832,
+        "loss_bbox": 1.8362587690353394,
+        "loss_instance_semantic": 0.29312941431999207
+      },
+      {
+        "loss": 2.2802839279174805,
+        "loss_cls": 0.3404589891433716,
+        "loss_bbox": 1.648661732673645,
+        "loss_instance_semantic": 0.2911633253097534
+      }
+    ],
+    "cuda_device": "NVIDIA GeForce RTX 4090",
+    "cuda_total_gib": 47.37115478515625,
+    "initial_free_gib": 46.9852294921875,
+    "peak_allocated_gib": 35.177067279815674,
+    "peak_reserved_gib": 40.193359375,
+    "elapsed_seconds": 29.436590592958964
+  }
+}

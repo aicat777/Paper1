@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "method": "instance_semantic_multiscale",
+  "config": "/home/pwt/Paper1/work_dirs/instance_semantic_multiscale_queue/instance_semantic_multiscale_640_bs36.py",
+  "config_sha256": "b5a19231356acb21150cf60b6deb5d6da715c06408e31165f4bd33ea8ac1ad1f",
+  "previous_initial_state_exact": true,
+  "parameters": 4880648,
+  "auxiliary_parameters": 1940,
+  "inference_conv_linear_gmac": 7.98770304,
+  "prediction_points": 8400,
+  "formal_batch": 36,
+  "accumulation": 1,
+  "input_size": [
+    640,
+    640
+  ],
+  "scratch": true,
+  "train_images": 5862,
+  "val_images": 5863,
+  "crop_scales": [
+    32,
+    64,
+    128,
+    256,
+    512,
+    800
+  ],
+  "previous_auxiliary_replaced": true,
+  "training_protocol_unchanged": true,
+  "formal_batch_capacity_tested": false
+}

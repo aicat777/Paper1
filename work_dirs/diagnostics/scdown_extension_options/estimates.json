@@ -1,0 +1,625 @@
+{
+  "status": "CPU_model_inventory_and_arithmetic_only_no_candidate_implementation_or_training",
+  "current_parameters": 3854964,
+  "current_conv_gmac": 7.62390144,
+  "options": [
+    {
+      "name": "add_SCDown_backbone.stage2.0",
+      "scope": [
+        "backbone.stage2.0"
+      ],
+      "cin": 48,
+      "cout": 96,
+      "input": [
+        1,
+        48,
+        160,
+        160
+      ],
+      "output": [
+        1,
+        96,
+        80,
+        80
+      ],
+      "saved_parameters": 35808,
+      "saved_mac": 141926400,
+      "parameters": 3819156,
+      "conv_gmac": 7.48197504,
+      "parameter_reduction_vs_original_percent": 21.717881045555497,
+      "mac_reduction_vs_original_percent": 6.331332017070079
+    },
+    {
+      "name": "add_SCDown_backbone.stage1.0",
+      "scope": [
+        "backbone.stage1.0"
+      ],
+      "cin": 24,
+      "cout": 48,
+      "input": [
+        1,
+        24,
+        320,
+        320
+      ],
+      "output": [
+        1,
+        48,
+        160,
+        160
+      ],
+      "saved_parameters": 8688,
+      "saved_mac": 136396800,
+      "parameters": 3846276,
+      "conv_gmac": 7.48750464,
+      "parameter_reduction_vs_original_percent": 21.16199616783788,
+      "mac_reduction_vs_original_percent": 6.262105607771817
+    },
+    {
+      "name": "add_SCDown_neck.downsample_layers.0",
+      "scope": [
+        "neck.downsample_layers.0"
+      ],
+      "cin": 96,
+      "cout": 96,
+      "input": [
+        1,
+        96,
+        80,
+        80
+      ],
+      "output": [
+        1,
+        96,
+        40,
+        40
+      ],
+      "saved_parameters": 72672,
+      "saved_mac": 72345600,
+      "parameters": 3782292,
+      "conv_gmac": 7.55155584,
+      "parameter_reduction_vs_original_percent": 22.473490932435393,
+      "mac_reduction_vs_original_percent": 5.460233033400296
+    },
+    {
+      "name": "add_SCDown_P3_and_P2",
+      "scope": [
+        "backbone.stage2.0",
+        "backbone.stage1.0"
+      ],
+      "saved_parameters": 44496,
+      "saved_mac": 278323200,
+      "parameters": 3810468,
+      "conv_gmac": 7.34557824,
+      "parameter_reduction_vs_original_percent": 21.895960979833184,
+      "mac_reduction_vs_original_percent": 8.038916779760507
+    },
+    {
+      "name": "group2_classification_tower",
+      "scope": [
+        "bbox_head.head_module.cls_convs.0.0.conv",
+        "bbox_head.head_module.cls_convs.0.1.conv"
+      ],
+      "unique_convolutions": 2,
+      "executions": 6,
+      "saved_parameters": 82944,
+      "saved_mac": 696729600,
+      "parameters": 3772020,
+      "conv_gmac": 6.92717184,
+      "parameter_reduction_vs_original_percent": 22.68403847903995,
+      "mac_reduction_vs_original_percent": 13.277048416662218
+    },
+    {
+      "name": "group2_neck_output_3x3",
+      "scope": [
+        "neck.out_layers.0.conv",
+        "neck.out_layers.1.conv",
+        "neck.out_layers.2.conv"
+      ],
+      "unique_convolutions": 3,
+      "executions": 3,
+      "saved_parameters": 290304,
+      "saved_mac": 464486400,
+      "parameters": 3564660,
+      "conv_gmac": 7.15941504,
+      "parameter_reduction_vs_original_percent": 26.934344092739305,
+      "mac_reduction_vs_original_percent": 10.369539226135283
+    },
+    {
+      "name": "group2_CSP_conv1_P3_P5_and_neck",
+      "scope": [
+        "backbone.stage2.1.blocks.0.conv1.conv",
+        "backbone.stage3.1.blocks.0.conv1.conv",
+        "backbone.stage4.2.blocks.0.conv1.conv",
+        "neck.top_down_layers.0.0.blocks.0.conv1.conv",
+        "neck.top_down_layers.1.blocks.0.conv1.conv",
+        "neck.bottom_up_layers.0.blocks.0.conv1.conv",
+        "neck.bottom_up_layers.1.blocks.0.conv1.conv"
+      ],
+      "unique_convolutions": 7,
+      "executions": 7,
+      "saved_parameters": 476928,
+      "saved_mac": 464486400,
+      "parameters": 3378036,
+      "conv_gmac": 7.15941504,
+      "parameter_reduction_vs_original_percent": 30.75961914506874,
+      "mac_reduction_vs_original_percent": 10.369539226135283
+    }
+  ],
+  "dense_3x3": [
+    {
+      "path": "backbone.stem.0.conv",
+      "cin": 3,
+      "cout": 12,
+      "stride": [
+        2,
+        2
+      ],
+      "parameters": 324,
+      "calls": 1,
+      "total_mac": 33177600,
+      "shapes": [
+        [
+          1,
+          12,
+          320,
+          320
+        ]
+      ]
+    },
+    {
+      "path": "backbone.stem.1.conv",
+      "cin": 12,
+      "cout": 12,
+      "stride": [
+        1,
+        1
+      ],
+      "parameters": 1296,
+      "calls": 1,
+      "total_mac": 132710400,
+      "shapes": [
+        [
+          1,
+          12,
+          320,
+          320
+        ]
+      ]
+    },
+    {
+      "path": "backbone.stem.2.conv",
+      "cin": 12,
+      "cout": 24,
+      "stride": [
+        1,
+        1
+      ],
+      "parameters": 2592,
+      "calls": 1,
+      "total_mac": 265420800,
+      "shapes": [
+        [
+          1,
+          24,
+          320,
+          320
+        ]
+      ]
+    },
+    {
+      "path": "backbone.stage1.0.conv",
+      "cin": 24,
+      "cout": 48,
+      "stride": [
+        2,
+        2
+      ],
+      "parameters": 10368,
+      "calls": 1,
+      "total_mac": 265420800,
+      "shapes": [
+        [
+          1,
+          48,
+          160,
+          160
+        ]
+      ]
+    },
+    {
+      "path": "backbone.stage1.1.blocks.0.conv1.conv",
+      "cin": 24,
+      "cout": 24,
+      "stride": [
+        1,
+        1
+      ],
+      "parameters": 5184,
+      "calls": 1,
+      "total_mac": 132710400,
+      "shapes": [
+        [
+          1,
+          24,
+          160,
+          160
+        ]
+      ]
+    },
+    {
+      "path": "backbone.stage2.0.conv",
+      "cin": 48,
+      "cout": 96,
+      "stride": [
+        2,
+        2
+      ],
+      "parameters": 41472,
+      "calls": 1,
+      "total_mac": 265420800,
+      "shapes": [
+        [
+          1,
+          96,
+          80,
+          80
+        ]
+      ]
+    },
+    {
+      "path": "backbone.stage2.1.blocks.0.conv1.conv",
+      "cin": 48,
+      "cout": 48,
+      "stride": [
+        1,
+        1
+      ],
+      "parameters": 20736,
+      "calls": 1,
+      "total_mac": 132710400,
+      "shapes": [
+        [
+          1,
+          48,
+          80,
+          80
+        ]
+      ]
+    },
+    {
+      "path": "backbone.stage3.1.blocks.0.conv1.conv",
+      "cin": 96,
+      "cout": 96,
+      "stride": [
+        1,
+        1
+      ],
+      "parameters": 82944,
+      "calls": 1,
+      "total_mac": 132710400,
+      "shapes": [
+        [
+          1,
+          96,
+          40,
+          40
+        ]
+      ]
+    },
+    {
+      "path": "backbone.stage4.2.blocks.0.conv1.conv",
+      "cin": 192,
+      "cout": 192,
+      "stride": [
+        1,
+        1
+      ],
+      "parameters": 331776,
+      "calls": 1,
+      "total_mac": 132710400,
+      "shapes": [
+        [
+          1,
+          192,
+          20,
+          20
+        ]
+      ]
+    },
+    {
+      "path": "neck.top_down_layers.0.0.blocks.0.conv1.conv",
+      "cin": 96,
+      "cout": 96,
+      "stride": [
+        1,
+        1
+      ],
+      "parameters": 82944,
+      "calls": 1,
+      "total_mac": 132710400,
+      "shapes": [
+        [
+          1,
+          96,
+          40,
+          40
+        ]
+      ]
+    },
+    {
+      "path": "neck.top_down_layers.1.blocks.0.conv1.conv",
+      "cin": 48,
+      "cout": 48,
+      "stride": [
+        1,
+        1
+      ],
+      "parameters": 20736,
+      "calls": 1,
+      "total_mac": 132710400,
+      "shapes": [
+        [
+          1,
+          48,
+          80,
+          80
+        ]
+      ]
+    },
+    {
+      "path": "neck.downsample_layers.0.conv",
+      "cin": 96,
+      "cout": 96,
+      "stride": [
+        2,
+        2
+      ],
+      "parameters": 82944,
+      "calls": 1,
+      "total_mac": 132710400,
+      "shapes": [
+        [
+          1,
+          96,
+          40,
+          40
+        ]
+      ]
+    },
+    {
+      "path": "neck.bottom_up_layers.0.blocks.0.conv1.conv",
+      "cin": 96,
+      "cout": 96,
+      "stride": [
+        1,
+        1
+      ],
+      "parameters": 82944,
+      "calls": 1,
+      "total_mac": 132710400,
+      "shapes": [
+        [
+          1,
+          96,
+          40,
+          40
+        ]
+      ]
+    },
+    {
+      "path": "neck.bottom_up_layers.1.blocks.0.conv1.conv",
+      "cin": 192,
+      "cout": 192,
+      "stride": [
+        1,
+        1
+      ],
+      "parameters": 331776,
+      "calls": 1,
+      "total_mac": 132710400,
+      "shapes": [
+        [
+          1,
+          192,
+          20,
+          20
+        ]
+      ]
+    },
+    {
+      "path": "neck.out_layers.0.conv",
+      "cin": 96,
+      "cout": 96,
+      "stride": [
+        1,
+        1
+      ],
+      "parameters": 82944,
+      "calls": 1,
+      "total_mac": 530841600,
+      "shapes": [
+        [
+          1,
+          96,
+          80,
+          80
+        ]
+      ]
+    },
+    {
+      "path": "neck.out_layers.1.conv",
+      "cin": 192,
+      "cout": 96,
+      "stride": [
+        1,
+        1
+      ],
+      "parameters": 165888,
+      "calls": 1,
+      "total_mac": 265420800,
+      "shapes": [
+        [
+          1,
+          96,
+          40,
+          40
+        ]
+      ]
+    },
+    {
+      "path": "neck.out_layers.2.conv",
+      "cin": 384,
+      "cout": 96,
+      "stride": [
+        1,
+        1
+      ],
+      "parameters": 331776,
+      "calls": 1,
+      "total_mac": 132710400,
+      "shapes": [
+        [
+          1,
+          96,
+          20,
+          20
+        ]
+      ]
+    },
+    {
+      "path": "bbox_head.head_module.cls_convs.0.0.conv",
+      "cin": 96,
+      "cout": 96,
+      "stride": [
+        1,
+        1
+      ],
+      "parameters": 82944,
+      "calls": 3,
+      "total_mac": 696729600,
+      "shapes": [
+        [
+          1,
+          96,
+          80,
+          80
+        ],
+        [
+          1,
+          96,
+          40,
+          40
+        ],
+        [
+          1,
+          96,
+          20,
+          20
+        ]
+      ]
+    },
+    {
+      "path": "bbox_head.head_module.cls_convs.0.1.conv",
+      "cin": 96,
+      "cout": 96,
+      "stride": [
+        1,
+        1
+      ],
+      "parameters": 82944,
+      "calls": 3,
+      "total_mac": 696729600,
+      "shapes": [
+        [
+          1,
+          96,
+          80,
+          80
+        ],
+        [
+          1,
+          96,
+          40,
+          40
+        ],
+        [
+          1,
+          96,
+          20,
+          20
+        ]
+      ]
+    },
+    {
+      "path": "bbox_head.head_module.reg_convs.0.0.conv",
+      "cin": 96,
+      "cout": 96,
+      "stride": [
+        1,
+        1
+      ],
+      "parameters": 82944,
+      "calls": 3,
+      "total_mac": 696729600,
+      "shapes": [
+        [
+          1,
+          96,
+          80,
+          80
+        ],
+        [
+          1,
+          96,
+          40,
+          40
+        ],
+        [
+          1,
+          96,
+          20,
+          20
+        ]
+      ]
+    },
+    {
+      "path": "bbox_head.head_module.reg_convs.0.1.conv",
+      "cin": 96,
+      "cout": 96,
+      "stride": [
+        1,
+        1
+      ],
+      "parameters": 82944,
+      "calls": 3,
+      "total_mac": 696729600,
+      "shapes": [
+        [
+          1,
+          96,
+          80,
+          80
+        ],
+        [
+          1,
+          96,
+          40,
+          40
+        ],
+        [
+          1,
+          96,
+          20,
+          20
+        ]
+      ]
+    }
+  ],
+  "limitations": [
+    "Counting includes every shared-head execution; tied parameters counted once.",
+    "Grouped-convolution estimates keep BN and activation unchanged.",
+    "SCDown estimates include its additional BN parameters.",
+    "No candidate accuracy, GPU memory, or latency has been measured."
+  ]
+}

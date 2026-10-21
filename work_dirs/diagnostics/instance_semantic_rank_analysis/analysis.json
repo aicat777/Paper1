@@ -1,0 +1,83 @@
+{
+  "latest_common_epoch": 200,
+  "same_epoch_metrics_percent": {
+    "baseline": {
+      "pascal_voc/mAP": 73.41483235359192,
+      "coco/bbox_mAP": 52.6,
+      "coco/bbox_mAP_50": 74.6,
+      "coco/bbox_mAP_75": 58.3,
+      "coco/bbox_mAP_s": 6.1,
+      "coco/bbox_mAP_m": 32.300000000000004,
+      "coco/bbox_mAP_l": 65.5
+    },
+    "roi_semantic": {
+      "pascal_voc/mAP": 73.59458208084106,
+      "coco/bbox_mAP": 52.900000000000006,
+      "coco/bbox_mAP_50": 74.8,
+      "coco/bbox_mAP_75": 58.8,
+      "coco/bbox_mAP_s": 6.6000000000000005,
+      "coco/bbox_mAP_m": 32.300000000000004,
+      "coco/bbox_mAP_l": 66.10000000000001
+    },
+    "roi_plus_rank": {
+      "pascal_voc/mAP": 73.2146143913269,
+      "coco/bbox_mAP": 52.0,
+      "coco/bbox_mAP_50": 74.3,
+      "coco/bbox_mAP_75": 56.8,
+      "coco/bbox_mAP_s": 6.800000000000001,
+      "coco/bbox_mAP_m": 31.0,
+      "coco/bbox_mAP_l": 64.8
+    }
+  },
+  "class_ap_changes_rank_minus_roi_pp": {
+    "coco/airplane_precision": -0.40000000000000036,
+    "coco/airport_precision": -3.9999999999999982,
+    "coco/baseballfield_precision": 0.7000000000000006,
+    "coco/basketballcourt_precision": 0.5000000000000004,
+    "coco/bridge_precision": -0.8000000000000007,
+    "coco/chimney_precision": -1.3000000000000012,
+    "coco/dam_precision": -2.0000000000000018,
+    "coco/expressway-service-area_precision": -0.6000000000000005,
+    "coco/expressway-toll-station_precision": -0.7000000000000006,
+    "coco/golffield_precision": -6.2,
+    "coco/groundtrackfield_precision": -0.9000000000000008,
+    "coco/harbor_precision": -0.30000000000000027,
+    "coco/overpass_precision": -0.30000000000000027,
+    "coco/ship_precision": -0.40000000000000036,
+    "coco/stadium_precision": -0.6000000000000005,
+    "coco/storagetank_precision": 0.0,
+    "coco/tenniscourt_precision": 0.30000000000000027,
+    "coco/trainstation_precision": -1.8000000000000016,
+    "coco/vehicle_precision": 0.0,
+    "coco/windmill_precision": 0.10000000000000009
+  },
+  "classes_lower": 14,
+  "source_changes_since_validation": [],
+  "gradient_audit": "/home/pwt/Paper1/work_dirs/diagnostics/instance_semantic_rank_analysis/gradient_audit.json",
+  "checkpoint_integrity": {
+    "checkpoint": "/home/pwt/Paper1/work_dirs/instance_semantic_rank_rtmdet_tiny_dior_640_gpu1_bs36/epoch_200.pth",
+    "epoch": 200,
+    "iteration": 32600,
+    "optimizer_steps": [
+      32585
+    ],
+    "raw_bn_counts": [
+      32600
+    ],
+    "nonfinite_weights": [],
+    "loss_scaler": {
+      "scale": 32768.0,
+      "growth_factor": 2.0,
+      "backoff_factor": 0.5,
+      "growth_interval": 2000,
+      "_growth_tracker": 689
+    }
+  },
+  "augmented_gt_total": 1255,
+  "matched_gt_total": 1037,
+  "limitations": [
+    "Only one training run per variant; current run is incomplete.",
+    "Local gradient interference on low-IoU points does not establish the full causal AP loss.",
+    "AP75 depends on localization and ranking; these metrics alone do not distinguish them."
+  ]
+}

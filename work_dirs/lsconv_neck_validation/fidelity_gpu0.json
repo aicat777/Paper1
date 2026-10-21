@@ -1,0 +1,115 @@
+{
+  "status": "passed",
+  "method": "lsconv_neck",
+  "reference": "/home/pwt/Paper1/work_dirs/research/lsnet_reference/lsnet.py",
+  "reference_sha256": "f6fbe61695d3a257df8bcf04beebdea9929bae804ab86ed9975448dce948a419",
+  "upstream_commit": "cbe737c92b7c43ecf02d08545a07f03f1010177c",
+  "original_classes_executed": [
+    "Conv2d_BN",
+    "Residual",
+    "FFN",
+    "LKP",
+    "LSConv",
+    "Block"
+  ],
+  "reference_ska": "independent coordinate shifts",
+  "nonzero_ffn_exercised": true,
+  "cases": [
+    {
+      "width": 48,
+      "amp": false,
+      "training": false,
+      "constructor_state_exact": true,
+      "forward_max_error": 1.430511474609375e-06,
+      "gradient_max_error": 9.5367431640625e-07
+    },
+    {
+      "width": 48,
+      "amp": false,
+      "training": true,
+      "constructor_state_exact": true,
+      "forward_max_error": 9.5367431640625e-07,
+      "gradient_max_error": 3.2782554626464844e-07
+    },
+    {
+      "width": 48,
+      "amp": true,
+      "training": false,
+      "constructor_state_exact": true,
+      "forward_max_error": 0.0,
+      "gradient_max_error": 0.00390625
+    },
+    {
+      "width": 48,
+      "amp": true,
+      "training": true,
+      "constructor_state_exact": true,
+      "forward_max_error": 0.0,
+      "gradient_max_error": 0.0013427734375
+    },
+    {
+      "width": 96,
+      "amp": false,
+      "training": false,
+      "constructor_state_exact": true,
+      "forward_max_error": 1.9073486328125e-06,
+      "gradient_max_error": 1.1920928955078125e-06
+    },
+    {
+      "width": 96,
+      "amp": false,
+      "training": true,
+      "constructor_state_exact": true,
+      "forward_max_error": 9.5367431640625e-07,
+      "gradient_max_error": 4.470348358154297e-07
+    },
+    {
+      "width": 96,
+      "amp": true,
+      "training": false,
+      "constructor_state_exact": true,
+      "forward_max_error": 0.0,
+      "gradient_max_error": 0.0045166015625
+    },
+    {
+      "width": 96,
+      "amp": true,
+      "training": true,
+      "constructor_state_exact": true,
+      "forward_max_error": 0.0,
+      "gradient_max_error": 0.0009765625
+    },
+    {
+      "width": 192,
+      "amp": false,
+      "training": false,
+      "constructor_state_exact": true,
+      "forward_max_error": 1.9073486328125e-06,
+      "gradient_max_error": 1.430511474609375e-06
+    },
+    {
+      "width": 192,
+      "amp": false,
+      "training": true,
+      "constructor_state_exact": true,
+      "forward_max_error": 9.5367431640625e-07,
+      "gradient_max_error": 4.209578037261963e-07
+    },
+    {
+      "width": 192,
+      "amp": true,
+      "training": false,
+      "constructor_state_exact": true,
+      "forward_max_error": 0.0,
+      "gradient_max_error": 0.00390625
+    },
+    {
+      "width": 192,
+      "amp": true,
+      "training": true,
+      "constructor_state_exact": true,
+      "forward_max_error": 0.0,
+      "gradient_max_error": 0.0009765625
+    }
+  ]
+}

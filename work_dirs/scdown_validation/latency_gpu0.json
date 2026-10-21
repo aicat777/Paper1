@@ -1,0 +1,59 @@
+{
+  "status": "passed",
+  "method": "scdown",
+  "models": {
+    "unfused": {
+      "baseline": {
+        "round_mean_ms": [
+          12.082786524842959,
+          10.548851050407393,
+          10.771201374882367
+        ],
+        "median_round_mean_ms": 10.771201374882367
+      },
+      "scdown": {
+        "round_mean_ms": [
+          11.831675537541742,
+          10.31757498785737,
+          10.328313100035302
+        ],
+        "median_round_mean_ms": 10.328313100035302
+      }
+    },
+    "fused": {
+      "baseline": {
+        "round_mean_ms": [
+          8.166409837576794,
+          8.28996263735462,
+          8.787054762797197
+        ],
+        "median_round_mean_ms": 8.28996263735462
+      },
+      "scdown": {
+        "round_mean_ms": [
+          8.195369537133956,
+          9.149855987925548,
+          8.167593637335813
+        ],
+        "median_round_mean_ms": 8.195369537133956
+      }
+    }
+  },
+  "input_size": [
+    640,
+    640
+  ],
+  "batch": 1,
+  "amp": true,
+  "warmup": 20,
+  "rounds": 3,
+  "iterations_per_round": 80,
+  "timing": "synchronized wall time, includes Python/CUDA dispatch, excludes preprocess and NMS",
+  "shared_gpu": true,
+  "cudnn_benchmark": false,
+  "random_weights": true,
+  "bn_fusion_numerical_check": true,
+  "shared_head_convs_copied_before_scale_bn_fusion": 8,
+  "cuda_device": "NVIDIA GeForce RTX 4090",
+  "not_a_training_speed_or_exclusive_gpu_benchmark": true
+}

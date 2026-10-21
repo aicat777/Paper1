@@ -1,0 +1,61 @@
+{
+  "scope": "read-only diagnostic evaluation on 32 val images covering all classes; BN recalibration uses 32 train images and no optimizer",
+  "epoch": 30,
+  "val_images": [
+    6426,
+    6209,
+    6296,
+    7687,
+    5863,
+    5896,
+    5919,
+    5864,
+    5865,
+    5866,
+    5867,
+    5868,
+    5869,
+    5870,
+    5871,
+    5872,
+    5873,
+    5874,
+    5875,
+    5876,
+    5877,
+    5878,
+    5879,
+    5880,
+    5881,
+    5882,
+    5883,
+    5884,
+    5885,
+    5886,
+    5887,
+    5888
+  ],
+  "results": {
+    "ema": {
+      "pascal_voc/mAP": 0.0004246906901244074,
+      "coco/bbox_mAP": 0.0,
+      "coco/bbox_mAP_50": 0.0,
+      "coco/bbox_mAP_75": 0.0,
+      "coco/bbox_mAP_s": 0.0
+    },
+    "raw": {
+      "pascal_voc/mAP": 0.3573837876319885,
+      "coco/bbox_mAP": 0.194,
+      "coco/bbox_mAP_50": 0.345,
+      "coco/bbox_mAP_75": 0.159,
+      "coco/bbox_mAP_s": 0.032
+    },
+    "ema_recalibrated_bn": {
+      "pascal_voc/mAP": 0.0501200370490551,
+      "coco/bbox_mAP": 0.018,
+      "coco/bbox_mAP_50": 0.046,
+      "coco/bbox_mAP_75": 0.0,
+      "coco/bbox_mAP_s": 0.001
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "state": "complete",
+  "queue_pid": 2838554,
+  "queue_start_ticks": "15178716",
+  "updated_at": "2026-10-17T10:14:02.376105+08:00",
+  "dependency": {
+    "name": "freq_fusion",
+    "pid": 622611,
+    "start_ticks": "3284902",
+    "status": "/home/pwt/Paper1/work_dirs/freq_fusion_queue/status.json",
+    "work_dir": "/home/pwt/Paper1/work_dirs/freq_fusion_rtmdet_tiny_dior_640_gpu1_bs36",
+    "log": "/home/pwt/Paper1/logs/freq_fusion_rtmdet_tiny_dior_640_gpu1_bs36.log"
+  },
+  "experiment": {
+    "name": "lsconv_20_640_bs36",
+    "source_config": "/home/pwt/Paper1/configs/lsconv_20/rtmdet_tiny_dior_640.py",
+    "config": "/home/pwt/Paper1/work_dirs/lsconv_20_queue/lsconv_20_640_bs36.py",
+    "work_dir": "/home/pwt/Paper1/work_dirs/lsconv_20_rtmdet_tiny_dior_640_gpu1_bs36",
+    "log": "/home/pwt/Paper1/logs/lsconv_20_rtmdet_tiny_dior_640_gpu1_bs36.log",
+    "preflight_report": "/home/pwt/Paper1/work_dirs/lsconv_20_validation/queue_preflight.json",
+    "capacity_report": "/home/pwt/Paper1/work_dirs/lsconv_20_validation/capacity_gpu1_bs36.json",
+    "validation_summary": "/home/pwt/Paper1/work_dirs/lsconv_20_validation/checks.json",
+    "resume_from": "/home/pwt/Paper1/work_dirs/lsconv_20_rtmdet_tiny_dior_640_gpu1_bs36/epoch_296.pth"
+  }
+}

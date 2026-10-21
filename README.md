@@ -88,4 +88,4 @@ FDW＋局部KSM已独立实现并通过作者算子对照、GPU训练/验证和b
 
 检查：`python -m unittest discover -s tests -v`。DIOR 文献对比表见 `dior_sed_detr_table3.csv`，来源为 [SED-DETR，IEEE TGRS 2025](https://doi.org/10.1109/TGRS.2025.3571033)表III；文献行与本项目实测结果区分标注。
 
-数据、论文 PDF、日志、检查点和运行结果不纳入版本控制。
+`logs/`与`work_dirs/`保留完整实验记录并提交Git，包括原始日志、逐轮指标、实际运行配置、队列状态和检查产物，不只保存汇总。模型检查点（`.pth`、`.pt`、`.ckpt`）、研究下载资料和PDF解析依赖不上传；数据集与缓存继续忽略。`work_dirs/research/`中的实验检查日志仍保留。运行中的记录以每次提交时的快照为准。

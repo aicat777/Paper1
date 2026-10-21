@@ -1,0 +1,16 @@
+{
+  "pid": 3903874,
+  "start_ticks": "285959425",
+  "started_at": "2026-10-13T17:53:13.974120+08:00",
+  "gpu_uuid": "GPU-df11ee80-4992-6cab-1055-b211d226f165",
+  "config": "/home/pwt/Paper1/configs/efs/rtmdet_tiny_dior_640.py",
+  "config_sha256": "c1a59ec12031908e6cc8ec2748769143931bd391755834a08194d2ae73ef1935",
+  "work_dir": "/home/pwt/Paper1/work_dirs/efs_rtmdet_tiny_dior_640_gpu1_bs9x4",
+  "log": "/home/pwt/Paper1/logs/efs_rtmdet_tiny_dior_640_gpu1_bs9x4.log",
+  "command": [
+    "/home/pwt/miniconda3/envs/rtmdet/bin/python",
+    "-u",
+    "/home/pwt/Paper1/mmyolo/tools/train.py",
+    "/home/pwt/Paper1/configs/efs/rtmdet_tiny_dior_640.py"
+  ]
+}

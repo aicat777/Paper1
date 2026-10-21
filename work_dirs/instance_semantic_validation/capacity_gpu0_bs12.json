@@ -1,0 +1,72 @@
+{
+  "status": "passed",
+  "method": "instance_semantic",
+  "microbatch": 12,
+  "accumulation": 1,
+  "optimizer_updates": 3,
+  "training_microsteps": 3,
+  "input_size": [
+    640,
+    640
+  ],
+  "gt_per_image": 1200,
+  "different_image_ids": [
+    844,
+    5601,
+    4604,
+    5475,
+    5757,
+    1129,
+    3150,
+    1497,
+    819,
+    1679,
+    7,
+    268
+  ],
+  "repeated_annotations": true,
+  "synthetic_multiscale_boxes": true,
+  "allocator_fraction": 0.38,
+  "formal_batch_capacity_tested": false,
+  "loss_scale_init": 32,
+  "warmup_enabled": false,
+  "amp_skipped_updates": 0,
+  "saved_checkpoints": false,
+  "watched_parameter_tensors": 2,
+  "losses": [
+    {
+      "loss": 2.4707932472229004,
+      "loss_cls": 0.16475826501846313,
+      "loss_bbox": 2.0103583335876465,
+      "loss_instance_semantic": 0.29567673802375793
+    },
+    {
+      "loss": 2.332545757293701,
+      "loss_cls": 0.22502699494361877,
+      "loss_bbox": 1.836119294166565,
+      "loss_instance_semantic": 0.27139949798583984
+    },
+    {
+      "loss": 2.2303566932678223,
+      "loss_cls": 0.34098994731903076,
+      "loss_bbox": 1.6273638010025024,
+      "loss_instance_semantic": 0.2620029151439667
+    }
+  ],
+  "gradient_max": {
+    "bbox_head.instance_semantic.classifier.bias": 2.8194634914398193,
+    "bbox_head.instance_semantic.classifier.weight": 2.4774272441864014
+  },
+  "parameter_updates_max": {
+    "bbox_head.instance_semantic.classifier.weight": 0.0016918797045946121,
+    "bbox_head.instance_semantic.classifier.bias": 0.0016879261238500476
+  },
+  "cuda_device": "NVIDIA GeForce RTX 4090",
+  "cuda_total_gib": 47.37115478515625,
+  "initial_free_gib": 25.80426025390625,
+  "peak_allocated_gib": 11.77916669845581,
+  "peak_reserved_gib": 13.416015625,
+  "elapsed_seconds": 10.640169537000475,
+  "config": "/home/pwt/Paper1/configs/instance_semantic/rtmdet_tiny_dior_640.py",
+  "config_sha256": "51e23561dd9a4d2cece9e25b93964c50982df354f7566ce900375c6949b33e59"
+}

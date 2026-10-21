@@ -1,0 +1,24 @@
+test_all_degenerate_instances_have_zero_connected_loss (tests.test_instance_semantic.InstanceSemanticTests) ... ok
+test_baseline_predictions_losses_and_aux_gradient_scope (tests.test_instance_semantic.InstanceSemanticTests) ... /home/pwt/miniconda3/envs/rtmdet/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3483.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+ok
+test_empty_and_instance_balanced_loss (tests.test_instance_semantic.InstanceSemanticTests) ... ok
+test_empty_augmented_boxes_do_not_change_valid_instance_loss (tests.test_instance_semantic.InstanceSemanticTests) ... ok
+test_roi_coordinate_ramps_substride_boxes_batch_and_levels (tests.test_instance_semantic.InstanceSemanticTests) ... ok
+test_auxiliary_reaches_shared_features_not_regression_or_prediction (tests.test_instance_semantic_multiscale.MultiScaleInstanceTests) ... ok
+test_crop_bn_output_gradient_buffers_and_exception_restore (tests.test_instance_semantic_multiscale.MultiScaleInstanceTests) ... ok
+test_empty_and_singleton_crop_batches_remain_valid (tests.test_instance_semantic_multiscale.MultiScaleInstanceTests) ... [W NNPACK.cpp:64] Could not initialize NNPACK! Reason: Unsupported hardware.
+ok
+test_fractional_border_and_thin_boxes_are_enclosed_without_distortion (tests.test_instance_semantic_multiscale.MultiScaleInstanceTests) ... ok
+test_previous_initial_state_and_inference_are_unchanged (tests.test_instance_semantic_multiscale.MultiScaleInstanceTests) ... ok
+test_resize_normalization_roi_coordinates_and_real_box_level (tests.test_instance_semantic_multiscale.MultiScaleInstanceTests) ... ok
+test_roi_ramps_substride_fractional_coordinates_and_all_levels (tests.test_instance_semantic_multiscale.MultiScaleInstanceTests) ... ok
+test_scale_rng_is_independent_and_resumes_from_state_dict (tests.test_instance_semantic_multiscale.MultiScaleInstanceTests) ... ok
+test_snapshot_is_clean_and_does_not_consume_main_augmentation_rng (tests.test_instance_semantic_multiscale.MultiScaleInstanceTests) ... ok
+test_split_backwards_match_joint_adamw_update_and_one_iteration (tests.test_instance_semantic_multiscale.MultiScaleInstanceTests) ... ok
+test_strong_and_weak_detection_pipelines_match_previous_exactly (tests.test_instance_semantic_multiscale.MultiScaleInstanceTests) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 9.503s
+
+OK

@@ -1,0 +1,75 @@
+{
+  "root": "/home/pwt/Paper1",
+  "python": "/home/pwt/miniconda3/envs/rtmdet/bin/python",
+  "gpu_uuid": "GPU-df11ee80-4992-6cab-1055-b211d226f165",
+  "min_free_mib": 45000,
+  "dependency": {
+    "name": "lsconv_full",
+    "pid": 32125,
+    "start_ticks": "139962",
+    "status": "/home/pwt/Paper1/work_dirs/lsconv_full_queue/status.json",
+    "work_dir": "/home/pwt/Paper1/work_dirs/lsconv_full_rtmdet_tiny_dior_640_gpu1_bs12x3",
+    "log": "/home/pwt/Paper1/logs/lsconv_full_rtmdet_tiny_dior_640_gpu1_bs12x3.log"
+  },
+  "experiment": {
+    "name": "freq_fusion_640_bs36",
+    "source_config": "/home/pwt/Paper1/configs/freq_fusion/rtmdet_tiny_dior_640.py",
+    "config": "/home/pwt/Paper1/work_dirs/freq_fusion_queue/freq_fusion_640_bs36.py",
+    "work_dir": "/home/pwt/Paper1/work_dirs/freq_fusion_rtmdet_tiny_dior_640_gpu1_bs36",
+    "log": "/home/pwt/Paper1/logs/freq_fusion_rtmdet_tiny_dior_640_gpu1_bs36.log",
+    "preflight_report": "/home/pwt/Paper1/work_dirs/freq_fusion_validation/queue_preflight.json",
+    "capacity_report": "/home/pwt/Paper1/work_dirs/freq_fusion_validation/capacity_gpu1_bs36.json",
+    "validation_summary": "/home/pwt/Paper1/work_dirs/freq_fusion_validation/checks.json"
+  },
+  "source_sha256": {
+    "configs/freq_fusion/rtmdet_tiny_dior_640.py": "98bf4c1e8035b1099fdc04693bec65adc628c9c03bcc97d7dcc82e887b0e3a77",
+    "configs/rtmdet_tiny_dior_300e.py": "69a8a91d777090fcdd6f27eafdb717cc93f1a272bc6a90c4db522ba035d215a6",
+    "custom_models/freq_fusion/__init__.py": "f49e2e82f3c0e704aa6aa2fc44ae652f45b862cfd01fcf1ad46e27064493e84c",
+    "custom_models/freq_fusion/neck.py": "1715dddc0da484cd232fb43b6032adda462f8b0fa5900deb3bba2a5556eb9c02",
+    "custom_models/freq_fusion/operator.py": "9c307c339f9ff1a83f04413bb1a49a6d0aa67daa63560d0cfb66a0c185eb56f9",
+    "custom_models/freq_fusion/resample.py": "bf7f40ad914c7ee68e32ed83b41ac2d400a51de3c7b96bc7f175a38eb2006536",
+    "scripts/candidate_capacity.py": "311c8cf810f6184f190642fab04acd55c15e9f61ea1c281276fa93800df6725c",
+    "scripts/candidate_probe.py": "20e07b7f2cdb9202eedf63660786b5e2ffa5f5e019ebdf8a6c1fdbb2eb018286",
+    "scripts/queue_experiment.py": "53938385f211685b7de5ba4ce43d745611cc5ab21eb80eb0cf400388a533fdb1",
+    "tests/test_freq_fusion.py": "8caad34427843b813536657b547d27d0555f3ae825858383f1ba1b7faf9591fa",
+    "work_dirs/freq_fusion_queue/freq_fusion_640_bs36.py": "d7bccb293acae59f39654987cc0b52d1d81c666967ddf7023e4579a77e5a45b4"
+  },
+  "preflight_command": [
+    "/home/pwt/miniconda3/envs/rtmdet/bin/python",
+    "-u",
+    "/home/pwt/Paper1/scripts/candidate_capacity.py",
+    "--method",
+    "freq_fusion",
+    "--config",
+    "/home/pwt/Paper1/work_dirs/freq_fusion_queue/freq_fusion_640_bs36.py",
+    "--mode",
+    "preflight",
+    "--report",
+    "/home/pwt/Paper1/work_dirs/freq_fusion_validation/queue_preflight.json"
+  ],
+  "capacity_command": [
+    "/home/pwt/miniconda3/envs/rtmdet/bin/python",
+    "-u",
+    "/home/pwt/Paper1/scripts/candidate_capacity.py",
+    "--method",
+    "freq_fusion",
+    "--config",
+    "/home/pwt/Paper1/work_dirs/freq_fusion_queue/freq_fusion_640_bs36.py",
+    "--mode",
+    "capacity",
+    "--report",
+    "/home/pwt/Paper1/work_dirs/freq_fusion_validation/capacity_gpu1_bs36.json",
+    "--allocator-fraction",
+    ".88"
+  ],
+  "capacity_expected": {
+    "method": "freq_fusion",
+    "microbatch": 36,
+    "accumulation": 1,
+    "optimizer_updates": 3,
+    "gt_per_image": 1200,
+    "allocator_fraction": 0.88,
+    "formal_batch_capacity_tested": true,
+    "config_sha256": "d7bccb293acae59f39654987cc0b52d1d81c666967ddf7023e4579a77e5a45b4"
+  }
+}

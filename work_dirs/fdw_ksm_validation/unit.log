@@ -1,0 +1,17 @@
+test_detection_gradients_and_updates_include_all_local_parameters (test_fdw_ksm.FDWKSMIntegration) ... /home/pwt/miniconda3/envs/rtmdet/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3483.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+ok
+test_locations_shapes_count_and_existing_fdw_initialization (test_fdw_ksm.FDWKSMIntegration) ... [W NNPACK.cpp:64] Could not initialize NNPACK! Reason: Unsupported hardware.
+ok
+test_same_fdw_training_protocol_and_unchanged_neck_head (test_fdw_ksm.FDWKSMIntegration) ... ok
+test_checkpoint_and_ema_include_local_and_frequency_parameters (test_fdw_ksm.FDWKSMNumerics) ... /home/pwt/miniconda3/envs/rtmdet/lib/python3.10/site-packages/torch/_utils.py:776: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+ok
+test_cuda_fp32_amp_forward_and_all_gradients (test_fdw_ksm.FDWKSMNumerics) ... skipped 'Enable CUDA comparisons'
+test_neutral_local_recovers_previous_fdw_and_author_initialization (test_fdw_ksm.FDWKSMNumerics) ... ok
+test_nonsquare_channel_mapping_nonuniform_gates_and_all_gradients (test_fdw_ksm.FDWKSMNumerics) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 1.991s
+
+OK (skipped=1)

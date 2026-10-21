@@ -1,0 +1,122 @@
+{
+  "scope": "CPU in-memory architecture cost audit; no model/config source changes, training or accuracy evaluation",
+  "input_size": [
+    640,
+    640
+  ],
+  "batch": 1,
+  "excludes": [
+    "normalization",
+    "activation",
+    "residual additions",
+    "kernel-launch overhead",
+    "postprocessing"
+  ],
+  "lsconv_aggregation_included": true,
+  "variants": {
+    "baseline": {
+      "parameters": 4878708,
+      "head_parameters": 341064,
+      "neck_parameters": 2188944,
+      "conv_gmac": 7.98770304,
+      "aggregation_gmac": 0.0,
+      "counted_gmac": 7.98770304,
+      "lsconv_execution_count": 0,
+      "lsconv_shapes": [],
+      "backbone_unchanged": true,
+      "inference_only_cost_construction": true,
+      "parameter_change_pct": 0.0,
+      "counted_mac_change_pct": 0.0
+    },
+    "neck_four_whole_ls_blocks": {
+      "parameters": 4612110,
+      "head_parameters": 341064,
+      "neck_parameters": 1922346,
+      "conv_gmac": 7.71087744,
+      "aggregation_gmac": 0.0062208,
+      "counted_gmac": 7.71709824,
+      "lsconv_execution_count": 4,
+      "lsconv_shapes": [
+        [
+          1,
+          96,
+          40,
+          40
+        ],
+        [
+          1,
+          48,
+          80,
+          80
+        ],
+        [
+          1,
+          96,
+          40,
+          40
+        ],
+        [
+          1,
+          192,
+          20,
+          20
+        ]
+      ],
+      "backbone_unchanged": true,
+      "inference_only_cost_construction": true,
+      "parameter_change_pct": -5.464520524696292,
+      "counted_mac_change_pct": -3.387767405033626
+    },
+    "head_second_layer_whole_ls_blocks": {
+      "parameters": 4822140,
+      "head_parameters": 284496,
+      "neck_parameters": 2188944,
+      "conv_gmac": 7.45628544,
+      "aggregation_gmac": 0.0145152,
+      "counted_gmac": 7.47080064,
+      "lsconv_execution_count": 6,
+      "lsconv_shapes": [
+        [
+          1,
+          96,
+          80,
+          80
+        ],
+        [
+          1,
+          96,
+          80,
+          80
+        ],
+        [
+          1,
+          96,
+          40,
+          40
+        ],
+        [
+          1,
+          96,
+          40,
+          40
+        ],
+        [
+          1,
+          96,
+          20,
+          20
+        ],
+        [
+          1,
+          96,
+          20,
+          20
+        ]
+      ],
+      "backbone_unchanged": true,
+      "inference_only_cost_construction": true,
+      "parameter_change_pct": -1.1594873068853428,
+      "counted_mac_change_pct": -6.471227052526984
+    }
+  }
+}

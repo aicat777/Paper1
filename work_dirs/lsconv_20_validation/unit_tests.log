@@ -1,0 +1,17 @@
+test_detection_updates_and_serialization_keep_sharing (test_lsconv_20.LSConv20Tests) ... /home/pwt/miniconda3/envs/rtmdet/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3483.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+[W NNPACK.cpp:64] Could not initialize NNPACK! Reason: Unsupported hardware.
+ok
+test_exact_scope_outputs_and_unchanged_csp_conv2 (test_lsconv_20.LSConv20Tests) ... ok
+test_initialization_exception_restores_modules_order_and_aliases (test_lsconv_20.LSConv20Tests) ... ok
+test_protocol_matches_completed_real_batch36_experiment (test_lsconv_20.LSConv20Tests) ... ok
+test_root_initialization_preserves_all_ls_states_and_original_prediction_policy (test_lsconv_20.LSConv20Tests) ... ok
+test_scale_sharing_task_boundaries_and_unshared_option (test_lsconv_20.LSConv20Tests) ... ok
+test_shared_gradients_equal_sum_over_independent_scales (test_lsconv_20.LSConv20Tests) ... ok
+test_twenty_sites_equal_legacy_twenty_three_with_original_outputs (test_lsconv_20.LSConv20Tests) ... ok
+test_verified_core_is_unchanged_and_independent (test_lsconv_20.LSConv20Tests) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 9.250s
+
+OK

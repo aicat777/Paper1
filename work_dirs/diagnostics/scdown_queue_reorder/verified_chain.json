@@ -1,0 +1,71 @@
+{
+  "status": "passed",
+  "chain": [
+    {
+      "identity": {
+        "name": "instance_semantic_center",
+        "pid": 3107492,
+        "start_ticks": "43330188",
+        "status": "/home/pwt/Paper1/work_dirs/instance_semantic_center_queue/status.json",
+        "work_dir": "/home/pwt/Paper1/work_dirs/instance_semantic_center_rtmdet_tiny_dior_640_gpu1_bs36",
+        "log": "/home/pwt/Paper1/logs/instance_semantic_center_rtmdet_tiny_dior_640_gpu1_bs36.log"
+      },
+      "state": "training"
+    },
+    {
+      "identity": {
+        "name": "scdown_g2",
+        "pid": 135590,
+        "start_ticks": "45304885",
+        "status": "/home/pwt/Paper1/work_dirs/scdown_g2_queue/status.json",
+        "work_dir": "/home/pwt/Paper1/work_dirs/scdown_g2_rtmdet_tiny_dior_640_gpu1_bs36",
+        "log": "/home/pwt/Paper1/logs/scdown_g2_rtmdet_tiny_dior_640_gpu1_bs36.log"
+      },
+      "state": "waiting_instance_semantic_center"
+    },
+    {
+      "identity": {
+        "name": "scdown_p3",
+        "pid": 136580,
+        "start_ticks": "45306193",
+        "status": "/home/pwt/Paper1/work_dirs/scdown_p3_queue/status.json",
+        "work_dir": "/home/pwt/Paper1/work_dirs/scdown_p3_rtmdet_tiny_dior_640_gpu1_bs36",
+        "log": "/home/pwt/Paper1/logs/scdown_p3_rtmdet_tiny_dior_640_gpu1_bs36.log"
+      },
+      "state": "waiting_scdown_g2"
+    },
+    {
+      "identity": {
+        "name": "instance_semantic_matched",
+        "pid": 137512,
+        "start_ticks": "45307800",
+        "status": "/home/pwt/Paper1/work_dirs/instance_semantic_matched_queue/status.json",
+        "work_dir": "/home/pwt/Paper1/work_dirs/instance_semantic_matched_rtmdet_tiny_dior_640_gpu1_bs36",
+        "log": "/home/pwt/Paper1/logs/instance_semantic_matched_rtmdet_tiny_dior_640_gpu1_bs36.log"
+      },
+      "state": "waiting_scdown_p3"
+    },
+    {
+      "identity": {
+        "name": "instance_semantic_random",
+        "pid": 138632,
+        "start_ticks": "45309610",
+        "status": "/home/pwt/Paper1/work_dirs/instance_semantic_random_queue/status.json",
+        "work_dir": "/home/pwt/Paper1/work_dirs/instance_semantic_random_rtmdet_tiny_dior_640_gpu1_bs36",
+        "log": "/home/pwt/Paper1/logs/instance_semantic_random_rtmdet_tiny_dior_640_gpu1_bs36.log"
+      },
+      "state": "waiting_instance_semantic_matched"
+    },
+    {
+      "identity": {
+        "name": "scdown_p2p3",
+        "pid": 139834,
+        "start_ticks": "45311419",
+        "status": "/home/pwt/Paper1/work_dirs/scdown_p2p3_queue/status.json",
+        "work_dir": "/home/pwt/Paper1/work_dirs/scdown_p2p3_rtmdet_tiny_dior_640_gpu1_bs36",
+        "log": "/home/pwt/Paper1/logs/scdown_p2p3_rtmdet_tiny_dior_640_gpu1_bs36.log"
+      },
+      "state": "waiting_instance_semantic_random"
+    }
+  ]
+}

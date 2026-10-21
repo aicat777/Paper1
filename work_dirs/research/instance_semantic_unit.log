@@ -1,0 +1,10 @@
+test_baseline_predictions_losses_and_aux_gradient_scope (test_instance_semantic.InstanceSemanticTests) ... /home/pwt/miniconda3/envs/rtmdet/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3483.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+ok
+test_empty_and_instance_balanced_loss (test_instance_semantic.InstanceSemanticTests) ... ok
+test_roi_coordinate_ramps_substride_boxes_batch_and_levels (test_instance_semantic.InstanceSemanticTests) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 2.219s
+
+OK

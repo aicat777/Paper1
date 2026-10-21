@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "config": "/home/pwt/Paper1/work_dirs/lsconv_queue/lsconv_640_bs36.py",
+  "batch": 36,
+  "input_size": [
+    640,
+    640
+  ],
+  "gt_per_image": 1200,
+  "repeated_annotations": true,
+  "optimizer_updates": 3,
+  "loss_scale_init": 128,
+  "allocator_fraction": 0.88,
+  "watched_parameter_tensors": 45,
+  "losses": [
+    {
+      "loss": 2.0988922119140625,
+      "loss_cls": 0.32108449935913086,
+      "loss_bbox": 1.777807593345642
+    },
+    {
+      "loss": 2.049008369445801,
+      "loss_cls": 0.43962711095809937,
+      "loss_bbox": 1.6093813180923462
+    },
+    {
+      "loss": 1.9381357431411743,
+      "loss_cls": 0.477254718542099,
+      "loss_bbox": 1.460880994796753
+    }
+  ],
+  "peak_allocated_gib": 35.4218225479126,
+  "peak_reserved_gib": 40.091796875,
+  "elapsed_seconds": 33.08206293685362
+}

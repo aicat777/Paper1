@@ -1,0 +1,79 @@
+{
+  "root": "/home/pwt/Paper1",
+  "python": "/home/pwt/miniconda3/envs/rtmdet/bin/python",
+  "gpu_uuid": "GPU-df11ee80-4992-6cab-1055-b211d226f165",
+  "min_free_mib": 45000,
+  "dependency": {
+    "name": "freq_fusion",
+    "pid": 622611,
+    "start_ticks": "3284902",
+    "status": "/home/pwt/Paper1/work_dirs/freq_fusion_queue/status.json",
+    "work_dir": "/home/pwt/Paper1/work_dirs/freq_fusion_rtmdet_tiny_dior_640_gpu1_bs36",
+    "log": "/home/pwt/Paper1/logs/freq_fusion_rtmdet_tiny_dior_640_gpu1_bs36.log"
+  },
+  "experiment": {
+    "name": "lsconv_20_640_bs36",
+    "source_config": "/home/pwt/Paper1/configs/lsconv_20/rtmdet_tiny_dior_640.py",
+    "config": "/home/pwt/Paper1/work_dirs/lsconv_20_queue/lsconv_20_640_bs36.py",
+    "work_dir": "/home/pwt/Paper1/work_dirs/lsconv_20_rtmdet_tiny_dior_640_gpu1_bs36",
+    "log": "/home/pwt/Paper1/logs/lsconv_20_rtmdet_tiny_dior_640_gpu1_bs36.log",
+    "preflight_report": "/home/pwt/Paper1/work_dirs/lsconv_20_validation/queue_preflight.json",
+    "capacity_report": "/home/pwt/Paper1/work_dirs/lsconv_20_validation/capacity_gpu1_bs36.json",
+    "validation_summary": "/home/pwt/Paper1/work_dirs/lsconv_20_validation/checks.json",
+    "resume_from": "/home/pwt/Paper1/work_dirs/lsconv_20_rtmdet_tiny_dior_640_gpu1_bs36/epoch_296.pth"
+  },
+  "source_sha256": {
+    "custom_models/lsconv_20/layers.py": "54ed8b8ddc69df33cfe867cade883ff28c3bb745ed058287dc910bbfc8615888",
+    "custom_models/lsconv_20/backbone.py": "c2b7d112156bd2fff056974bf9837945fcc53ef36d9a4a48f0bbca3b85874289",
+    "custom_models/lsconv_20/operator.py": "6d2708a7ce9dd425c15517f77d1eacb32b3c4a6fd1216dc1727c6ac45e4be2a8",
+    "custom_models/lsconv_20/head.py": "2977ebeb1f201397b3b269468e0751487aa2fcaf5d2569c982835076339c875d",
+    "custom_models/lsconv_20/initialization.py": "578c333d25e6ceef8eea246ef04b16d98669ccfe5d8524118900b07cd039feeb",
+    "custom_models/lsconv_20/__init__.py": "0a640a8b1303f90bb20a229b559b7175fa000c6aa48b5b7918ad07a6714adacc",
+    "custom_models/lsconv_20/aggregation.py": "a1e588d89602b1ad6a509fab1259b7cdc277307c445e573c9d174b0b63024df7",
+    "custom_models/lsconv_20/neck.py": "66e76a9c1a8f0145ea347aeefb440b173ab8ac916c87cc7d60f35c188af15982",
+    "configs/lsconv_20/rtmdet_tiny_dior_640.py": "6f5228131f4f3c4762acb2d0e676ed60f1d5775e714f9867d96548e5b3a198c1",
+    "configs/rtmdet_tiny_dior_300e.py": "69a8a91d777090fcdd6f27eafdb717cc93f1a272bc6a90c4db522ba035d215a6",
+    "scripts/lsconv_20_probe.py": "295a98a7ecd35797168c787937c6f75121c9035f704f5eeafb33796473249c84",
+    "scripts/candidate_probe.py": "20e07b7f2cdb9202eedf63660786b5e2ffa5f5e019ebdf8a6c1fdbb2eb018286",
+    "scripts/candidate_capacity.py": "311c8cf810f6184f190642fab04acd55c15e9f61ea1c281276fa93800df6725c",
+    "scripts/queue_experiment.py": "53938385f211685b7de5ba4ce43d745611cc5ab21eb80eb0cf400388a533fdb1",
+    "tests/test_lsconv_20.py": "353cfc1536e1997fc07b09513ae43be1e53bd054af6243273cc98ab6995d2158",
+    "work_dirs/lsconv_20_queue/lsconv_20_640_bs36.py": "f2cb63b91401915b0be6d545ea0c7aae97ec12838f8ef02c26d81f2c394ddb1d"
+  },
+  "preflight_command": [
+    "/home/pwt/miniconda3/envs/rtmdet/bin/python",
+    "-u",
+    "/home/pwt/Paper1/scripts/lsconv_20_probe.py",
+    "--config",
+    "/home/pwt/Paper1/work_dirs/lsconv_20_queue/lsconv_20_640_bs36.py",
+    "--mode",
+    "preflight",
+    "--report",
+    "/home/pwt/Paper1/work_dirs/lsconv_20_validation/queue_preflight.json"
+  ],
+  "capacity_command": [
+    "/home/pwt/miniconda3/envs/rtmdet/bin/python",
+    "-u",
+    "/home/pwt/Paper1/scripts/lsconv_20_probe.py",
+    "--config",
+    "/home/pwt/Paper1/work_dirs/lsconv_20_queue/lsconv_20_640_bs36.py",
+    "--mode",
+    "capacity",
+    "--report",
+    "/home/pwt/Paper1/work_dirs/lsconv_20_validation/capacity_gpu1_bs36.json",
+    "--allocator-fraction",
+    ".88",
+    "--gt-per-image",
+    "500"
+  ],
+  "capacity_expected": {
+    "method": "lsconv_20",
+    "microbatch": 36,
+    "accumulation": 1,
+    "optimizer_updates": 3,
+    "gt_per_image": 500,
+    "allocator_fraction": 0.88,
+    "formal_batch_capacity_tested": true,
+    "config_sha256": "f2cb63b91401915b0be6d545ea0c7aae97ec12838f8ef02c26d81f2c394ddb1d"
+  }
+}

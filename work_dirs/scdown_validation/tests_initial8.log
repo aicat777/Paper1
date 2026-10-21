@@ -1,0 +1,16 @@
+test_channel_mix_before_decimation_odd_grid_and_signed_output (tests.test_scdown.SCDownTests) ... ok
+test_exact_scope_actual_widths_outputs_priors_and_head_sharing (tests.test_scdown.SCDownTests) ... [W NNPACK.cpp:64] Could not initialize NNPACK! Reason: Unsupported hardware.
+/home/pwt/miniconda3/envs/rtmdet/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3483.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+ok
+test_initialization_exception_restores_modules_and_allows_retry (tests.test_scdown.SCDownTests) ... ok
+test_protocol_and_invalid_replacement_contract (tests.test_scdown.SCDownTests) ... ok
+test_real_detection_gradients_and_one_bn_update_per_main_forward (tests.test_scdown.SCDownTests) ... ok
+test_restoring_three_originals_recovers_predictions_losses_gradients (tests.test_scdown.SCDownTests) ... ok
+test_state_reload_keeps_prediction_and_scale_sharing (tests.test_scdown.SCDownTests) ... ok
+test_untouched_initialization_constructor_and_init_rng_exact (tests.test_scdown.SCDownTests) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 5.780s
+
+OK
