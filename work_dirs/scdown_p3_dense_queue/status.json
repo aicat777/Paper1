@@ -1,0 +1,24 @@
+{
+  "state": "waiting_scdown_dsconv",
+  "queue_pid": 225130,
+  "queue_start_ticks": "52419712",
+  "updated_at": "2026-10-21T17:29:01.879068+08:00",
+  "dependency": {
+    "name": "scdown_dsconv",
+    "pid": 3376370,
+    "start_ticks": "50707007",
+    "status": "/home/pwt/Paper1/work_dirs/scdown_dsconv_queue/status.json",
+    "work_dir": "/home/pwt/Paper1/work_dirs/scdown_dsconv_rtmdet_tiny_dior_640_gpu1_bs36",
+    "log": "/home/pwt/Paper1/logs/scdown_dsconv_rtmdet_tiny_dior_640_gpu1_bs36.log"
+  },
+  "experiment": {
+    "name": "scdown_p3_dense_640_bs36",
+    "source_config": "/home/pwt/Paper1/configs/scdown_p3_dense/rtmdet_tiny_dior_640.py",
+    "config": "/home/pwt/Paper1/work_dirs/scdown_p3_dense_queue/scdown_p3_dense_640_bs36.py",
+    "work_dir": "/home/pwt/Paper1/work_dirs/scdown_p3_dense_rtmdet_tiny_dior_640_gpu1_bs36",
+    "log": "/home/pwt/Paper1/logs/scdown_p3_dense_rtmdet_tiny_dior_640_gpu1_bs36.log",
+    "preflight_report": "/home/pwt/Paper1/work_dirs/scdown_p3_dense_validation/queue_preflight.json",
+    "capacity_report": "/home/pwt/Paper1/work_dirs/scdown_p3_dense_validation/capacity_gpu1_bs36.json",
+    "validation_summary": "/home/pwt/Paper1/work_dirs/scdown_p3_dense_validation/checks.json"
+  }
+}

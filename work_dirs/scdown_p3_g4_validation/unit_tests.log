@@ -1,0 +1,13 @@
+test_detection_updates_bn_once_and_serialization (test_scdown_p3_g4.SCDownP3G4Tests) ... /home/pwt/miniconda3/envs/rtmdet/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3483.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+ok
+test_each_treatment_can_be_restored_to_its_control_exactly (test_scdown_p3_g4.SCDownP3G4Tests) ... ok
+test_initialization_rng_and_existing_treatments_are_exact (test_scdown_p3_g4.SCDownP3G4Tests) ... ok
+test_protocol_matches_both_completed_controls (test_scdown_p3_g4.SCDownP3G4Tests) ... ok
+test_scope_channels_untouched_paths_and_shared_head (test_scdown_p3_g4.SCDownP3G4Tests) ... [W NNPACK.cpp:64] Could not initialize NNPACK! Reason: Unsupported hardware.
+ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 6.816s
+
+OK

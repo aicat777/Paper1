@@ -1,0 +1,64 @@
+{
+  "status": "passed",
+  "method": "scdown_p3_noact",
+  "reference": "scdown_p3",
+  "parameters": 3819156,
+  "inference_conv_linear_gmac": 7.48197504,
+  "p3_spatial_groups": 96,
+  "p3_intermediate_silu": false,
+  "p3_final_activation": false,
+  "p3_trace": [
+    {
+      "path": "backbone.stage2.0.cv1",
+      "input": [
+        1,
+        48,
+        160,
+        160
+      ],
+      "output": [
+        1,
+        96,
+        160,
+        160
+      ]
+    },
+    {
+      "path": "backbone.stage2.0.cv2",
+      "input": [
+        1,
+        96,
+        160,
+        160
+      ],
+      "output": [
+        1,
+        96,
+        80,
+        80
+      ]
+    }
+  ],
+  "unchanged_scdown_sites": [
+    "backbone.stage3.0",
+    "backbone.stage4.0",
+    "neck.downsample_layers.1"
+  ],
+  "unchanged_initialization": true,
+  "only_parameter_exception": null,
+  "protocol_equal_to_experiment2": true,
+  "prediction_points": 8400,
+  "scratch": true,
+  "input_size": [
+    640,
+    640
+  ],
+  "formal_batch": 36,
+  "accumulation": 1,
+  "watched_parameter_tensors": 24,
+  "train_images": 5862,
+  "val_images": 5863,
+  "formal_batch_capacity_tested": false,
+  "config": "/home/pwt/Paper1/configs/scdown_p3_noact/rtmdet_tiny_dior_640.py",
+  "config_sha256": "fdfcc22464928e8afe0baae73aecc5777eff209b189e56f2d5d442ace9f910d4"
+}

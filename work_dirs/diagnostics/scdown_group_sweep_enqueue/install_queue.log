@@ -1,0 +1,4 @@
+scdown_g8 3697109 waiting_scdown_p3_noact
+scdown_g16 3698015 waiting_scdown_g8
+scdown_p3_g2 3698956 waiting_scdown_g16
+GROUP_SWEEP_INSERTION_VERIFIED; original training and A/B preserved

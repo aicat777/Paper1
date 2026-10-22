@@ -1,0 +1,7 @@
+scdown_g8 preflight passed
+scdown_g8 smoke passed
+scdown_g8 capacity passed
+scdown_g16 preflight passed
+scdown_g16 smoke passed
+scdown_g16 capacity passed
+GROUP_SWEEP_VALIDATION_PASSED

@@ -1,0 +1,64 @@
+{
+  "status": "passed",
+  "method": "scdown_p3_dense",
+  "reference": "scdown_p3",
+  "parameters": 3901236,
+  "inference_conv_linear_gmac": 8.00728704,
+  "p3_spatial_groups": 1,
+  "p3_intermediate_silu": true,
+  "p3_final_activation": false,
+  "p3_trace": [
+    {
+      "path": "backbone.stage2.0.cv1",
+      "input": [
+        1,
+        48,
+        160,
+        160
+      ],
+      "output": [
+        1,
+        96,
+        160,
+        160
+      ]
+    },
+    {
+      "path": "backbone.stage2.0.cv2",
+      "input": [
+        1,
+        96,
+        160,
+        160
+      ],
+      "output": [
+        1,
+        96,
+        80,
+        80
+      ]
+    }
+  ],
+  "unchanged_scdown_sites": [
+    "backbone.stage3.0",
+    "backbone.stage4.0",
+    "neck.downsample_layers.1"
+  ],
+  "unchanged_initialization": true,
+  "only_parameter_exception": "backbone.stage2.0.cv2.conv.weight",
+  "protocol_equal_to_experiment2": true,
+  "prediction_points": 8400,
+  "scratch": true,
+  "input_size": [
+    640,
+    640
+  ],
+  "formal_batch": 36,
+  "accumulation": 1,
+  "watched_parameter_tensors": 24,
+  "train_images": 5862,
+  "val_images": 5863,
+  "formal_batch_capacity_tested": false,
+  "config": "/home/pwt/Paper1/work_dirs/scdown_p3_dense_queue/scdown_p3_dense_640_bs36.py",
+  "config_sha256": "82b5bb5512423770d0e661df1c16436061c9c6cb01d15f767dd61df3f07accda"
+}

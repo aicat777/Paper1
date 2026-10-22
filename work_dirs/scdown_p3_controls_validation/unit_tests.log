@@ -1,0 +1,16 @@
+test_checkpoint_roundtrip_preserves_prediction_and_shared_head (test_scdown_p3_controls.P3ControlTests) ... ok
+test_dense_diagonal_kernel_contains_scdown_function_and_gradients (test_scdown_p3_controls.P3ControlTests) ... ok
+test_forward_backward_and_bn_states_match_independent_torch_reference (test_scdown_p3_controls.P3ControlTests) ... ok
+test_initialization_rng_exact_including_p3_pw_bn_and_other_scdowns (test_scdown_p3_controls.P3ControlTests) ... ok
+test_only_intended_operator_changes_with_correct_grid_head_and_counts (test_scdown_p3_controls.P3ControlTests) ... [W NNPACK.cpp:64] Could not initialize NNPACK! Reason: Unsupported hardware.
+/home/pwt/miniconda3/envs/rtmdet/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3483.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+ok
+test_original_modules_not_modified_and_incorrect_sources_rejected (test_scdown_p3_controls.P3ControlTests) ... ok
+test_real_detection_gradients_updates_and_one_bn_execution (test_scdown_p3_controls.P3ControlTests) ... ok
+test_restore_only_changed_part_recovers_predictions_losses_gradients_exactly (test_scdown_p3_controls.P3ControlTests) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 15.817s
+
+OK

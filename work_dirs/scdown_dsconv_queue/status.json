@@ -1,8 +1,8 @@
 {
-  "state": "waiting_scdown_g4",
+  "state": "training",
   "queue_pid": 3376370,
   "queue_start_ticks": "50707007",
-  "updated_at": "2026-10-21T12:43:33.504250+08:00",
+  "updated_at": "2026-10-22T23:58:41.985681+08:00",
   "dependency": {
     "name": "scdown_g4",
     "pid": 3375124,
@@ -20,5 +20,14 @@
     "preflight_report": "/home/pwt/Paper1/work_dirs/scdown_dsconv_validation/queue_preflight.json",
     "capacity_report": "/home/pwt/Paper1/work_dirs/scdown_dsconv_validation/capacity_gpu1_bs36.json",
     "validation_summary": "/home/pwt/Paper1/work_dirs/scdown_dsconv_validation/checks.json"
-  }
+  },
+  "child_pid": 2645842,
+  "command": [
+    "/home/pwt/miniconda3/envs/rtmdet/bin/python",
+    "-u",
+    "/home/pwt/Paper1/mmyolo/tools/train.py",
+    "/home/pwt/Paper1/work_dirs/scdown_dsconv_queue/scdown_dsconv_640_bs36.py",
+    "--work-dir",
+    "/home/pwt/Paper1/work_dirs/scdown_dsconv_rtmdet_tiny_dior_640_gpu1_bs36"
+  ]
 }

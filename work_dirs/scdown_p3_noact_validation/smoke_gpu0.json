@@ -1,0 +1,181 @@
+{
+  "status": "passed",
+  "method": "scdown_p3_noact",
+  "official_train_entrypoint": true,
+  "input_size": [
+    640,
+    640
+  ],
+  "microbatch": 2,
+  "optimizer_updates": 16,
+  "accumulation": 1,
+  "val_passes": 2,
+  "val_images_per_pass": 32,
+  "predictions_checked": 64,
+  "raw_predictions_checked": 8,
+  "full_state_ema_roundtrips": 2,
+  "model_optimizer_scaler_serialization": true,
+  "strong_and_weak_augmentation": true,
+  "coco_evaluation_scoped_to_subset": true,
+  "watched_parameter_tensors": 24,
+  "finite_losses": true,
+  "finite_predictions": true,
+  "amp_skipped_updates": 0,
+  "gradient_max": {
+    "neck.downsample_layers.1.cv2.bn.weight": 2.6933698654174805,
+    "neck.downsample_layers.1.cv2.bn.bias": 0.0003113746643066406,
+    "neck.downsample_layers.1.cv2.conv.weight": 8.7421875,
+    "neck.downsample_layers.1.cv1.bn.weight": 0.4945437014102936,
+    "neck.downsample_layers.1.cv1.bn.bias": 0.9221516847610474,
+    "neck.downsample_layers.1.cv1.conv.weight": 11.8359375,
+    "backbone.stage4.0.cv2.bn.weight": 16.913990020751953,
+    "backbone.stage4.0.cv2.bn.bias": 0.0021759867668151855,
+    "backbone.stage4.0.cv2.conv.weight": 453.5,
+    "backbone.stage4.0.cv1.bn.weight": 3.1775097846984863,
+    "backbone.stage4.0.cv1.bn.bias": 4.770927906036377,
+    "backbone.stage4.0.cv1.conv.weight": 45.5,
+    "backbone.stage3.0.cv2.bn.weight": 42.29835510253906,
+    "backbone.stage3.0.cv2.bn.bias": 0.0054912567138671875,
+    "backbone.stage3.0.cv2.conv.weight": 803.0,
+    "backbone.stage3.0.cv1.bn.weight": 8.446640968322754,
+    "backbone.stage3.0.cv1.bn.bias": 15.981502532958984,
+    "backbone.stage3.0.cv1.conv.weight": 109.0,
+    "backbone.stage2.0.cv2.bn.weight": 65.49796295166016,
+    "backbone.stage2.0.cv2.bn.bias": 0.012767791748046875,
+    "backbone.stage2.0.cv2.conv.weight": 1481.0,
+    "backbone.stage2.0.cv1.bn.weight": 0.15684494376182556,
+    "backbone.stage2.0.cv1.bn.bias": 2.5029335021972656,
+    "backbone.stage2.0.cv1.conv.weight": 170.5
+  },
+  "parameter_updates_max": {
+    "backbone.stage2.0.cv1.conv.weight": 0.006514965556561947,
+    "backbone.stage2.0.cv1.bn.weight": 0.005769193172454834,
+    "backbone.stage2.0.cv1.bn.bias": 0.004727954510599375,
+    "backbone.stage2.0.cv2.conv.weight": 0.0065870340913534164,
+    "backbone.stage2.0.cv2.bn.weight": 0.005847752094268799,
+    "backbone.stage2.0.cv2.bn.bias": 0.005653352476656437,
+    "backbone.stage3.0.cv1.conv.weight": 0.006919257342815399,
+    "backbone.stage3.0.cv1.bn.weight": 0.0061484575271606445,
+    "backbone.stage3.0.cv1.bn.bias": 0.00586146954447031,
+    "backbone.stage3.0.cv2.conv.weight": 0.0064310841262340546,
+    "backbone.stage3.0.cv2.bn.weight": 0.006132185459136963,
+    "backbone.stage3.0.cv2.bn.bias": 0.005763898603618145,
+    "backbone.stage4.0.cv1.conv.weight": 0.007348576560616493,
+    "backbone.stage4.0.cv1.bn.weight": 0.006374716758728027,
+    "backbone.stage4.0.cv1.bn.bias": 0.005944423843175173,
+    "backbone.stage4.0.cv2.conv.weight": 0.006379141937941313,
+    "backbone.stage4.0.cv2.bn.weight": 0.006674289703369141,
+    "backbone.stage4.0.cv2.bn.bias": 0.0062954663299024105,
+    "neck.downsample_layers.1.cv1.conv.weight": 0.006985683925449848,
+    "neck.downsample_layers.1.cv1.bn.weight": 0.005028247833251953,
+    "neck.downsample_layers.1.cv1.bn.bias": 0.004941518884152174,
+    "neck.downsample_layers.1.cv2.conv.weight": 0.006374962627887726,
+    "neck.downsample_layers.1.cv2.bn.weight": 0.005826473236083984,
+    "neck.downsample_layers.1.cv2.bn.bias": 0.005148777738213539
+  },
+  "losses": [
+    {
+      "loss": 0.5187039375305176,
+      "loss_cls": 0.349253386259079,
+      "loss_bbox": 0.1694505512714386
+    },
+    {
+      "loss": 0.6273177266120911,
+      "loss_cls": 0.3411945402622223,
+      "loss_bbox": 0.2861231863498688
+    },
+    {
+      "loss": 0.8416554927825928,
+      "loss_cls": 0.32852455973625183,
+      "loss_bbox": 0.5131309628486633
+    },
+    {
+      "loss": 2.259477376937866,
+      "loss_cls": 0.5566550493240356,
+      "loss_bbox": 1.7028223276138306
+    },
+    {
+      "loss": 2.070437431335449,
+      "loss_cls": 0.2870206832885742,
+      "loss_bbox": 1.783416748046875
+    },
+    {
+      "loss": 2.0447325706481934,
+      "loss_cls": 0.23981566727161407,
+      "loss_bbox": 1.8049168586730957
+    },
+    {
+      "loss": 2.3035545349121094,
+      "loss_cls": 0.7958546280860901,
+      "loss_bbox": 1.5076998472213745
+    },
+    {
+      "loss": 2.4223976135253906,
+      "loss_cls": 1.29618501663208,
+      "loss_bbox": 1.126212477684021
+    },
+    {
+      "loss": 0.38884666562080383,
+      "loss_cls": 0.2838139832019806,
+      "loss_bbox": 0.10503267496824265
+    },
+    {
+      "loss": 0.582314133644104,
+      "loss_cls": 0.27975139021873474,
+      "loss_bbox": 0.30256274342536926
+    },
+    {
+      "loss": 0.6826040744781494,
+      "loss_cls": 0.28617480397224426,
+      "loss_bbox": 0.39642924070358276
+    },
+    {
+      "loss": 2.054558038711548,
+      "loss_cls": 0.5633360743522644,
+      "loss_bbox": 1.4912219047546387
+    },
+    {
+      "loss": 1.8009804487228394,
+      "loss_cls": 0.6269077062606812,
+      "loss_bbox": 1.1740727424621582
+    },
+    {
+      "loss": 2.1298396587371826,
+      "loss_cls": 0.8647623062133789,
+      "loss_bbox": 1.2650773525238037
+    },
+    {
+      "loss": 1.7575087547302246,
+      "loss_cls": 0.6263269782066345,
+      "loss_bbox": 1.1311817169189453
+    },
+    {
+      "loss": 2.1003873348236084,
+      "loss_cls": 0.6101166009902954,
+      "loss_bbox": 1.490270733833313
+    }
+  ],
+  "metrics": [
+    {
+      "pascal_voc/mAP": 0.0,
+      "coco/bbox_mAP": 0.0,
+      "coco/bbox_mAP_50": 0.0
+    },
+    {
+      "pascal_voc/mAP": 0.0,
+      "coco/bbox_mAP": 0.0,
+      "coco/bbox_mAP_50": 0.0
+    }
+  ],
+  "assignment": {
+    "fallback_positives": 0,
+    "floored_regression_positives": 0,
+    "unmatched_tiny": 0
+  },
+  "loss_scale_init": 32,
+  "warmup_enabled": false,
+  "saved_checkpoints": false,
+  "peak_allocated_gib": 0.6482019424438477,
+  "peak_reserved_gib": 0.7109375,
+  "elapsed_seconds": 14.387086703034583
+}

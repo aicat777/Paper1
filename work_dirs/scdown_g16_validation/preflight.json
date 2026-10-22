@@ -1,0 +1,191 @@
+{
+  "status": "passed",
+  "method": "scdown_g16",
+  "spatial_groups": 16,
+  "parameters": 2960724,
+  "inference_conv_linear_gmac": 6.75298944,
+  "parameter_reduction_vs_original_percent": 39.31335919263871,
+  "mac_reduction_vs_original_percent": 15.457680309557432,
+  "actual_sites": [
+    {
+      "path": "backbone.stage2.1.blocks.0.conv1",
+      "input": [
+        1,
+        48,
+        80,
+        80
+      ],
+      "output": [
+        1,
+        48,
+        80,
+        80
+      ]
+    },
+    {
+      "path": "backbone.stage3.0",
+      "input": [
+        1,
+        96,
+        80,
+        80
+      ],
+      "output": [
+        1,
+        192,
+        40,
+        40
+      ]
+    },
+    {
+      "path": "backbone.stage3.1.blocks.0.conv1",
+      "input": [
+        1,
+        96,
+        40,
+        40
+      ],
+      "output": [
+        1,
+        96,
+        40,
+        40
+      ]
+    },
+    {
+      "path": "backbone.stage4.0",
+      "input": [
+        1,
+        192,
+        40,
+        40
+      ],
+      "output": [
+        1,
+        384,
+        20,
+        20
+      ]
+    },
+    {
+      "path": "backbone.stage4.2.blocks.0.conv1",
+      "input": [
+        1,
+        192,
+        20,
+        20
+      ],
+      "output": [
+        1,
+        192,
+        20,
+        20
+      ]
+    },
+    {
+      "path": "neck.top_down_layers.0.0.blocks.0.conv1",
+      "input": [
+        1,
+        96,
+        40,
+        40
+      ],
+      "output": [
+        1,
+        96,
+        40,
+        40
+      ]
+    },
+    {
+      "path": "neck.top_down_layers.1.blocks.0.conv1",
+      "input": [
+        1,
+        48,
+        80,
+        80
+      ],
+      "output": [
+        1,
+        48,
+        80,
+        80
+      ]
+    },
+    {
+      "path": "neck.bottom_up_layers.0.blocks.0.conv1",
+      "input": [
+        1,
+        96,
+        40,
+        40
+      ],
+      "output": [
+        1,
+        96,
+        40,
+        40
+      ]
+    },
+    {
+      "path": "neck.downsample_layers.1",
+      "input": [
+        1,
+        192,
+        40,
+        40
+      ],
+      "output": [
+        1,
+        192,
+        20,
+        20
+      ]
+    },
+    {
+      "path": "neck.bottom_up_layers.1.blocks.0.conv1",
+      "input": [
+        1,
+        192,
+        20,
+        20
+      ],
+      "output": [
+        1,
+        192,
+        20,
+        20
+      ]
+    }
+  ],
+  "scdown_sites": [
+    "backbone.stage3.0",
+    "backbone.stage4.0",
+    "neck.downsample_layers.1"
+  ],
+  "grouped_sites": [
+    "backbone.stage2.1.blocks.0.conv1",
+    "backbone.stage3.1.blocks.0.conv1",
+    "backbone.stage4.2.blocks.0.conv1",
+    "neck.top_down_layers.0.0.blocks.0.conv1",
+    "neck.top_down_layers.1.blocks.0.conv1",
+    "neck.bottom_up_layers.0.blocks.0.conv1",
+    "neck.bottom_up_layers.1.blocks.0.conv1"
+  ],
+  "unchanged_initialization_including_control_scdowns": true,
+  "protocol_equal_to_scdown_control": true,
+  "prediction_points": 8400,
+  "scratch": true,
+  "input_size": [
+    640,
+    640
+  ],
+  "formal_batch": 36,
+  "accumulation": 1,
+  "watched_parameter_tensors": 39,
+  "train_images": 5862,
+  "val_images": 5863,
+  "formal_batch_capacity_tested": false,
+  "config": "/home/pwt/Paper1/work_dirs/scdown_g16_validation/formal_640_bs36.py",
+  "config_sha256": "d47ce04329cc5dbb3ff7bf233c1ad3a29d0a5beaeac01fb8f00bac612898f58f"
+}

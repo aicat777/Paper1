@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/home/pwt/Paper1/work_dirs/scdown_group_sweep_validation/run_checks.py", line 11, in <module>
+    assert '\nRan 6 tests in ' in unit.read_text() and unit.read_text().rstrip().endswith('OK')
+AssertionError

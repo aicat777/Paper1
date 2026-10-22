@@ -1,8 +1,8 @@
 {
-  "state": "training",
+  "state": "complete",
   "queue_pid": 136580,
   "queue_start_ticks": "45306193",
-  "updated_at": "2026-10-21T08:40:44.480329+08:00",
+  "updated_at": "2026-10-21T16:37:14.362450+08:00",
   "dependency": {
     "name": "scdown_g2",
     "pid": 135590,
@@ -20,14 +20,5 @@
     "preflight_report": "/home/pwt/Paper1/work_dirs/scdown_p3_validation/queue_preflight.json",
     "capacity_report": "/home/pwt/Paper1/work_dirs/scdown_p3_validation/capacity_gpu1_bs36.json",
     "validation_summary": "/home/pwt/Paper1/work_dirs/scdown_p3_validation/checks.json"
-  },
-  "child_pid": 2503071,
-  "command": [
-    "/home/pwt/miniconda3/envs/rtmdet/bin/python",
-    "-u",
-    "/home/pwt/Paper1/mmyolo/tools/train.py",
-    "/home/pwt/Paper1/work_dirs/scdown_p3_queue/scdown_p3_640_bs36.py",
-    "--work-dir",
-    "/home/pwt/Paper1/work_dirs/scdown_p3_rtmdet_tiny_dior_640_gpu1_bs36"
-  ]
+  }
 }

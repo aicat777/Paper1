@@ -1,0 +1,14 @@
+test_detection_gradients_updates_bn_and_checkpoint_restore (test_scdown_group_sweep.SCDownGroupSweepTests) ... /home/pwt/miniconda3/envs/rtmdet/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3483.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+ok
+test_group_partitions_match_block_diagonal_dense_forward_and_backward (test_scdown_group_sweep.SCDownGroupSweepTests) ... ok
+test_protocol_matches_existing_group_controls (test_scdown_group_sweep.SCDownGroupSweepTests) ... ok
+test_restoring_seven_sites_recovers_full_predictions_losses_and_gradients (test_scdown_group_sweep.SCDownGroupSweepTests) ... ok
+test_scope_dimensions_channels_and_head_sharing (test_scdown_group_sweep.SCDownGroupSweepTests) ... [W NNPACK.cpp:64] Could not initialize NNPACK! Reason: Unsupported hardware.
+ok
+test_untouched_initialization_random_state_and_idempotence (test_scdown_group_sweep.SCDownGroupSweepTests) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 14.892s
+
+OK

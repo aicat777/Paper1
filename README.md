@@ -29,7 +29,7 @@ python scripts/convert_dior_to_coco.py
 
 **SCDown与实例类别排序监督版均已完成300轮**，640输入、真实batch36、不累积、从零训练、每10轮验证。SCDown的VOC mAP75.87%、COCO AP56.5%，排序监督版75.56%/55.7%；原实例语义监督76.31%/56.9%，基线75.65%/56.4%。LSConv三处骨干版75.57%/55.9%、检测头版75.27%/54.7%、neck输出层版75.12%/55.6%，neck内部块版已取消。原理、检查和接续规则见 [TRAINING.md](TRAINING.md)。
 
-中心点辅助与实验1 SCDown＋G2均已完成；G2的VOC mAP75.74%、COCO AP56.4%。GPU1当前训练 **实验2 SCDown扩展P3 → 仅匹配GT的ROI辅助 → 随机等数量GT的ROI辅助 → 实验3 SCDown扩展P2/P3 → G4 → DSConv**。各组均为640、真实batch36、不累积、从零300轮、每10轮验证；每组启动前核验正式容量，前序失败则停止接续。状态在各方法 `work_dirs/<方法>_queue/status.json`。G4与标准DSConv已按此顺序接入队列，使用独立代码、冻结配置和检查报告。
+SCDown实验1/2/3与G4均已完成，VOC mAP/COCO AP分别为75.74%/56.4%、76.11%/56.7%、76.12%/56.4%、75.58%/56.2%；仅匹配GT和随机等数量GT的ROI对照分别为75.68%/56.5%、75.99%/56.4%。GPU1当前队列为 **DSConv（训练中）→ 对照A（P3密集空间卷积）→ 对照B（P3去中间SiLU）→ G8 → G16 → 四处SCDown＋G2**。各组均为640、真实batch36、不累积、从零300轮、每10轮验证；每组启动前核验正式容量，前序失败则停止接续。状态在各方法 `work_dirs/<方法>_queue/status.json`。四处SCDown＋G4暂不接续。
 
 | 配置目录 | 功能 |
 |---|---|
@@ -37,8 +37,13 @@ python scripts/convert_dior_to_coco.py
 | `configs/scdown/` | 原始基线上，仅替换骨干两处深层及PAN最后一次降采样；先1×1混合，再DW3×3降采样 |
 | `configs/scdown_g2/` | 实验1：三处SCDown＋骨干P3–P5及neck内部七个CSP的3×3卷积分两组 |
 | `configs/scdown_g4/` | 三处SCDown＋相同七处3×3改为groups=4，作为分组数对照 |
+| `configs/scdown_g8/` | 三处SCDown＋相同七处3×3改为groups=8，每组6/12/24通道 |
+| `configs/scdown_g16/` | 三处SCDown＋相同七处3×3改为groups=16，每组3/6/12通道 |
 | `configs/scdown_dsconv/` | 三处SCDown＋相同七处3×3改为DW3×3/BN/SiLU→PW1×1/BN/SiLU |
 | `configs/scdown_p3/` | 实验2：三处SCDown＋骨干P3入口，共四处；不修改CSP卷积分组 |
+| `configs/scdown_p3_g2/` | 四处SCDown＋现有七个CSP内部3×3分两组，用于验证两项改动的组合效果 |
+| `configs/scdown_p3_dense/` | 机理对照A：只将实验2的P3入口DW3×3改为密集3×3，保留PW/BN/SiLU与末端BN |
+| `configs/scdown_p3_noact/` | 机理对照B：只去掉实验2的P3入口中间SiLU，保留卷积、两层BN与无末端激活 |
 | `configs/scdown_p2p3/` | 实验3：三处SCDown＋骨干P2、P3入口，共五处；仍使用三尺度检测头 |
 | `configs/efs/` | 独立 EFS 四尺度实验，使用官方组件 |
 | `configs/efs_adapt/` | EFS保留96通道P3侧向特征，P2检测塔独立，P3–P5沿用共享卷积 |
@@ -70,11 +75,15 @@ python scripts/convert_dior_to_coco.py
 
 `scdown`使用独立代码与配置，不叠加LSConv或实例监督。总参数3,854,964、卷积7.623901 GMAC，较基线减少20.98%和4.55%。9项测试、24组作者算子GPU前后向对照、官方入口真实数据训练/验证及GPU1正式batch36压力检查通过；完整训练后VOC比基线高0.22个百分点、COCO AP高0.1个百分点。入口为 `scripts/scdown_probe.py`，汇总在 `work_dirs/scdown_validation/checks.json`。
 
+`scdown_p3_g2`复用已验证的G2算子与neck，新增独立骨干与配置，不修改现有实验。总参数3,342,228、卷积7.017489 GMAC，较原始基线减少31.49%和12.15%。5项组合测试、官方入口16次AMP更新与两次32图验证，以及GPU0 batch8/每图1200框的压力检查通过；正式GPU1 batch36容量检查随队列启动前执行。结果汇总在 `work_dirs/scdown_p3_g2_validation/checks.json`。
+
+G8/G16分别使用独立代码与配置，在三处SCDown上保持已有G2/G4的七处作用范围；总参数3,020,340/2,960,724，卷积6.811050/6.752989 GMAC。6项测试、各16次官方AMP更新与两次32图验证、各三次batch8/1200框压力更新通过；已排在四处版＋G2之前。复核入口 `scripts/scdown_group_sweep_probe.py`。四处版＋G4仅保留CPU验证过的实现，尚未做GPU检查或入队。
+
 FDW＋局部KSM已独立实现并通过作者算子对照、GPU训练/验证和batch12压力检查，配置为 [configs/fdw_ksm/rtmdet_tiny_dior_640.py](configs/fdw_ksm/rtmdet_tiny_dior_640.py)，尚未加入完整训练队列。正式配置沿用FDW的batch36，启动前仍需核验该batch的容量。
 
 四项候选各用同名独立代码与配置，不相互组合。FreqFusion按作者检测配置迁移完整算子，外层保留基线CSP/PAN融合；其余三项是本项目设计。均使用640、从零训练、官方train/val、真实batch36且不累积梯度，与640基线优化协议一致；已通过结构/数值核对和GPU真实数据短测。实例语义监督仅在辅助损失中排除增强后无面积的框，所有正面积小框和原检测损失保留。正式容量检查失败就停止，不自动修改batch。已完成LSConv扩展使用12×3，其BN批统计不同。说明见 [TRAINING.md](TRAINING.md)，复核入口为 `scripts/candidate_probe.py` 和 `scripts/candidate_capacity.py`。
 
-干净目标多尺度监督使用独立的 `custom_models/instance_semantic_multiscale/` 和同名配置，替代旧版的整图GT辅助取样。裁剪分支与主图共享参数，BN统计隔离；两次反传后只更新一次参数，推理路径与旧版完全一致。实现和检查入口为 `scripts/instance_semantic_multiscale_probe.py`；已在后台排队，状态见 `work_dirs/instance_semantic_multiscale_queue/status.json`。
+干净目标多尺度监督使用独立的 `custom_models/instance_semantic_multiscale/` 和同名配置，替代旧版的整图GT辅助取样。裁剪分支与主图共享参数，BN统计隔离；两次反传后只更新一次参数，推理路径与旧版完全一致。已完成300轮，VOC mAP75.86%、COCO AP56.3%。实现和检查入口为 `scripts/instance_semantic_multiscale_probe.py`。
 
 `freq_fusion_residual`为独立结构变体，不修改旧FreqFusion：完整滤波与偏移算子保留，高频残差在FP32中直接提取，分别经192→96、96→96的无偏置1×1卷积，在两处完整CSP融合块后注入。总参数5.015M、Conv/Linear 8.286 GMAC。6项测试、6组作者算子GPU FP32/AMP对照及官方入口短测通过，正式batch36容量检查通过；已完成300轮，VOC mAP76.29%、COCO AP56.9%。状态在 `work_dirs/freq_fusion_residual_queue/status.json`，复核入口为 `scripts/freq_fusion_residual_probe.py`。
 

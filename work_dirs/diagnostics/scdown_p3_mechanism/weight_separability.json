@@ -1,0 +1,74 @@
+{
+  "status": "passed",
+  "method": "existing_dense_P3_filter_separability_readonly",
+  "results": [
+    {
+      "model": "scdown3_initial",
+      "weight": "backbone.stage2.0.conv.weight",
+      "shape": [
+        96,
+        48,
+        3,
+        3
+      ],
+      "mean_rank1_uncentered_energy": 0.20098186859776188,
+      "median_rank1_uncentered_energy": 0.19839175941370427,
+      "mean_rank2_uncentered_energy": 0.3681430026688807,
+      "rank1_uncentered_quantiles": [
+        0.18150176598561066,
+        0.19898142385231943,
+        0.22262705331556287
+      ],
+      "mean_centered_pca_pc1_variance_ratio": 0.2020186799827758
+    },
+    {
+      "model": "original_baseline",
+      "checkpoint": "/home/pwt/Paper1/work_dirs/rtmdet_tiny_dior_640_gpu1_bs36/best_pascal_voc_mAP_epoch_300.pth",
+      "checkpoint_sha256": "4916624822a10f57a9c96cd58162ab120cbf7ceb4491dd69983fa8b4b23a6c28",
+      "weight": "backbone.stage2.0.conv.weight",
+      "shape": [
+        96,
+        48,
+        3,
+        3
+      ],
+      "mean_rank1_uncentered_energy": 0.44241067462168826,
+      "median_rank1_uncentered_energy": 0.4350814756714961,
+      "mean_rank2_uncentered_energy": 0.6543236077140611,
+      "rank1_uncentered_quantiles": [
+        0.3244822872144655,
+        0.43518144383402846,
+        0.5607961045691666
+      ],
+      "mean_centered_pca_pc1_variance_ratio": 0.44456976111557417
+    },
+    {
+      "model": "scdown3",
+      "checkpoint": "/home/pwt/Paper1/work_dirs/scdown_rtmdet_tiny_dior_640_gpu1_bs36/best_pascal_voc_mAP_epoch_300.pth",
+      "checkpoint_sha256": "0608d3662ce83a3c086ea01199ee768a2263f5a22eb8f69bef4a6367c931f98b",
+      "weight": "backbone.stage2.0.conv.weight",
+      "shape": [
+        96,
+        48,
+        3,
+        3
+      ],
+      "mean_rank1_uncentered_energy": 0.43566718736016935,
+      "median_rank1_uncentered_energy": 0.4187426154245634,
+      "mean_rank2_uncentered_energy": 0.6412882171635327,
+      "rank1_uncentered_quantiles": [
+        0.3380855556102707,
+        0.4215248220296217,
+        0.5504997712037997
+      ],
+      "mean_centered_pca_pc1_variance_ratio": 0.4375391574854938
+    }
+  ],
+  "centered_pca": "Treat the 48 input-channel 3x3 slices per output filter as samples, center each of nine spatial components across input channels; first PC variance ratio, then mean over 96 filters.",
+  "uncentered_svd": "Per output-channel 48x9 matrix; leading singular value squared divided by squared Frobenius norm.",
+  "limitations": [
+    "Weight correlation supports the plausibility of compression; it does not establish the cause of the AP gain.",
+    "SCDown includes intermediate BN/SiLU and a second BN; a linear rank1 kernel factorization is not the same function.",
+    "No model changes, new training, GPU workloads or queue changes."
+  ]
+}

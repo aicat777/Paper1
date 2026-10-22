@@ -2,7 +2,7 @@
 
 ## 当前配置
 
-[FreqFusion](configs/freq_fusion/rtmdet_tiny_dior_640.py)、LSConv 20处版、LSConv检测头版、实例语义监督及FreqFusion高频残差版已完成；干净目标多尺度监督已完成300轮（VOC mAP75.86%、COCO AP56.3%）；neck输出层版`lsconv_neck_out`已完成（75.12%/55.6%）。实例类别排序监督版`instance_semantic_rank`与SCDown均已完成300轮，分别为75.56%/55.7%和75.87%/56.5%。ROI中心点对照与实验1 `scdown_g2`已完成，G2为75.74%/56.4%。GPU1当前训练实验2 `scdown_p3`，随后为仅匹配GT的ROI对照 → 随机等数量GT的ROI对照 → 实验3 `scdown_p2p3` → G4 `scdown_g4` → 标准DSConv `scdown_dsconv`。LSConv neck内部块版已取消。各LSConv变体以已完成的三处骨干版为结构对照，重新从零训练。细小目标匹配修正、轻量检测头、`lsconv_csp`、`lsblock_csp`暂不接续。使用 Conda `rtmdet` 和官方 `mmyolo/tools/train.py`；中断恢复只使用本实验的完整状态。
+GPU1当前训练标准DSConv，后续依次为P3对照A（密集空间卷积）→ P3对照B（去中间SiLU）→ G8 → G16 → 四处SCDown＋G2；四处版＋G4暂不接续。SCDown实验1/2/3与G4已完成300轮，VOC mAP/COCO AP分别为75.74%/56.4%、76.11%/56.7%、76.12%/56.4%、75.58%/56.2%；仅匹配GT与随机等数量GT的ROI对照为75.68%/56.5%、75.99%/56.4%。其余已完成方法的结构和结果见下文。LSConv neck内部块版已取消；细小目标匹配、轻量检测头、`lsconv_csp`、`lsblock_csp`暂不接续。使用Conda `rtmdet`与官方 `mmyolo/tools/train.py`，中断恢复只使用本实验的完整状态。
 
 | 项目 | 设置 |
 |---|---|
@@ -68,18 +68,16 @@ EFS适配已完成300轮：EMA的VOC mAP75.62%、COCO AP56.4%、小/中/大目�
 
 ## 启动与状态
 
-中心点辅助与SCDown实验1已完成；当前运行SCDown实验2，随后为仅匹配GT、随机等数量GT、SCDown实验3、G4、标准DSConv；均从零训练。状态与最近训练日志查询：
+当前运行DSConv，随后为P3对照A、P3对照B、G8、G16、四处SCDown＋G2；均从零训练。状态与最近训练日志查询：
 
 ```bash
-tail -n 20 /home/pwt/Paper1/logs/scdown_p3_rtmdet_tiny_dior_640_gpu1_bs36.log
-cat /home/pwt/Paper1/work_dirs/instance_semantic_center_queue/status.json
-cat /home/pwt/Paper1/work_dirs/scdown_g2_queue/status.json
-cat /home/pwt/Paper1/work_dirs/scdown_p3_queue/status.json
-cat /home/pwt/Paper1/work_dirs/instance_semantic_matched_queue/status.json
-cat /home/pwt/Paper1/work_dirs/instance_semantic_random_queue/status.json
-cat /home/pwt/Paper1/work_dirs/scdown_p2p3_queue/status.json
-cat /home/pwt/Paper1/work_dirs/scdown_g4_queue/status.json
+tail -n 20 /home/pwt/Paper1/logs/scdown_dsconv_rtmdet_tiny_dior_640_gpu1_bs36.log
 cat /home/pwt/Paper1/work_dirs/scdown_dsconv_queue/status.json
+cat /home/pwt/Paper1/work_dirs/scdown_p3_dense_queue/status.json
+cat /home/pwt/Paper1/work_dirs/scdown_p3_noact_queue/status.json
+cat /home/pwt/Paper1/work_dirs/scdown_g8_queue/status.json
+cat /home/pwt/Paper1/work_dirs/scdown_g16_queue/status.json
+cat /home/pwt/Paper1/work_dirs/scdown_p3_g2_queue/status.json
 nvidia-smi
 ```
 
@@ -372,6 +370,8 @@ SCDown已在实例类别排序监督成功完成后自动接续并完成300轮�
 
 实验1分组位置为骨干 `stage2.1`、`stage3.1`、`stage4.2`，以及neck的两处top-down和两处bottom-up CSP内部 `blocks.0.conv1`。通道48/96/192各分成连续的两组，每组24/48/96通道；保留原BN、SiLU、后续DW5×5和完整1×1通道混合。不额外加shuffle或投影，不改P2内部块、neck输出和检测塔。实验2、3只扩展降采样，P2入口为24→48，不新增P2预测尺度，也不包含实验1的G2改动。
 
+实验1、2、3已完成300轮：EMA的VOC mAP/COCO AP分别为75.74%/56.4%、76.11%/56.7%、76.12%/56.4%；三处SCDown为75.87%/56.5%。实验2相对三处版仅新增P3入口替换，后期曲线支持小幅收益。实验3比实验2少8,688参数（0.23%）和1.82% MAC，VOC基本相同，COCO AP低0.3个百分点。
+
 14项测试通过，覆盖原三处版及新增作用范围、分组与块对角稠密卷积的前向/梯度对照、奇数尺寸采样中心、初始化随机状态及还原新增替换后的完整预测/损失/梯度一致性。三版各自通过官方入口真实数据16次AMP更新、两次32图VOC/COCO验证、EMA交换及模型/优化器/scaler状态读写；分别核对39/24/30个参数张量有有限非零梯度并实际更新。
 
 GPU0共享环境batch8、每图1200框、三次更新的压力峰值张量分别7.93/8.04/8.24 GiB，保留显存9.16/9.26/9.35 GiB；这不是正式batch36容量结论。正式GPU1检查将在各自前序成功完成后执行。短测关闭warmup并将loss scale设为32，仅用于核对实际更新；正式配置不变，不保留短测检查点。检查摘要在各自 `work_dirs/<方法>_validation/checks.json`，冻结配置与接续身份在 `work_dirs/<方法>_queue/`。
@@ -387,7 +387,44 @@ GPU0共享环境batch8、每图1200框、三次更新的压力峰值张量分别
 
 G4将48/96/192通道各分为四组，每组12/24/48通道，保持原BN和SiLU。DSConv使用MMCV的标准深度可分离卷积：DW3×3/BN/SiLU→PW1×1/BN/SiLU，沿用RTMDet归一化和激活；对应MobileNet的DW→PW次序，激活为SiLU而非原论文ReLU。原CSP的后续DW5×5→PW1×1仍保留，因此此分支成为DW3×3→PW1×1→DW5×5→PW1×1，各步骤均含原定的BN/SiLU。
 
+G1指三处SCDown对照中这七处仍采用普通卷积，总参数3,854,964；G2/G4仅减少这些3×3的跨通道连接，后续原有1×1仍混合全部通道。G4已完成300轮，VOC mAP75.58%、COCO AP56.2%；DSConv仍在训练。
+
 8项测试通过，覆盖作用范围、通道与共享关系、未改动参数及随机状态、G4与块对角稠密卷积的前向/梯度对照、DSConv与独立PyTorch参考的前向/梯度对照、还原七处后的整模型预测/损失/梯度一致性、实际检测梯度更新、单次BN更新及状态读写。两版各自通过官方入口16次真实数据AMP更新、两次32图VOC/COCO验证、EMA交换与模型/优化器/scaler读写，39/60个相关参数张量均有有限非零梯度并实际更新。GPU0共享环境、batch8、每图1200框的三次压力更新通过，G4/DSConv峰值张量7.93/7.98 GiB、保留显存9.16/9.12 GiB；正式GPU1 batch36容量检查将在各自前序成功完成后执行，通过后才启动训练。短测关闭warmup、loss scale设为32，不保留检查点；正式配置保持原调度。检查入口支持 `preflight`、`smoke`、`capacity`；摘要及源码校验值在各自 `work_dirs/<方法>_validation/checks.json`。
+
+## G8/G16分组数对照
+
+两版沿用三处SCDown和原G2/G4的七处CSP `conv1`，分别使用独立的 `custom_models/scdown_g8/`、`custom_models/scdown_g16/` 与同名配置目录，只改变分组数，保留各层原BN/SiLU和后续DW5×5/PW1×1。骨干P3入口仍为原密集卷积，未叠加实验2的第四处SCDown。
+
+| 分组 | 48/96/192通道的每组宽度 | 参数 | 卷积GMAC，640/batch1 | 相对原始基线减参/MAC |
+|---|---|---:|---:|---|
+| G8 | 6/12/24 | 3,020,340 | 6.811050 | 38.09%/14.73% |
+| G16 | 3/6/12 | 2,960,724 | 6.752989 | 39.31%/15.46% |
+
+6项测试通过，覆盖实际范围与通道、原有协议、初始化随机状态、恢复七处后的整模型预测/损失/梯度一致性、分组与块对角密集卷积前后向对照，以及参数更新、单次BN更新和状态读写。GPU0两版各完成16次官方AMP更新、两次32图验证与EMA/优化器/scaler检查，39个相关参数张量均更新，无AMP跳步；batch8、每图1200框的三次压力更新均通过，峰值张量约7.93 GiB、保留9.16 GiB。
+
+队列为P3对照B → G8 → G16 → 四处版＋G2。仅重新安排尚未启动的组合实验，保留DSConv训练及A/B进程。GPU1正式启动前分别检查真实batch36容量；报告位于同名 `work_dirs/*_validation/checks.json`，复核入口 `scripts/scdown_group_sweep_probe.py`。四处版＋G4仅完成CPU结构测试，未安排GPU检查和正式训练。
+
+## 四处SCDown＋G2
+
+[configs/scdown_p3_g2/rtmdet_tiny_dior_640.py](configs/scdown_p3_g2/rtmdet_tiny_dior_640.py) 以实验2的四处SCDown为基础，增加与实验1完全相同的七处CSP `conv1`分组，两组连续通道，原BN/SiLU及后续卷积保留。独立骨干继承四处版，neck直接复用已验证的G2版；P2入口、neck输出、检测头、8400个预测点、数据和训练协议保持不变。参数3,342,228、640/batch1卷积7.017489 GMAC，比原始基线减少31.49%/12.15%，比实验2减少12.49%/6.21%。与实验2比较G2在四处版上的效果；结合三处版与原G2结果，检查P3替换后的组合收益。
+
+5项测试通过，核对范围/共享关系、两组对照协议、初始化与随机状态、分别还原P3或G2后的整模型预测/损失/梯度一致性，以及实际优化器更新、单次BN更新和状态读写。GPU0官方入口完成16次AMP更新、两次32图验证、EMA交换与模型/优化器/scaler读写，45个相关参数张量均有有限非零梯度并更新，无AMP跳步。另以batch8、每图1200框完成三次压力更新，峰值张量8.03 GiB、保留9.26 GiB；正式batch36未在共享GPU0上测试。
+
+已接在G16后。正式GPU1启动前等待空闲至少46000 MiB，以batch36、不累积、每图1200框和88%分配器上限检查三次更新，通过后才开始300轮训练。检查入口 `scripts/scdown_p3_g2_probe.py`；报告、冻结配置及队列状态分别在同名 `work_dirs/*_validation/`、`work_dirs/*_queue/`，前序或检查失败停止接续。
+
+## P3降采样的两组机理对照
+
+两版继承实验2 `scdown_p3` 的640、官方train/val、真实batch36、不累积、从零300轮及每10轮验证协议，仅改变 `backbone.stage2.0`，其余三处SCDown、neck、检测头、8400个预测点与损失保持一致；独立模块和配置，已按A→B接在DSConv之后。冻结配置、进程身份与状态位于各自 `work_dirs/<方法>_queue/`。
+
+| 对照 | 配置目录 | P3入口结构 | 参数 | 卷积GMAC |
+|---|---|---|---:|---:|
+| 实验2 | `configs/scdown_p3/` | PW48→96/BN/SiLU → DW3×3 stride2/BN | 3,819,156 | 7.481975 |
+| A | `configs/scdown_p3_dense/` | 保留上述流程，只把DW换成96→96的密集3×3 | 3,901,236 | 8.007287 |
+| B | `configs/scdown_p3_noact/` | 保留两层卷积和BN，只去掉PW后的SiLU | 3,819,156 | 7.481975 |
+
+A检验空间通道连接的约束，B检验降采样前非线性的作用；B不把SiLU移到末端。PW在160×160上输出96通道，空间卷积以padding1、stride2输出80×80。A仅空间卷积权重改变形状，其余初始权重及BN状态与实验2一致；B全部初始权重与实验2一致。顺序反转对照C尚未实现。
+
+8项测试通过：包括与独立PyTorch参考的前向/梯度一致性、密集卷积对角形式复现DW的前向/梯度、还原各自改动后整模型预测/损失/梯度完全一致、作用范围与初始化随机状态、实际检测梯度更新、BN执行次数、共享关系和状态读写。GPU0官方入口两版各完成16次AMP更新、两次32图VOC/COCO验证、EMA交换及模型/优化器/scaler读写，24个相关参数张量均有有限非零梯度并更新，无AMP跳步。batch8、每图1200框的三次压力更新也已通过，A/B峰值张量8.04/8.00 GiB、保留显存9.27/9.22 GiB；各自前序成功完成后，在GPU1先执行正式batch36容量检查，通过后才启动训练。短测关闭warmup、loss scale32，不保留检查点，正式配置不变。检查入口为 `scripts/scdown_p3_controls_probe.py`，支持 `preflight`、`smoke`、`capacity`；摘要与源码校验值在各自 `work_dirs/<方法>_validation/checks.json`。
 
 ## 检查
 

@@ -1,8 +1,8 @@
 {
-  "state": "waiting_scdown_p3",
+  "state": "complete",
   "queue_pid": 137512,
   "queue_start_ticks": "45307800",
-  "updated_at": "2026-10-20T21:43:43.819458+08:00",
+  "updated_at": "2026-10-22T00:38:22.519938+08:00",
   "dependency": {
     "name": "scdown_p3",
     "pid": 136580,

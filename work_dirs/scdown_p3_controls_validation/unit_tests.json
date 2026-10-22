@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "command": [
+    "/home/pwt/miniconda3/envs/rtmdet/bin/python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test_scdown_p3_controls.py",
+    "-v"
+  ],
+  "test_cases": 8,
+  "log": "/home/pwt/Paper1/work_dirs/scdown_p3_controls_validation/unit_tests.log"
+}

@@ -1,0 +1,33 @@
+usage: train.py [-h] [--work-dir WORK_DIR] [--amp] [--resume [RESUME]]
+                [--cfg-options CFG_OPTIONS [CFG_OPTIONS ...]]
+                [--launcher {none,pytorch,slurm,mpi}]
+                [--local_rank LOCAL_RANK]
+                config
+
+Train a detector
+
+positional arguments:
+  config                train config file path
+
+options:
+  -h, --help            show this help message and exit
+  --work-dir WORK_DIR   the dir to save logs and models
+  --amp                 enable automatic-mixed-precision training
+  --resume [RESUME]     If specify checkpoint path, resume from it, while if
+                        not specify, try to auto resume from the latest
+                        checkpoint in the work directory.
+  --cfg-options CFG_OPTIONS [CFG_OPTIONS ...]
+                        override some settings in the used config, the key-
+                        value pair in xxx=yyy format will be merged into
+                        config file. If the value to be overwritten is a list,
+                        it should be like key="[a,b]" or key=a,b It also
+                        allows nested list/tuple values, e.g.
+                        key="[(a,b),(c,d)]" Note that the quotation marks are
+                        necessary and that no white space is allowed.
+  --launcher {none,pytorch,slurm,mpi}
+                        job launcher
+  --local_rank LOCAL_RANK, --local-rank LOCAL_RANK
+[W NNPACK.cpp:64] Could not initialize NNPACK! Reason: Unsupported hardware.
+/home/pwt/miniconda3/envs/rtmdet/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3483.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+PREFLIGHT_PASSED scdown_g16 2960724 6.75298944
