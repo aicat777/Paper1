@@ -1,0 +1,70 @@
+{
+  "baseline": {
+    "total_parameters": 4878708,
+    "conv_gmac": 7.98770304,
+    "selected": {
+      "four_downsampling": {
+        "sites": [
+          "backbone.stage2.0",
+          "backbone.stage3.0",
+          "backbone.stage4.0",
+          "neck.downsample_layers.1"
+        ],
+        "weights": 1202688,
+        "macs": 928972800,
+        "module_parameters": 1204416
+      },
+      "seven_csp_spatial": {
+        "sites": [
+          "backbone.stage2.1.blocks.0.conv1",
+          "backbone.stage3.1.blocks.0.conv1",
+          "backbone.stage4.2.blocks.0.conv1",
+          "neck.top_down_layers.0.0.blocks.0.conv1",
+          "neck.top_down_layers.1.blocks.0.conv1",
+          "neck.bottom_up_layers.0.blocks.0.conv1",
+          "neck.bottom_up_layers.1.blocks.0.conv1"
+        ],
+        "weights": 953856,
+        "macs": 928972800,
+        "module_parameters": 955392
+      }
+    }
+  },
+  "GSCE": {
+    "total_parameters": 3103764,
+    "conv_gmac": 6.78524544,
+    "selected": {
+      "four_downsampling": {
+        "sites": [
+          "backbone.stage2.0",
+          "backbone.stage3.0",
+          "backbone.stage4.0",
+          "neck.downsample_layers.1"
+        ],
+        "weights": 141408,
+        "macs": 423244800,
+        "module_parameters": 144864
+      },
+      "seven_csp_spatial": {
+        "sites": [
+          "backbone.stage2.1.blocks.0.conv1",
+          "backbone.stage3.1.blocks.0.conv1",
+          "backbone.stage4.2.blocks.0.conv1",
+          "neck.top_down_layers.0.0.blocks.0.conv1",
+          "neck.top_down_layers.1.blocks.0.conv1",
+          "neck.bottom_up_layers.0.blocks.0.conv1",
+          "neck.bottom_up_layers.1.blocks.0.conv1"
+        ],
+        "weights": 238464,
+        "macs": 232243200,
+        "module_parameters": 240000
+      }
+    }
+  },
+  "comparison": {
+    "parameter_reduction_percent": 36.381435412818306,
+    "mac_reduction_percent": 15.05385958865092,
+    "baseline_selected_weight_fraction": 0.4420317838247339,
+    "baseline_selected_mac_fraction": 0.2326007352421554
+  }
+}

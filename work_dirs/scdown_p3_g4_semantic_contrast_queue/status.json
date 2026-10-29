@@ -1,12 +1,12 @@
 {
   "state": "waiting_scdown_p3_g4_semantic_levels",
-  "queue_pid": 3864122,
-  "queue_start_ticks": "121059329",
-  "updated_at": "2026-10-29T16:08:56.432521+08:00",
+  "queue_pid": 1022361,
+  "queue_start_ticks": "122940115",
+  "updated_at": "2026-10-29T21:22:25.188105+08:00",
   "dependency": {
     "name": "scdown_p3_g4_semantic_levels",
-    "pid": 3862676,
-    "start_ticks": "121057721",
+    "pid": 1021169,
+    "start_ticks": "122938500",
     "status": "/home/pwt/Paper1/work_dirs/scdown_p3_g4_semantic_levels_queue/status.json",
     "work_dir": "/home/pwt/Paper1/work_dirs/scdown_p3_g4_semantic_levels_rtmdet_tiny_dior_640_gpu1_bs36",
     "log": "/home/pwt/Paper1/logs/scdown_p3_g4_semantic_levels_rtmdet_tiny_dior_640_gpu1_bs36.log"

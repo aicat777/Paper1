@@ -1,8 +1,8 @@
 {
-  "state": "training",
+  "state": "complete",
   "queue_pid": 2379697,
   "queue_start_ticks": "113185478",
-  "updated_at": "2026-10-29T10:40:37.148159+08:00",
+  "updated_at": "2026-10-29T20:01:08.493074+08:00",
   "dependency": {
     "name": "scdown_p3_g4_semantic_neckhead",
     "pid": 2316944,
@@ -20,14 +20,5 @@
     "preflight_report": "/home/pwt/Paper1/work_dirs/scdown_p3_g4_semantic_clstower_validation/queue_preflight.json",
     "capacity_report": "/home/pwt/Paper1/work_dirs/scdown_p3_g4_semantic_clstower_validation/capacity_gpu1_bs36.json",
     "validation_summary": "/home/pwt/Paper1/work_dirs/scdown_p3_g4_semantic_clstower_validation/checks.json"
-  },
-  "child_pid": 2434678,
-  "command": [
-    "/home/pwt/miniconda3/envs/rtmdet/bin/python",
-    "-u",
-    "/home/pwt/Paper1/mmyolo/tools/train.py",
-    "/home/pwt/Paper1/work_dirs/scdown_p3_g4_semantic_clstower_queue/scdown_p3_g4_semantic_clstower_640_bs36.py",
-    "--work-dir",
-    "/home/pwt/Paper1/work_dirs/scdown_p3_g4_semantic_clstower_rtmdet_tiny_dior_640_gpu1_bs36"
-  ]
+  }
 }

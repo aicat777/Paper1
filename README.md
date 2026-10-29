@@ -27,7 +27,7 @@ python scripts/convert_dior_to_coco.py
 
 ## 模型与训练
 
-**GPU1当前运行GSCE＋ROI仅更新分类塔**（`scdown_p3_g4_semantic_clstower`），其后依次接续私有ROI、跨尺度ROI、ROI对比学习。三组均通过启动结构检查，等待前序完成后检查正式batch36容量，再从零启动。已完成的GSCE＋ROI统一alpha=0.25、ROI更新neck＋分类塔、原ROI＋实例均衡QFL分别为VOC mAP/COCO AP 76.01%/56.1%、75.64%/55.6%、75.67%/55.7%；原ROI独立对照为76.31%/56.9%。均沿用640、真实batch36、不累积、从零300轮、每10轮验证。状态在各自 `work_dirs/<方法>_queue/status.json`，原理与检查见 [TRAINING.md](TRAINING.md)。
+**GPU1当前运行私有ROI**（`scdown_p3_g4_semantic_private`），其后依次接续仅分类塔ROI alpha=1、跨尺度ROI、ROI对比学习。后三组均通过启动结构检查，等待前序完成后检查正式batch36容量，再从零启动。已完成的GSCE＋ROI统一alpha=0.25、仅更新分类塔、更新neck＋分类塔、原ROI＋实例均衡QFL分别为VOC mAP/COCO AP 76.01%/56.1%、76.02%/56.1%、75.64%/55.6%、75.67%/55.7%；原ROI独立对照为76.31%/56.9%。均沿用640、真实batch36、不累积、从零300轮、每10轮验证。状态在各自 `work_dirs/<方法>_queue/status.json`，原理与检查见 [TRAINING.md](TRAINING.md)。
 
 四处＋DSConv/G2/G4和三处＋G8/G16均已完成300轮；四处三组组合的VOC mAP/COCO AP分别为75.20%/55.7%、75.69%/56.1%、75.83%/56.1%，三处＋G8/G16为75.71%/55.8%、75.51%/55.8%。ROI梯度拆分与四处SCDown＋G8也已完成，分别为76.01%/56.8%、75.53%/55.7%。各组均为640、真实batch36、不累积、从零300轮、每10轮验证。状态在各方法 `work_dirs/<方法>_queue/status.json`。
 
@@ -71,7 +71,8 @@ python scripts/convert_dior_to_coco.py
 | `configs/scdown_p3_semantic_gradscale/` | 四处SCDown＋相同ROI梯度缩放，优先用于检验轻量结构上的辅助约束强度；已检查，未排队 |
 | `configs/scdown_p3_g4_semantic_gradscale/` | GSCE＋相同ROI梯度缩放；已完成300轮 |
 | `configs/scdown_p3_g4_semantic_neckhead/` | 保留neck/分类塔的0.25辅助梯度，仅取消ROI对骨干的梯度；已完成300轮 |
-| `configs/scdown_p3_g4_semantic_clstower/` | 仅分类塔接收0.25辅助梯度，骨干和neck只接收主检测梯度；当前训练中 |
+| `configs/scdown_p3_g4_semantic_clstower/` | 仅分类塔接收0.25辅助梯度，骨干和neck只接收主检测梯度；已完成300轮 |
+| `configs/scdown_p3_g4_semantic_clstower_alpha1/` | 仅将上述分类塔ROI梯度系数改为1，CE权重仍为0.1；接在私有ROI之后 |
 | `configs/scdown_p3_g4_semantic_private/` | 从neck分出私有96→192→96 ROI编码器；辅助监督进入骨干/neck，主分类塔只受主损失监督 |
 | `configs/scdown_p3_g4_semantic_levels/` | 同一GT在P3/P4/P5分别分类，跨层共享分类器；CE按实例数及三个尺度取平均 |
 | `configs/scdown_p3_g4_semantic_contrast/` | 保留原ROI CE，增加同类GT正对、异类GT负对的监督式对比；完整关系分块计算 |

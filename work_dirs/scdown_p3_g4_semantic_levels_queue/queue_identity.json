@@ -1,7 +1,7 @@
 {
-  "pid": 3862676,
-  "start_ticks": "121057721",
-  "created_at": "2026-10-29T16:08:25.953954+08:00",
+  "pid": 1021169,
+  "start_ticks": "122938500",
+  "created_at": "2026-10-29T21:21:53.746971+08:00",
   "command": [
     "/home/pwt/miniconda3/envs/rtmdet/bin/python",
     "-u",

@@ -1,15 +1,15 @@
 {
-  "state": "waiting_scdown_p3_g4_semantic_private",
-  "queue_pid": 3862676,
-  "queue_start_ticks": "121057721",
-  "updated_at": "2026-10-29T16:08:41.745867+08:00",
+  "state": "waiting_scdown_p3_g4_semantic_clstower_alpha1",
+  "queue_pid": 1021169,
+  "queue_start_ticks": "122938500",
+  "updated_at": "2026-10-29T21:22:09.422809+08:00",
   "dependency": {
-    "name": "scdown_p3_g4_semantic_private",
-    "pid": 3861154,
-    "start_ticks": "121055856",
-    "status": "/home/pwt/Paper1/work_dirs/scdown_p3_g4_semantic_private_queue/status.json",
-    "work_dir": "/home/pwt/Paper1/work_dirs/scdown_p3_g4_semantic_private_rtmdet_tiny_dior_640_gpu1_bs36",
-    "log": "/home/pwt/Paper1/logs/scdown_p3_g4_semantic_private_rtmdet_tiny_dior_640_gpu1_bs36.log"
+    "name": "scdown_p3_g4_semantic_clstower_alpha1",
+    "pid": 1019660,
+    "start_ticks": "122936413",
+    "status": "/home/pwt/Paper1/work_dirs/scdown_p3_g4_semantic_clstower_alpha1_queue/status.json",
+    "work_dir": "/home/pwt/Paper1/work_dirs/scdown_p3_g4_semantic_clstower_alpha1_rtmdet_tiny_dior_640_gpu1_bs36",
+    "log": "/home/pwt/Paper1/logs/scdown_p3_g4_semantic_clstower_alpha1_rtmdet_tiny_dior_640_gpu1_bs36.log"
   },
   "experiment": {
     "name": "scdown_p3_g4_semantic_levels_640_bs36",

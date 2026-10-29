@@ -1,0 +1,10 @@
+test_actual_config_changes_only_alpha_and_output_location (tests.test_instance_semantic_clstower_alpha1.ClassificationTowerAlphaOneTests) ... ok
+test_fourfold_cls_roi_same_aux_classifier_and_main_gradients (tests.test_instance_semantic_clstower_alpha1.ClassificationTowerAlphaOneTests) ... /home/pwt/miniconda3/envs/rtmdet/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3483.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+ok
+test_independent_unrouted_alpha1_gradient_and_adamw_update (tests.test_instance_semantic_clstower_alpha1.ClassificationTowerAlphaOneTests) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 7.571s
+
+OK

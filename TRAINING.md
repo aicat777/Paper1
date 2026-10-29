@@ -2,7 +2,7 @@
 
 ## 当前配置
 
-GPU1当前运行GSCE＋ROI仅更新分类塔（`scdown_p3_g4_semantic_clstower`），其后依次接续私有ROI、跨尺度ROI、ROI对比学习。已完成的GSCE＋ROI统一alpha=0.25、ROI更新neck＋分类塔、原ROI＋实例均衡QFL分别为VOC mAP/COCO AP 76.01%/56.1%、75.64%/55.6%、75.67%/55.7%；原ROI独立对照为76.31%/56.9%。使用Conda `rtmdet`与官方 `mmyolo/tools/train.py`；640、真实batch36、不累积、从零300轮，每10轮验证。三组新增队列已通过官方入口和结构预检，正式容量检查待前序完成后执行。
+GPU1当前运行私有ROI（`scdown_p3_g4_semantic_private`），其后依次接续仅分类塔ROI alpha=1、跨尺度ROI、ROI对比学习。已完成的GSCE＋ROI统一alpha=0.25、仅更新分类塔、更新neck＋分类塔、原ROI＋实例均衡QFL分别为VOC mAP/COCO AP 76.01%/56.1%、76.02%/56.1%、75.64%/55.6%、75.67%/55.7%；原ROI独立对照为76.31%/56.9%。使用Conda `rtmdet`与官方 `mmyolo/tools/train.py`；640、真实batch36、不累积、从零300轮，每10轮验证。后三组队列已通过官方入口和结构预检，正式容量检查待前序完成后执行。
 
 | 项目 | 设置 |
 |---|---|
@@ -68,12 +68,12 @@ EFS适配已完成300轮：EMA的VOC mAP75.62%、COCO AP56.4%、小/中/大目�
 
 ## 启动与状态
 
-正式队列顺序为：ROI仅更新分类塔（正在运行）→ 私有ROI → 跨尺度ROI → ROI对比学习，前三项之前的实验均已完成。三条新增调度进程已通过官方入口和结构预检，按顺序等待直接前序；接续要求前序成功完成300轮、最终有限验证及检查点保存，随后等待GPU1空闲至少46000 MiB，通过正式batch36、每图1200框、三次更新与88%分配器上限的容量检查后从零启动，不自动调整batch。源码、容量或训练检查失败即停止该接续。冻结配置、依赖身份与源码哈希在各队列的 `manifest.json`；链路核对在 `work_dirs/diagnostics/roi_auxiliary_variants_enqueue/verified_chain.json`。状态与训练日志查询：
+正式队列顺序为：私有ROI（正在运行）→ 仅分类塔ROI alpha=1 → 跨尺度ROI → ROI对比学习，之前的实验均已完成。三条等待中的调度进程已通过官方入口和结构预检，按顺序等待直接前序；接续要求前序成功完成300轮、最终有限验证及检查点保存，随后等待GPU1空闲至少46000 MiB，通过正式batch36、每图1200框、三次更新与88%分配器上限的容量检查后从零启动，不自动调整batch。源码、容量或训练检查失败即停止该接续。冻结配置、依赖身份与源码哈希在各队列的 `manifest.json`；链路核对在 `work_dirs/diagnostics/clstower_alpha1_enqueue/verified_chain.json`。状态与训练日志查询：
 
 ```bash
-tail -n 20 /home/pwt/Paper1/logs/scdown_p3_g4_semantic_clstower_rtmdet_tiny_dior_640_gpu1_bs36.log
-cat /home/pwt/Paper1/work_dirs/scdown_p3_g4_semantic_clstower_queue/status.json
+tail -n 20 /home/pwt/Paper1/logs/scdown_p3_g4_semantic_private_rtmdet_tiny_dior_640_gpu1_bs36.log
 cat /home/pwt/Paper1/work_dirs/scdown_p3_g4_semantic_private_queue/status.json
+cat /home/pwt/Paper1/work_dirs/scdown_p3_g4_semantic_clstower_alpha1_queue/status.json
 cat /home/pwt/Paper1/work_dirs/scdown_p3_g4_semantic_levels_queue/status.json
 cat /home/pwt/Paper1/work_dirs/scdown_p3_g4_semantic_contrast_queue/status.json
 nvidia-smi
@@ -323,7 +323,7 @@ GSCE版已完成300轮，VOC mAP/COCO AP/AP75为76.01%/56.1%/61.5%，不加ROI�
 
 13项测试通过，覆盖实际GSCE的初始化、共享关系、主损失与梯度不变、辅助梯度作用范围、损失归一化、空GT与状态读写。三版各通过4组GPU FP32/AMP及外部loss缩放的数值/梯度对照，最大绝对误差7.46e-9；另通过整网FP32独立梯度参考。每版用官方入口完成16次真实AMP更新、强弱增强、两次32图验证、两次EMA恢复及模型/优化器/scaler状态读写，无AMP跳步，骨干/neck/检测塔/分配/ROI每步各执行一次。
 
-GPU0容量检查各完成3次batch8、640、每图1200个GT的实际更新，无OOM，峰值张量约8.05 GiB。对比关系算子单独通过43200个GT的前反向检查，分块避免保存完整关系矩阵，但计算量仍随GT数平方增长；这不等于整网batch36容量已验证。三组已按私有ROI→跨尺度ROI→ROI对比学习排在分类塔实验后，每组正式启动前在GPU1执行batch36容量检查；容量不通过就停止，不自动减小batch。短测未保留检查点。
+GPU0容量检查各完成3次batch8、640、每图1200个GT的实际更新，无OOM，峰值张量约8.05 GiB。对比关系算子单独通过43200个GT的前反向检查，分块避免保存完整关系矩阵，但计算量仍随GT数平方增长；这不等于整网batch36容量已验证。私有ROI已通过GPU1正式batch36容量检查并开始训练；跨尺度ROI及ROI对比学习依次排在新增的分类塔alpha=1实验后，每组启动前在GPU1检查batch36容量，失败则停止，不自动减小batch。短测未保留检查点。
 
 检查入口为 `scripts/roi_auxiliary_variants_probe.py --method private|levels|contrast --mode preflight|fidelity|smoke|capacity --report <路径>`；单元检查为 `python -m unittest tests.test_roi_auxiliary_variants -v`。汇总在 `work_dirs/roi_auxiliary_variants_validation/checks.json`，各方法的详细报告位于同名 `work_dirs/<配置目录后缀>_validation/`。短测验证实现与可运行性，不作为精度收益结论。
 
@@ -343,7 +343,15 @@ GPU0容量检查各完成3次batch8、640、每图1200个GT的实际更新，无
 
 7项CPU测试、4组GPU FP32/AMP及不同loss缩放的梯度参考对照通过，确认ROI骨干/neck梯度为零且主梯度正常。官方入口完成16次AMP更新、强弱增强、两次32图验证、EMA和模型/优化器/scaler状态恢复，145个监测参数张量均获得有限梯度并更新，无AMP跳步；网络各段和BN每步只前向/更新一次。GPU1正式batch36容量检查通过，峰值张量35.99 GiB、保留40.65 GiB。
 
-正式训练正在GPU1运行，640、真实batch36、不累积、从零300轮、每10轮验证。队列和冻结配置在 `work_dirs/scdown_p3_g4_semantic_clstower_queue/`；检查汇总在 `work_dirs/scdown_p3_g4_semantic_clstower_validation/checks.json`，复核入口为 `scripts/instance_semantic_clstower_probe.py`。
+已完成300轮，VOC mAP/COCO AP/AP75为76.02%/56.1%/62.0%，小/中/大目标AP为8.2%/33.6%/69.1%。队列和冻结配置在 `work_dirs/scdown_p3_g4_semantic_clstower_queue/`；检查汇总在 `work_dirs/scdown_p3_g4_semantic_clstower_validation/checks.json`，复核入口为 `scripts/instance_semantic_clstower_probe.py`。
+
+### 分类塔ROI alpha=1对照
+
+[configs/scdown_p3_g4_semantic_clstower_alpha1/rtmdet_tiny_dior_640.py](configs/scdown_p3_g4_semantic_clstower_alpha1/rtmdet_tiny_dior_640.py) 独立继承分类塔alpha=0.25版，仅将 `semantic_feature_gradient_scale` 改为1；复用原梯度路由，ROI仍只直接更新分类塔和辅助分类器。分类塔ROI梯度变为四倍，辅助分类器的CE权重0.1和梯度不变；主检测梯度、初始化、推理与正式训练协议不变。从零训练，不加载alpha=0.25的检查点。
+
+3项针对性测试通过，确认实际配置仅改变alpha及输出目录、分类塔ROI梯度恰好四倍、主损失和其他梯度边界不变，以及独立参考AdamW更新一致。4组GPU FP32/AMP及不同外部loss缩放的梯度对照通过；官方入口完成16次AMP更新、两次32图验证、两次EMA恢复及模型/优化器/scaler读写，145个监测参数张量均获有限梯度并更新，无AMP跳步。GPU0 batch8、每图1200个GT的三次压力更新通过，峰值张量8.05 GiB、保留9.17 GiB，未保留检查点。
+
+该组直接接在正在运行的私有ROI之后，跨尺度ROI与ROI对比学习顺延，私有ROI训练进程保持运行。正式启动前在GPU1检查batch36容量，不自动调整batch。汇总在 `work_dirs/scdown_p3_g4_semantic_clstower_alpha1_validation/checks.json`，复核入口为 `scripts/instance_semantic_clstower_alpha1_probe.py`。
 
 ## ROI语义监督：实例均衡QFL
 

@@ -100,32 +100,41 @@
   "full_training_queued": true,
   "queue_order": [
     "scdown_p3_g4_semantic_private",
+    "scdown_p3_g4_semantic_clstower_alpha1",
     "scdown_p3_g4_semantic_levels",
     "scdown_p3_g4_semantic_contrast"
   ],
   "queues": [
     {
       "method": "scdown_p3_g4_semantic_private",
+      "state": "training",
       "queue_pid": 3861154,
       "queue_start_ticks": "121055856",
       "dependency": "scdown_p3_g4_semantic_clstower",
-      "state": "waiting_scdown_p3_g4_semantic_clstower",
       "manifest": "/home/pwt/Paper1/work_dirs/scdown_p3_g4_semantic_private_queue/manifest.json"
     },
     {
-      "method": "scdown_p3_g4_semantic_levels",
-      "queue_pid": 3862676,
-      "queue_start_ticks": "121057721",
-      "dependency": "scdown_p3_g4_semantic_private",
+      "method": "scdown_p3_g4_semantic_clstower_alpha1",
       "state": "waiting_scdown_p3_g4_semantic_private",
+      "queue_pid": 1019660,
+      "queue_start_ticks": "122936413",
+      "dependency": "scdown_p3_g4_semantic_private",
+      "manifest": "/home/pwt/Paper1/work_dirs/scdown_p3_g4_semantic_clstower_alpha1_queue/manifest.json"
+    },
+    {
+      "method": "scdown_p3_g4_semantic_levels",
+      "state": "waiting_scdown_p3_g4_semantic_clstower_alpha1",
+      "queue_pid": 1021169,
+      "queue_start_ticks": "122938500",
+      "dependency": "scdown_p3_g4_semantic_clstower_alpha1",
       "manifest": "/home/pwt/Paper1/work_dirs/scdown_p3_g4_semantic_levels_queue/manifest.json"
     },
     {
       "method": "scdown_p3_g4_semantic_contrast",
-      "queue_pid": 3864122,
-      "queue_start_ticks": "121059329",
-      "dependency": "scdown_p3_g4_semantic_levels",
       "state": "waiting_scdown_p3_g4_semantic_levels",
+      "queue_pid": 1022361,
+      "queue_start_ticks": "122940115",
+      "dependency": "scdown_p3_g4_semantic_levels",
       "manifest": "/home/pwt/Paper1/work_dirs/scdown_p3_g4_semantic_contrast_queue/manifest.json"
     }
   ],

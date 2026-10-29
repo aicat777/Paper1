@@ -1,8 +1,8 @@
 {
-  "state": "waiting_scdown_p3_g4_semantic_clstower",
+  "state": "complete",
   "queue_pid": 3861154,
   "queue_start_ticks": "121055856",
-  "updated_at": "2026-10-29T16:08:25.541591+08:00",
+  "updated_at": "2026-10-30T05:26:53.009841+08:00",
   "dependency": {
     "name": "scdown_p3_g4_semantic_clstower",
     "pid": 2379697,
