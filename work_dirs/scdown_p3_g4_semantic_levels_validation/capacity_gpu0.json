@@ -1,0 +1,95 @@
+{
+  "status": "passed",
+  "method": "scdown_p3_g4_semantic_levels",
+  "microbatch": 8,
+  "accumulation": 1,
+  "optimizer_updates": 3,
+  "training_microsteps": 3,
+  "input_size": [
+    640,
+    640
+  ],
+  "gt_per_image": 1200,
+  "different_image_ids": [
+    844,
+    5601,
+    4604,
+    5475,
+    5757,
+    1129,
+    3150,
+    1497
+  ],
+  "repeated_annotations": true,
+  "synthetic_multiscale_boxes": true,
+  "allocator_fraction": 0.35,
+  "formal_batch_capacity_tested": false,
+  "loss_scale_init": 32,
+  "warmup_enabled": false,
+  "amp_skipped_updates": 0,
+  "saved_checkpoints": false,
+  "watched_parameter_tensors": 2,
+  "losses": [
+    {
+      "loss": 2.4346489906311035,
+      "loss_cls": 0.14088071882724762,
+      "loss_bbox": 1.9945005178451538,
+      "loss_instance_semantic": 0.2992676794528961
+    },
+    {
+      "loss": 2.2991628646850586,
+      "loss_cls": 0.15333595871925354,
+      "loss_bbox": 1.8560887575149536,
+      "loss_instance_semantic": 0.2897382378578186
+    },
+    {
+      "loss": 2.2560300827026367,
+      "loss_cls": 0.3280124068260193,
+      "loss_bbox": 1.64113450050354,
+      "loss_instance_semantic": 0.2868831157684326
+    }
+  ],
+  "gradient_max": {
+    "bbox_head.instance_semantic.classifier.bias": 2.842353343963623,
+    "bbox_head.instance_semantic.classifier.weight": 1.4866797924041748
+  },
+  "parameter_updates_max": {
+    "bbox_head.instance_semantic.classifier.weight": 0.0016917940229177475,
+    "bbox_head.instance_semantic.classifier.bias": 0.0016880037728697062
+  },
+  "cuda_device": "NVIDIA GeForce RTX 4090",
+  "cuda_total_gib": 47.37115478515625,
+  "initial_free_gib": 21.12457275390625,
+  "peak_allocated_gib": 8.046815872192383,
+  "peak_reserved_gib": 9.18359375,
+  "elapsed_seconds": 11.03115925588645,
+  "config": "/home/pwt/Paper1/configs/scdown_p3_g4_semantic_levels/rtmdet_tiny_dior_640.py",
+  "config_sha256": "b62f8e0387f1d5fb75c25a4034162f9575f2938ed82222345387883d76c7f1c8",
+  "source_code_sha256": {
+    "custom_models/__init__.py": "9935ec6176270b662127745e5114063ac1e92717d1f2b6d988c66f6195560eb3",
+    "custom_models/instance_semantic/__init__.py": "7aa8654f1bae5bad77124cfa94e8a226429540643063e982758cdeaf5329563c",
+    "custom_models/instance_semantic/head.py": "404fa084c027a546c185af4d63be051e20d71e017e6510574c94efd87b86fe64",
+    "custom_models/instance_semantic/roi.py": "3e1d9805737aa468eb96f093ba7955a82362e7b83e90dc47efe64f53554e54b4",
+    "custom_models/instance_semantic_gradscale/__init__.py": "580ad98e240a407088bb8adb73c0592b868d13b07d945c8aa86620cc9c2de4e4",
+    "custom_models/instance_semantic_gradscale/head.py": "01bb79bf43b031b4446e72796015e5796e41ebcee628e499b421775b46dc6bb6",
+    "custom_models/instance_semantic_gradscale/roi.py": "11b6ca2ebbc8e562822a107bb8afe880de769cd28a22166e44ae47e8a3bf0bb6",
+    "custom_models/instance_semantic_levels/__init__.py": "cc7140908ad4e4068b67930938d8c53bf415c97424c2495bb9e7a555edb89fa7",
+    "custom_models/instance_semantic_levels/head.py": "2997711f2a438e74d283b07358324ed2c4a6a933a70b5705eba1f9c6f9959a36",
+    "custom_models/instance_semantic_levels/roi.py": "bd628df5b9c20ae2a78e285134932353eab9f6461000a8876ed2d307efe66920",
+    "custom_models/scdown/__init__.py": "049cf9208749611292f12677e9098f0d2779bbaf8573ed4d1d42e52dc107e4bb",
+    "custom_models/scdown/backbone.py": "3daec6209fdde9ef18e79730fc4bafe3c96c2fffc0d38196262249e43d6ff15b",
+    "custom_models/scdown/initialization.py": "e293e07f1ba279c63b476d75e26878b12fe88ccbe8f0f5478e78da32e0e8c604",
+    "custom_models/scdown/neck.py": "8e64bd2f9edf9b800d06dad0df3210f925a1dc230202563463ae4de63515ecd7",
+    "custom_models/scdown/operator.py": "3ff400bd14e43b731c80ba395207302f05c2ad66b6e3fbc8730e1df11dbc4915",
+    "custom_models/scdown_g4/__init__.py": "377dc1ebdceee4d6b104cdb234bb71d5bf5e42d0cd1adb2864853cb9502cb68f",
+    "custom_models/scdown_g4/backbone.py": "66ea19e4f66788d4c3b06da23dc925a56692e386a0dbc23ba24d1a4370234ebf",
+    "custom_models/scdown_g4/neck.py": "e9c3402c5aa83175f83b4459d094e2e7a154caa3e2cf3652adfdae00a9d4599a",
+    "custom_models/scdown_g4/operator.py": "463be8336f86a7dc34dde28abd5a5e4eb52261dab87ff2a00a6684242cea784f",
+    "custom_models/scdown_p3/__init__.py": "c860b1e30f01f4bd9e2841bb253dc153769e31560d929ac2652c608f54f711c1",
+    "custom_models/scdown_p3/backbone.py": "d2fa15aeb33793379112fb098c06d81f88d232dbb0e94dd31f3c8b9879da3d75",
+    "custom_models/scdown_p3_g4/__init__.py": "b57d7ddc3519d8c02ff4f27a34f0dd64a631ef9ebd97acbf7ebcf64dc3ae35ff",
+    "custom_models/scdown_p3_g4/backbone.py": "1cf147a0a003aa813284fa7bd79d424ad04dc7268378aff72bafe078c47264f1",
+    "custom_models/scdown_p3_g4_semantic/__init__.py": "5d57accf449e419a8f481cd3c4db76247a87f1e947de1ef3132d38e9319f1483",
+    "scripts/roi_auxiliary_variants_probe.py": "a8e8816a1a6850cb859d0723934025a6b86bc3dd307a76f9f8a4494bbde3a006"
+  }
+}

@@ -1,15 +1,15 @@
 {
-  "state": "waiting_scdown_p3_noact",
-  "queue_pid": 3697109,
-  "queue_start_ticks": "65163636",
-  "updated_at": "2026-10-23T04:52:59.671162+08:00",
+  "state": "complete",
+  "queue_pid": 1252854,
+  "queue_start_ticks": "68101238",
+  "updated_at": "2026-10-25T11:27:35.868136+08:00",
   "dependency": {
-    "name": "scdown_p3_noact",
-    "pid": 226193,
-    "start_ticks": "52421326",
-    "status": "/home/pwt/Paper1/work_dirs/scdown_p3_noact_queue/status.json",
-    "work_dir": "/home/pwt/Paper1/work_dirs/scdown_p3_noact_rtmdet_tiny_dior_640_gpu1_bs36",
-    "log": "/home/pwt/Paper1/logs/scdown_p3_noact_rtmdet_tiny_dior_640_gpu1_bs36.log"
+    "name": "scdown_p3_g4",
+    "pid": 1252133,
+    "start_ticks": "68100029",
+    "status": "/home/pwt/Paper1/work_dirs/scdown_p3_g4_queue/status.json",
+    "work_dir": "/home/pwt/Paper1/work_dirs/scdown_p3_g4_rtmdet_tiny_dior_640_gpu1_bs36",
+    "log": "/home/pwt/Paper1/logs/scdown_p3_g4_rtmdet_tiny_dior_640_gpu1_bs36.log"
   },
   "experiment": {
     "name": "scdown_g8_640_bs36",

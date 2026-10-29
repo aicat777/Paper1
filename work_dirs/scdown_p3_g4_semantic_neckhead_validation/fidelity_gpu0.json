@@ -1,0 +1,45 @@
+{
+  "status": "passed",
+  "method": "scdown_p3_g4_semantic_neckhead",
+  "independent_reference": "Separate main/auxiliary autograd on the unchanged alpha=.25 GSCE; discard only auxiliary backbone derivatives",
+  "cases": [
+    {
+      "amp": false,
+      "outer_loss_multiplier": 1.0,
+      "forward_error": 0.0,
+      "maximum_unscaled_parameter_gradient_error": 1.135940692620352e-06,
+      "gradient_relative_l2_error": 0.00012476864607310987,
+      "main_backbone_gradient_nonzero": true,
+      "roi_backbone_gradient_exactly_zero": true
+    },
+    {
+      "amp": false,
+      "outer_loss_multiplier": 32.0,
+      "forward_error": 0.0,
+      "maximum_unscaled_parameter_gradient_error": 1.158274244517088e-06,
+      "gradient_relative_l2_error": 0.0001246175849934741,
+      "main_backbone_gradient_nonzero": true,
+      "roi_backbone_gradient_exactly_zero": true
+    },
+    {
+      "amp": true,
+      "outer_loss_multiplier": 32.0,
+      "forward_error": 0.0,
+      "maximum_unscaled_parameter_gradient_error": 0.0,
+      "gradient_relative_l2_error": 0.0,
+      "main_backbone_gradient_nonzero": true,
+      "roi_backbone_gradient_exactly_zero": true
+    },
+    {
+      "amp": true,
+      "outer_loss_multiplier": 128.0,
+      "forward_error": 0.0,
+      "maximum_unscaled_parameter_gradient_error": 0.0,
+      "gradient_relative_l2_error": 0.0,
+      "main_backbone_gradient_nonzero": true,
+      "roi_backbone_gradient_exactly_zero": true
+    }
+  ],
+  "no_parameter_updates": true,
+  "saved_checkpoints": false
+}

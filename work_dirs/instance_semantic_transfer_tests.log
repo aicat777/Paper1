@@ -1,0 +1,17 @@
+test_active_transfer_reaches_shared_features_excludes_predictors_and_roi_classifier (test_instance_semantic_transfer.TransferROITests) ... /home/pwt/miniconda3/envs/rtmdet/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3483.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+ok
+test_capacity_only_stress_activates_full_grid_without_mutating_actual_assignment (test_instance_semantic_transfer.TransferROITests) ... ok
+test_gt_slot_identity_duplicates_degenerate_interleaved_and_list (test_instance_semantic_transfer.TransferROITests) ... ok
+test_initialization_rng_protocol_shared_convs_and_inference_exact (test_instance_semantic_transfer.TransferROITests) ... ok
+test_main_and_roi_losses_unchanged_one_head_assignment_and_bn_update (test_instance_semantic_transfer.TransferROITests) ... ok
+test_no_selection_empty_gt_and_zero_weight_connected_zero (test_instance_semantic_transfer.TransferROITests) ... ok
+test_original_roi_ce_and_every_gradient_match_with_all_valid_gt (test_instance_semantic_transfer.TransferROITests) ... ok
+test_selection_closed_form_kl_per_gt_normalization_and_feature_gradient (test_instance_semantic_transfer.TransferROITests) ... ok
+test_tensor_list_and_empty_gt_interfaces (test_instance_semantic_transfer.TransferROITests) ... ok
+test_zero_transfer_weight_total_gradients_and_sgd_update_match_original (test_instance_semantic_transfer.TransferROITests) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 9.572s
+
+OK

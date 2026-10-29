@@ -1,0 +1,44 @@
+{
+  "status": "passed",
+  "method": "scdown_p3_g4_semantic",
+  "parameters": 3105704,
+  "inference_parameters": 3103764,
+  "inference_conv_linear_gmac": 6.78524544,
+  "auxiliary_parameters": 1940,
+  "all_detector_initial_parameters_match_scdown": true,
+  "inference_predictions_match_scdown_exactly": true,
+  "original_roi_module_unchanged": true,
+  "scdown_sites": [
+    "backbone.stage2.0",
+    "backbone.stage3.0",
+    "backbone.stage4.0",
+    "neck.downsample_layers.1"
+  ],
+  "grouped_sites": [
+    "backbone.stage2.1.blocks.0.conv1",
+    "backbone.stage3.1.blocks.0.conv1",
+    "backbone.stage4.2.blocks.0.conv1",
+    "neck.top_down_layers.0.0.blocks.0.conv1",
+    "neck.top_down_layers.1.blocks.0.conv1",
+    "neck.bottom_up_layers.0.blocks.0.conv1",
+    "neck.bottom_up_layers.1.blocks.0.conv1"
+  ],
+  "groups": 4,
+  "prediction_points": 8400,
+  "watched_parameter_tensors": 67,
+  "train_images": 5862,
+  "val_images": 5863,
+  "input_size": [
+    640,
+    640
+  ],
+  "formal_batch": 36,
+  "accumulation": 1,
+  "scratch": true,
+  "unchanged_training_protocol": true,
+  "semantic_weight": 0.1,
+  "all_valid_gt_denominator": true,
+  "formal_batch_capacity_tested": false,
+  "config": "/home/pwt/Paper1/work_dirs/scdown_p3_g4_semantic_queue/scdown_p3_g4_semantic_640_bs36.py",
+  "config_sha256": "5a19cb2ac5249e22559483ea8e331d9f153a35727977efba2b0a2453c5b941e0"
+}

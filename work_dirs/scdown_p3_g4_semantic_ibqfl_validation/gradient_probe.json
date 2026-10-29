@@ -1,0 +1,83 @@
+{
+  "status": "passed",
+  "method": "scdown_p3_g4_semantic_ibqfl",
+  "raw_reference_checkpoint": "/home/pwt/Paper1/work_dirs/scdown_p3_g4_semantic_rtmdet_tiny_dior_640_gpu1_bs36/epoch_300.pth",
+  "scope": "Two strong-augmented B36 batches, frozen raw epoch300 reference weights, CPU FP32 batch BN. Backbone/neck computed without gradients; probe measured shared neck output and classification-tower parameter gradients. No updates or checkpoints.",
+  "formal_training_still_scratch": true,
+  "records": [
+    {
+      "batch": 1,
+      "losses": {
+        "loss_cls": 0.31258437037467957,
+        "loss_bbox": 0.2945186197757721,
+        "loss_instance_semantic": 0.037831682711839676,
+        "loss_instance_qfl": 0.022134624421596527,
+        "ibqfl_all_gt": 306.0,
+        "ibqfl_matched_gt": 269.0,
+        "ibqfl_positive_points": 2459.0,
+        "ibqfl_points_per_matched_gt": 9.141263961791992
+      },
+      "comparisons": {
+        "neck_outputs": {
+          "main_vs_extra": {
+            "cosine": 0.7984359788207797,
+            "added_over_main_norm": 0.05496684424137552
+          },
+          "roi_vs_extra": {
+            "cosine": 0.10446237050599781,
+            "added_over_main_norm": 0.2090972382150485
+          }
+        },
+        "classification_tower_parameters": {
+          "main_vs_extra": {
+            "cosine": 0.9556915525695293,
+            "added_over_main_norm": 0.07990981781938747
+          },
+          "roi_vs_extra": {
+            "cosine": 0.06857093153979618,
+            "added_over_main_norm": 0.48515925850827085
+          }
+        }
+      }
+    },
+    {
+      "batch": 2,
+      "losses": {
+        "loss_cls": 0.2678738832473755,
+        "loss_bbox": 0.34207695722579956,
+        "loss_instance_semantic": 0.02306969277560711,
+        "loss_instance_qfl": 0.016588319092988968,
+        "ibqfl_all_gt": 335.0,
+        "ibqfl_matched_gt": 311.0,
+        "ibqfl_positive_points": 2874.0,
+        "ibqfl_points_per_matched_gt": 9.241157531738281
+      },
+      "comparisons": {
+        "neck_outputs": {
+          "main_vs_extra": {
+            "cosine": 0.6977141195791708,
+            "added_over_main_norm": 0.05001635406817333
+          },
+          "roi_vs_extra": {
+            "cosine": 0.09448724587238072,
+            "added_over_main_norm": 0.2711963689611395
+          }
+        },
+        "classification_tower_parameters": {
+          "main_vs_extra": {
+            "cosine": 0.8369368451708521,
+            "added_over_main_norm": 0.11217325874972958
+          },
+          "roi_vs_extra": {
+            "cosine": 0.03995143985923746,
+            "added_over_main_norm": 0.5429549327714387
+          }
+        }
+      }
+    }
+  ],
+  "limitations": [
+    "Endpoint gradient diagnostic is not full-training or AP evidence.",
+    "Pointwise nonnegative QFL scaling does not force alignment after shared-parameter aggregation."
+  ]
+}

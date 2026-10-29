@@ -1,0 +1,8 @@
+/home/pwt/miniconda3/envs/rtmdet/lib/python3.10/site-packages/torch/nn/modules/conv.py:459: UserWarning: Applied workaround for CuDNN issue, install nvrtc.so (Triggered internally at ../aten/src/ATen/native/cudnn/Conv_v8.cpp:80.)
+  return F.conv2d(input, weight, bias, self.stride,
+/home/pwt/miniconda3/envs/rtmdet/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3483.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+{"amp": false, "outer_loss_multiplier": 1.0, "forward_error": 0.0, "maximum_unscaled_parameter_gradient_error": 1.135940692620352e-06, "gradient_relative_l2_error": 0.00012476864607310987, "main_backbone_gradient_nonzero": true, "roi_backbone_gradient_exactly_zero": true}
+{"amp": false, "outer_loss_multiplier": 32.0, "forward_error": 0.0, "maximum_unscaled_parameter_gradient_error": 1.158274244517088e-06, "gradient_relative_l2_error": 0.0001246175849934741, "main_backbone_gradient_nonzero": true, "roi_backbone_gradient_exactly_zero": true}
+{"amp": true, "outer_loss_multiplier": 32.0, "forward_error": 0.0, "maximum_unscaled_parameter_gradient_error": 0.0, "gradient_relative_l2_error": 0.0, "main_backbone_gradient_nonzero": true, "roi_backbone_gradient_exactly_zero": true}
+{"amp": true, "outer_loss_multiplier": 128.0, "forward_error": 0.0, "maximum_unscaled_parameter_gradient_error": 0.0, "gradient_relative_l2_error": 0.0, "main_backbone_gradient_nonzero": true, "roi_backbone_gradient_exactly_zero": true}

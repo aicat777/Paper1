@@ -1,0 +1,21 @@
+{
+  "kept": {
+    "scdown_p3_dense": {
+      "name": "scdown_p3_dense",
+      "pid": 225130,
+      "start_ticks": "52419712",
+      "status": "/home/pwt/Paper1/work_dirs/scdown_p3_dense_queue/status.json",
+      "work_dir": "/home/pwt/Paper1/work_dirs/scdown_p3_dense_rtmdet_tiny_dior_640_gpu1_bs36",
+      "log": "/home/pwt/Paper1/logs/scdown_p3_dense_rtmdet_tiny_dior_640_gpu1_bs36.log"
+    },
+    "scdown_p3_noact": {
+      "name": "scdown_p3_noact",
+      "pid": 226193,
+      "start_ticks": "52421326",
+      "status": "/home/pwt/Paper1/work_dirs/scdown_p3_noact_queue/status.json",
+      "work_dir": "/home/pwt/Paper1/work_dirs/scdown_p3_noact_rtmdet_tiny_dior_640_gpu1_bs36",
+      "log": "/home/pwt/Paper1/logs/scdown_p3_noact_rtmdet_tiny_dior_640_gpu1_bs36.log"
+    }
+  },
+  "trainer_pid": 238456
+}

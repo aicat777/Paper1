@@ -1,0 +1,32 @@
+{
+  "status": "passed",
+  "method": "instance_semantic_ibqfl",
+  "reference": "instance_semantic",
+  "parameters": 4880648,
+  "inference_parameters": 4878708,
+  "new_parameters": 0,
+  "inference_conv_linear_gmac": 7.98770304,
+  "state_keys_and_initialization_match_reference": true,
+  "inference_matches_reference_exactly": true,
+  "original_roi_preserved": true,
+  "official_main_losses_and_matching_unchanged": true,
+  "semantic_weight": 0.1,
+  "instance_qfl_weight": 0.1,
+  "all_valid_gt_denominator": true,
+  "train_images": 5862,
+  "val_images": 5863,
+  "input_size": [
+    640,
+    640
+  ],
+  "formal_batch": 36,
+  "accumulation": 1,
+  "scratch": true,
+  "unchanged_training_protocol": true,
+  "scdown_sites": [],
+  "g4_sites": [],
+  "watched_parameter_tensors": 22,
+  "formal_batch_capacity_tested": false,
+  "config": "/home/pwt/Paper1/work_dirs/instance_semantic_ibqfl_queue/instance_semantic_ibqfl_640_bs36.py",
+  "config_sha256": "11282d4cdeafc8871bfd526ace7b0c9ac3287cd93bdc9e654fc9f2da8dc7730a"
+}

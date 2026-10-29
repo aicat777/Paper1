@@ -1,12 +1,12 @@
 {
-  "state": "waiting_scdown_g8",
-  "queue_pid": 3698015,
-  "queue_start_ticks": "65165142",
-  "updated_at": "2026-10-23T04:53:13.812777+08:00",
+  "state": "complete",
+  "queue_pid": 1263810,
+  "queue_start_ticks": "68119500",
+  "updated_at": "2026-10-25T20:06:35.365532+08:00",
   "dependency": {
     "name": "scdown_g8",
-    "pid": 3697109,
-    "start_ticks": "65163636",
+    "pid": 1252854,
+    "start_ticks": "68101238",
     "status": "/home/pwt/Paper1/work_dirs/scdown_g8_queue/status.json",
     "work_dir": "/home/pwt/Paper1/work_dirs/scdown_g8_rtmdet_tiny_dior_640_gpu1_bs36",
     "log": "/home/pwt/Paper1/logs/scdown_g8_rtmdet_tiny_dior_640_gpu1_bs36.log"

@@ -27,9 +27,9 @@ python scripts/convert_dior_to_coco.py
 
 ## 模型与训练
 
-**SCDown与实例类别排序监督版均已完成300轮**，640输入、真实batch36、不累积、从零训练、每10轮验证。SCDown的VOC mAP75.87%、COCO AP56.5%，排序监督版75.56%/55.7%；原实例语义监督76.31%/56.9%，基线75.65%/56.4%。LSConv三处骨干版75.57%/55.9%、检测头版75.27%/54.7%、neck输出层版75.12%/55.6%，neck内部块版已取消。原理、检查和接续规则见 [TRAINING.md](TRAINING.md)。
+**GPU1当前运行GSCE＋ROI仅更新分类塔**（`scdown_p3_g4_semantic_clstower`），其后依次接续私有ROI、跨尺度ROI、ROI对比学习。三组均通过启动结构检查，等待前序完成后检查正式batch36容量，再从零启动。已完成的GSCE＋ROI统一alpha=0.25、ROI更新neck＋分类塔、原ROI＋实例均衡QFL分别为VOC mAP/COCO AP 76.01%/56.1%、75.64%/55.6%、75.67%/55.7%；原ROI独立对照为76.31%/56.9%。均沿用640、真实batch36、不累积、从零300轮、每10轮验证。状态在各自 `work_dirs/<方法>_queue/status.json`，原理与检查见 [TRAINING.md](TRAINING.md)。
 
-SCDown实验1/2/3与G4均已完成，VOC mAP/COCO AP分别为75.74%/56.4%、76.11%/56.7%、76.12%/56.4%、75.58%/56.2%；仅匹配GT和随机等数量GT的ROI对照分别为75.68%/56.5%、75.99%/56.4%。GPU1当前队列为 **DSConv（训练中）→ 对照A（P3密集空间卷积）→ 对照B（P3去中间SiLU）→ G8 → G16 → 四处SCDown＋G2**。各组均为640、真实batch36、不累积、从零300轮、每10轮验证；每组启动前核验正式容量，前序失败则停止接续。状态在各方法 `work_dirs/<方法>_queue/status.json`。四处SCDown＋G4暂不接续。
+四处＋DSConv/G2/G4和三处＋G8/G16均已完成300轮；四处三组组合的VOC mAP/COCO AP分别为75.20%/55.7%、75.69%/56.1%、75.83%/56.1%，三处＋G8/G16为75.71%/55.8%、75.51%/55.8%。ROI梯度拆分与四处SCDown＋G8也已完成，分别为76.01%/56.8%、75.53%/55.7%。各组均为640、真实batch36、不累积、从零300轮、每10轮验证。状态在各方法 `work_dirs/<方法>_queue/status.json`。
 
 | 配置目录 | 功能 |
 |---|---|
@@ -41,7 +41,12 @@ SCDown实验1/2/3与G4均已完成，VOC mAP/COCO AP分别为75.74%/56.4%、76.1
 | `configs/scdown_g16/` | 三处SCDown＋相同七处3×3改为groups=16，每组3/6/12通道 |
 | `configs/scdown_dsconv/` | 三处SCDown＋相同七处3×3改为DW3×3/BN/SiLU→PW1×1/BN/SiLU |
 | `configs/scdown_p3/` | 实验2：三处SCDown＋骨干P3入口，共四处；不修改CSP卷积分组 |
+| `configs/scdown_p3_semantic/` | 四处SCDown＋原ROI全GT实例语义监督，七处CSP仍为密集卷积；用于区分G4对ROI收益的影响 |
+| `configs/scdown_p3_g4_semantic/` | 四处SCDown＋七处G4＋原ROI全GT实例语义监督，辅助CE权重0.1，仅训练时增加1940参数 |
 | `configs/scdown_p3_g2/` | 四处SCDown＋现有七个CSP内部3×3分两组，用于验证两项改动的组合效果 |
+| `configs/scdown_p3_g4/` | 四处SCDown＋相同七处CSP内部3×3分四组 |
+| `configs/scdown_p3_g8/` | 四处SCDown＋相同七处CSP内部3×3分八组，每组6/12/24通道 |
+| `configs/scdown_p3_dsconv/` | 四处SCDown＋相同七处CSP内部3×3改为标准DW3×3→PW1×1 |
 | `configs/scdown_p3_dense/` | 机理对照A：只将实验2的P3入口DW3×3改为密集3×3，保留PW/BN/SiLU与末端BN |
 | `configs/scdown_p3_noact/` | 机理对照B：只去掉实验2的P3入口中间SiLU，保留卷积、两层BN与无末端激活 |
 | `configs/scdown_p2p3/` | 实验3：三处SCDown＋骨干P2、P3入口，共五处；仍使用三尺度检测头 |
@@ -60,9 +65,21 @@ SCDown实验1/2/3与G4均已完成，VOC mAP/COCO AP分别为75.74%/56.4%、76.1
 | `configs/freq_fusion/` | 完整FreqFusion：两处自顶向下融合使用低通、高通、相似性偏移和增强初始融合 |
 | `configs/freq_fusion_residual/` | CSP融合后注入高频残差：主路径融合浅层原特征，细节经独立1×1映射后相加 |
 | `configs/instance_semantic/` | 训练时从分类塔按GT取样，每个实例额外监督一次类别；推理沿用基线 |
+| `configs/instance_semantic_ibqfl/` | 保留原全GT ROI，新增按实例均衡的原QFL；真实检测logits和IoU目标，不增加推理计算 |
+| `configs/scdown_p3_g4_semantic_ibqfl/` | GSCE＋原ROI＋实例均衡QFL，已完成300轮 |
+| `configs/instance_semantic_gradscale/` | 原ROI的全GT分类学习保持0.1权重，辅助特征梯度乘0.25；已检查，未排队 |
+| `configs/scdown_p3_semantic_gradscale/` | 四处SCDown＋相同ROI梯度缩放，优先用于检验轻量结构上的辅助约束强度；已检查，未排队 |
+| `configs/scdown_p3_g4_semantic_gradscale/` | GSCE＋相同ROI梯度缩放；已完成300轮 |
+| `configs/scdown_p3_g4_semantic_neckhead/` | 保留neck/分类塔的0.25辅助梯度，仅取消ROI对骨干的梯度；已完成300轮 |
+| `configs/scdown_p3_g4_semantic_clstower/` | 仅分类塔接收0.25辅助梯度，骨干和neck只接收主检测梯度；当前训练中 |
+| `configs/scdown_p3_g4_semantic_private/` | 从neck分出私有96→192→96 ROI编码器；辅助监督进入骨干/neck，主分类塔只受主损失监督 |
+| `configs/scdown_p3_g4_semantic_levels/` | 同一GT在P3/P4/P5分别分类，跨层共享分类器；CE按实例数及三个尺度取平均 |
+| `configs/scdown_p3_g4_semantic_contrast/` | 保留原ROI CE，增加同类GT正对、异类GT负对的监督式对比；完整关系分块计算 |
+| `configs/instance_semantic_transfer/` | 保留原全GT ROI监督，向定位可靠但类别错误的检测位置传递正确ROI语义；无新增参数 |
 | `configs/instance_semantic_center/` | 所有GT、原辅助分类器，仅把区域平均改为GT中心的单次双线性取样 |
 | `configs/instance_semantic_matched/` | 原ROI辅助任务仅选择已匹配GT，分母仍为全部有效GT数 |
 | `configs/instance_semantic_random/` | 从全部有效GT随机取当前匹配GT数量，使用独立、可恢复随机状态 |
+| `configs/instance_semantic_split/` | 全部有效GT训练辅助分类器，仅匹配GT向共享特征反传辅助梯度 |
 | `configs/instance_semantic_rank/` | 保留整图GT语义监督，按真实匹配GT均衡监督检测头类别logits；不增加参数和推理计算 |
 | `configs/instance_semantic_multiscale/` | 增强前每图裁剪一个GT，六种尺度随机取一种，经共享骨干、neck与分类塔监督类别 |
 | `configs/tiny_assignment/` | 细小目标局部补匹配与回归权重下限，保留真实IoU分类质量标签 |
@@ -75,9 +92,13 @@ SCDown实验1/2/3与G4均已完成，VOC mAP/COCO AP分别为75.74%/56.4%、76.1
 
 `scdown`使用独立代码与配置，不叠加LSConv或实例监督。总参数3,854,964、卷积7.623901 GMAC，较基线减少20.98%和4.55%。9项测试、24组作者算子GPU前后向对照、官方入口真实数据训练/验证及GPU1正式batch36压力检查通过；完整训练后VOC比基线高0.22个百分点、COCO AP高0.1个百分点。入口为 `scripts/scdown_probe.py`，汇总在 `work_dirs/scdown_validation/checks.json`。
 
-`scdown_p3_g2`复用已验证的G2算子与neck，新增独立骨干与配置，不修改现有实验。总参数3,342,228、卷积7.017489 GMAC，较原始基线减少31.49%和12.15%。5项组合测试、官方入口16次AMP更新与两次32图验证，以及GPU0 batch8/每图1200框的压力检查通过；正式GPU1 batch36容量检查随队列启动前执行。结果汇总在 `work_dirs/scdown_p3_g2_validation/checks.json`。
+`scdown_p3_g4_semantic`使用独立组合配置，复用已有四处SCDown、七处G4及原ROI组件。训练参数3,105,704，推理参数3,103,764、Conv/Linear 6.785245 GMAC；辅助分类器1940参数只用于训练。6项组合检查与官方入口16次实际更新、两次32图验证通过，覆盖七处G4和四处SCDown的辅助梯度、原检测损失、初始化、BN更新及模型/优化器/AMP/EMA状态读写。GPU1正式batch36、每图1200框的三次压力更新通过，峰值张量36.00 GiB、保留40.62 GiB，无AMP跳步。复核入口为 `scripts/scdown_p3_g4_semantic_probe.py`，检查摘要在 `work_dirs/scdown_p3_g4_semantic_validation/checks.json`。
 
-G8/G16分别使用独立代码与配置，在三处SCDown上保持已有G2/G4的七处作用范围；总参数3,020,340/2,960,724，卷积6.811050/6.752989 GMAC。6项测试、各16次官方AMP更新与两次32图验证、各三次batch8/1200框压力更新通过；已排在四处版＋G2之前。复核入口 `scripts/scdown_group_sweep_probe.py`。四处版＋G4仅保留CPU验证过的实现，尚未做GPU检查或入队。
+四处SCDown的DSConv/G2/G4组合分别使用独立骨干与配置，复用各自已有的算子与neck，七处压缩位置固定。参数分别为2,979,732/3,342,228/3,103,764，卷积6.667281/7.017489/6.785245 GMAC。各5项组合测试、官方入口16次AMP更新与两次32图验证、batch8/1200框压力检查均通过；正式GPU1 batch36容量在启动前检查。结果汇总位于各自 `work_dirs/<方法>_validation/checks.json`。
+
+G8/G16分别使用独立代码与配置，在三处SCDown上保持已有G2/G4的七处作用范围；总参数3,020,340/2,960,724，卷积6.811050/6.752989 GMAC。检查及300轮训练均已完成，VOC mAP/COCO AP分别为75.71%/55.8%、75.51%/55.8%。复核入口 `scripts/scdown_group_sweep_probe.py`。
+
+`scdown_p3_g8`使用独立骨干与配置，复用现有G8算子和neck；四处降采样、七处分组位置与对照一致。实测参数2,984,532、卷积6.669124 GMAC。5项组合测试、16次官方GPU更新与两次32图验证、batch8/1200框压力检查通过，已接在ROI梯度拆分后；正式GPU1 batch36容量在启动前检查。报告在 `work_dirs/scdown_p3_g8_validation/checks.json`，复核入口 `scripts/scdown_p3_g8_probe.py`。
 
 FDW＋局部KSM已独立实现并通过作者算子对照、GPU训练/验证和batch12压力检查，配置为 [configs/fdw_ksm/rtmdet_tiny_dior_640.py](configs/fdw_ksm/rtmdet_tiny_dior_640.py)，尚未加入完整训练队列。正式配置沿用FDW的batch36，启动前仍需核验该batch的容量。
 

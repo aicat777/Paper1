@@ -1,0 +1,49 @@
+{
+  "status": "passed",
+  "cases": [
+    {
+      "amp": false,
+      "alpha": 0.0,
+      "forward_error": 0.0,
+      "feature_gradient_max_error": 0.0,
+      "classifier_gradient_max_error": 0.0
+    },
+    {
+      "amp": false,
+      "alpha": 0.25,
+      "forward_error": 0.0,
+      "feature_gradient_max_error": 3.637978807091713e-12,
+      "classifier_gradient_max_error": 0.0
+    },
+    {
+      "amp": false,
+      "alpha": 1.0,
+      "forward_error": 0.0,
+      "feature_gradient_max_error": 1.4551915228366852e-11,
+      "classifier_gradient_max_error": 0.0
+    },
+    {
+      "amp": true,
+      "alpha": 0.0,
+      "forward_error": 0.0,
+      "feature_gradient_max_error": 0.0,
+      "classifier_gradient_max_error": 0.0
+    },
+    {
+      "amp": true,
+      "alpha": 0.25,
+      "forward_error": 0.0,
+      "feature_gradient_max_error": 5.960464477539063e-08,
+      "classifier_gradient_max_error": 0.0
+    },
+    {
+      "amp": true,
+      "alpha": 1.0,
+      "forward_error": 0.0,
+      "feature_gradient_max_error": 0.0,
+      "classifier_gradient_max_error": 0.0
+    }
+  ],
+  "all_gt_and_three_scales": true,
+  "comparisons": "Original ROI autograd; closed-form vector derivatives in unit tests"
+}

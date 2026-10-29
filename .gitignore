@@ -5,6 +5,7 @@
 # Research downloads and PDF tooling stay local; retain experiment audit logs.
 /work_dirs/research/*
 !/work_dirs/research/*.log
+/work_dirs/paper_research/
 /.download-cache/
 /.venv*/
 __pycache__/

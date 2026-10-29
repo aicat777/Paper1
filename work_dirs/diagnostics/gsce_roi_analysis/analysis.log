@@ -1,0 +1,175 @@
+{
+  "comparison_epoch": 300,
+  "same_epoch_percent": {
+    "baseline": {
+      "pascal_voc/mAP": 75.65006017684937,
+      "coco/bbox_mAP": 56.39999999999999,
+      "coco/bbox_mAP_50": 77.0,
+      "coco/bbox_mAP_75": 61.9,
+      "coco/bbox_mAP_s": 7.5,
+      "coco/bbox_mAP_m": 34.9,
+      "coco/bbox_mAP_l": 69.8
+    },
+    "roi": {
+      "pascal_voc/mAP": 76.30515694618225,
+      "coco/bbox_mAP": 56.89999999999999,
+      "coco/bbox_mAP_50": 77.60000000000001,
+      "coco/bbox_mAP_75": 62.1,
+      "coco/bbox_mAP_s": 7.5,
+      "coco/bbox_mAP_m": 34.5,
+      "coco/bbox_mAP_l": 70.3
+    },
+    "scdown_p3": {
+      "pascal_voc/mAP": 76.11157894134521,
+      "coco/bbox_mAP": 56.699999999999996,
+      "coco/bbox_mAP_50": 77.5,
+      "coco/bbox_mAP_75": 62.1,
+      "coco/bbox_mAP_s": 7.8,
+      "coco/bbox_mAP_m": 35.6,
+      "coco/bbox_mAP_l": 69.69999999999999
+    },
+    "gsce": {
+      "pascal_voc/mAP": 75.83172917366028,
+      "coco/bbox_mAP": 56.10000000000001,
+      "coco/bbox_mAP_50": 77.0,
+      "coco/bbox_mAP_75": 61.6,
+      "coco/bbox_mAP_s": 7.9,
+      "coco/bbox_mAP_m": 34.300000000000004,
+      "coco/bbox_mAP_l": 69.1
+    },
+    "gsce_roi": {
+      "pascal_voc/mAP": 75.57116150856018,
+      "coco/bbox_mAP": 55.60000000000001,
+      "coco/bbox_mAP_50": 76.8,
+      "coco/bbox_mAP_75": 60.9,
+      "coco/bbox_mAP_s": 7.3999999999999995,
+      "coco/bbox_mAP_m": 33.6,
+      "coco/bbox_mAP_l": 68.7
+    }
+  },
+  "coco_delta_positive_epochs": 3,
+  "coco_delta_zero_epochs": 2,
+  "coco_delta_negative_epochs": 25,
+  "class_delta_vs_gsce": [
+    {
+      "class": "dam",
+      "gsce": 32.300000000000004,
+      "gsce_roi": 29.5,
+      "delta": -2.8000000000000043
+    },
+    {
+      "class": "golffield",
+      "gsce": 54.800000000000004,
+      "gsce_roi": 52.800000000000004,
+      "delta": -2.0
+    },
+    {
+      "class": "chimney",
+      "gsce": 77.5,
+      "gsce_roi": 76.4,
+      "delta": -1.0999999999999943
+    },
+    {
+      "class": "groundtrackfield",
+      "gsce": 64.9,
+      "gsce_roi": 63.9,
+      "delta": -1.000000000000007
+    },
+    {
+      "class": "airport",
+      "gsce": 49.7,
+      "gsce_roi": 48.9,
+      "delta": -0.8000000000000043
+    },
+    {
+      "class": "harbor",
+      "gsce": 47.8,
+      "gsce_roi": 47.0,
+      "delta": -0.7999999999999972
+    },
+    {
+      "class": "overpass",
+      "gsce": 44.3,
+      "gsce_roi": 43.5,
+      "delta": -0.7999999999999972
+    },
+    {
+      "class": "stadium",
+      "gsce": 77.5,
+      "gsce_roi": 76.8,
+      "delta": -0.7000000000000028
+    },
+    {
+      "class": "baseballfield",
+      "gsce": 82.0,
+      "gsce_roi": 81.39999999999999,
+      "delta": -0.6000000000000085
+    },
+    {
+      "class": "bridge",
+      "gsce": 28.199999999999996,
+      "gsce_roi": 27.6,
+      "delta": -0.5999999999999943
+    },
+    {
+      "class": "tenniscourt",
+      "gsce": 83.5,
+      "gsce_roi": 83.1,
+      "delta": -0.4000000000000057
+    },
+    {
+      "class": "storagetank",
+      "gsce": 69.19999999999999,
+      "gsce_roi": 68.8,
+      "delta": -0.3999999999999915
+    },
+    {
+      "class": "basketballcourt",
+      "gsce": 72.0,
+      "gsce_roi": 71.7,
+      "delta": -0.29999999999999716
+    },
+    {
+      "class": "vehicle",
+      "gsce": 44.800000000000004,
+      "gsce_roi": 44.6,
+      "delta": -0.20000000000000284
+    },
+    {
+      "class": "ship",
+      "gsce": 49.0,
+      "gsce_roi": 48.9,
+      "delta": -0.10000000000000142
+    },
+    {
+      "class": "expressway-toll-station",
+      "gsce": 51.300000000000004,
+      "gsce_roi": 51.5,
+      "delta": 0.19999999999999574
+    },
+    {
+      "class": "airplane",
+      "gsce": 78.5,
+      "gsce_roi": 78.7,
+      "delta": 0.20000000000000284
+    },
+    {
+      "class": "expressway-service-area",
+      "gsce": 51.6,
+      "gsce_roi": 51.800000000000004,
+      "delta": 0.20000000000000284
+    },
+    {
+      "class": "windmill",
+      "gsce": 39.2,
+      "gsce_roi": 39.5,
+      "delta": 0.29999999999999716
+    },
+    {
+      "class": "trainstation",
+      "gsce": 24.099999999999998,
+      "gsce_roi": 24.9,
+      "delta": 0.8000000000000007
+    }
+  ]
+}

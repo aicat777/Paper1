@@ -1,0 +1,4 @@
+{"amp": false, "outer_loss_multiplier": 1.0, "maximum_unscaled_gradient_error": 7.450580596923828e-09, "gradient_relative_l2_error": 2.150860630926136e-07}
+{"amp": false, "outer_loss_multiplier": 32.0, "maximum_unscaled_gradient_error": 7.450580596923828e-09, "gradient_relative_l2_error": 2.15086215206874e-07}
+{"amp": true, "outer_loss_multiplier": 32.0, "maximum_unscaled_gradient_error": 3.725290298461914e-09, "gradient_relative_l2_error": 1.2713636512701578e-07}
+{"amp": true, "outer_loss_multiplier": 128.0, "maximum_unscaled_gradient_error": 3.725290298461914e-09, "gradient_relative_l2_error": 1.2693037420994928e-07}

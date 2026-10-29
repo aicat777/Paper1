@@ -1,0 +1,30 @@
+{
+  "status": "passed",
+  "method": "instance_semantic_transfer",
+  "parameters": 4880648,
+  "inference_parameters": 4878708,
+  "new_parameters": 0,
+  "inference_conv_linear_gmac": 7.98770304,
+  "initial_parameters_and_predictions_exact": true,
+  "inference_skips_transfer": true,
+  "unchanged_training_protocol": true,
+  "input_size": [
+    640,
+    640
+  ],
+  "formal_batch": 36,
+  "accumulation": 1,
+  "train_images": 5862,
+  "val_images": 5863,
+  "scratch": true,
+  "semantic_weight": 0.1,
+  "transfer_weight": 0.1,
+  "transfer_min_iou": 0.5,
+  "transfer_temperature": 1.0,
+  "transfer_normalization": "mean_within_each_selected_gt_then_mean_over_selected_gt",
+  "original_roi_coverage": "all_valid_gt",
+  "original_roi_denominator": "all_valid_gt",
+  "formal_batch_capacity_tested": false,
+  "config": "/home/pwt/Paper1/work_dirs/instance_semantic_transfer_queue/instance_semantic_transfer_640_bs36.py",
+  "config_sha256": "6d0a1c3862c99109371267b680815cef6c146f4f816eb6a497e844e5e3ddaf71"
+}

@@ -1,0 +1,136 @@
+{
+  "status": "passed",
+  "started_at_unix": 1793259741.862808,
+  "gpu": 0,
+  "tests": {
+    "count": 13,
+    "status": "passed"
+  },
+  "checks": [
+    {
+      "method": "private",
+      "mode": "preflight",
+      "report": "/home/pwt/Paper1/work_dirs/scdown_p3_g4_semantic_private_validation/preflight.json",
+      "status": "passed"
+    },
+    {
+      "method": "levels",
+      "mode": "preflight",
+      "report": "/home/pwt/Paper1/work_dirs/scdown_p3_g4_semantic_levels_validation/preflight.json",
+      "status": "passed"
+    },
+    {
+      "method": "contrast",
+      "mode": "preflight",
+      "report": "/home/pwt/Paper1/work_dirs/scdown_p3_g4_semantic_contrast_validation/preflight.json",
+      "status": "passed"
+    },
+    {
+      "method": "private",
+      "mode": "fidelity",
+      "report": "/home/pwt/Paper1/work_dirs/scdown_p3_g4_semantic_private_validation/fidelity_gpu0.json",
+      "status": "passed"
+    },
+    {
+      "method": "levels",
+      "mode": "fidelity",
+      "report": "/home/pwt/Paper1/work_dirs/scdown_p3_g4_semantic_levels_validation/fidelity_gpu0.json",
+      "status": "passed"
+    },
+    {
+      "method": "contrast",
+      "mode": "fidelity",
+      "report": "/home/pwt/Paper1/work_dirs/scdown_p3_g4_semantic_contrast_validation/fidelity_gpu0.json",
+      "status": "passed"
+    },
+    {
+      "method": "private",
+      "mode": "smoke",
+      "report": "/home/pwt/Paper1/work_dirs/scdown_p3_g4_semantic_private_validation/smoke_gpu0.json",
+      "status": "passed"
+    },
+    {
+      "method": "levels",
+      "mode": "smoke",
+      "report": "/home/pwt/Paper1/work_dirs/scdown_p3_g4_semantic_levels_validation/smoke_gpu0.json",
+      "status": "passed"
+    },
+    {
+      "method": "contrast",
+      "mode": "smoke",
+      "report": "/home/pwt/Paper1/work_dirs/scdown_p3_g4_semantic_contrast_validation/smoke_gpu0.json",
+      "status": "passed"
+    },
+    {
+      "method": "private",
+      "mode": "capacity",
+      "report": "/home/pwt/Paper1/work_dirs/scdown_p3_g4_semantic_private_validation/capacity_gpu0.json",
+      "status": "passed"
+    },
+    {
+      "method": "levels",
+      "mode": "capacity",
+      "report": "/home/pwt/Paper1/work_dirs/scdown_p3_g4_semantic_levels_validation/capacity_gpu0.json",
+      "status": "passed"
+    },
+    {
+      "method": "contrast",
+      "mode": "capacity",
+      "report": "/home/pwt/Paper1/work_dirs/scdown_p3_g4_semantic_contrast_validation/capacity_gpu0.json",
+      "status": "passed"
+    }
+  ],
+  "finished_at_unix": 1793260046.0312204,
+  "formal_batch_capacity_tested": false,
+  "supplementary_checks": [
+    {
+      "mode": "whole_model_independent_gradient_reference",
+      "precision": "FP32",
+      "cases": 3,
+      "status": "passed",
+      "report": "/home/pwt/Paper1/work_dirs/roi_auxiliary_variants_validation/full_model_gpu0.json"
+    },
+    {
+      "mode": "contrast_relation_only_capacity",
+      "gt_count": 43200,
+      "status": "passed",
+      "report": "/home/pwt/Paper1/work_dirs/roi_auxiliary_variants_validation/contrast_43200_gpu0.json"
+    }
+  ],
+  "full_training_queued": true,
+  "queue_order": [
+    "scdown_p3_g4_semantic_private",
+    "scdown_p3_g4_semantic_levels",
+    "scdown_p3_g4_semantic_contrast"
+  ],
+  "queues": [
+    {
+      "method": "scdown_p3_g4_semantic_private",
+      "queue_pid": 3861154,
+      "queue_start_ticks": "121055856",
+      "dependency": "scdown_p3_g4_semantic_clstower",
+      "state": "waiting_scdown_p3_g4_semantic_clstower",
+      "manifest": "/home/pwt/Paper1/work_dirs/scdown_p3_g4_semantic_private_queue/manifest.json"
+    },
+    {
+      "method": "scdown_p3_g4_semantic_levels",
+      "queue_pid": 3862676,
+      "queue_start_ticks": "121057721",
+      "dependency": "scdown_p3_g4_semantic_private",
+      "state": "waiting_scdown_p3_g4_semantic_private",
+      "manifest": "/home/pwt/Paper1/work_dirs/scdown_p3_g4_semantic_levels_queue/manifest.json"
+    },
+    {
+      "method": "scdown_p3_g4_semantic_contrast",
+      "queue_pid": 3864122,
+      "queue_start_ticks": "121059329",
+      "dependency": "scdown_p3_g4_semantic_levels",
+      "state": "waiting_scdown_p3_g4_semantic_levels",
+      "manifest": "/home/pwt/Paper1/work_dirs/scdown_p3_g4_semantic_contrast_queue/manifest.json"
+    }
+  ],
+  "formal_capacity": {
+    "status": "pending",
+    "formal_batch": 36
+  }
+}

@@ -1,0 +1,13 @@
+test_auxiliary_gradient_reaches_all_scdown_and_g4_sites_but_excludes_predictors (test_scdown_p3_g4_semantic.SCDownP3G4SemanticTests) ... /home/pwt/miniconda3/envs/rtmdet/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3483.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+ok
+test_empty_gt_preserves_original_detector_losses_and_connected_auxiliary_zero (test_scdown_p3_g4_semantic.SCDownP3G4SemanticTests) ... ok
+test_initialization_inference_scdown_sites_and_parameter_sharing (test_scdown_p3_g4_semantic.SCDownP3G4SemanticTests) ... ok
+test_main_losses_unchanged_and_full_gt_ce_independent_reference (test_scdown_p3_g4_semantic.SCDownP3G4SemanticTests) ... ok
+test_protocol_and_model_are_exact_composition_of_existing_methods (test_scdown_p3_g4_semantic.SCDownP3G4SemanticTests) ... ok
+test_zero_weight_preserves_detection_gradients_and_sgd_step (test_scdown_p3_g4_semantic.SCDownP3G4SemanticTests) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 7.384s
+
+OK

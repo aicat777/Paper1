@@ -1,0 +1,20 @@
+test_empty_singleton_no_positive_and_identical_features (tests.test_roi_auxiliary_variants.ContrastiveFormulaTests) ... ok
+test_permutation_invariance_and_external_loss_scale (tests.test_roi_auxiliary_variants.ContrastiveFormulaTests) ... ok
+test_streaming_value_and_both_sides_of_gradient_against_scalar_reference (tests.test_roi_auxiliary_variants.ContrastiveFormulaTests) ... ok
+test_actual_auxiliary_gradient_boundaries (tests.test_roi_auxiliary_variants.GSCEVariantIntegrationTests) ... /home/pwt/miniconda3/envs/rtmdet/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3483.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+ok
+test_list_tensor_gt_equivalence_empty_gt_and_state_roundtrip (tests.test_roi_auxiliary_variants.GSCEVariantIntegrationTests) ... ok
+test_main_losses_and_derivatives_unchanged_and_one_forward_per_step (tests.test_roi_auxiliary_variants.GSCEVariantIntegrationTests) ... ok
+test_protocol_initialization_inference_and_head_sharing (tests.test_roi_auxiliary_variants.GSCEVariantIntegrationTests) ... ok
+test_zero_contrast_weight_recovers_original_ce_and_full_detector_update (tests.test_roi_auxiliary_variants.GSCEVariantIntegrationTests) ... ok
+test_all_level_objective_and_gradients_equal_independent_per_level_ce (tests.test_roi_auxiliary_variants.ROIVariantLossTests) ... ok
+test_contrast_keeps_original_ce_and_normalizes_by_all_gt (tests.test_roi_auxiliary_variants.ROIVariantLossTests) ... ok
+test_distributed_normalizer_and_empty_gt_are_finite_connected (tests.test_roi_auxiliary_variants.ROIVariantLossTests) ... ok
+test_one_small_gt_reaches_every_level_without_tripling_weight (tests.test_roi_auxiliary_variants.ROIVariantLossTests) ... ok
+test_private_and_contrast_scale_only_shared_features (tests.test_roi_auxiliary_variants.ROIVariantLossTests) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 18.512s
+
+OK

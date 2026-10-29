@@ -4,12 +4,12 @@
   "gpu_uuid": "GPU-df11ee80-4992-6cab-1055-b211d226f165",
   "min_free_mib": 46000,
   "dependency": {
-    "name": "scdown_g16",
-    "pid": 3698015,
-    "start_ticks": "65165142",
-    "status": "/home/pwt/Paper1/work_dirs/scdown_g16_queue/status.json",
-    "work_dir": "/home/pwt/Paper1/work_dirs/scdown_g16_rtmdet_tiny_dior_640_gpu1_bs36",
-    "log": "/home/pwt/Paper1/logs/scdown_g16_rtmdet_tiny_dior_640_gpu1_bs36.log"
+    "name": "scdown_p3_dsconv",
+    "pid": 1250367,
+    "start_ticks": "68097319",
+    "status": "/home/pwt/Paper1/work_dirs/scdown_p3_dsconv_queue/status.json",
+    "work_dir": "/home/pwt/Paper1/work_dirs/scdown_p3_dsconv_rtmdet_tiny_dior_640_gpu1_bs36",
+    "log": "/home/pwt/Paper1/logs/scdown_p3_dsconv_rtmdet_tiny_dior_640_gpu1_bs36.log"
   },
   "experiment": {
     "name": "scdown_p3_g2_640_bs36",

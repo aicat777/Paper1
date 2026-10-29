@@ -1,0 +1,505 @@
+
+--- PDF PAGE 1 ---
+IEEE GEOSCIENCE AND REMOTE SENSING LETTERS, VOL. 23, 2026
+6021205
+LCMCA-Net: A Large-Kernel Contour Attention
+and Multiscale Corner Alignment Network for
+Remote Sensing Object Detection
+Wentao Pan
+and Xiaodan Lv
+Abstract—Remote sensing object detection plays a crucial role
+in national defense and security applications. Although anchor-
+free methods such as CenterNet++ achieve competitive recall
+and low false-positive rates, they remain limited by restricted
+global receptive ﬁelds and insuﬃcient exploitation of geometric
+contour information. In addition, center keypoints often yield
+weak convolutional responses for objects with large homogeneous
+regions or hollow structures and for small objects, increasing
+the likelihood of missed detections and false alarms. To address
+these limitations, we propose LCMCA-Net, which integrates a
+large-kernel contour attention (LC) module and a multiscale
+corner alignment (MCA) module. The LC module uses large-
+kernel separable convolutions with stage-speciﬁc kernel sizes to
+enlarge the receptive ﬁeld and capture ﬁne-grained contour cues.
+The MCA module further uses parallel dilated convolutions
+to predict spatial oﬀsets and modulation masks from center
+features, after which deformable sampling dynamically aligns
+the top-left and bottom-right features. The resulting geometry-
+related corner information is incorporated into the center branch.
+This integration compensates for weak center responses and
+improves consistency between the center and corner represen-
+tations. Extensive experiments on the two public datasets, DIOR
+and NWPU VHR-10, show that LCMCA-Net attains state-of-
+the-art performance among the methods evaluated on these
+datasets. The source code is available at https://github.com/
+aicat777/LCMCA-Net
+Index Terms—Anchor-free detection, attention mechanism,
+feature alignment, large-kernel convolution, object detection,
+remote sensing.
+I. INTRODUCTION
+R
+ECENT advances in deep learning have substantially
+expanded the capabilities of remote sensing, support-
+ing applications ranging from image classiﬁcation and scene
+understanding to object detection. In parallel with conventional
+artiﬁcial neural networks, recent research on spiking neural
+networks has examined remote sensing scene classiﬁcation,
+onboard object recognition, and event-based optical ﬂow esti-
+mation. These studies point to the potential of spike-driven
+computation for low-power remote sensing analysis [1], [2],
+[3], [4].
+Received 23 July 2026; accepted 14 September 2026. Date of publication
+18 September 2026; date of current version 8 October 2026. (Corresponding
+author: Xiaodan Lv.)
+The authors are with the Data Security Laboratory, Guizhou University,
+Guiyang 550025, China (e-mail: 18984170078@126.com).
+This
+article
+has
+supplementary
+downloadable
+material
+available
+at
+https://doi.org/10.1109/LGRS.2026.3734955, provided by the authors.
+Digital Object Identiﬁer 10.1109/LGRS.2026.3734955
+Among these applications, remote sensing object detection
+remains particularly challenging because scenes frequently
+contain dense clusters of small objects and objects spanning a
+wide range of scales [5]. Recent studies have approached these
+challenges from several directions. For example, horizontal-to-
+rotated box bridging has been investigated to improve object
+localization, whereas frequency-aware coarse-to-ﬁne supervi-
+sion has been introduced to strengthen feature representation
+in complex remote sensing scenes [6], [7]. Bottom-up anchor-
+free detectors have likewise attracted increasing attention
+[8]. By eliminating predeﬁned anchors, these methods oﬀer
+improved adaptability to objects with extreme aspect ratios.
+For example, CornerNet achieves high recall by predicting
+corner keypoint heatmaps, but it often suﬀers from a high
+false-positive rate [9]. CenterNet++ alleviates this issue by
+introducing an auxiliary center keypoint to verify corner pairs,
+thereby markedly reducing false alarms [10].
+Despite these advances, applying CenterNet++ to remote
+sensing object detection still presents two critical limitations.
+First, the backbone network has a limited global receptive
+ﬁeld, which restricts the ability to model broad spatial con-
+text and fully exploit the distinctive geometric contour cues
+in remote sensing images. Second, center keypoints often
+exhibit weak local convolutional responses for objects with
+large homogeneous regions or hollow structures and for small
+objects. As a result, valid candidate boxes may receive low
+conﬁdence scores or be incorrectly classiﬁed as background.
+To address these limitations, we propose LCMCA-Net, a
+novel architecture built upon CenterNet++. The main contri-
+butions of this work are summarized as follows.
+1) We propose the LC module to enhance the fea-
+ture extraction capability of the ConvNeXt backbone.
+By integrating multistage large-kernel separable con-
+volutions, the LC module eﬃciently enlarges the
+receptive ﬁeld and strengthens contour-aware feature
+representation.
+2) The multiscale corner alignment (MCA) module is
+designed to predict spatial oﬀsets and modulation
+masks from center features through parallel dilated
+convolutions and to dynamically align the top-left and
+bottom-right features using deformable sampling. By
+incorporating geometry-related corner information into
+the center branch, the MCA module compensates for
+weak center responses, improves consistency between
+1558-0571 © 2026 IEEE. All rights reserved, including rights for text and data mining, and training of artiﬁcial intelligence and
+similar technologies. Personal use is permitted, but republication/redistribution requires IEEE permission.
+See https://www.ieee.org/publications/rights/index.html for more information.
+Authorized licensed use limited to: Guizhou University. Downloaded on October 09,2026 at 07:12:53 UTC from IEEE Xplore.  Restrictions apply. 
+
+--- PDF PAGE 2 ---
+6021205
+IEEE GEOSCIENCE AND REMOTE SENSING LETTERS, VOL. 23, 2026
+Fig. 1. Overall architecture of the proposed LCMCA-Net.
+the center and corner representations, and strengthens
+edge-sensitive responses in the center representation.
+These
+eﬀects
+reduce
+missed
+detections
+and
+false
+alarms.
+3) The resulting architecture, LCMCA-Net, achieves state-
+of-the-art detection accuracy among the algorithms
+evaluated on the DIOR and NWPU VHR-10 datasets.
+II. METHODOLOGY
+A. Overall Architecture
+CenterNet++ introduces an auxiliary center keypoint to
+reduce false-positive detections in CornerNet. However, it still
+struggles with large-scale variations and complex background
+interference in remote sensing object detection. To address
+these challenges, we propose LCMCA-Net. As shown in
+Fig. 1, the overall architecture is built upon a feature pyramid
+framework and integrates the proposed large-kernel contour
+attention (LC) module and MCA module to enhance feature
+representation and keypoint alignment.
+B. Large-Kernel Contour Attention (LC) Module
+In remote sensing images, geometric contours and texture
+patterns provide important visual cues for object detection.
+In addition, a large receptive ﬁeld is required to perceive
+complex spatial contexts. To address both requirements, the
+LC module is introduced. As shown in Fig. 2, the LC module
+embeds a multiscale large separable kernel attention (LSKA)
+[11] mechanism within the ConvNeXt block [12].
+First, ConvNeXt processes the input feature X to generate
+intermediate features. A normalization layer is then applied
+to obtain Fnorm. The LSKA mechanism extracts local spatial
+Fig. 2.
+Architecture of the large-kernel contour attention (LC) module,
+detailing Stage 2 structure. DW dilated convolutions adopt stage-speciﬁc
+dilation rates.
+features using horizontal and vertical 1-D depthwise convolu-
+tions with a kernel size of k0. Subsequently, 1-D depthwise
+dilated convolutions (dilation rate d, kernel size ks) are used
+to substantially expand the receptive ﬁeld. Finally, a 1 × 1
+convolution generates the attention map A
+A = C1×1
+ Dks×1
+ D1×ks
+ Sk0×1
+ S1×k0 (Fnorm)
+
+.
+(1)
+This attention map A is multiplied elementwise with Fnorm to
+obtain the enhanced feature Fattn
+Fattn = Fnorm ⊗A.
+(2)
+To prevent network degradation and overﬁtting, we use a
+residual connection and DropPath to produce the ﬁnal output
+Y
+Y = ConvNeXt (X) + DropPath (Fattn) .
+(3)
+Smaller kernels in the shallow stages retain local details,
+whereas larger kernels in deeper stages capture broader seman-
+tic context. A moderately smaller kernel is adopted in the ﬁnal
+stage because its features have already accumulated a large
+receptive ﬁeld. Accordingly, the (k0, ks, d) conﬁgurations for
+Stages 0–3 are set to (3, 3, 2), (3, 3, 2), (5, 11, 3), and (5, 7, 3),
+respectively, yielding eﬀective kernel sizes of {7, 7, 35, 23}
+according to
+Keﬀ= k0 + d (ks −1)
+(4)
+where k0 and ks denote the kernel sizes of the initial depthwise
+convolution and the subsequent depthwise dilated convolution,
+respectively, and d is the dilation rate.
+Authorized licensed use limited to: Guizhou University. Downloaded on October 09,2026 at 07:12:53 UTC from IEEE Xplore.  Restrictions apply. 
+
+--- PDF PAGE 3 ---
+PAN AND LV: LCMCA-Net: A LARGE-KERNEL CONTOUR ATTENTION AND MCA NETWORK
+6021205
+Fig. 3. Architecture of the MCA module. The TL and BR submodules have
+identical structures and diﬀer only in the sampling target used by DCNv2.
+The MCA-BR branch is omitted.
+C. MCA Module
+At each FPN level of CenterNet++, the detection head
+produces top-left, bottom-right, and center heatmap features
+at the corresponding scale. The three conﬁdence maps and six
+oﬀset maps generated by the top-left, bottom-right, and
+enhanced center branches are subsequently concatenated and
+injected into the classiﬁcation features and point-set reﬁne-
+ment features. Finally, the deformable convolutions use oﬀsets
+predicted from the initial point set to produce the ﬁnal classi-
+ﬁcation and reﬁned regression outputs.
+However, center points often produce weak responses for
+objects with large homogeneous regions or hollow structures
+and for small objects, increasing the likelihood of missed
+detections and false alarms. The MCA module is, therefore,
+applied to the center features at each FPN level. It uses the
+corresponding top-left and bottom-right features to align and
+enhance the center features. The module architecture is shown
+in Fig. 3.
+For the top-left branch, the MCA module processes the
+center feature Fct using a multiscale spatial perception
+block to estimate coordinate oﬀsets ∆Ptl and corner weight
+masks Mtl
+∆Ptl, Mtl = Φtl (Fct)
+(5)
+where Φtl(·) represents three parallel 3
+×
+3 depthwise
+separable dilated convolutions. The eﬀective kernel size is
+Reﬀ= 3 + 2(d −1). Accordingly, dilation rates of 1, 2, and
+3 correspond to eﬀective kernel sizes of 3 × 3, 5 × 5, and
+7 × 7, respectively. The outputs of the parallel branches are
+concatenated and processed through normalization, activation,
+and a 1
+×
+1 convolution to predict two coordinate-oﬀset
+channels and one modulation-mask channel. Compared with
+a single large-kernel branch, this parallel design captures
+complementary spatial context at multiple scales while requir-
+ing substantially fewer parameters than a standard 7 × 7
+convolution.
+Using
+the
+predicted
+oﬀsets
+and
+masks,
+modulated
+deformable convolution (DCNv2) performs spatial sampling
+on the top-left feature Ftl, producing the center-aligned corner
+feature ˜Ftl
+˜Ftl = DCNv2 (Ftl, ∆Ptl, Mtl) .
+(6)
+The same operations are applied to the bottom-right branch to
+obtain the aligned feature ˜Fbr. To fuse these features while
+suppressing noise, learnable gating parameters, γtl and γbr,
+together with a residual structure, are used to update the center
+feature Fout
+Fout = Fct + γtl · ˜Ftl + γbr · ˜Fbr.
+(7)
+This design establishes a dynamic ﬁltering mechanism. In
+complex backgrounds, local texture patterns may incorrectly
+produce high center-point scores, leading to false alarms. In
+such cases, the MCA module aligns corner features with
+center features, thereby enhancing the edge-sensitive response
+of center representations and reducing missed detections and
+false alarms.
+III. EXPERIMENTS
+A. Datasets
+Extensive experiments are conducted on two public remote
+sensing object detection datasets, DIOR and NWPU VHR-10,
+to evaluate the proposed modules.
+The DIOR dataset contains 23 463 images and approxi-
+mately 192 000 instances across 20 categories [13] (C1–C20
+represent airplane, airport, baseball ﬁeld, basketball court,
+bridge, chimney, dam, expressway service area, expressway
+toll station, golf course, ground track ﬁeld, harbor, over-
+pass, ship, stadium, storage tank, tennis court, train station,
+vehicle, and windmill, respectively). The oﬃcial DIOR split
+is followed, with the trainval set used for training and the
+test set reserved for evaluation. To evaluate generalization
+across diﬀerent data distributions, the NWPU VHR-10 dataset
+[14] is also used. It contains 800 very-high-resolution images
+from ten classes: N1–N10 denote airplane, ship, storage tank,
+baseball diamond, tennis court, basketball court, ground track
+ﬁeld, harbor, bridge, and vehicle, respectively. The dataset is
+randomly divided into training and validation sets at a ratio
+of 4:1.
+B. Experimental Settings and Evaluation Metrics
+1) Experimental Settings: All experiments are conducted in
+PyTorch 2.0 on eight NVIDIA RTX A6000 GPUs with a batch
+size of eight and an input size of 800 × 800. The models are
+trained for 72 epochs using AdamW with an initial learning
+rate of 2 × 10−4 and a weight decay of 0.05. A linear warm-
+up is applied for 500 iterations with a warm-up ratio of 0.001.
+The learning rate is then decayed at epochs 63 and 69. Random
+ﬂipping and resizing are applied for data augmentation.
+Authorized licensed use limited to: Guizhou University. Downloaded on October 09,2026 at 07:12:53 UTC from IEEE Xplore.  Restrictions apply. 
+
+--- PDF PAGE 4 ---
+6021205
+IEEE GEOSCIENCE AND REMOTE SENSING LETTERS, VOL. 23, 2026
+TABLE I
+ABLATION STUDY ON DIOR DATASET
+TABLE II
+COMPARISON ON THE DIOR DATASET
+TABLE III
+COMPARISON ON THE NWPU VHR-10 DATASET
+2) Evaluation Metrics: Following standard object detec-
+tion protocols, we report the mean average precision at
+diﬀerent IoU thresholds, including mAP50, mAP75, and the
+more stringent mAP50:95. Scale-speciﬁc average precision met-
+rics, including mAPS, mAPM, and mAPL, are also reported.
+Together with the total number of parameters (Params),
+ﬂoating-point operations (FLOPs), and inference speed (FPS),
+these metrics characterize localization accuracy and model
+complexity.
+C. Experimental Results
+1) Ablation Study:
+Both parameter-level and module-
+level ablation studies are conducted on the DIOR dataset
+using a randomly initialized ConvNeXt backbone to assess
+the individual and combined contributions of the LC and
+MCA modules. The parameter-ablation results are reported in
+Tables I and II of the Supplementary Material. Both sets of
+results support the selected module conﬁgurations.
+As shown in Table I, adding the LC module to the
+CenterNet++ baseline improves mAP50:95 by 1.8 percentage
+points, whereas the MCA module alone yields a gain of
+0.4 percentage points. When the two modules are combined,
+mAP50:95, mAP50, and mAP75 increase by 2.2, 1.9, and
+2.0 percentage points, respectively. The combined conﬁgura-
+tion also increases mAPS and mAPL by 3.7 and 1.4 percentage
+points, respectively. The LC and MCA modules individually
+increase the parameter count by 7% and 1%, respectively.
+Despite this overhead, their combination achieves the highest
+detection performance among the tested conﬁgurations at an
+acceptable level of complexity. This combined architecture is
+referred to as LCMCA-Net. Relative to the baseline, LCMCA-
+Net improves mAP50:95 by 2.2 percentage points. This gain is
+accompanied by a 6.2% increase in FLOPs and a reduction in
+inference speed from 17.1 to 13.5 FPS.
+2) Comparison With State-of-the-Art Methods: LCMCA-
+Net is compared with a set of representative and recent
+detectors on the DIOR and NWPU VHR-10 datasets, includ-
+ing Faster R-CNN [15], CornerNet [9], RepDarkNet [16],
+YOLOv11s [17], DINO [18], Co-DETR [19], PDQR-DINO
+[20], DSDEF [21], and SED-DETR [22].
+On the DIOR dataset, LCMCA-Net achieves an overall
+mAP50 of 85.0%, as shown in Table II, exceeding DINO by
+4.8 percentage points. It also attains the highest classwise AP50
+for challenging categories such as airport and bridge.
+On the NWPU VHR-10 dataset, LCMCA-Net achieves an
+overall mAP50 of 95.9%, as shown in Table III, exceeding
+DINO by 3.2 percentage points. It also attains the highest
+classwise AP50 for the storage tank and tennis court categories.
+3) Cross-Dataset Generalization Experiment:
+A cross-
+dataset transfer experiment is conducted to evaluate LCMCA-
+Net under domain shifts and on unseen data distributions. In
+particular, LCMCA-Net is trained on DIOR and evaluated
+directly on the NWPU VHR-10 validation set without ﬁne-
+tuning. The results reported in Table III of Supplementary
+Material provide evidence that LCMCA-Net remains robust
+under the evaluated domain shift and unseen data distribution.
+4) Visualization: Fig. 4 presents a qualitative comparison
+between CenterNet++ and LCMCA-Net on the DIOR dataset.
+Authorized licensed use limited to: Guizhou University. Downloaded on October 09,2026 at 07:12:53 UTC from IEEE Xplore.  Restrictions apply. 
+
+--- PDF PAGE 5 ---
+PAN AND LV: LCMCA-Net: A LARGE-KERNEL CONTOUR ATTENTION AND MCA NETWORK
+6021205
+Fig. 4.
+Qualitative comparison between CenterNet++ and LCMCA-Net on
+the DIOR dataset.
+LCMCA-Net eﬀectively reduces severe false alarms observed
+in the baseline, such as misclassifying industrial buildings as
+tennis courts or ground houses as storage tanks. Moreover,
+in densely distributed scenarios, as shown in the third row,
+the baseline misses a substantial number of vehicles, whereas
+LCMCA-Net achieves better precision and recall for small
+targets.
+IV. CONCLUSION
+This letter presents LCMCA-Net, a novel anchor-free detec-
+tor designed for complex remote sensing imagery. To address
+the limited receptive ﬁeld and severe false-positive responses
+observed in baseline models, we propose two key compo-
+nents. The large-kernel contour attention (LC) module expands
+the global receptive ﬁeld to capture discriminative geometric
+contour cues, while the MCA module dynamically aligns
+corner features with center features to suppress false alarms.
+Comprehensive experiments on DIOR and NWPU VHR-10
+show that LCMCA-Net achieves high detection accuracy and
+state-of-the-art results among the evaluated methods. The
+cross-dataset evaluation further indicates robustness to the
+tested domain shift. The cross-dataset results also suggest that
+the model generalizes to the evaluated unseen data distribution.
+Nevertheless, performance gaps remain between LCMCA-Net
+and state-of-the-art models for complex categories such as
+harbor and for densely distributed small objects in categories
+such as vehicle. Future work will therefore focus on further
+improving LCMCA-Net. To improve real-time performance,
+future work will investigate removing cascaded corner pool-
+ing and developing lightweight architectural variants. These
+studies will assess the feasibility of deploying LCMCA-Net
+in real-time and edge-computing scenarios.
+REFERENCES
+[1]
+S. Wu, J. Li, L. Qi, Z. Liu, and X. Gao, “Remote sensing
+imagery scene classiﬁcation based on spiking neural network,” in
+Proc. IEEE Int. Geosci. Remote Sens. Symp. (IGARSS), Jul. 2021,
+pp. 2795–2798.
+[2]
+L.-Y. Niu, Y. Wei, and Y. Liu, “Event-driven spiking neural network
+based on membrane potential modulation for remote sensing image
+classiﬁcation,” Eng. Appl. Artif. Intell., vol. 123, Aug. 2023, Art. no.
+106322.
+[3]
+Y. Pang, L. Yao, Y. Luo, C. Dong, Q. Kong, and B. Chen, “RepSViT:
+An eﬃcient vision transformer based on spiking neural networks for
+object recognition in satellite on-orbit remote sensing images,” IEEE
+Trans. Geosci. Remote Sens., vol. 62, 2024, Art. no. 5610916.
+[4]
+S.
+Yang,
+B.
+Linares-Barranco,
+Y.
+Wu,
+and
+B.
+Chen,
+“Self-
+supervised high-order information bottleneck learning of spiking
+neural network for robust event-based optical ﬂow estimation,” IEEE
+Trans. Pattern Anal. Mach. Intell., vol. 47, no. 4, pp. 2280–2297,
+Apr. 2025.
+[5]
+X. Zhang et al., “Remote sensing object detection meets deep learning:
+A metareview of challenges and advances,” IEEE Geosci. Remote Sens.
+Mag., vol. 11, no. 4, pp. 8–44, Dec. 2023.
+[6]
+X. Qian, B. Wu, G. Cheng, X. Yao, W. Wang, and J. Han, “Building
+a bridge of bounding box regression between oriented and horizontal
+object detection in remote sensing images,” IEEE Trans. Geosci. Remote
+Sens., vol. 61, 2023, Art. no. 5605209.
+[7]
+X. Qian, X. Li, W. Wang, X. Yao, and G. Cheng, “Pointwise frequency
+attention and coarse-to-ﬁne learning with image-to-instance level super-
+vision for ﬁne-grained object detection in remote sensing images,” IEEE
+Trans. Geosci. Remote Sens., vol. 64, 2026, Art. no. 5619812.
+[8]
+S. Gui, S. Song, R. Qin, and Y. Tang, “Remote sensing object detection
+in the deep learning era—A review,” Remote Sens., vol. 16, no. 2,
+p. 327, Jan. 2024.
+[9]
+H. Law and J. Deng, “CornerNet: Detecting objects as paired keypoints,”
+in Proc. Eur. Conf. Comput. Vis. (ECCV), 2018, pp. 734–750.
+[10] K. Duan, S. Bai, L. Xie, H. Qi, Q. Huang, and Q. Tian, “CenterNet++
+for object detection,” IEEE Trans. Pattern Anal. Mach. Intell., vol. 46,
+no. 5, pp. 3509–3521, May 2023.
+[11] K. W. Lau, L.-M. Po, and Y. A. U. Rehman, “Large separable kernel
+attention: Rethinking the large kernel attention design in CNN,” Expert
+Syst. Appl., vol. 236, Feb. 2024, Art. no. 121352.
+[12] Z. Liu, H. Mao, C.-Y. Wu, C. Feichtenhofer, T. Darrell, and S. Xie, “A
+ConvNet for the 2020s,” in Proc. IEEE/CVF Conf. Comput. Vis. Pattern
+Recognit. (CVPR), Jun. 2022, pp. 11976–11986.
+[13] K. Li, G. Wan, G. Cheng, L. Meng, and J. Han, “Object detection in
+optical remote sensing images: A survey and a new benchmark,”
+ISPRS
+J.
+Photogramm.
+Remote
+Sens.,
+vol. 159,
+pp. 296–307,
+Jan. 2020.
+[14] G. Cheng, J. Han, P. Zhou, and L. Guo, “Multi-class geospatial object
+detection and geographic image classiﬁcation based on collection of part
+detectors,” ISPRS J. Photogramm. Remote Sens., vol. 98, pp. 119–132,
+Dec. 2014.
+[15] S. Ren, K. He, R. Girshick, and J. Sun, “Faster R-CNN: Towards
+real-time object detection with region proposal networks,” IEEE
+Trans. Pattern Anal. Mach. Intell., vol. 39, no. 6, pp. 1137–1149,
+Jun. 2017.
+[16] L. Zhou et al., “RepDarkNet: A multi-branched detector for small-target
+detection in remote sensing images,” ISPRS Int. J. Geo-Inf., vol. 11,
+no. 3, p. 158, Feb. 2022.
+[17] G. Jocher and J. Qiu. (2024). Ultralytics YOLO11. [Online]. Available:
+https://github.com/ultralytics/ultralytics
+[18] H. Zhang et al., “DINO: DETR with improved DeNoising anchor boxes
+for end-to-end object detection,” 2022, arXiv:2203.03605.
+[19] Z. Zong, G. Song, and Y. Liu, “DETRs with collaborative hybrid
+assignments training,” in Proc. IEEE/CVF Int. Conf. Comput. Vis., Jun.
+2023, pp. 6748–6758.
+[20] H. Yin, H. Wang, and Z. Zhu, “Progressive dynamic queries reformation-
+based DETR for remote sensing object detection,” IEEE Geosci. Remote
+Sens. Lett., vol. 22, pp. 1–5, 2025.
+[21] Y. Wang, J. Li, W. Zhao, and Y. Yang, “A double-stage detail enhance-
+ment framework for small object detection in high spatial resolution
+remote sensing images,” IEEE J. Sel. Topics Appl. Earth Observ. Remote
+Sens., vol. 19, pp. 12720–12737, 2026.
+[22] H. Yin, Z. Zhu, and H. Wang, “SED-DETR: A scale-enhanced
+deformable detection transformer for remote sensing images,” IEEE
+Trans. Geosci. Remote Sens., vol. 63, 2025, Art. no. 5624412.
+Authorized licensed use limited to: Guizhou University. Downloaded on October 09,2026 at 07:12:53 UTC from IEEE Xplore.  Restrictions apply. 

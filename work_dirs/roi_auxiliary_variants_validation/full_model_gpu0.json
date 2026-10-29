@@ -1,0 +1,29 @@
+{
+  "status": "passed",
+  "cases": [
+    {
+      "status": "passed",
+      "method": "private",
+      "precision": "FP32",
+      "backward_outside_autocast": true,
+      "maximum_gradient_error": 4.0745362639427185e-09,
+      "gradient_relative_l2_error": 5.300022818460754e-07
+    },
+    {
+      "status": "passed",
+      "method": "levels",
+      "precision": "FP32",
+      "backward_outside_autocast": true,
+      "maximum_gradient_error": 1.1990778148174286e-08,
+      "gradient_relative_l2_error": 1.054966843480065e-06
+    },
+    {
+      "status": "passed",
+      "method": "contrast",
+      "precision": "FP32",
+      "backward_outside_autocast": true,
+      "maximum_gradient_error": 1.4156103134155273e-07,
+      "gradient_relative_l2_error": 1.3117937592093129e-06
+    }
+  ]
+}

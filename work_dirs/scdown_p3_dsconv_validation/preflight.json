@@ -1,0 +1,137 @@
+{
+  "status": "passed",
+  "method": "scdown_p3_dsconv",
+  "parameters": 2979732,
+  "inference_conv_linear_gmac": 6.66728064,
+  "parameter_reduction_vs_original_percent": 38.92374784471626,
+  "mac_reduction_vs_original_percent": 16.530689653680465,
+  "actual_sites": [
+    {
+      "path": "backbone.stage2.1.blocks.0.conv1",
+      "input": [
+        1,
+        48,
+        80,
+        80
+      ],
+      "output": [
+        1,
+        48,
+        80,
+        80
+      ]
+    },
+    {
+      "path": "backbone.stage3.1.blocks.0.conv1",
+      "input": [
+        1,
+        96,
+        40,
+        40
+      ],
+      "output": [
+        1,
+        96,
+        40,
+        40
+      ]
+    },
+    {
+      "path": "backbone.stage4.2.blocks.0.conv1",
+      "input": [
+        1,
+        192,
+        20,
+        20
+      ],
+      "output": [
+        1,
+        192,
+        20,
+        20
+      ]
+    },
+    {
+      "path": "neck.top_down_layers.0.0.blocks.0.conv1",
+      "input": [
+        1,
+        96,
+        40,
+        40
+      ],
+      "output": [
+        1,
+        96,
+        40,
+        40
+      ]
+    },
+    {
+      "path": "neck.top_down_layers.1.blocks.0.conv1",
+      "input": [
+        1,
+        48,
+        80,
+        80
+      ],
+      "output": [
+        1,
+        48,
+        80,
+        80
+      ]
+    },
+    {
+      "path": "neck.bottom_up_layers.0.blocks.0.conv1",
+      "input": [
+        1,
+        96,
+        40,
+        40
+      ],
+      "output": [
+        1,
+        96,
+        40,
+        40
+      ]
+    },
+    {
+      "path": "neck.bottom_up_layers.1.blocks.0.conv1",
+      "input": [
+        1,
+        192,
+        20,
+        20
+      ],
+      "output": [
+        1,
+        192,
+        20,
+        20
+      ]
+    }
+  ],
+  "scdown_sites": [
+    "backbone.stage2.0",
+    "backbone.stage3.0",
+    "backbone.stage4.0",
+    "neck.downsample_layers.1"
+  ],
+  "unchanged_initialization_including_all_four_scdowns": true,
+  "protocol_equal_to_experiment2": true,
+  "prediction_points": 8400,
+  "scratch": true,
+  "input_size": [
+    640,
+    640
+  ],
+  "formal_batch": 36,
+  "accumulation": 1,
+  "watched_parameter_tensors": 66,
+  "train_images": 5862,
+  "val_images": 5863,
+  "formal_batch_capacity_tested": false,
+  "config": "/home/pwt/Paper1/work_dirs/scdown_p3_dsconv_validation/formal_640_bs36.py",
+  "config_sha256": "5b5796b654ca3f253120f2015db53bf8fdecc51c21cb43fca2879d901c3fe453"
+}

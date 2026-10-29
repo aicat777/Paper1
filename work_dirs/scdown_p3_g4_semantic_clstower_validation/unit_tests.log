@@ -1,0 +1,14 @@
+test_closed_form_with_shared_paths_unused_parameters_and_scale (test_instance_semantic_clstower.ROIClassificationTowerTests) ... ok
+test_config_initialization_parameters_sharing_and_inference (test_instance_semantic_clstower.ROIClassificationTowerTests) ... ok
+test_empty_gt_tensor_list_and_alpha_boundaries (test_instance_semantic_clstower.ROIClassificationTowerTests) ... /home/pwt/miniconda3/envs/rtmdet/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3483.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+ok
+test_main_gradients_unchanged_and_backbone_neck_still_train (test_instance_semantic_clstower.ROIClassificationTowerTests) ... ok
+test_roi_only_has_zero_backbone_neck_and_unchanged_classification_gradients (test_instance_semantic_clstower.ROIClassificationTowerTests) ... ok
+test_serialization_and_optimizer_accumulation (test_instance_semantic_clstower.ROIClassificationTowerTests) ... ok
+test_total_gradient_single_forward_bn_and_adamw_reference_step (test_instance_semantic_clstower.ROIClassificationTowerTests) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 37.390s
+
+OK

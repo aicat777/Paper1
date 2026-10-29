@@ -1,0 +1,15 @@
+test_alpha_one_preserves_original_gradients_and_adamw_update (test_instance_semantic_gradscale.ROIGradientScaleTests) ... /home/pwt/miniconda3/envs/rtmdet/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3483.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+ok
+test_alpha_zero_trains_classifier_but_preserves_plain_detector_update (test_instance_semantic_gradscale.ROIGradientScaleTests) ... ok
+test_independent_closed_form_and_identity (test_instance_semantic_gradscale.ROIGradientScaleTests) ... ok
+test_invalid_scales_and_empty_gt_keep_connected_zero (test_instance_semantic_gradscale.ROIGradientScaleTests) ... ok
+test_original_classifier_reused_and_roi_feature_gradients_scaled (test_instance_semantic_gradscale.ROIGradientScaleTests) ... ok
+test_tensor_list_empty_gt_and_strict_state_restore (test_instance_semantic_gradscale.ROIGradientScaleTests) ... ok
+test_three_configs_preserve_protocol_initialization_and_sharing (test_instance_semantic_gradscale.ROIGradientScaleTests) ... ok
+test_total_gradients_preserve_main_and_only_scale_auxiliary_path (test_instance_semantic_gradscale.ROIGradientScaleTests) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 40.567s
+
+OK

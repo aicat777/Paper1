@@ -1,0 +1,45 @@
+{
+  "status": "passed",
+  "method": "scdown_p3_g4_semantic_levels",
+  "reference": "scdown_p3_g4_semantic_gradscale",
+  "config": "/home/pwt/Paper1/configs/scdown_p3_g4_semantic_levels/rtmdet_tiny_dior_640.py",
+  "effective_config": "/home/pwt/Paper1/work_dirs/scdown_p3_g4_semantic_levels_validation/formal_config.py",
+  "parameters": 3105704,
+  "inference_parameters": 3103764,
+  "inference_conv_linear_gmac": 6.78524544,
+  "shared_cpu_integration_tests": 13,
+  "gpu_reference_cases": 4,
+  "official_smoke_optimizer_updates": 16,
+  "val_passes": 2,
+  "ema_roundtrips": 2,
+  "amp_skipped_updates": 0,
+  "capacity_microbatch": 8,
+  "capacity_gt_per_image": 1200,
+  "capacity_optimizer_updates": 3,
+  "formal_batch": 36,
+  "formal_batch_capacity_tested": false,
+  "full_training_queued": true,
+  "all_recorded_source_hashes_match": true,
+  "reports": {
+    "preflight": "/home/pwt/Paper1/work_dirs/scdown_p3_g4_semantic_levels_validation/preflight.json",
+    "fidelity": "/home/pwt/Paper1/work_dirs/scdown_p3_g4_semantic_levels_validation/fidelity_gpu0.json",
+    "smoke": "/home/pwt/Paper1/work_dirs/scdown_p3_g4_semantic_levels_validation/smoke_gpu0.json",
+    "capacity": "/home/pwt/Paper1/work_dirs/scdown_p3_g4_semantic_levels_validation/capacity_gpu0.json",
+    "whole_model_fp32_reference": "/home/pwt/Paper1/work_dirs/roi_auxiliary_variants_validation/full_model_gpu0.json",
+    "queue_preflight": "/home/pwt/Paper1/work_dirs/scdown_p3_g4_semantic_levels_validation/queue_preflight.json"
+  },
+  "whole_model_fp32_reference": {
+    "status": "passed",
+    "method": "levels",
+    "precision": "FP32",
+    "backward_outside_autocast": true,
+    "maximum_gradient_error": 1.1990778148174286e-08,
+    "gradient_relative_l2_error": 1.054966843480065e-06
+  },
+  "queue_manifest": "/home/pwt/Paper1/work_dirs/scdown_p3_g4_semantic_levels_queue/manifest.json",
+  "formal_capacity": {
+    "status": "pending",
+    "formal_batch": 36,
+    "accumulation": 1
+  }
+}

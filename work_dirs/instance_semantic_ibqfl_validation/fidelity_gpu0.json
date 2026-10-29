@@ -1,0 +1,36 @@
+{
+  "status": "passed",
+  "independent_formula": true,
+  "cross_level_image_gt_grouping": true,
+  "includes_zero_iou_positive": true,
+  "cases": [
+    {
+      "amp": false,
+      "beta": 1.5,
+      "loss_max_error": 5.960464477539063e-08,
+      "gradient_max_error": 0.0,
+      "valid_gt": 4
+    },
+    {
+      "amp": false,
+      "beta": 2.0,
+      "loss_max_error": 0.0,
+      "gradient_max_error": 0.0,
+      "valid_gt": 4
+    },
+    {
+      "amp": true,
+      "beta": 1.5,
+      "loss_max_error": 5.960464477539063e-08,
+      "gradient_max_error": 0.0,
+      "valid_gt": 4
+    },
+    {
+      "amp": true,
+      "beta": 2.0,
+      "loss_max_error": 0.0,
+      "gradient_max_error": 0.0,
+      "valid_gt": 4
+    }
+  ]
+}

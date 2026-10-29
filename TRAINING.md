@@ -2,7 +2,7 @@
 
 ## 当前配置
 
-GPU1当前训练标准DSConv，后续依次为P3对照A（密集空间卷积）→ P3对照B（去中间SiLU）→ G8 → G16 → 四处SCDown＋G2；四处版＋G4暂不接续。SCDown实验1/2/3与G4已完成300轮，VOC mAP/COCO AP分别为75.74%/56.4%、76.11%/56.7%、76.12%/56.4%、75.58%/56.2%；仅匹配GT与随机等数量GT的ROI对照为75.68%/56.5%、75.99%/56.4%。其余已完成方法的结构和结果见下文。LSConv neck内部块版已取消；细小目标匹配、轻量检测头、`lsconv_csp`、`lsblock_csp`暂不接续。使用Conda `rtmdet`与官方 `mmyolo/tools/train.py`，中断恢复只使用本实验的完整状态。
+GPU1当前运行GSCE＋ROI仅更新分类塔（`scdown_p3_g4_semantic_clstower`），其后依次接续私有ROI、跨尺度ROI、ROI对比学习。已完成的GSCE＋ROI统一alpha=0.25、ROI更新neck＋分类塔、原ROI＋实例均衡QFL分别为VOC mAP/COCO AP 76.01%/56.1%、75.64%/55.6%、75.67%/55.7%；原ROI独立对照为76.31%/56.9%。使用Conda `rtmdet`与官方 `mmyolo/tools/train.py`；640、真实batch36、不累积、从零300轮，每10轮验证。三组新增队列已通过官方入口和结构预检，正式容量检查待前序完成后执行。
 
 | 项目 | 设置 |
 |---|---|
@@ -68,22 +68,20 @@ EFS适配已完成300轮：EMA的VOC mAP75.62%、COCO AP56.4%、小/中/大目�
 
 ## 启动与状态
 
-当前运行DSConv，随后为P3对照A、P3对照B、G8、G16、四处SCDown＋G2；均从零训练。状态与最近训练日志查询：
+正式队列顺序为：ROI仅更新分类塔（正在运行）→ 私有ROI → 跨尺度ROI → ROI对比学习，前三项之前的实验均已完成。三条新增调度进程已通过官方入口和结构预检，按顺序等待直接前序；接续要求前序成功完成300轮、最终有限验证及检查点保存，随后等待GPU1空闲至少46000 MiB，通过正式batch36、每图1200框、三次更新与88%分配器上限的容量检查后从零启动，不自动调整batch。源码、容量或训练检查失败即停止该接续。冻结配置、依赖身份与源码哈希在各队列的 `manifest.json`；链路核对在 `work_dirs/diagnostics/roi_auxiliary_variants_enqueue/verified_chain.json`。状态与训练日志查询：
 
 ```bash
-tail -n 20 /home/pwt/Paper1/logs/scdown_dsconv_rtmdet_tiny_dior_640_gpu1_bs36.log
-cat /home/pwt/Paper1/work_dirs/scdown_dsconv_queue/status.json
-cat /home/pwt/Paper1/work_dirs/scdown_p3_dense_queue/status.json
-cat /home/pwt/Paper1/work_dirs/scdown_p3_noact_queue/status.json
-cat /home/pwt/Paper1/work_dirs/scdown_g8_queue/status.json
-cat /home/pwt/Paper1/work_dirs/scdown_g16_queue/status.json
-cat /home/pwt/Paper1/work_dirs/scdown_p3_g2_queue/status.json
+tail -n 20 /home/pwt/Paper1/logs/scdown_p3_g4_semantic_clstower_rtmdet_tiny_dior_640_gpu1_bs36.log
+cat /home/pwt/Paper1/work_dirs/scdown_p3_g4_semantic_clstower_queue/status.json
+cat /home/pwt/Paper1/work_dirs/scdown_p3_g4_semantic_private_queue/status.json
+cat /home/pwt/Paper1/work_dirs/scdown_p3_g4_semantic_levels_queue/status.json
+cat /home/pwt/Paper1/work_dirs/scdown_p3_g4_semantic_contrast_queue/status.json
 nvidia-smi
 ```
 
 各队列的PID及启动身份在其同目录`queue_identity.json`。接续须核对前序进程身份、成功完成300轮、最终有限验证及检查点保存。源码、容量检查或训练失败就停止，不自动改batch；细小目标匹配修正和轻量检测头不接续启动。
 
-当前待运行队列启动前等待GPU1空闲至少46000 MiB，用正式batch36、不累积、每图1200框完成三次实际更新，分配器上限88%。压力数据含真实图像、重复标注和模拟框，不代表训练精度或速度；报告位于 `work_dirs/<方法>_validation/capacity_gpu1_bs36.json`。正式训练沿用原来的AMP动态缩放和warmup调度，检查不写检查点。
+实例均衡QFL已通过GPU1正式batch36容量检查，峰值张量35.16 GiB、保留39.67 GiB。压力检查使用每图1200框、三次更新与88%分配器上限，不保存检查点；仅用于容量判断。正式训练沿用原AMP动态缩放、warmup与EMA设置，不自动调整batch。
 
 队列默认拒绝已有输出；显式断点恢复须核对同实验完整状态，并以官方`--resume`恢复。服务器重启后需重新检查进程和最近完整检查点再恢复，磁盘上的`training`或`waiting`不证明进程仍在运行。指标为0–1，论文百分数乘100。
 
@@ -280,19 +278,100 @@ CUDA_VISIBLE_DEVICES=0 PYTHONPATH=/home/pwt/Paper1 python scripts/candidate_prob
 
 ## ROI语义监督：机理对照
 
-三组各用独立的 `custom_models/instance_semantic_<名称>/` 和同名配置目录，继承原ROI版的640、官方train/val、真实batch36、不累积、从零300轮、每10轮验证及优化/EMA协议。辅助分类器仍为96→20、CE权重0.1；全模型4,880,648参数，推理Conv/Linear 7.987703 GMAC。
+各组使用独立的 `custom_models/instance_semantic_<名称>/` 和同名配置目录，继承原ROI版的640、官方train/val、真实batch36、不累积、从零300轮、每10轮验证及优化/EMA协议。辅助分类器仍为96→20、CE权重0.1；全模型4,880,648参数，推理Conv/Linear 7.987703 GMAC。
 
 | 名称 | 唯一目的性变化 |
 |---|---|
 | `center` | 全部有效GT沿用原尺度选择，只在GT中心取一次双线性特征；无ROI区域平均 |
 | `matched` | 原ROI取样与分类器保留，仅选择本步DSL已匹配的有效GT |
 | `random` | 原ROI取样与分类器保留，从全部有效GT均匀随机选M个；M为本模型本步已匹配有效GT数 |
+| `split` | 全GT计算原ROI类别CE，仅在取样后的未匹配GT向量处切断辅助特征梯度；分类器仍由全GT训练 |
 
-后两组分母始终使用全部有效GT数G，未改成M；同类、相同框的不同GT用真实索引区分，增强后退化框仅从辅助任务排除。随机数生成器独立于数据增强，状态随模型和EMA保存、恢复。D/E各自训练后的匹配数可以分化，并非逐步锁定成相同数量；正式日志记录 `semantic_all_gt`、`semantic_matched_gt`、`semantic_selected_gt` 供比较。公共目录 `roi_supervision_common` 只提供原DSL索引输出、原检测损失和GT映射；两个选择策略各自独立，没有修改旧方法或叠加类别排序损失。
+`matched` 与 `random` 分母始终使用全部有效GT数G，未改成M；同类、相同框的不同GT用真实索引区分，增强后退化框仅从辅助任务排除。随机数生成器独立于数据增强，状态随模型和EMA保存、恢复。D/E各自训练后的匹配数可以分化，并非逐步锁定成相同数量；正式日志记录 `semantic_all_gt`、`semantic_matched_gt`、`semantic_selected_gt` 供比较。公共目录 `roi_supervision_common` 只提供原DSL索引输出、原检测损失和GT映射；两个选择策略各自独立，没有修改旧方法或叠加类别排序损失。
 
 15项新测试和原ROI的5项测试通过：覆盖单点取样独立参考及梯度、亚stride框与边界、精确GT身份、全GT分母、随机抽样与状态恢复、原检测损失、辅助梯度范围及单次BN更新。初始化和推理与原ROI版逐项一致；中心点零权重分支的梯度按FP32容差核对，不宣称不同计算图的逐位一致。三组各用官方入口完成16次实际AdamW更新、两次32图VOC/COCO验证、EMA交换及模型/优化器/AMP状态读写，22个相关参数张量均有有限非零梯度并更新，无AMP跳步，不保存短测检查点。
 
-中心点版已通过GPU1正式batch36、每图1200框的三次压力更新，峰值张量35.18 GiB、保留39.86 GiB，随后从零启动；后两组等待各自启动前检查容量。接续顺序为 `center → matched → random`，各自状态在 `work_dirs/instance_semantic_<名称>_queue/status.json`。每组启动前等待GPU1空闲至少46000 MiB，以88%分配器上限、正式batch36、每图1200框做三次压力更新，通过后启动正式训练。检查汇总在各自 `work_dirs/instance_semantic_<名称>_validation/checks.json`；复核入口 `scripts/roi_semantic_ablation_probe.py --method instance_semantic_<名称> --mode preflight|smoke|capacity --report <路径>`。短测关闭warmup、loss scale32，仅检验执行；正式训练保留原AMP与warmup设置。
+中心点、仅匹配、随机等数量三组已完成300轮，VOC mAP/COCO AP分别为76.32%/56.6%、75.68%/56.5%、75.99%/56.4%，原ROI为76.31%/56.9%。原三组复核入口为 `scripts/roi_semantic_ablation_probe.py`，完整结果及覆盖分析在 `work_dirs/diagnostics/roi_semantic_coverage_analysis/`。
+
+`split` 对照用于区分辅助分类器的数据覆盖与共享特征监督：在同一权重与输入下保留原ROI的全GT取样、前向CE值、分类器梯度和全GT分母；只在池化向量处使用 `where(matched, z, z.detach())`。重叠GT分别路由，不按像素屏蔽特征图；主检测损失和匹配不变，每步只执行一次检测塔和分配。日志分别记录 `semantic_classifier_gt` 与 `semantic_feature_gt`。9项测试覆盖闭式分类器/实例向量梯度、重叠与亚stride ROI、全/无匹配、空GT、退化框、两种GT接口及初始化/推理/主损失一致性；GPU上6组FP32/AMP对照通过，官方入口完成16次实际更新、两次32图验证、EMA交换及模型/优化器/AMP状态读写，未匹配实例的辅助特征梯度逐次核对为零。短测不保存检查点，验证报告在 `work_dirs/instance_semantic_split_validation/`。
+
+`split` 已完成300轮，EMA的VOC mAP76.0144%、COCO AP56.8%、AP75为62.0%，小/中/大目标AP为7.4/34.8/69.8；仅匹配版对应75.6841%、56.5%、61.9%，原ROI对应76.3052%、56.9%、62.1%。第200–300轮的11次验证中，拆分版VOC与COCO均高于仅匹配版；与原ROI的COCO后期曲线接近。完整48900步中，分类器始终监督全部有效GT，共享特征接收94.137%的GT出现次数的辅助梯度。训练协议与来源哈希核对通过，原始/EMA权重和损失均有限，实际优化器更新48879次，与原ROI及仅匹配版相同。该单次对照支持全GT分类器训练具有作用，不将VOC差值拆算为两条路径各自的固定贡献，也不把剩余0.1 COCO差距视为确定退化。完整统计、配对辅助分类诊断与曲线位于 `work_dirs/diagnostics/instance_semantic_split_analysis/`。
+
+正式配置为 `work_dirs/instance_semantic_split_queue/instance_semantic_split_640_bs36.py`；GPU1正式batch36、每图1200框压力检查通过，峰值张量35.17 GiB、保留39.67 GiB。复核入口为 `scripts/instance_semantic_split_probe.py --mode preflight|fidelity|smoke|capacity --report <路径>`。短测关闭warmup、loss scale32，正式训练保留原AMP与warmup。
+
+## ROI语义监督：特征梯度缩放
+
+独立实现为 `custom_models/instance_semantic_gradscale/`，配置目录为 `configs/{instance_semantic,scdown_p3_semantic,scdown_p3_g4_semantic}_gradscale/`。在原RoIAlign后的96维实例向量处使用 `z.detach() + alpha * (z-z.detach())`，alpha=0.25；原全GT取样、尺度映射、FP32 CE、全GT分母与分类器保持不变。分类器仍接收0.1权重的梯度，共享特征仅接收原辅助梯度的四分之一，检测主损失不变。复用原分类器参数对象，不消耗额外初始化随机数；训练参数、推理结构与MAC均与各自原ROI对照相同。alpha作为配置超参数保存，不是可学习参数。
+
+8项测试通过，包含独立闭式梯度、三主体初始化/共享关系、alpha=1的原梯度与AdamW更新一致性、alpha=0时检测器与不加ROI对齐且辅助分类器继续更新，以及张量/list/空GT。GPU FP32/AMP的6组原ROI对照通过；三主体各用官方入口完成16次真实AMP更新、强弱增强、两次32图验证、EMA与模型/优化器/scaler读写。22/46/67个相关参数张量均有有限非零梯度并更新，无AMP跳步，每步仅一次检测塔、分配和BN更新。GPU0共享环境batch8、每图1200框、三次压力更新峰值张量为7.88/8.06/8.05 GiB；正式batch36容量尚未验证。短测关闭warmup、loss scale32，不保存检查点。
+
+合理性边界：该实现确实分开了分类器与共享特征的辅助梯度，但AdamW会抵消固定梯度缩放的大部分影响。四处SCDown的隔离CPU三步合成B2/256对照中，它与直接将ROI权重设为0.025的检测器首步更新完全一致；第三步辅助分类器最大参数差约8.2e-7，检测器参数差L2仅为其更新L2的0.0164%。这不代表完整训练等价，但不支持把它视为独立结构增强；目前定位为辅助约束强度的机制对照。对照细节见 `work_dirs/instance_semantic_gradscale_validation/optimizer_equivalence.json`。
+
+GSCE版已完成300轮，VOC mAP/COCO AP/AP75为76.01%/56.1%/61.5%，不加ROI对照为75.83%/56.1%/61.6%。相对原ROI组合恢复精度，尚未显示明确COCO增益；小/中/大目标AP为7.0/35.2/69.3。GPU1正式batch36容量峰值张量36.00 GiB、保留40.53 GiB；原始和四处SCDown版未排队。GSCE版冻结配置及队列状态在 `work_dirs/scdown_p3_g4_semantic_gradscale_queue/`。复核入口为 `scripts/instance_semantic_gradscale_probe.py --method <配置目录名> --mode preflight|fidelity|smoke|capacity --report <路径>`；报告、冻结配置与源码校验值位于各自 `work_dirs/<方法>_validation/`。
+
+## ROI语义监督：三个独立结构变体
+
+三份配置均继承 `configs/scdown_p3_g4_semantic_gradscale/`：GSCE四处SCDown与七处G4保持不变，640、真实batch36、不累积、从零300轮、每10轮验证；全GT类别CE权重0.1，进入共享特征的辅助梯度系数0.25。各自代码在 `custom_models/instance_semantic_{private,levels,contrast}/`，不互相叠加。推理均为3,103,764参数、Conv/Linear 6.785245 GMAC，辅助分支不执行。
+
+| 配置目录后缀 | 训练结构与作用范围 | 训练总参数 |
+|---|---|---:|
+| `scdown_p3_g4_semantic_private` | 从neck输出按GT原尺度取ROI，平均后经96→192→96的SiLU MLP及原分类器；ROI更新骨干/neck和私有分支，主分类塔只受检测损失监督 | 3,142,856 |
+| `scdown_p3_g4_semantic_levels` | 保留分类塔取样位置，同一GT在P3/P4/P5分别经共享分类器计算CE；按全部GT数与三个尺度归一化，不融合描述符 | 3,105,704 |
+| `scdown_p3_g4_semantic_contrast` | 原ROI CE保留；同一个取样向量经96→96→128的ReLU投影、L2归一化，温度0.2，新增监督式对比损失权重0.1 | 3,127,432 |
+
+对比版以不同GT行中的同类实例为正对、异类为负对，排除自配对；没有同类伙伴的实例不计算自身锚点损失，但仍作为其他实例的负候选。分母始终为全部有效GT数；全部GT保留，不采用proposal IoU筛选。FP32分块计算完整关系，反向重算同时包含锚点和候选两侧导数，不保存整张GT×GT关系矩阵。关系仅在本GPU批次内建立。三个方案分别借鉴主辅私有变换、跨层一致监督与实例关系学习，属于本项目适配，并非完整复现 [Mr. DETR](https://arxiv.org/abs/2412.10028)、[AugFPN](https://arxiv.org/abs/1912.05384) 或 [FSCE](https://arxiv.org/abs/2103.05950)。
+
+13项测试通过，覆盖实际GSCE的初始化、共享关系、主损失与梯度不变、辅助梯度作用范围、损失归一化、空GT与状态读写。三版各通过4组GPU FP32/AMP及外部loss缩放的数值/梯度对照，最大绝对误差7.46e-9；另通过整网FP32独立梯度参考。每版用官方入口完成16次真实AMP更新、强弱增强、两次32图验证、两次EMA恢复及模型/优化器/scaler状态读写，无AMP跳步，骨干/neck/检测塔/分配/ROI每步各执行一次。
+
+GPU0容量检查各完成3次batch8、640、每图1200个GT的实际更新，无OOM，峰值张量约8.05 GiB。对比关系算子单独通过43200个GT的前反向检查，分块避免保存完整关系矩阵，但计算量仍随GT数平方增长；这不等于整网batch36容量已验证。三组已按私有ROI→跨尺度ROI→ROI对比学习排在分类塔实验后，每组正式启动前在GPU1执行batch36容量检查；容量不通过就停止，不自动减小batch。短测未保留检查点。
+
+检查入口为 `scripts/roi_auxiliary_variants_probe.py --method private|levels|contrast --mode preflight|fidelity|smoke|capacity --report <路径>`；单元检查为 `python -m unittest tests.test_roi_auxiliary_variants -v`。汇总在 `work_dirs/roi_auxiliary_variants_validation/checks.json`，各方法的详细报告位于同名 `work_dirs/<配置目录后缀>_validation/`。短测验证实现与可运行性，不作为精度收益结论。
+
+## ROI语义监督：仅更新neck与分类塔
+
+[configs/scdown_p3_g4_semantic_neckhead/rtmdet_tiny_dior_640.py](configs/scdown_p3_g4_semantic_neckhead/rtmdet_tiny_dior_640.py) 继承已完成的GSCE alpha=0.25配置，独立代码在 `custom_models/instance_semantic_neckhead/`。只将原ROI的直接骨干梯度设为零；neck和分类塔保持四分之一辅助梯度，辅助分类器CE权重仍为0.1，全部有效GT、取样、分母、主检测损失及匹配均保留。骨干继续接收正常主检测梯度；回归塔和最终检测预测层仍不接收直接ROI梯度。GSCE在neck也有一处SCDown和四处G4，这些neck参数继续接受ROI监督。
+
+使用独立检测器在返回ROI损失时包裹参数梯度路由，前向数值不变。反向时读取官方GradScaler/累积产生的实际乘数，对原ROI损失计算一阶VJP，只将结果送至neck、分类塔和辅助分类器参数；不对公共骨干特征detach、不修改`.grad`、不替换优化器、不再跑一次网络前向。训练增加独立辅助反向处理，推理结构不变。训练参数3,105,704，推理参数3,103,764，640/batch1 Conv/Linear为6.785245 GMAC。
+
+7项测试通过：独立闭式梯度、真实GSCE主梯度不变、纯ROI骨干梯度为零、neck/分类塔辅助梯度与原alpha=0.25一致、单次前向与BN更新、独立参考AdamW更新、空GT/list接口、alpha边界和状态读写。GPU FP32/AMP及不同外部loss缩放的4组参考对照通过。官方入口完成16次AMP更新、强弱增强、两次32图验证、两次EMA恢复及模型/优化器/scaler读写；145个监测参数张量均有有限梯度并更新，无AMP跳步。单个训练步骤只有一次骨干、neck、检测塔、分配和ROI前向。
+
+已通过GPU1正式batch36容量检查并完成300轮，VOC mAP/COCO AP/AP75为75.64%/55.6%/61.5%；统一alpha=0.25对照为76.01%/56.1%/61.5%。冻结配置与完成状态在 `work_dirs/scdown_p3_g4_semantic_neckhead_queue/`。检查汇总在 `work_dirs/scdown_p3_g4_semantic_neckhead_validation/`；入口为 `scripts/instance_semantic_neckhead_probe.py --mode preflight|fidelity|smoke|capacity --report <路径>`。
+
+## ROI语义监督：仅更新分类塔
+
+[configs/scdown_p3_g4_semantic_clstower/rtmdet_tiny_dior_640.py](configs/scdown_p3_g4_semantic_clstower/rtmdet_tiny_dior_640.py) 独立导入 `custom_models/instance_semantic_clstower/`，复用已验证且未修改的参数梯度路由。相对neck＋分类塔版仅取消ROI对neck的直接梯度：骨干和neck仅接收主检测梯度，分类塔保留0.25辅助梯度，辅助分类器仍以0.1权重对全GT学习。ROI梯度仅进入分类塔和辅助分类器的16个参数张量，不直接更新最终预测层或回归塔。初始化、推理、主损失和训练协议保持一致；仍为3,105,704训练参数、3,103,764推理参数、6.785245 GMAC。
+
+7项CPU测试、4组GPU FP32/AMP及不同loss缩放的梯度参考对照通过，确认ROI骨干/neck梯度为零且主梯度正常。官方入口完成16次AMP更新、强弱增强、两次32图验证、EMA和模型/优化器/scaler状态恢复，145个监测参数张量均获得有限梯度并更新，无AMP跳步；网络各段和BN每步只前向/更新一次。GPU1正式batch36容量检查通过，峰值张量35.99 GiB、保留40.65 GiB。
+
+正式训练正在GPU1运行，640、真实batch36、不累积、从零300轮、每10轮验证。队列和冻结配置在 `work_dirs/scdown_p3_g4_semantic_clstower_queue/`；检查汇总在 `work_dirs/scdown_p3_g4_semantic_clstower_validation/checks.json`，复核入口为 `scripts/instance_semantic_clstower_probe.py`。
+
+## ROI语义监督：实例均衡QFL
+
+[configs/instance_semantic_ibqfl/rtmdet_tiny_dior_640.py](configs/instance_semantic_ibqfl/rtmdet_tiny_dior_640.py) 独立导入 `custom_models.instance_semantic_ibqfl`，保留原全GT ROI的取样、分类器与0.1权重CE。新增项直接读取真实检测logits、官方DSL的GT索引和IoU质量目标，调用同一个QFL对象；先在每个GT的全部有效匹配位置内平均，再将各实例损失之和除以全部有效GT数G，权重0.1。未匹配GT在新增项中为零，继续参与原ROI；不使用教师、类别错误筛选或新的IoU阈值。背景仍由原主QFL监督。
+
+新增梯度进入实际分类预测层、分类塔、neck与骨干，不直接更新ROI辅助分类器或回归塔。匹配、标签和IoU均停止梯度；QFL沿用主损失的AMP行为，实例归组和累加使用FP32。重复框按图像和真实GT槽分别归组，退化框仅从新增项和原ROI辅助任务排除；每步只有一次检测塔、分配和ROI前向。新增项在各匹配点上的梯度是原QFL点梯度的非负倍数，共享参数聚合后的方向另行检查。
+
+[configs/scdown_p3_g4_semantic_ibqfl/rtmdet_tiny_dior_640.py](configs/scdown_p3_g4_semantic_ibqfl/rtmdet_tiny_dior_640.py) 组合已有四处SCDown和七处G4，不改GSCE算子或通道。独立版/GSCE版训练参数仍为4,880,648/3,105,704，推理Conv/Linear仍为7.987703/6.785245 GMAC，与各自原ROI结构相同；推理不执行新增损失。
+
+10项测试与4组GPU FP32/AMP独立公式对照通过，覆盖跨图/跨层GT身份、全GT分母、零IoU正样本、空GT/DDP空分片、原损失与初始化、零新增权重时梯度及AdamW更新一致性、检测头共享关系及GSCE梯度范围。两版分别经官方入口完成16次真实AMP更新、两次32图验证、EMA恢复及模型/优化器/scaler状态读写；22/67个相关参数张量获得有限非零梯度并更新，无AMP跳步。GPU0共享环境以batch8、每图1200框完成三次压力更新，峰值张量7.88/8.05 GiB、保留9.03/9.17 GiB，不代表正式batch36容量。
+
+隔离CPU诊断用各自已完成原ROI结构的300轮原始权重，在相同两批强增强输入、真实batch36上测量：独立版新增项与主任务在共享分类塔参数上的梯度余弦为0.962/0.810，范数比7.9%/11.7%；GSCE版为0.956/0.837和8.0%/11.2%。这仅说明所测输入下的优化方向，不代表完整训练涨点，也不证明消除了此前GSCE＋原ROI的退化。
+
+独立版与GSCE组合版均已完成300轮，VOC mAP/COCO AP/AP75分别为76.01%/56.5%/61.5%、75.67%/55.7%/61.3%。保留原ROI权重0.1、实例均衡QFL权重0.1，不叠加梯度缩放。冻结配置与完成状态在各自 `work_dirs/<方法>_queue/`，检查在同名验证目录；入口为 `scripts/instance_semantic_ibqfl_probe.py`。正式协议保持640、真实batch36、从零300轮与每10轮验证。诊断加载已有权重仅用于测量，正式配置不加载。
+
+## ROI语义监督：选择性区域到位置传递
+
+[configs/instance_semantic_transfer/rtmdet_tiny_dior_640.py](configs/instance_semantic_transfer/rtmdet_tiny_dior_640.py) 继承原ROI独立实验；代码在 `custom_models/instance_semantic_transfer/`，复用已验证的公共DSL索引及主损失实现。每步只执行一次检测塔、标签分配和ROI取样，保留全部有效GT的原ROI类别CE（权重0.1）。
+
+新增分支仅选取IoU≥0.5、检测类别错误且对应ROI类别正确的实际匹配位置。96维位置特征经原辅助分类器计算类别分布，向停止梯度的ROI分布学习KL，温度1、权重0.1；该分支的分类器权重也停止梯度。先对每个GT的选中位置平均，再对参与GT平均；没有选中位置时返回连通的零损失。新增梯度进入分类特征、neck与骨干，不直接进入辅助分类器、最终预测层或回归塔。训练参数仍为4,880,648，推理检测器4,878,708，Conv/Linear为7.987703 GMAC；正式协议与原ROI一致。
+
+10项测试、4组GPU FP32/AMP独立参考对照通过。官方入口从零完成16次实际更新、两次32图验证、两次EMA恢复及模型/优化器/scaler读写，触发3个传递位置；另外在隔离模型上用已有ROI权重检查3次更新及21个传递位置的梯度路由，不保存检查点，正式训练不加载这些权重。GPU0的batch8/每图1200框压力检查通过，模拟全部67200个检测位置参与传递，峰值张量7.88 GiB、保留9.03 GiB。
+
+接在 `scdown_p3_g4_semantic` 后。GPU1正式batch36启动前需检查每图1200框、全部302400个位置参与传递的三次更新，失败停止，不修改batch。强制选择只存在于容量检查，不进入正式配置。复核入口为 `scripts/instance_semantic_transfer_probe.py`；报告在 `work_dirs/instance_semantic_transfer_validation/checks.json`，冻结配置和状态在 `work_dirs/instance_semantic_transfer_queue/`。正式日志记录全GT数量、匹配/可靠/选中位置数、参与GT数和平均KL。
+
+已完成300轮：VOC mAP74.59%、COCO AP54.8%、AP75为60.1%，较原ROI分别下降1.71/2.1/2.0个百分点，20类COCO AP均下降。训练源码核对一致；251–280轮主分类损失0.2367→0.2636，ROI损失0.0266→0.0394。传递项按参与GT数M归一化，该阶段每批平均约380个GT、6个参与GT；相对于全GT分母，活动日志的实例权重放大倍数中位数为51.91。
+
+最终原始权重在相同两批强增强输入上的只读检查中，局部传递版筛出63点：35点的辅助分类器已正确，26点的ROI正确类概率低于辅助点概率；KL在36点上与QFL下降方向相反，主损失＋原ROI＋传递项在12点上逆转主梯度，同权重下仅主损失＋原ROI为0点。这26个较弱教师目标中，22点的KL增大QFL，换成GT硬标签的点级辅助CE后为0点。以上为一阶局部诊断，不是AP贡献分解；完整曲线、损失统计和共享分类塔梯度见 `work_dirs/diagnostics/instance_semantic_transfer_analysis/analysis.json`。
 
 ## 实例语义监督：检测类别排序
 
@@ -376,6 +455,26 @@ SCDown已在实例类别排序监督成功完成后自动接续并完成300轮�
 
 GPU0共享环境batch8、每图1200框、三次更新的压力峰值张量分别7.93/8.04/8.24 GiB，保留显存9.16/9.26/9.35 GiB；这不是正式batch36容量结论。正式GPU1检查将在各自前序成功完成后执行。短测关闭warmup并将loss scale设为32，仅用于核对实际更新；正式配置不变，不保留短测检查点。检查摘要在各自 `work_dirs/<方法>_validation/checks.json`，冻结配置与接续身份在 `work_dirs/<方法>_queue/`。
 
+## 四处SCDown＋原ROI，不加G4
+
+[configs/scdown_p3_semantic/rtmdet_tiny_dior_640.py](configs/scdown_p3_semantic/rtmdet_tiny_dior_640.py) 组合已有四处SCDown与原版全GT ROI监督，七处CSP的3×3保持密集卷积；不加入局部语义传递或梯度隔离。ROI仍按GT尺寸选层，RoIAlign 3×3后平均，经96→20分类器计算权重0.1的CE。其余检测结构、匹配、主损失及训练协议与四处SCDown对照一致。
+
+训练参数3,821,096，推理参数3,819,156，640/batch1的Conv/Linear为7.481975 GMAC。6项检查通过，包含初始化、推理及主损失一致性、全GT辅助监督和实际更新；GPU0官方入口完成16次AMP更新、两次32图验证及EMA/优化器状态读写，无AMP跳步，46个相关参数张量获得有限梯度并更新，短测不保留检查点。检查在 `work_dirs/scdown_p3_semantic_validation/checks.json`。
+
+已完成从零训练300轮，EMA的VOC mAP/COCO AP/AP75为76.15%/56.3%/61.5%，四处SCDown不加ROI对照为76.11%/56.7%/62.1%。GPU1正式batch36、每图1200框的三次压力更新已通过，峰值张量36.01 GiB、保留40.70 GiB。冻结配置、源码哈希及完成状态在 `work_dirs/scdown_p3_semantic_queue/`。本组未显示ROI带来的明确精度收益；与四处＋G4＋ROI的75.57%/55.6%相比恢复部分精度，不把该差值归为ROI的收益。
+
+## 四处SCDown＋G4＋原ROI全GT实例语义监督
+
+[configs/scdown_p3_g4_semantic/rtmdet_tiny_dior_640.py](configs/scdown_p3_g4_semantic/rtmdet_tiny_dior_640.py) 继承已完成的四处＋G4配置，通过独立组合目录导入已有组件。四处降采样为骨干 `stage2.0/stage3.0/stage4.0` 和neck `downsample_layers.1`；七处G4为骨干P3–P5三个CSP和neck四个CSP内的 `blocks.0.conv1`。各层通道48/96/192分四组，每组12/24/48通道，保留原BN、SiLU和后续DW5×5/PW1×1。
+
+ROI辅助任务沿用原全GT版本：从分类塔按GT尺寸选层，RoIAlign 3×3后平均，再经96→20分类器；CE权重0.1、分母为全部有效GT。辅助梯度经过分类塔、neck和骨干，不直接监督回归塔或最终检测预测层。三尺度检测、标签分配和主损失沿用原实现。
+
+训练参数3,105,704，其中辅助分类器1940；推理参数3,103,764，640/batch1的Conv/Linear为6.785245 GMAC，与四处＋G4对照相同，较原基线减参36.38%、减少MAC15.05%。辅助分支不参与推理，MAC不含归一化、激活和后处理。对照结果：四处＋G4为75.83%/56.1%，原ROI为76.31%/56.9%；组合检验ROI收益能否迁移到G4轻量结构，不将单项收益相加作为结果。
+
+6项组合检查通过，核对实际四处SCDown和七处G4、通道/分组、初始化及推理输出、原主损失、全GT辅助CE、辅助梯度范围，以及零辅助权重时梯度和更新与四处＋G4对齐。官方入口完成16次AMP实际更新、两次32图VOC/COCO验证、两次EMA恢复及模型/优化器/scaler读写；67个相关参数张量均获得有限非零梯度并更新，每步执行一次检测塔、标签分配及BN更新。短测关闭warmup、loss scale32，仅验证执行，不保存检查点；正式训练使用确认后的原协议。
+
+GPU1正式batch36、每图1200框的三次压力更新已通过，峰值张量36.00 GiB、保留40.62 GiB，无AMP跳步。300轮训练已完成：VOC mAP75.57%、COCO AP55.6%、AP75为60.9%。复核入口为 `scripts/scdown_p3_g4_semantic_probe.py`，摘要在 `work_dirs/scdown_p3_g4_semantic_validation/checks.json`，冻结配置和源码哈希在 `work_dirs/scdown_p3_g4_semantic_queue/`，训练输出为 `work_dirs/scdown_p3_g4_semantic_rtmdet_tiny_dior_640_gpu1_bs36/`。
+
 ## SCDown的G4与标准DSConv对照
 
 两版继承三处SCDown的640、官方train/val、真实batch36、不累积、从零300轮及每10轮验证协议，使用独立模块、配置和 `scripts/scdown_compression_probe.py`；已按G4→DSConv接在SCDown实验3后。替换位置与G2完全相同：骨干P3–P5的三个CSP及neck内四个CSP的 `blocks.0.conv1`；原三处SCDown、P2内部块、neck输出层与检测塔保留，仍为8400个预测点。
@@ -387,7 +486,7 @@ GPU0共享环境batch8、每图1200框、三次更新的压力峰值张量分别
 
 G4将48/96/192通道各分为四组，每组12/24/48通道，保持原BN和SiLU。DSConv使用MMCV的标准深度可分离卷积：DW3×3/BN/SiLU→PW1×1/BN/SiLU，沿用RTMDet归一化和激活；对应MobileNet的DW→PW次序，激活为SiLU而非原论文ReLU。原CSP的后续DW5×5→PW1×1仍保留，因此此分支成为DW3×3→PW1×1→DW5×5→PW1×1，各步骤均含原定的BN/SiLU。
 
-G1指三处SCDown对照中这七处仍采用普通卷积，总参数3,854,964；G2/G4仅减少这些3×3的跨通道连接，后续原有1×1仍混合全部通道。G4已完成300轮，VOC mAP75.58%、COCO AP56.2%；DSConv仍在训练。
+G1指三处SCDown对照中这七处仍采用普通卷积，总参数3,854,964；G2/G4仅减少这些3×3的跨通道连接，后续原有1×1仍混合全部通道。G4与DSConv均已完成300轮，VOC mAP/COCO AP分别为75.58%/56.2%、75.52%/55.9%。
 
 8项测试通过，覆盖作用范围、通道与共享关系、未改动参数及随机状态、G4与块对角稠密卷积的前向/梯度对照、DSConv与独立PyTorch参考的前向/梯度对照、还原七处后的整模型预测/损失/梯度一致性、实际检测梯度更新、单次BN更新及状态读写。两版各自通过官方入口16次真实数据AMP更新、两次32图VOC/COCO验证、EMA交换与模型/优化器/scaler读写，39/60个相关参数张量均有有限非零梯度并实际更新。GPU0共享环境、batch8、每图1200框的三次压力更新通过，G4/DSConv峰值张量7.93/7.98 GiB、保留显存9.16/9.12 GiB；正式GPU1 batch36容量检查将在各自前序成功完成后执行，通过后才启动训练。短测关闭warmup、loss scale设为32，不保留检查点；正式配置保持原调度。检查入口支持 `preflight`、`smoke`、`capacity`；摘要及源码校验值在各自 `work_dirs/<方法>_validation/checks.json`。
 
@@ -402,15 +501,29 @@ G1指三处SCDown对照中这七处仍采用普通卷积，总参数3,854,964；
 
 6项测试通过，覆盖实际范围与通道、原有协议、初始化随机状态、恢复七处后的整模型预测/损失/梯度一致性、分组与块对角密集卷积前后向对照，以及参数更新、单次BN更新和状态读写。GPU0两版各完成16次官方AMP更新、两次32图验证与EMA/优化器/scaler检查，39个相关参数张量均更新，无AMP跳步；batch8、每图1200框的三次压力更新均通过，峰值张量约7.93 GiB、保留9.16 GiB。
 
-队列为P3对照B → G8 → G16 → 四处版＋G2。仅重新安排尚未启动的组合实验，保留DSConv训练及A/B进程。GPU1正式启动前分别检查真实batch36容量；报告位于同名 `work_dirs/*_validation/checks.json`，复核入口 `scripts/scdown_group_sweep_probe.py`。四处版＋G4仅完成CPU结构测试，未安排GPU检查和正式训练。
+G8/G16均已完成正式batch36容量检查与300轮训练，VOC mAP/COCO AP分别为75.71%/55.8%、75.51%/55.8%。报告位于同名 `work_dirs/*_validation/checks.json`，复核入口 `scripts/scdown_group_sweep_probe.py`。
 
-## 四处SCDown＋G2
+## 四处SCDown的三组压缩组合
 
-[configs/scdown_p3_g2/rtmdet_tiny_dior_640.py](configs/scdown_p3_g2/rtmdet_tiny_dior_640.py) 以实验2的四处SCDown为基础，增加与实验1完全相同的七处CSP `conv1`分组，两组连续通道，原BN/SiLU及后续卷积保留。独立骨干继承四处版，neck直接复用已验证的G2版；P2入口、neck输出、检测头、8400个预测点、数据和训练协议保持不变。参数3,342,228、640/batch1卷积7.017489 GMAC，比原始基线减少31.49%/12.15%，比实验2减少12.49%/6.21%。与实验2比较G2在四处版上的效果；结合三处版与原G2结果，检查P3替换后的组合收益。
+三版均以实验2的四处SCDown为基础，压缩同样七处CSP `conv1`。G2/G4分别采用两组/四组连续通道卷积；DSConv沿用三处版的DW3×3/BN/SiLU→PW1×1/BN/SiLU。独立骨干继承四处版，各自复用已验证的同方法neck。P2入口、neck输出、检测头、8400个预测点、数据及训练协议保持不变。与四处版及各自三处版比较压缩后的精度与组合收益。
 
-5项测试通过，核对范围/共享关系、两组对照协议、初始化与随机状态、分别还原P3或G2后的整模型预测/损失/梯度一致性，以及实际优化器更新、单次BN更新和状态读写。GPU0官方入口完成16次AMP更新、两次32图验证、EMA交换与模型/优化器/scaler读写，45个相关参数张量均有有限非零梯度并更新，无AMP跳步。另以batch8、每图1200框完成三次压力更新，峰值张量8.03 GiB、保留9.26 GiB；正式batch36未在共享GPU0上测试。
+| 配置目录 | 参数 | 卷积GMAC，640/batch1 | 相对原始基线减参/MAC |
+|---|---:|---:|---|
+| `configs/scdown_p3_dsconv/` | 2,979,732 | 6.667281 | 38.92%/16.53% |
+| `configs/scdown_p3_g2/` | 3,342,228 | 7.017489 | 31.49%/12.15% |
+| `configs/scdown_p3_g4/` | 3,103,764 | 6.785245 | 36.38%/15.05% |
 
-已接在G16后。正式GPU1启动前等待空闲至少46000 MiB，以batch36、不累积、每图1200框和88%分配器上限检查三次更新，通过后才开始300轮训练。检查入口 `scripts/scdown_p3_g2_probe.py`；报告、冻结配置及队列状态分别在同名 `work_dirs/*_validation/`、`work_dirs/*_queue/`，前序或检查失败停止接续。
+各5项测试通过，核对范围/共享关系、两组对照协议、初始化随机状态、分别还原P3或七处压缩后的整模型预测/损失/梯度一致性，以及优化器更新、单次BN更新和状态读写。GPU0三版各完成16次官方AMP更新、两次32图验证与EMA/模型/优化器/scaler检查；DSConv/G2/G4分别有66/45/45个相关参数张量均获得有限非零梯度并更新，无AMP跳步。各以batch8、每图1200框完成三次压力更新，峰值张量8.03–8.09 GiB，保留9.24–9.26 GiB；正式batch36在启动前单独检查。
+
+三版均已完成正式batch36容量检查与300轮训练，DSConv/G2/G4的VOC mAP/COCO AP分别为75.20%/55.7%、75.69%/56.1%、75.83%/56.1%。检查入口为各自 `scripts/<方法>_probe.py`；报告、冻结配置及完成状态在同名 `work_dirs/*_validation/`、`work_dirs/*_queue/`。
+
+## 四处SCDown＋G8
+
+[configs/scdown_p3_g8/rtmdet_tiny_dior_640.py](configs/scdown_p3_g8/rtmdet_tiny_dior_640.py) 继承四处SCDown训练协议，七个CSP `conv1`的位置与原G8及四处G4相同；48/96/192通道分别分为8组，每组6/12/24通道。独立骨干继承四处版，neck与算子复用已验证的G8实现，不修改原三处G8或四处G4。P2入口、颈部输出、检测头和8400个预测点保持不变。实测参数2,984,532、640/batch1卷积6.669124 GMAC，较原始基线减少38.83%/16.51%。
+
+5项组合测试通过：实际范围与共享关系、对照协议、初始化随机状态、分别还原P3或七处分组后的预测/损失/梯度一致性，以及真实更新、单次BN更新和状态读写。GPU0官方入口完成16次AMP更新、两次32图验证与EMA/模型/优化器/scaler检查，45个相关参数张量均有有限非零梯度并更新，无AMP跳步。batch8、每图1200框的三次压力更新通过，峰值张量8.03 GiB、保留9.25 GiB；短测不保存检查点。
+
+已接在ROI梯度拆分后，从零训练300轮，每10轮验证，真实batch36、不累积。GPU1启动前等待空闲至少46000 MiB，以正式batch36、每图1200框和88%分配器上限检查三次更新；通过后才开始训练，前序或检查失败停止接续。入口为 `scripts/scdown_p3_g8_probe.py`；报告在 `work_dirs/scdown_p3_g8_validation/`，冻结配置、清单和状态在 `work_dirs/scdown_p3_g8_queue/`。四处＋G16暂不安排。
 
 ## P3降采样的两组机理对照
 

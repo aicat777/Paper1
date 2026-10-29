@@ -1,0 +1,16 @@
+test_all_matched_equals_original_loss_and_all_gradients (test_instance_semantic_split.SplitROISemanticTests) ... ok
+test_empty_gt_connected_zero_and_bad_masks_rejected (test_instance_semantic_split.SplitROISemanticTests) ... ok
+test_gate_closed_form_classifier_and_descriptor_gradients (test_instance_semantic_split.SplitROISemanticTests) ... ok
+test_model_initialization_protocol_inference_and_rng_unchanged (test_instance_semantic_split.SplitROISemanticTests) ... ok
+test_model_single_assignment_loss_and_two_gradient_paths (test_instance_semantic_split.SplitROISemanticTests) ... /home/pwt/miniconda3/envs/rtmdet/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3483.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+ok
+test_no_matched_gt_still_trains_classifier_without_feature_gradient (test_instance_semantic_split.SplitROISemanticTests) ... ok
+test_roi_forward_classifier_gradient_and_matched_feature_reference (test_instance_semantic_split.SplitROISemanticTests) ... ok
+test_tensor_and_list_gt_interfaces_with_degenerate_rows_and_empty_batch (test_instance_semantic_split.SplitROISemanticTests) ... ok
+test_zero_auxiliary_weight_preserves_total_gradients_and_sgd_update (test_instance_semantic_split.SplitROISemanticTests) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 8.290s
+
+OK

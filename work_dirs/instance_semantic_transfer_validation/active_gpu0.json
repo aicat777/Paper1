@@ -1,0 +1,74 @@
+{
+  "status": "passed",
+  "method": "instance_semantic_transfer",
+  "microbatch": 8,
+  "optimizer_updates": 3,
+  "transfer_min_iou": 0.5,
+  "transfer_selected_points": 21,
+  "gradient_routes": [
+    {
+      "step": 1,
+      "selected_points": 9,
+      "active_feature_parameters": 214,
+      "auxiliary_classifier_and_prediction_layer_gradients_absent": true
+    },
+    {
+      "step": 2,
+      "selected_points": 1,
+      "active_feature_parameters": 200,
+      "auxiliary_classifier_and_prediction_layer_gradients_absent": true
+    },
+    {
+      "step": 3,
+      "selected_points": 11,
+      "active_feature_parameters": 186,
+      "auxiliary_classifier_and_prediction_layer_gradients_absent": true
+    }
+  ],
+  "loss_scale_init": 32,
+  "amp_skipped_updates": 0,
+  "saved_checkpoints": false,
+  "isolated_check_only": true,
+  "own_roi_weights_for_activation_only": "/home/pwt/Paper1/work_dirs/instance_semantic_rtmdet_tiny_dior_640_gpu1_bs36/epoch_300.pth",
+  "formal_config_still_scratch": true,
+  "losses": [
+    {
+      "loss_cls": 0.27806591987609863,
+      "loss_bbox": 0.3562760055065155,
+      "loss_instance_semantic": 0.04336081072688103,
+      "loss_instance_transfer": 0.16154687106609344,
+      "semantic_all_gt": 89.0,
+      "transfer_matched_points": 770.0,
+      "transfer_reliable_points": 740.0,
+      "transfer_selected_points": 9.0,
+      "transfer_selected_gt": 5.0,
+      "transfer_mean_kl": 1.6154686212539673
+    },
+    {
+      "loss_cls": 0.1900334507226944,
+      "loss_bbox": 0.28860920667648315,
+      "loss_instance_semantic": 0.015409455634653568,
+      "loss_instance_transfer": 0.03893542289733887,
+      "semantic_all_gt": 77.0,
+      "transfer_matched_points": 708.0,
+      "transfer_reliable_points": 669.0,
+      "transfer_selected_points": 1.0,
+      "transfer_selected_gt": 1.0,
+      "transfer_mean_kl": 0.38935422897338867
+    },
+    {
+      "loss_cls": 0.36499103903770447,
+      "loss_bbox": 0.42542630434036255,
+      "loss_instance_semantic": 0.01021124143153429,
+      "loss_instance_transfer": 0.03251563757658005,
+      "semantic_all_gt": 25.0,
+      "transfer_matched_points": 171.0,
+      "transfer_reliable_points": 161.0,
+      "transfer_selected_points": 11.0,
+      "transfer_selected_gt": 2.0,
+      "transfer_mean_kl": 0.3251563608646393
+    }
+  ],
+  "peak_allocated_gib": 1.6148815155029297,
+  "peak_reserved_gib": 1.767578125
+}

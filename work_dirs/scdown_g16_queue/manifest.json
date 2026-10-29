@@ -119,8 +119,8 @@
   },
   "dependency": {
     "name": "scdown_g8",
-    "pid": 3697109,
-    "start_ticks": "65163636",
+    "pid": 1252854,
+    "start_ticks": "68101238",
     "status": "/home/pwt/Paper1/work_dirs/scdown_g8_queue/status.json",
     "work_dir": "/home/pwt/Paper1/work_dirs/scdown_g8_rtmdet_tiny_dior_640_gpu1_bs36",
     "log": "/home/pwt/Paper1/logs/scdown_g8_rtmdet_tiny_dior_640_gpu1_bs36.log"

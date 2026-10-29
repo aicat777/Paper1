@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "stopped_processes": 14,
+  "removed": [
+    {
+      "path": "/home/pwt/Paper1/work_dirs/scdown_p3_semantic_rtmdet_tiny_dior_640_gpu1_bs36",
+      "bytes": 209638855
+    },
+    {
+      "path": "/home/pwt/Paper1/logs/scdown_p3_semantic_rtmdet_tiny_dior_640_gpu1_bs36.log",
+      "bytes": 254269
+    },
+    {
+      "path": "/home/pwt/Paper1/work_dirs/scdown_p3_semantic_queue",
+      "bytes": 39970
+    },
+    {
+      "path": "/home/pwt/Paper1/work_dirs/scdown_p3_semantic_validation",
+      "bytes": 106060
+    },
+    {
+      "path": "/home/pwt/Paper1/work_dirs/scdown_p3_semantic_preflight.log",
+      "bytes": 77
+    },
+    {
+      "path": "/home/pwt/Paper1/work_dirs/scdown_p3_semantic_tests.log",
+      "bytes": 1169
+    }
+  ],
+  "removed_bytes": 210040400,
+  "checked_at": "2026-10-26T17:56:31.034433+08:00",
+  "datasets_and_completed_experiments_preserved": true
+}

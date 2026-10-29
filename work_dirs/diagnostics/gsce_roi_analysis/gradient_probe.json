@@ -1,0 +1,297 @@
+{
+  "scope": "Frozen raw epoch200 GSCE+ROI; 108 fixed strong-augmented train images; CPU FP32, isolated B36 batch-BN; gradients measured at the shared neck outputs before classification/regression towers; no parameter updates.",
+  "checkpoint": "/home/pwt/Paper1/work_dirs/scdown_p3_g4_semantic_rtmdet_tiny_dior_640_gpu1_bs36/epoch_200.pth",
+  "checkpoint_meta": {
+    "epoch": 200,
+    "iter": 32600,
+    "seed": 42,
+    "time": "20261027_001641"
+  },
+  "auxiliary_weight_included": 0.1,
+  "records": [
+    {
+      "batch": 1,
+      "images": 36,
+      "valid_gt": 274,
+      "losses": {
+        "loss_cls": 0.3895302414894104,
+        "loss_bbox": 0.36221644282341003,
+        "loss_instance_semantic": 0.07295891642570496
+      },
+      "comparisons": {
+        "cls_vs_roi": {
+          "cosine": 0.07650427753043641,
+          "first_norm": 0.009353502952209668,
+          "second_norm": 0.005935307518567631,
+          "second_over_first_norm": 0.6345545138429101
+        },
+        "bbox_vs_roi": {
+          "cosine": 0.00566015149783729,
+          "first_norm": 0.007803193740819728,
+          "second_norm": 0.005935307518567631,
+          "second_over_first_norm": 0.7606254202710754
+        },
+        "main_vs_roi": {
+          "cosine": 0.06074957745593323,
+          "first_norm": 0.012506263849023274,
+          "second_norm": 0.005935307518567631,
+          "second_over_first_norm": 0.4745867822891944
+        }
+      },
+      "by_level": {
+        "3": {
+          "cls_vs_roi": {
+            "cosine": 0.11514989720950482,
+            "first_norm": 0.005485588864230507,
+            "second_norm": 0.00585244327155467,
+            "second_over_first_norm": 1.0668760303412974
+          },
+          "bbox_vs_roi": {
+            "cosine": 0.008915810660080532,
+            "first_norm": 0.005009319887542855,
+            "second_norm": 0.00585244327155467,
+            "second_over_first_norm": 1.1683109489790198
+          },
+          "main_vs_roi": {
+            "cosine": 0.08871760887050892,
+            "first_norm": 0.007623369813176539,
+            "second_norm": 0.00585244327155467,
+            "second_over_first_norm": 0.7676976737294144
+          }
+        },
+        "4": {
+          "cls_vs_roi": {
+            "cosine": 0.09556657497085923,
+            "first_norm": 0.005178372741163791,
+            "second_norm": 0.0009354077127537567,
+            "second_over_first_norm": 0.18063738543153474
+          },
+          "bbox_vs_roi": {
+            "cosine": 0.0004883725445599068,
+            "first_norm": 0.0042414310650195205,
+            "second_norm": 0.0009354077127537567,
+            "second_over_first_norm": 0.22054059076154092
+          },
+          "main_vs_roi": {
+            "cosine": 0.07230274250427399,
+            "first_norm": 0.006873193580179971,
+            "second_norm": 0.0009354077127537567,
+            "second_over_first_norm": 0.13609506291968335
+          }
+        },
+        "5": {
+          "cls_vs_roi": {
+            "cosine": 0.049597183061370315,
+            "first_norm": 0.005529989877314158,
+            "second_norm": 0.0003190540771103013,
+            "second_over_first_norm": 0.057695237096032734
+          },
+          "bbox_vs_roi": {
+            "cosine": -0.0008720068688527806,
+            "first_norm": 0.004219811529170847,
+            "second_norm": 0.0003190540771103013,
+            "second_over_first_norm": 0.0756086083240292
+          },
+          "main_vs_roi": {
+            "cosine": 0.037871899904732824,
+            "first_norm": 0.00714493374093196,
+            "second_norm": 0.0003190540771103013,
+            "second_over_first_norm": 0.04465458864684797
+          }
+        }
+      },
+      "elapsed_seconds": 50.36286709806882
+    },
+    {
+      "batch": 2,
+      "images": 36,
+      "valid_gt": 253,
+      "losses": {
+        "loss_cls": 0.31704747676849365,
+        "loss_bbox": 0.3631022274494171,
+        "loss_instance_semantic": 0.04597708582878113
+      },
+      "comparisons": {
+        "cls_vs_roi": {
+          "cosine": 0.13483178022495104,
+          "first_norm": 0.006794643010449446,
+          "second_norm": 0.0021664081690333163,
+          "second_over_first_norm": 0.31884061689504634
+        },
+        "bbox_vs_roi": {
+          "cosine": 0.002403996213665363,
+          "first_norm": 0.007214329915901597,
+          "second_norm": 0.0021664081690333163,
+          "second_over_first_norm": 0.3002923617698975
+        },
+        "main_vs_roi": {
+          "cosine": 0.09211387889725683,
+          "first_norm": 0.010133945572547277,
+          "second_norm": 0.0021664081690333163,
+          "second_over_first_norm": 0.21377736376462164
+        }
+      },
+      "by_level": {
+        "3": {
+          "cls_vs_roi": {
+            "cosine": 0.15134679116581534,
+            "first_norm": 0.004518770748426182,
+            "second_norm": 0.0018178039007322017,
+            "second_over_first_norm": 0.4022784075437584
+          },
+          "bbox_vs_roi": {
+            "cosine": 0.004294690583405171,
+            "first_norm": 0.00536212203422227,
+            "second_norm": 0.0018178039007322017,
+            "second_over_first_norm": 0.33900830475893085
+          },
+          "main_vs_roi": {
+            "cosine": 0.09833553893701977,
+            "first_norm": 0.007188958497093083,
+            "second_norm": 0.0018178039007322017,
+            "second_over_first_norm": 0.25286053626088484
+          }
+        },
+        "4": {
+          "cls_vs_roi": {
+            "cosine": 0.12693192735991363,
+            "first_norm": 0.0033962494178125793,
+            "second_norm": 0.0010345064719620852,
+            "second_over_first_norm": 0.3046026203306291
+          },
+          "bbox_vs_roi": {
+            "cosine": -0.0018001701586158908,
+            "first_norm": 0.0034317700427232384,
+            "second_norm": 0.0010345064719620852,
+            "second_over_first_norm": 0.30144982300188317
+          },
+          "main_vs_roi": {
+            "cosine": 0.08692162551188586,
+            "first_norm": 0.004888480994743248,
+            "second_norm": 0.0010345064719620852,
+            "second_over_first_norm": 0.2116212527111235
+          }
+        },
+        "5": {
+          "cls_vs_roi": {
+            "cosine": 0.13886386827396852,
+            "first_norm": 0.0037700629244914615,
+            "second_norm": 0.0005645437917519224,
+            "second_over_first_norm": 0.14974386450806335
+          },
+          "bbox_vs_roi": {
+            "cosine": 0.0010970686702348317,
+            "first_norm": 0.003393693828183105,
+            "second_norm": 0.0005645437917519224,
+            "second_over_first_norm": 0.16635083196475753
+          },
+          "main_vs_roi": {
+            "cosine": 0.10124714279958326,
+            "first_norm": 0.0052075408935943835,
+            "second_norm": 0.0005645437917519224,
+            "second_over_first_norm": 0.10840890226063289
+          }
+        }
+      },
+      "elapsed_seconds": 93.0472169870045
+    },
+    {
+      "batch": 3,
+      "images": 36,
+      "valid_gt": 728,
+      "losses": {
+        "loss_cls": 0.20550908148288727,
+        "loss_bbox": 0.3954732418060303,
+        "loss_instance_semantic": 0.022181861102581024
+      },
+      "comparisons": {
+        "cls_vs_roi": {
+          "cosine": 0.049304401414781894,
+          "first_norm": 0.0036636666693827652,
+          "second_norm": 0.0013334313228696105,
+          "second_over_first_norm": 0.3639608739553426
+        },
+        "bbox_vs_roi": {
+          "cosine": 0.0003271083401735432,
+          "first_norm": 0.005733673312492586,
+          "second_norm": 0.0013334313228696105,
+          "second_over_first_norm": 0.23256144014419458
+        },
+        "main_vs_roi": {
+          "cosine": 0.02640687815607398,
+          "first_norm": 0.006911472970327449,
+          "second_norm": 0.0013334313228696105,
+          "second_over_first_norm": 0.19293012192832693
+        }
+      },
+      "by_level": {
+        "3": {
+          "cls_vs_roi": {
+            "cosine": 0.02457691061780328,
+            "first_norm": 0.0022182519840332356,
+            "second_norm": 0.0012487689793393916,
+            "second_over_first_norm": 0.5629518144592727
+          },
+          "bbox_vs_roi": {
+            "cosine": 0.0005832061060176402,
+            "first_norm": 0.005000750612528239,
+            "second_norm": 0.0012487689793393916,
+            "second_over_first_norm": 0.24971630783004575
+          },
+          "main_vs_roi": {
+            "cosine": 0.010351627542959268,
+            "first_norm": 0.005548330335246595,
+            "second_norm": 0.0012487689793393916,
+            "second_over_first_norm": 0.22507113021126385
+          }
+        },
+        "4": {
+          "cls_vs_roi": {
+            "cosine": 0.1065152800781149,
+            "first_norm": 0.0020309945794223885,
+            "second_norm": 0.00041528357427393436,
+            "second_over_first_norm": 0.204473009668022
+          },
+          "bbox_vs_roi": {
+            "cosine": 0.0016594587155149315,
+            "first_norm": 0.00200881840154862,
+            "second_norm": 0.00041528357427393436,
+            "second_over_first_norm": 0.20673027186219903
+          },
+          "main_vs_roi": {
+            "cosine": 0.07562097591895127,
+            "first_norm": 0.00290482244311677,
+            "second_norm": 0.00041528357427393436,
+            "second_over_first_norm": 0.14296349687671445
+          }
+        },
+        "5": {
+          "cls_vs_roi": {
+            "cosine": 0.18454419340482253,
+            "first_norm": 0.0020920976597749194,
+            "second_norm": 0.0002148364075004963,
+            "second_over_first_norm": 0.10268947364704271
+          },
+          "bbox_vs_roi": {
+            "cosine": -0.006005001141324431,
+            "first_norm": 0.001957588208814049,
+            "second_norm": 0.0002148364075004963,
+            "second_over_first_norm": 0.10974545439801613
+          },
+          "main_vs_roi": {
+            "cosine": 0.12804411284359796,
+            "first_norm": 0.0029234390167257565,
+            "second_norm": 0.0002148364075004963,
+            "second_over_first_norm": 0.07348756251502468
+          }
+        }
+      },
+      "elapsed_seconds": 165.49849423998967
+    }
+  ],
+  "limitations": [
+    "A local gradient cosine is not a causal decomposition of AP.",
+    "Neck features are detached to isolate the shared detection-head input; this does not measure parameter gradients in earlier backbone layers.",
+    "One checkpoint and three augmented batches do not establish the direction of auxiliary gradients throughout training."
+  ]
+}

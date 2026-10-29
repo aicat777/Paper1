@@ -1,0 +1,7 @@
+scdown_p3_dsconv preflight passed
+scdown_p3_dsconv smoke passed
+scdown_p3_dsconv capacity passed
+scdown_p3_g4 preflight existing passed report reused
+scdown_p3_g4 smoke passed
+scdown_p3_g4 capacity passed
+COMBINATIONS_VALIDATION_PASSED

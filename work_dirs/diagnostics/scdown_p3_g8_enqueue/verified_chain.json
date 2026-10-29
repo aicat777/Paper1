@@ -1,0 +1,29 @@
+{
+  "status": "passed",
+  "checked_at": "2026-10-26T01:24:15.214414+08:00",
+  "preserved_trainer_pid": 4073416,
+  "chain": [
+    {
+      "identity": {
+        "name": "instance_semantic_split",
+        "pid": 2496201,
+        "start_ticks": "77303803",
+        "status": "/home/pwt/Paper1/work_dirs/instance_semantic_split_queue/status.json",
+        "work_dir": "/home/pwt/Paper1/work_dirs/instance_semantic_split_rtmdet_tiny_dior_640_gpu1_bs36",
+        "log": "/home/pwt/Paper1/logs/instance_semantic_split_rtmdet_tiny_dior_640_gpu1_bs36.log"
+      },
+      "state": "training"
+    },
+    {
+      "identity": {
+        "name": "scdown_p3_g8",
+        "pid": 1332969,
+        "start_ticks": "89830935",
+        "status": "/home/pwt/Paper1/work_dirs/scdown_p3_g8_queue/status.json",
+        "work_dir": "/home/pwt/Paper1/work_dirs/scdown_p3_g8_rtmdet_tiny_dior_640_gpu1_bs36",
+        "log": "/home/pwt/Paper1/logs/scdown_p3_g8_rtmdet_tiny_dior_640_gpu1_bs36.log"
+      },
+      "state": "waiting_instance_semantic_split"
+    }
+  ]
+}

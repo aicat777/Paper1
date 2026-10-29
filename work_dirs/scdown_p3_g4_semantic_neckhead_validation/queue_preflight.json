@@ -1,0 +1,32 @@
+{
+  "status": "passed",
+  "method": "scdown_p3_g4_semantic_neckhead",
+  "reference": "scdown_p3_g4_semantic_gradscale",
+  "parameters": 3105704,
+  "inference_parameters": 3103764,
+  "new_parameters": 0,
+  "inference_conv_linear_gmac": 6.78524544,
+  "initialization_and_state_match": true,
+  "inference_matches_reference_exactly": true,
+  "original_roi_preserved": true,
+  "backbone_roi_gradient_scale": 0.0,
+  "neck_classification_roi_gradient_scale": 0.25,
+  "auxiliary_classifier_weight": 0.1,
+  "all_gt_and_original_normalization_preserved": true,
+  "main_losses_and_matching_unchanged": true,
+  "formal_batch": 36,
+  "accumulation": 1,
+  "input_size": [
+    640,
+    640
+  ],
+  "train_images": 5862,
+  "val_images": 5863,
+  "scratch": true,
+  "training_protocol_unchanged": true,
+  "watched_parameter_tensors": 145,
+  "auxiliary_parameter_tensors": 112,
+  "formal_batch_capacity_tested": false,
+  "config": "/home/pwt/Paper1/work_dirs/scdown_p3_g4_semantic_neckhead_queue/scdown_p3_g4_semantic_neckhead_640_bs36.py",
+  "config_sha256": "e0b028310ca47b2e22bd06fef22bc4436f303bf593b569dde348eaf4f1cfc77b"
+}

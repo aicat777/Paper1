@@ -1,0 +1,17 @@
+test_added_gradient_is_positive_multiple_of_original_qfl_at_each_point (test_instance_semantic_ibqfl.InstanceBalancedQFLTests) ... ok
+test_all_gt_denominator_includes_unmatched_gt_and_empty_ddp_rank (test_instance_semantic_ibqfl.InstanceBalancedQFLTests) ... ok
+test_baseline_and_gsce_initialization_protocol_inference_and_sharing (test_instance_semantic_ibqfl.InstanceBalancedQFLTests) ... ok
+test_extra_gradient_reaches_features_predictors_and_gsce_not_aux_or_regression (test_instance_semantic_ibqfl.InstanceBalancedQFLTests) ... /home/pwt/miniconda3/envs/rtmdet/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3483.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+ok
+test_independent_formula_and_gradients_cross_levels_images_and_duplicate_gt (test_instance_semantic_ibqfl.InstanceBalancedQFLTests) ... ok
+test_main_and_roi_unchanged_one_head_assignment_and_bn_update (test_instance_semantic_ibqfl.InstanceBalancedQFLTests) ... ok
+test_no_match_no_gt_and_invalid_arguments (test_instance_semantic_ibqfl.InstanceBalancedQFLTests) ... ok
+test_tensor_list_and_empty_gt_loss_interfaces_and_state_roundtrip (test_instance_semantic_ibqfl.InstanceBalancedQFLTests) ... ok
+test_uses_actual_quality_loss_settings_detaches_quality_and_zero_weight (test_instance_semantic_ibqfl.InstanceBalancedQFLTests) ... ok
+test_zero_weight_gradients_and_adamw_update_match_each_reference (test_instance_semantic_ibqfl.InstanceBalancedQFLTests) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 13.941s
+
+OK

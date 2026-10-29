@@ -1,0 +1,34 @@
+{
+  "status": "passed",
+  "method": "scdown_p3_semantic",
+  "parameters": 3821096,
+  "inference_parameters": 3819156,
+  "inference_conv_linear_gmac": 7.48197504,
+  "auxiliary_parameters": 1940,
+  "all_detector_initial_parameters_match_scdown": true,
+  "inference_predictions_match_scdown_exactly": true,
+  "original_roi_module_unchanged": true,
+  "scdown_sites": [
+    "backbone.stage2.0",
+    "backbone.stage3.0",
+    "backbone.stage4.0",
+    "neck.downsample_layers.1"
+  ],
+  "prediction_points": 8400,
+  "watched_parameter_tensors": 46,
+  "train_images": 5862,
+  "val_images": 5863,
+  "input_size": [
+    640,
+    640
+  ],
+  "formal_batch": 36,
+  "accumulation": 1,
+  "scratch": true,
+  "unchanged_training_protocol": true,
+  "semantic_weight": 0.1,
+  "all_valid_gt_denominator": true,
+  "formal_batch_capacity_tested": false,
+  "config": "/home/pwt/Paper1/work_dirs/scdown_p3_semantic_queue/scdown_p3_semantic_640_bs36.py",
+  "config_sha256": "1ecaa8ed569ff31b304e18a41845b965d17fb645b6537c695aff998b14c6b1eb"
+}

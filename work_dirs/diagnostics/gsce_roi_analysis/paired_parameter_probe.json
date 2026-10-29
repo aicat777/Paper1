@@ -1,0 +1,348 @@
+{
+  "scope": "Two completed raw epoch300 models; identical 72 strong-augmented train images, isolated CPU FP32, real B36 batch BN. Backbone parameters are frozen; neck and classification-tower gradients are measured. No optimizer updates and no GPU use.",
+  "auxiliary_weight_included": 0.1,
+  "methods": {
+    "original_roi": {
+      "checkpoint_meta": {
+        "epoch": 300,
+        "iter": 48900,
+        "seed": 42,
+        "time": "20261018_031418"
+      },
+      "records": [
+        {
+          "batch": 0,
+          "images": 36,
+          "valid_gt": 306,
+          "losses": {
+            "loss_cls": 0.3032991886138916,
+            "loss_bbox": 0.2897251844406128,
+            "loss_instance_semantic": 0.03888056427240372
+          },
+          "roi_accuracy": 0.8790849447250366,
+          "gradients": {
+            "all_shared": {
+              "main_vs_roi": {
+                "parameters": 107,
+                "cosine": 0.19146895501944775,
+                "auxiliary_over_main_norm": 0.16244698553771317,
+                "main_norm": 0.8476524254335729,
+                "auxiliary_norm": 0.1376985812954151
+              },
+              "cls_vs_roi": {
+                "parameters": 107,
+                "cosine": 0.20218220517695,
+                "auxiliary_over_main_norm": 0.18095479725806782,
+                "main_norm": 0.7609556827556051,
+                "auxiliary_norm": 0.1376985812954151
+              },
+              "bbox_vs_roi": {
+                "parameters": 93,
+                "cosine": 0.033572431144793614,
+                "auxiliary_over_main_norm": 0.4631579195101171,
+                "main_norm": 0.2735086048033424,
+                "auxiliary_norm": 0.12667767636883087
+              }
+            },
+            "neck": {
+              "main_vs_roi": {
+                "parameters": 93,
+                "cosine": 0.20084546177427007,
+                "auxiliary_over_main_norm": 0.16255773812586005,
+                "main_norm": 0.7792780450153096,
+                "auxiliary_norm": 0.12667767636883087
+              },
+              "cls_vs_roi": {
+                "parameters": 93,
+                "cosine": 0.21540767762150717,
+                "auxiliary_over_main_norm": 0.18520975536673911,
+                "main_norm": 0.6839687041214044,
+                "auxiliary_norm": 0.12667767636883087
+              },
+              "bbox_vs_roi": {
+                "parameters": 93,
+                "cosine": 0.033572431144793614,
+                "auxiliary_over_main_norm": 0.4631579195101171,
+                "main_norm": 0.2735086048033424,
+                "auxiliary_norm": 0.12667767636883087
+              }
+            },
+            "classification_tower": {
+              "main_vs_roi": {
+                "parameters": 14,
+                "cosine": 0.14005639911907805,
+                "auxiliary_over_main_norm": 0.16184103785064963,
+                "main_norm": 0.33352715466740596,
+                "auxiliary_norm": 0.05397838086274712
+              },
+              "cls_vs_roi": {
+                "parameters": 14,
+                "cosine": 0.14005639911907805,
+                "auxiliary_over_main_norm": 0.16184103785064963,
+                "main_norm": 0.33352715466740596,
+                "auxiliary_norm": 0.05397838086274712
+              },
+              "bbox_vs_roi": {
+                "parameters": 0
+              }
+            }
+          },
+          "elapsed_seconds": 100.45745792100206
+        },
+        {
+          "batch": 1,
+          "images": 36,
+          "valid_gt": 335,
+          "losses": {
+            "loss_cls": 0.2422546148300171,
+            "loss_bbox": 0.3368722200393677,
+            "loss_instance_semantic": 0.022865552455186844
+          },
+          "roi_accuracy": 0.9164178967475891,
+          "gradients": {
+            "all_shared": {
+              "main_vs_roi": {
+                "parameters": 107,
+                "cosine": 0.13538678541759144,
+                "auxiliary_over_main_norm": 0.15066613470863974,
+                "main_norm": 0.6110964819505756,
+                "auxiliary_norm": 0.09207154486954125
+              },
+              "cls_vs_roi": {
+                "parameters": 107,
+                "cosine": 0.15601708308087364,
+                "auxiliary_over_main_norm": 0.2065913884233742,
+                "main_norm": 0.4456698102093982,
+                "auxiliary_norm": 0.09207154486954125
+              },
+              "bbox_vs_roi": {
+                "parameters": 93,
+                "cosine": 0.041297213748853284,
+                "auxiliary_over_main_norm": 0.25536206403505063,
+                "main_norm": 0.33950696802406544,
+                "auxiliary_norm": 0.08669720010890729
+              }
+            },
+            "neck": {
+              "main_vs_roi": {
+                "parameters": 93,
+                "cosine": 0.14483312826414332,
+                "auxiliary_over_main_norm": 0.14900968365589243,
+                "main_norm": 0.5818225901956603,
+                "auxiliary_norm": 0.08669720010890729
+              },
+              "cls_vs_roi": {
+                "parameters": 93,
+                "cosine": 0.1736201206985356,
+                "auxiliary_over_main_norm": 0.21427942510086861,
+                "main_norm": 0.40459880862614767,
+                "auxiliary_norm": 0.08669720010890729
+              },
+              "bbox_vs_roi": {
+                "parameters": 93,
+                "cosine": 0.041297213748853284,
+                "auxiliary_over_main_norm": 0.25536206403505063,
+                "main_norm": 0.33950696802406544,
+                "auxiliary_norm": 0.08669720010890729
+              }
+            },
+            "classification_tower": {
+              "main_vs_roi": {
+                "parameters": 14,
+                "cosine": 0.05382172004994141,
+                "auxiliary_over_main_norm": 0.1658680865336813,
+                "main_norm": 0.18687264056138075,
+                "auxiliary_norm": 0.030996207315412624
+              },
+              "cls_vs_roi": {
+                "parameters": 14,
+                "cosine": 0.05382172004994141,
+                "auxiliary_over_main_norm": 0.1658680865336813,
+                "main_norm": 0.18687264056138075,
+                "auxiliary_norm": 0.030996207315412624
+              },
+              "bbox_vs_roi": {
+                "parameters": 0
+              }
+            }
+          },
+          "elapsed_seconds": 199.75495705904905
+        }
+      ]
+    },
+    "g4_roi": {
+      "checkpoint_meta": {
+        "epoch": 300,
+        "iter": 48900,
+        "seed": 42,
+        "time": "20261027_032118"
+      },
+      "records": [
+        {
+          "batch": 0,
+          "images": 36,
+          "valid_gt": 306,
+          "losses": {
+            "loss_cls": 0.31258437037467957,
+            "loss_bbox": 0.2945186197757721,
+            "loss_instance_semantic": 0.037831682711839676
+          },
+          "roi_accuracy": 0.898692786693573,
+          "gradients": {
+            "all_shared": {
+              "main_vs_roi": {
+                "parameters": 110,
+                "cosine": 0.1602668163909173,
+                "auxiliary_over_main_norm": 0.16756750390129976,
+                "main_norm": 0.8055940082553632,
+                "auxiliary_norm": 0.1349913771211943
+              },
+              "cls_vs_roi": {
+                "parameters": 110,
+                "cosine": 0.1700581071057758,
+                "auxiliary_over_main_norm": 0.20201990197835734,
+                "main_norm": 0.6682083091776577,
+                "auxiliary_norm": 0.1349913771211943
+              },
+              "bbox_vs_roi": {
+                "parameters": 96,
+                "cosine": 0.05294947528660269,
+                "auxiliary_over_main_norm": 0.39120034146463273,
+                "main_norm": 0.31757651484746124,
+                "auxiliary_norm": 0.12423604104947483
+              }
+            },
+            "neck": {
+              "main_vs_roi": {
+                "parameters": 96,
+                "cosine": 0.1765017267980533,
+                "auxiliary_over_main_norm": 0.16810001558449034,
+                "main_norm": 0.7390602589625066,
+                "auxiliary_norm": 0.12423604104947483
+              },
+              "cls_vs_roi": {
+                "parameters": 96,
+                "cosine": 0.1938132517773312,
+                "auxiliary_over_main_norm": 0.21190365094126257,
+                "main_norm": 0.5862855146554872,
+                "auxiliary_norm": 0.12423604104947483
+              },
+              "bbox_vs_roi": {
+                "parameters": 96,
+                "cosine": 0.05294947528660269,
+                "auxiliary_over_main_norm": 0.39120034146463273,
+                "main_norm": 0.31757651484746124,
+                "auxiliary_norm": 0.12423604104947483
+              }
+            },
+            "classification_tower": {
+              "main_vs_roi": {
+                "parameters": 14,
+                "cosine": 0.07223298591628331,
+                "auxiliary_over_main_norm": 0.1647084259817855,
+                "main_norm": 0.3205801612065458,
+                "auxiliary_norm": 0.052802253753317215
+              },
+              "cls_vs_roi": {
+                "parameters": 14,
+                "cosine": 0.07223298591628331,
+                "auxiliary_over_main_norm": 0.1647084259817855,
+                "main_norm": 0.3205801612065458,
+                "auxiliary_norm": 0.052802253753317215
+              },
+              "bbox_vs_roi": {
+                "parameters": 0
+              }
+            }
+          },
+          "elapsed_seconds": 287.92758079606574
+        },
+        {
+          "batch": 1,
+          "images": 36,
+          "valid_gt": 335,
+          "losses": {
+            "loss_cls": 0.2678738832473755,
+            "loss_bbox": 0.34207695722579956,
+            "loss_instance_semantic": 0.02306969277560711
+          },
+          "roi_accuracy": 0.9253731369972229,
+          "gradients": {
+            "all_shared": {
+              "main_vs_roi": {
+                "parameters": 110,
+                "cosine": 0.1310683052304066,
+                "auxiliary_over_main_norm": 0.14828683634537326,
+                "main_norm": 0.7139100550612166,
+                "auxiliary_norm": 0.10586346350017904
+              },
+              "cls_vs_roi": {
+                "parameters": 110,
+                "cosine": 0.14284514721470137,
+                "auxiliary_over_main_norm": 0.20489619432834605,
+                "main_norm": 0.5166687641378682,
+                "auxiliary_norm": 0.10586346350017904
+              },
+              "bbox_vs_roi": {
+                "parameters": 96,
+                "cosine": 0.059347219528409885,
+                "auxiliary_over_main_norm": 0.26484015750118045,
+                "main_norm": 0.36488434204662845,
+                "auxiliary_norm": 0.09663602661734369
+              }
+            },
+            "neck": {
+              "main_vs_roi": {
+                "parameters": 96,
+                "cosine": 0.14121819233870356,
+                "auxiliary_over_main_norm": 0.14157855584646803,
+                "main_norm": 0.6825611833626742,
+                "auxiliary_norm": 0.09663602661734369
+              },
+              "cls_vs_roi": {
+                "parameters": 96,
+                "cosine": 0.15820068632174478,
+                "auxiliary_over_main_norm": 0.20456075215774536,
+                "main_norm": 0.47240746623195634,
+                "auxiliary_norm": 0.09663602661734369
+              },
+              "bbox_vs_roi": {
+                "parameters": 96,
+                "cosine": 0.059347219528409885,
+                "auxiliary_over_main_norm": 0.26484015750118045,
+                "main_norm": 0.36488434204662845,
+                "auxiliary_norm": 0.09663602661734369
+              }
+            },
+            "classification_tower": {
+              "main_vs_roi": {
+                "parameters": 14,
+                "cosine": 0.06534391161386087,
+                "auxiliary_over_main_norm": 0.20659773395400724,
+                "main_norm": 0.20923144525633625,
+                "auxiliary_norm": 0.04322674246188098
+              },
+              "cls_vs_roi": {
+                "parameters": 14,
+                "cosine": 0.06534391161386087,
+                "auxiliary_over_main_norm": 0.20659773395400724,
+                "main_norm": 0.20923144525633625,
+                "auxiliary_norm": 0.04322674246188098
+              },
+              "bbox_vs_roi": {
+                "parameters": 0
+              }
+            }
+          },
+          "elapsed_seconds": 364.74607661704067
+        }
+      ]
+    }
+  },
+  "limitations": [
+    "Local gradient directions do not causally decompose validation AP.",
+    "Only two batches at convergence are measured, not training history.",
+    "Backbone parameter gradients and AdamW preconditioning are not measured.",
+    "Strong augmentation here is a diagnostic input; formal last20 epochs use weak augmentation."
+  ]
+}

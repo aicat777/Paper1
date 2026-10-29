@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "method": "instance_semantic_split",
+  "parameters": 4880648,
+  "new_parameters": 0,
+  "inference_conv_linear_gmac": 7.98770304,
+  "initial_parameters_and_predictions_exact": true,
+  "train_images": 5862,
+  "val_images": 5863,
+  "prediction_points": 8400,
+  "input_size": [
+    640,
+    640
+  ],
+  "formal_batch": 36,
+  "accumulation": 1,
+  "scratch": true,
+  "unchanged_training_protocol": true,
+  "semantic_weight": 0.1,
+  "classifier_coverage": "all_valid_gt",
+  "feature_gradient_coverage": "matched_valid_gt",
+  "all_valid_gt_denominator": true,
+  "formal_batch_capacity_tested": false,
+  "config": "/home/pwt/Paper1/configs/instance_semantic_split/rtmdet_tiny_dior_640.py",
+  "config_sha256": "a216cb59b96c4cf434dda11e94aca196296ed5bf5cadb8d9e31aaef3c5aa7b77"
+}

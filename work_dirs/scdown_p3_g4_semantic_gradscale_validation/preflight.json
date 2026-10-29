@@ -1,0 +1,46 @@
+{
+  "status": "passed",
+  "method": "scdown_p3_g4_semantic_gradscale",
+  "reference": "scdown_p3_g4_semantic",
+  "parameters": 3105704,
+  "inference_parameters": 3103764,
+  "new_parameters": 0,
+  "inference_conv_linear_gmac": 6.78524544,
+  "state_and_initialization_match_reference": true,
+  "inference_matches_reference_exactly": true,
+  "main_losses_and_assignment_unchanged": true,
+  "semantic_weight": 0.1,
+  "feature_gradient_scale": 0.25,
+  "all_valid_gt_preserved": true,
+  "classifier_weight_unchanged": true,
+  "single_detection_tower_forward": true,
+  "train_images": 5862,
+  "val_images": 5863,
+  "input_size": [
+    640,
+    640
+  ],
+  "formal_batch": 36,
+  "accumulation": 1,
+  "scratch": true,
+  "unchanged_training_protocol": true,
+  "watched_parameter_tensors": 67,
+  "scdown_sites": [
+    "backbone.stage2.0",
+    "backbone.stage3.0",
+    "backbone.stage4.0",
+    "neck.downsample_layers.1"
+  ],
+  "g4_sites": [
+    "backbone.stage2.1.blocks.0.conv1.conv",
+    "backbone.stage3.1.blocks.0.conv1.conv",
+    "backbone.stage4.2.blocks.0.conv1.conv",
+    "neck.top_down_layers.0.0.blocks.0.conv1.conv",
+    "neck.top_down_layers.1.blocks.0.conv1.conv",
+    "neck.bottom_up_layers.0.blocks.0.conv1.conv",
+    "neck.bottom_up_layers.1.blocks.0.conv1.conv"
+  ],
+  "formal_batch_capacity_tested": false,
+  "config": "/home/pwt/Paper1/configs/scdown_p3_g4_semantic_gradscale/rtmdet_tiny_dior_640.py",
+  "config_sha256": "b1aebb13e63821dd724fa256dfd1a7f508cc39a3d327be9212c156e6e101b6fe"
+}

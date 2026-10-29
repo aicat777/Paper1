@@ -1,0 +1,102 @@
+{
+  "status": "passed",
+  "checked_at": "2026-10-23T13:07:34.958862+08:00",
+  "preserved_trainer_pid": 238456,
+  "kept_schedulers": [
+    {
+      "name": "scdown_p3_dense",
+      "pid": 225130,
+      "start_ticks": "52419712",
+      "status": "/home/pwt/Paper1/work_dirs/scdown_p3_dense_queue/status.json",
+      "work_dir": "/home/pwt/Paper1/work_dirs/scdown_p3_dense_rtmdet_tiny_dior_640_gpu1_bs36",
+      "log": "/home/pwt/Paper1/logs/scdown_p3_dense_rtmdet_tiny_dior_640_gpu1_bs36.log"
+    },
+    {
+      "name": "scdown_p3_noact",
+      "pid": 226193,
+      "start_ticks": "52421326",
+      "status": "/home/pwt/Paper1/work_dirs/scdown_p3_noact_queue/status.json",
+      "work_dir": "/home/pwt/Paper1/work_dirs/scdown_p3_noact_rtmdet_tiny_dior_640_gpu1_bs36",
+      "log": "/home/pwt/Paper1/logs/scdown_p3_noact_rtmdet_tiny_dior_640_gpu1_bs36.log"
+    }
+  ],
+  "chain": [
+    {
+      "identity": {
+        "name": "scdown_p3_dense",
+        "pid": 225130,
+        "start_ticks": "52419712",
+        "status": "/home/pwt/Paper1/work_dirs/scdown_p3_dense_queue/status.json",
+        "work_dir": "/home/pwt/Paper1/work_dirs/scdown_p3_dense_rtmdet_tiny_dior_640_gpu1_bs36",
+        "log": "/home/pwt/Paper1/logs/scdown_p3_dense_rtmdet_tiny_dior_640_gpu1_bs36.log"
+      },
+      "state": "training"
+    },
+    {
+      "identity": {
+        "name": "scdown_p3_noact",
+        "pid": 226193,
+        "start_ticks": "52421326",
+        "status": "/home/pwt/Paper1/work_dirs/scdown_p3_noact_queue/status.json",
+        "work_dir": "/home/pwt/Paper1/work_dirs/scdown_p3_noact_rtmdet_tiny_dior_640_gpu1_bs36",
+        "log": "/home/pwt/Paper1/logs/scdown_p3_noact_rtmdet_tiny_dior_640_gpu1_bs36.log"
+      },
+      "state": "waiting_scdown_p3_dense"
+    },
+    {
+      "identity": {
+        "name": "scdown_p3_dsconv",
+        "pid": 1250367,
+        "start_ticks": "68097319",
+        "status": "/home/pwt/Paper1/work_dirs/scdown_p3_dsconv_queue/status.json",
+        "work_dir": "/home/pwt/Paper1/work_dirs/scdown_p3_dsconv_rtmdet_tiny_dior_640_gpu1_bs36",
+        "log": "/home/pwt/Paper1/logs/scdown_p3_dsconv_rtmdet_tiny_dior_640_gpu1_bs36.log"
+      },
+      "state": "waiting_scdown_p3_noact"
+    },
+    {
+      "identity": {
+        "name": "scdown_p3_g2",
+        "pid": 1251236,
+        "start_ticks": "68098724",
+        "status": "/home/pwt/Paper1/work_dirs/scdown_p3_g2_queue/status.json",
+        "work_dir": "/home/pwt/Paper1/work_dirs/scdown_p3_g2_rtmdet_tiny_dior_640_gpu1_bs36",
+        "log": "/home/pwt/Paper1/logs/scdown_p3_g2_rtmdet_tiny_dior_640_gpu1_bs36.log"
+      },
+      "state": "waiting_scdown_p3_dsconv"
+    },
+    {
+      "identity": {
+        "name": "scdown_p3_g4",
+        "pid": 1252133,
+        "start_ticks": "68100029",
+        "status": "/home/pwt/Paper1/work_dirs/scdown_p3_g4_queue/status.json",
+        "work_dir": "/home/pwt/Paper1/work_dirs/scdown_p3_g4_rtmdet_tiny_dior_640_gpu1_bs36",
+        "log": "/home/pwt/Paper1/logs/scdown_p3_g4_rtmdet_tiny_dior_640_gpu1_bs36.log"
+      },
+      "state": "waiting_scdown_p3_g2"
+    },
+    {
+      "identity": {
+        "name": "scdown_g8",
+        "pid": 1252854,
+        "start_ticks": "68101238",
+        "status": "/home/pwt/Paper1/work_dirs/scdown_g8_queue/status.json",
+        "work_dir": "/home/pwt/Paper1/work_dirs/scdown_g8_rtmdet_tiny_dior_640_gpu1_bs36",
+        "log": "/home/pwt/Paper1/logs/scdown_g8_rtmdet_tiny_dior_640_gpu1_bs36.log"
+      },
+      "state": "waiting_scdown_p3_g4"
+    },
+    {
+      "identity": {
+        "name": "scdown_g16",
+        "pid": 1263810,
+        "start_ticks": "68119500",
+        "status": "/home/pwt/Paper1/work_dirs/scdown_g16_queue/status.json",
+        "work_dir": "/home/pwt/Paper1/work_dirs/scdown_g16_rtmdet_tiny_dior_640_gpu1_bs36",
+        "log": "/home/pwt/Paper1/logs/scdown_g16_rtmdet_tiny_dior_640_gpu1_bs36.log"
+      },
+      "state": "waiting_scdown_g8"
+    }
+  ]
+}

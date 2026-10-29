@@ -1,0 +1,42 @@
+{
+  "status": "passed",
+  "method": "instance_semantic_transfer",
+  "cases": [
+    {
+      "amp": false,
+      "temperature": 1.0,
+      "selected_points": 7,
+      "selected_gt": 3,
+      "forward_max_error": 7.450580596923828e-09,
+      "gradient_max_error": 1.862645149230957e-09,
+      "classifier_teacher_and_detector_score_gradients_absent": true
+    },
+    {
+      "amp": false,
+      "temperature": 2.0,
+      "selected_points": 7,
+      "selected_gt": 3,
+      "forward_max_error": 1.4901161193847656e-08,
+      "gradient_max_error": 4.6566128730773926e-09,
+      "classifier_teacher_and_detector_score_gradients_absent": true
+    },
+    {
+      "amp": true,
+      "temperature": 1.0,
+      "selected_points": 7,
+      "selected_gt": 3,
+      "forward_max_error": 0.0,
+      "gradient_max_error": 0.0,
+      "classifier_teacher_and_detector_score_gradients_absent": true
+    },
+    {
+      "amp": true,
+      "temperature": 2.0,
+      "selected_points": 7,
+      "selected_gt": 3,
+      "forward_max_error": 1.4901161193847656e-08,
+      "gradient_max_error": 0.0,
+      "classifier_teacher_and_detector_score_gradients_absent": true
+    }
+  ]
+}

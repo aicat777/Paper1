@@ -1,0 +1,113 @@
+{
+  "status": "passed",
+  "method": "scdown_p3_g4_semantic_contrast",
+  "microbatch": 8,
+  "accumulation": 1,
+  "optimizer_updates": 3,
+  "training_microsteps": 3,
+  "input_size": [
+    640,
+    640
+  ],
+  "gt_per_image": 1200,
+  "different_image_ids": [
+    844,
+    5601,
+    4604,
+    5475,
+    5757,
+    1129,
+    3150,
+    1497
+  ],
+  "repeated_annotations": true,
+  "synthetic_multiscale_boxes": true,
+  "allocator_fraction": 0.35,
+  "formal_batch_capacity_tested": false,
+  "loss_scale_init": 32,
+  "warmup_enabled": false,
+  "amp_skipped_updates": 0,
+  "saved_checkpoints": false,
+  "watched_parameter_tensors": 6,
+  "losses": [
+    {
+      "loss": 3.318742513656616,
+      "loss_cls": 0.1463788002729416,
+      "loss_bbox": 1.9332101345062256,
+      "loss_instance_semantic": 0.3044087886810303,
+      "loss_instance_contrast": 0.9347447752952576,
+      "semantic_contrast_anchors": 9600.0,
+      "semantic_all_gt": 9600.0
+    },
+    {
+      "loss": 3.264512777328491,
+      "loss_cls": 0.19859112799167633,
+      "loss_bbox": 1.8368738889694214,
+      "loss_instance_semantic": 0.2934812307357788,
+      "loss_instance_contrast": 0.9355667233467102,
+      "semantic_contrast_anchors": 9600.0,
+      "semantic_all_gt": 9600.0
+    },
+    {
+      "loss": 3.2208542823791504,
+      "loss_cls": 0.2858421504497528,
+      "loss_bbox": 1.7207624912261963,
+      "loss_instance_semantic": 0.28701770305633545,
+      "loss_instance_contrast": 0.9272316694259644,
+      "semantic_contrast_anchors": 9600.0,
+      "semantic_all_gt": 9600.0
+    }
+  ],
+  "gradient_max": {
+    "bbox_head.instance_semantic.projector.2.bias": 0.21528977155685425,
+    "bbox_head.instance_semantic.projector.2.weight": 0.10575796663761139,
+    "bbox_head.instance_semantic.projector.0.bias": 0.30349254608154297,
+    "bbox_head.instance_semantic.projector.0.weight": 0.16571973264217377,
+    "bbox_head.instance_semantic.classifier.bias": 2.8508191108703613,
+    "bbox_head.instance_semantic.classifier.weight": 2.29195499420166
+  },
+  "parameter_updates_max": {
+    "bbox_head.instance_semantic.classifier.weight": 0.0016918666660785675,
+    "bbox_head.instance_semantic.classifier.bias": 0.001688977936282754,
+    "bbox_head.instance_semantic.projector.0.weight": 0.001704379916191101,
+    "bbox_head.instance_semantic.projector.0.bias": 0.0016890234546735883,
+    "bbox_head.instance_semantic.projector.2.weight": 0.0017037391662597656,
+    "bbox_head.instance_semantic.projector.2.bias": 0.001689610886387527
+  },
+  "cuda_device": "NVIDIA GeForce RTX 4090",
+  "cuda_total_gib": 47.37115478515625,
+  "initial_free_gib": 21.12457275390625,
+  "peak_allocated_gib": 8.046953678131104,
+  "peak_reserved_gib": 9.05078125,
+  "elapsed_seconds": 10.134462023153901,
+  "config": "/home/pwt/Paper1/configs/scdown_p3_g4_semantic_contrast/rtmdet_tiny_dior_640.py",
+  "config_sha256": "6abd6424033a599b41d898d4d74488dc2fbfbd28ac84505608a191c92a2ba5d5",
+  "source_code_sha256": {
+    "custom_models/__init__.py": "9935ec6176270b662127745e5114063ac1e92717d1f2b6d988c66f6195560eb3",
+    "custom_models/instance_semantic/__init__.py": "7aa8654f1bae5bad77124cfa94e8a226429540643063e982758cdeaf5329563c",
+    "custom_models/instance_semantic/head.py": "404fa084c027a546c185af4d63be051e20d71e017e6510574c94efd87b86fe64",
+    "custom_models/instance_semantic/roi.py": "3e1d9805737aa468eb96f093ba7955a82362e7b83e90dc47efe64f53554e54b4",
+    "custom_models/instance_semantic_contrast/__init__.py": "4f8085e9c358acca4476e05619e0587913194d59ce0e8ab21eb3dd82a3a6cd71",
+    "custom_models/instance_semantic_contrast/contrastive.py": "406053c2292f8c5b0da784c5835eac974cc06a8563bcb2a8142ea20f391181ff",
+    "custom_models/instance_semantic_contrast/head.py": "b3d7e655aa1eb2367c3859096bcefa84f8a2e10f36b33dd71d8642649c6a6784",
+    "custom_models/instance_semantic_contrast/roi.py": "d0787f4a9615279e47466a15524eca3750c4c0f2610f993ba8099e18407d87a7",
+    "custom_models/instance_semantic_gradscale/__init__.py": "580ad98e240a407088bb8adb73c0592b868d13b07d945c8aa86620cc9c2de4e4",
+    "custom_models/instance_semantic_gradscale/head.py": "01bb79bf43b031b4446e72796015e5796e41ebcee628e499b421775b46dc6bb6",
+    "custom_models/instance_semantic_gradscale/roi.py": "11b6ca2ebbc8e562822a107bb8afe880de769cd28a22166e44ae47e8a3bf0bb6",
+    "custom_models/scdown/__init__.py": "049cf9208749611292f12677e9098f0d2779bbaf8573ed4d1d42e52dc107e4bb",
+    "custom_models/scdown/backbone.py": "3daec6209fdde9ef18e79730fc4bafe3c96c2fffc0d38196262249e43d6ff15b",
+    "custom_models/scdown/initialization.py": "e293e07f1ba279c63b476d75e26878b12fe88ccbe8f0f5478e78da32e0e8c604",
+    "custom_models/scdown/neck.py": "8e64bd2f9edf9b800d06dad0df3210f925a1dc230202563463ae4de63515ecd7",
+    "custom_models/scdown/operator.py": "3ff400bd14e43b731c80ba395207302f05c2ad66b6e3fbc8730e1df11dbc4915",
+    "custom_models/scdown_g4/__init__.py": "377dc1ebdceee4d6b104cdb234bb71d5bf5e42d0cd1adb2864853cb9502cb68f",
+    "custom_models/scdown_g4/backbone.py": "66ea19e4f66788d4c3b06da23dc925a56692e386a0dbc23ba24d1a4370234ebf",
+    "custom_models/scdown_g4/neck.py": "e9c3402c5aa83175f83b4459d094e2e7a154caa3e2cf3652adfdae00a9d4599a",
+    "custom_models/scdown_g4/operator.py": "463be8336f86a7dc34dde28abd5a5e4eb52261dab87ff2a00a6684242cea784f",
+    "custom_models/scdown_p3/__init__.py": "c860b1e30f01f4bd9e2841bb253dc153769e31560d929ac2652c608f54f711c1",
+    "custom_models/scdown_p3/backbone.py": "d2fa15aeb33793379112fb098c06d81f88d232dbb0e94dd31f3c8b9879da3d75",
+    "custom_models/scdown_p3_g4/__init__.py": "b57d7ddc3519d8c02ff4f27a34f0dd64a631ef9ebd97acbf7ebcf64dc3ae35ff",
+    "custom_models/scdown_p3_g4/backbone.py": "1cf147a0a003aa813284fa7bd79d424ad04dc7268378aff72bafe078c47264f1",
+    "custom_models/scdown_p3_g4_semantic/__init__.py": "5d57accf449e419a8f481cd3c4db76247a87f1e947de1ef3132d38e9319f1483",
+    "scripts/roi_auxiliary_variants_probe.py": "a8e8816a1a6850cb859d0723934025a6b86bc3dd307a76f9f8a4494bbde3a006"
+  }
+}

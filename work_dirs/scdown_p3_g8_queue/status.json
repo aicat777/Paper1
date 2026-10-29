@@ -1,0 +1,24 @@
+{
+  "state": "complete",
+  "queue_pid": 1332969,
+  "queue_start_ticks": "89830935",
+  "updated_at": "2026-10-26T13:26:23.658887+08:00",
+  "dependency": {
+    "name": "instance_semantic_split",
+    "pid": 2496201,
+    "start_ticks": "77303803",
+    "status": "/home/pwt/Paper1/work_dirs/instance_semantic_split_queue/status.json",
+    "work_dir": "/home/pwt/Paper1/work_dirs/instance_semantic_split_rtmdet_tiny_dior_640_gpu1_bs36",
+    "log": "/home/pwt/Paper1/logs/instance_semantic_split_rtmdet_tiny_dior_640_gpu1_bs36.log"
+  },
+  "experiment": {
+    "name": "scdown_p3_g8_640_bs36",
+    "source_config": "/home/pwt/Paper1/configs/scdown_p3_g8/rtmdet_tiny_dior_640.py",
+    "config": "/home/pwt/Paper1/work_dirs/scdown_p3_g8_queue/scdown_p3_g8_640_bs36.py",
+    "work_dir": "/home/pwt/Paper1/work_dirs/scdown_p3_g8_rtmdet_tiny_dior_640_gpu1_bs36",
+    "log": "/home/pwt/Paper1/logs/scdown_p3_g8_rtmdet_tiny_dior_640_gpu1_bs36.log",
+    "preflight_report": "/home/pwt/Paper1/work_dirs/scdown_p3_g8_validation/queue_preflight.json",
+    "capacity_report": "/home/pwt/Paper1/work_dirs/scdown_p3_g8_validation/capacity_gpu1_bs36.json",
+    "validation_summary": "/home/pwt/Paper1/work_dirs/scdown_p3_g8_validation/checks.json"
+  }
+}

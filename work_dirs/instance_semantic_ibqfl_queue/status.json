@@ -1,0 +1,24 @@
+{
+  "state": "complete",
+  "queue_pid": 3756203,
+  "queue_start_ticks": "103558453",
+  "updated_at": "2026-10-28T06:43:38.843102+08:00",
+  "dependency": {
+    "name": "scdown_p3_semantic",
+    "pid": 450487,
+    "start_ticks": "99314378",
+    "status": "/home/pwt/Paper1/work_dirs/scdown_p3_semantic_queue/status.json",
+    "work_dir": "/home/pwt/Paper1/work_dirs/scdown_p3_semantic_rtmdet_tiny_dior_640_gpu1_bs36",
+    "log": "/home/pwt/Paper1/logs/scdown_p3_semantic_rtmdet_tiny_dior_640_gpu1_bs36.log"
+  },
+  "experiment": {
+    "name": "instance_semantic_ibqfl_640_bs36",
+    "source_config": "/home/pwt/Paper1/configs/instance_semantic_ibqfl/rtmdet_tiny_dior_640.py",
+    "config": "/home/pwt/Paper1/work_dirs/instance_semantic_ibqfl_queue/instance_semantic_ibqfl_640_bs36.py",
+    "work_dir": "/home/pwt/Paper1/work_dirs/instance_semantic_ibqfl_rtmdet_tiny_dior_640_gpu1_bs36",
+    "log": "/home/pwt/Paper1/logs/instance_semantic_ibqfl_rtmdet_tiny_dior_640_gpu1_bs36.log",
+    "preflight_report": "/home/pwt/Paper1/work_dirs/instance_semantic_ibqfl_validation/queue_preflight.json",
+    "capacity_report": "/home/pwt/Paper1/work_dirs/instance_semantic_ibqfl_validation/capacity_gpu1_bs36.json",
+    "validation_summary": "/home/pwt/Paper1/work_dirs/instance_semantic_ibqfl_validation/checks.json"
+  }
+}

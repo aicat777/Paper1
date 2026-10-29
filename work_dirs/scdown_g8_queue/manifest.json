@@ -118,11 +118,11 @@
     "config_sha256": "8e053e98aba3591940c1b2454c0867d3234ce490389c58b1d5890c47d1f46030"
   },
   "dependency": {
-    "name": "scdown_p3_noact",
-    "pid": 226193,
-    "start_ticks": "52421326",
-    "status": "/home/pwt/Paper1/work_dirs/scdown_p3_noact_queue/status.json",
-    "work_dir": "/home/pwt/Paper1/work_dirs/scdown_p3_noact_rtmdet_tiny_dior_640_gpu1_bs36",
-    "log": "/home/pwt/Paper1/logs/scdown_p3_noact_rtmdet_tiny_dior_640_gpu1_bs36.log"
+    "name": "scdown_p3_g4",
+    "pid": 1252133,
+    "start_ticks": "68100029",
+    "status": "/home/pwt/Paper1/work_dirs/scdown_p3_g4_queue/status.json",
+    "work_dir": "/home/pwt/Paper1/work_dirs/scdown_p3_g4_rtmdet_tiny_dior_640_gpu1_bs36",
+    "log": "/home/pwt/Paper1/logs/scdown_p3_g4_rtmdet_tiny_dior_640_gpu1_bs36.log"
   }
 }

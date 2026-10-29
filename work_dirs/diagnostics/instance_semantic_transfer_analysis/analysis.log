@@ -1,0 +1,154 @@
+{
+  "final_percent": {
+    "baseline": {
+      "pascal_voc/mAP": 75.65006017684937,
+      "coco/bbox_mAP": 56.39999999999999,
+      "coco/bbox_mAP_50": 77.0,
+      "coco/bbox_mAP_75": 61.9,
+      "coco/bbox_mAP_s": 7.5,
+      "coco/bbox_mAP_m": 34.9,
+      "coco/bbox_mAP_l": 69.8
+    },
+    "roi": {
+      "pascal_voc/mAP": 76.30515694618225,
+      "coco/bbox_mAP": 56.89999999999999,
+      "coco/bbox_mAP_50": 77.60000000000001,
+      "coco/bbox_mAP_75": 62.1,
+      "coco/bbox_mAP_s": 7.5,
+      "coco/bbox_mAP_m": 34.5,
+      "coco/bbox_mAP_l": 70.3
+    },
+    "transfer": {
+      "pascal_voc/mAP": 74.59253072738647,
+      "coco/bbox_mAP": 54.800000000000004,
+      "coco/bbox_mAP_50": 75.8,
+      "coco/bbox_mAP_75": 60.099999999999994,
+      "coco/bbox_mAP_s": 6.800000000000001,
+      "coco/bbox_mAP_m": 33.1,
+      "coco/bbox_mAP_l": 68.0
+    }
+  },
+  "class_deltas": [
+    {
+      "name": "dam",
+      "roi": 33.0,
+      "transfer": 27.400000000000002,
+      "delta_pp": -5.6
+    },
+    {
+      "name": "trainstation",
+      "roi": 28.799999999999997,
+      "transfer": 23.3,
+      "delta_pp": -5.4999999999999964
+    },
+    {
+      "name": "airport",
+      "roi": 52.6,
+      "transfer": 47.5,
+      "delta_pp": -5.100000000000005
+    },
+    {
+      "name": "golffield",
+      "roi": 55.900000000000006,
+      "transfer": 51.0,
+      "delta_pp": -4.900000000000004
+    },
+    {
+      "name": "groundtrackfield",
+      "roi": 65.3,
+      "transfer": 60.9,
+      "delta_pp": -4.400000000000004
+    },
+    {
+      "name": "bridge",
+      "roi": 29.5,
+      "transfer": 26.5,
+      "delta_pp": -2.9999999999999973
+    },
+    {
+      "name": "stadium",
+      "roi": 77.3,
+      "transfer": 75.3,
+      "delta_pp": -2.0000000000000018
+    },
+    {
+      "name": "chimney",
+      "roi": 78.10000000000001,
+      "transfer": 76.3,
+      "delta_pp": -1.8000000000000016
+    },
+    {
+      "name": "windmill",
+      "roi": 39.900000000000006,
+      "transfer": 38.4,
+      "delta_pp": -1.5000000000000013
+    },
+    {
+      "name": "expressway-toll-station",
+      "roi": 52.900000000000006,
+      "transfer": 51.6,
+      "delta_pp": -1.3000000000000012
+    },
+    {
+      "name": "harbor",
+      "roi": 47.8,
+      "transfer": 46.6,
+      "delta_pp": -1.1999999999999955
+    },
+    {
+      "name": "overpass",
+      "roi": 43.6,
+      "transfer": 42.5,
+      "delta_pp": -1.100000000000001
+    },
+    {
+      "name": "vehicle",
+      "roi": 45.0,
+      "transfer": 44.0,
+      "delta_pp": -1.0000000000000009
+    },
+    {
+      "name": "basketballcourt",
+      "roi": 73.2,
+      "transfer": 72.3,
+      "delta_pp": -0.9000000000000008
+    },
+    {
+      "name": "expressway-service-area",
+      "roi": 51.4,
+      "transfer": 50.5,
+      "delta_pp": -0.9000000000000008
+    },
+    {
+      "name": "airplane",
+      "roi": 79.3,
+      "transfer": 78.5,
+      "delta_pp": -0.8000000000000007
+    },
+    {
+      "name": "storagetank",
+      "roi": 69.6,
+      "transfer": 68.8,
+      "delta_pp": -0.8000000000000007
+    },
+    {
+      "name": "baseballfield",
+      "roi": 81.89999999999999,
+      "transfer": 81.5,
+      "delta_pp": -0.40000000000000036
+    },
+    {
+      "name": "ship",
+      "roi": 49.4,
+      "transfer": 49.0,
+      "delta_pp": -0.40000000000000036
+    },
+    {
+      "name": "tenniscourt",
+      "roi": 83.5,
+      "transfer": 83.3,
+      "delta_pp": -0.20000000000000018
+    }
+  ],
+  "source_hash_mismatches": []
+}

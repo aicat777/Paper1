@@ -1,0 +1,15 @@
+scdown_p3_dsconv 1250367 waiting_scdown_p3_noact
+scdown_p3_g2 1251236 waiting_scdown_p3_dsconv
+scdown_p3_g4 1252133 waiting_scdown_p3_g2
+scdown_g8 1252854 waiting_scdown_p3_g4
+scdown_g16 1253628 waiting_scdown_g8
+Traceback (most recent call last):
+  File "/home/pwt/Paper1/work_dirs/diagnostics/scdown_p3_combinations_enqueue/install_queue.py", line 146, in <module>
+    main()
+  File "/home/pwt/Paper1/work_dirs/diagnostics/scdown_p3_combinations_enqueue/install_queue.py", line 125, in main
+    predecessor=launch(method,manifest,predecessor,reusing=method in manifests)
+  File "/home/pwt/Paper1/work_dirs/diagnostics/scdown_group_sweep_enqueue/install_queue.py", line 137, in launch
+    return dependency(method)
+  File "/home/pwt/Paper1/work_dirs/diagnostics/scdown_group_sweep_enqueue/install_queue.py", line 33, in dependency
+    assert state['queue_pid']==identity['pid']
+AssertionError

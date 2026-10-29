@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "same_predecessor_name": true,
+  "old_identity": {
+    "name": "scdown_g16",
+    "pid": 1253628,
+    "start_ticks": "68102449",
+    "status": "/home/pwt/Paper1/work_dirs/scdown_g16_queue/status.json",
+    "work_dir": "/home/pwt/Paper1/work_dirs/scdown_g16_rtmdet_tiny_dior_640_gpu1_bs36",
+    "log": "/home/pwt/Paper1/logs/scdown_g16_rtmdet_tiny_dior_640_gpu1_bs36.log"
+  },
+  "new_identity": {
+    "name": "scdown_g16",
+    "pid": 1263810,
+    "start_ticks": "68119500",
+    "status": "/home/pwt/Paper1/work_dirs/scdown_g16_queue/status.json",
+    "work_dir": "/home/pwt/Paper1/work_dirs/scdown_g16_rtmdet_tiny_dior_640_gpu1_bs36",
+    "log": "/home/pwt/Paper1/logs/scdown_g16_rtmdet_tiny_dior_640_gpu1_bs36.log"
+  },
+  "stale_status_ignored": true,
+  "official_preflight_completed": true
+}

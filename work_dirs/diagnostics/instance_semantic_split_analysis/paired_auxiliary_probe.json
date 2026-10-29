@@ -1,0 +1,46 @@
+{
+  "scope": "Same frozen final raw checkpoints, 108 fixed strong-augmented train images, CPU FP32, no parameter updates",
+  "reference_mask": "Original ROI model assignment for every comparison",
+  "groups": {
+    "matched": {
+      "roi": {
+        "n": 1039,
+        "accuracy": 0.9162656400384985,
+        "mean_ce": 0.360334329319044
+      },
+      "matched": {
+        "n": 1039,
+        "accuracy": 0.9018286814244466,
+        "mean_ce": 0.39229052868086633
+      },
+      "split": {
+        "n": 1039,
+        "accuracy": 0.9008662175168431,
+        "mean_ce": 0.38317529329050776
+      }
+    },
+    "unmatched": {
+      "roi": {
+        "n": 216,
+        "accuracy": 0.9768518518518519,
+        "mean_ce": 0.045162074453468516
+      },
+      "matched": {
+        "n": 216,
+        "accuracy": 0.9814814814814815,
+        "mean_ce": 0.060262358725666404
+      },
+      "split": {
+        "n": 216,
+        "accuracy": 0.9722222222222222,
+        "mean_ce": 0.06149310371303171
+      }
+    }
+  },
+  "limitations": [
+    "Auxiliary classification probe is not detection AP.",
+    "Same reference GT groups are used, rather than comparing independently selected groups.",
+    "Converged weights do not identify early-training mechanisms.",
+    "Split probe reconstructs the all-GT auxiliary readout; unmatched gradient norms in its raw report are hypothetical, not the gated training gradients."
+  ]
+}

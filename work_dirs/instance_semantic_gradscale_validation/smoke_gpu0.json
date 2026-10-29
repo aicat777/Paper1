@@ -1,0 +1,219 @@
+{
+  "status": "passed",
+  "method": "instance_semantic_gradscale",
+  "official_train_entrypoint": true,
+  "input_size": [
+    640,
+    640
+  ],
+  "microbatch": 2,
+  "optimizer_updates": 16,
+  "accumulation": 1,
+  "val_passes": 2,
+  "val_images_per_pass": 32,
+  "predictions_checked": 64,
+  "raw_predictions_checked": 8,
+  "full_state_ema_roundtrips": 2,
+  "model_optimizer_scaler_serialization": true,
+  "strong_and_weak_augmentation": true,
+  "coco_evaluation_scoped_to_subset": true,
+  "watched_parameter_tensors": 22,
+  "finite_losses": true,
+  "finite_predictions": true,
+  "amp_skipped_updates": 0,
+  "gradient_max": {
+    "bbox_head.instance_semantic.classifier.bias": 2.4820258617401123,
+    "bbox_head.instance_semantic.classifier.weight": 9.657546043395996,
+    "bbox_head.head_module.rtm_cls.2.weight": 7.5859375,
+    "bbox_head.head_module.rtm_cls.2.bias": 1.396484375,
+    "bbox_head.head_module.cls_convs.2.1.bn.weight": 0.1864016205072403,
+    "bbox_head.head_module.cls_convs.2.1.bn.bias": 0.03677016496658325,
+    "bbox_head.head_module.cls_convs.2.0.bn.weight": 0.03713969141244888,
+    "bbox_head.head_module.cls_convs.2.0.bn.bias": 0.009670495986938477,
+    "bbox_head.head_module.rtm_cls.1.weight": 45.375,
+    "bbox_head.head_module.rtm_cls.1.bias": 7.31640625,
+    "bbox_head.head_module.cls_convs.1.1.bn.weight": 1.5348560810089111,
+    "bbox_head.head_module.cls_convs.1.1.bn.bias": 0.27646952867507935,
+    "bbox_head.head_module.cls_convs.1.0.bn.weight": 0.14997705817222595,
+    "bbox_head.head_module.cls_convs.1.0.bn.bias": 0.03475767374038696,
+    "bbox_head.head_module.rtm_cls.0.weight": 0.7978515625,
+    "bbox_head.head_module.rtm_cls.0.bias": 1.4443359375,
+    "bbox_head.head_module.cls_convs.0.1.bn.weight": 0.07593013346195221,
+    "bbox_head.head_module.cls_convs.0.1.bn.bias": 0.13282346725463867,
+    "bbox_head.head_module.cls_convs.0.1.conv.weight": 4.2578125,
+    "bbox_head.head_module.cls_convs.0.0.bn.weight": 0.016064928844571114,
+    "bbox_head.head_module.cls_convs.0.0.bn.bias": 0.007048249244689941,
+    "bbox_head.head_module.cls_convs.0.0.conv.weight": 1.748046875
+  },
+  "parameter_updates_max": {
+    "bbox_head.instance_semantic.classifier.weight": 0.008692876435816288,
+    "bbox_head.instance_semantic.classifier.bias": 0.008945452980697155,
+    "bbox_head.head_module.cls_convs.0.0.conv.weight": 0.00845317356288433,
+    "bbox_head.head_module.cls_convs.0.0.bn.weight": 0.007435202598571777,
+    "bbox_head.head_module.cls_convs.0.0.bn.bias": 0.008021390996873379,
+    "bbox_head.head_module.cls_convs.0.1.conv.weight": 0.008697767741978168,
+    "bbox_head.head_module.cls_convs.0.1.bn.weight": 0.008857250213623047,
+    "bbox_head.head_module.cls_convs.0.1.bn.bias": 0.008891109377145767,
+    "bbox_head.head_module.cls_convs.1.0.bn.weight": 0.006288290023803711,
+    "bbox_head.head_module.cls_convs.1.0.bn.bias": 0.006583103444427252,
+    "bbox_head.head_module.cls_convs.1.1.bn.weight": 0.008391141891479492,
+    "bbox_head.head_module.cls_convs.1.1.bn.bias": 0.008617070503532887,
+    "bbox_head.head_module.cls_convs.2.0.bn.weight": 0.005376577377319336,
+    "bbox_head.head_module.cls_convs.2.0.bn.bias": 0.005905012134462595,
+    "bbox_head.head_module.cls_convs.2.1.bn.weight": 0.00868523120880127,
+    "bbox_head.head_module.cls_convs.2.1.bn.bias": 0.008956275880336761,
+    "bbox_head.head_module.rtm_cls.0.weight": 0.007964322343468666,
+    "bbox_head.head_module.rtm_cls.0.bias": 0.0076351165771484375,
+    "bbox_head.head_module.rtm_cls.1.weight": 0.007834934629499912,
+    "bbox_head.head_module.rtm_cls.1.bias": 0.007654666900634766,
+    "bbox_head.head_module.rtm_cls.2.weight": 0.008004547096788883,
+    "bbox_head.head_module.rtm_cls.2.bias": 0.007636547088623047
+  },
+  "losses": [
+    {
+      "loss": 0.7225775122642517,
+      "loss_cls": 0.3483526110649109,
+      "loss_bbox": 0.07793202251195908,
+      "loss_instance_semantic": 0.29629287123680115
+    },
+    {
+      "loss": 0.8130922913551331,
+      "loss_cls": 0.338670015335083,
+      "loss_bbox": 0.17658895254135132,
+      "loss_instance_semantic": 0.29783332347869873
+    },
+    {
+      "loss": 0.8488876819610596,
+      "loss_cls": 0.32649239897727966,
+      "loss_bbox": 0.24132680892944336,
+      "loss_instance_semantic": 0.28106844425201416
+    },
+    {
+      "loss": 2.4518074989318848,
+      "loss_cls": 0.33684805035591125,
+      "loss_bbox": 1.8976449966430664,
+      "loss_instance_semantic": 0.21731440722942352
+    },
+    {
+      "loss": 2.4386110305786133,
+      "loss_cls": 0.7890457510948181,
+      "loss_bbox": 1.4128049612045288,
+      "loss_instance_semantic": 0.23676025867462158
+    },
+    {
+      "loss": 2.287548542022705,
+      "loss_cls": 0.38621005415916443,
+      "loss_bbox": 1.661352276802063,
+      "loss_instance_semantic": 0.23998628556728363
+    },
+    {
+      "loss": 2.4913032054901123,
+      "loss_cls": 0.7150596976280212,
+      "loss_bbox": 1.4965500831604004,
+      "loss_instance_semantic": 0.2796933352947235
+    },
+    {
+      "loss": 2.4590060710906982,
+      "loss_cls": 0.628636360168457,
+      "loss_bbox": 1.5346274375915527,
+      "loss_instance_semantic": 0.29574230313301086
+    },
+    {
+      "loss": 0.6835888624191284,
+      "loss_cls": 0.29346519708633423,
+      "loss_bbox": 0.09926918894052505,
+      "loss_instance_semantic": 0.29085445404052734
+    },
+    {
+      "loss": 1.0153710842132568,
+      "loss_cls": 0.3024130165576935,
+      "loss_bbox": 0.48097312450408936,
+      "loss_instance_semantic": 0.2319849729537964
+    },
+    {
+      "loss": 0.742535412311554,
+      "loss_cls": 0.2820543944835663,
+      "loss_bbox": 0.1520354151725769,
+      "loss_instance_semantic": 0.30844560265541077
+    },
+    {
+      "loss": 2.2177999019622803,
+      "loss_cls": 0.2526618242263794,
+      "loss_bbox": 1.785555124282837,
+      "loss_instance_semantic": 0.17958278954029083
+    },
+    {
+      "loss": 1.8642323017120361,
+      "loss_cls": 0.6938377022743225,
+      "loss_bbox": 0.8758535385131836,
+      "loss_instance_semantic": 0.2945410907268524
+    },
+    {
+      "loss": 2.597180128097534,
+      "loss_cls": 1.1441608667373657,
+      "loss_bbox": 1.183091402053833,
+      "loss_instance_semantic": 0.2699277698993683
+    },
+    {
+      "loss": 2.0413715839385986,
+      "loss_cls": 0.5154748558998108,
+      "loss_bbox": 1.2464250326156616,
+      "loss_instance_semantic": 0.27947157621383667
+    },
+    {
+      "loss": 2.257354497909546,
+      "loss_cls": 0.7264028191566467,
+      "loss_bbox": 1.3109080791473389,
+      "loss_instance_semantic": 0.22004370391368866
+    }
+  ],
+  "metrics": [
+    {
+      "pascal_voc/mAP": 0.0,
+      "coco/bbox_mAP": 0.0,
+      "coco/bbox_mAP_50": 0.0
+    },
+    {
+      "pascal_voc/mAP": 0.0,
+      "coco/bbox_mAP": 0.0,
+      "coco/bbox_mAP_50": 0.0
+    }
+  ],
+  "assignment": {
+    "fallback_positives": 0,
+    "floored_regression_positives": 0,
+    "unmatched_tiny": 0
+  },
+  "loss_scale_init": 32,
+  "warmup_enabled": false,
+  "saved_checkpoints": false,
+  "peak_allocated_gib": 0.6435842514038086,
+  "peak_reserved_gib": 0.751953125,
+  "elapsed_seconds": 14.66052855597809,
+  "feature_gradient_scale": 0.25,
+  "all_valid_gt_coverage": [
+    21,
+    6,
+    17,
+    33,
+    87,
+    229,
+    33,
+    23,
+    3,
+    3,
+    3,
+    153,
+    10,
+    8,
+    4,
+    20
+  ],
+  "forward_counts": {
+    "tower": 16,
+    "assignment": 16,
+    "roi": 16
+  },
+  "classifier_uses_all_gt": true,
+  "one_bn_update_per_train_step": true
+}

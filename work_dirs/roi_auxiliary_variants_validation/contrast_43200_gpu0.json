@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "scope": "relation operator only, not full detector",
+  "gt_count": 43200,
+  "embedding_channels": 128,
+  "pair_chunk_size": 128,
+  "loss": 1.0771164894104004,
+  "finite_gradient": true,
+  "peak_allocated_gib": 0.19338321685791016,
+  "additional_peak_gib": 0.15659284591674805,
+  "elapsed_seconds": 0.6173699041828513,
+  "formal_detector_batch36_capacity_tested": false
+}
